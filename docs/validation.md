@@ -15,7 +15,7 @@ The 0.1.0 and 0.2.0 validation files remain archived alongside them.
   themes/icons, 320/390/760 px layout, print CSS, offline generation, and no
   page errors/third-party requests passed.
 - `npm run test:text-browser`: rocket, black circle, and hash recipes all fit
-  their plain-text boxes in height and width. TXT/RTF/Text HTML/custom filenames,
+  their plain-text boxes in height and width. TXT/RTF/Text HTML/custom filenames and three single-page A4 PDFs with 150 mm codes,
   both clipboard MIME formats, and an actual keyboard paste into a browser rich
   text editor passed. Image pixels stay unchanged while using text operations.
   Optional real-text comparisons and image/text observation isolation passed.

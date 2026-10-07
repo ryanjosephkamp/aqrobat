@@ -133,6 +133,26 @@ try {
       assert.equal(d.suggestedFilename(), name + suffix);
       await d.saveAs(resolve(out, name + suffix));
     }
+    const printPage = await context.newPage();
+    await printPage.goto(
+      new URL(`../test-results/text-layout/${name}-text.html`, import.meta.url)
+        .href,
+    );
+    await printPage.emulateMedia({ media: "print" });
+    const printWidth = await printPage
+      .locator("[data-aqrobat-layout]")
+      .evaluate((el) => el.getBoundingClientRect().width);
+    assert(Math.abs(printWidth - (150 * 96) / 25.4) < 1);
+    const pdf = await printPage.pdf({
+      path: resolve(out, name + "-text.pdf"),
+      format: "A4",
+      printBackground: true,
+    });
+    assert.equal(
+      (pdf.toString("latin1").match(/\/Type \/Page\b/g) || []).length,
+      1,
+    );
+    await printPage.close();
     await page.locator("#copy-formatted").click();
     await page.waitForFunction(() =>
       document
@@ -185,7 +205,7 @@ try {
     report.samples.push(sample);
   }
   report.checks.push(
-    "three supplied recipes: complete plain-text height/width, custom filenames, TXT/RTF/text-HTML exports, HTML+plain clipboard and actual rich-editor paste, image pixels unchanged by text operations",
+    "three supplied recipes: complete plain-text height/width, custom filenames, TXT/RTF/text-HTML exports and single-page 150 mm A4 PDFs, HTML+plain clipboard and actual rich-editor paste, image pixels unchanged by text operations",
   );
   await page.locator("#compare-text").check();
   await page.locator("#compare").click();
