@@ -49,8 +49,15 @@ try {
   await page.waitForTimeout(1300);
   await page.locator("#preset").selectOption("⚫️");
   await page.waitForTimeout(1300);
-  await page.locator("#preset").selectOption("🍇");
-  await page.waitForTimeout(1300);
+  await page.locator("#glyph").fill("🤣.☄️1:a");
+  await page.waitForTimeout(1500);
+  await page.locator(".appearance").scrollIntoViewIfNeeded();
+  await page.locator(".appearance summary").click();
+  await page.locator("#theme").selectOption("midnight");
+  await page.locator("#icon-color").selectOption("coral");
+  await page.waitForTimeout(1400);
+  await page.locator("#make").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(1400);
   await page.locator("#preset").selectOption("#");
   await page.waitForTimeout(1100);
   await page.locator("#compare").click();
@@ -59,7 +66,7 @@ try {
   const video = page.video();
   await context.close();
   const path = await video.path();
-  await copyFile(path, "docs/demo/walkthrough.webm");
+  await copyFile(path, "docs/demo/palette-themes.webm");
   // ffmpeg is optional and only used for a convenient small animated GIF.
   try {
     execFileSync("ffmpeg", [
@@ -72,7 +79,7 @@ try {
       "fps=6,scale=720:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=80[p];[b][p]paletteuse=dither=none",
       "-loop",
       "0",
-      "docs/demo/walkthrough.gif",
+      "docs/demo/palette-themes.gif",
     ]);
   } catch {
     console.log("GIF conversion unavailable; the WebM recording remains.");

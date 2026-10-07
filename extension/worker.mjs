@@ -1,3 +1,25 @@
+import { APPEARANCE_KEY, appearance, iconPaths } from "./web/appearance.mjs";
+
+let iconUpdate = Promise.resolve();
+function restoreIcon() {
+  iconUpdate = iconUpdate
+    .catch(() => {})
+    .then(async () => {
+      const data = await chrome.storage.local.get(APPEARANCE_KEY);
+      await chrome.action.setIcon({
+        path: iconPaths(appearance(data[APPEARANCE_KEY]).icon),
+      });
+    });
+  return iconUpdate;
+}
+// Run on every worker wake, plus browser startup, installation, and preference changes.
+const initialIcon = restoreIcon().catch(() => {});
+chrome.runtime.onStartup.addListener(restoreIcon);
+chrome.storage.onChanged.addListener(async (changes, area) => {
+  if (area === "local" && Object.hasOwn(changes, APPEARANCE_KEY))
+    await restoreIcon();
+});
+
 const menus = [
   {
     id: "selection",
@@ -8,6 +30,8 @@ const menus = [
   { id: "page", title: "Make a text QR from this page", contexts: ["page"] },
 ];
 chrome.runtime.onInstalled.addListener(async () => {
+  await initialIcon;
+  await restoreIcon();
   await chrome.contextMenus.removeAll();
   for (const menu of menus) chrome.contextMenus.create(menu);
 });

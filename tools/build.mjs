@@ -11,6 +11,7 @@ import { resolve } from "node:path";
 import { execFileSync } from "node:child_process";
 import { chromium } from "playwright";
 import { existsSync } from "node:fs";
+import { ICON_COLORS } from "../web/appearance.mjs";
 
 const root = resolve(new URL("..", import.meta.url).pathname);
 const dist = resolve(root, "dist"),
@@ -38,25 +39,35 @@ const executablePath =
 const browser = await chromium.launch({ headless: true, executablePath });
 try {
   const page = await browser.newPage();
-  for (const size of [16, 48, 128]) {
-    const url = await page.evaluate((size) => {
-      const canvas = document.createElement("canvas");
-      canvas.width = canvas.height = size;
-      const c = canvas.getContext("2d");
-      c.fillStyle = "#18352c";
-      c.fillRect(0, 0, size, size);
-      c.fillStyle = "#d9f171";
-      c.font = `700 ${size * 0.82}px monospace`;
-      c.textAlign = "center";
-      c.textBaseline = "middle";
-      c.fillText("#", size / 2, size / 2);
-      return canvas.toDataURL("image/png");
-    }, size);
-    await writeFile(
-      resolve(ext, `icon${size}.png`),
-      Buffer.from(url.split(",")[1], "base64"),
-    );
-  }
+  await mkdir(resolve(ext, "icons"));
+  for (const color of ICON_COLORS)
+    for (const size of [16, 32, 48, 128]) {
+      const url = await page.evaluate(
+        ({ size, color }) => {
+          const canvas = document.createElement("canvas");
+          canvas.width = canvas.height = size;
+          const c = canvas.getContext("2d");
+          c.fillStyle = color.background;
+          c.fillRect(0, 0, size, size);
+          c.fillStyle = color.ink;
+          c.font = `700 ${size * 0.82}px monospace`;
+          c.textAlign = "center";
+          c.textBaseline = "middle";
+          c.fillText("#", size / 2, size / 2);
+          return canvas.toDataURL("image/png");
+        },
+        { size, color },
+      );
+      await writeFile(
+        resolve(ext, `icons/${color.id}-${size}.png`),
+        Buffer.from(url.split(",")[1], "base64"),
+      );
+      if (color.id === "violet" && size !== 32)
+        await cp(
+          resolve(ext, `icons/${color.id}-${size}.png`),
+          resolve(ext, `icon${size}.png`),
+        );
+    }
 } finally {
   await browser.close();
 }
@@ -67,6 +78,7 @@ for (const path of [
   "vendor/qrcodegen.mjs",
   "src/core.mjs",
   "src/render.mjs",
+  "web/appearance.mjs",
   "web/app.mjs",
 ]) {
   let source = await readFile(resolve(root, path), "utf8");

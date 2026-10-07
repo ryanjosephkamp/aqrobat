@@ -7,6 +7,7 @@ import {
   validateGlyph,
   toSvg,
   recipeKey,
+  parsePalette,
 } from "../src/core.mjs";
 import { htmlSheet, render } from "../src/render.mjs";
 
@@ -50,13 +51,56 @@ test("boost is explicit and exact requested ECC is honored when disabled", () =>
   assert.equal(qr.scanStatus, "untested");
 });
 test("recipes round trip matrix, complete emoji sequences, and exact text", () => {
-  for (const glyph of ["#", "█", "⚫️", "👨‍👩‍👧‍👦", "🇺🇸", "👍🏽"]) {
+  for (const glyph of ["#", "█", "⚫️", "👨‍👩‍👧‍👦", "🇺🇸", "👍🏽", "🤣.☄️1:a", "🇦x🇧x🇨"]) {
     const qr = generate("x", { glyph, width: 701, repeatX: 1, repeatY: 1 });
     const restored = fromRecipe(JSON.parse(JSON.stringify(qr.recipe)));
     assert.deepEqual(restored, qr);
     assert.equal(recipeKey(restored.recipe), recipeKey(qr.recipe));
     assert.equal(decode(qr), "x");
   }
+});
+test("palettes preserve whole emoji, ignore duplicates/whitespace, and cycle per dark module", () => {
+  for (const [input, expected] of [
+    ["🤣☄️🤣", ["🤣", "☄️"]],
+    ["abc123,.//';", ["a", "b", "c", "1", "2", "3", ",", ".", "/", "'", ";"]],
+    ["💩👻🛸", ["💩", "👻", "🛸"]],
+    ["🤣.☄️1:a", ["🤣", ".", "☄️", "1", ":", "a"]],
+    [" 👨‍👩‍👧‍👦\t🇺🇸\n👍🏽👨‍👩‍👧‍👦 ", ["👨‍👩‍👧‍👦", "🇺🇸", "👍🏽"]],
+  ])
+    assert.deepEqual(parsePalette(input), expected);
+  const qr = generate("hello", { glyph: "a🤣aa🤣", repeatX: 2, repeatY: 1 });
+  const dark = qr.glyphMatrix.flat().filter(Boolean);
+  assert(dark.every((glyph, i) => glyph === qr.palette[i % 2]));
+  assert.equal(
+    qr.text,
+    generate("hello", { glyph: "a🤣", repeatX: 2, repeatY: 1 }).text,
+  );
+  assert.equal(qr.recipe.schema, "aqrobat-recipe-v2");
+  assert.deepEqual(qr, fromRecipe(qr.recipe));
+  const texts = [...toSvg(qr).matchAll(/<text[^>]*>(.*?)<\/text>/g)].map(
+    (m) => m[1],
+  );
+  assert.deepEqual(
+    texts,
+    dark.flatMap((g) => [g, g]),
+  );
+  assert.throws(() => parsePalette(" \n\t"));
+  assert.throws(() => parsePalette("a\u00adb"));
+  assert.throws(() => parsePalette("a\u0000b"));
+  assert.throws(() => parsePalette("a".repeat(4097)));
+  assert.equal(parsePalette("a".repeat(4096)).length, 1);
+});
+test("legacy v1 recipes retain schema, key, rows, and single-glyph validation", () => {
+  const now = generate("hello", { glyph: "👨‍👩‍👧‍👦" });
+  const old = { ...now.recipe, schema: "aqrobat-recipe-v1" };
+  const loaded = fromRecipe(old);
+  assert.equal(loaded.recipe.schema, old.schema);
+  assert.equal(recipeKey(old), JSON.stringify(old));
+  assert.deepEqual(loaded.rows, now.rows);
+  assert.deepEqual(loaded.matrix, now.matrix);
+  assert.throws(() =>
+    fromRecipe({ ...old, options: { ...old.options, glyph: "ab" } }),
+  );
 });
 test("invalid Unicode, invisible glyphs, typos, bounds, and byte overflow reject", () => {
   for (const glyph of [
@@ -69,6 +113,7 @@ test("invalid Unicode, invisible glyphs, typos, bounds, and byte overflow reject
     "\u2060",
     "\u202e",
     "\u0301",
+    "\u{e0067}",
     "\ud800",
   ])
     assert.throws(() => validateGlyph(glyph));

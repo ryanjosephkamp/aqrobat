@@ -6,12 +6,81 @@ import {
   toSvg,
 } from "../src/core.mjs";
 import { render, htmlSheet } from "../src/render.mjs";
+import {
+  THEMES,
+  ICON_COLORS,
+  APPEARANCE_KEY,
+  appearance,
+  drawIcon,
+} from "./appearance.mjs";
 
 const $ = (id) => document.getElementById(id);
 let current = null,
   records = [],
   cases = [];
 const status = (message) => ($("status").textContent = message);
+for (const [id, choices] of [
+  ["theme", THEMES],
+  ["icon-color", ICON_COLORS],
+]) {
+  for (const choice of choices) {
+    const option = document.createElement("option");
+    option.value = choice.id;
+    option.textContent = choice.name;
+    $(id).append(option);
+  }
+}
+const extensionAppearance =
+  location.protocol === "chrome-extension:" &&
+  globalThis.chrome?.storage?.local;
+function applyAppearance(value) {
+  const settings = appearance(value);
+  document.documentElement.dataset.theme = settings.theme;
+  $("theme").value = settings.theme;
+  $("icon-color").value = settings.icon;
+  drawIcon($("icon-preview"), settings.icon);
+  let favicon = document.querySelector('link[rel="icon"]');
+  if (!favicon) {
+    favicon = document.createElement("link");
+    favicon.rel = "icon";
+    document.head.append(favicon);
+  }
+  favicon.type = "image/png";
+  favicon.href = $("icon-preview").toDataURL("image/png");
+  return settings;
+}
+applyAppearance(null);
+// Persist appearance only; payloads and scan observations remain in this page.
+try {
+  const saved = extensionAppearance
+    ? (await chrome.storage.local.get(APPEARANCE_KEY))[APPEARANCE_KEY]
+    : JSON.parse(localStorage.getItem(APPEARANCE_KEY) || "null");
+  applyAppearance(saved);
+} catch {
+  /* Storage may be unavailable, especially for local files. */
+}
+let saveAppearance = Promise.resolve();
+for (const id of ["theme", "icon-color"])
+  $(id).addEventListener("change", () => {
+    const settings = applyAppearance({
+      theme: $("theme").value,
+      icon: $("icon-color").value,
+    });
+    saveAppearance = saveAppearance.then(async () => {
+      try {
+        if (extensionAppearance)
+          await chrome.storage.local.set({ [APPEARANCE_KEY]: settings });
+        else localStorage.setItem(APPEARANCE_KEY, JSON.stringify(settings));
+      } catch {
+        status(
+          "Appearance changed for this page; preferences could not be saved.",
+        );
+      }
+    });
+  });
+$("icon-hint").textContent = extensionAppearance
+  ? "Icon color also updates your Aqrobat toolbar icon."
+  : "Icon color previews the extension artwork and changes this tab’s icon. Set it inside the extension to change its toolbar icon.";
 function download(name, data, type = "text/plain;charset=utf-8") {
   const url = URL.createObjectURL(new Blob([data], { type }));
   const link = document.createElement("a");
@@ -48,6 +117,8 @@ function displaySize() {
   const px = $("preview").getBoundingClientRect().width;
   $("metadata").textContent =
     `Version ${current.version} · ${current.modules} × ${current.modules} modules · ECC ${current.requestedEcc} requested / ${current.actualEcc} actual · ${current.recipe.options.width} px export / ${Math.round(px)} px on screen`;
+  $("palette-info").textContent =
+    `${current.palette.length} unique symbol${current.palette.length === 1 ? "" : "s"}. Cycle in entry order; repeats and spaces ignored.`;
 }
 function update() {
   try {
@@ -67,6 +138,7 @@ function update() {
     $("preview").width = $("preview").height = 0;
     $("raw").value = "";
     $("metadata").textContent = "";
+    $("palette-info").textContent = "";
     $("error").textContent = error.message;
     document
       .querySelectorAll(".exports button")

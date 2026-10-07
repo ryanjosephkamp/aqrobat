@@ -6,6 +6,8 @@ import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
 import assert from "node:assert/strict";
 import jsQR from "jsqr";
+import { createHash } from "node:crypto";
+import { generate } from "../src/core.mjs";
 
 const executablePath =
   process.env.CHROME_PATH ||
@@ -69,7 +71,19 @@ try {
   assert.equal(await page.locator("#error").textContent(), "");
   assert.equal(await page.locator("#make img").count(), 0);
   await page.locator("#payload").fill("https://example.com");
-  for (const glyph of ["#", "@", "M", ".", "█", "⚫️", "🙂", "👨‍👩‍👧‍👦"]) {
+  for (const glyph of [
+    "#",
+    "@",
+    "M",
+    ".",
+    "█",
+    "⚫️",
+    "🙂",
+    "👨‍👩‍👧‍👦",
+    "🤣☄️",
+    "abc123,.//';",
+    "🤣.☄️1:a",
+  ]) {
     await page.locator("#glyph").fill(glyph);
     const image = await page.locator("#preview").evaluate(async (canvas) => {
       const pixels = canvas
@@ -101,6 +115,8 @@ try {
       stroke: 0.1,
       ecc: "M",
       decoder: "jsQR 1.4.0",
+      recipe: generate("https://example.com", { glyph }).recipe,
+      rgbaSha256: createHash("sha256").update(pixels).digest("hex"),
       result:
         result?.data === "https://example.com"
           ? "exact payload recovered"
@@ -108,10 +124,62 @@ try {
     });
   }
   await page.locator("#preset").selectOption("#");
-  await page.locator("#glyph").fill("ab");
+  await page.locator("#glyph").fill("\u200b");
   assert.match(await page.locator("#error").textContent(), /one visible/);
   assert(await page.locator("#png").isDisabled());
-  await page.locator("#glyph").fill("#");
+  await page.locator("#glyph").fill("🤣.☄️1:a🤣");
+  assert.match(await page.locator("#palette-info").textContent(), /6 unique/);
+  const artwork = await page.locator("#preview").evaluate((c) => c.toDataURL());
+  await page.locator(".appearance summary").click();
+  assert.equal(await page.locator("#theme").inputValue(), "violet");
+  for (const theme of ["ocean", "ember", "garden", "midnight", "violet"]) {
+    await page.locator("#theme").selectOption(theme);
+    assert.equal(await page.locator("html").getAttribute("data-theme"), theme);
+    assert.equal(
+      await page.locator("#preview").evaluate((c) => c.toDataURL()),
+      artwork,
+    );
+  }
+  for (const color of ["blue", "coral", "green", "gold", "violet"]) {
+    await page.locator("#icon-color").selectOption(color);
+    assert.equal(
+      await page.locator("#preview").evaluate((c) => c.toDataURL()),
+      artwork,
+    );
+  }
+  await page.locator("#theme").selectOption("midnight");
+  await page.locator("#icon-color").selectOption("coral");
+  await page.waitForFunction(
+    () =>
+      JSON.parse(localStorage.getItem("aqrobat-appearance-v1")).icon ===
+      "coral",
+  );
+  await page.reload();
+  await page.waitForFunction(
+    () => document.documentElement.dataset.theme === "midnight",
+  );
+  assert.equal(await page.locator("#icon-color").inputValue(), "coral");
+  assert.deepEqual(
+    await page.evaluate(() =>
+      JSON.parse(localStorage.getItem("aqrobat-appearance-v1")),
+    ),
+    { theme: "midnight", icon: "coral" },
+  );
+  assert.equal(await page.locator("footer .social a").count(), 5);
+  assert.equal(
+    await page.locator('footer a[title="LinkedIn"]').getAttribute("href"),
+    "https://www.linkedin.com/in/ryanjosephkamp/",
+  );
+  assert.equal(
+    await page.locator('footer a[title="X"]').getAttribute("href"),
+    "https://x.com/ryanjosephkamp",
+  );
+  await page.locator(".appearance summary").click();
+  await page.locator("#theme").selectOption("violet");
+  await page.locator("#glyph").fill("🤣.☄️1:a🤣");
+  report.checks.push(
+    "mixed palettes, theme/icon selection and appearance-only persistence; themes do not alter QR pixels; personal footer links",
+  );
   for (const [id, name] of [
     ["png", "aqrobat.png"],
     ["svg", "aqrobat.svg"],
@@ -128,6 +196,8 @@ try {
     if (id === "recipe") {
       const recipe = JSON.parse(data);
       assert.equal(recipe.payload, "https://example.com");
+      assert.equal(recipe.schema, "aqrobat-recipe-v2");
+      assert.equal(recipe.options.glyph, "🤣.☄️1:a🤣");
       await page.locator("#import-recipe").setInputFiles({
         name: "recipe.json",
         mimeType: "application/json",
@@ -227,14 +297,19 @@ try {
   await page.waitForFunction(
     () => document.getElementById("preview").width === 656,
   );
-  await page.screenshot({ path: "test-results/desktop.png", fullPage: true });
+  await page.screenshot({ path: "test-results/desktop.png" });
+  for (const width of [320, 390, 760]) {
+    await page.setViewportSize({ width, height: 844 });
+    assert(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    );
+  }
   await page.setViewportSize({ width: 390, height: 844 });
-  assert(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  );
-  await page.screenshot({ path: "test-results/mobile.png", fullPage: true });
+  await page.screenshot({ path: "test-results/mobile.png" });
+  await page.locator("footer").scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/footer-mobile.png" });
   report.checks.push(
     "desktop/mobile layout and 65 mm print CSS; no physical print test",
   );
@@ -246,8 +321,14 @@ try {
     () => document.getElementById("preview").width === 656,
   );
   assert.equal(await offline.locator("#error").textContent(), "");
-  await offline.locator("#glyph").fill("🇺🇸");
+  await offline.locator("#glyph").fill("🇺🇸💩👻🛸");
   assert.equal(await offline.locator("#error").textContent(), "");
+  await offline.locator(".appearance summary").click();
+  await offline.locator("#theme").selectOption("midnight");
+  assert.equal(
+    await offline.locator("html").getAttribute("data-theme"),
+    "midnight",
+  );
   report.checks.push("self-contained offline file works from file://");
   assert.deepEqual(errors, []);
   assert(requests.every((r) => r.startsWith(url)));

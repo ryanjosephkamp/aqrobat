@@ -22,7 +22,7 @@ test("output is exclusive and recipe reload is deterministic", () => {
       run([
         "hello",
         "--glyph",
-        "🇺🇸",
+        "🇺🇸💩👻🛸🇺🇸",
         "--density",
         "1x1",
         "--format",

@@ -1,0 +1,103 @@
+{
+  "matrixEvidence": "separate unit decoder tests",
+  "nativePhone": "not run",
+  "physicalPrint": "not run",
+  "checks": [
+    "continuous size, validation, hostile input, and five exports/recipe import",
+    "clipboard fallback; bounded grid; recorded/exported/imported synthetic observation; atomic conflicting import rejection",
+    "desktop/mobile layout and 65 mm print CSS; no physical print test",
+    "self-contained offline file works from file://",
+    "no page errors or third-party requests in source-page checks"
+  ],
+  "rawCharacterDecodes": [
+    {
+      "glyph": "#",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "@",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "M",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": ".",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "█",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "⚫️",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "🙂",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "👨‍👩‍👧‍👦",
+      "payload": "https://example.com",
+      "size": 656,
+      "density": "4x2",
+      "font": "Menlo",
+      "stroke": 0.1,
+      "ecc": "M",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    }
+  ],
+  "browser": "155.0.8059.39"
+}

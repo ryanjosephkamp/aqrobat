@@ -18,3 +18,8 @@ the viewer's installed system fonts; the project license does not relicense
 those fonts or their artwork. Development-only packages retain their own
 licenses in their installations. They are excluded from distributed runtime
 files and the extension ZIP.
+
+The personal footer’s inline SVG icons are reused from Ryan Kamp’s MIT-licensed
+Link Meteor site (`site/assets/img/icons.svg`); its copyright is Ryan Kamp,
+2026, also retained in Aqrobat’s root license. Source:
+https://github.com/ryanjosephkamp/link-meteor/blob/main/site/assets/img/icons.svg.

@@ -17,7 +17,7 @@ export function render(canvas, qr, width = qr.recipe.options.width) {
   ctx.fillRect(0, 0, width, width);
   ctx.fillStyle = ctx.strokeStyle = "black";
   ctx.font = `700 100px ${family}`;
-  if (rowGlyph(o.glyph)) {
+  if (qr.palette.every(rowGlyph)) {
     const m = ctx.measureText("M");
     const fontSize = width / ((qr.characterColumns * m.width) / 100);
     const lineHeight = width / qr.characterRows;
@@ -43,28 +43,43 @@ export function render(canvas, qr, width = qr.recipe.options.width) {
   }
   const cw = width / qr.characterColumns,
     ch = width / qr.characterRows;
-  const m = ctx.measureText(o.glyph);
-  const height =
-    ((m.actualBoundingBoxAscent || 85) + (m.actualBoundingBoxDescent || 15)) /
-    100;
-  const fontSize = Math.min(cw / (m.width / 100), ch / height) * 0.95;
-  ctx.font = `700 ${fontSize}px ${family}`;
+  const sizes = new Map(
+    qr.palette.map((glyph) => {
+      const m = ctx.measureText(glyph);
+      const height =
+        ((m.actualBoundingBoxAscent || 85) +
+          (m.actualBoundingBoxDescent || 15)) /
+        100;
+      return [
+        glyph,
+        Math.min(cw / ((m.width || 100) / 100), ch / height) * 0.95,
+      ];
+    }),
+  );
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.lineWidth = o.stroke * fontSize;
   qr.matrix.forEach((row, y) =>
     row.forEach((dark, x) => {
       if (!dark) return;
+      const glyph = qr.glyphMatrix[y][x],
+        fontSize = sizes.get(glyph);
+      ctx.font = `700 ${fontSize}px ${family}`;
+      ctx.lineWidth = o.stroke * fontSize;
       for (let dy = 0; dy < o.repeatY; dy++)
         for (let dx = 0; dx < o.repeatX; dx++) {
           const gx = ((x + qr.quiet) * o.repeatX + dx + 0.5) * cw;
           const gy = ((y + qr.quiet) * o.repeatY + dy + 0.5) * ch;
-          if (o.stroke) ctx.strokeText(o.glyph, gx, gy);
-          ctx.fillText(o.glyph, gx, gy);
+          if (o.stroke) ctx.strokeText(glyph, gx, gy);
+          ctx.fillText(glyph, gx, gy);
         }
     }),
   );
-  return { kind: "positioned glyphs", fontSize, width, characterOnly: true };
+  return {
+    kind: "positioned glyphs",
+    fontSizes: Object.fromEntries(sizes),
+    width,
+    characterOnly: true,
+  };
 }
 
 // A downloaded HTML sheet keeps the exact PNG artwork plus a selectable text

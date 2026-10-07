@@ -51,12 +51,32 @@ export function validateGlyph(glyph) {
     /[\p{White_Space}\p{Cc}\u200b\u200c\u2060\ufeff\u202a-\u202e\u2066-\u2069]/u.test(
       glyph,
     ) ||
-    !glyph.replace(/[\p{M}\u200d]/gu, "").length
+    /\p{Cf}/u.test(glyph.replace(/[\u200d\u{e0020}-\u{e007f}]/gu, "")) ||
+    !glyph.replace(/[\p{M}\p{Cf}]/gu, "").length
   )
     throw new RangeError(
       "Choose one visible character or emoji (up to 64 UTF-8 bytes).",
     );
   return glyph;
+}
+
+/** Exact graphemes, deduplicated in first-seen order; whitespace is a separator. */
+export function parsePalette(input) {
+  if (
+    typeof input !== "string" ||
+    !input.isWellFormed() ||
+    new TextEncoder().encode(input).length > 4096
+  )
+    throw new RangeError(
+      "Use a well-formed symbol palette up to 4096 UTF-8 bytes.",
+    );
+  const symbols = [
+    ...segmenter.segment(input.replace(/\p{White_Space}/gu, "")),
+  ].map(({ segment }) => validateGlyph(segment));
+  const palette = [...new Set(symbols)];
+  if (!palette.length)
+    throw new RangeError("Enter at least one visible symbol or emoji.");
+  return palette;
 }
 
 export function normalizeOptions(options = {}) {
@@ -66,7 +86,7 @@ export function normalizeOptions(options = {}) {
   for (const key of Object.keys(options))
     if (!known.includes(key)) throw new RangeError(`Unknown option: ${key}`);
   const o = { ...DEFAULTS, ...options };
-  validateGlyph(o.glyph);
+  parsePalette(o.glyph);
   if (!Object.hasOwn(LEVELS, o.ecc))
     throw new RangeError("Choose L, M, Q, or H error correction.");
   if (typeof o.boost !== "boolean")
@@ -117,19 +137,26 @@ export function generate(payload, options = {}) {
   const matrix = Array.from({ length: code.size }, (_, y) =>
     Array.from({ length: code.size }, (_, x) => code.getModule(x, y)),
   );
+  const palette = parsePalette(o.glyph);
+  let next = 0;
+  const glyphMatrix = matrix.map((row) =>
+    row.map((dark) => (dark ? palette[next++ % palette.length] : null)),
+  );
   const quiet = 4,
     totalModules = code.size + quiet * 2;
   const rows = [];
   for (let y = -quiet; y < code.size + quiet; y++) {
     let row = "";
     for (let x = -quiet; x < code.size + quiet; x++)
-      row += (code.getModule(x, y) ? o.glyph : " ").repeat(o.repeatX);
+      row += (glyphMatrix[y]?.[x] ?? " ").repeat(o.repeatX);
     for (let i = 0; i < o.repeatY; i++) rows.push(row);
   }
-  const recipe = { schema: "aqrobat-recipe-v1", payload, options: o };
+  const recipe = { schema: "aqrobat-recipe-v2", payload, options: o };
   return {
     recipe,
     matrix,
+    palette,
+    glyphMatrix,
     rows,
     text: rows.join("\n") + "\n",
     quiet,
@@ -149,12 +176,16 @@ export function generate(payload, options = {}) {
 export function fromRecipe(value) {
   if (
     !value ||
-    value.schema !== "aqrobat-recipe-v1" ||
+    !["aqrobat-recipe-v1", "aqrobat-recipe-v2"].includes(value.schema) ||
     typeof value.payload !== "string" ||
     !value.options
   )
-    throw new TypeError("Expected an Aqrobat v1 recipe.");
-  return generate(value.payload, value.options);
+    throw new TypeError("Expected an Aqrobat v1 or v2 recipe.");
+  if (value.schema === "aqrobat-recipe-v1")
+    validateGlyph({ ...DEFAULTS, ...value.options }.glyph);
+  const qr = generate(value.payload, value.options);
+  qr.recipe.schema = value.schema;
+  return qr;
 }
 
 export function recipeKey(recipe) {
@@ -187,7 +218,7 @@ export function toSvg(qr) {
       for (let dy = 0; dy < o.repeatY; dy++)
         for (let dx = 0; dx < o.repeatX; dx++)
           nodes.push(
-            `<text x="${((x + qr.quiet) * o.repeatX + dx + 0.5) * cw}" y="${((y + qr.quiet) * o.repeatY + dy + 0.5) * ch}">${escapeXml(o.glyph)}</text>`,
+            `<text x="${((x + qr.quiet) * o.repeatX + dx + 0.5) * cw}" y="${((y + qr.quiet) * o.repeatY + dy + 0.5) * ch}">${escapeXml(qr.glyphMatrix[y][x])}</text>`,
           );
     }),
   );

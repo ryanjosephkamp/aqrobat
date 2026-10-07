@@ -4,10 +4,12 @@
    adds error correction, and applies a mask. Non-ASCII payloads use UTF-8 with
    ECI 26. Emoji in the payload and emoji used as ink are separate choices.
 2. **Preserve the matrix.** Aqrobat keeps four clear modules around every edge.
-   Each dark module is drawn with the selected character repeated across and
-   down; each light module uses spaces. This includes the corner markers.
+   Unique symbols cycle through dark modules in entry order, left to right,
+   then top to bottom. The symbol assigned to a module repeats across and down;
+   each light module uses spaces. This includes the corner markers.
 3. **Measure the font.** ASCII/block rows use measured monospace metrics to
-   reproduce the earlier prototype layout. Other glyphs use measured bounds
+   reproduce the earlier prototype layout. Mixed palettes and other glyphs
+   use per-symbol measured bounds
    and fixed cell positions on Canvas. All dark ink comes from `fillText` and
    optional `strokeText`; only the white background is a rectangle.
 4. **Observe the image.** A scanner must recognize the light/dark module pattern
@@ -28,9 +30,15 @@ Disable boost for an exact requested level. Increasing ECC can otherwise require
 more modules, which makes each module smaller at a fixed output size.
 
 A whole emoji may contain multiple Unicode code points: modifiers, variation
-selectors, a flag pair, or a joined family. `Intl.Segmenter` validates one
-grapheme, with control/spacing safeguards. This is not a promise that an installed
-font can draw that sequence or that its artwork scans. [Unicode emoji specification](https://www.unicode.org/reports/tr51/).
+selectors, a flag pair, or a joined family. `Intl.Segmenter` splits the input
+into whole graphemes. Exact duplicates
+and whitespace are ignored for drawing; variation selectors remain meaningful,
+so text and emoji presentation forms are separate symbols. Controls, invisible
+formatting, malformed Unicode, and empty palettes are rejected. The palette
+limit is 4096 UTF-8 bytes, with 64 bytes per grapheme. Those are resource limits,
+not a promise of font support. Segmentation uses the current runtime’s Unicode
+data; very recent sequences can differ on older runtimes. Artwork still needs
+its own scan test. [Unicode emoji specification](https://www.unicode.org/reports/tr51/).
 
 **Portability:** PNG preserves the generated pixels. The HTML print sheet embeds
 that PNG and includes selectable text. TXT can change shape when fonts, emoji
@@ -42,3 +50,12 @@ No AI draws the matrix. Models can describe a desired style, choose parameters,
 call the CLI, and analyze test records. This helps usability; it does not give
 the model the ability to guarantee scanning. Glyph artwork is decoration, not
 secrecy: its standard QR payload can still be decoded by software.
+
+**Recipes and appearance:** v2 records the original palette string plus all QR
+settings. The derived palette and module-to-symbol map are shared by TXT,
+Canvas, and SVG. The original string is retained because deduplication followed
+by concatenation can alter grapheme boundaries for regional indicators. v1
+single-symbol recipes remain readable and retain their schema/key in the core;
+regenerating them in the page produces a v2 recipe. Appearance settings are
+separate: page themes and icon colors never alter the QR canvas, payload,
+recipe, or scanning status. Only theme/icon preferences are automatically saved.

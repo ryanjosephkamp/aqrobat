@@ -18,11 +18,22 @@ initial state until review.
 - [Unpacked extension ZIP](downloads/aqrobat-extension.zip): extract and load
   unpacked in Chrome. See [installation](docs/distribution.md).
 
-On the page, enter a link or text, choose a character or complete emoji, adjust
+On the page, enter a link or text, choose one or more symbols or complete emoji, adjust
 size/density/font/ECC, and scan the **exact displayed output**. Export TXT, PNG,
 SVG, a printable HTML sheet, or a reusable JSON recipe. The comparison grid lets
 you mark 12 recipes and export/import your observations. Results stay in the
 open page until exported; they are not uploaded or automatically persisted.
+
+Enter `🤣☄️`, `abc123,.//';`, or `🤣.☄️1:a` in **Custom symbols / emoji**.
+Unique graphemes cycle through dark modules in first-entry order; repeats and
+spaces are ignored. Each chosen symbol repeats within its module. The input
+limit is 4096 UTF-8 bytes. PNG preserves the rendered palette; copied emoji
+text can lose its grid when receiving fonts use different widths.
+
+Expand **Page theme & icon color** for five page themes and five icon colors.
+Violet is the default. Appearance preferences alone persist locally; they do
+not change QR artwork or recipes. In the extension, icon color also updates
+the toolbar icon. The page includes Ryan’s personal social/sponsor footer.
 
 ## What works without AI
 
@@ -82,8 +93,8 @@ reading the payload.
 ```sh
 npm ci
 npm test
-npm run test:browser
 npm run build
+npm run test:browser
 npm run format:check
 npm run serve
 ```
@@ -100,11 +111,15 @@ Text QR is not new. Terminal packages and custom emoji websites already exist.
 The value we are exploring is the combination of a small shared toolchain,
 font-aware glyph layouts, portable recipes, and visible scan testing.
 [Opened-source review and roadmap](docs/prior-art-and-roadmap.md).
+The next bounded research proposal is the [emoji atlas pilot](docs/emoji-atlas-plan.md);
+it has not been executed.
 
 ## Demo and validation
 
-[Short UI walkthrough](docs/demo/walkthrough.webm) ·
-[Animated GIF](docs/demo/walkthrough.gif) ·
+[Current palette/theme walkthrough](docs/demo/palette-themes.webm) ·
+[Current GIF](docs/demo/palette-themes.gif) ·
+[Original UI walkthrough](docs/demo/walkthrough.webm) ·
+[Animated GIF](docs/demo/walkthrough.gif) (0.1.0 historical UI) ·
 [Software evidence and negative results](docs/validation.md).
 The demo shows the real generator changing settings and creating comparisons;
 it contains no phone scan or print acceptance claim.

@@ -7,6 +7,9 @@ analytics, remote fonts, or QR API. GitHub Pages hosts those files; GitHub recei
 ordinary page requests, but the generator does not send the entered payload.
 The self-contained `downloads/aqrobat-offline.html` works directly from disk.
 The source `index.html` uses modules and should be served over HTTP.
+Page theme and icon-color preferences are saved locally; entered payloads and
+scan observations are not automatically saved. Offline file preference storage
+may be unavailable in some browsers; generation still works.
 
 The initial Pages preview may be configured from `codex/aqrobat-foundation`.
 After owner review/merge, change the publishing source to `main` at `/`.
@@ -31,6 +34,17 @@ erasure if no later action happens. There is no server upload.
 This is not submitted to the Chrome Web Store, and the project does not alter
 your browser profile or install itself. Updates require loading a new build.
 The build creates the ZIP; `dist/extension/` can also be loaded directly.
+
+**Appearance:** expand “Page theme & icon color.” Violet is the default; page
+choices also include Ocean, Ember, Garden, and Midnight. Icon colors are
+Violet, Blue, Coral, Green, and Gold. On the website this changes the preview
+and favicon. Inside the extension, changing icon color updates the toolbar
+icon and saves the choice in `chrome.storage.local`. The worker restores it on
+wake, startup, and installation. The Chrome extension-management tile still
+uses the manifest’s violet icon. Website and extension preferences are separate.
+The QR artwork retains its original colors in every theme.
+[Chrome action icons](https://developer.chrome.com/docs/extensions/reference/api/action),
+[Chrome local storage](https://developer.chrome.com/docs/extensions/reference/api/storage).
 [Chrome context menu API](https://developer.chrome.com/docs/extensions/reference/api/contextMenus).
 [Chrome session storage](https://developer.chrome.com/docs/extensions/reference/api/storage).
 
