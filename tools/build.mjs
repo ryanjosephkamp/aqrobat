@@ -1,4 +1,12 @@
-import { readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
+import {
+  readFile,
+  writeFile,
+  mkdir,
+  cp,
+  rm,
+  readdir,
+  utimes,
+} from "node:fs/promises";
 import { resolve } from "node:path";
 import { execFileSync } from "node:child_process";
 import { chromium } from "playwright";
@@ -94,7 +102,25 @@ await rm(resolve(dist, "offline-check.mjs"));
 const archive = resolve(dist, "aqrobat-extension.zip");
 await rm(archive, { force: true });
 // zip is a build-time utility, not a package/runtime dependency.
-execFileSync("zip", ["-q", "-r", "-X", archive, "."], { cwd: ext });
+const entries = [];
+async function collect(dir, prefix = "") {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const name = prefix + entry.name;
+    if (entry.isDirectory())
+      await collect(resolve(dir, entry.name), name + "/");
+    else {
+      entries.push(name);
+      const date = new Date("2000-01-01T00:00:00Z");
+      await utimes(resolve(dir, entry.name), date, date);
+    }
+  }
+}
+await collect(ext);
+entries.sort();
+execFileSync("zip", ["-q", "-X", archive, ...entries], {
+  cwd: ext,
+  env: { ...process.env, TZ: "UTC" },
+});
 await mkdir(resolve(root, "downloads"), { recursive: true });
 for (const name of ["aqrobat-extension.zip", "aqrobat-offline.html"])
   await cp(resolve(dist, name), resolve(root, "downloads", name));
