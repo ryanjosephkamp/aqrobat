@@ -22,6 +22,8 @@ and out-of-range sizes are rejected. Existing output files are preserved.
 The API exports `generate`, `fromRecipe`, `toSvg`, and validation helpers.
 The separate `aqrobat/render` module needs a browser Canvas context.
 
+Use `plainText(qr)` from `aqrobat/text` for improved copyable spacing; the CLI text format does this automatically. Core `qr.rows`/`qr.text` retain legacy image-row serialization.
+
 Plain text preserves characters but not font metrics. PNG is produced by the
 browser page. SVG is a separate font-dependent renderer and may differ from
 the canvas. Emoji choices are experimental. Do not treat failure by one decoder

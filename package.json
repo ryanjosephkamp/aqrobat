@@ -1,6 +1,6 @@
 {
   "name": "aqrobat",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Deterministic text and emoji QR experiments, without AI or a server.",
   "type": "module",
@@ -22,7 +22,11 @@
       "types": "./src/core.d.ts",
       "import": "./src/core.mjs"
     },
-    "./render": "./src/render.mjs"
+    "./render": "./src/render.mjs",
+    "./text": {
+      "types": "./src/text.d.ts",
+      "import": "./src/text.mjs"
+    }
   },
   "files": [
     "bin",
@@ -38,7 +42,10 @@
     "build": "node tools/build.mjs",
     "format:check": "prettier --check .",
     "serve": "node tools/serve.mjs",
-    "prepack": "npm test"
+    "prepack": "npm test",
+    "test:text-browser": "node tests/text-browser.mjs",
+    "test:extension": "node tests/installed-extension.mjs",
+    "test:native-text": "node tests/native-text.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.1",

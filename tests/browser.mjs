@@ -154,6 +154,7 @@ try {
       JSON.parse(localStorage.getItem("aqrobat-appearance-v1")).icon ===
       "coral",
   );
+  await page.locator("#recipe").click();
   await page.reload();
   await page.waitForFunction(
     () => document.documentElement.dataset.theme === "midnight",
@@ -221,6 +222,10 @@ try {
         pathToFileURL(resolve("test-results/print-sheet.html")).href,
       );
       assert.equal(await sheet.locator("img").count(), 1);
+      assert.equal(
+        await sheet.locator("pre").textContent(),
+        await page.locator("#raw").inputValue(),
+      );
       assert(
         await sheet
           .locator("img")
@@ -241,7 +246,7 @@ try {
   await page.locator("#copy").click();
   assert.match(await page.locator("#status").textContent(), /selected below/);
   await page.locator("#compare").click();
-  assert.equal(await page.locator(".test-card").count(), 12);
+  assert.equal(await page.locator("#grid .test-card").count(), 12);
   const select = page.locator(".test-card select").first();
   await select.selectOption("pass");
   assert.match(await page.locator("#status").textContent(), /Name the phone/);
@@ -293,6 +298,7 @@ try {
   );
   await page.emulateMedia({ media: "screen" });
   await mkdir("test-results", { recursive: true });
+  await page.locator("#recipe").click();
   await page.reload();
   await page.waitForFunction(
     () => document.getElementById("preview").width === 656,

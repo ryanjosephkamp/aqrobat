@@ -19,7 +19,7 @@ initial state until review.
   unpacked in Chrome. See [installation](docs/distribution.md).
 
 On the page, enter a link or text, choose one or more symbols or complete emoji, adjust
-size/density/font/ECC, and scan the **exact displayed output**. Export TXT, PNG,
+size/density/font/ECC, and scan the **exact displayed output**. Copy formatted text or plain text. Export RTF, Text HTML, TXT, PNG,
 SVG, a printable HTML sheet, or a reusable JSON recipe. The comparison grid lets
 you mark 12 recipes and export/import your observations. Results stay in the
 open page until exported; they are not uploaded or automatically persisted.
@@ -64,7 +64,10 @@ const qr = generate("https://example.com", {
   width: 700,
   ecc: "H",
 });
-console.log(qr.text, qr.recipe, qr.scanStatus); // "untested"
+console.log(qr.recipe, qr.scanStatus); // "untested"
+// Improved copyable packing (core qr.text retains legacy image rows):
+// import { plainText } from "aqrobat/text";
+// console.log(plainText(qr).text);
 const svg = toSvg(qr); // font-dependent experimental artwork
 ```
 
@@ -80,6 +83,8 @@ phone observations, and paper scans are different evidence. Characters with
 good dark coverage may scan more easily; sparse dots and colorful emoji can be
 fragile. Fonts, copied spacing, cameras, brightness, and distance matter.
 PNG preserves this browser's artwork. TXT and SVG depend on receiving fonts.
+Formatted clipboard/HTML and RTF carry typography into supported editors.
+See [text portability and destination review](docs/text-portability.md).
 Print sheets have not been physically tested in this version.
 
 The earlier private prototypes received encouraging phone reports, including
@@ -130,3 +135,6 @@ MIT: free to use, modify, and redistribute with the included copyright and
 permission notices. No software purchase or subscription is required. The
 Nayuki encoder's notice is preserved. System emoji fonts remain separately
 licensed. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
+
+For a dedicated Codex project, use the existing repository folder and
+[project handoff](docs/PROJECT-HANDOFF.md). Text acceptance is still open.

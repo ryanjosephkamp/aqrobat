@@ -32,10 +32,10 @@ cleared when the browser session ends. Do not treat that expiry as immediate
 erasure if no later action happens. There is no server upload.
 
 This is not submitted to the Chrome Web Store, and the project does not alter
-your browser profile or install itself. Updates require loading a new build.
+your browser profile or install itself. Updates require copying a new build into the same unpacked folder and clicking Reload in chrome://extensions. Keep the folder path and installed extension ID stable; removing/reinstalling can lose saved preferences.
 The build creates the ZIP; `dist/extension/` can also be loaded directly.
 
-**Appearance:** expand “Page theme & icon color.” Violet is the default; page
+**Appearance:** use the header’s “Theme” menu. Violet is the default; page
 choices also include Ocean, Ember, Garden, and Midnight. Icon colors are
 Violet, Blue, Coral, Green, and Gold. On the website this changes the preview
 and favicon. Inside the extension, changing icon color updates the toolbar
@@ -63,3 +63,23 @@ Owner authentication and publication remain outside this setup.
 
 No custom MCP server is needed for version one. A CLI and JSON recipes are
 enough for Codex, Claude Code, or another agent to use deterministically.
+
+## Local extension URL and updates
+
+`chrome-extension://<id>/index.html` is the normal local page address for an
+installed extension. It does not use the website's preference storage. Theme and
+icon choices persist in that installed extension's local store, with updates
+synchronized across its open tabs. A fresh test installation passed both a new
+tab and a full browser restart. Ryan's installed copy was not modified or inspected.
+
+The toolbar icon changes; the chrome://extensions tile continues using the
+manifest icon. Check version **0.3.0** on the extension-management page after
+updating the files in the existing folder and pressing Reload. If it still
+shows 0.1.0/0.2.0, it is running the older build.
+[Chrome local storage](https://developer.chrome.com/docs/extensions/reference/api/storage),
+[extension ID stability](https://developer.chrome.com/docs/extensions/reference/manifest/key).
+
+On October 7, 2026, the official registry returned HTTP 404 and
+`{"error":"Not found"}` for [aqrobat](https://registry.npmjs.org/aqrobat).
+No published unscoped package was found at that instant. This does not reserve
+the name or guarantee publication eligibility. Recheck before an owner-led release.

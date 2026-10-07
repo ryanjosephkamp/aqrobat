@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { parseArgs } from "node:util";
 import { readFile, writeFile } from "node:fs/promises";
+import { plainText } from "../src/text.mjs";
 import { generate, fromRecipe, toSvg } from "../src/core.mjs";
 
 try {
@@ -78,7 +79,7 @@ try {
     }
     const output =
       format === "text"
-        ? qr.text
+        ? plainText(qr).text
         : format === "svg"
           ? toSvg(qr)
           : JSON.stringify(format === "recipe" ? qr.recipe : qr, null, 2) +

@@ -1,305 +1,492 @@
 {
-  "matrixEvidence": "separate unit decoder tests",
-  "nativePhone": "not run",
+  "version": "0.3.0",
+  "time": "2026-10-07T16:43:42.890512+00:00",
+  "unitTests": {
+    "passed": 16
+  },
+  "browser": {
+    "matrixEvidence": "separate unit decoder tests",
+    "nativePhone": "not run",
+    "physicalPrint": "not run",
+    "checks": [
+      "mixed palettes, theme/icon selection and appearance-only persistence; themes do not alter QR pixels; personal footer links",
+      "continuous size, validation, hostile input, and five exports/recipe import",
+      "clipboard fallback; bounded grid; recorded/exported/imported synthetic observation; atomic conflicting import rejection",
+      "desktop/mobile layout and 65 mm print CSS; no physical print test",
+      "self-contained offline file works from file://",
+      "no page errors or third-party requests in source-page checks"
+    ],
+    "rawCharacterDecodes": [
+      {
+        "glyph": "#",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "#",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "fa187897faeb3ed18b6ca639d21b7a35f6cc2e00689fc90e209e106ea8740cf9",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "@",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "@",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "9b65cee93983b57d85d5e2502dc97edaa2fc1af0ba264094f80f25ea10fb2589",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "M",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "M",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "6df4130f223dbb99465a6898e24fee208d675b5f0d6d0ae6710d56858b8cc1e8",
+        "result": "not recovered"
+      },
+      {
+        "glyph": ".",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": ".",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "8a002be6fe50a8c127308b9725bcf7b143dad57a915c1b80bf18a16329812dad",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "█",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "█",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "c6b944e3dc387c8e8e87d6fc903379fb700f9da0200555bb21a1345b091145f1",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "⚫️",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "⚫️",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "c6df79ec8b59b2bb8153d5edddf881d6b346e1955ec5390c3a6aadc36fa830c5",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "🙂",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "🙂",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "44d6eaff4b096eb02614018d09e5af9c81204919368eee775fc59b2db21d1e22",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "👨‍👩‍👧‍👦",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "👨‍👩‍👧‍👦",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "ec4e96333d1b9e851b84c4b7316aa8dc4f01beffb093bd0e9ec3645a4dc6df66",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "🤣☄️",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "🤣☄️",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "4d8adb880a162a497aed8d5ae785d1e0eb2524681f29d420bb69de718dfc7fec",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "abc123,.//';",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "abc123,.//';",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "9ed34dbe66bd72dd372c6c9a7a446fd2aed3f2648a0f92aa4ab9852cd91d8aaa",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "🤣.☄️1:a",
+        "payload": "https://example.com",
+        "size": 656,
+        "density": "4x2",
+        "font": "Menlo",
+        "stroke": 0.1,
+        "ecc": "M",
+        "decoder": "jsQR 1.4.0",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "🤣.☄️1:a",
+            "repeatX": 4,
+            "repeatY": 2,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "rgbaSha256": "d79876d1b8f2ebde20799598cf67bd336ead94d4ed88b4fcc6003c3828d25a73",
+        "result": "not recovered"
+      }
+    ],
+    "browser": "155.0.8059.39"
+  },
+  "textBrowser": {
+    "checks": [
+      "three supplied recipes: complete plain-text height/width, custom filenames, TXT/RTF/text-HTML exports, HTML+plain clipboard and actual rich-editor paste, image pixels unchanged by text operations",
+      "separate image/text observations, retained image grid, close/reload guard after unsaved edits"
+    ],
+    "nativePhone": "not run",
+    "physicalPrint": "not run",
+    "samples": [
+      {
+        "name": "rocket",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "🚀",
+            "repeatX": 1,
+            "repeatY": 1,
+            "ecc": "L",
+            "boost": true,
+            "width": 1536,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "geometry": {
+          "scrollHeight": 1327,
+          "clientHeight": 1327,
+          "scrollWidth": 1080,
+          "clientWidth": 1080,
+          "rows": 34
+        },
+        "imageSha256": "641e3c7e2022dd89a66cbc1d0e29fbb5ffd52e545040100dbeecf76e3602e78a",
+        "clipboardTypes": ["text/plain", "text/html"]
+      },
+      {
+        "name": "circle",
+        "recipe": {
+          "schema": "aqrobat-recipe-v2",
+          "payload": "https://example.com",
+          "options": {
+            "glyph": "⚫️",
+            "repeatX": 1,
+            "repeatY": 1,
+            "ecc": "M",
+            "boost": true,
+            "width": 724,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "geometry": {
+          "scrollHeight": 1327,
+          "clientHeight": 1327,
+          "scrollWidth": 1080,
+          "clientWidth": 1080,
+          "rows": 34
+        },
+        "imageSha256": "ac92a7ab26883b405cc3ef638bf3f1d5c65c94e4de1334cfc91c9de178a9a92e",
+        "clipboardTypes": ["text/plain", "text/html"]
+      },
+      {
+        "name": "hash",
+        "recipe": {
+          "schema": "aqrobat-recipe-v1",
+          "payload": "https://english-openlist.pages.dev/",
+          "options": {
+            "glyph": "#",
+            "repeatX": 1,
+            "repeatY": 1,
+            "ecc": "M",
+            "boost": true,
+            "width": 656,
+            "font": "Menlo",
+            "stroke": 0.1
+          }
+        },
+        "geometry": {
+          "scrollHeight": 1107,
+          "clientHeight": 1107,
+          "scrollWidth": 1080,
+          "clientWidth": 1080,
+          "rows": 38
+        },
+        "imageSha256": "c93b48ae57636def4a7d662fc4d53d5adfe8985b37331a30f44926d69095fcfa",
+        "clipboardTypes": ["text/plain", "text/html"]
+      }
+    ],
+    "plainTextDecodes": [
+      {
+        "glyph": "#",
+        "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+        "decoder": "jsQR 1.4.0",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "🚀",
+        "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+        "decoder": "jsQR 1.4.0",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "⚫️",
+        "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+        "decoder": "jsQR 1.4.0",
+        "result": "not recovered"
+      },
+      {
+        "glyph": "🤣.☄️1:a",
+        "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+        "decoder": "jsQR 1.4.0",
+        "result": "not recovered"
+      }
+    ],
+    "browser": "155.0.8059.39"
+  },
+  "installedExtension": {
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "extensionVersion": "0.3.0",
+    "checks": [
+      "installed MV3 extension page uses chrome.storage.local",
+      "preference change invokes real chrome.action.setIcon successfully with gold icon paths",
+      "formatted clipboard write succeeds from the installed extension page",
+      "new tab and full browser restart preserve theme/icon under same unpacked ID"
+    ],
+    "toolbarPixels": "not visually inspected",
+    "userInstalledCopy": "not inspected or modified",
+    "profile": "fresh task-owned profile; removed after test"
+  },
+  "nativeText": {
+    "engine": "macOS AppKit TextKit",
+    "nativePhone": "not run",
+    "physicalPrint": "not run",
+    "textEdit": "manual UI evidence is recorded separately in docs/validation.md; this script does not automate TextEdit",
+    "samples": [
+      {
+        "name": "rocket",
+        "maximumColumnErrorPoints": 0.022727272727365744,
+        "maximumRowErrorPoints": 4.831690603168681e-13
+      },
+      {
+        "name": "circle",
+        "maximumColumnErrorPoints": 0.025000000000034106,
+        "maximumRowErrorPoints": 2.4158453015843406e-13
+      },
+      {
+        "name": "hash",
+        "check": "rendered real hash text with explicit Menlo bold and fixed line spacing; bitmap reviewed"
+      }
+    ]
+  },
+  "manualTextEdit": {
+    "finalCircleRTF": "visually observed aligned corner patterns through native UI",
+    "otherSamples": "native AppKit rendering and metrics; not separately opened in final TextEdit UI",
+    "ownerOriginalDocuments": "not edited; test tab closed"
+  },
+  "npm": {
+    "private": true,
+    "published": false,
+    "registry": "https://registry.npmjs.org/aqrobat",
+    "lookupStatus": 404,
+    "lookupBody": {
+      "error": "Not found"
+    },
+    "nameReserved": false,
+    "tarballBytes": 26241,
+    "consumer": "installed local tarball in fresh private consumer; generate + aqrobat/text plainText API passed"
+  },
+  "ownerAcceptance": "pending destination paste and scan review",
   "physicalPrint": "not run",
-  "checks": [
-    "mixed palettes, theme/icon selection and appearance-only persistence; themes do not alter QR pixels; personal footer links",
-    "continuous size, validation, hostile input, and five exports/recipe import",
-    "clipboard fallback; bounded grid; recorded/exported/imported synthetic observation; atomic conflicting import rejection",
-    "desktop/mobile layout and 65 mm print CSS; no physical print test",
-    "self-contained offline file works from file://",
-    "no page errors or third-party requests in source-page checks"
+  "newPhoneScans": "not run",
+  "imageRegression": {
+    "sameAs020": 11,
+    "comparison": "exact RGBA SHA-256 in raw glyph/palette fixtures"
+  },
+  "preservedSource": [
+    "core encoder/matrix/glyph rows byte-for-byte",
+    "vendored Nayuki source byte-for-byte",
+    "canvas render function byte-for-byte; print helper accepts improved text"
   ],
-  "rawCharacterDecodes": [
-    {
-      "glyph": "#",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "#",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "fa187897faeb3ed18b6ca639d21b7a35f6cc2e00689fc90e209e106ea8740cf9",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "@",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "@",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "9b65cee93983b57d85d5e2502dc97edaa2fc1af0ba264094f80f25ea10fb2589",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "M",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "M",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "6df4130f223dbb99465a6898e24fee208d675b5f0d6d0ae6710d56858b8cc1e8",
-      "result": "not recovered"
-    },
-    {
-      "glyph": ".",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": ".",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "8a002be6fe50a8c127308b9725bcf7b143dad57a915c1b80bf18a16329812dad",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "█",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "█",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "c6b944e3dc387c8e8e87d6fc903379fb700f9da0200555bb21a1345b091145f1",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "⚫️",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "⚫️",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "c6df79ec8b59b2bb8153d5edddf881d6b346e1955ec5390c3a6aadc36fa830c5",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "🙂",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "🙂",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "44d6eaff4b096eb02614018d09e5af9c81204919368eee775fc59b2db21d1e22",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "👨‍👩‍👧‍👦",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "👨‍👩‍👧‍👦",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "ec4e96333d1b9e851b84c4b7316aa8dc4f01beffb093bd0e9ec3645a4dc6df66",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "🤣☄️",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "🤣☄️",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "4d8adb880a162a497aed8d5ae785d1e0eb2524681f29d420bb69de718dfc7fec",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "abc123,.//';",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "abc123,.//';",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "9ed34dbe66bd72dd372c6c9a7a446fd2aed3f2648a0f92aa4ab9852cd91d8aaa",
-      "result": "not recovered"
-    },
-    {
-      "glyph": "🤣.☄️1:a",
-      "payload": "https://example.com",
-      "size": 656,
-      "density": "4x2",
-      "font": "Menlo",
-      "stroke": 0.1,
-      "ecc": "M",
-      "decoder": "jsQR 1.4.0",
-      "recipe": {
-        "schema": "aqrobat-recipe-v2",
-        "payload": "https://example.com",
-        "options": {
-          "glyph": "🤣.☄️1:a",
-          "repeatX": 4,
-          "repeatY": 2,
-          "ecc": "M",
-          "boost": true,
-          "width": 656,
-          "font": "Menlo",
-          "stroke": 0.1
-        }
-      },
-      "rgbaSha256": "d79876d1b8f2ebde20799598cf67bd336ead94d4ed88b4fcc6003c3828d25a73",
-      "result": "not recovered"
-    }
-  ],
-  "browser": "155.0.8059.39",
-  "productVersion": "0.2.0",
-  "unitTests": 13,
-  "nativeUnpackedExtension": "not run; handler/icon lifecycle mocked separately"
+  "downloadBytes": {
+    "aqrobat-offline.html": 121979,
+    "aqrobat-extension.zip": 73728
+  }
 }

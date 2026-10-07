@@ -78,6 +78,7 @@ for (const path of [
   "vendor/qrcodegen.mjs",
   "src/core.mjs",
   "src/render.mjs",
+  "src/text.mjs",
   "web/appearance.mjs",
   "web/app.mjs",
 ]) {

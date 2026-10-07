@@ -20,30 +20,8 @@
         <a href="#make">Make</a><a href="#how">How it works</a
         ><a href="https://github.com/ryanjosephkamp/aqrobat">GitHub</a>
       </nav>
-    </header>
-    <main>
-      <section class="intro">
-        <p class="eyebrow">SMALL TOOL. MANY CHARACTERS.</p>
-        <h1>QR codes,<br />in character.</h1>
-        <p class="lede">
-          A link, a little text, a whole new look. Build QR artwork from
-          letters, symbols, or emoji—right in your browser.
-        </p>
-        <p class="fine">
-          Free · No account · No AI required · Experimental scanning
-        </p>
-        <p class="hint">
-          <a href="downloads/aqrobat-offline.html" download
-            >Download offline page</a
-          >
-          ·
-          <a href="downloads/aqrobat-extension.zip" download
-            >Unpacked Chrome extension</a
-          >
-        </p>
-      </section>
       <details class="appearance">
-        <summary>Page theme &amp; icon color</summary>
+        <summary aria-label="Appearance">◐ Theme</summary>
         <div class="pair">
           <div>
             <label for="theme">Page theme</label
@@ -68,6 +46,28 @@
           keeps its original colors.
         </p>
       </details>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">SMALL TOOL. MANY CHARACTERS.</p>
+        <h1>QR codes,<br />in character.</h1>
+        <p class="lede">
+          A link, a little text, a whole new look. Build QR artwork from
+          letters, symbols, or emoji—right in your browser.
+        </p>
+        <p class="fine">
+          Free · No account · No AI required · Experimental scanning
+        </p>
+        <p class="hint">
+          <a href="downloads/aqrobat-offline.html" download
+            >Download offline page</a
+          >
+          ·
+          <a href="downloads/aqrobat-extension.zip" download
+            >Unpacked Chrome extension</a
+          >
+        </p>
+      </section>
       <section class="workspace" id="make" aria-label="QR generator">
         <form id="controls" class="panel">
           <h2>Make yours</h2>
@@ -174,31 +174,25 @@ https://example.com</textarea
           </div>
           <p id="metadata" class="hint"></p>
           <div class="exports" aria-label="Export options">
-            <button id="copy" type="button">Copy text</button
+            <button id="copy-formatted" type="button">Copy text</button
+            ><button id="copy" type="button">Plain text</button
             ><button id="png" type="button">PNG</button
             ><button id="svg" type="button">SVG</button
             ><button id="txt" type="button">TXT</button
-            ><button id="html" type="button">Print / HTML</button
+            ><button id="html" type="button">Image print / HTML</button
             ><button id="recipe" type="button">Recipe</button>
           </div>
           <p class="hint" id="status" role="status" aria-live="polite">
             Nothing is sent to a QR service. Try scanning this exact display.
           </p>
-          <details>
-            <summary>View / select the plain text</summary>
-            <p class="hint">
-              Keep every space and newline. Use a monospace font. Emoji widths
-              and artwork can change when pasted.
-            </p>
-            <textarea
-              id="raw"
-              readonly
-              rows="8"
-              aria-label="Plain text QR output"
-              spellcheck="false"
-              wrap="off"
-            ></textarea>
-          </details>
+          <label for="filename">Save filename (without extension)</label
+          ><input
+            id="filename"
+            value="aqrobat"
+            maxlength="80"
+            autocomplete="off"
+          />
+          <p class="hint" id="unsaved" role="status"></p>
           <label class="file-label"
             >Load a recipe
             <input
@@ -208,13 +202,52 @@ https://example.com</textarea
           /></label>
         </div>
       </section>
+      <section class="text-section panel" aria-labelledby="text-heading">
+        <h2 id="text-heading">Copyable text</h2>
+        <p>
+          Formatted text carries the layout into editors that accept HTML. Plain
+          TXT uses wider blanks for emoji and balanced repetition for ordinary
+          letters. Both contain real characters.
+        </p>
+        <div class="lab-actions exports">
+          <button id="text-html" type="button">Text HTML</button
+          ><button id="rtf" type="button">RTF document</button
+          ><button id="snippet" type="button">Copy website HTML</button>
+        </div>
+        <details open>
+          <summary>Formatted text preview</summary>
+          <div class="text-scroll"><div id="formatted-preview"></div></div>
+        </details>
+        <details open>
+          <summary>View / select the plain text</summary>
+          <p class="hint" id="text-info"></p>
+          <div class="raw-wrap">
+            <textarea
+              id="raw"
+              readonly
+              wrap="off"
+              spellcheck="false"
+              aria-label="Plain text QR"
+            ></textarea>
+          </div>
+        </details>
+        <p class="hint">
+          For TextEdit, open RTF or paste formatted text in rich text mode. For
+          websites, keep the Text HTML styles. Email and blog editors may remove
+          styles. TXT cannot store a font or line spacing: preserve every blank
+          and newline, choose the matching monospace font, and test the pasted
+          result. In TextEdit, start with Menlo; for plain emoji TXT, use 30 pt
+          or larger to avoid macOS’s small-emoji width expansion. RTF sets its
+          own spacing.
+        </p>
+      </section>
       <section class="lab" id="test">
         <div class="section-top">
           <div>
             <p class="eyebrow">MAKE OBSERVATIONS, NOT PROMISES</p>
             <h2>A little scan lab.</h2>
           </div>
-          <button id="compare" type="button">Build 12 comparisons</button>
+          <button id="compare" type="button">Build 12 image comparisons</button>
         </div>
         <p>
           Compare this symbol palette at two densities, two fonts, and three
@@ -254,7 +287,17 @@ https://example.com</textarea
           Results stay in this open page. Export a backup before closing.
           Printed codes are 65 mm square; paper scanning has not been verified.
         </p>
+        <label
+          ><input id="compare-text" type="checkbox" /> Also build a plain-text
+          comparison grid</label
+        >
+        <p class="hint">
+          Text observations are separate from images. These are actual
+          characters, with normal 1.2 line spacing. Print both grids or scan on
+          screen.
+        </p>
         <div id="grid" class="grid"></div>
+        <div id="text-grid" class="grid"></div>
       </section>
       <section class="explanation" id="how">
         <p class="eyebrow">UNDER THE HOOD</p>
@@ -300,8 +343,10 @@ https://example.com</textarea
             Unique symbols cycle through dark modules in entry order; duplicate
             symbols and spaces are ignored. Emoji artwork comes from your system
             fonts and may change across devices. PNG keeps the rendered artwork;
-            TXT and SVG depend on receiving fonts and spacing. Sparse dots and
-            colorful faces are experiments, not reliable defaults.
+            TXT and SVG depend on receiving fonts and spacing. Formatted text
+            and RTF retain layout instructions, but receiving editors can still
+            change typography. Sparse dots and colorful faces are experiments,
+            not reliable defaults.
           </p>
           <p>
             Short inputs usually need fewer modules. Bigger artwork can help a
@@ -470,6 +515,7 @@ node bin/aqrobat.mjs 'https://example.com' --glyph '#' --density 4x2 --format re
         >
       </div>
       <p class="footer-fine">
+        Aqrobat 0.3.0 ·
         <a href="https://github.com/ryanjosephkamp/aqrobat"
           >MIT license · Source &amp; docs</a
         >

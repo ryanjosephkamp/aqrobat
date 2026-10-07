@@ -633,3 +633,110 @@ noscript p {
     color-scheme: light;
   }
 }
+/* Real text has its own white scanning surface, independent of page themes. */
+header {
+  position: relative;
+  gap: 16px;
+}
+header .appearance {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+header .appearance summary {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  white-space: nowrap;
+}
+header .appearance[open] > :not(summary) {
+  position: relative;
+  z-index: 3;
+}
+header .appearance[open] {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  z-index: 5;
+  width: min(380px, calc(100vw - 48px));
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 12px 32px #0002;
+}
+header .appearance[open] summary {
+  width: fit-content;
+  margin-left: auto;
+}
+.text-section {
+  margin: 28px 0;
+  min-width: 0;
+}
+.text-scroll,
+.raw-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  background: white;
+  color: black;
+}
+#formatted-preview {
+  overflow: hidden;
+  background: white;
+  color: black;
+}
+textarea#raw {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  resize: none;
+  overflow: hidden;
+  white-space: pre;
+  background: white;
+  color: black;
+  font-weight: 700;
+  padding: 12px;
+}
+.comparison-text {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  white-space: pre;
+  line-height: 1.2;
+  font-weight: 700;
+  color: black;
+  background: white;
+  width: 100%;
+  overflow: hidden;
+}
+#unsaved:not(:empty) {
+  color: var(--error);
+}
+@media (max-width: 760px) {
+  header {
+    flex-wrap: wrap;
+  }
+  nav {
+    gap: 12px;
+  }
+  header .appearance[open] {
+    right: 24px;
+  }
+}
+@media print {
+  .text-section {
+    display: none;
+  }
+  .comparison-text {
+    width: 65mm;
+    max-width: none;
+  }
+}
+
+@media print {
+  .comparison-text {
+    font-size: calc(65mm / var(--text-span)) !important;
+  }
+}

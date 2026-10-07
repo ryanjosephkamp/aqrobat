@@ -644,6 +644,113 @@ noscript p {
     color-scheme: light;
   }
 }
+/* Real text has its own white scanning surface, independent of page themes. */
+header {
+  position: relative;
+  gap: 16px;
+}
+header .appearance {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+header .appearance summary {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  white-space: nowrap;
+}
+header .appearance[open] > :not(summary) {
+  position: relative;
+  z-index: 3;
+}
+header .appearance[open] {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  z-index: 5;
+  width: min(380px, calc(100vw - 48px));
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 12px 32px #0002;
+}
+header .appearance[open] summary {
+  width: fit-content;
+  margin-left: auto;
+}
+.text-section {
+  margin: 28px 0;
+  min-width: 0;
+}
+.text-scroll,
+.raw-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  background: white;
+  color: black;
+}
+#formatted-preview {
+  overflow: hidden;
+  background: white;
+  color: black;
+}
+textarea#raw {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  resize: none;
+  overflow: hidden;
+  white-space: pre;
+  background: white;
+  color: black;
+  font-weight: 700;
+  padding: 12px;
+}
+.comparison-text {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  white-space: pre;
+  line-height: 1.2;
+  font-weight: 700;
+  color: black;
+  background: white;
+  width: 100%;
+  overflow: hidden;
+}
+#unsaved:not(:empty) {
+  color: var(--error);
+}
+@media (max-width: 760px) {
+  header {
+    flex-wrap: wrap;
+  }
+  nav {
+    gap: 12px;
+  }
+  header .appearance[open] {
+    right: 24px;
+  }
+}
+@media print {
+  .text-section {
+    display: none;
+  }
+  .comparison-text {
+    width: 65mm;
+    max-width: none;
+  }
+}
+
+@media print {
+  .comparison-text {
+    font-size: calc(65mm / var(--text-span)) !important;
+  }
+}
 </style>
     <script type="module">// Project Nayuki's QR Code generator library (MIT License; LICENSE beside this
 // file), https://www.nayuki.io/page/qr-code-generator-library, from
@@ -1798,10 +1905,160 @@ function render(canvas, qr, width = qr.recipe.options.width) {
 
 // A downloaded HTML sheet keeps the exact PNG artwork plus a selectable text
 // version. No executable payload or remote font dependency is introduced.
-function htmlSheet(qr, png) {
+function htmlSheet(qr, png, text = qr.text) {
   if (!/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(png))
     throw new TypeError("Expected a PNG data URL.");
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aqrobat print sheet</title><style>body{font:16px/1.6 system-ui;margin:24px;color:#111;background:#fff}main{max-width:760px;margin:auto}img{width:100%;max-width:${qr.recipe.options.width}px;height:auto}pre{overflow:auto;white-space:pre}p{overflow-wrap:anywhere}@page{size:auto;margin:15mm}@media print{img{width:150mm;max-width:150mm}details{display:none}main{max-width:none}}</style><main><h1>Aqrobat</h1><p>Expected payload: ${escapeXml(qr.recipe.payload)}</p><img src="${png}" alt="QR made from glyph artwork"><p>Untested in this print/scanner combination. Requested ECC ${qr.requestedEcc}; actual ECC ${qr.actualEcc}. Printed artwork is 150 mm square including its four-module border. Use the browser Print command.</p><details><summary>Plain text (font and spacing dependent)</summary><pre>${escapeXml(qr.text)}</pre></details></main></html>`;
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aqrobat print sheet</title><style>body{font:16px/1.6 system-ui;margin:24px;color:#111;background:#fff}main{max-width:760px;margin:auto}img{width:100%;max-width:${qr.recipe.options.width}px;height:auto}pre{overflow:auto;white-space:pre}p{overflow-wrap:anywhere}@page{size:auto;margin:15mm}@media print{img{width:150mm;max-width:150mm}details{display:none}main{max-width:none}}</style><main><h1>Aqrobat</h1><p>Expected payload: ${escapeXml(qr.recipe.payload)}</p><img src="${png}" alt="QR made from glyph artwork"><p>Untested in this print/scanner combination. Requested ECC ${qr.requestedEcc}; actual ECC ${qr.actualEcc}. Printed artwork is 150 mm square including its four-module border. Use the browser Print command.</p><details><summary>Plain text (font and spacing dependent)</summary><pre>${escapeXml(text)}</pre></details></main></html>`;
+}
+
+const TEXT_LAYOUT = "aqrobat-text-v1";
+// Emoji and East Asian glyphs usually occupy a full em. The receiving font
+// still controls advances; this classification is a portable approximation.
+const wideGlyph = (s) =>
+  /[\p{Emoji_Presentation}\uFE0F\u200D\u3000-\u9FFF\uFF01-\uFF60]/u.test(s);
+
+/** Plain text cannot carry typography. Pack narrow and wide glyphs separately. */
+function plainText(qr) {
+  const o = qr.recipe.options;
+  const wide = qr.palette.map(wideGlyph);
+  const mixed = wide.some(Boolean) && !wide.every(Boolean);
+  const scale = mixed
+    ? Math.max(1, Math.ceil(o.repeatX / 5), Math.ceil(o.repeatY / 3))
+    : 1;
+  const across = mixed
+    ? 5 * scale
+    : wide.every(Boolean)
+      ? Math.max(1, Math.ceil(o.repeatX / 2), o.repeatY)
+      : Math.max(o.repeatX, 2 * o.repeatY);
+  const down = mixed ? 3 * scale : o.repeatY;
+  const blank = wide.every(Boolean) ? "\u3000" : " ";
+  const rows = [];
+  for (let y = -qr.quiet; y < qr.modules + qr.quiet; y++) {
+    let row = "";
+    for (let x = -qr.quiet; x < qr.modules + qr.quiet; x++) {
+      const glyph = qr.glyphMatrix[y]?.[x];
+      const count = mixed && glyph && wideGlyph(glyph) ? 3 * scale : across;
+      row += (glyph ?? blank).repeat(count);
+    }
+    for (let i = 0; i < down; i++) rows.push(row);
+  }
+  return {
+    text: rows.join("\n") + "\n",
+    rows,
+    across,
+    down,
+    blank,
+    mixed,
+    layout: TEXT_LAYOUT,
+  };
+}
+
+// Browser-only measurement uses the unchanged image renderer as its source of
+// font metrics. This scratch canvas is never embedded in text output.
+function textMetrics(qr) {
+  const canvas = document.createElement("canvas");
+  return render(canvas, qr);
+}
+
+/** Real text with inline typography, suitable for HTML clipboard and websites. */
+function formattedText(qr, metrics) {
+  const o = qr.recipe.options,
+    w = o.width;
+  const family = escapeXml(fontFamily(o.font));
+  const base = `color:#000;background:#fff;font-family:${family};font-weight:700;font-style:normal;letter-spacing:0;text-transform:none;text-decoration:none;direction:ltr;`;
+  if (metrics.kind === "text rows") {
+    return `<pre data-aqrobat-layout="${TEXT_LAYOUT}" style="${base}margin:0;padding:0;border:0;width:${w}px;font-size:${metrics.fontSize}px;line-height:${metrics.lineHeight}px;white-space:pre;overflow:visible;-webkit-text-stroke:${o.stroke * metrics.fontSize}px #000;">${escapeXml(qr.text)}</pre>`;
+  }
+  const cell = w / qr.totalModules,
+    line = cell / o.repeatY;
+  let rows = "";
+  for (let y = -qr.quiet; y < qr.modules + qr.quiet; y++) {
+    let cells = "";
+    for (let x = -qr.quiet; x < qr.modules + qr.quiet; x++) {
+      const glyph = qr.glyphMatrix[y]?.[x],
+        fs = glyph ? metrics.fontSizes[glyph] : line;
+      const content = glyph
+        ? Array(o.repeatY)
+            .fill(
+              `<span style="display:block;height:${line}px;line-height:${line}px;white-space:pre;font-size:${fs}px;-webkit-text-stroke:${o.stroke * fs}px #000;">${escapeXml(glyph.repeat(o.repeatX))}</span>`,
+            )
+            .join("")
+        : "&#160;";
+      cells += `<td width="${cell}" height="${cell}" style="padding:0;border:0;width:${cell}px;height:${cell}px;text-align:center;vertical-align:middle;">${content}</td>`;
+    }
+    rows += `<tr style="height:${cell}px;">${cells}</tr>`;
+  }
+  return `<table data-aqrobat-layout="${TEXT_LAYOUT}" role="presentation" cellpadding="0" cellspacing="0" width="${w}" style="${base}border:0;border-collapse:collapse;table-layout:fixed;width:${w}px;margin:0;padding:0;line-height:1;"><tbody>${rows}</tbody></table>`;
+}
+
+function textDocument(qr, metrics) {
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aqrobat text QR</title><style>body{margin:24px;background:white;color:black;font:16px/1.5 system-ui}p{overflow-wrap:anywhere}.scroll{overflow:auto}@page{margin:15mm}@media print{p{font-size:10pt}.scroll{overflow:visible;height:150mm}[data-aqrobat-layout]{transform-origin:top left;transform:scale(${(150 * 96) / 25.4 / qr.recipe.options.width})}}</style><h1>Aqrobat · real text</h1><p>Expected payload: ${escapeXml(qr.recipe.payload)}. Font-dependent; scan this exact output before using it.</p><div class="scroll">${formattedText(qr, metrics)}</div><p>This QR contains selectable characters, with no image or hidden solid modules. Keep its inline styles when placing it on a website. Use Print to save a text PDF.</p></html>`;
+}
+const rtfEscape = (value) =>
+  value
+    .split("")
+    .map((c) => {
+      const n = c.charCodeAt(0);
+      return n > 127
+        ? `\\u${n > 32767 ? n - 65536 : n}?`
+        : /[\\{}]/.test(c)
+          ? `\\${c}`
+          : c;
+    })
+    .join("");
+
+/** RTF retains font, bold weight, exact line spacing, and fixed tab positions. */
+function textRtf(qr, metrics) {
+  const o = qr.recipe.options,
+    twips = o.width * 15;
+  const header = `{\\rtf1\\ansi\\deff0\\uc1{\\fonttbl{\\f0 ${rtfEscape(o.font === "monospace" ? "Menlo" : o.font)};}}{\\colortbl;\\red0\\green0\\blue0;\\red255\\green255\\blue255;}\\paperw${Math.max(12240, Math.ceil(twips + 1440))}\\paperh${Math.max(15840, Math.ceil(twips + 1440))}\\margl720\\margr720\\margt720\\margb720\\f0\\b\\cf1\\highlight2 `;
+  if (metrics.kind === "text rows") {
+    const fs = Math.round(metrics.fontSize * 1.5),
+      line = Math.round(metrics.lineHeight * 15);
+    return (
+      header +
+      `\\fs${fs}\\sl-${line}\\slmult0\\sa0\\sb0 ` +
+      qr.rows.map(rtfEscape).join("\\line\n") +
+      "\\par}"
+    );
+  }
+  const cell = twips / qr.characterColumns,
+    line = twips / qr.characterRows;
+  const tabs = Array.from(
+    { length: qr.characterColumns },
+    (_, i) => `\\tx${Math.round((i + 0.025) * cell)}`,
+  ).join("");
+  let body = `\\pard\\ql\\sa0\\sb0\\sl-${Math.round(line)}\\slmult0${tabs} `;
+  for (let y = -qr.quiet; y < qr.modules + qr.quiet; y++) {
+    for (let dy = 0; dy < o.repeatY; dy++) {
+      for (let x = -qr.quiet; x < qr.modules + qr.quiet; x++) {
+        const glyph = qr.glyphMatrix[y]?.[x];
+        // Apple Color Emoji expands advances below 30 pt in TextEdit. Leave
+        // extra room for that native fallback; RTF remains font dependent.
+        const points = glyph ? metrics.fontSizes[glyph] * 0.75 : 1;
+        const fs = Math.max(
+          2,
+          Math.floor(points * (points < 30 ? 0.75 : 1) * 2),
+        );
+        for (let dx = 0; dx < o.repeatX; dx++)
+          body += `\\fs${fs}\\tab ` + (glyph ? rtfEscape(glyph) : "");
+      }
+      body += "\\line\n";
+    }
+  }
+  return header + body + "\\par}";
+}
+
+function exportName(value) {
+  const name = String(value)
+    .normalize("NFC")
+    .replace(/[\p{Cc}\\/:*?"<>|]/gu, "-")
+    .replace(/[. ]+$/g, "")
+    .trim()
+    .replace(/^\.+$/, "");
+  return !name || /^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\.|$)/i.test(name)
+    ? "aqrobat"
+    : Array.from(name).slice(0, 80).join("");
 }
 
 const THEMES = Object.freeze([
@@ -1848,7 +2105,30 @@ function drawIcon(canvas, color, size = 32) {
 const $ = (id) => document.getElementById(id);
 let current = null,
   records = [],
-  cases = [];
+  cases = [],
+  textOutput = null,
+  metrics = null;
+let savedForm = "",
+  resultsDirty = false;
+const formKey = () =>
+  JSON.stringify(
+    Array.from($("controls").elements).map((e) =>
+      e.type === "checkbox" ? e.checked : e.value,
+    ),
+  );
+function protectWork() {
+  const dirty = formKey() !== savedForm || resultsDirty;
+  $("unsaved").textContent = dirty
+    ? "Unsaved work. Export your recipe and any scan results before leaving."
+    : "";
+  window.removeEventListener("beforeunload", preventLoss);
+  if (dirty) window.addEventListener("beforeunload", preventLoss);
+}
+function preventLoss(e) {
+  e.preventDefault();
+  e.returnValue = "";
+}
+const saveName = (suffix) => exportName($("filename").value) + suffix;
 const status = (message) => ($("status").textContent = message);
 for (const [id, choices] of [
   ["theme", THEMES],
@@ -1912,6 +2192,28 @@ for (const id of ["theme", "icon-color"])
 $("icon-hint").textContent = extensionAppearance
   ? "Icon color also updates your Aqrobat toolbar icon."
   : "Icon color previews the extension artwork and changes this tab’s icon. Set it inside the extension to change its toolbar icon.";
+if (extensionAppearance)
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === "local" && changes[APPEARANCE_KEY])
+      applyAppearance(changes[APPEARANCE_KEY].newValue);
+  });
+else
+  window.addEventListener("storage", (e) => {
+    if (e.key === APPEARANCE_KEY) {
+      try {
+        applyAppearance(JSON.parse(e.newValue));
+      } catch {
+        /* Ignore invalid preferences. */
+      }
+    }
+  });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") document.querySelector(".appearance").open = false;
+});
+document.addEventListener("click", (e) => {
+  const menu = document.querySelector(".appearance");
+  if (!menu.contains(e.target)) menu.open = false;
+});
 function download(name, data, type = "text/plain;charset=utf-8") {
   const url = URL.createObjectURL(new Blob([data], { type }));
   const link = document.createElement("a");
@@ -1955,7 +2257,18 @@ function update() {
   try {
     current = generate($("payload").value, options());
     render($("preview"), current);
-    $("raw").value = current.text;
+    textOutput = plainText(current);
+    metrics = textMetrics(current);
+    $("raw").value = textOutput.text;
+    $("raw").rows = textOutput.rows.length + 1;
+    $("raw").style.fontFamily =
+      current.recipe.options.font === "monospace"
+        ? "monospace"
+        : `"${current.recipe.options.font}", "Apple Color Emoji", monospace`;
+    $("formatted-preview").innerHTML = formattedText(current, metrics);
+    $("text-info").textContent =
+      `${textOutput.rows.length} rows. ${textOutput.mixed ? "Mixed-width packing: 5 narrow or 3 wide characters per module, 3 rows (scaled for higher density)." : `${textOutput.across} across × ${textOutput.down} rows per module; ${textOutput.blank === " " ? "ordinary" : "full-width"} blanks.`} Text density adapts for normal line spacing; image density stays as selected.`;
+    fitText();
     $("error").textContent = "";
     $("bytes").textContent =
       `${current.utf8Bytes} / 1024 UTF-8 bytes. Nothing gets shortened.`;
@@ -1968,6 +2281,7 @@ function update() {
     current = null;
     $("preview").width = $("preview").height = 0;
     $("raw").value = "";
+    $("formatted-preview").replaceChildren();
     $("metadata").textContent = "";
     $("palette-info").textContent = "";
     $("error").textContent = error.message;
@@ -2029,11 +2343,17 @@ $("width").addEventListener("input", () => {
 });
 for (const id of ["payload", "density", "font", "ecc", "boost", "thick"])
   $(id).addEventListener(id === "payload" ? "input" : "change", update);
-new ResizeObserver(displaySize).observe($("preview"));
+new ResizeObserver(() => {
+  displaySize();
+  fitText();
+}).observe($("preview"));
+new ResizeObserver(fitText).observe($("raw").parentElement);
+$("controls").addEventListener("input", protectWork);
+$("controls").addEventListener("change", protectWork);
 $("copy").addEventListener("click", async () => {
   if (!current) return;
   try {
-    await navigator.clipboard.writeText(current.text);
+    await navigator.clipboard.writeText(textOutput.text);
     status(
       "Copied. Preserve spacing and use a monospace font; copied-text scanning is unverified.",
     );
@@ -2048,21 +2368,21 @@ $("copy").addEventListener("click", async () => {
 });
 $("txt").addEventListener(
   "click",
-  () => current && download("aqrobat.txt", current.text),
+  () => current && download(saveName(".txt"), textOutput.text),
 );
-$("recipe").addEventListener(
-  "click",
-  () =>
-    current &&
-    download(
-      "aqrobat-recipe.json",
-      JSON.stringify(current.recipe, null, 2) + "\n",
-      "application/json",
-    ),
-);
+$("recipe").addEventListener("click", () => {
+  if (!current) return;
+  download(
+    saveName("-recipe.json"),
+    JSON.stringify(current.recipe, null, 2) + "\n",
+    "application/json",
+  );
+  savedForm = formKey();
+  protectWork();
+});
 $("svg").addEventListener("click", () => {
   if (current) {
-    download("aqrobat.svg", toSvg(current), "image/svg+xml");
+    download(saveName(".svg"), toSvg(current), "image/svg+xml");
     status(
       "SVG exported. Its appearance depends on fonts; it may differ from this canvas.",
     );
@@ -2070,9 +2390,10 @@ $("svg").addEventListener("click", () => {
 });
 $("png").addEventListener("click", () => {
   if (!current) return;
+  const name = saveName(".png");
   $("preview").toBlob((blob) => {
     if (blob) {
-      download("aqrobat.png", blob, "image/png");
+      download(name, blob, "image/png");
       status(
         "PNG exported with the artwork shown here. This recipe remains untested.",
       );
@@ -2082,8 +2403,8 @@ $("png").addEventListener("click", () => {
 $("html").addEventListener("click", () => {
   if (current)
     download(
-      "aqrobat-print.html",
-      htmlSheet(current, $("preview").toDataURL("image/png")),
+      saveName("-print.html"),
+      htmlSheet(current, $("preview").toDataURL("image/png"), textOutput.text),
       "text/html;charset=utf-8",
     );
 });
@@ -2096,6 +2417,8 @@ async function readJson(input, limit) {
 $("import-recipe").addEventListener("change", async () => {
   try {
     loadRecipe(await readJson($("import-recipe"), 20_000));
+    savedForm = formKey();
+    protectWork();
     status("Recipe loaded locally; its scan status is untested.");
   } catch (error) {
     status(`Recipe not loaded: ${error.message}`);
@@ -2104,12 +2427,17 @@ $("import-recipe").addEventListener("change", async () => {
 });
 
 const outcomes = ["untested", "pass", "fail", "conditional"];
-function lastResult(recipe) {
+function lastResult(recipe, output = "image") {
   return [...records]
     .reverse()
-    .find((r) => recipeKey(r.recipe) === recipeKey(recipe));
+    .find(
+      (r) =>
+        recipeKey(r.recipe) === recipeKey(recipe) &&
+        (r.output || "image") === output &&
+        (output === "image" || r.layout === TEXT_LAYOUT),
+    );
 }
-function record(recipe, outcome, width) {
+function record(recipe, outcome, width, output = "image") {
   if (!$("scanner").value.trim())
     throw new Error("Name the phone/scanner before recording a result.");
   if (records.length >= 1000)
@@ -2121,57 +2449,115 @@ function record(recipe, outcome, width) {
     id: crypto.randomUUID(),
     time: new Date().toISOString(),
     recipe,
+    output,
+    layout: output === "plain-text" ? TEXT_LAYOUT : "aqrobat-image-v1",
     outcome,
     scanner: $("scanner").value,
     conditions: $("conditions").value,
     displayWidthPx: Math.round(width),
     browser: navigator.userAgent.slice(0, 400),
   });
+  resultsDirty = true;
+  protectWork();
 }
 function buildGrid() {
   $("grid").replaceChildren();
-  for (const qr of cases) {
-    const o = qr.recipe.options,
-      card = document.createElement("article");
-    card.className = "test-card";
-    const title = document.createElement("h3");
-    title.textContent = `${o.glyph} · ${o.repeatX}×${o.repeatY} · ${o.font} · ${o.width}px`;
-    const canvas = document.createElement("canvas");
-    canvas.setAttribute("aria-label", title.textContent);
-    render(canvas, qr);
-    const info = document.createElement("p");
-    info.className = "hint";
-    info.textContent = `Expected: ${qr.recipe.payload}. ECC ${qr.requestedEcc} → ${qr.actualEcc}; ink ${o.stroke ? "thickened" : "plain"}. Pass = exact intended payload recovered. Print: 65 mm.`;
-    const select = document.createElement("select");
-    select.setAttribute("aria-label", `Scan result for ${title.textContent}`);
-    for (const outcome of outcomes) {
-      const opt = document.createElement("option");
-      opt.value = outcome;
-      opt.textContent = outcome[0].toUpperCase() + outcome.slice(1);
-      select.append(opt);
-    }
-    const previous = lastResult(qr.recipe);
-    select.value = previous?.outcome || "untested";
-    card.dataset.outcome = select.value;
-    select.addEventListener("change", () => {
-      try {
-        record(qr.recipe, select.value, canvas.getBoundingClientRect().width);
-        card.dataset.outcome = select.value;
-        status(
-          `Recorded ${records.length} observations in this page. Export a backup to keep them.`,
-        );
-      } catch (error) {
-        select.value = card.dataset.outcome;
-        status(error.message);
+  $("text-grid").replaceChildren();
+  for (const output of $("compare-text").checked
+    ? ["image", "plain-text"]
+    : ["image"])
+    for (const qr of cases) {
+      const o = qr.recipe.options,
+        card = document.createElement("article");
+      card.className = "test-card";
+      card.dataset.output = output;
+      const title = document.createElement("h3");
+      title.textContent = `${output === "image" ? "Image" : "Plain text"} · ${o.glyph} · ${o.repeatX}×${o.repeatY} · ${o.font} · ${o.width}px`;
+      const canvas = document.createElement("canvas");
+      canvas.setAttribute("aria-label", title.textContent);
+      let art = canvas;
+      if (output === "image") render(canvas, qr);
+      else {
+        art = document.createElement("pre");
+        art.className = "comparison-text";
+        const packed = plainText(qr);
+        art.textContent = packed.text;
+        art.style.fontFamily = fontFamilyForText(o.font);
+        art.dataset.targetWidth = o.width;
       }
-    });
-    card.append(title, canvas, info, select);
-    $("grid").append(card);
-  }
+      const info = document.createElement("p");
+      info.className = "hint";
+      info.textContent = `Expected: ${qr.recipe.payload}. ECC ${qr.requestedEcc} → ${qr.actualEcc}; ink ${o.stroke ? "thickened" : "plain"}. Pass = exact intended payload recovered. Print: 65 mm.`;
+      const select = document.createElement("select");
+      select.setAttribute("aria-label", `Scan result for ${title.textContent}`);
+      for (const outcome of outcomes) {
+        const opt = document.createElement("option");
+        opt.value = outcome;
+        opt.textContent = outcome[0].toUpperCase() + outcome.slice(1);
+        select.append(opt);
+      }
+      const previous = lastResult(qr.recipe, output);
+      select.value = previous?.outcome || "untested";
+      card.dataset.outcome = select.value;
+      select.addEventListener("change", () => {
+        try {
+          record(
+            qr.recipe,
+            select.value,
+            art.getBoundingClientRect().width,
+            output,
+          );
+          card.dataset.outcome = select.value;
+          status(
+            `Recorded ${records.length} observations in this page. Export a backup to keep them.`,
+          );
+        } catch (error) {
+          select.value = card.dataset.outcome;
+          status(error.message);
+        }
+      });
+      card.append(title, art, info, select);
+      if (output === "plain-text") {
+        const button = document.createElement("button");
+        button.textContent = "Save this TXT";
+        button.addEventListener("click", () =>
+          download(
+            saveName(
+              `-text-${o.repeatX}x${o.repeatY}-${o.font.replaceAll(" ", "")}-${o.width}.txt`,
+            ),
+            plainText(qr).text,
+          ),
+        );
+        card.append(button);
+      }
+      $(output === "image" ? "grid" : "text-grid").append(card);
+      if (output === "plain-text") sizePre(art, o.width);
+    }
 }
 $("compare").addEventListener("click", () => {
   if (!update()) return;
-  cases = [];
+  ((cases = []), (textOutput = null), (metrics = null));
+  let savedForm = "",
+    resultsDirty = false;
+  const formKey = () =>
+    JSON.stringify(
+      Array.from($("controls").elements).map((e) =>
+        e.type === "checkbox" ? e.checked : e.value,
+      ),
+    );
+  function protectWork() {
+    const dirty = formKey() !== savedForm || resultsDirty;
+    $("unsaved").textContent = dirty
+      ? "Unsaved work. Export your recipe and any scan results before leaving."
+      : "";
+    window.removeEventListener("beforeunload", preventLoss);
+    if (dirty) window.addEventListener("beforeunload", preventLoss);
+  }
+  function preventLoss(e) {
+    e.preventDefault();
+    e.returnValue = "";
+  }
+  const saveName = (suffix) => exportName($("filename").value) + suffix;
   for (const [repeatX, repeatY] of [
     [2, 1],
     [4, 2],
@@ -2192,13 +2578,16 @@ $("compare").addEventListener("click", () => {
     "Built 12 comparisons. Their on-screen size depends on the grid width; exports retain the recipe size.",
   );
 });
-$("export-results").addEventListener("click", () =>
+$("compare-text").addEventListener("change", buildGrid);
+$("export-results").addEventListener("click", () => {
   download(
-    "aqrobat-results.json",
+    saveName("-results.json"),
     JSON.stringify({ schema: "aqrobat-results-v1", records }, null, 2) + "\n",
     "application/json",
-  ),
-);
+  );
+  resultsDirty = false;
+  protectWork();
+});
 $("import-results").addEventListener("change", async () => {
   try {
     const data = await readJson($("import-results"), 10_000_000);
@@ -2215,6 +2604,9 @@ $("import-results").addEventListener("change", async () => {
       if (
         r.schema !== "aqrobat-observation-v1" ||
         !outcomes.includes(r.outcome) ||
+        (r.output !== undefined &&
+          !["image", "plain-text"].includes(r.output)) ||
+        (r.output === "plain-text" && r.layout !== TEXT_LAYOUT) ||
         !Number.isFinite(Date.parse(r.time)) ||
         typeof r.id !== "string" ||
         !/^[\w-]{1,80}$/.test(r.id) ||
@@ -2258,6 +2650,8 @@ $("print-grid").addEventListener("click", () => {
 });
 
 update();
+savedForm = formKey();
+protectWork();
 // Extension transfers chosen text in session storage; the URL contains only a
 // one-time random key, never the payload. No web page receives extension data.
 const handoff = new URLSearchParams(location.hash.slice(1)).get("handoff");
@@ -2273,11 +2667,104 @@ if (
   if (stored[key] && Date.now() - stored[key].time < 60_000) {
     $("payload").value = stored[key].payload;
     update();
+    protectWork();
     status(
       "Selected content received locally from your explicit extension action.",
     );
   }
 }
+
+function fontFamilyForText(font) {
+  return font === "monospace"
+    ? "monospace"
+    : `"${font}", "Apple Color Emoji", monospace`;
+}
+function sizePre(pre, width) {
+  const ctx = document.createElement("canvas").getContext("2d");
+  ctx.font = `700 100px ${pre.style.fontFamily}`;
+  const max = Math.max(
+    ...pre.textContent
+      .trimEnd()
+      .split("\n")
+      .map((row) => ctx.measureText(row).width),
+  );
+  const target = Math.min(width, pre.parentElement.clientWidth - 2);
+  pre.style.setProperty("--text-span", String(max / 100));
+  pre.style.fontSize = `${Math.max(0.5, (target * 100) / Math.max(1, max))}px`;
+}
+function fitText() {
+  if (!current || !textOutput) return;
+  const raw = $("raw"),
+    ctx = document.createElement("canvas").getContext("2d");
+  ctx.font = `700 100px ${raw.style.fontFamily}`;
+  const max = Math.max(
+    ...textOutput.rows.map((row) => ctx.measureText(row).width),
+  );
+  const fs = Math.max(0.5, ((raw.parentElement.clientWidth - 26) * 100) / max);
+  raw.style.fontSize = `${fs}px`;
+  raw.style.lineHeight = "1.2";
+  raw.style.height = `${Math.ceil((textOutput.rows.length + 1) * fs * 1.2 + 28)}px`;
+  const holder = $("formatted-preview"),
+    child = holder.firstElementChild;
+  if (child) {
+    const scale = Math.min(
+      1,
+      holder.parentElement.clientWidth / current.recipe.options.width,
+    );
+    child.style.transformOrigin = "top left";
+    child.style.transform = `scale(${scale})`;
+    holder.style.height = `${current.recipe.options.width * scale + 20}px`;
+  }
+  for (const pre of document.querySelectorAll(".comparison-text"))
+    sizePre(pre, Number(pre.dataset.targetWidth));
+}
+$("copy-formatted").addEventListener("click", async () => {
+  if (!current) return;
+  const html = formattedText(current, metrics),
+    text = textOutput.text;
+  try {
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        "text/plain": new Blob([text], { type: "text/plain" }),
+        "text/html": new Blob([html], { type: "text/html" }),
+      }),
+    ]);
+    status(
+      "Formatted text copied. Paste into a rich text editor; scan that pasted result. Plain-only editors receive the spaced TXT version.",
+    );
+  } catch {
+    status(
+      "Formatted clipboard unavailable. Download Text HTML or RTF, or use Copy text for plain text.",
+    );
+  }
+});
+$("snippet").addEventListener("click", async () => {
+  if (!current) return;
+  try {
+    await navigator.clipboard.writeText(formattedText(current, metrics));
+    status(
+      "Website HTML copied. Paste into an HTML/code block that preserves inline styles.",
+    );
+  } catch {
+    status("Clipboard unavailable. Download Text HTML instead.");
+  }
+});
+$("text-html").addEventListener(
+  "click",
+  () =>
+    current &&
+    download(
+      saveName("-text.html"),
+      textDocument(current, metrics),
+      "text/html;charset=utf-8",
+    ),
+);
+$("rtf").addEventListener(
+  "click",
+  () =>
+    current &&
+    download(saveName(".rtf"), textRtf(current, metrics), "application/rtf"),
+);
 
 </script>
   </head>
@@ -2288,30 +2775,8 @@ if (
         <a href="#make">Make</a><a href="#how">How it works</a
         ><a href="https://github.com/ryanjosephkamp/aqrobat">GitHub</a>
       </nav>
-    </header>
-    <main>
-      <section class="intro">
-        <p class="eyebrow">SMALL TOOL. MANY CHARACTERS.</p>
-        <h1>QR codes,<br />in character.</h1>
-        <p class="lede">
-          A link, a little text, a whole new look. Build QR artwork from
-          letters, symbols, or emoji—right in your browser.
-        </p>
-        <p class="fine">
-          Free · No account · No AI required · Experimental scanning
-        </p>
-        <p class="hint">
-          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-offline.html" download
-            >Download offline page</a
-          >
-          ·
-          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-extension.zip" download
-            >Unpacked Chrome extension</a
-          >
-        </p>
-      </section>
       <details class="appearance">
-        <summary>Page theme &amp; icon color</summary>
+        <summary aria-label="Appearance">◐ Theme</summary>
         <div class="pair">
           <div>
             <label for="theme">Page theme</label
@@ -2336,6 +2801,28 @@ if (
           keeps its original colors.
         </p>
       </details>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">SMALL TOOL. MANY CHARACTERS.</p>
+        <h1>QR codes,<br />in character.</h1>
+        <p class="lede">
+          A link, a little text, a whole new look. Build QR artwork from
+          letters, symbols, or emoji—right in your browser.
+        </p>
+        <p class="fine">
+          Free · No account · No AI required · Experimental scanning
+        </p>
+        <p class="hint">
+          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-offline.html" download
+            >Download offline page</a
+          >
+          ·
+          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-extension.zip" download
+            >Unpacked Chrome extension</a
+          >
+        </p>
+      </section>
       <section class="workspace" id="make" aria-label="QR generator">
         <form id="controls" class="panel">
           <h2>Make yours</h2>
@@ -2442,31 +2929,25 @@ https://example.com</textarea
           </div>
           <p id="metadata" class="hint"></p>
           <div class="exports" aria-label="Export options">
-            <button id="copy" type="button">Copy text</button
+            <button id="copy-formatted" type="button">Copy text</button
+            ><button id="copy" type="button">Plain text</button
             ><button id="png" type="button">PNG</button
             ><button id="svg" type="button">SVG</button
             ><button id="txt" type="button">TXT</button
-            ><button id="html" type="button">Print / HTML</button
+            ><button id="html" type="button">Image print / HTML</button
             ><button id="recipe" type="button">Recipe</button>
           </div>
           <p class="hint" id="status" role="status" aria-live="polite">
             Nothing is sent to a QR service. Try scanning this exact display.
           </p>
-          <details>
-            <summary>View / select the plain text</summary>
-            <p class="hint">
-              Keep every space and newline. Use a monospace font. Emoji widths
-              and artwork can change when pasted.
-            </p>
-            <textarea
-              id="raw"
-              readonly
-              rows="8"
-              aria-label="Plain text QR output"
-              spellcheck="false"
-              wrap="off"
-            ></textarea>
-          </details>
+          <label for="filename">Save filename (without extension)</label
+          ><input
+            id="filename"
+            value="aqrobat"
+            maxlength="80"
+            autocomplete="off"
+          />
+          <p class="hint" id="unsaved" role="status"></p>
           <label class="file-label"
             >Load a recipe
             <input
@@ -2476,13 +2957,52 @@ https://example.com</textarea
           /></label>
         </div>
       </section>
+      <section class="text-section panel" aria-labelledby="text-heading">
+        <h2 id="text-heading">Copyable text</h2>
+        <p>
+          Formatted text carries the layout into editors that accept HTML. Plain
+          TXT uses wider blanks for emoji and balanced repetition for ordinary
+          letters. Both contain real characters.
+        </p>
+        <div class="lab-actions exports">
+          <button id="text-html" type="button">Text HTML</button
+          ><button id="rtf" type="button">RTF document</button
+          ><button id="snippet" type="button">Copy website HTML</button>
+        </div>
+        <details open>
+          <summary>Formatted text preview</summary>
+          <div class="text-scroll"><div id="formatted-preview"></div></div>
+        </details>
+        <details open>
+          <summary>View / select the plain text</summary>
+          <p class="hint" id="text-info"></p>
+          <div class="raw-wrap">
+            <textarea
+              id="raw"
+              readonly
+              wrap="off"
+              spellcheck="false"
+              aria-label="Plain text QR"
+            ></textarea>
+          </div>
+        </details>
+        <p class="hint">
+          For TextEdit, open RTF or paste formatted text in rich text mode. For
+          websites, keep the Text HTML styles. Email and blog editors may remove
+          styles. TXT cannot store a font or line spacing: preserve every blank
+          and newline, choose the matching monospace font, and test the pasted
+          result. In TextEdit, start with Menlo; for plain emoji TXT, use 30 pt
+          or larger to avoid macOS’s small-emoji width expansion. RTF sets its
+          own spacing.
+        </p>
+      </section>
       <section class="lab" id="test">
         <div class="section-top">
           <div>
             <p class="eyebrow">MAKE OBSERVATIONS, NOT PROMISES</p>
             <h2>A little scan lab.</h2>
           </div>
-          <button id="compare" type="button">Build 12 comparisons</button>
+          <button id="compare" type="button">Build 12 image comparisons</button>
         </div>
         <p>
           Compare this symbol palette at two densities, two fonts, and three
@@ -2522,7 +3042,17 @@ https://example.com</textarea
           Results stay in this open page. Export a backup before closing.
           Printed codes are 65 mm square; paper scanning has not been verified.
         </p>
+        <label
+          ><input id="compare-text" type="checkbox" /> Also build a plain-text
+          comparison grid</label
+        >
+        <p class="hint">
+          Text observations are separate from images. These are actual
+          characters, with normal 1.2 line spacing. Print both grids or scan on
+          screen.
+        </p>
         <div id="grid" class="grid"></div>
+        <div id="text-grid" class="grid"></div>
       </section>
       <section class="explanation" id="how">
         <p class="eyebrow">UNDER THE HOOD</p>
@@ -2568,8 +3098,10 @@ https://example.com</textarea
             Unique symbols cycle through dark modules in entry order; duplicate
             symbols and spaces are ignored. Emoji artwork comes from your system
             fonts and may change across devices. PNG keeps the rendered artwork;
-            TXT and SVG depend on receiving fonts and spacing. Sparse dots and
-            colorful faces are experiments, not reliable defaults.
+            TXT and SVG depend on receiving fonts and spacing. Formatted text
+            and RTF retain layout instructions, but receiving editors can still
+            change typography. Sparse dots and colorful faces are experiments,
+            not reliable defaults.
           </p>
           <p>
             Short inputs usually need fewer modules. Bigger artwork can help a
@@ -2738,6 +3270,7 @@ node bin/aqrobat.mjs 'https://example.com' --glyph '#' --density 4x2 --format re
         >
       </div>
       <p class="footer-fine">
+        Aqrobat 0.3.0 ·
         <a href="https://github.com/ryanjosephkamp/aqrobat"
           >MIT license · Source &amp; docs</a
         >
