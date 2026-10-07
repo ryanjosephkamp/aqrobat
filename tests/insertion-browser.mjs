@@ -271,6 +271,102 @@ try {
   report.checks.push(
     "changed draft and cancellable beforeinput veto prevent insertion",
   );
+  // Reinvoking the extension must show the newly selected recipe, not a stale panel.
+  await open();
+  await panel()
+    .locator("#recipe")
+    .selectOption("00000000-0000-4000-8000-000000000001");
+  await open();
+  assert.equal(await panel().count(), 1);
+  assert.equal(
+    await panel().locator("#recipe").inputValue(),
+    "00000000-0000-4000-8000-000000000000",
+    "Reopening retained the previous recipe instead of the new invocation",
+  );
+  await panel().locator("#close").click();
+  for (const change of ["font", "cursor", "readonly"]) {
+    await page.locator("#plain").evaluate((el) => {
+      el.value = "KEEP ORIGINAL\n";
+      el.style.fontFeatureSettings = "normal";
+      el.readOnly = false;
+    });
+    await open();
+    await target("#plain");
+    await preview();
+    assert.equal(
+      await panel().locator("#insert").isEnabled(),
+      true,
+      await message(),
+    );
+    if (change === "font")
+      await page
+        .locator("#plain")
+        .evaluate((el) => (el.style.fontFeatureSettings = '"liga" 0'));
+    else
+      await page.locator("#plain").evaluate((el, change) => {
+        el.addEventListener(
+          "beforeinput",
+          () => {
+            if (change === "readonly") el.readOnly = true;
+            else {
+              const other = document.createElement("textarea");
+              other.id = "other-draft";
+              other.value = "OTHER DRAFT";
+              document.body.append(other);
+              other.focus();
+            }
+          },
+          { once: true },
+        );
+      }, change);
+    await panel().locator("#insert").click();
+    assert.equal(
+      await page.locator("#plain").inputValue(),
+      "KEEP ORIGINAL\n",
+      change,
+    );
+    assert.equal(
+      await panel().locator("#insert").isEnabled(),
+      false,
+      await message(),
+    );
+    if (change === "cursor") {
+      assert.equal(
+        await page.locator("#other-draft").inputValue(),
+        "OTHER DRAFT",
+      );
+      await page.locator("#other-draft").evaluate((el) => el.remove());
+    }
+    await panel().locator("#close").click();
+  }
+  report.checks.push(
+    "reopening replaces stale recipe panel; font changes and insertion-event cursor/readonly changes leave drafts untouched",
+  );
+  await page.locator("#rich").evaluate((el) => {
+    el.style.whiteSpace = "pre-wrap";
+    el.innerHTML = '<p style="font-size:24px">KEEP NESTED TYPOGRAPHY</p>';
+    el.onclick = () => {
+      const range = document.createRange();
+      range.selectNodeContents(el.firstChild);
+      range.collapse(false);
+      getSelection().removeAllRanges();
+      getSelection().addRange(range);
+    };
+  });
+  await open();
+  await target("#rich");
+  await panel().locator("#mode").selectOption("plain");
+  await preview();
+  assert.equal(await panel().locator("#insert").isEnabled(), false);
+  assert((await message()).includes("uniform typography"));
+  assert.equal(
+    await page.locator("#rich").innerText(),
+    "KEEP NESTED TYPOGRAPHY",
+  );
+  await panel().locator("#close").click();
+  report.checks.push(
+    "plain rich-editor insertion refuses mismatched typography at the cursor rather than measuring the wrong font",
+  );
   assert.deepEqual(errors, []);
   await mkdir("test-results", { recursive: true });
   await writeFile(

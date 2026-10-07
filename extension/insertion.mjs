@@ -4,6 +4,9 @@ import { calibratedText } from "../src/spacing.mjs";
 
 /** Runs only after the extension is invoked. No background page observation. */
 export function openInsertion(entries) {
+  // A second invocation may select a different recipe. Close the previous
+  // task-owned panel and its listeners before showing the current selection.
+  globalThis.__aqrobatCloseInsertion?.();
   if (document.querySelector("aqrobat-insertion")) return;
   const host = document.createElement("aqrobat-insertion"),
     shadow = host.attachShadow({ mode: "open" });
@@ -18,6 +21,7 @@ export function openInsertion(entries) {
   let field = null,
     snapshot = null,
     prepared = null,
+    revision = 0,
     picking = true;
   for (const entry of entries) {
     const option = document.createElement("option");
@@ -36,15 +40,20 @@ export function openInsertion(entries) {
   describe();
   $i("prepare").disabled = !entries.length;
   function invalidate() {
+    revision++;
     prepared = null;
     $i("insert").disabled = true;
     $i("preview").replaceChildren();
   }
   function close() {
+    invalidate();
     document.removeEventListener("click", choose, true);
     document.removeEventListener("keydown", escape, true);
     host.remove();
+    if (globalThis.__aqrobatCloseInsertion === close)
+      delete globalThis.__aqrobatCloseInsertion;
   }
+  globalThis.__aqrobatCloseInsertion = close;
   function escape(e) {
     if (e.key === "Escape") close();
   }
@@ -107,6 +116,8 @@ export function openInsertion(entries) {
         );
       return { value: field.value, position: field.selectionStart };
     }
+    if (!field.isContentEditable)
+      throw new Error("This editor is no longer editable.");
     const selection = document.getSelection();
     if (!selection?.rangeCount)
       throw new Error("Place a cursor inside the editor.");
@@ -129,26 +140,53 @@ export function openInsertion(entries) {
       parseFloat(css.paddingRight)
     );
   }
+  const fontKeys = [
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "fontStyle",
+    "fontStretch",
+    "fontVariant",
+    "fontKerning",
+    "fontFeatureSettings",
+    "fontVariationSettings",
+    "fontVariantLigatures",
+    "letterSpacing",
+    "wordSpacing",
+    "lineHeight",
+  ];
+  const textKeys = [
+    ...fontKeys,
+    "whiteSpace",
+    "textTransform",
+    "direction",
+    "writingMode",
+    "textAlign",
+    "textIndent",
+  ];
+  function caretStyle() {
+    const node = snapshot?.range?.startContainer;
+    return getComputedStyle(
+      node ? (node instanceof Element ? node : node.parentElement) : field,
+    );
+  }
   function fingerprint() {
     const s = getComputedStyle(field);
+    const caret = caretStyle();
     return [
       contentWidth(),
-      s.fontFamily,
-      s.fontSize,
-      s.fontWeight,
-      s.fontStyle,
-      s.lineHeight,
-      s.letterSpacing,
-      s.wordSpacing,
-      s.whiteSpace,
-      s.textTransform,
-      s.direction,
-      s.writingMode,
-      s.fontVariantLigatures,
+      ...textKeys.map((key) => s[key]),
+      ...textKeys.map((key) => caret[key]),
+      field instanceof HTMLTextAreaElement ? field.maxLength : "",
     ].join("|");
   }
   function measurePlain(qr) {
     const css = getComputedStyle(field);
+    const caret = caretStyle();
+    if (textKeys.some((key) => caret[key] !== css[key]))
+      throw new Error(
+        "Plain insertion needs uniform typography at the cursor. Use formatted insertion or the editor’s own plain/code mode.",
+      );
     if (
       css.direction !== "ltr" ||
       css.writingMode !== "horizontal-tb" ||
@@ -167,22 +205,7 @@ export function openInsertion(entries) {
       span = document.createElement("span");
     probe.style.cssText =
       "all:initial;position:fixed;left:-100000px;top:0;white-space:pre;visibility:hidden;width:max-content;max-width:none;padding:0;margin:0;border:0;";
-    for (const key of [
-      "fontFamily",
-      "fontSize",
-      "fontWeight",
-      "fontStyle",
-      "fontStretch",
-      "fontVariant",
-      "fontKerning",
-      "fontFeatureSettings",
-      "fontVariationSettings",
-      "fontVariantLigatures",
-      "letterSpacing",
-      "wordSpacing",
-      "lineHeight",
-    ])
-      probe.style[key] = css[key];
+    for (const key of fontKeys) probe.style[key] = css[key];
     probe.append(span);
     shadow.append(probe);
     try {
@@ -233,6 +256,7 @@ export function openInsertion(entries) {
   $i("prepare").onclick = async (click) => {
     if (!click.isTrusted) return;
     invalidate();
+    const preparing = revision;
     try {
       if (!field || !snapshot)
         throw new Error("Click inside a destination field first.");
@@ -260,6 +284,15 @@ export function openInsertion(entries) {
           snapshot = capture();
       }
       await document.fonts.ready;
+      if (preparing !== revision || !host.isConnected) return;
+      if (
+        (field instanceof HTMLTextAreaElement
+          ? field.value
+          : field.innerHTML) !== snapshot.value
+      )
+        throw new Error(
+          "The draft changed while fonts loaded. Click inside the field and preview again.",
+        );
       const source = fromRecipe(selected().recipe);
       let html = null,
         packed = null;
@@ -295,16 +328,7 @@ export function openInsertion(entries) {
           );
         const pre = document.createElement("pre");
         pre.textContent = packed.text;
-        for (const key of [
-          "fontFamily",
-          "fontSize",
-          "fontWeight",
-          "fontStyle",
-          "lineHeight",
-          "letterSpacing",
-          "wordSpacing",
-        ])
-          pre.style[key] = packed.css[key];
+        for (const key of fontKeys) pre.style[key] = packed.css[key];
         pre.style.whiteSpace = "pre";
         pre.style.width = `${packed.width}px`;
         pre.style.margin = "0";
@@ -372,6 +396,21 @@ export function openInsertion(entries) {
       )
         throw new Error(
           "The editor changed its draft during the insertion event. Preview again.",
+        );
+      if (fingerprint() !== ready.fingerprint)
+        throw new Error(
+          "The editor changed its typography during insertion. Preview again.",
+        );
+      const active = field.getRootNode().activeElement;
+      const cursor = capture();
+      const sameCursor =
+        field instanceof HTMLTextAreaElement
+          ? cursor.position === snapshot.position
+          : cursor.range.startContainer === snapshot.range.startContainer &&
+            cursor.range.startOffset === snapshot.range.startOffset;
+      if (!(active === field || field.contains(active)) || !sameCursor)
+        throw new Error(
+          "The editor moved the insertion cursor. Click inside the intended field and preview again.",
         );
       let success;
       if (ready.html)

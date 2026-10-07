@@ -1,4 +1,4 @@
-# Saved recipes and direct browser insertion · 0.4.0
+# Saved recipes and direct browser insertion · 0.4.1
 
 Clipboard data includes characters and, optionally, HTML. A receiving app may
 choose only plain text or discard typography. The recipe already contains every
@@ -8,7 +8,7 @@ No AI or remote QR service is involved.
 ## Use it
 
 1. Update the files in your **existing unpacked extension folder** from the new
-   ZIP, then click Reload in `chrome://extensions`. Confirm version **0.4.0**.
+   ZIP, then click Reload in `chrome://extensions`. Confirm version **0.4.1**.
    Keep the same folder/extension ID; export Recipe JSON backups before reinstalling.
 2. Open the toolbar → **Open generator / saved recipes**. Create or load a Recipe
    JSON file, name it, and choose **Save in extension**. The library holds 20
@@ -53,6 +53,15 @@ uses Chrome editing commands for Undo, and reports detected editor changes to
 inserted text or dimensions. It does not bypass an editor’s refusal with direct
 DOM/value replacement. Complex controlled editors can still refuse or transform
 an insertion; inspect the draft and use Undo when needed.
+
+Reopening the toolbar replaces an older insertion panel with the newly chosen
+recipe. A preview awaiting fonts is discarded if its field/panel changes.
+Font features, variations, alignment, indentation, and character limits are
+included in the saved layout checks. Cursor, editability, and typography are
+checked again after the editor's insertion event; an event that moves focus to
+another draft does not redirect the insertion. Measured plain mode refuses a
+cursor with different typography from the editor root, rather than measuring
+the wrong font. The [Gmail owner review](gmail-review.md) is the next acceptance step.
 
 ## Access and limits
 

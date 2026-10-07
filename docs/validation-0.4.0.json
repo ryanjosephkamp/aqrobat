@@ -1,14 +1,9 @@
 {
-  "version": "0.4.1",
+  "version": "0.4.0",
   "date": "October 7, 2026",
-  "baselineCommit": "0b43494a5053a008489229c60520b344cc129e98",
-  "status": "Code/package review finished; owner Gmail and phone acceptance pending",
+  "checkpoint": "Paused at owner request; acceptance remains open",
   "unitTests": {
     "passed": 18
-  },
-  "regressionBeforeFix": {
-    "check": "Reopening insertion panel retains stale previous recipe",
-    "result": "reproduced; test failed on 0.4.0 practice bundle before fix"
   },
   "receipts": {
     "browser": {
@@ -434,9 +429,7 @@
         "four palettes insert calibrated plain text with all spaces/newlines; one Undo restores original draft",
         "four rich-text palettes preserve draft, 328px text layout, no embedded images, native undo",
         "width, maxlength, readonly, selected text rejected without changing draft",
-        "changed draft and cancellable beforeinput veto prevent insertion",
-        "reopening replaces stale recipe panel; font changes and insertion-event cursor/readonly changes leave drafts untouched",
-        "plain rich-editor insertion refuses mismatched typography at the cursor rather than measuring the wrong font"
+        "changed draft and cancellable beforeinput veto prevent insertion"
       ],
       "samples": [
         {
@@ -544,10 +537,8 @@
     },
     "installedExtension": {
       "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
-      "extensionVersion": "0.4.1",
-      "archiveSha256": "b69d00f427b8ffb0256784032cbb037705a853010d8f5dea62f9d59af78eb2df",
+      "extensionVersion": "0.4.0",
       "checks": [
-        "download ZIP CRC and critical source bytes verified; actual ZIP extracted into a fresh task-owned directory for installation",
         "installed MV3 extension page uses chrome.storage.local",
         "preference change invokes real chrome.action.setIcon successfully with gold icon paths",
         "formatted clipboard write succeeds from the installed extension page",
@@ -558,7 +549,7 @@
       "userInstalledCopy": "not inspected or modified",
       "profile": "fresh task-owned profile; removed after test"
     },
-    "historicalNativePilot": {
+    "nativePilot": {
       "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
       "version": "0.4.0",
       "completed": true,
@@ -574,52 +565,21 @@
       "layoutCount": 1,
       "embeddedImages": 0,
       "message": "Inserted. Review the actual field and scan it. Use Undo (⌘Z / Ctrl+Z) to remove this insertion. Saved/sent formatting may differ; no scan success is assumed."
-    },
-    "localGuide": {
-      "browser": "155.0.8059.39",
-      "scope": "Synthetic checks in a fresh browser; no Gmail or owner observations",
-      "checks": [
-        "390px layout without horizontal spill",
-        "24 observation fields start Untested",
-        "mixed recipe download preserves payload and complete palette",
-        "synthetic result export/local persistence/import; wrong schema rejected without changing results",
-        "embedded offline insertion practice previews successfully",
-        "no page errors or external requests"
-      ]
     }
   },
-  "preservation": {
-    "imageRasterHashesMatchingCheckpoint": 11,
-    "coreAndTextSourcesMatchCheckpoint": true,
-    "migrationHandoffUnchanged": true
-  },
-  "historicalNativePilotScope": "Recorded 0.4.0 hash toolbar/Undo pilot only. Not rerun on 0.4.1. No owner profile, Gmail mailbox, or recipient observation.",
-  "sourceSha256": {
-    "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
-    "src/render.mjs": "9097d040c1c55049bf2f090b702639c663a792e17df3bf4cd199e8219ea01a63",
-    "src/text.mjs": "4e410261632df01965140550a39206fbbf75c40eb6d72df7cdb4c9e090391cb1",
-    "src/spacing.mjs": "3d59cea85df36217b47c353a4e3fb9b032ca948ef1d8bb8b6d9545da1e3113b0",
-    "src/library.mjs": "977a02cec625e2055fd9ff27474e61457d18209343d6daa4eaa1c32c02549923",
-    "extension/insertion.mjs": "5461096e1e63062737afcef4d213438f6cf0663538b0fb5898da5d0c2b7dc6b0",
-    "extension/worker.mjs": "a21c8fa47e4387499b66e3c04bf6ac59b54b0c0568cb3489fd8409627ed0ccb6",
-    "extension/manifest.json": "96a6ae5faf9fc02f30f0646cd60e67de2fd0f7fe634545c87b4afcabeec429ee",
-    "downloads/aqrobat-extension.zip": "b69d00f427b8ffb0256784032cbb037705a853010d8f5dea62f9d59af78eb2df"
-  },
+  "nativePilotScope": "Native hash toolbar/Undo flow verified at recorded pilot source SHA. Final emoji table-height fix and packaging cleanup followed; final all-palette geometry checked automatically.",
   "unverified": [
+    "Actual Gmail/Outlook/Substack destination behavior",
     "Owner installed extension",
-    "Actual Gmail draft and received message",
     "New phone scans",
     "Physical print"
   ],
-  "pagesBeforeReview": {
-    "version": "0.4.0",
-    "checkpointArtifactsByteMatched": true,
-    "paths": [
-      "index.html",
-      "web/app.mjs",
-      "downloads/aqrobat-extension.zip",
-      "downloads/aqrobat-insertion-practice.html",
-      "package.json"
-    ]
-  }
+  "sourceSha256": {
+    "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+    "src/text.mjs": "4e410261632df01965140550a39206fbbf75c40eb6d72df7cdb4c9e090391cb1",
+    "src/spacing.mjs": "3d59cea85df36217b47c353a4e3fb9b032ca948ef1d8bb8b6d9545da1e3113b0",
+    "extension/insertion.mjs": "eb46d416851d19d8a9d99d4f02d73527837766e138acef7fedc49ee99a37fd77",
+    "extension/worker.mjs": "a21c8fa47e4387499b66e3c04bf6ac59b54b0c0568cb3489fd8409627ed0ccb6"
+  },
+  "finalPackagedInstalledCheck": "passed after final packaging and table-height fix"
 }

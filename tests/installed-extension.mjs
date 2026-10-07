@@ -1,12 +1,17 @@
 import { chromium } from "playwright";
-import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, rm, writeFile, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 const executablePath =
   process.env.EXTENSION_CHROME_PATH || chromium.executablePath();
 await mkdir("test-results", { recursive: true });
 const profile = await mkdtemp(resolve("test-results/aqrobat-owned-extension-"));
-const extension = resolve("dist/extension");
+const extension = await mkdtemp(
+  resolve("test-results/aqrobat-owned-unpacked-"),
+);
+const archive = resolve("downloads/aqrobat-extension.zip");
 let context;
 const launch = () =>
   chromium.launchPersistentContext(profile, {
@@ -20,6 +25,24 @@ const launch = () =>
 const worker = async () =>
   context.serviceWorkers()[0] || (await context.waitForEvent("serviceworker"));
 try {
+  execFileSync("unzip", ["-tq", archive]);
+  execFileSync("unzip", ["-q", archive, "-d", extension]);
+  for (const [packed, source] of [
+    ["manifest.json", "extension/manifest.json"],
+    ["worker.mjs", "extension/worker.mjs"],
+    ["extension/insertion.mjs", "extension/insertion.mjs"],
+    ...["core", "text", "library", "spacing"].map((name) => [
+      `src/${name}.mjs`,
+      `src/${name}.mjs`,
+    ]),
+    ["vendor/qrcodegen.mjs", "vendor/qrcodegen.mjs"],
+    ["insertion.js", "dist/extension/insertion.js"],
+  ])
+    assert.deepEqual(
+      await readFile(resolve(extension, packed)),
+      await readFile(source),
+      `${packed} differs from reviewed source`,
+    );
   context = await launch();
   const sw = await worker();
   const id = new URL(sw.url()).host;
@@ -146,7 +169,11 @@ try {
   const report = {
     browser: await next.evaluate(() => navigator.userAgent),
     extensionVersion: version,
+    archiveSha256: createHash("sha256")
+      .update(await readFile(archive))
+      .digest("hex"),
     checks: [
+      "download ZIP CRC and critical source bytes verified; actual ZIP extracted into a fresh task-owned directory for installation",
       "installed MV3 extension page uses chrome.storage.local",
       "preference change invokes real chrome.action.setIcon successfully with gold icon paths",
       "formatted clipboard write succeeds from the installed extension page",
@@ -165,4 +192,5 @@ try {
 } finally {
   if (context) await context.close();
   await rm(profile, { recursive: true, force: true });
+  await rm(extension, { recursive: true, force: true });
 }
