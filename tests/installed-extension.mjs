@@ -66,6 +66,33 @@ try {
       .getElementById("status")
       .textContent.startsWith("Formatted text copied."),
   );
+  await page.locator("#density").selectOption("1x1");
+  await page.locator("#recipe-name").fill("Saved hash");
+  await page.locator("#save-local").click();
+  await page.waitForFunction(() =>
+    document.getElementById("library-status").textContent.startsWith("1 / 20"),
+  );
+  await page.locator("#preset").selectOption("custom");
+  await page.locator("#glyph").fill("🤣.☄️1:a");
+  await page
+    .locator("#payload")
+    .fill("https://example.com/?keep=%20two%20words");
+  await page.locator("#recipe-name").fill("Saved mixed");
+  await page.locator("#save-local").click();
+  await page.waitForFunction(() =>
+    document.getElementById("library-status").textContent.startsWith("2 / 20"),
+  );
+  const savedLibrary = await page.evaluate(
+    async () =>
+      (await chrome.storage.local.get("aqrobat-recipes-v1"))[
+        "aqrobat-recipes-v1"
+      ],
+  );
+  assert.equal(savedLibrary[1].recipe.options.glyph, "🤣.☄️1:a");
+  assert.equal(
+    savedLibrary[1].recipe.payload,
+    "https://example.com/?keep=%20two%20words",
+  );
   const tab = await context.newPage();
   await tab.goto(page.url());
   await tab.waitForFunction(
@@ -82,6 +109,37 @@ try {
     () => document.documentElement.dataset.theme === "ocean",
   );
   assert.equal(await reopened.locator("#icon-color").inputValue(), "gold");
+  await reopened.waitForFunction(() =>
+    document.getElementById("library-status").textContent.startsWith("2 / 20"),
+  );
+  await reopened.locator("#saved-recipes").selectOption(savedLibrary[1].id);
+  await reopened.locator("#load-saved").click();
+  assert.equal(
+    await reopened.locator("#payload").inputValue(),
+    savedLibrary[1].recipe.payload,
+  );
+  assert.equal(await reopened.locator("#glyph").inputValue(), "🤣.☄️1:a");
+  assert.deepEqual(
+    await reopened.evaluate(
+      async () =>
+        (await chrome.storage.local.get("aqrobat-recipes-v1"))[
+          "aqrobat-recipes-v1"
+        ],
+    ),
+    savedLibrary,
+  );
+  const popup = await context.newPage();
+  await popup.goto(`chrome-extension://${id}/popup.html`);
+  await popup.waitForFunction(
+    () => document.querySelector("#recipe").options.length === 2,
+  );
+  await popup.locator("#recipe").selectOption(savedLibrary[1].id);
+  assert(
+    (await popup.locator("#payload").innerText()).includes(
+      savedLibrary[1].recipe.payload,
+    ),
+  );
+  assert.equal(await popup.locator("#insert").isEnabled(), true);
   const version = await reopened.evaluate(
     () => chrome.runtime.getManifest().version,
   );
@@ -93,6 +151,7 @@ try {
       "preference change invokes real chrome.action.setIcon successfully with gold icon paths",
       "formatted clipboard write succeeds from the installed extension page",
       "new tab and full browser restart preserve theme/icon under same unpacked ID",
+      "explicit saved recipes retain exact payload and mixed palette across a full browser restart and load back into generator",
     ],
     toolbarPixels: "not visually inspected",
     userInstalledCopy: "not inspected or modified",

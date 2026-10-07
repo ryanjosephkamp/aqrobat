@@ -1,12 +1,22 @@
 {
   "manifest_version": 3,
   "name": "Aqrobat",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Make experimental text and emoji QR codes from selected text, links, or pages. Runs locally.",
-  "permissions": ["contextMenus", "storage"],
-  "background": { "service_worker": "worker.mjs", "type": "module" },
-  "action": { "default_title": "Open Aqrobat" },
-  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "worker.mjs",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Aqrobat \u00b7 generate or insert text QR",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'none'"
   }

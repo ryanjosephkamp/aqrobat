@@ -20,16 +20,23 @@ After owner review/merge, change the publishing source to `main` at `/`.
 2. Open `chrome://extensions` and enable Developer mode.
 3. Choose **Load unpacked** and select the extracted folder containing
    `manifest.json`.
-4. Click Aqrobat's toolbar action to open the local generator. Right-click a
+4. Click Aqrobat's toolbar action, then choose **Open generator / saved recipes**. Right-click a
    selection, link, or page and choose its specific text QR command.
 
-The MV3 extension bundles the same page/core. It requests `contextMenus` and
-`storage`, with no host permissions or injected content scripts. It receives
-selected text/link/page URLs only after the user's menu action. A one-time random
+The MV3 extension bundles the same page/core. Permissions are `contextMenus`,
+`storage`, `activeTab`, and `scripting`. No broad host permissions or always-on
+content scripts are declared. User invocation grants temporary access to the
+current page. Insertion code runs in Chrome’s isolated world; only the recipe
+chosen in the protected extension popup is passed to that page.
+[Chrome activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab),
+[Chrome scripting](https://developer.chrome.com/docs/extensions/reference/api/scripting).
+
+Selection/link/page context menus still open the generator. A one-time random
 key transfers content through session storage, then the generator removes it.
-Unconsumed handoffs are pruned on later menu actions after 60 seconds and are
-cleared when the browser session ends. Do not treat that expiry as immediate
-erasure if no later action happens. There is no server upload.
+Unconsumed handoffs are pruned on later menu actions after 60 seconds and cleared
+when the browser session ends. Explicitly saved recipes persist in this installed
+extension’s local store until removed. They are not cloud-synced or uploaded.
+[Saved-recipe insertion workflow](browser-insertion.md).
 
 This is not submitted to the Chrome Web Store, and the project does not alter
 your browser profile or install itself. Updates require copying a new build into the same unpacked folder and clicking Reload in chrome://extensions. Keep the folder path and installed extension ID stable; removing/reinstalling can lose saved preferences.
@@ -73,9 +80,9 @@ synchronized across its open tabs. A fresh test installation passed both a new
 tab and a full browser restart. Ryan's installed copy was not modified or inspected.
 
 The toolbar icon changes; the chrome://extensions tile continues using the
-manifest icon. Check version **0.3.0** on the extension-management page after
+manifest icon. Check version **0.4.0** on the extension-management page after
 updating the files in the existing folder and pressing Reload. If it still
-shows 0.1.0/0.2.0, it is running the older build.
+shows an earlier version, it is running the older build.
 [Chrome local storage](https://developer.chrome.com/docs/extensions/reference/api/storage),
 [extension ID stability](https://developer.chrome.com/docs/extensions/reference/manifest/key).
 

@@ -30,10 +30,25 @@ spaces are ignored. Each chosen symbol repeats within its module. The input
 limit is 4096 UTF-8 bytes. PNG preserves the rendered palette; copied emoji
 text can lose its grid when receiving fonts use different widths.
 
-Expand **Page theme & icon color** for five page themes and five icon colors.
-Violet is the default. Appearance preferences alone persist locally; they do
-not change QR artwork or recipes. In the extension, icon color also updates
+Open the header’s **Theme** menu for five page themes and five icon colors.
+Violet is the default. Appearance preferences persist locally. In the extension, recipes can also be
+explicitly saved in its local library; website payloads are not saved automatically. In the extension, icon color also updates
 the toolbar icon. The page includes Ryan’s personal social/sponsor footer.
+
+## Insert text directly in a browser editor
+
+In the unpacked extension, create/import a recipe and choose **Save in extension**.
+On your destination page, open Aqrobat’s toolbar, select that saved recipe,
+and choose **Insert a saved QR into this page**. Click inside a multiline editor,
+preview, then insert at an empty cursor. Formatted insertion carries a fixed
+text layout; plain insertion measures the destination’s font and pads its rows.
+Existing draft content and native Undo are preserved in the tested editors.
+Only your selected recipe is passed to the page. No email is sent automatically.
+
+[Standalone insertion practice](downloads/aqrobat-insertion-practice.html) works
+without installation. [Workflow, limitations, and tests](docs/browser-insertion.md).
+Browser extensions cannot insert directly into native TextEdit or Mail; use RTF
+there. Real email/blog editors and their saved/sent output still need review.
 
 ## What works without AI
 
@@ -100,6 +115,8 @@ npm ci
 npm test
 npm run build
 npm run test:browser
+npm run test:text-browser
+npm run test:insertion
 npm run format:check
 npm run serve
 ```

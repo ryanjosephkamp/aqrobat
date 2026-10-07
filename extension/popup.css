@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  background: #faf7ff;
+  color: #241839;
+  font: 14px/1.5 system-ui;
+}
+main {
+  padding: 18px;
+  width: 330px;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 26px;
+  margin: 0;
+}
+button,
+select {
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 10px;
+  margin: 12px 0;
+  background: #e9dfff;
+  border: 1px solid #a686d1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#payload {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+a {
+  color: #5d3c8b;
+}
+#status {
+  font-size: 13px;
+}

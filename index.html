@@ -42,8 +42,8 @@
         </div>
         <p class="hint" id="icon-hint"></p>
         <p class="hint">
-          Only appearance preferences are saved on this browser. QR artwork
-          keeps its original colors.
+          Appearance preferences are saved on this browser. QR artwork keeps its
+          original colors.
         </p>
       </details>
     </header>
@@ -213,6 +213,9 @@ https://example.com</textarea
           <button id="text-html" type="button">Text HTML</button
           ><button id="rtf" type="button">RTF document</button
           ><button id="snippet" type="button">Copy website HTML</button>
+          <a href="downloads/aqrobat-insertion-practice.html" target="_blank"
+            >Try direct insertion</a
+          >
         </div>
         <details open>
           <summary>Formatted text preview</summary>
@@ -239,6 +242,41 @@ https://example.com</textarea
           result. In TextEdit, start with Menlo; for plain emoji TXT, use 30 pt
           or larger to avoid macOS’s small-emoji width expansion. RTF sets its
           own spacing.
+        </p>
+      </section>
+      <section id="recipe-library" class="panel text-section" hidden>
+        <h2>Saved recipes · extension</h2>
+        <p>
+          Save a recipe here, then open Aqrobat’s toolbar on your destination
+          page and choose <strong>Insert a saved QR</strong>. Click inside its
+          editor, preview the layout, and insert at an empty cursor.
+        </p>
+        <p class="hint">
+          Saving stores this payload and its settings in this installed
+          extension until you remove it. No cloud sync. Keep a Recipe JSON
+          backup before reinstalling the extension.
+        </p>
+        <label for="recipe-name">Recipe name</label
+        ><input
+          id="recipe-name"
+          maxlength="80"
+          value="My text QR"
+          autocomplete="off"
+        />
+        <div class="exports">
+          <button id="save-local" type="button">Save in extension</button>
+        </div>
+        <label for="saved-recipes">Saved recipes</label
+        ><select id="saved-recipes"></select>
+        <div class="exports">
+          <button id="load-saved" type="button">Load saved</button
+          ><button id="delete-saved" type="button">Remove saved</button>
+        </div>
+        <p id="library-status" class="hint" role="status"></p>
+        <p>
+          <a href="practice.html" target="_blank"
+            >Open the insertion practice page</a
+          >
         </p>
       </section>
       <section class="lab" id="test">
@@ -515,7 +553,7 @@ node bin/aqrobat.mjs 'https://example.com' --glyph '#' --density 4x2 --format re
         >
       </div>
       <p class="footer-fine">
-        Aqrobat 0.3.0 ·
+        Aqrobat 0.4.0 ·
         <a href="https://github.com/ryanjosephkamp/aqrobat"
           >MIT license · Source &amp; docs</a
         >

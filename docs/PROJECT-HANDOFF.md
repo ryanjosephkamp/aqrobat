@@ -1,3 +1,8 @@
+> **Current review:** Aqrobat 0.4.0 adds saved-recipe browser insertion.
+> Ryan has explicitly deferred moving to a new Codex project. Continue in this
+> chat/repository; refresh the full handoff only when he requests the move.
+> Read [browser insertion](browser-insertion.md) before the older review prompt below.
+
 # Continue Aqrobat in its own Codex project
 
 Add the existing folder **`/Users/noir/Documents/aqrobat`** as a Codex project,
@@ -9,7 +14,7 @@ created by this handoff.
 - Branch: `codex/aqrobat-foundation`
 - Existing PR: <https://github.com/ryanjosephkamp/aqrobat/pull/1> — keep draft
 - Preview: <https://ryanjosephkamp.github.io/aqrobat/>
-- Package/build: 0.3.0, npm `private: true`, unpublished
+- Package/build: 0.4.0, npm `private: true`, unpublished
 - Pages currently follows the draft branch. A push there updates the preview.
 - Read `AGENTS.md`, `docs/text-portability.md`, `docs/validation.md`, and
   `docs/distribution.md` before changing anything.

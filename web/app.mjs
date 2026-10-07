@@ -15,6 +15,7 @@ import {
   toSvg,
 } from "../src/core.mjs";
 import { render, htmlSheet } from "../src/render.mjs";
+import { LIBRARY_KEY, readLibrary } from "../src/library.mjs";
 import {
   THEMES,
   ICON_COLORS,
@@ -82,7 +83,7 @@ function applyAppearance(value) {
   return settings;
 }
 applyAppearance(null);
-// Persist appearance only; payloads and scan observations remain in this page.
+// Appearance is automatic; recipes are saved only through an explicit action.
 try {
   const saved = extensionAppearance
     ? (await chrome.storage.local.get(APPEARANCE_KEY))[APPEARANCE_KEY]
@@ -686,3 +687,80 @@ $("rtf").addEventListener(
     current &&
     download(saveName(".rtf"), textRtf(current, metrics), "application/rtf"),
 );
+
+if (extensionAppearance) {
+  $("recipe-library").hidden = false;
+  let libraryEntries = [];
+  async function refreshLibrary() {
+    try {
+      const data = await chrome.storage.local.get(LIBRARY_KEY);
+      libraryEntries = readLibrary(data[LIBRARY_KEY]);
+      const selectedId = $("saved-recipes").value;
+      $("saved-recipes").replaceChildren();
+      for (const entry of libraryEntries) {
+        const option = document.createElement("option");
+        option.value = entry.id;
+        option.textContent = entry.name;
+        $("saved-recipes").append(option);
+      }
+      if (libraryEntries.some((e) => e.id === selectedId))
+        $("saved-recipes").value = selectedId;
+      $("load-saved").disabled = $("delete-saved").disabled =
+        !libraryEntries.length;
+      $("library-status").textContent =
+        `${libraryEntries.length} / 20 recipes saved in this extension.`;
+    } catch (error) {
+      $("library-status").textContent = error.message;
+    }
+  }
+  await refreshLibrary();
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === "local" && changes[LIBRARY_KEY]) refreshLibrary();
+  });
+  $("save-local").onclick = async () => {
+    if (!update() || !current) return;
+    const savingForm = formKey();
+    try {
+      const result = await chrome.runtime.sendMessage({
+        action: "save-recipe",
+        name: $("recipe-name").value,
+        recipe: current.recipe,
+      });
+      if (!result?.ok)
+        throw new Error(result?.error || "Recipe could not be saved.");
+      savedForm = savingForm;
+      protectWork();
+      status(
+        "Recipe saved in this extension. On the destination page, open Aqrobat’s toolbar and choose Insert a saved QR.",
+      );
+      await refreshLibrary();
+    } catch (error) {
+      status(error.message);
+    }
+  };
+  $("load-saved").onclick = () => {
+    const entry = libraryEntries.find((e) => e.id === $("saved-recipes").value);
+    if (entry) {
+      loadRecipe(entry.recipe);
+      savedForm = formKey();
+      protectWork();
+      status("Saved recipe loaded.");
+    }
+  };
+  $("delete-saved").onclick = async () => {
+    const entry = libraryEntries.find((e) => e.id === $("saved-recipes").value);
+    if (
+      !entry ||
+      !window.confirm(
+        `Remove “${entry.name}” from this extension? Export its Recipe first if you need a backup.`,
+      )
+    )
+      return;
+    const result = await chrome.runtime.sendMessage({
+      action: "delete-recipe",
+      id: entry.id,
+    });
+    if (!result?.ok) status(result?.error || "Recipe could not be removed.");
+    await refreshLibrary();
+  };
+}

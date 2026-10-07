@@ -74,7 +74,7 @@ export function formattedText(qr, metrics) {
             )
             .join("")
         : "&#160;";
-      cells += `<td width="${cell}" height="${cell}" style="padding:0;border:0;width:${cell}px;height:${cell}px;text-align:center;vertical-align:middle;">${content}</td>`;
+      cells += `<td width="${cell}" height="${cell}" style="padding:0;border:0;width:${cell}px;height:${cell}px;font-size:0;line-height:0;text-align:center;vertical-align:middle;">${content}</td>`;
     }
     rows += `<tr style="height:${cell}px;">${cells}</tr>`;
   }

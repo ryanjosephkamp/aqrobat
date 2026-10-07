@@ -94,3 +94,17 @@ changes. Exporting an image or TXT does not save the recipe. Payloads/results
 are not silently stored. Browsers choose the warning's wording, and some mobile
 exit paths do not fire it; export before leaving.
 [Browser beforeunload behavior](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event).
+
+## Browser insertion, October 7 follow-up
+
+Ryan reports that the RTF documents now look correct; Mac clipboard pasting
+still loses spacing. That is an owner formatting observation, not a new phone
+or paper scan result. Aqrobat 0.4.0 adds explicit recipe storage and direct browser
+insertion to bypass clipboard negotiation. See [browser insertion](browser-insertion.md).
+The RTF exporter remains unchanged.
+
+A small-size HTML defect was also fixed: blank emoji-table cells inherited the
+receiving editor’s font size and could stretch rows. Their own font/line size is
+now zero; visible glyph spans retain explicit sizes. The actual inserted table’s
+width and height are checked in the browser fixtures. No hidden solid QR or
+image replaces the text. Real editor sanitization still needs review.

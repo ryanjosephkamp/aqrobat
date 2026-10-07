@@ -1,758 +1,135 @@
 <!doctype html>
-<html lang="en" data-theme="violet">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Make experimental QR codes from real text characters and emoji. A free, local-first generator with reproducible recipes."
-    />
-    <meta name="color-scheme" content="light dark" />
-    <title>Aqrobat · QR codes, in character</title>
-    <style>:root {
-  color-scheme: light;
-  --paper: #f3effa;
-  --ink: #302047;
-  --muted: #655975;
-  --line: #d8cde7;
-  --accent: #dcc8ff;
-  --card: #fffcff;
-  --input: #ffffff;
-  --tint: #eee4fa;
-  --focus: #7950b4;
-  --primary-ink: #302047;
-  --error: #9b253f;
-  font-family: system-ui, sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.55;
-}
-:root[data-theme="ocean"] {
-  --paper: #edf5f8;
-  --ink: #163b4e;
-  --muted: #4c6673;
-  --line: #c6dbe4;
-  --accent: #bce9fc;
-  --card: #fbfeff;
-  --tint: #e0f0f6;
-  --focus: #226e99;
-  --primary-ink: #163b4e;
-}
-:root[data-theme="ember"] {
-  --paper: #fbf0ea;
-  --ink: #4a2a29;
-  --muted: #795950;
-  --line: #e4ccc1;
-  --accent: #ffcdaf;
-  --card: #fffcf8;
-  --tint: #f7e4d8;
-  --focus: #a45236;
-  --primary-ink: #4a2a29;
-}
-:root[data-theme="garden"] {
-  --paper: #f4f2e9;
-  --ink: #18352c;
-  --muted: #586961;
-  --line: #ccd3c7;
-  --accent: #d9f171;
-  --card: #fffdf5;
-  --tint: #edf1df;
-  --focus: #587b20;
-  --primary-ink: #18352c;
-}
-:root[data-theme="midnight"] {
-  color-scheme: dark;
-  --paper: #181624;
-  --ink: #eee8fc;
-  --muted: #b5abc8;
-  --line: #494056;
-  --accent: #c3a5f6;
-  --card: #242031;
-  --input: #1c1927;
-  --tint: #332b43;
-  --focus: #c3a5f6;
-  --primary-ink: #302047;
-  --error: #ffa7bb;
-}
-
-* {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-}
-header,
-main,
-footer {
-  max-width: 1200px;
-  margin: auto;
-  padding: 24px 32px;
-}
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-}
-a {
-  color: inherit;
-  text-underline-offset: 4px;
-}
-.wordmark {
-  font-size: 30px;
-  font-weight: 750;
-  letter-spacing: -1.5px;
-  text-decoration: none;
-}
-.wordmark span {
-  color: var(--focus);
-  margin-left: 8px;
-}
-nav {
-  display: flex;
-  gap: 24px;
-  font-size: 14px;
-}
-.intro {
-  padding: 60px 0 38px;
-  max-width: 760px;
-}
-.eyebrow {
-  font:
-    700 11px/1.5 ui-monospace,
-    monospace;
-  letter-spacing: 2px;
-}
-.intro h1 {
-  font:
-    normal clamp(52px, 8vw, 90px)/0.98 Georgia,
-    serif;
-  letter-spacing: -4px;
-  margin: 18px 0 28px;
-}
-.lede {
-  font-size: 20px;
-  max-width: 580px;
-}
-.fine,
-.hint {
-  color: var(--muted);
-  font-size: 12px;
-}
-.workspace {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
-  gap: 28px;
-}
-.panel,
-.preview-panel {
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 26px;
-  background: var(--card);
-}
-h2 {
-  font:
-    normal 32px/1.15 Georgia,
-    serif;
-  margin: 0 0 24px;
-}
-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 650;
-  margin: 15px 0 7px;
-}
-label span {
-  float: right;
-  color: var(--muted);
-  font-weight: 400;
-}
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
-textarea,
-input:not([type="checkbox"]):not([type="range"]):not([type="file"]),
-select {
-  width: 100%;
-  padding: 11px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--input);
-  color: var(--ink);
-  min-width: 0;
-}
-textarea {
-  resize: vertical;
-}
-textarea#payload {
-  font-size: 15px;
-}
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-button:focus-visible,
-a:focus-visible,
-summary:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 3px;
-}
-button {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 14px;
-  background: var(--input);
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 650;
-  cursor: pointer;
-}
-button:hover {
-  border-color: var(--focus);
-  background: var(--tint);
-}
-button:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-.primary {
-  width: 100%;
-  background: var(--accent);
-  color: var(--primary-ink);
-  border-color: var(--focus);
-  margin-top: 25px;
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-}
-.primary:hover {
-  background: var(--accent);
-}
-.pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.size-control {
-  display: grid;
-  grid-template-columns: 1fr 90px;
-  gap: 16px;
-  align-items: center;
-}
-.size-control input[type="range"] {
-  width: 100%;
-  accent-color: var(--ink);
-}
-.checks {
-  padding-top: 15px;
-}
-.checks label {
-  font-size: 12px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  margin: 8px 0;
-  gap: 6px;
-}
-input[type="checkbox"] {
-  accent-color: var(--ink);
-}
-.preview-heading {
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
-  align-items: center;
-  font:
-    600 10px/1.5 ui-monospace,
-    monospace;
-  letter-spacing: 1px;
-}
-.badge {
-  background: var(--tint);
-  border-radius: 5px;
-  padding: 5px 8px;
-  letter-spacing: 0;
-  white-space: nowrap;
-}
-.stage {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 20px 0;
-}
-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  image-rendering: auto;
-}
-.exports,
-.lab-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.exports button {
-  flex: 1;
-  white-space: nowrap;
-}
-.hint {
-  margin: 10px 0;
-  overflow-wrap: anywhere;
-}
-#error {
-  color: var(--error);
-  font-size: 13px;
-  min-height: 1.5em;
-}
-.file-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 400;
-}
-.file-label input {
-  max-width: 190px;
-  font-size: 11px;
-}
-details {
-  border-top: 1px solid var(--line);
-  padding: 15px 0;
-  margin-top: 10px;
-}
-summary {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 650;
-}
-#raw {
-  font:
-    10px/1 ui-monospace,
-    monospace;
-  white-space: pre;
-  overflow: auto;
-  margin-top: 14px;
-}
-.lab,
-.explanation {
-  border-top: 1px solid var(--line);
-  margin-top: 64px;
-  padding-top: 34px;
-}
-.section-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-}
-.section-top h2 {
-  margin-bottom: 8px;
-}
-.lab > p {
-  max-width: 800px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 24px;
-}
-.test-card {
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--card);
-  break-inside: avoid;
-}
-.test-card h3 {
-  font-size: 13px;
-  margin: 0 0 12px;
-}
-.test-card canvas {
-  margin-bottom: 12px;
-}
-.test-card[data-outcome="pass"] {
-  border-color: #47734c;
-}
-.test-card[data-outcome="fail"] {
-  border-color: #aa513c;
-}
-.test-card[data-outcome="conditional"] {
-  border-color: #b59c26;
-}
-.test-card .hint {
-  font-size: 11px;
-}
-.three {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-.three h3 {
-  font-size: 15px;
-}
-.three p {
-  font-size: 14px;
-  color: var(--muted);
-}
-.command {
-  padding: 16px;
-  border-radius: 8px;
-  background: var(--tint);
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  font-size: 12px;
-}
-footer {
-  font-size: 14px;
-  color: var(--muted);
-  margin-top: 32px;
-  border-top: 1px solid var(--line);
-}
-noscript p {
-  padding: 24px;
-}
-@media (max-width: 760px) {
-  header,
-  main,
-  footer {
-    padding: 20px;
-  }
-  .intro {
-    padding: 40px 0 20px;
-  }
-  .intro h1 {
-    letter-spacing: -2px;
-  }
-  .lede {
-    font-size: 18px;
-  }
-  .workspace {
-    grid-template-columns: 1fr;
-  }
-  .panel,
-  .preview-panel {
-    padding: 20px;
-  }
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .three {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-  nav {
-    gap: 12px;
-    font-size: 12px;
-  }
-  .wordmark {
-    font-size: 26px;
-  }
-  .section-top {
-    align-items: flex-start;
-  }
-  .section-top button {
-    max-width: 130px;
-  }
-  .test-card {
-    padding: 12px;
-  }
-}
-@media (max-width: 440px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  .pair {
-    gap: 10px;
-  }
-  .preview-heading {
-    letter-spacing: 0;
-  }
-  .badge {
-    font-size: 9px;
-  }
-  footer {
-    display: block;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-@page {
-  size: auto;
-  margin: 12mm;
-}
-@media print {
-  body {
-    background: white;
-    color: black;
-  }
-  header,
-  .intro,
-  .workspace,
-  .explanation,
-  footer,
-  .lab > .pair,
-  .lab-actions,
-  .lab > .hint,
-  .section-top button {
-    display: none;
-  }
-  main {
-    padding: 0;
-    max-width: none;
-  }
-  .lab {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8mm;
-  }
-  .test-card {
-    padding: 3mm;
-    border: 1px solid #ccc;
-    border-radius: 0;
-  }
-  .test-card canvas {
-    width: 65mm;
-    height: 65mm;
-    margin: auto;
-  }
-  .test-card select {
-    display: none;
-  }
-  .test-card::after {
-    content: "Scan: □ Pass  □ Fail  □ Conditional";
-    font-size: 8pt;
-  }
-  .lab > p {
-    font-size: 9pt;
-  }
-}
-
-.appearance {
-  margin: 0 0 28px;
-  padding: 16px 0;
-}
-.appearance .pair {
-  max-width: 640px;
-}
-.icon-control {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-#icon-preview {
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
-  border-radius: 7px;
-}
-.credit {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  align-items: center;
-}
-.made {
-  font-weight: 650;
-  margin: 0;
-}
-.made a {
-  text-decoration-color: var(--focus);
-}
-.social {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 4px;
-}
-.social a {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-}
-.social a:hover {
-  background: var(--tint);
-  color: var(--ink);
-}
-.social svg {
-  width: 22px;
-  height: 22px;
-}
-.sponsor {
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 18px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  text-decoration: none;
-  font-weight: 650;
-}
-.sponsor svg {
-  width: 22px;
-  height: 22px;
-  color: var(--error);
-}
-.sponsor:hover {
-  background: var(--tint);
-}
-.footer-fine {
-  font-size: 12px;
-  margin: 14px 0 0;
-}
-@media (max-width: 760px) {
-  .sponsor {
-    margin-left: 0;
-  }
-}
-@media (max-width: 360px) {
-  header {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-  .pair {
-    grid-template-columns: 1fr;
-  }
-}
-@media print {
-  .appearance {
-    display: none;
-  }
-  :root[data-theme] {
-    --card: white;
-    --ink: black;
-    --muted: #333;
-    --input: white;
-    color-scheme: light;
-  }
-}
-/* Real text has its own white scanning surface, independent of page themes. */
-header {
-  position: relative;
-  gap: 16px;
-}
-header .appearance {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-header .appearance summary {
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  white-space: nowrap;
-}
-header .appearance[open] > :not(summary) {
-  position: relative;
-  z-index: 3;
-}
-header .appearance[open] {
-  position: absolute;
-  right: 32px;
-  top: 24px;
-  z-index: 5;
-  width: min(380px, calc(100vw - 48px));
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--card);
-  box-shadow: 0 12px 32px #0002;
-}
-header .appearance[open] summary {
-  width: fit-content;
-  margin-left: auto;
-}
-.text-section {
-  margin: 28px 0;
-  min-width: 0;
-}
-.text-scroll,
-.raw-wrap {
-  max-width: 100%;
-  overflow: hidden;
-  background: white;
-  color: black;
-}
-#formatted-preview {
-  overflow: hidden;
-  background: white;
-  color: black;
-}
-textarea#raw {
-  display: block;
-  width: 100%;
-  min-height: 0;
-  resize: none;
-  overflow: hidden;
-  white-space: pre;
-  background: white;
-  color: black;
-  font-weight: 700;
-  padding: 12px;
-}
-.comparison-text {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  white-space: pre;
-  line-height: 1.2;
-  font-weight: 700;
-  color: black;
-  background: white;
-  width: 100%;
-  overflow: hidden;
-}
-#unsaved:not(:empty) {
-  color: var(--error);
-}
-@media (max-width: 760px) {
-  header {
-    flex-wrap: wrap;
-  }
-  nav {
-    gap: 12px;
-  }
-  header .appearance[open] {
-    right: 24px;
-  }
-}
-@media print {
-  .text-section {
-    display: none;
-  }
-  .comparison-text {
-    width: 65mm;
-    max-width: none;
-  }
-}
-
-@media print {
-  .comparison-text {
-    font-size: calc(65mm / var(--text-span)) !important;
-  }
-}
-</style>
-    <script type="module">// Project Nayuki's QR Code generator library (MIT License; LICENSE beside this
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Aqrobat · insertion practice</title
+  ><style>
+    body {
+      font: 16px/1.6 system-ui;
+      color: #241839;
+      background: #f8f4ff;
+      margin: 24px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 34px;
+    }
+    button,
+    input {
+      font: inherit;
+      padding: 10px;
+      border: 1px solid #ac8ace;
+      border-radius: 8px;
+    }
+    button {
+      cursor: pointer;
+      background: #e9dfff;
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+    }
+    textarea,
+    [contenteditable] {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 140px;
+      max-width: none;
+      background: white;
+      color: black;
+      padding: 14px;
+      border: 1px solid #ad9ccc;
+      border-radius: 12px;
+      overflow: auto;
+    }
+    textarea {
+      height: 700px;
+      font:
+        12px/18px Menlo,
+        monospace;
+      white-space: pre-wrap;
+    }
+    [contenteditable] {
+      font:
+        16px/1.5 Arial,
+        sans-serif;
+      min-height: 500px;
+    }
+    code {
+      font-family: Menlo, monospace;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 14px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+  <main>
+    <h1>Insert real text · practice</h1>
+    <p>
+      The QR is built directly in these editors. Its blanks and glyphs are
+      measured here; your clipboard is not used. Saved or sent email may still
+      change typography. Scan the final destination.
+    </p>
+    <div class="controls">
+      <button id="start">Choose recipe and field</button
+      ><label
+        >Load Recipe JSON
+        <input id="import" type="file" accept=".json,application/json"
+      /></label>
+      <label
+        >Plain editor font size
+        <input
+          id="practice-font-size"
+          type="number"
+          value="12"
+          min="6"
+          max="32"
+          step="1"
+          style="width: 90px"
+        />
+        px</label
+      >
+    </div>
+    <p id="status" role="status">
+      Demo recipes: hash, rocket, black circle, and mixed symbols. In the
+      extension, your saved recipes are also available.
+    </p>
+    <label for="plain">Plain multiline editor · Menlo</label
+    ><textarea id="plain" aria-label="Plain practice editor" spellcheck="false">
+Your draft starts here.&#10;</textarea
+    ><label for="rich">Rich editor · email / document practice</label>
+    <div id="rich" contenteditable="true" aria-label="Rich practice editor">
+      <p>
+        Your email draft starts here. Place your cursor below this paragraph.
+      </p>
+      <p><br /></p>
+    </div>
+    <p>
+      Try Undo after inserting. Existing draft content should remain.
+      Single-line fields, insufficient width, selected text, read-only fields,
+      and character limits are rejected before insertion.
+    </p>
+    <p>
+      No email is sent and no form is submitted by this page. These are local
+      practice editors; they do not establish Gmail, Outlook, Substack, native
+      Mail, or TextEdit compatibility.
+    </p>
+  </main>
+  <script type="module">// Project Nayuki's QR Code generator library (MIT License; LICENSE beside this
 // file), https://www.nayuki.io/page/qr-code-generator-library, from
 // typescript-javascript/qrcodegen.ts at commit 3c6d0b3cefb4e049dc337e82237c9644399716a8
 // of https://github.com/nayuki/QR-Code-generator, compiled to JavaScript with
@@ -2099,1342 +1476,619 @@ function addRecipe(entries, name, recipe, id) {
   return readLibrary([...all, { id, name: String(name).trim(), recipe }]);
 }
 
-const THEMES = Object.freeze([
-  { id: "violet", name: "Violet" },
-  { id: "ocean", name: "Ocean" },
-  { id: "ember", name: "Ember" },
-  { id: "garden", name: "Garden" },
-  { id: "midnight", name: "Midnight" },
-]);
-const ICON_COLORS = Object.freeze([
-  { id: "violet", name: "Violet", background: "#33244f", ink: "#d8c5ff" },
-  { id: "blue", name: "Blue", background: "#103f58", ink: "#a2e1ff" },
-  { id: "coral", name: "Coral", background: "#572c32", ink: "#ffc1ae" },
-  { id: "green", name: "Green", background: "#18352c", ink: "#d9f171" },
-  { id: "gold", name: "Gold", background: "#483a15", ink: "#ffe398" },
-]);
-const APPEARANCE_KEY = "aqrobat-appearance-v1";
-function appearance(value) {
-  return {
-    theme: THEMES.some((t) => t.id === value?.theme) ? value.theme : "violet",
-    icon: ICON_COLORS.some((c) => c.id === value?.icon) ? value.icon : "violet",
-  };
-}
-function iconPaths(color) {
-  const id = appearance({ icon: color }).icon;
-  return Object.fromEntries(
-    [16, 32, 48, 128].map((size) => [size, `icons/${id}-${size}.png`]),
-  );
-}
-function drawIcon(canvas, color, size = 32) {
-  const id = appearance({ icon: color }).icon;
-  const swatch = ICON_COLORS.find((c) => c.id === id);
-  canvas.width = canvas.height = size;
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = swatch.background;
-  ctx.fillRect(0, 0, size, size);
-  ctx.fillStyle = swatch.ink;
-  ctx.font = `700 ${size * 0.82}px monospace`;
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText("#", size / 2, size / 2);
-}
-
-const $ = (id) => document.getElementById(id);
-let current = null,
-  records = [],
-  cases = [],
-  textOutput = null,
-  metrics = null;
-let savedForm = "",
-  resultsDirty = false;
-const formKey = () =>
-  JSON.stringify(
-    Array.from($("controls").elements).map((e) =>
-      e.type === "checkbox" ? e.checked : e.value,
+// Destination-specific packing. measure() must measure whole strings using
+// the destination's actual font, size, letter spacing, and word spacing.
+function calibratedText(qr, measure, lineHeight) {
+  if (!(lineHeight > 0 && Number.isFinite(lineHeight)))
+    throw new RangeError("The editor's line height cannot be measured.");
+  const widths = qr.palette.map((g) => measure(g)),
+    widest = Math.max(...widths);
+  if (!(widest > 0))
+    throw new RangeError("The editor's glyphs cannot be measured.");
+  // Keep glyphs in the central part of a module. Repetition is adapted to the
+  // destination, not the image's pixel size. All cells retain the same matrix.
+  const down = Math.max(
+      qr.recipe.options.repeatY,
+      Math.ceil(widest / lineHeight),
     ),
-  );
-function protectWork() {
-  const dirty = formKey() !== savedForm || resultsDirty;
-  $("unsaved").textContent = dirty
-    ? "Unsaved work. Export your recipe and any scan results before leaving."
-    : "";
-  window.removeEventListener("beforeunload", preventLoss);
-  if (dirty) window.addEventListener("beforeunload", preventLoss);
-}
-function preventLoss(e) {
-  e.preventDefault();
-  e.returnValue = "";
-}
-const saveName = (suffix) => exportName($("filename").value) + suffix;
-const status = (message) => ($("status").textContent = message);
-for (const [id, choices] of [
-  ["theme", THEMES],
-  ["icon-color", ICON_COLORS],
-]) {
-  for (const choice of choices) {
-    const option = document.createElement("option");
-    option.value = choice.id;
-    option.textContent = choice.name;
-    $(id).append(option);
-  }
-}
-const extensionAppearance =
-  location.protocol === "chrome-extension:" &&
-  globalThis.chrome?.storage?.local;
-function applyAppearance(value) {
-  const settings = appearance(value);
-  document.documentElement.dataset.theme = settings.theme;
-  $("theme").value = settings.theme;
-  $("icon-color").value = settings.icon;
-  drawIcon($("icon-preview"), settings.icon);
-  let favicon = document.querySelector('link[rel="icon"]');
-  if (!favicon) {
-    favicon = document.createElement("link");
-    favicon.rel = "icon";
-    document.head.append(favicon);
-  }
-  favicon.type = "image/png";
-  favicon.href = $("icon-preview").toDataURL("image/png");
-  return settings;
-}
-applyAppearance(null);
-// Appearance is automatic; recipes are saved only through an explicit action.
-try {
-  const saved = extensionAppearance
-    ? (await chrome.storage.local.get(APPEARANCE_KEY))[APPEARANCE_KEY]
-    : JSON.parse(localStorage.getItem(APPEARANCE_KEY) || "null");
-  applyAppearance(saved);
-} catch {
-  /* Storage may be unavailable, especially for local files. */
-}
-let saveAppearance = Promise.resolve();
-for (const id of ["theme", "icon-color"])
-  $(id).addEventListener("change", () => {
-    const settings = applyAppearance({
-      theme: $("theme").value,
-      icon: $("icon-color").value,
-    });
-    saveAppearance = saveAppearance.then(async () => {
-      try {
-        if (extensionAppearance)
-          await chrome.storage.local.set({ [APPEARANCE_KEY]: settings });
-        else localStorage.setItem(APPEARANCE_KEY, JSON.stringify(settings));
-      } catch {
-        status(
-          "Appearance changed for this page; preferences could not be saved.",
-        );
-      }
-    });
-  });
-$("icon-hint").textContent = extensionAppearance
-  ? "Icon color also updates your Aqrobat toolbar icon."
-  : "Icon color previews the extension artwork and changes this tab’s icon. Set it inside the extension to change its toolbar icon.";
-if (extensionAppearance)
-  chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === "local" && changes[APPEARANCE_KEY])
-      applyAppearance(changes[APPEARANCE_KEY].newValue);
-  });
-else
-  window.addEventListener("storage", (e) => {
-    if (e.key === APPEARANCE_KEY) {
-      try {
-        applyAppearance(JSON.parse(e.newValue));
-      } catch {
-        /* Ignore invalid preferences. */
-      }
-    }
-  });
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") document.querySelector(".appearance").open = false;
-});
-document.addEventListener("click", (e) => {
-  const menu = document.querySelector(".appearance");
-  if (!menu.contains(e.target)) menu.open = false;
-});
-function download(name, data, type = "text/plain;charset=utf-8") {
-  const url = URL.createObjectURL(new Blob([data], { type }));
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = name;
-  link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
-for (const { glyph, name } of PRESETS) {
-  const option = document.createElement("option");
-  option.value = glyph;
-  option.textContent = `${glyph} / ${name}`;
-  $("preset").append(option);
-}
-const custom = document.createElement("option");
-custom.value = "custom";
-custom.textContent = "Custom…";
-$("preset").append(custom);
-function options() {
-  const [repeatX, repeatY] = $("density").value.split("x").map(Number);
-  return {
-    glyph: $("glyph").value,
-    repeatX,
-    repeatY,
-    ecc: $("ecc").value,
-    boost: $("boost").checked,
-    width: Number($("width").value),
-    font: $("font").value,
-    stroke: $("thick").checked ? 0.1 : 0,
-  };
-}
-function displaySize() {
-  if (!current) return;
-  const px = $("preview").getBoundingClientRect().width;
-  $("metadata").textContent =
-    `Version ${current.version} · ${current.modules} × ${current.modules} modules · ECC ${current.requestedEcc} requested / ${current.actualEcc} actual · ${current.recipe.options.width} px export / ${Math.round(px)} px on screen`;
-  $("palette-info").textContent =
-    `${current.palette.length} unique symbol${current.palette.length === 1 ? "" : "s"}. Cycle in entry order; repeats and spaces ignored.`;
-}
-function update() {
-  try {
-    current = generate($("payload").value, options());
-    render($("preview"), current);
-    textOutput = plainText(current);
-    metrics = textMetrics(current);
-    $("raw").value = textOutput.text;
-    $("raw").rows = textOutput.rows.length + 1;
-    $("raw").style.fontFamily =
-      current.recipe.options.font === "monospace"
-        ? "monospace"
-        : `"${current.recipe.options.font}", "Apple Color Emoji", monospace`;
-    $("formatted-preview").innerHTML = formattedText(current, metrics);
-    $("text-info").textContent =
-      `${textOutput.rows.length} rows. ${textOutput.mixed ? "Mixed-width packing: 5 narrow or 3 wide characters per module, 3 rows (scaled for higher density)." : `${textOutput.across} across × ${textOutput.down} rows per module; ${textOutput.blank === " " ? "ordinary" : "full-width"} blanks.`} Text density adapts for normal line spacing; image density stays as selected.`;
-    fitText();
-    $("error").textContent = "";
-    $("bytes").textContent =
-      `${current.utf8Bytes} / 1024 UTF-8 bytes. Nothing gets shortened.`;
-    displaySize();
-    document
-      .querySelectorAll(".exports button")
-      .forEach((b) => (b.disabled = false));
-    return true;
-  } catch (error) {
-    current = null;
-    $("preview").width = $("preview").height = 0;
-    $("raw").value = "";
-    $("formatted-preview").replaceChildren();
-    $("metadata").textContent = "";
-    $("palette-info").textContent = "";
-    $("error").textContent = error.message;
-    document
-      .querySelectorAll(".exports button")
-      .forEach((b) => (b.disabled = true));
-    return false;
-  }
-}
-function loadRecipe(value) {
-  const qr = fromRecipe(value),
-    o = qr.recipe.options;
-  $("payload").value = qr.recipe.payload;
-  $("glyph").value = o.glyph;
-  $("preset").value = PRESETS.some((p) => p.glyph === o.glyph)
-    ? o.glyph
-    : "custom";
-  const density = `${o.repeatX}x${o.repeatY}`;
-  if (!Array.from($("density").options).some((v) => v.value === density)) {
-    const opt = document.createElement("option");
-    opt.value = density;
-    opt.textContent = `${o.repeatX} across × ${o.repeatY} rows`;
-    $("density").append(opt);
-  }
-  $("density").value = density;
-  $("width").value = $("size").value = o.width;
-  $("font").value = o.font;
-  $("ecc").value = o.ecc;
-  $("thick").checked = !!o.stroke;
-  $("boost").checked = o.boost;
-  update();
-}
-$("controls").addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (update()) status("Generated locally. Scan status: untested.");
-});
-$("preset").addEventListener("change", () => {
-  if ($("preset").value !== "custom") {
-    $("glyph").value = $("preset").value;
-    $("density").value = /^[\x21-\x7e█]$/.test($("glyph").value)
-      ? "4x2"
-      : "1x1";
-  }
-  update();
-});
-$("glyph").addEventListener("input", () => {
-  $("preset").value = PRESETS.some((p) => p.glyph === $("glyph").value)
-    ? $("glyph").value
-    : "custom";
-  update();
-});
-$("size").addEventListener("input", () => {
-  $("width").value = $("size").value;
-  update();
-});
-$("width").addEventListener("input", () => {
-  $("size").value = $("width").value;
-  update();
-});
-for (const id of ["payload", "density", "font", "ecc", "boost", "thick"])
-  $(id).addEventListener(id === "payload" ? "input" : "change", update);
-new ResizeObserver(() => {
-  displaySize();
-  fitText();
-}).observe($("preview"));
-new ResizeObserver(fitText).observe($("raw").parentElement);
-$("controls").addEventListener("input", protectWork);
-$("controls").addEventListener("change", protectWork);
-$("copy").addEventListener("click", async () => {
-  if (!current) return;
-  try {
-    await navigator.clipboard.writeText(textOutput.text);
-    status(
-      "Copied. Preserve spacing and use a monospace font; copied-text scanning is unverified.",
-    );
-  } catch {
-    $("raw").closest("details").open = true;
-    $("raw").focus();
-    $("raw").select();
-    status(
-      "Clipboard unavailable. The text is selected below for manual copying.",
-    );
-  }
-});
-$("txt").addEventListener(
-  "click",
-  () => current && download(saveName(".txt"), textOutput.text),
-);
-$("recipe").addEventListener("click", () => {
-  if (!current) return;
-  download(
-    saveName("-recipe.json"),
-    JSON.stringify(current.recipe, null, 2) + "\n",
-    "application/json",
-  );
-  savedForm = formKey();
-  protectWork();
-});
-$("svg").addEventListener("click", () => {
-  if (current) {
-    download(saveName(".svg"), toSvg(current), "image/svg+xml");
-    status(
-      "SVG exported. Its appearance depends on fonts; it may differ from this canvas.",
-    );
-  }
-});
-$("png").addEventListener("click", () => {
-  if (!current) return;
-  const name = saveName(".png");
-  $("preview").toBlob((blob) => {
-    if (blob) {
-      download(name, blob, "image/png");
-      status(
-        "PNG exported with the artwork shown here. This recipe remains untested.",
-      );
-    }
-  }, "image/png");
-});
-$("html").addEventListener("click", () => {
-  if (current)
-    download(
-      saveName("-print.html"),
-      htmlSheet(current, $("preview").toDataURL("image/png"), textOutput.text),
-      "text/html;charset=utf-8",
-    );
-});
-async function readJson(input, limit) {
-  const file = input.files[0];
-  if (!file) throw new Error("Choose a JSON file.");
-  if (file.size > limit) throw new Error("File exceeds the import size limit.");
-  return JSON.parse(await file.text());
-}
-$("import-recipe").addEventListener("change", async () => {
-  try {
-    loadRecipe(await readJson($("import-recipe"), 20_000));
-    savedForm = formKey();
-    protectWork();
-    status("Recipe loaded locally; its scan status is untested.");
-  } catch (error) {
-    status(`Recipe not loaded: ${error.message}`);
-  }
-  $("import-recipe").value = "";
-});
-
-const outcomes = ["untested", "pass", "fail", "conditional"];
-function lastResult(recipe, output = "image") {
-  return [...records]
-    .reverse()
-    .find(
-      (r) =>
-        recipeKey(r.recipe) === recipeKey(recipe) &&
-        (r.output || "image") === output &&
-        (output === "image" || r.layout === TEXT_LAYOUT),
-    );
-}
-function record(recipe, outcome, width, output = "image") {
-  if (!$("scanner").value.trim())
-    throw new Error("Name the phone/scanner before recording a result.");
-  if (records.length >= 1000)
-    throw new Error(
-      "Result limit reached; export a backup before starting a new page.",
-    );
-  records.push({
-    schema: "aqrobat-observation-v1",
-    id: crypto.randomUUID(),
-    time: new Date().toISOString(),
-    recipe,
-    output,
-    layout: output === "plain-text" ? TEXT_LAYOUT : "aqrobat-image-v1",
-    outcome,
-    scanner: $("scanner").value,
-    conditions: $("conditions").value,
-    displayWidthPx: Math.round(width),
-    browser: navigator.userAgent.slice(0, 400),
-  });
-  resultsDirty = true;
-  protectWork();
-}
-function buildGrid() {
-  $("grid").replaceChildren();
-  $("text-grid").replaceChildren();
-  for (const output of $("compare-text").checked
-    ? ["image", "plain-text"]
-    : ["image"])
-    for (const qr of cases) {
-      const o = qr.recipe.options,
-        card = document.createElement("article");
-      card.className = "test-card";
-      card.dataset.output = output;
-      const title = document.createElement("h3");
-      title.textContent = `${output === "image" ? "Image" : "Plain text"} · ${o.glyph} · ${o.repeatX}×${o.repeatY} · ${o.font} · ${o.width}px`;
-      const canvas = document.createElement("canvas");
-      canvas.setAttribute("aria-label", title.textContent);
-      let art = canvas;
-      if (output === "image") render(canvas, qr);
-      else {
-        art = document.createElement("pre");
-        art.className = "comparison-text";
-        const packed = plainText(qr);
-        art.textContent = packed.text;
-        art.style.fontFamily = fontFamilyForText(o.font);
-        art.dataset.targetWidth = o.width;
-      }
-      const info = document.createElement("p");
-      info.className = "hint";
-      info.textContent = `Expected: ${qr.recipe.payload}. ECC ${qr.requestedEcc} → ${qr.actualEcc}; ink ${o.stroke ? "thickened" : "plain"}. Pass = exact intended payload recovered. Print: 65 mm.`;
-      const select = document.createElement("select");
-      select.setAttribute("aria-label", `Scan result for ${title.textContent}`);
-      for (const outcome of outcomes) {
-        const opt = document.createElement("option");
-        opt.value = outcome;
-        opt.textContent = outcome[0].toUpperCase() + outcome.slice(1);
-        select.append(opt);
-      }
-      const previous = lastResult(qr.recipe, output);
-      select.value = previous?.outcome || "untested";
-      card.dataset.outcome = select.value;
-      select.addEventListener("change", () => {
-        try {
-          record(
-            qr.recipe,
-            select.value,
-            art.getBoundingClientRect().width,
-            output,
-          );
-          card.dataset.outcome = select.value;
-          status(
-            `Recorded ${records.length} observations in this page. Export a backup to keep them.`,
-          );
-        } catch (error) {
-          select.value = card.dataset.outcome;
-          status(error.message);
+    cellHeight = lineHeight * down;
+  const spaces = [" ", "\u00a0", "\u2009", "\u200a", "\u3000"]
+    .map((text) => ({ text, width: measure(text) }))
+    .filter((s) => s.width > 0 && Number.isFinite(s.width))
+    .sort((a, b) => b.width - a.width);
+  if (!spaces.length)
+    throw new RangeError("The editor's spaces cannot be measured.");
+  // Prefer a nearby cell width the available blanks can express exactly.
+  // Keep any horizontal/vertical difference under ten percent; typography can
+  // still make the cells slightly rectangular. This is reported in the preview.
+  const cellOptions = [];
+  for (const a of spaces)
+    for (const b of spaces)
+      for (let n = 0; n <= 8; n++)
+        for (let m = 0; m <= 8; m++) {
+          const width = a.width * n + b.width * m;
+          if (
+            width >= widest &&
+            Math.abs(width - cellHeight) <= cellHeight * 0.1
+          )
+            cellOptions.push(width);
         }
-      });
-      card.append(title, art, info, select);
-      if (output === "plain-text") {
-        const button = document.createElement("button");
-        button.textContent = "Save this TXT";
-        button.addEventListener("click", () =>
-          download(
-            saveName(
-              `-text-${o.repeatX}x${o.repeatY}-${o.font.replaceAll(" ", "")}-${o.width}.txt`,
-            ),
-            plainText(qr).text,
-          ),
-        );
-        card.append(button);
-      }
-      $(output === "image" ? "grid" : "text-grid").append(card);
-      if (output === "plain-text") sizePre(art, o.width);
-    }
-}
-$("compare").addEventListener("click", () => {
-  if (!update()) return;
-  ((cases = []), (textOutput = null), (metrics = null));
-  let savedForm = "",
-    resultsDirty = false;
-  const formKey = () =>
-    JSON.stringify(
-      Array.from($("controls").elements).map((e) =>
-        e.type === "checkbox" ? e.checked : e.value,
-      ),
-    );
-  function protectWork() {
-    const dirty = formKey() !== savedForm || resultsDirty;
-    $("unsaved").textContent = dirty
-      ? "Unsaved work. Export your recipe and any scan results before leaving."
-      : "";
-    window.removeEventListener("beforeunload", preventLoss);
-    if (dirty) window.addEventListener("beforeunload", preventLoss);
-  }
-  function preventLoss(e) {
-    e.preventDefault();
-    e.returnValue = "";
-  }
-  const saveName = (suffix) => exportName($("filename").value) + suffix;
-  for (const [repeatX, repeatY] of [
-    [2, 1],
-    [4, 2],
-  ])
-    for (const font of ["Menlo", "Courier New"])
-      for (const width of [328, 492, 656])
-        cases.push(
-          generate(current.recipe.payload, {
-            ...current.recipe.options,
-            repeatX,
-            repeatY,
-            font,
-            width,
-          }),
-        );
-  buildGrid();
-  status(
-    "Built 12 comparisons. Their on-screen size depends on the grid width; exports retain the recipe size.",
+  cellOptions.sort(
+    (a, b) => Math.abs(a - cellHeight) - Math.abs(b - cellHeight),
   );
-});
-$("compare-text").addEventListener("change", buildGrid);
-$("export-results").addEventListener("click", () => {
-  download(
-    saveName("-results.json"),
-    JSON.stringify({ schema: "aqrobat-results-v1", records }, null, 2) + "\n",
-    "application/json",
-  );
-  resultsDirty = false;
-  protectWork();
-});
-$("import-results").addEventListener("change", async () => {
-  try {
-    const data = await readJson($("import-results"), 10_000_000);
-    if (
-      data.schema !== "aqrobat-results-v1" ||
-      !Array.isArray(data.records) ||
-      data.records.length > 1000
-    )
-      throw new Error("Not a bounded Aqrobat results file.");
-    const next = [...records],
-      seen = new Map(records.map((r) => [r.id, JSON.stringify(r)]));
-    for (const r of data.records) {
-      fromRecipe(r.recipe);
-      if (
-        r.schema !== "aqrobat-observation-v1" ||
-        !outcomes.includes(r.outcome) ||
-        (r.output !== undefined &&
-          !["image", "plain-text"].includes(r.output)) ||
-        (r.output === "plain-text" && r.layout !== TEXT_LAYOUT) ||
-        !Number.isFinite(Date.parse(r.time)) ||
-        typeof r.id !== "string" ||
-        !/^[\w-]{1,80}$/.test(r.id) ||
-        ["scanner", "conditions", "browser"].some(
-          (k) => typeof r[k] !== "string" || r[k].length > 600,
-        ) ||
-        !Number.isInteger(r.displayWidthPx) ||
-        r.displayWidthPx < 1 ||
-        r.displayWidthPx > 4096
-      )
-        throw new Error("Invalid observation; import was not applied.");
-      const text = JSON.stringify(r);
-      if (seen.has(r.id)) {
-        if (seen.get(r.id) !== text)
-          throw new Error(
-            "Conflicting observation ID; import was not applied.",
-          );
-      } else {
-        next.push(r);
-        seen.set(r.id, text);
-      }
-    }
-    if (next.length > 1000)
-      throw new Error("Merged results would exceed 1000 observations.");
-    records = next;
-    buildGrid();
-    status(
-      `Imported locally. ${records.length} total observations. These are user reports, not independent verification.`,
-    );
-  } catch (error) {
-    status(`Results not imported: ${error.message}`);
-  }
-  $("import-results").value = "";
-});
-$("print-grid").addEventListener("click", () => {
-  if (!cases.length) {
-    status("Build comparisons before printing.");
-    return;
-  }
-  window.print();
-});
-
-update();
-savedForm = formKey();
-protectWork();
-// Extension transfers chosen text in session storage; the URL contains only a
-// one-time random key, never the payload. No web page receives extension data.
-const handoff = new URLSearchParams(location.hash.slice(1)).get("handoff");
-if (
-  handoff &&
-  globalThis.chrome?.storage?.session &&
-  /^[\w-]{36}$/.test(handoff)
-) {
-  history.replaceState(null, "", location.pathname);
-  const key = `aqrobat:${handoff}`;
-  const stored = await chrome.storage.session.get(key);
-  await chrome.storage.session.remove(key);
-  if (stored[key] && Date.now() - stored[key].time < 60_000) {
-    $("payload").value = stored[key].payload;
-    update();
-    protectWork();
-    status(
-      "Selected content received locally from your explicit extension action.",
-    );
-  }
-}
-
-function fontFamilyForText(font) {
-  return font === "monospace"
-    ? "monospace"
-    : `"${font}", "Apple Color Emoji", monospace`;
-}
-function sizePre(pre, width) {
-  const ctx = document.createElement("canvas").getContext("2d");
-  ctx.font = `700 100px ${pre.style.fontFamily}`;
-  const max = Math.max(
-    ...pre.textContent
-      .trimEnd()
-      .split("\n")
-      .map((row) => ctx.measureText(row).width),
-  );
-  const target = Math.min(width, pre.parentElement.clientWidth - 2);
-  pre.style.setProperty("--text-span", String(max / 100));
-  pre.style.fontSize = `${Math.max(0.5, (target * 100) / Math.max(1, max))}px`;
-}
-function fitText() {
-  if (!current || !textOutput) return;
-  const raw = $("raw"),
-    ctx = document.createElement("canvas").getContext("2d");
-  ctx.font = `700 100px ${raw.style.fontFamily}`;
-  const max = Math.max(
-    ...textOutput.rows.map((row) => ctx.measureText(row).width),
-  );
-  const fs = Math.max(0.5, ((raw.parentElement.clientWidth - 26) * 100) / max);
-  raw.style.fontSize = `${fs}px`;
-  raw.style.lineHeight = "1.2";
-  raw.style.height = `${Math.ceil((textOutput.rows.length + 1) * fs * 1.2 + 28)}px`;
-  const holder = $("formatted-preview"),
-    child = holder.firstElementChild;
-  if (child) {
-    const scale = Math.min(
-      1,
-      holder.parentElement.clientWidth / current.recipe.options.width,
-    );
-    child.style.transformOrigin = "top left";
-    child.style.transform = `scale(${scale})`;
-    holder.style.height = `${current.recipe.options.width * scale + 20}px`;
-  }
-  for (const pre of document.querySelectorAll(".comparison-text"))
-    sizePre(pre, Number(pre.dataset.targetWidth));
-}
-$("copy-formatted").addEventListener("click", async () => {
-  if (!current) return;
-  const html = formattedText(current, metrics),
-    text = textOutput.text;
-  try {
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        "text/plain": new Blob([text], { type: "text/plain" }),
-        "text/html": new Blob([html], { type: "text/html" }),
+  const cell = cellOptions[0] ?? cellHeight,
+    repeats = Object.fromEntries(
+      qr.palette.map((g) => {
+        let n = 1;
+        while (n < 12 && measure(g.repeat(n + 1)) <= cell * 1.01) n++;
+        return [g, n];
       }),
-    ]);
-    status(
-      "Formatted text copied. Paste into a rich text editor; scan that pasted result. Plain-only editors receive the spaced TXT version.",
     );
-  } catch {
-    status(
-      "Formatted clipboard unavailable. Download Text HTML or RTF, or use Copy text for plain text.",
-    );
-  }
-});
-$("snippet").addEventListener("click", async () => {
-  if (!current) return;
-  try {
-    await navigator.clipboard.writeText(formattedText(current, metrics));
-    status(
-      "Website HTML copied. Paste into an HTML/code block that preserves inline styles.",
-    );
-  } catch {
-    status("Clipboard unavailable. Download Text HTML instead.");
-  }
-});
-$("text-html").addEventListener(
-  "click",
-  () =>
-    current &&
-    download(
-      saveName("-text.html"),
-      textDocument(current, metrics),
-      "text/html;charset=utf-8",
-    ),
-);
-$("rtf").addEventListener(
-  "click",
-  () =>
-    current &&
-    download(saveName(".rtf"), textRtf(current, metrics), "application/rtf"),
-);
-
-if (extensionAppearance) {
-  $("recipe-library").hidden = false;
-  let libraryEntries = [];
-  async function refreshLibrary() {
-    try {
-      const data = await chrome.storage.local.get(LIBRARY_KEY);
-      libraryEntries = readLibrary(data[LIBRARY_KEY]);
-      const selectedId = $("saved-recipes").value;
-      $("saved-recipes").replaceChildren();
-      for (const entry of libraryEntries) {
-        const option = document.createElement("option");
-        option.value = entry.id;
-        option.textContent = entry.name;
-        $("saved-recipes").append(option);
+  let maxError = 0;
+  function pad(row, target) {
+    const start = measure(row),
+      remaining = target - start;
+    const candidates = [{ text: "", error: Math.abs(remaining) }];
+    // Compare bounded combinations of two kinds of blank. One greedy blank
+    // at a time fails when, for example, two ordinary spaces beat one wide one.
+    for (const a of spaces)
+      for (const b of spaces) {
+        const limit = Math.min(
+          64,
+          Math.max(0, Math.ceil(remaining / a.width) + 1),
+        );
+        for (let n = 0; n <= limit; n++) {
+          const m = Math.max(
+            0,
+            Math.min(64, Math.round((remaining - n * a.width) / b.width)),
+          );
+          const text = a.text.repeat(n) + b.text.repeat(m);
+          candidates.push({
+            text,
+            error: Math.abs(n * a.width + m * b.width - remaining),
+          });
+        }
       }
-      if (libraryEntries.some((e) => e.id === selectedId))
-        $("saved-recipes").value = selectedId;
-      $("load-saved").disabled = $("delete-saved").disabled =
-        !libraryEntries.length;
-      $("library-status").textContent =
-        `${libraryEntries.length} / 20 recipes saved in this extension.`;
-    } catch (error) {
-      $("library-status").textContent = error.message;
+    candidates.sort(
+      (a, b) => a.error - b.error || a.text.length - b.text.length,
+    );
+    let best = row,
+      error = Math.abs(remaining);
+    const checked = new Set();
+    for (const option of candidates) {
+      if (checked.has(option.text)) continue;
+      checked.add(option.text);
+      const candidate = row + option.text,
+        actual = Math.abs(measure(candidate) - target);
+      if (actual + 0.001 < error) {
+        error = actual;
+        best = candidate;
+      }
+      if (checked.size >= 8 || error < 0.001) break;
     }
+    maxError = Math.max(maxError, error);
+    return best;
   }
-  await refreshLibrary();
-  chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === "local" && changes[LIBRARY_KEY]) refreshLibrary();
-  });
-  $("save-local").onclick = async () => {
-    if (!update() || !current) return;
-    const savingForm = formKey();
-    try {
-      const result = await chrome.runtime.sendMessage({
-        action: "save-recipe",
-        name: $("recipe-name").value,
-        recipe: current.recipe,
-      });
-      if (!result?.ok)
-        throw new Error(result?.error || "Recipe could not be saved.");
-      savedForm = savingForm;
-      protectWork();
-      status(
-        "Recipe saved in this extension. On the destination page, open Aqrobat’s toolbar and choose Insert a saved QR.",
-      );
-      await refreshLibrary();
-    } catch (error) {
-      status(error.message);
+  const rows = [];
+  for (let y = -qr.quiet; y < qr.modules + qr.quiet; y++) {
+    let row = "";
+    for (let x = -qr.quiet; x < qr.modules + qr.quiet; x++) {
+      const glyph = qr.glyphMatrix[y]?.[x],
+        i = x + qr.quiet;
+      if (glyph) {
+        const ink = glyph.repeat(repeats[glyph]);
+        row = pad(row, i * cell + (cell - measure(ink)) / 2) + ink;
+      }
+      row = pad(row, (i + 1) * cell);
     }
-  };
-  $("load-saved").onclick = () => {
-    const entry = libraryEntries.find((e) => e.id === $("saved-recipes").value);
-    if (entry) {
-      loadRecipe(entry.recipe);
-      savedForm = formKey();
-      protectWork();
-      status("Saved recipe loaded.");
-    }
-  };
-  $("delete-saved").onclick = async () => {
-    const entry = libraryEntries.find((e) => e.id === $("saved-recipes").value);
-    if (
-      !entry ||
-      !window.confirm(
-        `Remove “${entry.name}” from this extension? Export its Recipe first if you need a backup.`,
-      )
-    )
-      return;
-    const result = await chrome.runtime.sendMessage({
-      action: "delete-recipe",
-      id: entry.id,
-    });
-    if (!result?.ok) status(result?.error || "Recipe could not be removed.");
-    await refreshLibrary();
+    for (let dy = 0; dy < down; dy++) rows.push(row);
+  }
+  const gridWidth = qr.totalModules * cell;
+  const width = Math.max(gridWidth, ...rows.map(measure));
+  if (maxError > cell * 0.2)
+    throw new RangeError(
+      "This font's spaces are too coarse to align the QR. Use a smaller monospace font or formatted insertion.",
+    );
+  return {
+    text: rows.join("\n"),
+    rows,
+    width,
+    gridWidth,
+    height: rows.length * lineHeight,
+    lineHeight,
+    cell,
+    cellHeight,
+    down,
+    maxError,
+    repeats,
+    layout: "aqrobat-field-v1",
   };
 }
 
+/** Runs only after the extension is invoked. No background page observation. */
+function openInsertion(entries) {
+  if (document.querySelector("aqrobat-insertion")) return;
+  const host = document.createElement("aqrobat-insertion"),
+    shadow = host.attachShadow({ mode: "open" });
+  host.style.cssText =
+    "all:initial;position:fixed;right:12px;bottom:12px;z-index:2147483647;max-width:calc(100vw - 24px)";
+  shadow.innerHTML = `<style>
+    :host{color-scheme:light}*{box-sizing:border-box}section{width:440px;max-width:calc(100vw - 24px);max-height:78vh;overflow:auto;padding:18px;background:#fff;color:#241839;border:2px solid #7951b0;border-radius:16px;box-shadow:0 8px 40px #0004;font:14px/1.4 system-ui;text-align:left}
+    h2{font-size:20px;margin:0 0 8px}p{margin:10px 0}button,select,input{font:inherit;padding:8px;border:1px solid #b8a6d0;border-radius:8px;background:#faf7ff;color:#241839}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}label{display:block;margin:10px 0}select{max-width:100%;width:100%}#width{width:100px}#preview{max-height:220px;overflow:auto;border:1px solid #ddd;background:white;color:black;margin:12px 0}#preview:empty{display:none}#preview>pre{margin:0}#close{float:right}small{display:block;color:#675c73}#message{white-space:pre-line}input[type=checkbox]{margin-right:8px}
+    </style><section role="dialog" aria-label="Insert an Aqrobat text QR"><button id="close" aria-label="Close insertion panel">✕</button><h2>Insert text QR</h2><label>Saved recipe<select id="recipe"></select></label><p id="payload"></p><p id="target">Click inside the destination text box. Existing text will be preserved; selected text will not be replaced.</p><label>Insertion<select id="mode"><option value="formatted">Formatted text · rich editors</option><option value="plain">Measured plain text · destination font</option></select></label><label id="width-label">Formatted width <input id="width" type="number" value="328" min="200" max="1536" step="1"> px</label><p id="message" role="status"></p><div id="preview" aria-label="Insertion preview"></div><button id="prepare">Preview in this field</button> <button id="insert" disabled>Insert at cursor</button><p><small>Layout preview is not a scan test. Review the saved/sent result too. This extension never sends an email or submits a form.</small></p></section>`;
+  document.documentElement.append(host);
+  const $i = (id) => shadow.getElementById(id);
+  let field = null,
+    snapshot = null,
+    prepared = null,
+    picking = true;
+  for (const entry of entries) {
+    const option = document.createElement("option");
+    option.value = entry.id;
+    option.textContent = entry.name;
+    $i("recipe").append(option);
+  }
+  function selected() {
+    return entries.find((e) => e.id === $i("recipe").value);
+  }
+  function describe() {
+    $i("payload").textContent = selected()
+      ? `Payload: ${selected().recipe.payload}`
+      : "No saved recipes. Open the Aqrobat generator, load or create a recipe, and choose Save in extension.";
+  }
+  describe();
+  $i("prepare").disabled = !entries.length;
+  function invalidate() {
+    prepared = null;
+    $i("insert").disabled = true;
+    $i("preview").replaceChildren();
+  }
+  function close() {
+    document.removeEventListener("click", choose, true);
+    document.removeEventListener("keydown", escape, true);
+    host.remove();
+  }
+  function escape(e) {
+    if (e.key === "Escape") close();
+  }
+  $i("close").onclick = close;
+  document.addEventListener("keydown", escape, true);
+  function editable(node) {
+    if (!(node instanceof Element)) return null;
+    if (node instanceof HTMLTextAreaElement || node instanceof HTMLInputElement)
+      return node;
+    if (!node.isContentEditable) return null;
+    let root = node;
+    while (root.parentElement?.isContentEditable) root = root.parentElement;
+    return root;
+  }
+  function choose(e) {
+    if (!e.isTrusted || e.composedPath().includes(host) || !picking) return;
+    const candidate = e.composedPath().map(editable).find(Boolean);
+    if (!candidate) return;
+    invalidate();
+    field = candidate;
+    const plain =
+      field instanceof HTMLTextAreaElement ||
+      field.contentEditable === "plaintext-only";
+    $i("mode").value = plain ? "plain" : "formatted";
+    $i("mode").disabled = plain;
+    $i("width-label").hidden = plain;
+    $i("target").textContent =
+      `Destination: ${field.tagName.toLowerCase()}${field.getAttribute("aria-label") ? " · " + field.getAttribute("aria-label") : ""}. Click in another field to switch. Insertion uses an empty cursor; selected text is preserved.`;
+    $i("message").textContent =
+      "Choose your recipe, then preview. Nothing has been inserted.";
+    // Selection settles after the click's default action.
+    setTimeout(() => {
+      if (field !== candidate) return;
+      try {
+        snapshot = capture();
+      } catch (error) {
+        snapshot = null;
+        $i("message").textContent = error.message;
+      }
+    }, 0);
+  }
+  document.addEventListener("click", choose, true);
+  function capture() {
+    if (!field?.isConnected)
+      throw new Error("Click inside a destination field first.");
+    if (field instanceof HTMLInputElement)
+      throw new Error(
+        "Single-line and password fields cannot hold a QR. Choose a multiline text box or rich editor.",
+      );
+    if (
+      field.matches(":disabled,[readonly]") ||
+      field.closest("[inert]") ||
+      field.getAttribute("aria-readonly") === "true"
+    )
+      throw new Error("This editor is read-only.");
+    if (field instanceof HTMLTextAreaElement) {
+      if (field.selectionStart !== field.selectionEnd)
+        throw new Error(
+          "Place an empty cursor first. Aqrobat preserves selected text.",
+        );
+      return { value: field.value, position: field.selectionStart };
+    }
+    const selection = document.getSelection();
+    if (!selection?.rangeCount)
+      throw new Error("Place a cursor inside the editor.");
+    const range = selection.getRangeAt(0);
+    if (!field.contains(range.startContainer) || !range.collapsed)
+      throw new Error(
+        "Place an empty cursor inside the editor. Selected text is preserved.",
+      );
+    if (
+      range.startContainer.parentElement?.closest('[contenteditable="false"]')
+    )
+      throw new Error("This part of the editor is not editable.");
+    return { value: field.innerHTML, range: range.cloneRange() };
+  }
+  function contentWidth() {
+    const css = getComputedStyle(field);
+    return (
+      field.clientWidth -
+      parseFloat(css.paddingLeft) -
+      parseFloat(css.paddingRight)
+    );
+  }
+  function fingerprint() {
+    const s = getComputedStyle(field);
+    return [
+      contentWidth(),
+      s.fontFamily,
+      s.fontSize,
+      s.fontWeight,
+      s.fontStyle,
+      s.lineHeight,
+      s.letterSpacing,
+      s.wordSpacing,
+      s.whiteSpace,
+      s.textTransform,
+      s.direction,
+      s.writingMode,
+      s.fontVariantLigatures,
+    ].join("|");
+  }
+  function measurePlain(qr) {
+    const css = getComputedStyle(field);
+    if (
+      css.direction !== "ltr" ||
+      css.writingMode !== "horizontal-tb" ||
+      css.textTransform !== "none" ||
+      !["left", "start"].includes(css.textAlign) ||
+      parseFloat(css.textIndent) !== 0
+    )
+      throw new Error(
+        "Plain insertion needs left-aligned horizontal text, no indentation, and no automatic case conversion.",
+      );
+    if (!/pre/.test(css.whiteSpace))
+      throw new Error(
+        "This editor collapses spaces. Use formatted insertion, or its code/preformatted mode.",
+      );
+    const probe = document.createElement("pre"),
+      span = document.createElement("span");
+    probe.style.cssText =
+      "all:initial;position:fixed;left:-100000px;top:0;white-space:pre;visibility:hidden;width:max-content;max-width:none;padding:0;margin:0;border:0;";
+    for (const key of [
+      "fontFamily",
+      "fontSize",
+      "fontWeight",
+      "fontStyle",
+      "fontStretch",
+      "fontVariant",
+      "fontKerning",
+      "fontFeatureSettings",
+      "fontVariationSettings",
+      "fontVariantLigatures",
+      "letterSpacing",
+      "wordSpacing",
+      "lineHeight",
+    ])
+      probe.style[key] = css[key];
+    probe.append(span);
+    shadow.append(probe);
+    try {
+      span.textContent = "M\nM";
+      const range = document.createRange();
+      range.selectNodeContents(span);
+      const rects = Array.from(range.getClientRects()).filter(
+        (r) => r.width > 0,
+      );
+      const lineHeight =
+        rects.length >= 2
+          ? rects.at(-1).top - rects[0].top
+          : parseFloat(css.lineHeight);
+      const cache = new Map();
+      const measure = (text) => {
+        if (!cache.has(text)) {
+          span.textContent = text;
+          cache.set(text, span.getBoundingClientRect().width);
+        }
+        return cache.get(text);
+      };
+      // Fail before packing if even one glyph per module cannot fit.
+      const minCell =
+        lineHeight *
+        Math.max(
+          qr.recipe.options.repeatY,
+          Math.ceil(Math.max(...qr.palette.map(measure)) / lineHeight),
+        );
+      if (minCell * qr.totalModules > contentWidth() + 0.5)
+        throw new Error(
+          `The QR needs at least ${Math.ceil(minCell * qr.totalModules)} px at this font; the field has ${Math.floor(contentWidth())} px. Widen the field or choose a smaller font in the editor.`,
+        );
+      const packed = calibratedText(qr, measure, lineHeight);
+      return { ...packed, css };
+    } finally {
+      probe.remove();
+    }
+  }
+  $i("recipe").onchange = () => {
+    describe();
+    invalidate();
+  };
+  for (const id of ["mode", "width"])
+    $i(id).onchange = () => {
+      invalidate();
+      $i("width-label").hidden = $i("mode").value === "plain";
+    };
+  $i("prepare").onclick = async (click) => {
+    if (!click.isTrusted) return;
+    invalidate();
+    try {
+      if (!field || !snapshot)
+        throw new Error("Click inside a destination field first.");
+      if (
+        !field.isConnected ||
+        (field instanceof HTMLTextAreaElement
+          ? field.value
+          : field.innerHTML) !== snapshot.value
+      )
+        throw new Error(
+          "The draft changed. Click inside the field again before previewing.",
+        );
+      if (
+        field instanceof HTMLInputElement ||
+        field.matches(":disabled,[readonly]") ||
+        field.closest("[inert]")
+      )
+        throw new Error("Choose an editable multiline field.");
+      // A user may move the cursor with the keyboard after choosing the field.
+      // Refresh it without changing the draft or replacing a selection.
+      if (field instanceof HTMLTextAreaElement) snapshot = capture();
+      else {
+        const selection = document.getSelection();
+        if (selection?.rangeCount && field.contains(selection.anchorNode))
+          snapshot = capture();
+      }
+      await document.fonts.ready;
+      const source = fromRecipe(selected().recipe);
+      let html = null,
+        packed = null;
+      if ($i("mode").value === "formatted") {
+        const width = Number($i("width").value);
+        if (!Number.isInteger(width) || width < 200 || width > 1536)
+          throw new Error("Choose a formatted width from 200 to 1536 px.");
+        if (width > contentWidth())
+          throw new Error(
+            `The ${width} px QR does not fit this ${Math.floor(contentWidth())} px field. Reduce the formatted width or widen the editor.`,
+          );
+        const qr = fromRecipe({
+          ...source.recipe,
+          options: { ...source.recipe.options, width },
+        });
+        html = formattedText(qr, textMetrics(qr));
+        $i("preview").innerHTML = html;
+      } else {
+        packed = measurePlain(source);
+        if (packed.text.length > 200000)
+          throw new Error("The plain output is too large for safe insertion.");
+        if (
+          field instanceof HTMLTextAreaElement &&
+          field.maxLength >= 0 &&
+          snapshot.value.length + packed.text.length + 2 > field.maxLength
+        )
+          throw new Error(
+            "The QR exceeds this field's character limit. Nothing will be shortened.",
+          );
+        if (packed.width > contentWidth() + 0.5)
+          throw new Error(
+            "The QR would wrap in this field. Widen it or choose a smaller editor font.",
+          );
+        const pre = document.createElement("pre");
+        pre.textContent = packed.text;
+        for (const key of [
+          "fontFamily",
+          "fontSize",
+          "fontWeight",
+          "fontStyle",
+          "lineHeight",
+          "letterSpacing",
+          "wordSpacing",
+        ])
+          pre.style[key] = packed.css[key];
+        pre.style.whiteSpace = "pre";
+        pre.style.width = `${packed.width}px`;
+        pre.style.margin = "0";
+        $i("preview").append(pre);
+      }
+      prepared = { html, packed, fingerprint: fingerprint() };
+      $i("insert").disabled = false;
+      $i("message").textContent = packed
+        ? `Measured ${Math.ceil(packed.width)} × ${Math.ceil(packed.height)} px; maximum spacing error ${packed.maxError.toFixed(2)} px per boundary. Cells may be slightly rectangular; repetition adapts to this font. Full height may scroll. Scan the inserted result before using it.`
+        : "This preview contains real styled text. The editor may remove styles; check the inserted and saved result.";
+    } catch (error) {
+      $i("message").textContent = error.message;
+    }
+  };
+  $i("insert").onclick = async (click) => {
+    if (!click.isTrusted) return;
+    try {
+      if (!prepared || !field?.isConnected)
+        throw new Error("Preview the field first.");
+      if (
+        field.matches(":disabled,[readonly]") ||
+        field.closest("[inert]") ||
+        field.getAttribute("aria-readonly") === "true"
+      )
+        throw new Error("This editor is now read-only. Nothing was inserted.");
+      if (
+        (field instanceof HTMLTextAreaElement
+          ? field.value
+          : field.innerHTML) !== snapshot.value ||
+        fingerprint() !== prepared.fingerprint
+      )
+        throw new Error(
+          "The draft or typography changed. Click inside the field and preview again.",
+        );
+      const ready = prepared;
+      const originalLayouts = new Set(
+        field.querySelectorAll("[data-aqrobat-layout]"),
+      );
+      let expectedPlain = null;
+      field.focus();
+      if (field instanceof HTMLTextAreaElement)
+        field.setSelectionRange(snapshot.position, snapshot.position);
+      else {
+        const selection = document.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(snapshot.range);
+      }
+      // Give controlled editors a cancellable event. Never bypass a veto with
+      // direct value/DOM assignment. execCommand preserves Chrome's undo history.
+      const event = new InputEvent("beforeinput", {
+        bubbles: true,
+        composed: true,
+        cancelable: true,
+        inputType: "insertFromPaste",
+        data: ready.packed?.text ?? null,
+      });
+      if (!field.dispatchEvent(event))
+        throw new Error(
+          "The editor declined insertion. Its draft is unchanged.",
+        );
+      if (
+        (field instanceof HTMLTextAreaElement
+          ? field.value
+          : field.innerHTML) !== snapshot.value
+      )
+        throw new Error(
+          "The editor changed its draft during the insertion event. Preview again.",
+        );
+      let success;
+      if (ready.html)
+        success = document.execCommand("insertHTML", false, ready.html);
+      else {
+        const prefix =
+          field instanceof HTMLTextAreaElement &&
+          snapshot.position > 0 &&
+          snapshot.value[snapshot.position - 1] !== "\n"
+            ? "\n"
+            : "";
+        const suffix = "\n";
+        if (field instanceof HTMLTextAreaElement)
+          expectedPlain =
+            snapshot.value.slice(0, snapshot.position) +
+            prefix +
+            ready.packed.text +
+            suffix +
+            snapshot.value.slice(snapshot.position);
+        success = document.execCommand(
+          "insertText",
+          false,
+          prefix + ready.packed.text + suffix,
+        );
+      }
+      if (!success)
+        throw new Error(
+          "This editor did not accept insertion. Use Text HTML/RTF or its own code-block feature instead.",
+        );
+      prepared = null;
+      $i("insert").disabled = true;
+      picking = false;
+      document.removeEventListener("click", choose, true);
+      await new Promise(requestAnimationFrame);
+      const insertedLayout = Array.from(
+        field.querySelectorAll("[data-aqrobat-layout]"),
+      ).find((node) => !originalLayouts.has(node));
+      const changed =
+        expectedPlain !== null
+          ? field.value !== expectedPlain
+          : ready.html &&
+            (!insertedLayout ||
+              Math.abs(
+                insertedLayout.getBoundingClientRect().width -
+                  Number($i("width").value),
+              ) > 1 ||
+              Math.abs(
+                insertedLayout.getBoundingClientRect().height -
+                  Number($i("width").value),
+              ) > 2);
+      $i("message").textContent = changed
+        ? "The editor changed the inserted text or layout. Inspect the draft and use Undo (⌘Z / Ctrl+Z) if needed. Try its own code-block feature or Text HTML/RTF. Formatting is not verified here."
+        : "Inserted. Review the actual field and scan it. Use Undo (⌘Z / Ctrl+Z) to remove this insertion. Saved/sent formatting may differ; no scan success is assumed.";
+    } catch (error) {
+      invalidate();
+      $i("message").textContent = error.message;
+    }
+  };
+}
+
+const demos = ["#", "🚀", "⚫️", "🤣.☄️1:a"].map((glyph, i) => ({
+  id: `00000000-0000-4000-8000-00000000000${i}`,
+  name: ["Demo · hash", "Demo · rocket", "Demo · black circle", "Demo · mixed"][
+    i
+  ],
+  recipe: generate("https://example.com", {
+    glyph,
+    repeatX: 1,
+    repeatY: 1,
+    width: 328,
+  }).recipe,
+}));
+let practiceEntries = demos;
+if (location.protocol === "chrome-extension:") {
+  try {
+    practiceEntries = [
+      ...readLibrary(
+        (await chrome.storage.local.get(LIBRARY_KEY))[LIBRARY_KEY],
+      ),
+      ...demos,
+    ];
+  } catch {
+    document.getElementById("status").textContent =
+      "Saved library unavailable. Demo recipes remain available.";
+  }
+}
+document.getElementById("start").onclick = () => openInsertion(practiceEntries);
+document.getElementById("practice-font-size").oninput = (event) => {
+  const size = Number(event.target.value);
+  if (Number.isInteger(size) && size >= 6 && size <= 32) {
+    document.getElementById("plain").style.fontSize = `${size}px`;
+    document.getElementById("plain").style.lineHeight = `${size * 1.5}px`;
+  }
+};
+document.getElementById("import").onchange = async (event) => {
+  try {
+    const file = event.target.files[0];
+    if (!file || file.size > 20000)
+      throw new Error("Choose a Recipe JSON file under 20 KB.");
+    const recipe = fromRecipe(JSON.parse(await file.text())).recipe;
+    practiceEntries = [
+      {
+        id: crypto.randomUUID(),
+        name: "Imported · " + file.name.slice(0, 60),
+        recipe,
+      },
+      ...practiceEntries.slice(0, 23),
+    ];
+    document.getElementById("status").textContent =
+      "Recipe loaded for this practice page only. Choose recipe and field to preview it.";
+  } catch (error) {
+    document.getElementById("status").textContent = error.message;
+  }
+  event.target.value = "";
+};
 </script>
-  </head>
-  <body>
-    <header>
-      <a class="wordmark" href="#">aqrobat<span aria-hidden="true">↗</span></a>
-      <nav aria-label="Main">
-        <a href="#make">Make</a><a href="#how">How it works</a
-        ><a href="https://github.com/ryanjosephkamp/aqrobat">GitHub</a>
-      </nav>
-      <details class="appearance">
-        <summary aria-label="Appearance">◐ Theme</summary>
-        <div class="pair">
-          <div>
-            <label for="theme">Page theme</label
-            ><select id="theme"></select>
-          </div>
-          <div>
-            <label for="icon-color">Extension icon color</label>
-            <div class="icon-control">
-              <canvas
-                id="icon-preview"
-                width="32"
-                height="32"
-                aria-label="Extension icon preview"
-              ></canvas
-              ><select id="icon-color"></select>
-            </div>
-          </div>
-        </div>
-        <p class="hint" id="icon-hint"></p>
-        <p class="hint">
-          Appearance preferences are saved on this browser. QR artwork keeps its
-          original colors.
-        </p>
-      </details>
-    </header>
-    <main>
-      <section class="intro">
-        <p class="eyebrow">SMALL TOOL. MANY CHARACTERS.</p>
-        <h1>QR codes,<br />in character.</h1>
-        <p class="lede">
-          A link, a little text, a whole new look. Build QR artwork from
-          letters, symbols, or emoji—right in your browser.
-        </p>
-        <p class="fine">
-          Free · No account · No AI required · Experimental scanning
-        </p>
-        <p class="hint">
-          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-offline.html" download
-            >Download offline page</a
-          >
-          ·
-          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-extension.zip" download
-            >Unpacked Chrome extension</a
-          >
-        </p>
-      </section>
-      <section class="workspace" id="make" aria-label="QR generator">
-        <form id="controls" class="panel">
-          <h2>Make yours</h2>
-          <label for="payload">Your link or text</label
-          ><textarea id="payload" rows="3" spellcheck="false" maxlength="1024">
-https://example.com</textarea
-          >
-          <p class="hint" id="bytes">
-            Up to 1024 UTF-8 bytes. Nothing gets shortened.
-          </p>
-          <div class="pair">
-            <div>
-              <label for="preset">Character</label
-              ><select id="preset"></select>
-            </div>
-            <div>
-              <label for="glyph">Custom symbols / emoji</label
-              ><input
-                id="glyph"
-                value="#"
-                maxlength="4096"
-                spellcheck="false"
-                autocomplete="off"
-                aria-describedby="palette-info"
-              />
-            </div>
-          </div>
-          <p class="hint" id="palette-info">
-            Unique symbols cycle in entry order; repeats and spaces are ignored.
-          </p>
-          <div class="pair">
-            <div>
-              <label for="density">Density per module</label
-              ><select id="density">
-                <option value="4x2">4 across × 2 rows</option>
-                <option value="2x1">2 across × 1 row</option>
-                <option value="1x1">1 across × 1 row</option>
-              </select>
-            </div>
-            <div>
-              <label for="font">Font</label
-              ><select id="font">
-                <option>Menlo</option>
-                <option>Courier New</option>
-                <option value="monospace">System monospace</option>
-              </select>
-            </div>
-          </div>
-          <label for="width">Export size <span>200–1536 px</span></label>
-          <div class="size-control">
-            <input
-              id="size"
-              type="range"
-              min="200"
-              max="1536"
-              step="1"
-              value="656"
-              aria-label="Export size slider"
-            /><input
-              id="width"
-              type="number"
-              min="200"
-              max="1536"
-              step="1"
-              value="656"
-              aria-label="Export size in pixels"
-            />
-          </div>
-          <div class="pair">
-            <div>
-              <label for="ecc">Error correction</label
-              ><select id="ecc">
-                <option value="M">M · medium</option>
-                <option value="H">H · high</option>
-                <option value="Q">Q · quartile</option>
-                <option value="L">L · low</option>
-              </select>
-            </div>
-            <div class="checks">
-              <label
-                ><input type="checkbox" id="thick" checked /> Thicken glyph
-                ink</label
-              ><label
-                ><input type="checkbox" id="boost" checked /> Boost ECC if it
-                fits</label
-              >
-            </div>
-          </div>
-          <button class="primary" type="submit">
-            Generate QR <span aria-hidden="true">↗</span>
-          </button>
-          <p id="error" role="alert"></p>
-        </form>
-        <div class="preview-panel">
-          <div class="preview-heading">
-            <span>YOUR CHARACTER QR</span
-            ><span class="badge">Scan status: untested</span>
-          </div>
-          <div class="stage">
-            <canvas
-              id="preview"
-              aria-label="Experimental QR drawn from characters"
-            ></canvas>
-          </div>
-          <p id="metadata" class="hint"></p>
-          <div class="exports" aria-label="Export options">
-            <button id="copy-formatted" type="button">Copy text</button
-            ><button id="copy" type="button">Plain text</button
-            ><button id="png" type="button">PNG</button
-            ><button id="svg" type="button">SVG</button
-            ><button id="txt" type="button">TXT</button
-            ><button id="html" type="button">Image print / HTML</button
-            ><button id="recipe" type="button">Recipe</button>
-          </div>
-          <p class="hint" id="status" role="status" aria-live="polite">
-            Nothing is sent to a QR service. Try scanning this exact display.
-          </p>
-          <label for="filename">Save filename (without extension)</label
-          ><input
-            id="filename"
-            value="aqrobat"
-            maxlength="80"
-            autocomplete="off"
-          />
-          <p class="hint" id="unsaved" role="status"></p>
-          <label class="file-label"
-            >Load a recipe
-            <input
-              type="file"
-              id="import-recipe"
-              accept=".json,application/json"
-          /></label>
-        </div>
-      </section>
-      <section class="text-section panel" aria-labelledby="text-heading">
-        <h2 id="text-heading">Copyable text</h2>
-        <p>
-          Formatted text carries the layout into editors that accept HTML. Plain
-          TXT uses wider blanks for emoji and balanced repetition for ordinary
-          letters. Both contain real characters.
-        </p>
-        <div class="lab-actions exports">
-          <button id="text-html" type="button">Text HTML</button
-          ><button id="rtf" type="button">RTF document</button
-          ><button id="snippet" type="button">Copy website HTML</button>
-          <a href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-insertion-practice.html" target="_blank"
-            >Try direct insertion</a
-          >
-        </div>
-        <details open>
-          <summary>Formatted text preview</summary>
-          <div class="text-scroll"><div id="formatted-preview"></div></div>
-        </details>
-        <details open>
-          <summary>View / select the plain text</summary>
-          <p class="hint" id="text-info"></p>
-          <div class="raw-wrap">
-            <textarea
-              id="raw"
-              readonly
-              wrap="off"
-              spellcheck="false"
-              aria-label="Plain text QR"
-            ></textarea>
-          </div>
-        </details>
-        <p class="hint">
-          For TextEdit, open RTF or paste formatted text in rich text mode. For
-          websites, keep the Text HTML styles. Email and blog editors may remove
-          styles. TXT cannot store a font or line spacing: preserve every blank
-          and newline, choose the matching monospace font, and test the pasted
-          result. In TextEdit, start with Menlo; for plain emoji TXT, use 30 pt
-          or larger to avoid macOS’s small-emoji width expansion. RTF sets its
-          own spacing.
-        </p>
-      </section>
-      <section id="recipe-library" class="panel text-section" hidden>
-        <h2>Saved recipes · extension</h2>
-        <p>
-          Save a recipe here, then open Aqrobat’s toolbar on your destination
-          page and choose <strong>Insert a saved QR</strong>. Click inside its
-          editor, preview the layout, and insert at an empty cursor.
-        </p>
-        <p class="hint">
-          Saving stores this payload and its settings in this installed
-          extension until you remove it. No cloud sync. Keep a Recipe JSON
-          backup before reinstalling the extension.
-        </p>
-        <label for="recipe-name">Recipe name</label
-        ><input
-          id="recipe-name"
-          maxlength="80"
-          value="My text QR"
-          autocomplete="off"
-        />
-        <div class="exports">
-          <button id="save-local" type="button">Save in extension</button>
-        </div>
-        <label for="saved-recipes">Saved recipes</label
-        ><select id="saved-recipes"></select>
-        <div class="exports">
-          <button id="load-saved" type="button">Load saved</button
-          ><button id="delete-saved" type="button">Remove saved</button>
-        </div>
-        <p id="library-status" class="hint" role="status"></p>
-        <p>
-          <a href="practice.html" target="_blank"
-            >Open the insertion practice page</a
-          >
-        </p>
-      </section>
-      <section class="lab" id="test">
-        <div class="section-top">
-          <div>
-            <p class="eyebrow">MAKE OBSERVATIONS, NOT PROMISES</p>
-            <h2>A little scan lab.</h2>
-          </div>
-          <button id="compare" type="button">Build 12 image comparisons</button>
-        </div>
-        <p>
-          Compare this symbol palette at two densities, two fonts, and three
-          export sizes. Each mark belongs to its exact recipe. A good QR matrix
-          can still be hard to scan when the glyphs are faint, colorful, small,
-          or spaced differently.
-        </p>
-        <div class="pair">
-          <div>
-            <label for="scanner">Phone / scanner</label
-            ><input
-              id="scanner"
-              placeholder="e.g. Samsung Camera on Galaxy S25 Ultra"
-              maxlength="160"
-            />
-          </div>
-          <div>
-            <label for="conditions">Conditions</label
-            ><input
-              id="conditions"
-              placeholder="Screen or paper, brightness, distance, notes"
-              maxlength="500"
-            />
-          </div>
-        </div>
-        <div class="lab-actions">
-          <button id="export-results" type="button">Export results</button
-          ><label class="file-label"
-            >Import results
-            <input
-              id="import-results"
-              type="file"
-              accept=".json,application/json" /></label
-          ><button id="print-grid" type="button">Print comparison grid</button>
-        </div>
-        <p class="hint">
-          Results stay in this open page. Export a backup before closing.
-          Printed codes are 65 mm square; paper scanning has not been verified.
-        </p>
-        <label
-          ><input id="compare-text" type="checkbox" /> Also build a plain-text
-          comparison grid</label
-        >
-        <p class="hint">
-          Text observations are separate from images. These are actual
-          characters, with normal 1.2 line spacing. Print both grids or scan on
-          screen.
-        </p>
-        <div id="grid" class="grid"></div>
-        <div id="text-grid" class="grid"></div>
-      </section>
-      <section class="explanation" id="how">
-        <p class="eyebrow">UNDER THE HOOD</p>
-        <h2>Ordinary QR logic.<br />Unusual ink.</h2>
-        <div class="three">
-          <article>
-            <h3>01 / Encode</h3>
-            <p>
-              Nayuki’s MIT-licensed encoder turns your exact input into a
-              standard QR matrix. Error correction and the three familiar corner
-              markers are part of that matrix.
-            </p>
-          </article>
-          <article>
-            <h3>02 / Draw</h3>
-            <p>
-              Aqrobat replaces dark modules with repeated glyphs and leaves
-              light modules as spaces. The canvas uses real font artwork. There
-              is no solid QR hidden behind the characters.
-            </p>
-          </article>
-          <article>
-            <h3>03 / Try</h3>
-            <p>
-              A scanner sees the light and dark pattern. Ink coverage, contrast,
-              font, size, brightness, and camera software all matter. Every new
-              recipe starts untested.
-            </p>
-          </article>
-        </div>
-        <details>
-          <summary>Sizes, emoji, and portability</summary>
-          <p>
-            The old 328, 492, and 656 px choices were presets. Pixel width can
-            vary continuously here. QR matrix dimensions change in four-module
-            steps as payload and error correction require more room; shrinking
-            the artwork does not shrink that matrix.
-          </p>
-          <p>
-            A custom palette can mix letters, punctuation, and whole emoji
-            sequences, including flags or families. Enter
-            <code>🤣.☄️1:a</code> or any combination up to 4096 UTF-8 bytes.
-            Unique symbols cycle through dark modules in entry order; duplicate
-            symbols and spaces are ignored. Emoji artwork comes from your system
-            fonts and may change across devices. PNG keeps the rendered artwork;
-            TXT and SVG depend on receiving fonts and spacing. Formatted text
-            and RTF retain layout instructions, but receiving editors can still
-            change typography. Sparse dots and colorful faces are experiments,
-            not reliable defaults.
-          </p>
-          <p>
-            Short inputs usually need fewer modules. Bigger artwork can help a
-            camera distinguish those modules, but there is no universal minimum
-            scannable size. Decorative text QR is not encryption or a way to
-            hide the payload from machines.
-          </p>
-        </details>
-        <details>
-          <summary>Use with an agent or from the command line</summary>
-          <p>
-            The same deterministic core powers this page, the CLI, and the
-            unpacked extension. An agent chooses settings and calls the tool; it
-            does not need to invent the QR pattern.
-          </p>
-          <pre class="command">
-node bin/aqrobat.mjs 'https://example.com' --glyph '#' --density 4x2 --format recipe --out qr.json</pre
-          >
-          <p>
-            The repository includes an npm-ready package layout. It has not been
-            published to npm.
-            <a
-              href="https://github.com/ryanjosephkamp/aqrobat/blob/codex/aqrobat-foundation/docs/agents.md"
-              >Agent instructions</a
-            >
-            ·
-            <a
-              href="https://github.com/ryanjosephkamp/aqrobat/blob/codex/aqrobat-foundation/docs/distribution.md"
-              >Install the unpacked extension</a
-            >
-          </p>
-        </details>
-        <details>
-          <summary>Prior art and what we are exploring</summary>
-          <p>
-            Text and emoji QR codes already exist.
-            <a href="https://github.com/gtanner/qrcode-terminal"
-              >qrcode-terminal</a
-            >
-            offers terminal output and a CLI;
-            <a href="https://github.com/soldair/node-qrcode">node-qrcode</a>
-            provides a general QR package;
-            <a href="https://oshiqr.com/en">OshiQR</a> offers text and custom
-            emoji modes. Aqrobat explores a small shared toolchain, reproducible
-            recipes, and visible scan evidence. This is a product direction, not
-            a novelty claim.
-          </p>
-          <p>
-            Next: test more emoji against specific font/scanner combinations,
-            with separate software and phone results. A full emoji atlas is
-            planned research, not an existing scan guarantee.
-            <a href="https://www.qrcode.com/en/about/version.html"
-              >QR versions (DENSO WAVE)</a
-            >
-            ·
-            <a href="https://www.nayuki.io/page/qr-code-generator-library"
-              >Encoder</a
-            >
-            ·
-            <a href="https://www.unicode.org/reports/tr51/"
-              >Unicode emoji specification</a
-            >
-          </p>
-        </details>
-      </section>
-    </main>
-    <footer>
-      <div class="credit">
-        <p class="made">
-          Made by <a href="https://ryanjosephkamp.github.io/">Ryan Kamp</a>
-        </p>
-        <ul class="social" aria-label="Ryan Kamp online">
-          <li>
-            <a
-              href="https://ryanjosephkamp.github.io/"
-              aria-label="Ryan Kamp on Website"
-              title="Website"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="9.2" />
-                  <path
-                    d="M2.8 12h18.4M12 2.8c2.6 2.6 3.9 5.7 3.9 9.2s-1.3 6.6-3.9 9.2c-2.6-2.6-3.9-5.7-3.9-9.2S9.4 5.4 12 2.8Z"
-                  />
-                </g></svg
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/ryanjosephkamp/"
-              aria-label="Ryan Kamp on GitHub"
-              title="GitHub"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                /></svg
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/ryanjosephkamp/"
-              aria-label="Ryan Kamp on LinkedIn"
-              title="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                /></svg
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://x.com/ryanjosephkamp"
-              aria-label="Ryan Kamp on X"
-              title="X"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-                /></svg
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/@RyanJosephKamp?app=desktop"
-              aria-label="Ryan Kamp on YouTube"
-              title="YouTube"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                /></svg
-            ></a>
-          </li>
-        </ul>
-        <a
-          class="sponsor"
-          href="https://github.com/sponsors/ryanjosephkamp"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><svg viewBox="0 0 20 20" aria-hidden="true">
-            <path
-              d="M10 16.8S3 12.6 3 7.6A3.6 3.6 0 0 1 10 6a3.6 3.6 0 0 1 7 1.6c0 5-7 9.2-7 9.2Z"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linejoin="round"
-            /></svg
-          >Sponsor on GitHub</a
-        >
-      </div>
-      <p class="footer-fine">
-        Aqrobat 0.4.0 ·
-        <a href="https://github.com/ryanjosephkamp/aqrobat"
-          >MIT license · Source &amp; docs</a
-        >
-        · Free to use. Sponsorship is optional.
-      </p>
-    </footer>
-    <noscript
-      ><p>
-        This generator needs JavaScript enabled. Its generation runs locally and
-        requires no AI service.
-      </p></noscript
-    >
-  </body>
 </html>
