@@ -65,7 +65,8 @@ for (const path of [
   source = source
     .replace(/^import[^;]*;\s*/gm, "")
     .replace(/^export default qrcodegen;\s*/gm, "")
-    .replace(/^export (?=(?:function|const)\b)/gm, "");
+    .replace(/^export (?=(?:function|const)\b)/gm, "")
+    .replace(/[ \t]+$/gm, "");
   code += source + "\n";
 }
 if (/^\s*(?:import|export)\b/m.test(code))
