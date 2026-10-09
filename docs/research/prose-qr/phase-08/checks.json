@@ -1,0 +1,18 @@
+{
+  "commands": {
+    "npm test": { "passed": 18, "failed": 0 },
+    "npm run format:check": "passed before custody sealing; repeated after sealing",
+    "node experiments/prose-qr/finder-region/verify.mjs": "22 native plus 4 controls replayed; see verification.json",
+    "node experiments/prose-qr/finder-region/verify-final.mjs": "27 native plus 8 controls replayed; see verification-final.json",
+    "node experiments/prose-qr/finder-region/score-audit.mjs": "4 passive inputs; unchanged ordinary returns",
+    "node experiments/prose-qr/finder-region/check-handback.mjs": "mobile controls, exact prompt and checkpoint download pass"
+  },
+  "productBuildAndBrowserChecks": "Not rerun for research-only additions; product code and three downloads unchanged",
+  "nativeClipboardPhonePrintGmailExtensionAcceptance": "No new observations",
+  "taskOwnedJobs": "All four capture batches, both successful verifiers, failed verifier, audit and handback checker ended; browser finally blocks close only their own browser instances",
+  "scope": [
+    "docs/research/prose-qr/phase-08",
+    "experiments/prose-qr/finder-region"
+  ],
+  "allPriorInventoriedFilesUnchanged": 1062
+}
