@@ -1,0 +1,254 @@
+import { chromium } from "playwright";
+import {
+  readFile,
+  writeFile,
+  appendFile,
+  mkdir,
+  readdir,
+  stat,
+} from "node:fs/promises";
+import { resolve } from "node:path";
+import { createHash } from "node:crypto";
+import { gzipSync } from "node:zlib";
+import { format } from "prettier";
+import assert from "node:assert/strict";
+import { readBarcodes } from "zxing-wasm/reader";
+import { decode, DECODER_PROVENANCE } from "../decoders.mjs";
+import { positiveControl } from "../layout.mjs";
+import { documentHtml } from "../flow/layout.mjs";
+import { diagnose, bundleHash } from "./diagnostic.mjs";
+import { layout } from "./layout.mjs";
+export const root = resolve("docs/research/prose-qr/phase-05"),
+  hash = (b) => createHash("sha256").update(b).digest("hex");
+async function bytes(p) {
+  let n = 0;
+  for (const e of await readdir(p, { withFileTypes: true })) {
+    const q = resolve(p, e.name);
+    n += e.isDirectory() ? await bytes(q) : (await stat(q)).size;
+  }
+  return n;
+}
+const specs = [];
+for (const font of ["Menlo", "Courier New"])
+  for (const weight of [400, 700])
+    for (const tracking of [0, -2])
+      for (const objective of ["mass", "geometry"])
+        specs.push({
+          id: `native-${String(specs.length + 1).padStart(2, "0")}`,
+          font,
+          weight,
+          tracking,
+          objective,
+          payload: "https://example.com/",
+        });
+const out = resolve(root, "native-01");
+await mkdir(out);
+await mkdir(resolve(out, "raw"));
+const save = async (p, b) => {
+  assert(
+    (await bytes(root)) +
+      (await bytes(resolve("experiments/prose-qr/glyph-geometry"))) +
+      Buffer.byteLength(b) <
+      11_000_000,
+    "Evidence reserve",
+  );
+  await writeFile(resolve(out, p), b, { flag: "wx" });
+  return hash(b);
+};
+const json = async (p, v) =>
+  save(p, await format(JSON.stringify(v), { parser: "json" }));
+const metrics = JSON.parse(
+    await readFile(resolve(root, "font-metrics.json"), "utf8"),
+  ),
+  sourceHashes = {};
+for (const path of [
+  "experiments/prose-qr/glyph-geometry/fonts.mjs",
+  "experiments/prose-qr/glyph-geometry/layout.mjs",
+  "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+  "experiments/prose-qr/glyph-geometry/capture.mjs",
+  "docs/research/prose-qr/phase-05/font-metrics.json",
+  "docs/research/prose-qr/phase-05/PLAN.md",
+  "experiments/prose-qr/decoders.mjs",
+  "src/core.mjs",
+  "vendor/qrcodegen.mjs",
+])
+  sourceHashes[path] = hash(await readFile(path));
+await json("manifest.json", {
+  startedAt: new Date().toISOString(),
+  specs,
+  sourceHashes,
+  decoder: DECODER_PROVENANCE,
+  ordinaryZXing: { formats: ["QRCode"] },
+  diagnosticBundleSha256: bundleHash,
+  gate: "Unchanged native readable text pixels; expected content compared after independent decoding. Diagnostics are separate.",
+});
+const browser = await chromium.launch({
+    headless: true,
+    executablePath:
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  }),
+  records = [],
+  errors = [];
+let attempted = null;
+try {
+  const page = await browser.newPage({
+    viewport: { width: 1800, height: 1800 },
+    deviceScaleFactor: 1,
+  });
+  page.on("pageerror", (e) => errors.push(e.message));
+  const pixels = async (png) => {
+    const p = await page.evaluate(async (b) => {
+      const img = new Image();
+      img.src = "data:image/png;base64," + b;
+      await img.decode();
+      const c = document.createElement("canvas");
+      c.width = img.width;
+      c.height = img.height;
+      const ctx = c.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      const d = ctx.getImageData(0, 0, c.width, c.height).data;
+      let str = "";
+      for (let i = 0; i < d.length; i += 32768)
+        str += String.fromCharCode(...d.subarray(i, i + 32768));
+      return { width: c.width, height: c.height, data: btoa(str) };
+    }, png.toString("base64"));
+    return {
+      width: p.width,
+      height: p.height,
+      data: new Uint8ClampedArray(Buffer.from(p.data, "base64")),
+    };
+  };
+  const probe = async (p, expected) => {
+    const baseline = await decode(p, expected);
+    const z = await readBarcodes(p, { formats: ["QRCode"] });
+    return {
+      baseline,
+      ordinaryZXing: {
+        payloads: z.map((x) => x.text),
+        exact: z.some((x) => x.text === expected),
+      },
+    };
+  };
+  await page.setContent(documentHtml(positiveControl(specs[0].payload, 656)));
+  const cpng = await page.locator("#artifact").screenshot(),
+    cpx = await pixels(cpng),
+    cr = await probe(cpx, specs[0].payload);
+  assert(
+    cr.baseline.jsQR.exact && cr.baseline.zxing.exact && cr.ordinaryZXing.exact,
+  );
+  await json("controls.json", [
+    {
+      payload: specs[0].payload,
+      path: "raw/control.png",
+      pngSha256: await save("raw/control.png", cpng),
+      rgbaSha256: hash(cpx.data),
+      width: cpx.width,
+      height: cpx.height,
+      ...cr,
+    },
+  ]);
+  for (const s of specs) {
+    attempted = s.id;
+    const started = Date.now(),
+      l = layout(s, metrics);
+    assert(l.side <= 1800 && l.side > 0);
+    assert(l.lines.every((x) => x.trim()) && !l.plainText.includes("  "));
+    const html = await format(documentHtml(l.markup), { parser: "html" });
+    const gzipSha256 = await save(s.id + ".html.gz", gzipSync(html)),
+      txtSha256 = await save(s.id + ".txt", l.plainText);
+    await json(s.id + "-layout.json", {
+      spec: s,
+      plainText: l.plainText,
+      structural: l.structural,
+      unit: l.unit,
+      advance: l.advance,
+      lineHeight: l.lineHeight,
+      baseline: l.baseline,
+      side: l.side,
+      modules: l.modules,
+    });
+    await page.setContent(html);
+    await page.evaluate(() => document.fonts.ready);
+    const node = page.locator("#text-body");
+    assert.equal(await node.textContent(), l.plainText);
+    assert.equal(await node.locator("*").count(), 0);
+    const style = await node.evaluate((e) => ({
+      font: getComputedStyle(e).fontFamily,
+      weight: getComputedStyle(e).fontWeight,
+      tracking: getComputedStyle(e).letterSpacing,
+      lineHeight: getComputedStyle(e).lineHeight,
+      fontSize: getComputedStyle(e).fontSize,
+      childElements: e.children.length,
+    }));
+    const png = await page.locator("#artifact").screenshot(),
+      path = "raw/" + s.id + ".png",
+      pngSha256 = await save(path, png),
+      p = await pixels(png),
+      result = await probe(p, s.payload),
+      diagnostic = diagnose(p, l);
+    await page.setContent(html);
+    await page.evaluate(() => document.fonts.ready);
+    const repeat = await page.locator("#artifact").screenshot();
+    const repeatedPNGHash = hash(repeat),
+      repeatMatches = repeatedPNGHash === pngSha256;
+    if (!repeatMatches) await save("raw/" + s.id + "-repeat.png", repeat);
+    const r = {
+      id: s.id,
+      spec: s,
+      path,
+      pngSha256,
+      rgbaSha256: hash(p.data),
+      gzipSha256,
+      txtSha256,
+      width: p.width,
+      height: p.height,
+      style,
+      structural: l.structural,
+      ...result,
+      diagnostic,
+      replay: { sameHTMLRepeated: true, repeatedPNGHash, repeatMatches },
+      elapsedMs: Date.now() - started,
+      phone: "not tested",
+      readability:
+        "Native 20-pixel glyphs, height/baseline-filtered; human legibility and natural prose not yet accepted",
+    };
+    await appendFile(resolve(out, "results.jsonl"), JSON.stringify(r) + "\n");
+    records.push(r);
+    console.log(
+      JSON.stringify({
+        id: r.id,
+        jsQR: r.baseline.jsQR.exact,
+        ordinaryZXing: r.ordinaryZXing.exact,
+        baselineZXing: r.baseline.zxing.exact,
+        finder: r.diagnostic.correctFinder,
+        centers:
+          r.diagnostic.centerCoverage.darkCentersBlack /
+          r.diagnostic.centerCoverage.dark,
+        replay: r.replay.repeatMatches,
+        ms: r.elapsedMs,
+      }),
+    );
+  }
+  assert.deepEqual(errors, []);
+} catch (e) {
+  await json("aborted.json", {
+    at: new Date().toISOString(),
+    attempted,
+    completed: records.length,
+    message: e.message,
+  });
+  throw e;
+} finally {
+  await browser.close();
+}
+await json("summary.json", {
+  completed: records.length,
+  jsQR: records.filter((x) => x.baseline.jsQR.exact).map((x) => x.id),
+  ordinaryZXing: records.filter((x) => x.ordinaryZXing.exact).map((x) => x.id),
+  baselineZXing: records.filter((x) => x.baseline.zxing.exact).map((x) => x.id),
+  correctFinders: records
+    .filter((x) => x.diagnostic.correctFinder)
+    .map((x) => x.id),
+  replaysExact: records.filter((x) => x.replay.repeatMatches).length,
+  phoneObservations: "none",
+});

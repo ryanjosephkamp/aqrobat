@@ -1,0 +1,145 @@
+[
+  {
+    "payload": "https://example.com/",
+    "path": "raw/control.png",
+    "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+    "rgbaSha256": "a5a54e758f50df5fcc243be0d601847878088af0bffe5ccc8309073312cdd4ec",
+    "width": 656,
+    "height": 656,
+    "diagnostic": {
+      "classification": "Renderer diagnostic after independent decoding, not payload recovery. Expected finder/matrix never given to acceptance readers.",
+      "correctFinder": true,
+      "locations": [
+        {
+          "alignmentPattern": { "x": 447, "y": 447 },
+          "bottomLeft": { "x": 148.5, "y": 506.5 },
+          "dimension": 25,
+          "topLeft": { "x": 148.5, "y": 148.5 },
+          "topRight": { "x": 506.5, "y": 148.5 }
+        },
+        {
+          "alignmentPattern": { "x": 447, "y": 447 },
+          "bottomLeft": { "x": 148, "y": 506 },
+          "topLeft": { "x": 148, "y": 148 },
+          "topRight": { "x": 506, "y": 148 },
+          "dimension": 25
+        }
+      ],
+      "expected": {
+        "topLeft": { "x": 149.0909090909091, "y": 149.0909090909091 },
+        "topRight": { "x": 506.9090909090909, "y": 149.0909090909091 },
+        "bottomLeft": { "x": 149.0909090909091, "y": 506.9090909090909 }
+      },
+      "corridors": {
+        "topLeft": {
+          "horizontal": {
+            "pixels": 139,
+            "agreement": 0.9856115107913669,
+            "runs": [
+              { "black": true, "pixels": 20 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 59 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 20 }
+            ],
+            "longestCentralBlackFraction": 0.9893292682926829
+          },
+          "vertical": {
+            "pixels": 139,
+            "agreement": 0.9856115107913669,
+            "runs": [
+              { "black": true, "pixels": 20 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 59 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 20 }
+            ],
+            "longestCentralBlackFraction": 0.9893292682926829
+          }
+        },
+        "topRight": {
+          "horizontal": {
+            "pixels": 139,
+            "agreement": 0.9856115107913669,
+            "runs": [
+              { "black": true, "pixels": 20 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 59 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 20 }
+            ],
+            "longestCentralBlackFraction": 0.9893292682926829
+          },
+          "vertical": {
+            "pixels": 139,
+            "agreement": 0.9856115107913669,
+            "runs": [
+              { "black": true, "pixels": 20 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 59 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 20 }
+            ],
+            "longestCentralBlackFraction": 0.9893292682926829
+          }
+        },
+        "bottomLeft": {
+          "horizontal": {
+            "pixels": 139,
+            "agreement": 0.9856115107913669,
+            "runs": [
+              { "black": true, "pixels": 20 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 59 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 20 }
+            ],
+            "longestCentralBlackFraction": 0.9893292682926829
+          },
+          "vertical": {
+            "pixels": 139,
+            "agreement": 0.9856115107913669,
+            "runs": [
+              { "black": true, "pixels": 20 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 59 },
+              { "black": false, "pixels": 20 },
+              { "black": true, "pixels": 20 }
+            ],
+            "longestCentralBlackFraction": 0.9893292682926829
+          }
+        }
+      },
+      "centerCoverage": {
+        "dark": 354,
+        "darkCentersBlack": 354,
+        "light": 271,
+        "lightCentersBlack": 0
+      }
+    },
+    "baseline": {
+      "jsQR": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true
+      },
+      "zxing": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true,
+        "results": [
+          {
+            "payload": "https://example.com/",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [
+              104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108,
+              101, 46, 99, 111, 109, 47
+            ]
+          }
+        ]
+      }
+    },
+    "ordinaryZXing": { "payloads": ["https://example.com/"], "exact": true }
+  }
+]

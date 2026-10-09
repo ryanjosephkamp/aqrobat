@@ -1,0 +1,104 @@
+{
+  "startedAt": "2026-10-09T17:34:13.849Z",
+  "specs": [
+    {
+      "id": "shift-01",
+      "font": "Menlo",
+      "weight": 400,
+      "tracking": -2,
+      "objective": "mass",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-02",
+      "font": "Menlo",
+      "weight": 400,
+      "tracking": -2,
+      "objective": "geometry",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-03",
+      "font": "Menlo",
+      "weight": 700,
+      "tracking": -2,
+      "objective": "mass",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-04",
+      "font": "Menlo",
+      "weight": 700,
+      "tracking": -2,
+      "objective": "geometry",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-05",
+      "font": "Courier New",
+      "weight": 400,
+      "tracking": -2,
+      "objective": "mass",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-06",
+      "font": "Courier New",
+      "weight": 400,
+      "tracking": -2,
+      "objective": "geometry",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-07",
+      "font": "Courier New",
+      "weight": 700,
+      "tracking": -2,
+      "objective": "mass",
+      "payload": "https://example.com/",
+      "shift": true
+    },
+    {
+      "id": "shift-08",
+      "font": "Courier New",
+      "weight": 700,
+      "tracking": -2,
+      "objective": "geometry",
+      "payload": "https://example.com/",
+      "shift": true
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/glyph-geometry/fonts.mjs": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+    "experiments/prose-qr/glyph-geometry/layout.mjs": "03cf343d6f6dc2f8befb9363724b4151207ecd978423eae7861bc7eaf734d7d4",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "df2ecd76c66d8df62022ce0e8180a96d1e7af6f59eb08ef48e644fa778f21adf",
+    "experiments/prose-qr/glyph-geometry/capture.mjs": "c45d846cbb717b376b71d4b04a203cf69ac14e8dbfa2d4557383e153c5010ec4",
+    "docs/research/prose-qr/phase-05/font-metrics.json": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+    "docs/research/prose-qr/phase-05/PLAN.md": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+    "docs/research/prose-qr/phase-05/SHIFT-PLAN.md": "268f23fde37db1805aa59411735a4de45207d9f9fc9fafddf5217d4351e3950d",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+    "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+  },
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "diagnosticBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "gate": "Unchanged native readable text pixels; expected content compared after independent decoding. Diagnostics are separate."
+}

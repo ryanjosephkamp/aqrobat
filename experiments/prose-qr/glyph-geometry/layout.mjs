@@ -1,0 +1,211 @@
+import { generate } from "../../../src/core.mjs";
+import { escapeHtml } from "../layout.mjs";
+import { thresholdedGlyph } from "./diagnostic.mjs";
+export function layout(spec, metrics) {
+  const qr = generate(spec.payload, { ecc: "Q", boost: false, stroke: 0 });
+  const fm = metrics.fonts[spec.font + "|" + spec.weight],
+    advance = fm.glyphs.M.advance + spec.tracking;
+  const unit = advance * 3,
+    lineHeight = unit / 2,
+    baseline = fm.baseline24 + (lineHeight - 24) / 2;
+  const textOffsetY = spec.shift ? -lineHeight / 2 : 0;
+  const columns = qr.modules * 3,
+    rows = qr.modules * 2 + (spec.shift ? 1 : 0),
+    pad = unit * 5,
+    side = Math.ceil((qr.modules + 10) * unit);
+  const glyphs = fm.glyphs,
+    allowed = (c) =>
+      glyphs[c] &&
+      glyphs[c].ascent + glyphs[c].descent <= lineHeight + 0.1 &&
+      (spec.closeLeading
+        ? glyphs[c].ascent <= lineHeight - 0.6 && glyphs[c].descent <= 0.6
+        : glyphs[c].ascent <= baseline + 0.1 &&
+          glyphs[c].descent <= lineHeight - baseline + 0.1);
+  const alphabet = [
+    ..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  ].filter(allowed);
+  const lowerConsonants = [..."bcdfghjklmnpqrstvwxyz"].filter(allowed),
+    lowerVowels = [..."aeiou"].filter(allowed);
+  const upperConsonants = [..."BCDFGHJKLMNPQRSTVWXYZ"].filter(allowed),
+    upperVowels = [..."AEIOU"].filter(allowed);
+  if (
+    [lowerConsonants, lowerVowels, upperConsonants, upperVowels].some(
+      (x) => !x.length,
+    )
+  )
+    throw Error("No legible glyph pool");
+  const masses = alphabet.map((c) => glyphs[c].inkMass),
+    min = Math.min(...masses),
+    max = Math.max(...masses);
+  const inkModel = Object.fromEntries(
+    alphabet.map((c) => [
+      c,
+      spec.thresholded ? thresholdedGlyph(glyphs[c]) : glyphs[c].ink,
+    ]),
+  );
+  const darkAt = (x, y) =>
+    x >= 0 &&
+    y >= 0 &&
+    x < qr.modules * unit &&
+    y < qr.modules * unit &&
+    qr.matrix[Math.floor(y / unit)][Math.floor(x / unit)];
+  const importance = (x, y) => {
+    if (spec.objective !== "geometry") return 1;
+    const a = x / unit,
+      b = y / unit,
+      n = qr.modules;
+    const finder =
+      (a < 7 && b < 7) || (a >= n - 7 && b < 7) || (a < 7 && b >= n - 7);
+    const centered =
+      Math.abs((a % 1) - 0.5) * unit < 1.5 &&
+      Math.abs((b % 1) - 0.5) * unit < 1.5;
+    if (!finder) return spec.shift && centered ? 20 : 1;
+    const cx = a >= n - 7 ? n - 3.5 : 3.5,
+      cy = b >= n - 7 ? n - 3.5 : 3.5;
+    return (
+      (spec.shift && centered ? 30 : 0) +
+      5 +
+      (spec.thresholded &&
+      (Math.abs(x - cx * unit) < 1.5 || Math.abs(y - cy * unit) < 1.5)
+        ? 50
+        : 0) +
+      (Math.abs(a - cx) < 0.35 || Math.abs(b - cy) < 0.35 ? 8 : 0)
+    );
+  };
+  const scores = [];
+  for (let row = 0; row < rows; row++) {
+    scores[row] = [];
+    for (let col = 0; col < columns; col++) {
+      const out = {};
+      for (const c of alphabet) {
+        if (spec.objective === "mass") {
+          const v = (glyphs[c].inkMass - min) / (max - min),
+            d = darkAt(
+              (col + 0.5) * advance,
+              row * lineHeight + textOffsetY + lineHeight / 2,
+            );
+          out[c] = d ? (1 - v) ** 2 : v ** 2;
+        } else {
+          let value = 0;
+          for (const [gx, gy, alpha] of inkModel[c]) {
+            const x = col * advance + gx,
+              y = row * lineHeight + textOffsetY + baseline + gy,
+              t = darkAt(x, y) ? 1 : 0;
+            value += importance(x, y) * (alpha * alpha - 2 * alpha * t);
+          }
+          out[c] = value / 100;
+        }
+      }
+      out[" "] =
+        spec.objective === "mass"
+          ? darkAt(
+              (col + 0.5) * advance,
+              row * lineHeight + textOffsetY + lineHeight / 2,
+            )
+            ? 1.2
+            : 0
+          : 0;
+      scores[row][col] = out;
+    }
+  }
+  const lines = [];
+  for (let row = 0; row < rows; row++) {
+    const punctuation =
+        row % 4 === 3 || row === rows - 1 ? "." : row % 4 === 1 ? "," : "",
+      width = columns - punctuation.length;
+    const dp = new Array(width + 1).fill(Infinity),
+      choice = [];
+    dp[width] = 0;
+    for (let pos = width - 1; pos >= 0; pos--) {
+      for (let length = 2; length <= 18 && pos + length <= width; length++)
+        for (const upper of [false, true]) {
+          if (pos === 0 && row % 4 === 0 && !upper) continue;
+          const end = pos + length,
+            next = end === width ? end : end + 1;
+          if (next > width || !Number.isFinite(dp[next])) continue;
+          for (let variety = 0; variety < 2; variety++) {
+            let word = "",
+              cost = 0;
+            for (let j = 0; j < length; j++) {
+              const vowel = j % 4 === 1,
+                pool = spec.freeAlphabet
+                  ? alphabet.filter((c) =>
+                      upper ? c === c.toUpperCase() : c === c.toLowerCase(),
+                    )
+                  : upper
+                    ? vowel
+                      ? upperVowels
+                      : upperConsonants
+                    : vowel
+                      ? lowerVowels
+                      : lowerConsonants;
+              const ranked = [...pool].sort(
+                (a, b) => scores[row][pos + j][a] - scores[row][pos + j][b],
+              );
+              const c =
+                ranked[
+                  variety && j % 5 === 3 ? Math.min(1, ranked.length - 1) : 0
+                ];
+              word += c;
+              cost += scores[row][pos + j][c];
+            }
+            cost +=
+              dp[next] + 0.035 + (end < width ? scores[row][end][" "] : 0);
+            if (cost < dp[pos]) {
+              dp[pos] = cost;
+              choice[pos] = { word, next };
+            }
+          }
+        }
+    }
+    let pos = 0,
+      line = "";
+    while (pos < width) {
+      const c = choice[pos];
+      if (!c) throw Error("Complete word packing failed");
+      line += (line ? " " : "") + c.word;
+      pos = c.next;
+    }
+    lines.push(line + punctuation);
+  }
+  const plainText = lines.join("\n");
+  const markup = `<article id="artifact" style="box-sizing:content-box;width:${qr.modules * unit}px;height:${qr.modules * unit}px;padding:${pad}px;background:white;color:black;overflow:visible"><pre id="text-body" style="position:relative;top:${textOffsetY}px;margin:0;padding:0;width:${qr.modules * unit}px;height:${rows * lineHeight}px;font:${spec.weight} 20px/${lineHeight}px '${spec.font}',monospace;letter-spacing:${spec.tracking}px;font-kerning:none;font-variant-ligatures:none;color:black">${escapeHtml(plainText)}</pre></article>`;
+  return {
+    spec,
+    markup,
+    plainText,
+    lines,
+    unit,
+    lineHeight,
+    advance,
+    baseline,
+    textOffsetY,
+    side,
+    modules: qr.modules,
+    matrix: qr.matrix,
+    structural: {
+      fontSize: 20,
+      uniformWeight: spec.weight,
+      uniformInk: "black",
+      singleTextNode: true,
+      textOffsetY,
+      tracking: spec.tracking,
+      lineHeightEm: lineHeight / 20,
+      glyphHeightFilter: true,
+      closeLeading: Boolean(spec.closeLeading),
+      globalInkEnvelope:
+        Math.max(...alphabet.map((c) => glyphs[c].ascent)) +
+        Math.max(...alphabet.map((c) => glyphs[c].descent)),
+      allowedGlyphs: alphabet.join(""),
+      maxAllowedGlyphHeight: Math.max(
+        ...alphabet.map((c) => glyphs[c].ascent + glyphs[c].descent),
+      ),
+      semantic: "Fabricated words; meaningful prose not claimed",
+      optimization: spec.objective,
+      glyphBinarizerModel: Boolean(spec.thresholded),
+      freeAlphabet: Boolean(spec.freeAlphabet),
+      geometryModel:
+        "Measured glyph pixels translated to native line positions; approximate model, actual raster is independent evidence",
+    },
+  };
+}

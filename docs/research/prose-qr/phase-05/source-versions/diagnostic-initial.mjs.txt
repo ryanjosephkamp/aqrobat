@@ -1,0 +1,70 @@
+import { readFile } from "node:fs/promises";
+import { createRequire } from "node:module";
+import { runInNewContext } from "node:vm";
+import { createHash } from "node:crypto";
+const bundle = await readFile(
+  createRequire(import.meta.url).resolve("jsqr"),
+  "utf8",
+);
+const needle = "return __webpack_require__(__webpack_require__.s = 3);";
+if (!bundle.includes(needle)) throw Error("Pinned internal bundle changed");
+const context = {
+  module: { exports: {} },
+  exports: {},
+  Uint8ClampedArray,
+  Uint8Array,
+  Int32Array,
+  Float64Array,
+};
+runInNewContext(
+  bundle.replace(needle, "globalThis.internals=__webpack_require__; " + needle),
+  context,
+);
+export const bundleHash = createHash("sha256").update(bundle).digest("hex");
+export function diagnose(p, l) {
+  const { binarized } = context
+      .internals(4)
+      .binarize(p.data, p.width, p.height, false),
+    locations = context.internals(12).locate(binarized) || [];
+  const pad = l.unit * 5,
+    n = l.modules;
+  const expected = {
+    topLeft: { x: pad + 3.5 * l.unit, y: pad + 3.5 * l.unit },
+    topRight: { x: pad + (n - 3.5) * l.unit, y: pad + 3.5 * l.unit },
+    bottomLeft: { x: pad + 3.5 * l.unit, y: pad + (n - 3.5) * l.unit },
+  };
+  const correctFinder = locations.some(
+    (a) =>
+      a.dimension === n &&
+      ["topLeft", "topRight", "bottomLeft"].every(
+        (k) =>
+          Math.hypot(a[k].x - expected[k].x, a[k].y - expected[k].y) < l.unit,
+      ),
+  );
+  let dark = 0,
+    darkCentersBlack = 0,
+    light = 0,
+    lightCentersBlack = 0;
+  for (let y = 0; y < n; y++)
+    for (let x = 0; x < n; x++) {
+      const bit = binarized.get(
+        Math.floor(pad + (x + 0.5) * l.unit),
+        Math.floor(pad + (y + 0.5) * l.unit),
+      );
+      if (l.matrix[y][x]) {
+        dark++;
+        if (bit) darkCentersBlack++;
+      } else {
+        light++;
+        if (bit) lightCentersBlack++;
+      }
+    }
+  return {
+    classification:
+      "Renderer diagnostic after independent decoding, not payload recovery. Expected finder/matrix never given to acceptance readers.",
+    correctFinder,
+    locations,
+    expected,
+    centerCoverage: { dark, darkCentersBlack, light, lightCentersBlack },
+  };
+}
