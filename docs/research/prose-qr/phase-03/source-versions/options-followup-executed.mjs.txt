@@ -7,27 +7,25 @@ import assert from "node:assert/strict";
 import { sha } from "./capture.mjs";
 const root = resolve("docs/research/prose-qr/phase-03");
 const selections =
-  process.argv[2] && process.argv[2] !== "words"
-    ? { [process.argv[2]]: null }
-    : process.argv[2] === "words"
-      ? {
-          "words-01": null,
-          "plain-02": ["plain-001", "plain-005"],
-          "refine-01": ["refine-008", "refine-010"],
-        }
-      : {
-          "color-01": null,
-          "plain-02": ["plain-002", "plain-004"],
-          "refine-01": [
-            "refine-001",
-            "refine-002",
-            "refine-003",
-            "refine-004",
-            "refine-009",
-            "refine-011",
-          ],
-          "font-color-01": null,
-        };
+  process.argv[2] === "words"
+    ? {
+        "words-01": null,
+        "plain-02": ["plain-001", "plain-005"],
+        "refine-01": ["refine-008", "refine-010"],
+      }
+    : {
+        "color-01": null,
+        "plain-02": ["plain-002", "plain-004"],
+        "refine-01": [
+          "refine-001",
+          "refine-002",
+          "refine-003",
+          "refine-004",
+          "refine-009",
+          "refine-011",
+        ],
+        "font-color-01": null,
+      };
 const inputs = [];
 for (const [batch, ids] of Object.entries(selections)) {
   const rows = (await readFile(resolve(root, batch, "results.jsonl"), "utf8"))
@@ -124,7 +122,7 @@ await writeFile(
       ],
       records,
       classification:
-        "Additional standard reader settings on retained unchanged native PNGs. No input processing outside the reader. Explicit input IDs and options are retained; not a repeat capture or phone evidence.",
+        "Additional standard reader settings on retained unchanged native PNGs. No input processing outside the reader. Selection targets all color-only cases and explicit more-varied/dictionary cases; not a repeat capture or phone evidence.",
       phone: "not tested",
     }),
     { parser: "json" },
