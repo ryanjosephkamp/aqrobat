@@ -23,8 +23,7 @@ const batches = [],
   wins = { jsQR: [], ordinaryZXing: [], baselineZXing: [] };
 let candidates = 0,
   controls = 0,
-  replays = 0,
-  modelProposals = 0;
+  replays = 0;
 async function png(base, r) {
   const b = await readFile(resolve(base, r.path));
   assert.equal(hash(b), r.pngSha256);
@@ -47,24 +46,12 @@ for (const manifestPath of list
       preservedAt: same ? p : archived,
     });
   }
-  let rows = [],
-    aborted = null;
-  try {
-    rows = (await readFile(resolve(base, "results.jsonl"), "utf8"))
-      .trim()
-      .split("\n")
-      .filter(Boolean)
-      .map(JSON.parse);
-  } catch (e) {
-    if (e.code !== "ENOENT") throw e;
-  }
-  try {
-    aborted = JSON.parse(await readFile(resolve(base, "aborted.json"), "utf8"));
-    assert.equal(aborted.completed, rows.length);
-  } catch (e) {
-    if (e.code !== "ENOENT") throw e;
-  }
-  if (!aborted) assert.equal(rows.length, manifest.specs.length);
+  const rows = (await readFile(resolve(base, "results.jsonl"), "utf8"))
+    .trim()
+    .split("\n")
+    .filter(Boolean)
+    .map(JSON.parse);
+  assert.equal(rows.length, manifest.specs.length);
   assert.equal(new Set(rows.map((r) => r.id)).size, rows.length);
   for (const r of rows) {
     assert.deepEqual(
@@ -86,45 +73,6 @@ for (const manifestPath of list
     assert.equal(r.style.childElements, 0);
     if (r.structural.closeLeading)
       assert(r.structural.globalInkEnvelope <= l.lineHeight);
-    if (r.structural.fullParagraphModel) {
-      const t = JSON.parse(
-          await readFile(resolve(base, r.id + "-model-trace.json"), "utf8"),
-        ),
-        lines = t.seedText.split("\n");
-      assert.equal(t.trace.length, 96);
-      for (const trial of t.trace) {
-        const before = lines[trial.row];
-        assert.equal(
-          before.slice(trial.col, trial.col + trial.length),
-          trial.old,
-        );
-        assert.equal(trial.candidate.length, trial.length);
-        lines[trial.row] =
-          before.slice(0, trial.col) +
-          trial.candidate +
-          before.slice(trial.col + trial.length);
-        assert.equal(hash(lines.join("\n")), trial.textSha256);
-        if (!trial.accepted) lines[trial.row] = before;
-      }
-      assert.equal(lines.join("\n"), t.finalText);
-      assert.equal(t.finalText, l.plainText);
-      assert(t.finalLoss <= t.initialLoss);
-      for (const [name, sha] of [
-        ["initial", t.initialPngSha256],
-        ["final", t.finalPngSha256],
-      ])
-        assert.equal(
-          hash(
-            await readFile(
-              resolve(base, "raw/" + r.id + "-model-" + name + ".png"),
-            ),
-          ),
-          sha,
-        );
-      assert.equal(r.model.actualDomRgbaSha256, r.rgbaSha256);
-      assert.equal(r.model.modelFinalRgbaSha256, t.finalRgbaHash);
-      modelProposals += t.trace.length;
-    }
     if (r.replay.repeatMatches) {
       assert.equal(r.replay.repeatedPNGHash, r.pngSha256);
       replays++;
@@ -153,10 +101,8 @@ for (const manifestPath of list
     planned: manifest.specs.length,
     retained: rows.length,
     controls: c.length,
-    unattempted: manifest.specs
-      .filter((s) => !rows.some((r) => r.id === s.id))
-      .map((s) => s.id),
-    aborted,
+    unattempted: [],
+    aborted: null,
   });
 }
 const old = JSON.parse(
@@ -195,7 +141,6 @@ const receipt = {
   scopeBaseline: "dbcd32f86830486b4ba2fc99006fcef58691b607",
   batches,
   candidates,
-  modelProposals,
   controls,
   wins,
   exactNativeRepeats: replays,

@@ -19,7 +19,6 @@ import { documentHtml } from "../flow/layout.mjs";
 import { diagnose, bundleHash } from "./diagnostic.mjs";
 import { layout } from "./layout.mjs";
 import { generate } from "../../../src/core.mjs";
-import { optimize } from "./optimize.mjs";
 export const root = resolve("docs/research/prose-qr/phase-05"),
   hash = (b) => createHash("sha256").update(b).digest("hex");
 async function bytes(p) {
@@ -32,23 +31,8 @@ async function bytes(p) {
 }
 const specs = [];
 const mode = process.argv[2] || "native";
-assert(["native", "shift", "corridor", "close", "paragraph"].includes(mode));
-if (mode === "paragraph") {
-  for (const weight of [400, 700])
-    for (const tracking of [-3, -3.6])
-      specs.push({
-        id: `paragraph-${String(specs.length + 1).padStart(2, "0")}`,
-        font: "Courier New",
-        weight,
-        tracking,
-        objective: "geometry",
-        shift: true,
-        freeAlphabet: true,
-        closeLeading: tracking === -3.6,
-        payload: "https://example.com/",
-        fullParagraph: true,
-      });
-} else if (mode === "close") {
+assert(["native", "shift", "corridor", "close"].includes(mode));
+if (mode === "close") {
   for (const weight of [400, 700])
     for (const tracking of [-3.3, -3.6])
       specs.push({
@@ -91,7 +75,7 @@ if (mode === "paragraph") {
             payload: "https://example.com/",
             ...(mode === "shift" ? { shift: true } : {}),
           });
-const out = resolve(root, mode + (mode === "paragraph" ? "-02" : "-01"));
+const out = resolve(root, mode + "-01");
 await mkdir(out);
 await mkdir(resolve(out, "raw"));
 const save = async (p, b) => {
@@ -116,12 +100,6 @@ for (const path of [
   "experiments/prose-qr/glyph-geometry/layout.mjs",
   "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
   "experiments/prose-qr/glyph-geometry/capture.mjs",
-  ...(mode === "paragraph"
-    ? [
-        "experiments/prose-qr/glyph-geometry/optimize.mjs",
-        "docs/research/prose-qr/phase-05/PARAGRAPH-PLAN.md",
-      ]
-    : []),
   "docs/research/prose-qr/phase-05/font-metrics.json",
   "docs/research/prose-qr/phase-05/PLAN.md",
   ...(mode === "shift" || mode === "corridor" || mode === "close"
@@ -227,19 +205,6 @@ try {
     attempted = s.id;
     const started = Date.now(),
       l = layout(s, metrics);
-    let model = null;
-    if (s.fullParagraph) {
-      model = await optimize(l, page);
-      model.trace.initialPngSha256 = await save(
-        "raw/" + s.id + "-model-initial.png",
-        model.initialPNG,
-      );
-      model.trace.finalPngSha256 = await save(
-        "raw/" + s.id + "-model-final.png",
-        model.finalPNG,
-      );
-      await json(s.id + "-model-trace.json", model.trace);
-    }
     assert(l.side <= 1800 && l.side > 0);
     assert(l.lines.every((x) => x.trim()) && !l.plainText.includes("  "));
     const html = await format(documentHtml(l.markup), { parser: "html" });
@@ -293,17 +258,6 @@ try {
       height: p.height,
       style,
       structural: l.structural,
-      ...(model
-        ? {
-            model: {
-              initialLoss: model.trace.initialLoss,
-              finalLoss: model.trace.finalLoss,
-              modelFinalRgbaSha256: model.trace.finalRgbaHash,
-              actualDomRgbaSha256: hash(p.data),
-              rgbaEqual: model.trace.finalRgbaHash === hash(p.data),
-            },
-          }
-        : {}),
       ...result,
       diagnostic,
       replay: { sameHTMLRepeated: true, repeatedPNGHash, repeatMatches },

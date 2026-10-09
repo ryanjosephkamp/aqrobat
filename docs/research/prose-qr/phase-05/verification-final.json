@@ -1,0 +1,475 @@
+{
+  "verifiedAt": "2026-10-09T17:55:59.942Z",
+  "sourceScriptSha256": "c0fd0e35e8f7a4e00100d63b6083148dfc5a511e6b2ca59f59aa214b86ff8a7e",
+  "scopeBaseline": "dbcd32f86830486b4ba2fc99006fcef58691b607",
+  "batches": [
+    {
+      "batch": "close-01",
+      "planned": 4,
+      "retained": 4,
+      "controls": 1,
+      "unattempted": [],
+      "aborted": null
+    },
+    {
+      "batch": "corridor-01",
+      "planned": 8,
+      "retained": 8,
+      "controls": 1,
+      "unattempted": [],
+      "aborted": null
+    },
+    {
+      "batch": "native-01",
+      "planned": 16,
+      "retained": 16,
+      "controls": 1,
+      "unattempted": [],
+      "aborted": null
+    },
+    {
+      "batch": "paragraph-01",
+      "planned": 4,
+      "retained": 0,
+      "controls": 1,
+      "unattempted": [
+        "paragraph-01",
+        "paragraph-02",
+        "paragraph-03",
+        "paragraph-04"
+      ],
+      "aborted": {
+        "at": "2026-10-09T17:47:31.290Z",
+        "attempted": "paragraph-01",
+        "completed": 0,
+        "message": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'digest')\n    at sha (eval at evaluate (:290:30), <anonymous>:5:31)\n    at eval (eval at evaluate (:290:30), <anonymous>:96:31)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+      }
+    },
+    {
+      "batch": "paragraph-02",
+      "planned": 4,
+      "retained": 4,
+      "controls": 1,
+      "unattempted": [],
+      "aborted": null
+    },
+    {
+      "batch": "shift-01",
+      "planned": 8,
+      "retained": 8,
+      "controls": 1,
+      "unattempted": [],
+      "aborted": null
+    }
+  ],
+  "candidates": 40,
+  "modelProposals": 384,
+  "controls": 6,
+  "wins": { "jsQR": [], "ordinaryZXing": [], "baselineZXing": [] },
+  "exactNativeRepeats": 40,
+  "priorPhaseInventoryUnchanged": 460,
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "sourceCustody": [
+    {
+      "batch": "close-01",
+      "path": "experiments/prose-qr/glyph-geometry/fonts.mjs",
+      "sha256": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/fonts.mjs"
+    },
+    {
+      "batch": "close-01",
+      "path": "experiments/prose-qr/glyph-geometry/layout.mjs",
+      "sha256": "809ce4262e133c97f29bf8472551dedd7a333a7aa694e754cc8ee7b2c69ef7c9",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/layout.mjs"
+    },
+    {
+      "batch": "close-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "close-01",
+      "path": "experiments/prose-qr/glyph-geometry/capture.mjs",
+      "sha256": "4a4ffadd75e578984972b93eab889edba201db24bdc69eae4097375f66ca43b1",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/capture-close.mjs.txt"
+    },
+    {
+      "batch": "close-01",
+      "path": "docs/research/prose-qr/phase-05/font-metrics.json",
+      "sha256": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+      "preservedAt": "docs/research/prose-qr/phase-05/font-metrics.json"
+    },
+    {
+      "batch": "close-01",
+      "path": "docs/research/prose-qr/phase-05/PLAN.md",
+      "sha256": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+      "preservedAt": "docs/research/prose-qr/phase-05/PLAN.md"
+    },
+    {
+      "batch": "close-01",
+      "path": "docs/research/prose-qr/phase-05/SHIFT-PLAN.md",
+      "sha256": "268f23fde37db1805aa59411735a4de45207d9f9fc9fafddf5217d4351e3950d",
+      "preservedAt": "docs/research/prose-qr/phase-05/SHIFT-PLAN.md"
+    },
+    {
+      "batch": "close-01",
+      "path": "docs/research/prose-qr/phase-05/CLOSE-PLAN.md",
+      "sha256": "d205c2417253e025487c969e6fef5208a1074114107464203c088b69be09eac2",
+      "preservedAt": "docs/research/prose-qr/phase-05/CLOSE-PLAN.md"
+    },
+    {
+      "batch": "close-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "close-01",
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "preservedAt": "src/core.mjs"
+    },
+    {
+      "batch": "close-01",
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "preservedAt": "vendor/qrcodegen.mjs"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "experiments/prose-qr/glyph-geometry/fonts.mjs",
+      "sha256": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/fonts.mjs"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "experiments/prose-qr/glyph-geometry/layout.mjs",
+      "sha256": "e26f10bfe0766bc7db859ad52c095a7c5ad5a4c47b022c853411a07d8541fb90",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/layout-corridor.mjs.txt"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "experiments/prose-qr/glyph-geometry/capture.mjs",
+      "sha256": "4ba32abd7ba2c1200d9749b518adfb4b569760ad84aa74797096d07067f8e8ea",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/capture-corridor.mjs.txt"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "docs/research/prose-qr/phase-05/font-metrics.json",
+      "sha256": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+      "preservedAt": "docs/research/prose-qr/phase-05/font-metrics.json"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "docs/research/prose-qr/phase-05/PLAN.md",
+      "sha256": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+      "preservedAt": "docs/research/prose-qr/phase-05/PLAN.md"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "docs/research/prose-qr/phase-05/SHIFT-PLAN.md",
+      "sha256": "268f23fde37db1805aa59411735a4de45207d9f9fc9fafddf5217d4351e3950d",
+      "preservedAt": "docs/research/prose-qr/phase-05/SHIFT-PLAN.md"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "docs/research/prose-qr/phase-05/CORRIDOR-PLAN.md",
+      "sha256": "b409f02a26aa598fdcccec1a79bdf04809cb67dd8779e19fae0bba79b476d9b2",
+      "preservedAt": "docs/research/prose-qr/phase-05/CORRIDOR-PLAN.md"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "preservedAt": "src/core.mjs"
+    },
+    {
+      "batch": "corridor-01",
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "preservedAt": "vendor/qrcodegen.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/glyph-geometry/fonts.mjs",
+      "sha256": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/fonts.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/glyph-geometry/layout.mjs",
+      "sha256": "f5a904fc64dad663e7704f5965573553bd8a231207f522bbc386177bd2b3e361",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/layout-native.mjs.txt"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "df2ecd76c66d8df62022ce0e8180a96d1e7af6f59eb08ef48e644fa778f21adf",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/diagnostic-initial.mjs.txt"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/glyph-geometry/capture.mjs",
+      "sha256": "55b1a4e9e6391e09acd00a82b59fda7fa01eebd9205e57742f7cf693238f036a",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/capture-native.mjs.txt"
+    },
+    {
+      "batch": "native-01",
+      "path": "docs/research/prose-qr/phase-05/font-metrics.json",
+      "sha256": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+      "preservedAt": "docs/research/prose-qr/phase-05/font-metrics.json"
+    },
+    {
+      "batch": "native-01",
+      "path": "docs/research/prose-qr/phase-05/PLAN.md",
+      "sha256": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+      "preservedAt": "docs/research/prose-qr/phase-05/PLAN.md"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "preservedAt": "src/core.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "preservedAt": "vendor/qrcodegen.mjs"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "experiments/prose-qr/glyph-geometry/fonts.mjs",
+      "sha256": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/fonts.mjs"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "experiments/prose-qr/glyph-geometry/layout.mjs",
+      "sha256": "809ce4262e133c97f29bf8472551dedd7a333a7aa694e754cc8ee7b2c69ef7c9",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/layout.mjs"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "experiments/prose-qr/glyph-geometry/capture.mjs",
+      "sha256": "b53b38e95cd0c0eb030f6685501f54ba77de455edc3b207e607639102b1cc40b",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/capture-paragraph-abort.mjs.txt"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "experiments/prose-qr/glyph-geometry/optimize.mjs",
+      "sha256": "d00e73d96637021bbf2d41488e76c03c6c32ae9af4767961526558e7307a9598",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/optimize-paragraph-abort.mjs.txt"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "docs/research/prose-qr/phase-05/PARAGRAPH-PLAN.md",
+      "sha256": "d38be558cc3ed9806311c930007cfaa433409fdc4e359a18cb574d65b846a483",
+      "preservedAt": "docs/research/prose-qr/phase-05/PARAGRAPH-PLAN.md"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "docs/research/prose-qr/phase-05/font-metrics.json",
+      "sha256": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+      "preservedAt": "docs/research/prose-qr/phase-05/font-metrics.json"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "docs/research/prose-qr/phase-05/PLAN.md",
+      "sha256": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+      "preservedAt": "docs/research/prose-qr/phase-05/PLAN.md"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "preservedAt": "src/core.mjs"
+    },
+    {
+      "batch": "paragraph-01",
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "preservedAt": "vendor/qrcodegen.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "experiments/prose-qr/glyph-geometry/fonts.mjs",
+      "sha256": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/fonts.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "experiments/prose-qr/glyph-geometry/layout.mjs",
+      "sha256": "809ce4262e133c97f29bf8472551dedd7a333a7aa694e754cc8ee7b2c69ef7c9",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/layout.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "experiments/prose-qr/glyph-geometry/capture.mjs",
+      "sha256": "ba2c453667a5230a00b97d967cb654ebb44ec79b617afe17f8f72b4b3c89226e",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/capture.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "experiments/prose-qr/glyph-geometry/optimize.mjs",
+      "sha256": "d091406dd5c402b60641ca23a3ab64bf87bfdde5baf7a6811324d352aa6d669b",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/optimize.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "docs/research/prose-qr/phase-05/PARAGRAPH-PLAN.md",
+      "sha256": "d38be558cc3ed9806311c930007cfaa433409fdc4e359a18cb574d65b846a483",
+      "preservedAt": "docs/research/prose-qr/phase-05/PARAGRAPH-PLAN.md"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "docs/research/prose-qr/phase-05/font-metrics.json",
+      "sha256": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+      "preservedAt": "docs/research/prose-qr/phase-05/font-metrics.json"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "docs/research/prose-qr/phase-05/PLAN.md",
+      "sha256": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+      "preservedAt": "docs/research/prose-qr/phase-05/PLAN.md"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "preservedAt": "src/core.mjs"
+    },
+    {
+      "batch": "paragraph-02",
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "preservedAt": "vendor/qrcodegen.mjs"
+    },
+    {
+      "batch": "shift-01",
+      "path": "experiments/prose-qr/glyph-geometry/fonts.mjs",
+      "sha256": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/fonts.mjs"
+    },
+    {
+      "batch": "shift-01",
+      "path": "experiments/prose-qr/glyph-geometry/layout.mjs",
+      "sha256": "03cf343d6f6dc2f8befb9363724b4151207ecd978423eae7861bc7eaf734d7d4",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/layout-shift.mjs.txt"
+    },
+    {
+      "batch": "shift-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "df2ecd76c66d8df62022ce0e8180a96d1e7af6f59eb08ef48e644fa778f21adf",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/diagnostic-initial.mjs.txt"
+    },
+    {
+      "batch": "shift-01",
+      "path": "experiments/prose-qr/glyph-geometry/capture.mjs",
+      "sha256": "c45d846cbb717b376b71d4b04a203cf69ac14e8dbfa2d4557383e153c5010ec4",
+      "preservedAt": "docs/research/prose-qr/phase-05/source-versions/capture-shift.mjs.txt"
+    },
+    {
+      "batch": "shift-01",
+      "path": "docs/research/prose-qr/phase-05/font-metrics.json",
+      "sha256": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+      "preservedAt": "docs/research/prose-qr/phase-05/font-metrics.json"
+    },
+    {
+      "batch": "shift-01",
+      "path": "docs/research/prose-qr/phase-05/PLAN.md",
+      "sha256": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+      "preservedAt": "docs/research/prose-qr/phase-05/PLAN.md"
+    },
+    {
+      "batch": "shift-01",
+      "path": "docs/research/prose-qr/phase-05/SHIFT-PLAN.md",
+      "sha256": "268f23fde37db1805aa59411735a4de45207d9f9fc9fafddf5217d4351e3950d",
+      "preservedAt": "docs/research/prose-qr/phase-05/SHIFT-PLAN.md"
+    },
+    {
+      "batch": "shift-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "shift-01",
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "preservedAt": "src/core.mjs"
+    },
+    {
+      "batch": "shift-01",
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "preservedAt": "vendor/qrcodegen.mjs"
+    }
+  ],
+  "phaseBytesBeforeReceipt": 11026364,
+  "logicalFileSafeguardBytes": 12000000,
+  "npmPrivate": true,
+  "productVersion": "0.4.2",
+  "newPhoneObservations": "none",
+  "proseAcceptance": "unsolved",
+  "note": "Read-only hashes/counts/provenance reconciliation; no new decoding trials or native replays. Older phase-04 six-of-eight display replay limitation remains unchanged."
+}

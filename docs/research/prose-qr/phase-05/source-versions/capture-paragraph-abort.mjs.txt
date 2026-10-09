@@ -91,7 +91,7 @@ if (mode === "paragraph") {
             payload: "https://example.com/",
             ...(mode === "shift" ? { shift: true } : {}),
           });
-const out = resolve(root, mode + (mode === "paragraph" ? "-02" : "-01"));
+const out = resolve(root, mode + "-01");
 await mkdir(out);
 await mkdir(resolve(out, "raw"));
 const save = async (p, b) => {
@@ -249,6 +249,17 @@ try {
       spec: s,
       plainText: l.plainText,
       structural: l.structural,
+      ...(model
+        ? {
+            model: {
+              initialLoss: model.trace.initialLoss,
+              finalLoss: model.trace.finalLoss,
+              modelFinalRgbaSha256: model.trace.finalRgbaHash,
+              actualDomRgbaSha256: hash(p.data),
+              rgbaEqual: model.trace.finalRgbaHash === hash(p.data),
+            },
+          }
+        : {}),
       unit: l.unit,
       advance: l.advance,
       lineHeight: l.lineHeight,
@@ -293,17 +304,6 @@ try {
       height: p.height,
       style,
       structural: l.structural,
-      ...(model
-        ? {
-            model: {
-              initialLoss: model.trace.initialLoss,
-              finalLoss: model.trace.finalLoss,
-              modelFinalRgbaSha256: model.trace.finalRgbaHash,
-              actualDomRgbaSha256: hash(p.data),
-              rgbaEqual: model.trace.finalRgbaHash === hash(p.data),
-            },
-          }
-        : {}),
       ...result,
       diagnostic,
       replay: { sameHTMLRepeated: true, repeatedPNGHash, repeatMatches },
