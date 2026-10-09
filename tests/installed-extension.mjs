@@ -29,6 +29,11 @@ try {
   execFileSync("unzip", ["-q", archive, "-d", extension]);
   for (const [packed, source] of [
     ["manifest.json", "extension/manifest.json"],
+    ["index.html", "dist/extension/index.html"],
+    ["web/app.mjs", "web/app.mjs"],
+    ["popup.html", "extension/popup.html"],
+    ["popup.css", "extension/popup.css"],
+    ["popup.mjs", "extension/popup.mjs"],
     ["worker.mjs", "extension/worker.mjs"],
     ["extension/insertion.mjs", "extension/insertion.mjs"],
     ...["core", "text", "library", "spacing"].map((name) => [

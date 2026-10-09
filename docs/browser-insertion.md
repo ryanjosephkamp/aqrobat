@@ -1,4 +1,4 @@
-# Saved recipes and direct browser insertion · 0.4.1
+# Saved recipes and direct browser insertion · 0.4.2
 
 Clipboard data includes characters and, optionally, HTML. A receiving app may
 choose only plain text or discard typography. The recipe already contains every
@@ -8,17 +8,17 @@ No AI or remote QR service is involved.
 ## Use it
 
 1. Update the files in your **existing unpacked extension folder** from the new
-   ZIP, then click Reload in `chrome://extensions`. Confirm version **0.4.1**.
+   ZIP, then click Reload in `chrome://extensions`. Confirm version **0.4.2**.
    Keep the same folder/extension ID; export Recipe JSON backups before reinstalling.
-2. Open the toolbar → **Open generator / saved recipes**. Create or load a Recipe
-   JSON file, name it, and choose **Save in extension**. The library holds 20
+2. Open the toolbar → **Open QR workbench**. Create a QR, name it under the preview, and choose **Save for insertion**.
+   Recipe JSON import is optional. The library holds 20
    recipes. This explicitly stores their payloads/settings locally until removed.
 3. Open a destination browser page. Invoke Aqrobat’s toolbar, select the recipe,
-   then choose **Insert a saved QR into this page**. Only that recipe is passed
+   then choose **Choose where to insert**. Only that recipe is passed
    to the destination page; the rest of the library stays in the extension.
 4. Click inside the intended multiline field. Place an empty cursor; selected
    draft text is preserved. Choose an insertion mode and preview.
-5. **Insert at cursor**, then inspect and scan the actual result. Native Undo
+5. **Insert QR**, then inspect and scan the actual result. Native Undo
    removes the insertion in our Chrome fixtures. Check saved/published/received
    output separately; Aqrobat never sends an email or submits a form.
 

@@ -30,8 +30,8 @@ function selectedPayload() {
     (e) => e.id === document.getElementById("recipe").value,
   );
   document.getElementById("payload").textContent = entry
-    ? `Payload: ${entry.recipe.payload}`
-    : "Save a recipe in the generator first.";
+    ? `Encodes: ${entry.recipe.payload}`
+    : "Open the QR workbench, then Save for insertion.";
   document.getElementById("insert").disabled = !entry;
 }
 try {
@@ -47,6 +47,6 @@ try {
   selectedPayload();
 } catch {
   document.getElementById("status").textContent =
-    "Saved recipes could not be read. Open the generator to check the library.";
+    "Saved recipes could not be read. Open the QR workbench to check the library.";
 }
 document.getElementById("recipe").onchange = selectedPayload;

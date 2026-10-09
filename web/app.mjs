@@ -689,6 +689,7 @@ $("rtf").addEventListener(
 );
 
 if (extensionAppearance) {
+  $("extension-save").hidden = false;
   $("recipe-library").hidden = false;
   let libraryEntries = [];
   async function refreshLibrary() {
@@ -731,7 +732,7 @@ if (extensionAppearance) {
       savedForm = savingForm;
       protectWork();
       status(
-        "Recipe saved in this extension. On the destination page, open Aqrobat’s toolbar and choose Insert a saved QR.",
+        "Recipe saved for insertion. Open your destination page, then Aqrobat → Choose where to insert.",
       );
       await refreshLibrary();
     } catch (error) {

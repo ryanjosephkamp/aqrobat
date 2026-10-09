@@ -1,17 +1,15 @@
 {
-  "version": "0.4.2",
-  "date": "October 8, 2026",
-  "baselineCommit": "a76fc298bad9c2849ea5eb2101bda52974a6fb37",
-  "status": "Usability housekeeping complete; owner Gmail/phone acceptance and prose-pilot selection pending",
+  "version": "0.4.1",
+  "date": "October 7, 2026",
+  "baselineCommit": "0b43494a5053a008489229c60520b344cc129e98",
+  "status": "Code/package review finished; owner Gmail and phone acceptance pending",
   "unitTests": {
     "passed": 18
   },
-  "scope": [
-    "Move local save controls under QR preview",
-    "Simplify toolbar and insertion labels",
-    "One-code Gmail guide and feedback form",
-    "Remaining-work inventory and prose feasibility proposal; no experiments"
-  ],
+  "regressionBeforeFix": {
+    "check": "Reopening insertion panel retains stale previous recipe",
+    "result": "reproduced; test failed on 0.4.0 practice bundle before fix"
+  },
   "receipts": {
     "browser": {
       "matrixEvidence": "separate unit decoder tests",
@@ -546,8 +544,8 @@
     },
     "installedExtension": {
       "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
-      "extensionVersion": "0.4.2",
-      "archiveSha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "extensionVersion": "0.4.1",
+      "archiveSha256": "b69d00f427b8ffb0256784032cbb037705a853010d8f5dea62f9d59af78eb2df",
       "checks": [
         "download ZIP CRC and critical source bytes verified; actual ZIP extracted into a fresh task-owned directory for installation",
         "installed MV3 extension page uses chrome.storage.local",
@@ -559,20 +557,6 @@
       "toolbarPixels": "not visually inspected",
       "userInstalledCopy": "not inspected or modified",
       "profile": "fresh task-owned profile; removed after test"
-    },
-    "planningGuide": {
-      "browser": "155.0.8059.39",
-      "scope": "Synthetic planning artifact checks; no Gmail or owner observations",
-      "checks": [
-        "390px mobile layout without page spill",
-        "insertion/scan/Undo fields begin Not tested",
-        "UTF-8 feedback TXT export preserves settings and exact synthetic Unicode notes",
-        "optional track/payload selections produce bounded approval prompt",
-        "no page errors or external requests"
-      ],
-      "actualEmail": "not tested",
-      "phone": "not tested",
-      "proseExperiment": "not started"
     },
     "historicalNativePilot": {
       "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
@@ -590,30 +574,36 @@
       "layoutCount": 1,
       "embeddedImages": 0,
       "message": "Inserted. Review the actual field and scan it. Use Undo (⌘Z / Ctrl+Z) to remove this insertion. Saved/sent formatting may differ; no scan success is assumed."
+    },
+    "localGuide": {
+      "browser": "155.0.8059.39",
+      "scope": "Synthetic checks in a fresh browser; no Gmail or owner observations",
+      "checks": [
+        "390px layout without horizontal spill",
+        "24 observation fields start Untested",
+        "mixed recipe download preserves payload and complete palette",
+        "synthetic result export/local persistence/import; wrong schema rejected without changing results",
+        "embedded offline insertion practice previews successfully",
+        "no page errors or external requests"
+      ]
     }
   },
   "preservation": {
     "imageRasterHashesMatchingCheckpoint": 11,
     "coreAndTextSourcesMatchCheckpoint": true,
-    "extensionPermissionsUnchanged": true,
-    "historicalPauseAndMigrationHandoffUnchanged": true,
-    "originalPrototypesAndOwnerProfile": "untouched"
+    "migrationHandoffUnchanged": true
   },
-  "historicalNativePilotScope": "Recorded 0.4.0 hash toolbar/Undo pilot only. Not rerun on 0.4.2. No owner profile, Gmail mailbox, or recipient observation.",
+  "historicalNativePilotScope": "Recorded 0.4.0 hash toolbar/Undo pilot only. Not rerun on 0.4.1. No owner profile, Gmail mailbox, or recipient observation.",
   "sourceSha256": {
     "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
     "src/render.mjs": "9097d040c1c55049bf2f090b702639c663a792e17df3bf4cd199e8219ea01a63",
     "src/text.mjs": "4e410261632df01965140550a39206fbbf75c40eb6d72df7cdb4c9e090391cb1",
     "src/spacing.mjs": "3d59cea85df36217b47c353a4e3fb9b032ca948ef1d8bb8b6d9545da1e3113b0",
     "src/library.mjs": "977a02cec625e2055fd9ff27474e61457d18209343d6daa4eaa1c32c02549923",
-    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
-    "extension/insertion.mjs": "ca404c40d8aaf2339b9a17c01cb3058affbe38bb32fea2652ef5a519768c115e",
+    "extension/insertion.mjs": "5461096e1e63062737afcef4d213438f6cf0663538b0fb5898da5d0c2b7dc6b0",
     "extension/worker.mjs": "a21c8fa47e4387499b66e3c04bf6ac59b54b0c0568cb3489fd8409627ed0ccb6",
-    "extension/manifest.json": "2880c7b1718802d54afedefebe251887f87c5343ac61dc128a403f900592f26f",
-    "extension/popup.html": "99f0925fecb93fce5fda7bd372124ef43326d02d1f8d331633ddb1843a972de3",
-    "extension/popup.mjs": "eacd2ec953bddd35b08ae3b821457ed16f480049d9574cc6aa59615697617635",
-    "web/app.mjs": "21d16a5b360274256793c9f1025b7094214c0bd2d66f6c2aef4b107de7b2ff56",
-    "downloads/aqrobat-extension.zip": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923"
+    "extension/manifest.json": "96a6ae5faf9fc02f30f0646cd60e67de2fd0f7fe634545c87b4afcabeec429ee",
+    "downloads/aqrobat-extension.zip": "b69d00f427b8ffb0256784032cbb037705a853010d8f5dea62f9d59af78eb2df"
   },
   "unverified": [
     "Owner installed extension",
@@ -621,13 +611,15 @@
     "New phone scans",
     "Physical print"
   ],
-  "notExecuted": [
-    "Prose-QR candidates or font metrics",
-    "Independent ZXing installation",
-    "Emoji atlas",
-    "Project migration",
-    "New chats or agents",
-    "ChatGPT Site creation",
-    "npm publication or Store submission"
-  ]
+  "pagesBeforeReview": {
+    "version": "0.4.0",
+    "checkpointArtifactsByteMatched": true,
+    "paths": [
+      "index.html",
+      "web/app.mjs",
+      "downloads/aqrobat-extension.zip",
+      "downloads/aqrobat-insertion-practice.html",
+      "package.json"
+    ]
+  }
 }

@@ -80,7 +80,7 @@ synchronized across its open tabs. A fresh test installation passed both a new
 tab and a full browser restart. Ryan's installed copy was not modified or inspected.
 
 The toolbar icon changes; the chrome://extensions tile continues using the
-manifest icon. Check version **0.4.1** on the extension-management page after
+manifest icon. Check version **0.4.2** on the extension-management page after
 updating the files in the existing folder and pressing Reload. If it still
 shows an earlier version, it is running the older build.
 [Chrome local storage](https://developer.chrome.com/docs/extensions/reference/api/storage),

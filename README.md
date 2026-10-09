@@ -37,9 +37,9 @@ the toolbar icon. The page includes Ryan’s personal social/sponsor footer.
 
 ## Insert text directly in a browser editor
 
-In the unpacked extension, create/import a recipe and choose **Save in extension**.
+In the unpacked extension, create/import a recipe and choose **Save for insertion** under the QR preview.
 On your destination page, open Aqrobat’s toolbar, select that saved recipe,
-and choose **Insert a saved QR into this page**. Click inside a multiline editor,
+and choose **Choose where to insert**. Click inside a multiline editor,
 preview, then insert at an empty cursor. Formatted insertion carries a fixed
 text layout; plain insertion measures the destination’s font and pads its rows.
 Existing draft content and native Undo are preserved in the tested editors.
@@ -133,8 +133,9 @@ Text QR is not new. Terminal packages and custom emoji websites already exist.
 The value we are exploring is the combination of a small shared toolchain,
 font-aware glyph layouts, portable recipes, and visible scan testing.
 [Opened-source review and roadmap](docs/prior-art-and-roadmap.md).
-The next bounded research proposal is the [emoji atlas pilot](docs/emoji-atlas-plan.md);
-it has not been executed.
+The [current plan and short Gmail review](docs/review-2026-10-08.html) list
+remaining acceptance work. The [prose-QR feasibility proposal](docs/prose-qr-plan.md)
+and [emoji atlas pilot](docs/emoji-atlas-plan.md) have not been executed.
 
 ## Demo and validation
 
