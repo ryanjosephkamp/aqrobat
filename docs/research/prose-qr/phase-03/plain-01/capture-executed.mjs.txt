@@ -1,0 +1,279 @@
+import { chromium } from "playwright";
+import {
+  readFile,
+  writeFile,
+  appendFile,
+  mkdir,
+  readdir,
+  stat,
+} from "node:fs/promises";
+import { resolve } from "node:path";
+import { createHash } from "node:crypto";
+import { gzipSync } from "node:zlib";
+import { format } from "prettier";
+import assert from "node:assert/strict";
+import { readBarcodes } from "zxing-wasm/reader";
+import { decode, DECODER_PROVENANCE } from "../decoders.mjs";
+import { documentHtml } from "../flow/layout.mjs";
+import { positiveControl } from "../layout.mjs";
+
+export const READER_OPTIONS = {
+  formats: ["QRCode"],
+  tryHarder: true,
+  maxNumberOfSymbols: 1,
+  binarizer: "GlobalHistogram",
+  downscaleThreshold: 50,
+  downscaleFactor: 2,
+};
+export const sha = (b) => createHash("sha256").update(b).digest("hex");
+async function bytesIn(p) {
+  let n = 0;
+  for (const e of await readdir(p, { withFileTypes: true })) {
+    const q = resolve(p, e.name);
+    n += e.isDirectory() ? await bytesIn(q) : (await stat(q)).size;
+  }
+  return n;
+}
+export async function captureBatch(name, parameters, builder, sourcePaths) {
+  const root = resolve("docs/research/prose-qr/phase-03");
+  const out = resolve(root, name);
+  await mkdir(out);
+  await mkdir(resolve(out, "raw"));
+  const save = async (path, b) => {
+    assert(
+      (await bytesIn(root)) + Buffer.byteLength(b) < 36_000_000,
+      "Leave a reserve within the initial 40-MB evidence budget",
+    );
+    await writeFile(resolve(out, path), b, { flag: "wx" });
+    return sha(b);
+  };
+  const json = async (path, obj) =>
+    save(path, await format(JSON.stringify(obj), { parser: "json" }));
+  const sources = {};
+  for (const p of sourcePaths) sources[p] = sha(await readFile(p));
+  const metrics = JSON.parse(
+    await readFile("docs/research/prose-qr/pilot-02/metrics.json", "utf8"),
+  );
+  await json("manifest.json", {
+    startedAt: new Date().toISOString(),
+    parameters,
+    sourceHashes: sources,
+    metricsSha256: sha(
+      await readFile("docs/research/prose-qr/pilot-02/metrics.json"),
+    ),
+    decoders: DECODER_PROVENANCE,
+    configuredReader: READER_OPTIONS,
+    classification:
+      "Unchanged native paragraph screenshots. Uniform 400 weight. Color-only and uniform-black letter-choice tracks kept separate. No external preprocessing, repair, crop, or expected-payload/matrix input to decoders.",
+  });
+  const records = [],
+    controls = [],
+    errors = [];
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath:
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  });
+  try {
+    const page = await browser.newPage({
+      viewport: { width: 2900, height: 2900 },
+      deviceScaleFactor: 1,
+    });
+    page.on("pageerror", (e) => errors.push(e.message));
+    async function pixels(png) {
+      return page.evaluate(async (base64) => {
+        const img = new Image();
+        img.src = "data:image/png;base64," + base64;
+        await img.decode();
+        const c = document.createElement("canvas");
+        c.width = img.width;
+        c.height = img.height;
+        const ctx = c.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+        const rgba = ctx.getImageData(0, 0, c.width, c.height).data;
+        let s = "";
+        for (let i = 0; i < rgba.length; i += 32768)
+          s += String.fromCharCode(...rgba.subarray(i, i + 32768));
+        return { data: btoa(s), width: c.width, height: c.height };
+      }, png.toString("base64"));
+    }
+    async function read(png, expected) {
+      const p = await pixels(png);
+      const data = new Uint8ClampedArray(Buffer.from(p.data, "base64"));
+      const baseline = await decode(
+        { data, width: p.width, height: p.height },
+        expected,
+      );
+      const z = await readBarcodes(
+        { data, width: p.width, height: p.height },
+        READER_OPTIONS,
+      );
+      return {
+        width: p.width,
+        height: p.height,
+        rgbaSha256: sha(data),
+        baseline,
+        configured: {
+          options: READER_OPTIONS,
+          payloads: z.map((r) => r.text),
+          exact: z.some((r) => r.text === expected),
+        },
+      };
+    }
+    for (const payload of [...new Set(parameters.map((s) => s.payload))]) {
+      await page.setContent(documentHtml(positiveControl(payload, 640)));
+      const png = await page.locator("#artifact").screenshot();
+      const r = await read(png, payload);
+      assert(
+        r.baseline.jsQR.exact && r.baseline.zxing.exact && r.configured.exact,
+        "Conventional control failed",
+      );
+      const path = `raw/control-${controls.length + 1}.png`;
+      controls.push({ payload, path, pngSha256: await save(path, png), ...r });
+    }
+    await json("controls.json", controls);
+    for (const spec of parameters) {
+      const started = Date.now();
+      const l = builder(spec, metrics);
+      assert(l.side <= 2800, "Native frame dimension bound");
+      assert(l.structural.fontSize >= 18 && l.structural.lineHeightEm >= 1.2);
+      assert.equal(l.structural.emptyLines, 0);
+      assert.equal(l.structural.multipleInternalSpaces, 0);
+      const html = await format(documentHtml(l.markup), { parser: "html" });
+      const htmlGzipSha256 = await save(`${spec.id}.html.gz`, gzipSync(html));
+      await json(`${spec.id}-layout.json`, {
+        spec,
+        plainText: l.plainText,
+        structural: l.structural,
+        unit: l.unit,
+        side: l.side,
+        modules: l.modules,
+      });
+      await page.setContent(html);
+      await page.evaluate(() => document.fonts.ready);
+      assert.deepEqual(await page.locator(".line").allTextContents(), l.lines);
+      const style = await page
+        .locator("#text-body")
+        .evaluate((body) => ({
+          bodyWeight: getComputedStyle(body).fontWeight,
+          bodyColor: getComputedStyle(body).color,
+          glyphWeights: [
+            ...new Set(
+              [...body.querySelectorAll("span")].map(
+                (e) => getComputedStyle(e).fontWeight,
+              ),
+            ),
+          ],
+          glyphColors: [
+            ...new Set(
+              [...body.querySelectorAll("span")].map(
+                (e) => getComputedStyle(e).color,
+              ),
+            ),
+          ],
+        }));
+      assert.equal(style.bodyWeight, "400");
+      assert(style.glyphWeights.every((x) => x === "400"));
+      if (spec.track === "plain-black")
+        assert(style.glyphColors.every((x) => x === "rgb(0, 0, 0)"));
+      const png = await page.locator("#artifact").screenshot();
+      const path = `raw/${spec.id}-${l.side}.png`;
+      const pngSha256 = await save(path, png);
+      const result = await read(png, spec.payload);
+      const cellInk = await page.evaluate(
+        async ({ base64, pad, unit, matrix }) => {
+          const img = new Image();
+          img.src = "data:image/png;base64," + base64;
+          await img.decode();
+          const c = document.createElement("canvas");
+          c.width = img.width;
+          c.height = img.height;
+          const ctx = c.getContext("2d");
+          ctx.drawImage(img, 0, 0);
+          const data = ctx.getImageData(0, 0, c.width, c.height).data;
+          const dark = [],
+            light = [];
+          for (let row = 0; row < matrix.length; row++)
+            for (let col = 0; col < matrix.length; col++) {
+              let sum = 0,
+                n = 0;
+              for (
+                let y = Math.ceil(pad + row * unit);
+                y < Math.floor(pad + (row + 1) * unit);
+                y++
+              )
+                for (
+                  let x = Math.ceil(pad + col * unit);
+                  x < Math.floor(pad + (col + 1) * unit);
+                  x++
+                ) {
+                  sum += 255 - data[(y * c.width + x) * 4];
+                  n++;
+                }
+              (matrix[row][col] ? dark : light).push(sum / n);
+            }
+          const mean = (a) => a.reduce((s, v) => s + v, 0) / a.length;
+          return {
+            darkMean: mean(dark),
+            lightMean: mean(light),
+            ratio: mean(dark) / mean(light),
+            note: "Renderer diagnostic only; matrix is not supplied to either decoder",
+          };
+        },
+        {
+          base64: png.toString("base64"),
+          pad: l.pad,
+          unit: l.unit,
+          matrix: l.matrix,
+        },
+      );
+      const row = {
+        id: spec.id,
+        spec,
+        path,
+        pngSha256,
+        htmlGzipSha256,
+        ...result,
+        structural: l.structural,
+        computedStyle: style,
+        cellInk,
+        elapsedMs: Date.now() - started,
+      };
+      records.push(row);
+      await appendFile(
+        resolve(out, "results.jsonl"),
+        JSON.stringify(row) + "\n",
+      );
+      console.log(
+        JSON.stringify({
+          id: spec.id,
+          track: spec.track,
+          baseline: [result.baseline.jsQR.exact, result.baseline.zxing.exact],
+          configured: result.configured.exact,
+          inkRatio: Number(cellInk.ratio.toFixed(2)),
+        }),
+      );
+    }
+    assert.equal(errors.length, 0);
+  } finally {
+    await browser.close();
+  }
+  const summary = {
+    finishedAt: new Date().toISOString(),
+    cases: records.length,
+    rawFrames: records.length,
+    baselineJsQRExact: records.filter((r) => r.baseline.jsQR.exact).length,
+    baselineZXingExact: records.filter((r) => r.baseline.zxing.exact).length,
+    configuredZXingExact: records.filter((r) => r.configured.exact).length,
+    successfulIds: records
+      .filter(
+        (r) =>
+          r.configured.exact || r.baseline.jsQR.exact || r.baseline.zxing.exact,
+      )
+      .map((r) => r.id),
+    errors,
+    phone: "not tested",
+  };
+  await json("summary.json", summary);
+  return summary;
+}
