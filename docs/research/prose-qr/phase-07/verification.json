@@ -1,0 +1,416 @@
+{
+  "at": "2026-10-09T20:49:23.123Z",
+  "baseline": "80f1b54a024cfb456f287078f2af7edb7e2579f8",
+  "sourceScriptSha256": "8498904dabb7ffdcc671d27612c3624d54a08ca0a59babd22bb08e04cff63ab2",
+  "batches": [
+    {
+      "batch": "guard-01",
+      "planned": 4,
+      "native": 1,
+      "abort": {
+        "at": "2026-10-09T20:44:23.200Z",
+        "attempted": "guard-02",
+        "completed": 1,
+        "message": "Guard source advance overflow"
+      },
+      "uncompleted": ["guard-02", "guard-03", "guard-04"]
+    },
+    {
+      "batch": "guard-02",
+      "planned": 2,
+      "native": 2,
+      "abort": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "native-01",
+      "planned": 2,
+      "native": 2,
+      "abort": null,
+      "uncompleted": []
+    }
+  ],
+  "uniquePlannedNativeCases": 6,
+  "nativeFinderLayouts": 5,
+  "intendedOrdinaryLocatorGeometries": 0,
+  "sourceWidthRejections": [
+    {
+      "id": "guard-02",
+      "sourceRow": "eeee me eeee me eeee me eeee",
+      "zeroBasedRow": 6,
+      "actualAdvance": 247.6796875,
+      "field": 228.34765625,
+      "font": "Impact",
+      "fontSize": 20,
+      "tracking": -0.5,
+      "nativeCapture": false,
+      "recipeShortened": false
+    }
+  ],
+  "exactImmediateNativeRepeats": 5,
+  "conventionalFullQrControls": 3,
+  "initialPassingControlProbeAttempts": 9,
+  "solidFinderControls": 3,
+  "exactSeedReplays": 3,
+  "encodedCandidatePayloads": 0,
+  "phoneCandidates": 0,
+  "auditReceipts": [
+    {
+      "name": "span-audit-01.json.gz",
+      "sha256": "36883b4085715a35cc90b7f8cefa5d797350d0ea1a7156e9ac32e8465f68341a",
+      "retainedInputs": 4,
+      "ordinaryReturnsMatch": 4
+    },
+    {
+      "name": "join-audit-01.json.gz",
+      "sha256": "b1ff913665cb0085f29958aa2c6af45917c4ba189ef06928c71851685ca2c54a",
+      "retainedInputs": 2,
+      "ordinaryReturnsMatch": 2
+    }
+  ],
+  "sourceCustody": [
+    {
+      "path": "experiments/prose-qr/finder-span/capture.mjs",
+      "sha256": "baec354f1051107019fe77ccb8870e89d492508e839ed00ef0027f9a3686ad8e",
+      "preservedAt": "docs/research/prose-qr/phase-07/source-versions/capture-guard-01.mjs.txt"
+    },
+    {
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/PLAN.md",
+      "sha256": "6449b4dfd2c5b7dd6177e6ca23454fdbb4877814e72154cc3b95b76beaadfc03",
+      "preservedAt": "docs/research/prose-qr/phase-07/PLAN.md"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/GUARD-PLAN.md",
+      "sha256": "55c88038fef630f5ef40f106dfeeea3e0256e6a86a61be334c4f848267cb6cb7",
+      "preservedAt": "docs/research/prose-qr/phase-07/GUARD-PLAN.md"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "preservedAt": "docs/research/prose-qr/phase-06/custody.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json",
+      "sha256": "98e88504599e931ada22fc94df2e362d8d8b462ccfddda074b93758a2c296b1f",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz",
+      "sha256": "cfb49c5bcf320b24e65df4660b0970c5d7e0444c5c76e7ab586094cc0d2f151a",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png",
+      "sha256": "0c36d200f67049da04ba0daed2f43c761b2dc2be6df36657b59391ddab9a96e2",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/results.jsonl",
+      "sha256": "c750216ea2542ab6581c5d884612661a06f17fd3b57efbe97a216d90a119d5ee",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/results.jsonl"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/capture.mjs",
+      "sha256": "7210c15070c7c7ede423236e86e9f1c4ee98c4ac9c0aa297af316076276d6df7",
+      "preservedAt": "experiments/prose-qr/finder-span/capture.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/PLAN.md",
+      "sha256": "6449b4dfd2c5b7dd6177e6ca23454fdbb4877814e72154cc3b95b76beaadfc03",
+      "preservedAt": "docs/research/prose-qr/phase-07/PLAN.md"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/GUARD-CONTINUATION.md",
+      "sha256": "3249dbf7d592b0546bd0b111b2f5328e002b0e9ea5a6212dd92c62fdc7f80774",
+      "preservedAt": "docs/research/prose-qr/phase-07/GUARD-CONTINUATION.md"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/GUARD-PLAN.md",
+      "sha256": "55c88038fef630f5ef40f106dfeeea3e0256e6a86a61be334c4f848267cb6cb7",
+      "preservedAt": "docs/research/prose-qr/phase-07/GUARD-PLAN.md"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "preservedAt": "docs/research/prose-qr/phase-06/custody.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json",
+      "sha256": "98e88504599e931ada22fc94df2e362d8d8b462ccfddda074b93758a2c296b1f",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz",
+      "sha256": "cfb49c5bcf320b24e65df4660b0970c5d7e0444c5c76e7ab586094cc0d2f151a",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png",
+      "sha256": "0c36d200f67049da04ba0daed2f43c761b2dc2be6df36657b59391ddab9a96e2",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/results.jsonl",
+      "sha256": "c750216ea2542ab6581c5d884612661a06f17fd3b57efbe97a216d90a119d5ee",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/results.jsonl"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/capture.mjs",
+      "sha256": "da44d3c3054bf8a05a7fb5a5665d411779bf0c7c1c97e412f37775c01592a81f",
+      "preservedAt": "docs/research/prose-qr/phase-07/source-versions/capture-native-01.mjs.txt"
+    },
+    {
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/PLAN.md",
+      "sha256": "6449b4dfd2c5b7dd6177e6ca23454fdbb4877814e72154cc3b95b76beaadfc03",
+      "preservedAt": "docs/research/prose-qr/phase-07/PLAN.md"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "preservedAt": "docs/research/prose-qr/phase-06/custody.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json",
+      "sha256": "98e88504599e931ada22fc94df2e362d8d8b462ccfddda074b93758a2c296b1f",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz",
+      "sha256": "cfb49c5bcf320b24e65df4660b0970c5d7e0444c5c76e7ab586094cc0d2f151a",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png",
+      "sha256": "0c36d200f67049da04ba0daed2f43c761b2dc2be6df36657b59391ddab9a96e2",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/seam-02/results.jsonl",
+      "sha256": "c750216ea2542ab6581c5d884612661a06f17fd3b57efbe97a216d90a119d5ee",
+      "preservedAt": "docs/research/prose-qr/phase-06/seam-02/results.jsonl"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/audit.mjs",
+      "sha256": "7f2e2f6b2311f1a7d9c2a72022d4e5fdf4d0945d2fa2e997f789a10cfa0fdfe7",
+      "preservedAt": "docs/research/prose-qr/phase-07/source-versions/audit-executed.mjs.txt"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/joins.mjs",
+      "sha256": "4c14580e895b1922a4c93206d856114c921f39adbbf40a5d07dea7e7c7c16e77",
+      "preservedAt": "experiments/prose-qr/finder-span/joins.mjs"
+    }
+  ],
+  "prior": [
+    {
+      "phase": "phase-04",
+      "path": "docs/research/prose-qr/phase-04/custody.json",
+      "sha256": "28287d7abbfdf1b8086783732b20c59684b88c167daa6c62f75789810e8776b9",
+      "inventoryEntriesUnchanged": 460
+    },
+    {
+      "phase": "phase-05",
+      "path": "docs/research/prose-qr/phase-05/custody.json",
+      "sha256": "270129badddaa2971355730b56a8728b3955ee6ced7f61b76b6dfa2358ea917d",
+      "inventoryEntriesUnchanged": 241
+    },
+    {
+      "phase": "phase-06",
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "inventoryEntriesUnchanged": 284
+    }
+  ],
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "productVersion": "0.4.2",
+  "npmPrivate": true,
+  "readOnlyPixelReplay": {
+    "results": [
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-01/raw/guard-01.png",
+        "type": "native-finder",
+        "pngSha256": "e1b051d29f1500a2a110139b3e05b45011668a242a4df49499d023c6e36f4e87",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-01/raw/full-qr-control.png",
+        "type": "full-control",
+        "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+        "rgbaMatches": true,
+        "exactProfiles": 3,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-01/raw/solid-finder-control.png",
+        "type": "solid-control",
+        "pngSha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-02/raw/guard-03.png",
+        "type": "native-finder",
+        "pngSha256": "760a7f83a894c9f416a62b56a635cb06e9115eb1be981173d7094f9a18f30507",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-02/raw/guard-04.png",
+        "type": "native-finder",
+        "pngSha256": "42ef85dddc033054db2e856e22231ec18d79b3543928255801dc934761a5b258",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-02/raw/full-qr-control.png",
+        "type": "full-control",
+        "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+        "rgbaMatches": true,
+        "exactProfiles": 3,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/guard-02/raw/solid-finder-control.png",
+        "type": "solid-control",
+        "pngSha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/native-01/raw/span-01.png",
+        "type": "native-finder",
+        "pngSha256": "b3eb06d7f2131d28798e47a4fe73743ca76265f4785a46a93911cb2ba1434134",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/native-01/raw/span-02.png",
+        "type": "native-finder",
+        "pngSha256": "7189623041f75aa1d77581152c99cc6cf6a9cff044f96dd40add03279350806f",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/native-01/raw/full-qr-control.png",
+        "type": "full-control",
+        "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+        "rgbaMatches": true,
+        "exactProfiles": 3,
+        "passed": true
+      },
+      {
+        "path": "docs/research/prose-qr/phase-07/native-01/raw/solid-finder-control.png",
+        "type": "solid-control",
+        "pngSha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee",
+        "rgbaMatches": true,
+        "diagnosticMatches": true,
+        "passed": true
+      }
+    ],
+    "passed": 11,
+    "failed": 0,
+    "additionalPassingFullQrControlAttempts": 9
+  },
+  "handbackBrowserCheck": {
+    "viewport": { "width": 390, "height": 844 },
+    "diagramStages": 3,
+    "checkpointDownloadExact": true,
+    "clipboard": "Simulated fallback only; native clipboard untested"
+  },
+  "phaseBytesBeforeReceipt": 1021332,
+  "logicalFileSafeguardBytes": 1500000,
+  "proseAcceptance": "unsolved"
+}

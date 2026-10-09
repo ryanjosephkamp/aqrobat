@@ -1,0 +1,454 @@
+{
+  "sealedAt": "2026-10-09T20:50:08.734Z",
+  "baseline": "80f1b54a024cfb456f287078f2af7edb7e2579f8",
+  "sealedFromHead": "80f1b54a024cfb456f287078f2af7edb7e2579f8",
+  "branch": "codex/aqrobat-foundation",
+  "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+  "sourceScriptSha256": "43dd61c342f826424a0ff060dae077457fe62c391c4a62786180360f2abfc45e",
+  "scope": [
+    "docs/research/prose-qr/phase-07",
+    "experiments/prose-qr/finder-span"
+  ],
+  "logicalFileSafeguardBytes": 1500000,
+  "logicalBytesIncludingReceipt": 1063665,
+  "excludes": "Git object storage; inventory excludes this self-referential receipt",
+  "counts": {
+    "uniquePlannedNativeCases": 6,
+    "nativeFinderLayouts": 5,
+    "intendedOrdinaryLocatorGeometries": 0,
+    "sourceWidthRejections": 1,
+    "exactImmediateNativeRepeats": 5,
+    "fullQrControls": 3,
+    "initialPassingControlAttempts": 9,
+    "solidFinderControls": 3,
+    "readOnlyPixelReplayPairs": 11,
+    "additionalPassingControlAttempts": 9,
+    "encodedCandidatePayloads": 0,
+    "phoneCandidates": 0,
+    "abortedCaptureBatches": 1
+  },
+  "prior": [
+    {
+      "phase": "phase-04",
+      "path": "docs/research/prose-qr/phase-04/custody.json",
+      "sha256": "28287d7abbfdf1b8086783732b20c59684b88c167daa6c62f75789810e8776b9",
+      "inventoryEntriesUnchanged": 460
+    },
+    {
+      "phase": "phase-05",
+      "path": "docs/research/prose-qr/phase-05/custody.json",
+      "sha256": "270129badddaa2971355730b56a8728b3955ee6ced7f61b76b6dfa2358ea917d",
+      "inventoryEntriesUnchanged": 241
+    },
+    {
+      "phase": "phase-06",
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "inventoryEntriesUnchanged": 284
+    }
+  ],
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/phase-07/CHECKPOINT.md",
+      "bytes": 3962,
+      "sha256": "8d1612908471a1e7c1c956a91ff2e9bc4b7df01ebc55d56052c91a1d1aa80ff4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/GUARD-CONTINUATION.md",
+      "bytes": 654,
+      "sha256": "3249dbf7d592b0546bd0b111b2f5328e002b0e9ea5a6212dd92c62fdc7f80774"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/GUARD-PLAN.md",
+      "bytes": 1627,
+      "sha256": "55c88038fef630f5ef40f106dfeeea3e0256e6a86a61be334c4f848267cb6cb7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/JOIN-AUDIT-PLAN.md",
+      "bytes": 1271,
+      "sha256": "f8c3cf8b56e89f3b51bb656b4713386b560589e9a9d447a54561725960ff8de9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/PLAN.md",
+      "bytes": 2998,
+      "sha256": "6449b4dfd2c5b7dd6177e6ca23454fdbb4877814e72154cc3b95b76beaadfc03"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/PR-DESCRIPTION.md",
+      "bytes": 5872,
+      "sha256": "872836685b9a62c8df9f49f0ebc32e6529926f951917a3720496961f378aacea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/README.md",
+      "bytes": 6958,
+      "sha256": "e0783a09f678948b318788efe4c9ec878dfa888f93084b21fe54f34f3f6bc21d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/VERIFIER-PREFLIGHT.md",
+      "bytes": 396,
+      "sha256": "cb42121bd06a4e2002c36172d8d6d6dafae2e12544fce4639879b04e562d4d99"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/analysis.json",
+      "bytes": 9613,
+      "sha256": "e9f93e74b57283886c5f7720d68ea58b3d59b899376c3f11993f95e73200fcb5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/audit-console-error.json",
+      "bytes": 328,
+      "sha256": "046eb45154051863522bf097cff494d78f7474eff1587002d5cac50c680baef0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/audit-import-abort.json",
+      "bytes": 262,
+      "sha256": "4b63f56a6c5ca9b94fc0cddd01bfb9796cfc430af4e654c5e88881505985707b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/browser-check.json",
+      "bytes": 698,
+      "sha256": "c644eb127c6aea6ae13af1731e4067a256260ad099e6750ed03362c61ce9b536"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/aborted.json",
+      "bytes": 130,
+      "sha256": "fa0a3fb98422f9fcd8aa68a2745369835f2983da138dbb38b0a5b64d08cad8df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/controls.json",
+      "bytes": 4845,
+      "sha256": "5a9f87b7715ef30d60ff66af81c763a41a5aa23c47490296c7502bb560d3c2c4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/guard-01-layout.json",
+      "bytes": 2712,
+      "sha256": "c73122989a7b004c341003984c395d615727456ad10df464036d9978c59c2400"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/guard-01-native-metrics.json",
+      "bytes": 2055,
+      "sha256": "bc5ec4f294d3f569d03bce7dd2038668879642282cca9a6937b5e97b6eafb3ce"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/guard-01.html.gz",
+      "bytes": 647,
+      "sha256": "63645d4967e24beb2faff70f44106a6464894f9cf0b5534a3dc015459e54756d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/guard-01.txt",
+      "bytes": 464,
+      "sha256": "9e9e8a5d9fd50ba5c574c2fefa11faaf602d041367ee31ac808636a0387b3234"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/manifest.json",
+      "bytes": 3249,
+      "sha256": "d2262aed998eff0aebe379b562094b4dc966256fdf8350c5239ff8ea6d61b5d3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/raw/full-qr-control.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/raw/guard-01.png",
+      "bytes": 84860,
+      "sha256": "e1b051d29f1500a2a110139b3e05b45011668a242a4df49499d023c6e36f4e87"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/raw/solid-finder-control.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/results.jsonl",
+      "bytes": 4474,
+      "sha256": "36cf590f0a9a00a48cd2e29dc367ed4c6c634f34924b197a716aefc1e2d7a25d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-01/seed-replay.json",
+      "bytes": 230,
+      "sha256": "965907688e19c83096e3d87933430e7348307eacc96dcb3e9754e25839ab99cb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/controls.json",
+      "bytes": 4845,
+      "sha256": "5a9f87b7715ef30d60ff66af81c763a41a5aa23c47490296c7502bb560d3c2c4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-03-layout.json",
+      "bytes": 2722,
+      "sha256": "bbe3a90ea770e3c98032269afd99eb56b89e6119ae9cc7c456d736155bf2f562"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-03-native-metrics.json",
+      "bytes": 2055,
+      "sha256": "805cb0aa2ef3aa307bf101fe3134fa661614008b43926cebaacaf48249bb7515"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-03.html.gz",
+      "bytes": 655,
+      "sha256": "798ab5dbf31fa553c855d498a4697ab7d3d1457bf21bebf2ab5e16673ab9bed4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-03.txt",
+      "bytes": 478,
+      "sha256": "eb5270e7e472bd6155e3796f0b99393bf3c4d14b29ee46f85c6417ea7d05f8fc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-04-layout.json",
+      "bytes": 2736,
+      "sha256": "c96c16c5bee413fdb401f3030fa1cc503523830e066cbb0d6955d6a812bbf7f3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-04-native-metrics.json",
+      "bytes": 2055,
+      "sha256": "2cdf8ba84a4e42ab8641ddc90a6fabe86703475dbd63d0285732c871082568cb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-04.html.gz",
+      "bytes": 657,
+      "sha256": "bfd60091e5d09f3f6c86a406dac9093b633ade69aca5e2e73bdbc941d25c4353"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/guard-04.txt",
+      "bytes": 492,
+      "sha256": "a5eb11c4d9ae38b8952070c929c12227789941ebe1645ea56f6fabd6c93c9c47"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/manifest.json",
+      "bytes": 2944,
+      "sha256": "f8ce7804dd66eecce77ab946af961c029c4976441d5fd904e868fdacb2e2f9d6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/raw/full-qr-control.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/raw/guard-03.png",
+      "bytes": 80754,
+      "sha256": "760a7f83a894c9f416a62b56a635cb06e9115eb1be981173d7094f9a18f30507"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/raw/guard-04.png",
+      "bytes": 76261,
+      "sha256": "42ef85dddc033054db2e856e22231ec18d79b3543928255801dc934761a5b258"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/raw/solid-finder-control.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/results.jsonl",
+      "bytes": 9229,
+      "sha256": "7ddee2fab7a0a4b232bf0bc50799ada68edf62c7c7addd390056ee5d8f456623"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/seed-replay.json",
+      "bytes": 230,
+      "sha256": "965907688e19c83096e3d87933430e7348307eacc96dcb3e9754e25839ab99cb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-02/summary.json",
+      "bytes": 127,
+      "sha256": "b7b6cb5bcb6adae4526333389d8b8414a991b4bb8cf61cef2f1badb2fb5dfd43"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/guard-source-width-rejection.json",
+      "bytes": 260,
+      "sha256": "e4763b5909256050e8530d9e37a2440f98463278ce08cc7ee3dbc282ab8180f6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/index.html",
+      "bytes": 22074,
+      "sha256": "158263a392e10214ddc0f60b71666e18f6fc90bf0ffadda6273f0242d959f971"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/join-audit-01.json.gz",
+      "bytes": 46201,
+      "sha256": "b1ff913665cb0085f29958aa2c6af45917c4ba189ef06928c71851685ca2c54a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/join-audit-summary-01.json",
+      "bytes": 28167,
+      "sha256": "6ac1444023194d4846a0b28ee26a7f422163a69a58fc7d5c44f56df2c1f3e446"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/controls.json",
+      "bytes": 4845,
+      "sha256": "5a9f87b7715ef30d60ff66af81c763a41a5aa23c47490296c7502bb560d3c2c4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/manifest.json",
+      "bytes": 2531,
+      "sha256": "35bc55b8e8e7c24a665a8fccead36c42af50fcaaea6c8f7b824f6ad54ef764af"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/raw/full-qr-control.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/raw/solid-finder-control.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/raw/span-01.png",
+      "bytes": 107685,
+      "sha256": "b3eb06d7f2131d28798e47a4fe73743ca76265f4785a46a93911cb2ba1434134"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/raw/span-02.png",
+      "bytes": 140942,
+      "sha256": "7189623041f75aa1d77581152c99cc6cf6a9cff044f96dd40add03279350806f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/results.jsonl",
+      "bytes": 10065,
+      "sha256": "681e0ac1d5a7610b19b849f24e3e0d9925b49b5e646e7e6f46d5cce29524dc63"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/seed-replay.json",
+      "bytes": 230,
+      "sha256": "965907688e19c83096e3d87933430e7348307eacc96dcb3e9754e25839ab99cb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-01-layout.json",
+      "bytes": 2672,
+      "sha256": "71e54e8ebcc96bba0c9c23fe42334574cc756f39620e8e9c48a5355e51fba127"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-01-native-metrics.json",
+      "bytes": 2155,
+      "sha256": "946794adee6dd1f7e0654fb943c13b63ddb420047ef9e4bf8ccedfb2d9b4d74f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-01.html.gz",
+      "bytes": 677,
+      "sha256": "8e8c3e5c219fac21f985bb8855a5b8c61afd5aff67fc9b9879a5fc822114043a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-01.txt",
+      "bytes": 465,
+      "sha256": "2eb20ff6db048b40de3bc1fc037547914359ec02a8f5005ed8e7d9f29f0865f7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-02-layout.json",
+      "bytes": 2692,
+      "sha256": "85b185b36c287cc34bc7d9badd284d4ae862f5d241abd277298cc99508911145"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-02-native-metrics.json",
+      "bytes": 2053,
+      "sha256": "0f2427c7980d9ef2ef8059ea6f69ba3da3d353d5c9e27d4c406ada04b261d096"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-02.html.gz",
+      "bytes": 659,
+      "sha256": "c71cb9ca9ee87aa8f2ea58878ed77500090b2c8ab4b4719f1e33cdf2dbd77103"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/span-02.txt",
+      "bytes": 465,
+      "sha256": "2eb20ff6db048b40de3bc1fc037547914359ec02a8f5005ed8e7d9f29f0865f7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/native-01/summary.json",
+      "bytes": 127,
+      "sha256": "b7b6cb5bcb6adae4526333389d8b8414a991b4bb8cf61cef2f1badb2fb5dfd43"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/source-versions/audit-executed.mjs.txt",
+      "bytes": 10967,
+      "sha256": "7f2e2f6b2311f1a7d9c2a72022d4e5fdf4d0945d2fa2e997f789a10cfa0fdfe7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/source-versions/audit-import-abort.mjs.txt",
+      "bytes": 10952,
+      "sha256": "97d8ec038c8867f89aba3af1afaf13fe0e882ad559a31371532781636d364733"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/source-versions/capture-guard-01.mjs.txt",
+      "bytes": 15037,
+      "sha256": "baec354f1051107019fe77ccb8870e89d492508e839ed00ef0027f9a3686ad8e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/source-versions/capture-native-01.mjs.txt",
+      "bytes": 13511,
+      "sha256": "da44d3c3054bf8a05a7fb5a5665d411779bf0c7c1c97e412f37775c01592a81f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/span-audit-01.json.gz",
+      "bytes": 106785,
+      "sha256": "36883b4085715a35cc90b7f8cefa5d797350d0ea1a7156e9ac32e8465f68341a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/span-audit-summary-01.json",
+      "bytes": 79987,
+      "sha256": "f10a09ee4fb9dbf453eefee5d6ca5a356391f49e87ab53c85fc5c353ef28f876"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/verification.json",
+      "bytes": 16305,
+      "sha256": "50edd9921e6f299f6fe177474c2002bff2697f72adb859ea37caaf9d4e241707"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/analyze.mjs",
+      "bytes": 4143,
+      "sha256": "dc34e36cdcd91f7b63e53879c3311fc9deed285173efdf7fe2fedc589b5a3aa1"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/audit.mjs",
+      "bytes": 11084,
+      "sha256": "9f7204adf62a70604904580d34707fac8f9cdb643e99fb0a93ced0b44a42a0c2"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/capture.mjs",
+      "bytes": 15317,
+      "sha256": "7210c15070c7c7ede423236e86e9f1c4ee98c4ac9c0aa297af316076276d6df7"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/check-handback.mjs",
+      "bytes": 3792,
+      "sha256": "5914293cfe9014d049d97d3aa9c1c7e5fca862b3e92f7060373b8e55829cd21e"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/handback.mjs",
+      "bytes": 10023,
+      "sha256": "7f52a60ec1c4dbf481205ebbc083894666439bf2f2bbb7efa686332383cade4f"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/joins.mjs",
+      "bytes": 11156,
+      "sha256": "4c14580e895b1922a4c93206d856114c921f39adbbf40a5d07dea7e7c7c16e77"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/seal.mjs",
+      "bytes": 3140,
+      "sha256": "43dd61c342f826424a0ff060dae077457fe62c391c4a62786180360f2abfc45e"
+    },
+    {
+      "path": "experiments/prose-qr/finder-span/verify.mjs",
+      "bytes": 12671,
+      "sha256": "8498904dabb7ffdcc671d27612c3624d54a08ca0a59babd22bb08e04cff63ab2"
+    }
+  ]
+}
