@@ -20,15 +20,11 @@ import { layout, solidTriplet } from "./layout.mjs";
 const root = resolve("docs/research/prose-qr/phase-06"),
   out = resolve(
     root,
-    process.argv[2] === "cap"
-      ? "cap-01"
-      : process.argv[2] === "cross"
-        ? "cross-01"
-        : process.argv[2] === "touch"
-          ? "touch-02"
-          : process.argv[2] === "remaining"
-            ? "native-02"
-            : "native-01",
+    process.argv[2] === "touch"
+      ? "touch-02"
+      : process.argv[2] === "remaining"
+        ? "native-02"
+        : "native-01",
   ),
   hash = (b) => createHash("sha256").update(b).digest("hex"),
   specs = [];
@@ -41,37 +37,7 @@ for (const font of ["Courier", "Monaco", "Impact"])
         leading,
         objective,
       });
-if (process.argv[2] === "cap") {
-  for (const tracking of [-0.5, -1.5])
-    for (const phase of [6, 7])
-      specs.push({
-        id: `cap-${String(specs.length - 11).padStart(2, "0")}`,
-        font: "Impact",
-        leading: "touch",
-        inkGap: 0.5,
-        tracking,
-        phase,
-        horizontalBoost: 4,
-        synthetic: true,
-        capWords: true,
-        objective: "axes",
-      });
-  specs.splice(0, 12);
-} else if (process.argv[2] === "cross") {
-  specs.length = 0;
-  for (const tracking of [-0.5, -1.5])
-    for (const horizontalBoost of [1, 4])
-      specs.push({
-        id: `cross-${String(specs.length + 1).padStart(2, "0")}`,
-        font: "Impact",
-        leading: "touch",
-        inkGap: 0,
-        tracking,
-        horizontalBoost,
-        synthetic: true,
-        objective: "axes",
-      });
-} else if (process.argv[2] === "touch") {
+if (process.argv[2] === "touch") {
   specs.length = 0;
   for (const font of ["Courier", "Impact"])
     for (const inkGap of [0, 0.5])
@@ -125,21 +91,6 @@ for (const p of [
     : []),
   ...(process.argv[2] === "touch"
     ? ["docs/research/prose-qr/phase-06/TOUCH-PLAN.md"]
-    : []),
-  ...(process.argv[2] === "cap"
-    ? [
-        "docs/research/prose-qr/phase-06/CAP-PLAN.md",
-        "docs/research/prose-qr/phase-06/CROSS-PLAN.md",
-        "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
-        "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
-      ]
-    : []),
-  ...(process.argv[2] === "cross"
-    ? [
-        "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
-        "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
-        "docs/research/prose-qr/phase-06/CROSS-PLAN.md",
-      ]
     : []),
   ...(process.argv[2] === "touch"
     ? ["docs/research/prose-qr/phase-06/TAIL-REPAIR.md"]

@@ -39,7 +39,7 @@ export function layout(spec, metrics) {
     unit = lineHeight * 2,
     field = unit * 7,
     side = Math.ceil(unit * 35),
-    offset = -lineHeight / 2 + (spec.phase || 0);
+    offset = -lineHeight / 2;
   const tracking = spec.tracking || 0;
   const allowed = (c) =>
     g[c] &&
@@ -59,14 +59,6 @@ export function layout(spec, metrics) {
           ),
         ]
       : bank;
-  if (spec.synthetic)
-    selectedBank.push(
-      ..."eeee eeeeee eeeeeeee eeeeeeeeee eeheee eeheeeheee eefeef eefeefeef".split(
-        " ",
-      ),
-    );
-  if (spec.capWords)
-    selectedBank.push("TTTT", "TTTTTT", "TTTTTTTT", "TTTTTTTTTT");
   const words = [
     ...new Set(selectedBank.flatMap((w) => [w, w.toUpperCase()])),
   ].filter((w) => [...w].every(allowed));
@@ -109,8 +101,7 @@ export function layout(spec, metrics) {
           importance =
             spec.objective === "axes" &&
             (Math.abs(x - 3.5 * unit) < 1.5 || Math.abs(y - 3.5 * unit) < 1.5)
-              ? 65 *
-                (Math.abs(y - 3.5 * unit) < 1.5 ? spec.horizontalBoost || 1 : 1)
+              ? 65
               : 1;
         value += importance * (a * a - 2 * a * target);
       }
@@ -193,10 +184,6 @@ export function layout(spec, metrics) {
       globalInkEnvelope: envelope,
       allowedGlyphs: alphabet.join(""),
       wordBank: words,
-      syntheticLetterWords: Boolean(spec.synthetic),
-      horizontalAxisBoost: spec.horizontalBoost || 1,
-      globalVerticalPhase: spec.phase || 0,
-      syntheticCapitalWords: Boolean(spec.capWords),
       singleTextNodePerCorner: true,
       encodedPayload: null,
       semantic: "Complete words; sentence meaning not claimed",

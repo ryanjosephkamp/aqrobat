@@ -16,76 +16,74 @@ import { readBarcodes } from "zxing-wasm/reader";
 import { decode, DECODER_PROVENANCE } from "../decoders.mjs";
 import { diagnose, bundleHash } from "../glyph-geometry/diagnostic.mjs";
 import { documentHtml, positiveControl } from "../layout.mjs";
-import { layout, solidTriplet } from "./layout.mjs";
+import { finderMatrix, solidTriplet } from "./layout.mjs";
+import { escapeHtml } from "../layout.mjs";
 const root = resolve("docs/research/prose-qr/phase-06"),
-  out = resolve(
-    root,
-    process.argv[2] === "cap"
-      ? "cap-01"
-      : process.argv[2] === "cross"
-        ? "cross-01"
-        : process.argv[2] === "touch"
-          ? "touch-02"
-          : process.argv[2] === "remaining"
-            ? "native-02"
-            : "native-01",
-  ),
+  out = resolve(root, "seam-02"),
   hash = (b) => createHash("sha256").update(b).digest("hex"),
   specs = [];
-for (const font of ["Courier", "Monaco", "Impact"])
-  for (const leading of ["comfortable", "close"])
-    for (const objective of ["pixels", "axes"])
-      specs.push({
-        id: `finder-${String(specs.length + 1).padStart(2, "0")}`,
-        font,
-        leading,
-        objective,
-      });
-if (process.argv[2] === "cap") {
-  for (const tracking of [-0.5, -1.5])
-    for (const phase of [6, 7])
-      specs.push({
-        id: `cap-${String(specs.length - 11).padStart(2, "0")}`,
-        font: "Impact",
-        leading: "touch",
-        inkGap: 0.5,
-        tracking,
-        phase,
-        horizontalBoost: 4,
-        synthetic: true,
-        capWords: true,
-        objective: "axes",
-      });
-  specs.splice(0, 12);
-} else if (process.argv[2] === "cross") {
-  specs.length = 0;
-  for (const tracking of [-0.5, -1.5])
-    for (const horizontalBoost of [1, 4])
-      specs.push({
-        id: `cross-${String(specs.length + 1).padStart(2, "0")}`,
-        font: "Impact",
-        leading: "touch",
-        inkGap: 0,
-        tracking,
-        horizontalBoost,
-        synthetic: true,
-        objective: "axes",
-      });
-} else if (process.argv[2] === "touch") {
-  specs.length = 0;
-  for (const font of ["Courier", "Impact"])
-    for (const inkGap of [0, 0.5])
-      specs.push({
-        id: `touch-${String(specs.length + 1).padStart(2, "0")}`,
-        font,
-        leading: "touch",
-        inkGap,
-        tracking: -0.5,
-        objective: "axes",
-      });
-} else if (process.argv[2]) {
-  assert.equal(process.argv[2], "remaining");
-  specs.splice(0, 6);
+for (const inkGap of [0.234375, 0.375])
+  for (const phaseAdjustment of [0, 0.25])
+    specs.push({
+      id: `seam-${String(specs.length + 1).padStart(2, "0")}`,
+      font: "Impact",
+      leading: "seam-boundary",
+      inkGap,
+      phaseAdjustment,
+      objective: "Frozen text; native row-seam diagnostic",
+    });
+const seedPath = resolve(root, "feedback-02"),
+  seed = JSON.parse(
+    await readFile(resolve(seedPath, "feedback-11-layout.json"), "utf8"),
+  ),
+  seedHtml = (await import("node:zlib"))
+    .gunzipSync(await readFile(resolve(seedPath, "feedback-11.html.gz")))
+    .toString(),
+  seedRecord = (await readFile(resolve(seedPath, "results.jsonl"), "utf8"))
+    .trim()
+    .split("\n")
+    .map(JSON.parse)
+    .find((r) => r.id === "feedback-11");
+function layout(spec, metrics) {
+  const glyphs = metrics.fonts["Impact|400"].glyphs,
+    capAscent = Math.max(...[..."HEMW"].map((c) => glyphs[c].ascent)),
+    lineHeight = capAscent + spec.inkGap,
+    baseline = 20 + (lineHeight - 24) / 2,
+    offset =
+      seed.offset +
+      7 * (seed.lineHeight - lineHeight) +
+      (seed.baseline - baseline) +
+      spec.phaseAdjustment,
+    pad = seed.unit * 5;
+  const actualGlyphs = [
+      ...new Set(seed.plainText.replaceAll("\n", "").replaceAll(" ", "")),
+    ],
+    actualEnvelope =
+      Math.max(...actualGlyphs.map((c) => glyphs[c].ascent)) +
+      Math.max(...actualGlyphs.map((c) => glyphs[c].descent));
+  assert(actualEnvelope <= lineHeight);
+  const pre = (i, x, y) =>
+    `<pre id="corner-${i}" style="position:absolute;left:${pad + x * seed.unit}px;top:${pad + y * seed.unit + offset}px;width:${seed.field}px;height:${15 * lineHeight}px;margin:0;padding:0;font:400 20px/${lineHeight}px 'Impact',monospace;letter-spacing:${seed.structural.tracking}px;font-kerning:none;font-variant-ligatures:none;color:black;overflow:visible">${escapeHtml(seed.plainText)}</pre>`;
+  return {
+    ...seed,
+    spec,
+    lineHeight,
+    baseline,
+    offset,
+    modelScores: [],
+    matrix: finderMatrix(),
+    markup: `<article id="artifact" style="position:relative;width:${seed.unit * 35}px;height:${seed.unit * 35}px;background:white;color:black;overflow:visible">${pre(0, 0, 0)}${pre(1, 18, 0)}${pre(2, 0, 18)}</article>`,
+    structural: {
+      ...seed.structural,
+      actualNativePixelFeedback: false,
+      inheritedDictionaryEnvelope: seed.structural.globalInkEnvelope,
+      globalInkEnvelope: actualEnvelope,
+      allowedGlyphs: actualGlyphs.join(""),
+      frozenTextBoundaryProbe: true,
+      globalVerticalPhaseAdjustment: spec.phaseAdjustment,
+      fixedModulePitch: seed.unit,
+    },
+  };
 }
 await mkdir(out);
 await mkdir(resolve(out, "raw"));
@@ -112,38 +110,18 @@ const save = async (p, b) => {
     save(p, await format(JSON.stringify(v), { parser: "json" }));
 const sourceHashes = {};
 for (const p of [
-  "experiments/prose-qr/finder-native/fonts.mjs",
+  "experiments/prose-qr/finder-native/seams.mjs",
   "experiments/prose-qr/finder-native/layout.mjs",
-  "experiments/prose-qr/finder-native/capture.mjs",
   "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
   "experiments/prose-qr/layout.mjs",
   "experiments/prose-qr/decoders.mjs",
+  "docs/research/prose-qr/phase-06/SEAM-PLAN.md",
+  "docs/research/prose-qr/phase-06/SEAM-REPAIR.md",
   "docs/research/prose-qr/phase-06/font-metrics.json",
-  "docs/research/prose-qr/phase-06/PLAN.md",
-  ...(process.argv[2]
-    ? ["docs/research/prose-qr/phase-06/PACKING-REPAIR.md"]
-    : []),
-  ...(process.argv[2] === "touch"
-    ? ["docs/research/prose-qr/phase-06/TOUCH-PLAN.md"]
-    : []),
-  ...(process.argv[2] === "cap"
-    ? [
-        "docs/research/prose-qr/phase-06/CAP-PLAN.md",
-        "docs/research/prose-qr/phase-06/CROSS-PLAN.md",
-        "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
-        "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
-      ]
-    : []),
-  ...(process.argv[2] === "cross"
-    ? [
-        "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
-        "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
-        "docs/research/prose-qr/phase-06/CROSS-PLAN.md",
-      ]
-    : []),
-  ...(process.argv[2] === "touch"
-    ? ["docs/research/prose-qr/phase-06/TAIL-REPAIR.md"]
-    : []),
+  "docs/research/prose-qr/phase-06/feedback-02/feedback-11-layout.json",
+  "docs/research/prose-qr/phase-06/feedback-02/feedback-11.html.gz",
+  "docs/research/prose-qr/phase-06/feedback-02/raw/feedback-11.png",
+  "docs/research/prose-qr/phase-06/feedback-02/results.jsonl",
 ])
   sourceHashes[p] = hash(await readFile(p));
 await json("manifest.json", {
@@ -236,6 +214,19 @@ try {
       encodedPayload: null,
     },
   });
+  await page.setContent(seedHtml);
+  await page.evaluate(() => document.fonts.ready);
+  const seedReplay = await page.locator("#artifact").screenshot();
+  await json("seed-replay.json", {
+    seed: "feedback-11",
+    expectedPNGHash: seedRecord.pngSha256,
+    replayedPNGHash: hash(seedReplay),
+    matches: hash(seedReplay) === seedRecord.pngSha256,
+  });
+  if (hash(seedReplay) !== seedRecord.pngSha256) {
+    await save("raw/seed-replay-difference.png", seedReplay);
+    throw Error("Seed native replay mismatch");
+  }
   for (const s of specs) {
     attempted = s.id;
     const started = Date.now(),

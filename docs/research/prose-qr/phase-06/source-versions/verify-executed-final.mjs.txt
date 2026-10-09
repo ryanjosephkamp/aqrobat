@@ -238,10 +238,9 @@ const rankSummary = JSON.parse(
   rankBytes = await readFile(resolve(root, rankSummary.fullReceipt));
 assert.equal(sha(rankBytes), rankSummary.gzipSha256);
 const rank = JSON.parse(gunzipSync(rankBytes));
-assert(
-  rank.sourceScriptSha256 ===
-    sha(await readFile("experiments/prose-qr/finder-native/rank-audit.mjs")) ||
-    archives.has(rank.sourceScriptSha256),
+assert.equal(
+  rank.sourceScriptSha256,
+  sha(await readFile("experiments/prose-qr/finder-native/rank-audit.mjs")),
 );
 assert.equal(rank.results.length, 3);
 for (const r of rank.results) {

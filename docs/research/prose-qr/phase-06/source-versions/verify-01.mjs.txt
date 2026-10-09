@@ -18,10 +18,6 @@ const list = await files(root),
   archives = new Map();
 for (const p of list.filter((p) => p.endsWith(".mjs.txt")))
   archives.set(sha(await readFile(p)), relative(process.cwd(), p));
-const nativeRows = [],
-  rejected = [],
-  seedReplays = [];
-const uniquePlanned = new Set();
 const batches = [],
   sources = [],
   wins = [],
@@ -41,7 +37,6 @@ for (const manifestPath of list
   .sort()) {
   const base = resolve(manifestPath, ".."),
     m = JSON.parse(await readFile(manifestPath, "utf8"));
-  for (const s of m.specs) uniquePlanned.add(s.id);
   for (const [p, h] of Object.entries(m.sourceHashes)) {
     const same = sha(await readFile(p)) === h,
       archived = archives.get(h);
@@ -71,7 +66,6 @@ for (const manifestPath of list
     if (e.code !== "ENOENT") throw e;
   }
   if (!abort) assert.equal(rows.length, m.specs.length);
-  nativeRows.push(...rows.map((r) => ({ ...r, batch: relative(root, base) })));
   for (const r of rows) {
     assert(!ids.has(r.id), "Duplicated native case ID");
     ids.add(r.id);
@@ -99,16 +93,6 @@ for (const manifestPath of list
     assert(l.plainText.split("\n").every((s) => s.trim()));
     assert(l.structural.globalInkEnvelope <= l.lineHeight);
     assert(l.actualAdvances.every((w) => w <= l.field));
-    const fm = JSON.parse(
-        await readFile(resolve(root, "font-metrics.json"), "utf8"),
-      ).fonts[l.spec.font + "|400"],
-      tracking = l.structural.tracking || 0;
-    const actual = l.plainText
-      .split("\n")
-      .map((s) =>
-        [...s].reduce((v, c) => v + fm.glyphs[c].advance + tracking, 0),
-      );
-    assert.deepEqual(actual, l.actualAdvances);
     assert.equal(r.fit.childElements, 0);
     assert.equal(r.encodedPayload, null);
     if (r.replay.repeatMatches) {
@@ -120,66 +104,6 @@ for (const manifestPath of list
         r.replay.repeatedPNGHash,
       );
     if (r.diagnostic.correctFinder) wins.push(r.id);
-  }
-  if (m.specs.some((s) => s.id.startsWith("feedback-"))) {
-    const replay = JSON.parse(
-      await readFile(resolve(base, "seed-replay.json"), "utf8"),
-    );
-    assert(replay.matches);
-    assert.equal(replay.expectedPNGHash, replay.replayedPNGHash);
-    seedReplays.push({ batch: relative(root, base), ...replay });
-    for (const r of rows) {
-      const computed = Object.values(r.diagnostic.corridors)
-        .flatMap((x) => Object.values(x))
-        .reduce(
-          (n, a) =>
-            n +
-            Math.round((1 - a.agreement) * a.pixels) +
-            2 * Math.max(0, a.runs.length - 5),
-          0,
-        );
-      assert.equal(r.score, computed);
-      const parent =
-        r.parentId === "cap-02"
-          ? nativeRows.find((x) => x.id === "cap-02")
-          : nativeRows.find((x) => x.id === r.parentId);
-      assert(parent, "Missing native feedback parent");
-      const parentText = await readFile(
-        resolve(root, parent.batch, parent.id + ".txt"),
-        "utf8",
-      );
-      assert.equal(sha(parentText), r.parentTextSha256);
-      const lines = parentText.split("\n");
-      if (r.spec.stage === "horizontal") lines[7] = r.spec.centerLine + ".";
-      else
-        for (const i of [2, 3, 10, 11])
-          lines[i] = lines[i].replace(/^\S+/, r.spec.firstWord);
-      assert.equal(lines.join("\n"), r.plainText);
-    }
-  }
-  if (m.specs.some((s) => s.id.startsWith("seam-"))) {
-    const replay = JSON.parse(
-      await readFile(resolve(base, "seed-replay.json"), "utf8"),
-    );
-    assert(replay.matches);
-    assert.equal(replay.expectedPNGHash, replay.replayedPNGHash);
-    seedReplays.push({ batch: relative(root, base), ...replay });
-    for (const r of rows)
-      assert.equal(
-        await readFile(resolve(base, r.id + ".txt"), "utf8"),
-        await readFile(resolve(root, "feedback-02/feedback-11.txt"), "utf8"),
-      );
-  }
-  try {
-    const reject = JSON.parse(
-      await readFile(resolve(base, "source-width-rejection.json"), "utf8"),
-    );
-    assert.equal(reject.nativeCapture, false);
-    assert(reject.actualAdvances.some((w) => w > reject.field));
-    assert(!ids.has(reject.id));
-    rejected.push(reject);
-  } catch (e) {
-    if (e.code !== "ENOENT") throw e;
   }
   const c = JSON.parse(await readFile(resolve(base, "controls.json"), "utf8"));
   await png(base, c.fullQR);
@@ -203,65 +127,6 @@ for (const manifestPath of list
       .map((s) => s.id),
   });
 }
-assert.equal(candidates, 39);
-assert.equal(fullControls, 10);
-assert.equal(solidControls, 10);
-assert.equal(replays, 39);
-assert.equal(rejected.length, 1);
-assert.equal(uniquePlanned.size, 40);
-for (const r of rejected) {
-  const g = JSON.parse(
-    await readFile(resolve(root, "font-metrics.json"), "utf8"),
-  ).fonts["Impact|400"].glyphs;
-  assert.deepEqual(
-    r.plainText
-      .split("\n")
-      .map((s) => [...s].reduce((n, c) => n + g[c].advance - 0.5, 0)),
-    r.actualAdvances,
-  );
-}
-const pixelReplay = JSON.parse(
-  await readFile(resolve(root, "pixel-replay-02.json"), "utf8"),
-);
-assert.equal(pixelReplay.results.length, 59);
-assert.equal(pixelReplay.passed, 59);
-assert.equal(pixelReplay.failed, 0);
-assert.equal(
-  pixelReplay.sourceScriptSha256,
-  sha(await readFile("experiments/prose-qr/finder-native/replay.mjs")),
-);
-for (const r of pixelReplay.results)
-  assert.equal(sha(await readFile(r.path)), r.pngSha256);
-const rankSummary = JSON.parse(
-    await readFile(resolve(root, "rank-audit-summary-02.json"), "utf8"),
-  ),
-  rankBytes = await readFile(resolve(root, rankSummary.fullReceipt));
-assert.equal(sha(rankBytes), rankSummary.gzipSha256);
-const rank = JSON.parse(gunzipSync(rankBytes));
-assert(
-  rank.sourceScriptSha256 ===
-    sha(await readFile("experiments/prose-qr/finder-native/rank-audit.mjs")) ||
-    archives.has(rank.sourceScriptSha256),
-);
-assert.equal(rank.results.length, 3);
-for (const r of rank.results) {
-  assert(r.instrumentedLocationsMatch);
-  assert.equal(sha(await readFile(r.path)), r.pngSha256);
-  assert.equal(r.allScoredPoints.length, r.scoredPointCount);
-  assert.equal(r.allRankedGroups.length, r.groupCount);
-}
-const handback = JSON.parse(
-  await readFile(resolve(root, "browser-check.json"), "utf8"),
-);
-assert.equal(
-  sha(await readFile(resolve(root, "index.html"))),
-  handback.htmlSha256,
-);
-assert.equal(
-  sha(await readFile(resolve(root, "CHECKPOINT.md"))),
-  handback.checkpointSha256,
-);
-assert.equal(handback.diagramCombinations, 24);
 const prior = [];
 for (const phase of ["phase-04", "phase-05"]) {
   const path = "docs/research/prose-qr/" + phase + "/custody.json",
@@ -309,30 +174,7 @@ await writeFile(
       batches,
       candidates,
       correctFinderGeometry: wins,
-      sourceWidthRejections: rejected,
-      exactSeedReplays: seedReplays,
       exactNativeRepeats: replays,
-      uniquePlannedNativeCases: uniquePlanned.size,
-      abortedCaptureBatches: batches.filter((b) => b.abort).length,
-      retainedPixelReplay: {
-        receipt: "pixel-replay-02.json",
-        pngRgbaPairs: 59,
-        passingSerializedDiagnosticAndControlChecks: 59,
-        additionalControlPayloadAttempts: 30,
-      },
-      passiveRankAudit: {
-        receipt: "rank-audit-summary-02.json",
-        fixedRetainedInputs: 3,
-        ordinaryLocatorReturnsMatch: 3,
-        newCaptures: 0,
-        newPayloadProbes: 0,
-      },
-      handbackBrowserCheck: {
-        receipt: "browser-check.json",
-        viewport: handback.viewport,
-        diagramCombinations: handback.diagramCombinations,
-        checkpointDownloadExact: handback.checkpointDownloadExact,
-      },
       fullQrControls: fullControls,
       passingFullQrControlProbeAttempts: fullControls * 3,
       solidFinderControls: solidControls,

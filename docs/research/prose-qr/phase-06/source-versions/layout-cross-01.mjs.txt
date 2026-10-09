@@ -39,7 +39,7 @@ export function layout(spec, metrics) {
     unit = lineHeight * 2,
     field = unit * 7,
     side = Math.ceil(unit * 35),
-    offset = -lineHeight / 2 + (spec.phase || 0);
+    offset = -lineHeight / 2;
   const tracking = spec.tracking || 0;
   const allowed = (c) =>
     g[c] &&
@@ -65,8 +65,6 @@ export function layout(spec, metrics) {
         " ",
       ),
     );
-  if (spec.capWords)
-    selectedBank.push("TTTT", "TTTTTT", "TTTTTTTT", "TTTTTTTTTT");
   const words = [
     ...new Set(selectedBank.flatMap((w) => [w, w.toUpperCase()])),
   ].filter((w) => [...w].every(allowed));
@@ -195,8 +193,6 @@ export function layout(spec, metrics) {
       wordBank: words,
       syntheticLetterWords: Boolean(spec.synthetic),
       horizontalAxisBoost: spec.horizontalBoost || 1,
-      globalVerticalPhase: spec.phase || 0,
-      syntheticCapitalWords: Boolean(spec.capWords),
       singleTextNodePerCorner: true,
       encodedPayload: null,
       semantic: "Complete words; sentence meaning not claimed",

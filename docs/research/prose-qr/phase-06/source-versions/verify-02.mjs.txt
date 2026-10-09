@@ -21,7 +21,6 @@ for (const p of list.filter((p) => p.endsWith(".mjs.txt")))
 const nativeRows = [],
   rejected = [],
   seedReplays = [];
-const uniquePlanned = new Set();
 const batches = [],
   sources = [],
   wins = [],
@@ -41,7 +40,6 @@ for (const manifestPath of list
   .sort()) {
   const base = resolve(manifestPath, ".."),
     m = JSON.parse(await readFile(manifestPath, "utf8"));
-  for (const s of m.specs) uniquePlanned.add(s.id);
   for (const [p, h] of Object.entries(m.sourceHashes)) {
     const same = sha(await readFile(p)) === h,
       archived = archives.get(h);
@@ -99,16 +97,6 @@ for (const manifestPath of list
     assert(l.plainText.split("\n").every((s) => s.trim()));
     assert(l.structural.globalInkEnvelope <= l.lineHeight);
     assert(l.actualAdvances.every((w) => w <= l.field));
-    const fm = JSON.parse(
-        await readFile(resolve(root, "font-metrics.json"), "utf8"),
-      ).fonts[l.spec.font + "|400"],
-      tracking = l.structural.tracking || 0;
-    const actual = l.plainText
-      .split("\n")
-      .map((s) =>
-        [...s].reduce((v, c) => v + fm.glyphs[c].advance + tracking, 0),
-      );
-    assert.deepEqual(actual, l.actualAdvances);
     assert.equal(r.fit.childElements, 0);
     assert.equal(r.encodedPayload, null);
     if (r.replay.repeatMatches) {
@@ -203,65 +191,6 @@ for (const manifestPath of list
       .map((s) => s.id),
   });
 }
-assert.equal(candidates, 39);
-assert.equal(fullControls, 10);
-assert.equal(solidControls, 10);
-assert.equal(replays, 39);
-assert.equal(rejected.length, 1);
-assert.equal(uniquePlanned.size, 40);
-for (const r of rejected) {
-  const g = JSON.parse(
-    await readFile(resolve(root, "font-metrics.json"), "utf8"),
-  ).fonts["Impact|400"].glyphs;
-  assert.deepEqual(
-    r.plainText
-      .split("\n")
-      .map((s) => [...s].reduce((n, c) => n + g[c].advance - 0.5, 0)),
-    r.actualAdvances,
-  );
-}
-const pixelReplay = JSON.parse(
-  await readFile(resolve(root, "pixel-replay-02.json"), "utf8"),
-);
-assert.equal(pixelReplay.results.length, 59);
-assert.equal(pixelReplay.passed, 59);
-assert.equal(pixelReplay.failed, 0);
-assert.equal(
-  pixelReplay.sourceScriptSha256,
-  sha(await readFile("experiments/prose-qr/finder-native/replay.mjs")),
-);
-for (const r of pixelReplay.results)
-  assert.equal(sha(await readFile(r.path)), r.pngSha256);
-const rankSummary = JSON.parse(
-    await readFile(resolve(root, "rank-audit-summary-02.json"), "utf8"),
-  ),
-  rankBytes = await readFile(resolve(root, rankSummary.fullReceipt));
-assert.equal(sha(rankBytes), rankSummary.gzipSha256);
-const rank = JSON.parse(gunzipSync(rankBytes));
-assert(
-  rank.sourceScriptSha256 ===
-    sha(await readFile("experiments/prose-qr/finder-native/rank-audit.mjs")) ||
-    archives.has(rank.sourceScriptSha256),
-);
-assert.equal(rank.results.length, 3);
-for (const r of rank.results) {
-  assert(r.instrumentedLocationsMatch);
-  assert.equal(sha(await readFile(r.path)), r.pngSha256);
-  assert.equal(r.allScoredPoints.length, r.scoredPointCount);
-  assert.equal(r.allRankedGroups.length, r.groupCount);
-}
-const handback = JSON.parse(
-  await readFile(resolve(root, "browser-check.json"), "utf8"),
-);
-assert.equal(
-  sha(await readFile(resolve(root, "index.html"))),
-  handback.htmlSha256,
-);
-assert.equal(
-  sha(await readFile(resolve(root, "CHECKPOINT.md"))),
-  handback.checkpointSha256,
-);
-assert.equal(handback.diagramCombinations, 24);
 const prior = [];
 for (const phase of ["phase-04", "phase-05"]) {
   const path = "docs/research/prose-qr/" + phase + "/custody.json",
@@ -312,27 +241,6 @@ await writeFile(
       sourceWidthRejections: rejected,
       exactSeedReplays: seedReplays,
       exactNativeRepeats: replays,
-      uniquePlannedNativeCases: uniquePlanned.size,
-      abortedCaptureBatches: batches.filter((b) => b.abort).length,
-      retainedPixelReplay: {
-        receipt: "pixel-replay-02.json",
-        pngRgbaPairs: 59,
-        passingSerializedDiagnosticAndControlChecks: 59,
-        additionalControlPayloadAttempts: 30,
-      },
-      passiveRankAudit: {
-        receipt: "rank-audit-summary-02.json",
-        fixedRetainedInputs: 3,
-        ordinaryLocatorReturnsMatch: 3,
-        newCaptures: 0,
-        newPayloadProbes: 0,
-      },
-      handbackBrowserCheck: {
-        receipt: "browser-check.json",
-        viewport: handback.viewport,
-        diagramCombinations: handback.diagramCombinations,
-        checkpointDownloadExact: handback.checkpointDownloadExact,
-      },
       fullQrControls: fullControls,
       passingFullQrControlProbeAttempts: fullControls * 3,
       solidFinderControls: solidControls,
