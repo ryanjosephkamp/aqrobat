@@ -1,0 +1,79 @@
+{
+  "startedAt": "2026-10-09T01:42:11.844Z",
+  "parameters": [
+    {
+      "id": "rect-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 3,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 120,
+      "track": "grayscale-rectangle"
+    },
+    {
+      "id": "rect-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 3,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "track": "grayscale-rectangle"
+    },
+    {
+      "id": "rect-3",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 4,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 120,
+      "track": "grayscale-rectangle"
+    },
+    {
+      "id": "rect-4",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 4,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "track": "grayscale-rectangle"
+    }
+  ],
+  "sourceHashes": {
+    "layout.mjs": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+    "rectangle.mjs": "119b793e5f9e976f3fc386168109d4dc31cb0c6fc35aca40f62a53a61e7fbe67",
+    "rectangle-run.mjs": "55913bdeb27984b342af6e94f89c028df6437195f4a70ca202886037c75e581b"
+  },
+  "configuredReader": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "note": "Rectangular text-block geometry; ordinary 1.25em leading; unchanged letter shapes/advance. No square-marker substitution or QR underlay."
+}

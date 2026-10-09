@@ -1,0 +1,103 @@
+{
+  "testedAt": "2026-10-09T01:46:29.469Z",
+  "reader": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "options": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "receipts": [
+    {
+      "kind": "conventional positive",
+      "size": 640,
+      "pngSha256": "02c0e89e8d63e891d6dd69c7cee950832e8d3d8efe2990a6537d9f19fd7a80b0",
+      "payloads": ["AQROBAT-TEST"],
+      "exact": true
+    },
+    {
+      "kind": "conventional positive",
+      "size": 960,
+      "pngSha256": "13877b75ca29c5bc0b348aaa7de31469e9309be7a24ce559d2317bdda304a93e",
+      "payloads": ["AQROBAT-TEST"],
+      "exact": true
+    },
+    {
+      "kind": "successful native HTML replay",
+      "id": "band-003",
+      "pngSha256": "d861e6104cfeba8a561cde29982a435f1281a0faa3db57cd053c20b859b7dcfd",
+      "textLineCount": 42,
+      "exact": true,
+      "payloads": ["AQROBAT-TEST"]
+    },
+    {
+      "kind": "successful native HTML replay",
+      "id": "band-009",
+      "pngSha256": "37e4e9b2afbaf93c5a15fab667a95b88fec161f9ad6c97ebea5da034612edfc2",
+      "textLineCount": 42,
+      "exact": true,
+      "payloads": ["AQROBAT-TEST"]
+    },
+    {
+      "kind": "successful native HTML replay",
+      "id": "band-015",
+      "pngSha256": "69e9adce4e39530235ff71d5d3dce4e16089b93cbd2f2fd6863f2f280e586a44",
+      "textLineCount": 63,
+      "exact": true,
+      "payloads": ["AQROBAT-TEST"]
+    },
+    {
+      "kind": "successful native HTML replay",
+      "id": "band-021",
+      "pngSha256": "dac5fc8c0610ead5de935e27e7d37e7586342b10dea642f463ae37bc62105bb6",
+      "textLineCount": 63,
+      "exact": true,
+      "payloads": ["AQROBAT-TEST"]
+    },
+    {
+      "kind": "successful native HTML replay",
+      "id": "band-023",
+      "pngSha256": "5798b3c08186b1236882a6150766458e198c65325c2e806168a0b9e2238e78c4",
+      "textLineCount": 63,
+      "exact": true,
+      "payloads": ["AQROBAT-TEST"]
+    },
+    {
+      "kind": "successful native HTML replay",
+      "id": "band-024",
+      "pngSha256": "dd652d989821135ee352093dcbc8f76b2bf129ce0be113415718f05e0c8d251a",
+      "textLineCount": 63,
+      "exact": true,
+      "payloads": ["AQROBAT-TEST"]
+    },
+    {
+      "kind": "uniform paragraph negative",
+      "font": "Menlo",
+      "pngSha256": "7e5cfaf582002e06257a221f08ad036d21913f958a64636372d30b23be9be631",
+      "recognized": false,
+      "description": "Same readable story geometry; all glyphs regular black, QR-dependent ink styling removed"
+    },
+    {
+      "kind": "uniform paragraph negative",
+      "font": "Courier New",
+      "pngSha256": "45beb03ffc707d41fd5015660749964e192bede9350bee6091204cb66d29dd8d",
+      "recognized": false,
+      "description": "Same readable story geometry; all glyphs regular black, QR-dependent ink styling removed"
+    }
+  ],
+  "negativePngStorage": "Hashes retained; source recipe and deterministic styling removal recorded; no extra duplicate large negative PNGs stored",
+  "phone": "not tested"
+}
