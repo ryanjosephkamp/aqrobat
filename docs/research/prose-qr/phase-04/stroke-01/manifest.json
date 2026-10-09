@@ -1,0 +1,82 @@
+{
+  "startedAt": "2026-10-09T16:11:53.074Z",
+  "specs": [
+    {
+      "id": "stroke-1",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 246,
+      "stroke": 1,
+      "track": "Visible glyph outlining and faint text: styled diagnostic, not plain ASCII or a readability pass"
+    },
+    {
+      "id": "stroke-2",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 246,
+      "stroke": 2,
+      "track": "Visible glyph outlining and faint text: styled diagnostic, not plain ASCII or a readability pass"
+    },
+    {
+      "id": "stroke-3",
+      "payload": "https://example.com/",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 246,
+      "stroke": 1,
+      "track": "Visible glyph outlining and faint text: styled diagnostic, not plain ASCII or a readability pass"
+    },
+    {
+      "id": "stroke-4",
+      "payload": "https://example.com/",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 246,
+      "stroke": 2,
+      "track": "Visible glyph outlining and faint text: styled diagnostic, not plain ASCII or a readability pass"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/phone-readability/stroke.mjs": "1a1aec176c52cb560a18fe13e5276d2c69c57b73e738c4093a0a9cea4fcb2dc2",
+    "experiments/prose-qr/phone-readability/capture.mjs": "72e3ef912ca1d5cff98200c7ab207fba30dc0bd2f916f396bf069fc74e599ed6",
+    "experiments/prose-qr/phone-readability/proportional.mjs": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+    "docs/research/prose-qr/phase-04/font-metrics.json": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "jsQR and ZXing using their ordinary binarizer/downscaling; no tuned reader settings, no expected payload/matrix input"
+}

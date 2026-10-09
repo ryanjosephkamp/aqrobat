@@ -1,0 +1,38 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { gunzipSync } from "node:zlib";
+import { resolve } from "node:path";
+import { format } from "prettier";
+import { root } from "./capture.mjs";
+import { escapeHtml } from "../layout.mjs";
+const receipt = JSON.parse(
+  await readFile(resolve(root, "verification-final.json"), "utf8"),
+);
+const checkpoint = await readFile(resolve(root, "CHECKPOINT.md"), "utf8");
+const png = await readFile(resolve(root, "justified-01/raw/justified-1.png"));
+const html = gunzipSync(
+  await readFile(resolve(root, "justified-01/justified-1.html.gz")),
+);
+const uri = (mime, b) => `data:${mime};base64,${b.toString("base64")}`;
+const rows = receipt.batches
+  .map(
+    (x) =>
+      `<tr><td>${escapeHtml(x.batch)}</td><td>${x.retainedDecoded}/${x.planned}</td><td>${x.aborted ? escapeHtml(x.aborted.reason) : "Completed; no exact recovery"}</td></tr>`,
+  )
+  .join("");
+const page = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aqrobat · Prose QR research checkpoint</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f1fa;color:#25233b;font:17px/1.65 system-ui,sans-serif}main{max-width:820px;margin:auto;padding:36px 20px 80px}h1{font:600 clamp(32px,7vw,54px)/1.1 Georgia,serif;letter-spacing:-.03em}h2{font-size:23px}p{max-width:68ch}a{color:#4a3fa8}section,details{background:white;padding:24px;border:1px solid #ddd6ed;border-radius:18px;margin:22px 0}small,.muted{color:#626078}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:.13em;font-weight:700}.status{border-left:6px solid #a74542}.stats{display:flex;gap:16px;flex-wrap:wrap}.stats div{flex:1;min-width:130px;padding:16px;background:#eeebf7;border-radius:12px}.stats strong{display:block;font-size:30px;line-height:1.2}.table-scroll{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{text-align:left;border-bottom:1px solid #e6e1ee;padding:10px 8px;vertical-align:top}th:first-child,td:first-child{white-space:nowrap}img{display:block;max-width:100%;height:auto;background:white;border:1px solid #eee}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.actions a{display:inline-block;border:1px solid #b7afd4;border-radius:8px;padding:9px 14px;text-decoration:none;font-size:14px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace;background:#f6f4fa;padding:18px}summary{font-weight:700;cursor:pointer}.note{font-size:14px}footer{margin-top:32px;font-size:14px}@media(max-width:500px){section,details{padding:18px}main{padding:24px 14px 56px}.stats div{min-width:100px}th,td{padding:8px 4px}}</style></head><body><main>
+<p class="eyebrow">Aqrobat · October 9, 2026 · Research checkpoint</p><h1>The paragraphs still do not scan normally.</h1>
+<section class="status"><p><strong>Your result is recorded:</strong> both Samsung scanners failed the earlier full PNGs. The new software probes also failed. This remains research in progress, with no new phone-ready example.</p><p class="note">You do not need to review or scan this new failure batch. The previous styled-prose and regular black ASCII techniques are preserved as separate configured-reader results.</p></section>
+<div class="stats"><div><strong>${receipt.completedCandidateViews}</strong>retained candidate views</div><div><strong>0</strong>default-reader recoveries</div><div><strong>${receipt.controlsAllThreeReadersPassed}</strong>conventional controls passed</div></div>
+<section><h2>What changed in our understanding</h2><p>Average ink density can carry a signal for a configured reader. It has not produced a pattern the default readers can reliably locate.</p><p>In two measured examples, light regions were mostly clear, but dark regions retained many gaps between and inside letters. Outlining increased coverage and hurt legibility without fixing detection. The locator found unrelated patterns inside the paragraph rather than the intended QR corners.</p><p>Normal line justification fixes the ragged right edge of a paragraph, but our one-case test still failed. Gray, bolding, outlines, blur, density, and shrinking alone have not solved this.</p><p class="note">These are software observations. We do not know the Samsung scanners' internal algorithms. No new phone or print observations were collected.</p></section>
+<section><h2>What was tested</h2><p>101 new text renderings plus eight browser-resampled views of earlier PNGs. Each unchanged output was tested by jsQR, default ZXing, and the retained baseline probe: 327 candidate attempts, zero exact payloads. Fourteen ordinary QR controls passed all three readers.</p><div class="table-scroll"><table><thead><tr><th>Batch</th><th>Retained/planned</th><th>Outcome</th></tr></thead><tbody>${rows}<tr><td>display-01</td><td>8/8</td><td>Completed; no exact recovery</td></tr></tbody></table></div><p class="note">Sixteen planned text cases did not reach decoding. They are not scan failures. Every retained candidate, abort, source version, control, recipe, and raw result stays in the repository.</p></section>
+<details><summary>One diagnostic example — known software failure</summary><p>This is the exact 700-pixel PNG from the normally justified paragraph test. Faint letters are a readability compromise; this is not the desired final prose.</p><img alt="Known failed justified text QR experiment. Some letters are black, others faint gray; no hidden QR blocks." src="${uri("image/png", png)}"><p class="note">Intended payload: https://example.com/ — not recovered by any of the three probes. This page fits the image to your screen; the saved PNG retains its original pixels.</p><div class="actions"><a download="aqrobat-justified-known-failure.png" href="${uri("image/png", png)}">Save exact PNG</a><a download="aqrobat-justified-known-failure.html" href="${uri("text/html", html)}">Save native styled text</a></div></details>
+<section><h2>The next useful direction</h2><p>Optimize actual glyph and word placement for the finder geometry after ordinary thresholding, rather than optimizing only average darkness. Freeze the font and native readable size, keep the batch small, and preserve every outcome.</p><p>Styled prose and regular black ASCII remain separate. Hidden blocks, invisible text, forced decoder corners, special reader tuning, and unreadable shrinking do not meet the goal. A readable default-reader pass comes before another phone candidate; phone acceptance still comes afterward.</p><p>Coherent prose, subtle appearance, normal phone scans, and portable text are still open. This checkpoint does not declare the project complete or the goal impossible.</p></section>
+<details><summary>Saved continuation prompt and boundaries</summary><pre>${escapeHtml(checkpoint)}</pre><div class="actions"><a download="aqrobat-prose-checkpoint-2026-10-09.md" href="${uri("text/markdown", Buffer.from(checkpoint))}">Save checkpoint</a></div></details>
+<footer><p>Product 0.4.2, extension and original exports remain unchanged. npm is private and unpublished. PR #1 stays draft; no merge, project move, agent/chat, release, or external message.</p><p><a href="https://github.com/ryanjosephkamp/aqrobat/pull/1">Existing draft PR</a> · <a href="https://github.com/ryanjosephkamp/aqrobat/tree/codex/aqrobat-foundation/docs/research/prose-qr/phase-04">Evidence and report</a></p><p>Self-contained reading file. No external fonts, scripts, AI calls, analytics, or automatic requests.</p></footer></main></body></html>`;
+await writeFile(
+  resolve(root, "index.html"),
+  await format(page, { parser: "html" }),
+  { flag: "wx" },
+);
+console.log("Status handback saved");

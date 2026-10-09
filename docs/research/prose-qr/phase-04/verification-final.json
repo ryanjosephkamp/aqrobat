@@ -1,0 +1,423 @@
+{
+  "verifiedAt": "2026-10-09T16:22:42.352Z",
+  "sourceScriptSha256": "e92a1da0aabade2adf1e46546934b8f21d0cf1dc9eea7c8da57221129fad6b0a",
+  "scopeBaseline": "c02509e26c0f0822313a9c0aa740f3498e453abb",
+  "batches": [
+    {
+      "batch": "contrast-01",
+      "planned": 24,
+      "retainedDecoded": 24,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "decorated-01",
+      "planned": 4,
+      "retainedDecoded": 0,
+      "controls": 1,
+      "aborted": {
+        "attempted": "decorated-1",
+        "completed": 0,
+        "reason": "Source-line assertion stopped before raster/decoder attempt"
+      },
+      "uncompleted": [
+        "decorated-1",
+        "decorated-2",
+        "decorated-3",
+        "decorated-4"
+      ]
+    },
+    {
+      "batch": "decorated-02",
+      "planned": 4,
+      "retainedDecoded": 4,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "dense-01",
+      "planned": 22,
+      "retainedDecoded": 22,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "justified-01",
+      "planned": 1,
+      "retainedDecoded": 1,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "lowpass-01",
+      "planned": 24,
+      "retainedDecoded": 17,
+      "controls": 1,
+      "aborted": {
+        "attempted": "lowpass-18",
+        "completed": 17,
+        "reason": "File reserve stopped persistence before decoder attempt"
+      },
+      "uncompleted": [
+        "lowpass-18",
+        "lowpass-19",
+        "lowpass-20",
+        "lowpass-21",
+        "lowpass-22",
+        "lowpass-23",
+        "lowpass-24"
+      ]
+    },
+    {
+      "batch": "quiet-ink-01",
+      "planned": 8,
+      "retainedDecoded": 3,
+      "controls": 1,
+      "aborted": {
+        "attempted": "quiet-4",
+        "completed": 3,
+        "reason": "File reserve stopped persistence before decoder attempt"
+      },
+      "uncompleted": ["quiet-4", "quiet-5", "quiet-6", "quiet-7", "quiet-8"]
+    },
+    {
+      "batch": "serif-01",
+      "planned": 6,
+      "retainedDecoded": 6,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "single-01",
+      "planned": 8,
+      "retainedDecoded": 8,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "small-01",
+      "planned": 6,
+      "retainedDecoded": 6,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "stroke-01",
+      "planned": 4,
+      "retainedDecoded": 4,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "tight-01",
+      "planned": 6,
+      "retainedDecoded": 6,
+      "controls": 1,
+      "aborted": null,
+      "uncompleted": []
+    }
+  ],
+  "newTextRenderings": 101,
+  "retainedPngDisplayViews": 8,
+  "completedCandidateViews": 109,
+  "controlsAllThreeReadersPassed": 14,
+  "wins": { "jsQR": [], "ordinaryZXing": [], "baselineZXing": [] },
+  "sourceCustody": [
+    {
+      "batch": "contrast-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "39b9ef793adeb9bc42f6ae4a25e0e339ff3cd13d97d618090c4f4859f15f7cb6",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-initial.mjs.txt"
+    },
+    {
+      "batch": "contrast-01",
+      "path": "experiments/prose-qr/phone-readability/contrast.mjs",
+      "expected": "96457f7fe80399153137bd2374d916cae6a0e17eaac98fa1504092d6713e91a8",
+      "preservedAt": "experiments/prose-qr/phone-readability/contrast.mjs"
+    },
+    {
+      "batch": "contrast-01",
+      "path": "experiments/prose-qr/flow/layout.mjs",
+      "expected": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+      "preservedAt": "experiments/prose-qr/flow/layout.mjs"
+    },
+    {
+      "batch": "decorated-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "8f8cfed78bb63758e5c65cbfd503cab77014933f752d74e64feb0f990fd8fbc3",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-reserve-38.mjs.txt"
+    },
+    {
+      "batch": "decorated-01",
+      "path": "experiments/prose-qr/phone-readability/decorated.mjs",
+      "expected": "c0074667cffb7e9ac38041be4d03bb0ce11e1fd0a37a11995e3c0581c0e2696d",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/decorated-01/decorated-executed.mjs.txt"
+    },
+    {
+      "batch": "decorated-01",
+      "path": "experiments/prose-qr/flow/layout.mjs",
+      "expected": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+      "preservedAt": "experiments/prose-qr/flow/layout.mjs"
+    },
+    {
+      "batch": "decorated-02",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "16eaa1760c282bc052d6eff6d447ac8320d6bd7c62bf48dad045b0c18a20b171",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-line-hash-38.mjs.txt"
+    },
+    {
+      "batch": "decorated-02",
+      "path": "experiments/prose-qr/phone-readability/decorated.mjs",
+      "expected": "e0ad9ca85521342f97689515a77a827bdbf72f00fef556279d684f96c03ba743",
+      "preservedAt": "experiments/prose-qr/phone-readability/decorated.mjs"
+    },
+    {
+      "batch": "decorated-02",
+      "path": "experiments/prose-qr/flow/layout.mjs",
+      "expected": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+      "preservedAt": "experiments/prose-qr/flow/layout.mjs"
+    },
+    {
+      "batch": "dense-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "39b9ef793adeb9bc42f6ae4a25e0e339ff3cd13d97d618090c4f4859f15f7cb6",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-initial.mjs.txt"
+    },
+    {
+      "batch": "dense-01",
+      "path": "experiments/prose-qr/phone-readability/proportional.mjs",
+      "expected": "dfe7c8dea9acfd5f76c6af5b581ef9d194a3d537153b1e4ccacf832ad8d1b3c0",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/proportional-dense-executed.mjs.txt"
+    },
+    {
+      "batch": "dense-01",
+      "path": "experiments/prose-qr/phone-readability/dense.mjs",
+      "expected": "9818e14dbff9b7a2a09539e84f87709a83db43f274f5286c5e6d1ef9fe8edd99",
+      "preservedAt": "experiments/prose-qr/phone-readability/dense.mjs"
+    },
+    {
+      "batch": "dense-01",
+      "path": "docs/research/prose-qr/phase-04/font-metrics.json",
+      "expected": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db",
+      "preservedAt": "docs/research/prose-qr/phase-04/font-metrics.json"
+    },
+    {
+      "batch": "justified-01",
+      "path": "experiments/prose-qr/phone-readability/justified.mjs",
+      "expected": "685db76b098dc3209bcc7535c79b1c1c111ab17c9466f0c2902a0409dbfb3885",
+      "preservedAt": "experiments/prose-qr/phone-readability/justified.mjs"
+    },
+    {
+      "batch": "justified-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "72e3ef912ca1d5cff98200c7ab207fba30dc0bd2f916f396bf069fc74e599ed6",
+      "preservedAt": "experiments/prose-qr/phone-readability/capture.mjs"
+    },
+    {
+      "batch": "justified-01",
+      "path": "experiments/prose-qr/phone-readability/proportional.mjs",
+      "expected": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+      "preservedAt": "experiments/prose-qr/phone-readability/proportional.mjs"
+    },
+    {
+      "batch": "justified-01",
+      "path": "docs/research/prose-qr/phase-04/font-metrics.json",
+      "expected": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db",
+      "preservedAt": "docs/research/prose-qr/phase-04/font-metrics.json"
+    },
+    {
+      "batch": "lowpass-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "39b9ef793adeb9bc42f6ae4a25e0e339ff3cd13d97d618090c4f4859f15f7cb6",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-initial.mjs.txt"
+    },
+    {
+      "batch": "lowpass-01",
+      "path": "experiments/prose-qr/phone-readability/lowpass.mjs",
+      "expected": "78d5a29df5ef1fb72f28c9cffe3428b4bb56100af8fd7618518167e49b12229c",
+      "preservedAt": "experiments/prose-qr/phone-readability/lowpass.mjs"
+    },
+    {
+      "batch": "lowpass-01",
+      "path": "experiments/prose-qr/flow/layout.mjs",
+      "expected": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+      "preservedAt": "experiments/prose-qr/flow/layout.mjs"
+    },
+    {
+      "batch": "quiet-ink-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "16eaa1760c282bc052d6eff6d447ac8320d6bd7c62bf48dad045b0c18a20b171",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-line-hash-38.mjs.txt"
+    },
+    {
+      "batch": "quiet-ink-01",
+      "path": "experiments/prose-qr/phone-readability/proportional.mjs",
+      "expected": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+      "preservedAt": "experiments/prose-qr/phone-readability/proportional.mjs"
+    },
+    {
+      "batch": "quiet-ink-01",
+      "path": "experiments/prose-qr/phone-readability/quiet-ink.mjs",
+      "expected": "6ae02572f080980204c0b9479a28d71292e6b42496a27a6c5e4a2820141fa415",
+      "preservedAt": "experiments/prose-qr/phone-readability/quiet-ink.mjs"
+    },
+    {
+      "batch": "quiet-ink-01",
+      "path": "docs/research/prose-qr/phase-04/font-metrics.json",
+      "expected": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db",
+      "preservedAt": "docs/research/prose-qr/phase-04/font-metrics.json"
+    },
+    {
+      "batch": "serif-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "8f8cfed78bb63758e5c65cbfd503cab77014933f752d74e64feb0f990fd8fbc3",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-reserve-38.mjs.txt"
+    },
+    {
+      "batch": "serif-01",
+      "path": "experiments/prose-qr/phone-readability/serif.mjs",
+      "expected": "a47455a3ad2677f8ae1b393f7725a4718970f35826971d8600e6b1b37725ea25",
+      "preservedAt": "experiments/prose-qr/phone-readability/serif.mjs"
+    },
+    {
+      "batch": "serif-01",
+      "path": "experiments/prose-qr/phone-readability/tight-layout.mjs",
+      "expected": "46dadea8abaa8cc2e9eb3ef2a7fb444c49adc29bef11268091fca77093eb634a",
+      "preservedAt": "experiments/prose-qr/phone-readability/tight-layout.mjs"
+    },
+    {
+      "batch": "single-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "16eaa1760c282bc052d6eff6d447ac8320d6bd7c62bf48dad045b0c18a20b171",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-line-hash-38.mjs.txt"
+    },
+    {
+      "batch": "single-01",
+      "path": "experiments/prose-qr/phone-readability/proportional.mjs",
+      "expected": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+      "preservedAt": "experiments/prose-qr/phone-readability/proportional.mjs"
+    },
+    {
+      "batch": "single-01",
+      "path": "experiments/prose-qr/phone-readability/single-line.mjs",
+      "expected": "0545901d43b694588a34960e5f2b14c8fa0f31816f302dc0838db887d4868d6e",
+      "preservedAt": "experiments/prose-qr/phone-readability/single-line.mjs"
+    },
+    {
+      "batch": "single-01",
+      "path": "docs/research/prose-qr/phase-04/font-metrics.json",
+      "expected": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db",
+      "preservedAt": "docs/research/prose-qr/phase-04/font-metrics.json"
+    },
+    {
+      "batch": "small-01",
+      "path": "experiments/prose-qr/phone-readability/small-view.mjs",
+      "expected": "1939a6d6d9f348ffa7e7f0c53d547929ce85f6bb487a4c362a34dbde6cff8b00",
+      "preservedAt": "experiments/prose-qr/phone-readability/small-view.mjs"
+    },
+    {
+      "batch": "small-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "72e3ef912ca1d5cff98200c7ab207fba30dc0bd2f916f396bf069fc74e599ed6",
+      "preservedAt": "experiments/prose-qr/phone-readability/capture.mjs"
+    },
+    {
+      "batch": "small-01",
+      "path": "experiments/prose-qr/phone-readability/proportional.mjs",
+      "expected": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+      "preservedAt": "experiments/prose-qr/phone-readability/proportional.mjs"
+    },
+    {
+      "batch": "small-01",
+      "path": "experiments/prose-qr/flow/layout.mjs",
+      "expected": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+      "preservedAt": "experiments/prose-qr/flow/layout.mjs"
+    },
+    {
+      "batch": "small-01",
+      "path": "docs/research/prose-qr/phase-04/font-metrics.json",
+      "expected": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db",
+      "preservedAt": "docs/research/prose-qr/phase-04/font-metrics.json"
+    },
+    {
+      "batch": "stroke-01",
+      "path": "experiments/prose-qr/phone-readability/stroke.mjs",
+      "expected": "1a1aec176c52cb560a18fe13e5276d2c69c57b73e738c4093a0a9cea4fcb2dc2",
+      "preservedAt": "experiments/prose-qr/phone-readability/stroke.mjs"
+    },
+    {
+      "batch": "stroke-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "72e3ef912ca1d5cff98200c7ab207fba30dc0bd2f916f396bf069fc74e599ed6",
+      "preservedAt": "experiments/prose-qr/phone-readability/capture.mjs"
+    },
+    {
+      "batch": "stroke-01",
+      "path": "experiments/prose-qr/phone-readability/proportional.mjs",
+      "expected": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+      "preservedAt": "experiments/prose-qr/phone-readability/proportional.mjs"
+    },
+    {
+      "batch": "stroke-01",
+      "path": "docs/research/prose-qr/phase-04/font-metrics.json",
+      "expected": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db",
+      "preservedAt": "docs/research/prose-qr/phase-04/font-metrics.json"
+    },
+    {
+      "batch": "tight-01",
+      "path": "experiments/prose-qr/phone-readability/capture.mjs",
+      "expected": "8f8cfed78bb63758e5c65cbfd503cab77014933f752d74e64feb0f990fd8fbc3",
+      "preservedAt": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/phase-04/source-versions/capture-reserve-38.mjs.txt"
+    },
+    {
+      "batch": "tight-01",
+      "path": "experiments/prose-qr/phone-readability/tight.mjs",
+      "expected": "8c1e7b7a10bf0ca2512a9a71ce8f661fa9e65b29e7bf608f056842a34d3143d3",
+      "preservedAt": "experiments/prose-qr/phone-readability/tight.mjs"
+    },
+    {
+      "batch": "tight-01",
+      "path": "experiments/prose-qr/phone-readability/tight-layout.mjs",
+      "expected": "46dadea8abaa8cc2e9eb3ef2a7fb444c49adc29bef11268091fca77093eb634a",
+      "preservedAt": "experiments/prose-qr/phone-readability/tight-layout.mjs"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "newPhoneObservations": "none; owner negative belongs to prior full-PNG examples, both Samsung scanners, unspecified case denominator",
+  "phaseBytesBeforeReceipt": 38901579,
+  "checks": {
+    "pngHashes": true,
+    "pngDimensions": true,
+    "gzipHashes": true,
+    "sourceVersions": true,
+    "controlExactPayloads": true,
+    "noInternalDoubleSpaces": true,
+    "unitTests": "18/18 passed this turn",
+    "productBuildAndBrowser": "Unchanged product; previous phase-02 disposable-copy receipts preserved, not rerun here"
+  },
+  "limits": "Stored results are reconciled, not rerun; readable/coherent prose and phone acceptance remain separate."
+}
