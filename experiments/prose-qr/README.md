@@ -26,6 +26,8 @@ complete denominator. All negative results remain available.
 - `board.mjs` / `review-template.html`: self-contained original/live review board.
 - `layout.test.mjs` / `review-check.mjs`: structural/custody checks and synthetic
   manual-board checks. Synthetic notes are not owner scan observations.
+- `verify-evidence.mjs`: retained denominator, raw PNG hashes, source receipt,
+  compressed replay, diagnostic count, and board-receipt reconciliation.
 
 The diagnostic/continuation/report helpers are intentionally bound to this
 pilot's paths; do **not** rerun them over frozen evidence. To inspect a replay,
@@ -37,6 +39,7 @@ font/geometry depend on the recorded platform; a rerender is a new condition.
 ```sh
 npm ci --ignore-scripts
 node --test experiments/prose-qr/layout.test.mjs
+node experiments/prose-qr/verify-evidence.mjs
 node experiments/prose-qr/review-check.mjs
 npm test
 npm run build
