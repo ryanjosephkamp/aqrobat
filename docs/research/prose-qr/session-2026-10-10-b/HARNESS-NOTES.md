@@ -1,0 +1,13 @@
+# Harness notes
+
+- Phase49 original minimum-gap receipt measured the first line only. A retained all-line source-bounds audit establishes1.240234375px minimum for both sources; the original capture remains unchanged. Bounds are not human legibility.
+- Phase50 fails before decoder invocation because this OpenCV build lacks getLogLevel. Four setup errors/four unknown slots remain; phase51 separately completes the four-case default-reader logging profile. No QR debug trace is emitted by this build.
+- Phase54 four monospaced cases pass mechanical bounds but are rejected on native visual inspection. Their completed reader outcomes are not removed.
+- Phase58 three source-width overflows remain retained with their unattempted reader slots.
+- Phase60 requests an unavailable Songti local font identity and aborts on the third resource. Two native captures/repeats remain; all18 primary reader slots are unattempted. Phase61 uses the installed STSongti-SC-Regular identity in a fresh complete profile.
+- Phase62 Medium/Semibold requested at CSS400 render with Regular instead; actual platform-font identity rejects all four cases before readers. The script computes target origins but omits them from its returned object. No origin measurements are retroactively claimed.
+- Phase63 sets native500/600 consistently for face declarations, loading, measurements and visible text. All four platform-font identities match; all12 target DOM origins retain x phase drift−0.015625px/y0. The native structure gate still fails.
+- Native glyph-resource gray128 components and ordinary-binarizer models supply rendering rules only. Actual selected native runs, source samples, nearest unselected quads and threshold replicas remain different evidence. The diagnostic inverted resource is not an acceptance decoder branch.
+- Passive jsQR logging checks unchanged full stock return parity, then diagnoses actually executed branches. It is the same implementation, not another independent engine. Current phase readers include stock OpenCV, default ZXing and stock jsQR; no new independent-reader count is inferred from repeated profiles.
+- No full-QR sweep was performed here. All new native sources are finder-only; absence of payload is expected. The earlier full native URL remains a separate failed experiment.
+- Tests from before the connection interruption: npm test18/18; formatting passed at two milestones. No product changes; product build, browser product/extension, Gmail, native paste and phone/print checks are not repeated for research-only edits. Final report browser checks and fresh custody/pixel verification have their own receipts.
