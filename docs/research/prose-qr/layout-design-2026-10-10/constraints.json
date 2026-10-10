@@ -1,0 +1,360 @@
+{
+  "schema": "aqrobat.layout-constraints.v1",
+  "sources": {
+    "AGENTS.md": {
+      "sha256": "f6137c5e3d8593d6cfc0d272ef6a939bf1044d147129900418622a9bd13da9d8",
+      "bytes": 1571
+    },
+    "docs/PROJECT-HANDOFF.md": {
+      "sha256": "31f9b05100f7298d46f850efdd32057e4e58abc04db31b8b84a064dc6a5d534d",
+      "bytes": 5024
+    },
+    "docs/research/prose-qr/control-panel-2026-10-10/README.md": {
+      "sha256": "e719ee35de651a1467b89b29dd853bf0ba90f0b0cfc0f4c2fe6884bb85cd926e",
+      "bytes": 4463
+    },
+    "docs/research/prose-qr/control-panel-2026-10-10/RECONCILIATION.md": {
+      "sha256": "306d439939d59b1e4ecb6bd885cf644018290d07f8268d3ffdff63bbabadac47",
+      "bytes": 4598
+    },
+    "docs/research/prose-qr/control-panel-2026-10-10/CONTINUE.txt": {
+      "sha256": "36a06ac7acb4bad1a9441bcf0a123d4a7b7ec6df6f646a044f73d22681a965f9",
+      "bytes": 2362
+    },
+    "docs/research/prose-qr/sol-review-2026-10-10/REVIEW.md": {
+      "sha256": "fd50a0de7d93f20077832562d8cb5e17d818f2b221cd0c2167932e40e6620e4b",
+      "bytes": 21167
+    },
+    "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/recipe.json": {
+      "sha256": "be5d881f9fbb1e20c25ea2fc3c7ac1ac9115e28b51b1ed7dc556987607447b9d",
+      "bytes": 917
+    },
+    "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json": {
+      "sha256": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee",
+      "bytes": 282587
+    },
+    "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/native.html.txt": {
+      "sha256": "f64b348ee5e9d0e2ba6566565a0596b2de6af08f6a77ccd72df96b201725239f",
+      "bytes": 1751
+    },
+    "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/native.txt": {
+      "sha256": "783282b92f02c1528d599fc905f7b81997b08fd5226a7695ca14ad791927c2ae",
+      "bytes": 714
+    },
+    "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/passive-summary.json": {
+      "sha256": "7709c4c943ea53a7b154f216b682e9c9fa27aeeb6cea797b08777cbce4eb769f",
+      "bytes": 37331
+    },
+    "docs/research/prose-qr/astra-2026-10-10/context-04/reader-results.json": {
+      "sha256": "7afa6313ea7536cf7129e7ec613192672b93d32ba83e74318cff3e617eedcd4e",
+      "bytes": 828
+    },
+    "docs/research/prose-qr/astra-2026-10-10/layout-audit-01/results.json": {
+      "sha256": "166851874064aeb8ed930f7adcf5c75ee1fbd5e8c0ebeaddacf39e8356e307ef",
+      "bytes": 3429
+    },
+    "docs/research/prose-qr/astra-2026-10-10/initial-paint-check.json": {
+      "sha256": "e49ace2ea06d6611c54efaca595180f52b2b73fd0ef22cb682a08c34ff12943b",
+      "bytes": 1692
+    },
+    "docs/research/prose-qr/astra-2026-10-10/coupling-01/results.json": {
+      "sha256": "0f4aca6cae5b8ac29bb390e8ca83f70bde0c2e4c0e7f209826043bb4e9e79179",
+      "bytes": 31415
+    },
+    "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/result.json": {
+      "sha256": "92ee6c84141397adc8169e7a8e8cceaf2d72f53166200655225dcf58b50546b0",
+      "bytes": 4990
+    },
+    "experiments/prose-qr/astra-2026-10-10/common.mjs": {
+      "sha256": "172d9e84f8ad24fedc6f5f7c8eed95ee042e20ef617c86fdf645111eb9602646",
+      "bytes": 1967
+    },
+    "experiments/prose-qr/astra-2026-10-10/continuous-v2.mjs": {
+      "sha256": "f51a64d5e49afcaba5c4804e3d4f30821facbfc5b28e3852cf65a745fb6e2424",
+      "bytes": 9604
+    },
+    "docs/research/prose-qr/control-panel-2026-10-10/comparison.json": {
+      "sha256": "92993b7fd4c36a3f3ed75ec6f978ca2756f5836e6bfab34c55137bc485ea8923",
+      "bytes": 36910
+    },
+    "package.json": {
+      "sha256": "aa01b4783b2df46ebc0794f76756b3bd6183ec1975be84ef87b3b4b4fd74d161",
+      "bytes": 1412
+    },
+    ".prettierignore": {
+      "sha256": "7cc0c40a09bc9da48bbaca266f39080eff8ae40ca63e661cc4d4a43413de3ad8",
+      "bytes": 53
+    }
+  },
+  "constraints": [
+    {
+      "id": "C1",
+      "kind": "measured",
+      "statement": "The retained source declares dimension 85, pitch 33/7, three exact Once/Our/Often paragraphs, 18/27 ArialMT with tracking 1 and 64px Copperplate-Bold outlined initials.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/recipe.json",
+          "keys": [
+            "dimension",
+            "unit",
+            "texts",
+            "bodySize",
+            "bodyLeading",
+            "bodyTracking",
+            "firstLetterSize",
+            "stroke"
+          ],
+          "sha256": "be5d881f9fbb1e20c25ea2fc3c7ac1ac9115e28b51b1ed7dc556987607447b9d"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/native.html.txt",
+          "keys": ["CSS .prose and .initial; paragraph DOM order"],
+          "sha256": "f64b348ee5e9d0e2ba6566565a0596b2de6af08f6a77ccd72df96b201725239f"
+        }
+      ],
+      "limit": "Source declarations and saved measurements are not a new capture or acceptance."
+    },
+    {
+      "id": "C2",
+      "kind": "measured",
+      "statement": "All three saved paragraph boxes are 330 by 258px; local per-paragraph selection equals its intended string. The measured initial center is 22.5821596244px right and 46.7746478873px down from its paragraph origin.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json",
+          "keys": [
+            "dom.paragraphs[*].rect",
+            "dom.paragraphs[*].counter",
+            "dom.paragraphs[*].selection",
+            "dom.paragraphs[*].text",
+            "fonts",
+            "repeatExact",
+            "reasons"
+          ],
+          "sha256": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee"
+        }
+      ],
+      "limit": "No full-document copy-order, clipboard round trip or portable paste evidence."
+    },
+    {
+      "id": "C3",
+      "kind": "measured",
+      "statement": "Saved nominal field accounting is 226 intersecting / 188 wholly inside / 527 visible non-space body boxes, with 51 boxes touching the proposed quiet ring. The ring has 1286 of 31844 pixels below gray128.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/layout-audit-01/results.json",
+          "keys": [
+            "nominalSymbolRectangle",
+            "nominalQuietOuterRectangle",
+            "paragraphs",
+            "visibleBodyGlyphs",
+            "symbolSourcePixelAccounting",
+            "quietRingSourcePixelAccounting"
+          ],
+          "sha256": "166851874064aeb8ed930f7adcf5c75ee1fbd5e8c0ebeaddacf39e8356e307ef"
+        }
+      ],
+      "limit": "Advance boxes differ from ink masks; stored pixel counts were not recounted. Counts include all ink, not body-only attribution."
+    },
+    {
+      "id": "C4",
+      "kind": "arithmetic",
+      "statement": "For intended finder centers at 3.5 modules from the symbol edge, right-edge clearance is 16.5px; the four-module quiet ring extends from offset 16.5 to 35.3571428571px from the upper-right center.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/recipe.json",
+          "keys": ["unit", "dimension"],
+          "sha256": "be5d881f9fbb1e20c25ea2fc3c7ac1ac9115e28b51b1ed7dc556987607447b9d"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/layout-audit-01/results.json",
+          "keys": [
+            "sourceGeometry",
+            "nominalSymbolRectangle",
+            "nominalQuietOuterRectangle"
+          ],
+          "sha256": "166851874064aeb8ed930f7adcf5c75ee1fbd5e8c0ebeaddacf39e8356e307ef"
+        }
+      ],
+      "limit": "The four-module empty ring is a design requirement, not a newly proved universal decoder requirement."
+    },
+    {
+      "id": "C5",
+      "kind": "arithmetic",
+      "statement": "The retained upper-right u ink interval is [24.7879575631,32.3553403756]px relative to its finder center, wholly inside the right quiet-ring x interval. The initial right ink estimate exceeds its nominal right boundary by 5.9898389718px.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json",
+          "keys": [
+            "dom.paragraphs[1].counter.x",
+            "dom.paragraphs[1].glyphs[1].ch",
+            "dom.paragraphs[1].glyphs[1].ink",
+            "dom.paragraphs[1].firstGlyph.ink"
+          ],
+          "sha256": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee"
+        }
+      ],
+      "limit": "Continuous source-metric estimate, not a rerendered pixel mask. This rejects the retained local placement, not every possible reflow or glyph."
+    },
+    {
+      "id": "C6",
+      "kind": "arithmetic",
+      "statement": "At fixed pitch and local typography, N cancels from edge minus far finder center; translating or enlarging the symbol cannot cure that local margin. Intact paragraph-box right/bottom excesses are about 290.918 and 194.725px.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json",
+          "keys": [
+            "dom.paragraphs[1].rect",
+            "dom.paragraphs[1].counter",
+            "dom.paragraphs[2].rect",
+            "dom.paragraphs[2].counter"
+          ],
+          "sha256": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/recipe.json",
+          "keys": ["unit", "dimension"],
+          "sha256": "be5d881f9fbb1e20c25ea2fc3c7ac1ac9115e28b51b1ed7dc556987607447b9d"
+        }
+      ],
+      "limit": "The invariant assumes retained inline corner initial and typography. Reflow, different glyphs and changed spacing are not shown impossible."
+    },
+    {
+      "id": "C7",
+      "kind": "measured",
+      "statement": "Context-04 normal first location is unrelated dimension 81; the actual inverted branch first location has intended dimension 85 but balance 0.266667, span 0.282828 and upper-right true diagonal RMS 0.361324723 remain failures.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/passive-summary.json",
+          "keys": [
+            "scans[0].selectedFirstLocation",
+            "scans[0].postReturnIntendedGeometry[0]",
+            "scans[1].selectedFirstLocation",
+            "scans[1].selected.*.quadBalance",
+            "scans[1].selected.*.nominalSpanFraction",
+            "scans[1].selected.topRight.geometric.axes.diagonalUp",
+            "scans[*].strictPass"
+          ],
+          "sha256": "7709c4c943ea53a7b154f216b682e9c9fa27aeeb6cea797b08777cbce4eb769f"
+        }
+      ],
+      "limit": "No new locator/reader call; changed placement could change branch metrics, so historical values are blockers, not predictions."
+    },
+    {
+      "id": "C8",
+      "kind": "fixed rule",
+      "statement": "Native eligibility uses a nonempty matching scored-record set and every record, not one passing record; thresholds remain 0.8 and 0.35 with all four true/scored axes.",
+      "sources": [
+        {
+          "path": "experiments/prose-qr/astra-2026-10-10/common.mjs",
+          "keys": ["strict function"],
+          "sha256": "172d9e84f8ad24fedc6f5f7c8eed95ee042e20ef617c86fdf645111eb9602646"
+        }
+      ],
+      "limit": "A layout diagram and standalone glyph resource cannot supply absent actual selected records."
+    },
+    {
+      "id": "C9",
+      "kind": "measured",
+      "statement": "D1 square passes the strict gate and all three readers; both rounded treatments and circle fail strict gate while ZXing/jsQR recover exactly. OpenCV returns empty for those three.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/control-panel-2026-10-10/comparison.json",
+          "keys": [
+            "rows[*].id",
+            "rows[*].readers[*].texts",
+            "rows[*].branches[0].strictPass",
+            "rows[*].branches[0].points[*]"
+          ],
+          "sha256": "92993b7fd4c36a3f3ed75ec6f978ca2756f5836e6bfab34c55137bc485ea8923"
+        }
+      ],
+      "limit": "Conventional image evidence is separate from native eligibility, standards compliance and scanning acceptance."
+    },
+    {
+      "id": "C10",
+      "kind": "measured",
+      "statement": "Context-03 painted zero dark pixels in its initial probes; context-04 records 632/631/632 and explicit stroke 4. Context-04 ordinary reader slots are all empty.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/initial-paint-check.json",
+          "keys": [
+            "rows[*].phase",
+            "rows[*].probes[*].grayBelow128Pixels",
+            "rows[*].probes[*].declaredComputedStroke"
+          ],
+          "sha256": "e49ace2ea06d6611c54efaca595180f52b2b73fd0ef22cb682a08c34ff12943b"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/reader-results.json",
+          "keys": ["slots[*].engine", "slots[*].texts"],
+          "sha256": "7afa6313ea7536cf7129e7ec613192672b93d32ba83e74318cff3e617eedcd4e"
+        }
+      ],
+      "limit": "Preserves the invisible-initial failure and local correction without promoting text selection to paste acceptance."
+    },
+    {
+      "id": "C11",
+      "kind": "non-transfer rule",
+      "statement": "The body-only 171/86 and 31/16 coupling diagnostics use a different origin/width/tracking context and are not writable capacity or measurements of L1.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/coupling-01/results.json",
+          "keys": [
+            "sourceGrid",
+            "comparisons[*].sourceGridTouchedCells",
+            "comparisons[*].sourceGridCenterChanges",
+            "comparisons[*].binaryLexicalChoiceBits"
+          ],
+          "sha256": "0f4aca6cae5b8ac29bb390e8ca83f70bde0c2e4c0e7f209826043bb4e9e79179"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/recipe.json",
+          "keys": ["bodyTracking"],
+          "sha256": "be5d881f9fbb1e20c25ea2fc3c7ac1ac9115e28b51b1ed7dc556987607447b9d"
+        },
+        {
+          "path": "docs/research/prose-qr/sol-review-2026-10-10/REVIEW.md",
+          "keys": ["F5"],
+          "sha256": "fd50a0de7d93f20077832562d8cb5e17d818f2b221cd0c2167932e40e6620e4b"
+        }
+      ],
+      "limit": "No quantitative coupling transfer to a changed placement, no independent-bit or payload-capacity claim."
+    },
+    {
+      "id": "C12",
+      "kind": "design choice",
+      "statement": "L1 normalizes the nominal symbol origin to (64,64), retains dimension/pitch and inline typography, demands a completely blank four-module ring, and specifies document order 1,2,3.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/recipe.json",
+          "keys": ["texts", "unit", "dimension"],
+          "sha256": "be5d881f9fbb1e20c25ea2fc3c7ac1ac9115e28b51b1ed7dc556987607447b9d"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json",
+          "keys": ["dom.paragraphs"],
+          "sha256": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee"
+        }
+      ],
+      "limit": "L1 is a rejected constraint witness. No new source or native candidate is supplied."
+    },
+    {
+      "id": "C13",
+      "kind": "untested assumption",
+      "statement": "An inward-reflow or replacement-glyph construction might change the envelope, selection and gate behavior, but saved receipts do not establish those combined properties.",
+      "sources": [
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json",
+          "keys": ["dom.paragraphs[*].selection"],
+          "sha256": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee"
+        },
+        {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/result.json",
+          "keys": ["renders[1].model", "renders[1].native"],
+          "sha256": "92ee6c84141397adc8169e7a8e8cceaf2d72f53166200655225dcf58b50546b0"
+        }
+      ],
+      "limit": "No global impossibility claim; missing evidence stays unknown. No new architecture is selected."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "aqrobat.layout-worker-receipt.v1",
+  "requested": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "forkTurns": "none",
+    "fastPreferred": true
+  },
+  "independentlyVerified": {
+    "backendModel": false,
+    "reasoningEffort": false,
+    "desktopFast": false,
+    "pricing": false,
+    "usage": false
+  },
+  "firstObservedUtc": "2026-10-10T19:45:51Z",
+  "authorizedStartUtc": "2026-10-10T19:44:40Z",
+  "workerDeadlineUtc": "2026-10-10T20:01:40Z",
+  "absoluteParentDeadlineUtc": "2026-10-10T20:04:40Z",
+  "baseline": {
+    "cwd": "/Users/noir/Documents/aqrobat",
+    "branch": "codex/aqrobat-foundation",
+    "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+    "head": "5d3251418ce2867c33b8eca9dfa00ea538822964",
+    "initialDirty": ["?? docs/research/prose-qr/layout-design-2026-10-10/"],
+    "initialFiles": ["REQUEST.txt", "START.json"],
+    "prState": "Parent START.json records OPEN/draft; not queried live by worker"
+  },
+  "protectedParentFiles": {
+    "REQUEST.txt": "47a598f7bfdbdab051d98bdff746c5eac14c33a507add5444ac69c9a75daeab8",
+    "START.json": "a8f59f9213e6f4ed22352ff968072105b9500b7493e19b496eecb996a3c20b3d"
+  },
+  "actions": {
+    "additionalAgents": 0,
+    "additionalChats": 0,
+    "messagesToPeopleOrOtherChats": 0,
+    "gitMutations": 0,
+    "newNativeSources": 0,
+    "captures": 0,
+    "immediateRepeats": 0,
+    "screenshots": 0,
+    "browserLaunches": 0,
+    "nativeAppLaunches": 0,
+    "readerLocatorBinarizerCalls": 0,
+    "payloadConstructions": 0,
+    "installsDownloads": 0,
+    "clipboardTests": 0,
+    "phoneTests": 0,
+    "printTests": 0,
+    "processesCreatedRequiringCleanup": 0,
+    "oldClocksReopened": false
+  },
+  "deviations": [
+    {
+      "event": "Premature memory-registry keyword search",
+      "detail": "The first exec batched rg -n aqrobat|prose-qr on MEMORY.md with reading REQUEST.txt. Before the no-memory instruction was known, this returned one unrelated registry line 206 referring to an Aqrobat tangent in a Splashery rollout. No follow-up memory file was read and no memory-derived facts were used. Search was stopped immediately."
+    },
+    {
+      "event": "Missing optional config glob",
+      "detail": "Read-only cat package.json/.prettierignore plus .prettierrc* ended exit 1 because zsh found no .prettierrc* match. Existing installed Prettier uses repository/default configuration; no config file was created."
+    },
+    {
+      "event": "Static prompt equality assertion failed once",
+      "detail": "Prettier inserted a leading newline after the textarea opening tag. The exact-string static parser detected the mismatch before handback. The textarea node now uses a local prettier-ignore comment so its literal decoded content matches CONTINUE.txt exactly; no browser or render was used."
+    }
+  ],
+  "cleanup": "A transient task-owned __pycache__ from syntax checking verify.py was removed. No browser, app, profile, document outside this directory or persistent task-owned process was created; nothing remains to close.",
+  "status": "No coherent next native layout justified from the retained corner-initial construction; a bounded contradiction is documented.",
+  "oneNextProposal": "R1, unselected",
+  "checks": {
+    "staticPassed": 215,
+    "sourceHashes": 21,
+    "wholeRepositoryFormatCheck": "passed; final post-document check recorded separately in format-check-delivery.log.txt",
+    "experimentalProductChecks": "skipped, outside authorized design-only scope, not unavailable",
+    "promptIdentity": "Exact literal decoded textarea content equals CONTINUE.txt; visible near top, not collapsed.",
+    "reportQA": "Static only; never rendered."
+  },
+  "completedObservedUtc": "2026-10-10T19:51:40.671365+00:00",
+  "elapsedMinutesFromAuthorizedStartAtCompletion": 7.011189416666666,
+  "artifactSummary": {
+    "documentsBeforeFinalStat": 16,
+    "bytesBeforeReceiptFinalUpdate": 128793,
+    "exactFinalCounts": "final-stat.json",
+    "parentReserveMinimumBytes": 100000,
+    "workerByteCeiling": 1900000,
+    "totalAllocation": 2000000
+  }
+}
