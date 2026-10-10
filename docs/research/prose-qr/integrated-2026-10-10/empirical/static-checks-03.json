@@ -1,0 +1,700 @@
+{
+  "atUtc": "2026-10-10T22:30:11.796258+00:00",
+  "checkout": [
+    {
+      "args": ["git", "rev-parse", "--show-toplevel"],
+      "returncode": 0,
+      "stdout": "/Users/noir/Documents/aqrobat\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "remote", "-v"],
+      "returncode": 0,
+      "stdout": "origin\thttps://github.com/ryanjosephkamp/aqrobat.git (fetch)\norigin\thttps://github.com/ryanjosephkamp/aqrobat.git (push)\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+      "returncode": 0,
+      "stdout": "codex/aqrobat-foundation\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "rev-parse", "HEAD"],
+      "returncode": 0,
+      "stdout": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--name-only"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--cached", "--name-only"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "status", "--short"],
+      "returncode": 0,
+      "stdout": "?? docs/research/prose-qr/integrated-2026-10-10/\n?? experiments/prose-qr/integrated-2026-10-10/\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--check"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "pinnedEncoderBaselineExact": true,
+  "pinnedEncoderSha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+  "license": "Original inline MIT license exact baseline bytes",
+  "syntax": [
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/analyze-continuous-profile.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/analyze-continuous-profile.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/closing-checks-v2.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/closing-checks.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/common.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/common.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/custody.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/custody.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/finalize-metadata.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/holes.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/measure-continuous.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/measure-continuous.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/metrics.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/metrics.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/ordinary.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/passive.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/passive.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous-v2.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload-v5.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resource02.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources03.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources03.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources04.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources04.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources05.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources05.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources06.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources06.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-v5.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v2.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v3.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v4.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v5.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v6.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v6.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v7.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v7.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v8.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v8.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v5.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v7.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v7.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v4.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v5.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5-v2.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/setup.py",
+      "status": 0,
+      "method": "Python ast.parse; no caches"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v2.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v3.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v4.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/summarize.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v2.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v3.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v4.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/verify.mjs",
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "newCaptures": 0,
+  "newReaders": 0
+}

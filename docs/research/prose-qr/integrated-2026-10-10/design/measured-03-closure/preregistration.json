@@ -1,0 +1,149 @@
+{
+  "schema": "aqrobat.pure-closure-batch.v1",
+  "frozenAtUtc": "2026-10-10T21:44:21.688Z",
+  "input": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/native-input.json",
+    "sha256": "7c6f6ef13be741047d05d1212d402a5291f74c0d43f40406ec25a859feb4fb30"
+  },
+  "sources": {
+    "experiments/prose-qr/integrated-2026-10-10/design/closure-batch.mjs": "81ed127a234abd4e441a44d6795e8913532df97f217e64562f561b84d2a74c2d",
+    "experiments/prose-qr/integrated-2026-10-10/design/immutable-closure.mjs": "77a998ab70e0a91031a4a8aecdb72be7b01c81c73744b0a218aefc5ca09afaad",
+    "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.mjs": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+  },
+  "cases": [
+    {
+      "ecc": "L",
+      "mask": 0
+    },
+    {
+      "ecc": "L",
+      "mask": 1
+    },
+    {
+      "ecc": "L",
+      "mask": 2
+    },
+    {
+      "ecc": "L",
+      "mask": 3
+    },
+    {
+      "ecc": "L",
+      "mask": 4
+    },
+    {
+      "ecc": "L",
+      "mask": 5
+    },
+    {
+      "ecc": "L",
+      "mask": 6
+    },
+    {
+      "ecc": "L",
+      "mask": 7
+    },
+    {
+      "ecc": "M",
+      "mask": 0
+    },
+    {
+      "ecc": "M",
+      "mask": 1
+    },
+    {
+      "ecc": "M",
+      "mask": 2
+    },
+    {
+      "ecc": "M",
+      "mask": 3
+    },
+    {
+      "ecc": "M",
+      "mask": 4
+    },
+    {
+      "ecc": "M",
+      "mask": 5
+    },
+    {
+      "ecc": "M",
+      "mask": 6
+    },
+    {
+      "ecc": "M",
+      "mask": 7
+    },
+    {
+      "ecc": "Q",
+      "mask": 0
+    },
+    {
+      "ecc": "Q",
+      "mask": 1
+    },
+    {
+      "ecc": "Q",
+      "mask": 2
+    },
+    {
+      "ecc": "Q",
+      "mask": 3
+    },
+    {
+      "ecc": "Q",
+      "mask": 4
+    },
+    {
+      "ecc": "Q",
+      "mask": 5
+    },
+    {
+      "ecc": "Q",
+      "mask": 6
+    },
+    {
+      "ecc": "Q",
+      "mask": 7
+    },
+    {
+      "ecc": "H",
+      "mask": 0
+    },
+    {
+      "ecc": "H",
+      "mask": 1
+    },
+    {
+      "ecc": "H",
+      "mask": 2
+    },
+    {
+      "ecc": "H",
+      "mask": 3
+    },
+    {
+      "ecc": "H",
+      "mask": 4
+    },
+    {
+      "ecc": "H",
+      "mask": 5
+    },
+    {
+      "ecc": "H",
+      "mask": 6
+    },
+    {
+      "ecc": "H",
+      "mask": 7
+    }
+  ],
+  "denominator": 32,
+  "adapter": "No quiet-ring inspection in this diagnostic; original native sample objects used unchanged.",
+  "captures": 0,
+  "readers": 0,
+  "reason": "Add whole-fixed-block parity closure to earlier data-only prefix bound without changing sealed measured-02 or its solver."
+}

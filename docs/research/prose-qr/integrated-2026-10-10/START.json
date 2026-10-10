@@ -1,0 +1,63 @@
+{
+  "schema": "aqrobat.integrated-run.v1",
+  "startUtc": "2026-10-10T21:24:22Z",
+  "deadlineUtc": "2026-10-11T00:24:22Z",
+  "startEastern": "2026-10-10 17:24:22 EDT",
+  "deadlineEastern": "2026-10-10 20:24:22 EDT",
+  "baseline": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222",
+  "branch": "codex/aqrobat-foundation",
+  "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+  "initialClean": true,
+  "pr": {
+    "number": 1,
+    "state": "OPEN",
+    "isDraft": true
+  },
+  "npmPrivate": true,
+  "goalCreated": true,
+  "earlierClocksUnchanged": true,
+  "caps": {
+    "glyphResources": 128,
+    "nativeCaptures": 24,
+    "controlCaptures": 8,
+    "immediateRepeatsPerCapture": 1,
+    "ordinaryReaderCalls": 96,
+    "passiveProfilesPerFullCapture": 1,
+    "diagnosticsPerResource": 1,
+    "exploratoryGateFailedPayloadTrials": 4,
+    "bytes": 64000000,
+    "concurrentWorkers": 2,
+    "dispatches": 4
+  },
+  "initialAllocations": {
+    "empirical": {
+      "glyphResources": 96,
+      "nativeCaptures": 20,
+      "controlCaptures": 6,
+      "ordinaryReaderCalls": 78,
+      "exploratoryGateFailedPayloadTrials": 3,
+      "bytes": 42000000,
+      "endUtc": "2026-10-10T23:44:22Z"
+    },
+    "design": {
+      "newCaptures": 0,
+      "readerCalls": 0,
+      "bytes": 4000000,
+      "endUtc": "2026-10-10T22:14:22Z"
+    },
+    "reserve": {
+      "glyphResources": 32,
+      "nativeCaptures": 4,
+      "controlCaptures": 2,
+      "ordinaryReaderCalls": 18,
+      "exploratoryGateFailedPayloadTrials": 1,
+      "bytes": 18000000
+    }
+  },
+  "workerModelPlan": {
+    "empirical": "gpt-6.1-sol high fresh context",
+    "design": "gpt-6.1-sol xhigh fresh context",
+    "fast": "unverified; no exposed speed control"
+  },
+  "goalEnd": "Complete only when full stated objective achieved; pause at the deadline if unfinished per explicit user request."
+}

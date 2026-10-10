@@ -1,0 +1,40 @@
+{
+  "schema": "aqrobat.integrated.native-sampling.v1",
+  "frozenAtUtc": "2026-10-10T21:46:27.179Z",
+  "amendment": "Fresh V5 short prose map. Reuse previously declared conservative pixel-support ownership policy: ambiguous groups globally fixed to regular. No captures/readers or source changes during sampling. Fixed alignment glyph remains fixed.",
+  "capturedInputs": {
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-regular/input.png": "4ee7f9841d4d87a915ca635c85240616d0b2d5cc105a1c704699be62243ffff0",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-regular/repeat.png": "4ee7f9841d4d87a915ca635c85240616d0b2d5cc105a1c704699be62243ffff0",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-regular/source.html.txt": "2a4fa8a2de18644d65761451a98fccdb2cd124585aa116ac36c25fc325fecb4c",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-regular/dom.json": "06c03f183efae424c3eff4d622916b3edd674a0416f116523d6cf132d2802812",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-regular/capture.json": "18edeb805eaf1b67f5ae00d8b8365b576d4b78461ad00ff502ebddeaad576bcb",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-bold/input.png": "27f1022e454a37cd6d81f19bf24a12553630dcf128f15d8e36ad8ac0b6db8370",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-bold/repeat.png": "27f1022e454a37cd6d81f19bf24a12553630dcf128f15d8e36ad8ac0b6db8370",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-bold/source.html.txt": "7c35bd7e12be16b61517b20e663a1d87b66ea615458992c210d9ec1d279b502e",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-bold/dom.json": "eaa5a7850e7672ca35f00679571ecf45905772a0331117c9e4dbc84a640a559d",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/v5-reverse-bold/capture.json": "1b804a82a849990cc762b6ee4c3b5bbee94a5e6e84eb9b55ce173346c1949a20"
+  },
+  "sourceHashes": {
+    "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5.mjs": "52457ae30762cbbb5f4498201ff33c17a725ffb74956b5137a0a165c5da39fda",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0"
+  },
+  "denominator": {
+    "moduleSamplesPerMap": 1369,
+    "quietSamplesPerMap": 656,
+    "maps": 2,
+    "sourceCaptures": 0,
+    "ordinaryCalls": 0,
+    "passiveProfiles": 0
+  },
+  "polarity": "Normal: native raw black is logical QR1, raw white QR0. No image transformation.",
+  "primary": "Frozen rawgray128 per-cell samples plus unique real glyph union ink bounds of measured regular/bold states. Lock all groups implicated by overlapping ownership. Complete all1369 cells. Exact native mixed style needs own capture/sample verification before decode.",
+  "diagnostic": "Pinned ordinary-jsQR adaptive binarizer sampled separately on unchanged regular and bold PNGs. Neighborhood coupling makes affine mixed prediction unsupported; diagnostic only, not solver input.",
+  "samplePolicy": "floor(origin+(index+.5)*pitch), origin64 pitch6.5 dimension37. Four-module external ring sampled identically including every656 cells; no quiet omission.",
+  "stops": [
+    "input/source mismatch",
+    "RGBA read failure",
+    "source identity/position drift",
+    "changed pixel with no unique glyph attribution after conservative group locks",
+    "out-of-bounds sample"
+  ]
+}

@@ -1,0 +1,2402 @@
+{
+  "schema": "aqrobat.integrated.empirical-complete-batch-summary.v1",
+  "atUtc": "2026-10-10T22:27:04.057Z",
+  "builderSha256": "d86e59680f6a077abc92274ff60dea105842fef61dc735120f84af2f44b29c1e",
+  "actor": "integrated_empirical",
+  "scope": "Every empirical frozen resource/layout/construction/payload batch plus retained pure setup/selection failures. Design/mechanism arithmetic batches belong to their separate handbacks; they did not invoke captures/readers.",
+  "rows": [
+    {
+      "id": "construction-01",
+      "actor": "integrated_empirical",
+      "kind": "construction",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-01/preregistration.json",
+      "preregistrationSha256": "e5b46871c67f76b9ee7390530493aa10960257a793e23aed8c594098837750c6",
+      "frozenAtUtc": "2026-10-10T21:36:01.132Z",
+      "planned": {
+        "moduleSamplesPerMap": 3249,
+        "quietSamplesPerMap": 976,
+        "maps": 2,
+        "sourceCaptures": 0,
+        "ordinaryCalls": 0,
+        "passiveProfiles": 0
+      },
+      "outcomes": [
+        {
+          "unknownCells": 7,
+          "retainedUnknownCells": [
+            {
+              "x": 39,
+              "y": 17,
+              "px": 320,
+              "py": 177,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 5,
+              "y": 23,
+              "px": 99,
+              "py": 216,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 5,
+              "y": 29,
+              "px": 99,
+              "py": 255,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 6,
+              "y": 33,
+              "px": 106,
+              "py": 281,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 9,
+              "y": 54,
+              "px": 125,
+              "py": 418,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 11,
+              "y": 54,
+              "px": 138,
+              "py": 418,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 12,
+              "y": 54,
+              "px": 145,
+              "py": 418,
+              "owners": [],
+              "states": [1, 0]
+            }
+          ]
+        }
+      ],
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-01/ownership-failure.json",
+      "attempted": {
+        "inputMaps": 2,
+        "modulePixelsRead": 6498,
+        "quietPixelsRead": 1952,
+        "sourceAdaptiveBinarizerCalls": 2
+      },
+      "unattempted": {
+        "nativeConstructionOutputs": 1
+      },
+      "outcome": "rejected-source-ownership",
+      "stop": {
+        "reason": "Changed pixel without conservative native glyph attribution",
+        "unknownCells": 7
+      },
+      "rejected": {
+        "constructionOutputs": 1
+      },
+      "resultsSha256": "b198c3a613f4690cebe81d6fe2176024baf4bbe5eb7932b6c318a1d41e26cde1"
+    },
+    {
+      "id": "construction-02",
+      "actor": "integrated_empirical",
+      "kind": "construction",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/preregistration.json",
+      "preregistrationSha256": "e6f4305879a64e012ece01ef4323eca0a6097c688e6ba8587fd424473faf754e",
+      "frozenAtUtc": "2026-10-10T21:36:22.152Z",
+      "planned": {
+        "moduleSamplesPerMap": 3249,
+        "quietSamplesPerMap": 976,
+        "maps": 2,
+        "sourceCaptures": 0,
+        "ordinaryCalls": 0,
+        "passiveProfiles": 0
+      },
+      "outcomes": [
+        {
+          "moduleSamples": 3249,
+          "quietSamples": 976,
+          "activeGlyphGroups": 56,
+          "togglingSamples": 57,
+          "quietDark": 340,
+          "inputSha256": "7c6f6ef13be741047d05d1212d402a5291f74c0d43f40406ec25a859feb4fb30"
+        }
+      ],
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/sampling-summary.json",
+      "attempted": {
+        "inputMaps": 2,
+        "modulePixelsRead": 6498,
+        "quietPixelsRead": 1952,
+        "sourceAdaptiveBinarizerCalls": 2
+      },
+      "unattempted": {
+        "nativeConstructionOutputs": 0
+      },
+      "outcome": "complete-source-map-not-embedding",
+      "stop": null,
+      "rejected": {
+        "constructionOutputs": 0
+      },
+      "resultsSha256": "074b8a3dc96ba04422b4b33b31b54813defc26c95d9099a488ace3c3afa84d25"
+    },
+    {
+      "id": "construction-03",
+      "actor": "integrated_empirical",
+      "kind": "construction",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-03/preregistration.json",
+      "preregistrationSha256": "22913e52b8de5ee7c9a4ecd06bddeabeebb2f32b90fae0ffb09ced06b528e4bf",
+      "frozenAtUtc": "2026-10-10T21:37:39.119Z",
+      "planned": {
+        "moduleSamplesPerMap": 3249,
+        "quietSamplesPerMap": 976,
+        "maps": 2,
+        "sourceCaptures": 0,
+        "ordinaryCalls": 0,
+        "passiveProfiles": 0
+      },
+      "outcomes": [
+        {
+          "moduleSamples": 3249,
+          "quietSamples": 976,
+          "activeGlyphGroups": 58,
+          "togglingSamples": 59,
+          "quietDark": 340,
+          "inputSha256": "0de699f79a3e978ccf9ca97255012d2bbeb3fbb267c4efbd3ee1478548950652"
+        }
+      ],
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-03/sampling-summary.json",
+      "attempted": {
+        "inputMaps": 2,
+        "modulePixelsRead": 6498,
+        "quietPixelsRead": 1952,
+        "sourceAdaptiveBinarizerCalls": 2
+      },
+      "unattempted": {
+        "nativeConstructionOutputs": 0
+      },
+      "outcome": "complete-source-map-not-embedding",
+      "stop": null,
+      "rejected": {
+        "constructionOutputs": 0
+      },
+      "resultsSha256": "3938bfa910cc57f07ca0d17f6d9d29f05b8c806711392ef8a489e392fd5d2481"
+    },
+    {
+      "id": "construction-04",
+      "actor": "integrated_empirical",
+      "kind": "construction",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-04/preregistration.json",
+      "preregistrationSha256": "54d334034fa4de2fc601fa950af43440fddce47cd4ddc9fe5ea02b07e275dc63",
+      "frozenAtUtc": "2026-10-10T21:46:27.179Z",
+      "planned": {
+        "moduleSamplesPerMap": 1369,
+        "quietSamplesPerMap": 656,
+        "maps": 2,
+        "sourceCaptures": 0,
+        "ordinaryCalls": 0,
+        "passiveProfiles": 0
+      },
+      "outcomes": [
+        {
+          "unknownCells": 3,
+          "retainedUnknownCells": [
+            {
+              "x": 27,
+              "y": 12,
+              "px": 242,
+              "py": 145,
+              "owners": [],
+              "states": [0, 1]
+            },
+            {
+              "x": 10,
+              "y": 17,
+              "px": 132,
+              "py": 177,
+              "owners": [],
+              "states": [1, 0]
+            },
+            {
+              "x": 22,
+              "y": 20,
+              "px": 210,
+              "py": 197,
+              "owners": [],
+              "states": [1, 0]
+            }
+          ]
+        }
+      ],
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-04/ownership-failure.json",
+      "attempted": {
+        "inputMaps": 2,
+        "modulePixelsRead": 2738,
+        "quietPixelsRead": 1312,
+        "sourceAdaptiveBinarizerCalls": 2
+      },
+      "unattempted": {
+        "nativeConstructionOutputs": 1
+      },
+      "outcome": "rejected-source-ownership",
+      "stop": {
+        "reason": "Changed pixel without conservative native glyph attribution",
+        "unknownCells": 3
+      },
+      "rejected": {
+        "constructionOutputs": 1
+      },
+      "resultsSha256": "bc25865ea8bca4423f746b0d8d29c7aac317e9dcf2f188de42ea93475f3d10f5"
+    },
+    {
+      "id": "construction-05",
+      "actor": "integrated_empirical",
+      "kind": "construction",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/preregistration.json",
+      "preregistrationSha256": "1ca4a8eadf9f7cf12d844d349476f0d7deb79512836153cf430b906d5d63da26",
+      "frozenAtUtc": "2026-10-10T21:46:46.609Z",
+      "planned": {
+        "moduleSamplesPerMap": 1369,
+        "quietSamplesPerMap": 656,
+        "maps": 2,
+        "sourceCaptures": 0,
+        "ordinaryCalls": 0,
+        "passiveProfiles": 0
+      },
+      "outcomes": [
+        {
+          "moduleSamples": 1369,
+          "quietSamples": 656,
+          "activeGlyphGroups": 23,
+          "togglingSamples": 30,
+          "quietDark": 203,
+          "inputSha256": "287b7b9fbe65841b473a81dd69fa6f16d56aea05f8428a427ef84404956e022c"
+        }
+      ],
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/sampling-summary.json",
+      "attempted": {
+        "inputMaps": 2,
+        "modulePixelsRead": 2738,
+        "quietPixelsRead": 1312,
+        "sourceAdaptiveBinarizerCalls": 2
+      },
+      "unattempted": {
+        "nativeConstructionOutputs": 0
+      },
+      "outcome": "complete-source-map-not-embedding",
+      "stop": null,
+      "rejected": {
+        "constructionOutputs": 0
+      },
+      "resultsSha256": "2b80517ea13d1c2dbc327a6710e33cca63c39a1a2b8218a35d983da2bdd609e8"
+    },
+    {
+      "id": "layout-01",
+      "actor": "integrated_empirical",
+      "kind": "layout",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/preregistration.json",
+      "preregistrationSha256": "b8beeb2f1f1a553f7d82165d34384508360db166c5664b8899e6c7200644266e",
+      "frozenAtUtc": "2026-10-10T21:32:11.862Z",
+      "planned": {
+        "native": 4,
+        "control": 2,
+        "ordinarySlots": 18,
+        "profiles": 6,
+        "repeats": 6,
+        "payloadTrials": 0
+      },
+      "outcomes": [
+        {
+          "id": "control-normal",
+          "kind": "control",
+          "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 1
+        },
+        {
+          "id": "control-inverted",
+          "kind": "control",
+          "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": false
+            },
+            {
+              "branch": "inverted-stock-second-scan",
+              "strict": false,
+              "intendedFirst": true
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 3
+        },
+        {
+          "id": "light-regular",
+          "kind": "native",
+          "pngSha256": "347ee60c9ea701fc05f55c769e59ad8478fbc74dd7cf1d7ab1e49a4b5e8c408b",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": [""],
+              "exactURL": false
+            }
+          ],
+          "strict": null
+        }
+      ],
+      "captures": 3,
+      "ordinaryApiCalls": 9,
+      "passiveApiCalls": 2,
+      "nestedPassiveMatrixDecoderInvocations": 4,
+      "repeatAttempts": 3,
+      "exactRepeats": 3,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/run-results.json",
+      "attempted": {
+        "nativeCaptures": 1,
+        "controlCaptures": 2,
+        "ordinaryApiCalls": 9,
+        "passiveProfiles": 2,
+        "repeats": 3,
+        "exploratoryPayloadTrials": 0
+      },
+      "unattempted": {
+        "captures": 3,
+        "ordinarySlots": 9,
+        "profiles": 4,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": {
+        "atUtc": "2026-10-10T21:32:17.274Z",
+        "current": "light-regular",
+        "message": "Wrong payload",
+        "stack": "AssertionError [ERR_ASSERTION]: Wrong payload\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs:11:1303"
+      },
+      "outcome": "stopped-preserved",
+      "rejected": {
+        "batchStops": 1
+      },
+      "resultsSha256": "799961835d0342280b19b61f284f7c243fd815d8dee660d52f85607908dd183b"
+    },
+    {
+      "id": "layout-02",
+      "actor": "integrated_empirical",
+      "kind": "layout",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-02/preregistration.json",
+      "preregistrationSha256": "d50cc4a13be44eb4554673f050f9b44fee8f7a57d47098a4a587ab916c8d82cc",
+      "frozenAtUtc": "2026-10-10T21:32:58.529Z",
+      "planned": {
+        "native": 2,
+        "control": 1,
+        "ordinarySlots": 9,
+        "profiles": 3,
+        "repeats": 3,
+        "payloadTrials": 0
+      },
+      "outcomes": [
+        {
+          "id": "control-normal",
+          "kind": "control",
+          "pngSha256": "5d1f6fad91d50f9c2b6730eed023ef45831f943d65b2cf7d889fadd1d70fad5c",
+          "repeatExact": false,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "unattempted",
+              "texts": [],
+              "exactURL": null
+            },
+            {
+              "engine": "zxing",
+              "status": "unattempted",
+              "texts": [],
+              "exactURL": null
+            },
+            {
+              "engine": "jsqr",
+              "status": "unattempted",
+              "texts": [],
+              "exactURL": null
+            }
+          ],
+          "strict": null
+        }
+      ],
+      "captures": 1,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 1,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-02/run-results.json",
+      "attempted": {
+        "nativeCaptures": 0,
+        "controlCaptures": 1,
+        "ordinaryApiCalls": 0,
+        "passiveProfiles": 0,
+        "repeats": 1,
+        "exploratoryPayloadTrials": 0
+      },
+      "unattempted": {
+        "captures": 2,
+        "ordinarySlots": 9,
+        "profiles": 3,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": {
+        "atUtc": "2026-10-10T21:32:59.720Z",
+        "current": "control-normal",
+        "message": "Immediate repeat mismatch",
+        "stack": "AssertionError [ERR_ASSERTION]: Immediate repeat mismatch\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs:10:973"
+      },
+      "outcome": "stopped-preserved",
+      "rejected": {
+        "batchStops": 1
+      },
+      "resultsSha256": "557a7b47721e37480628d48bb3a35eebaeedf24a826f134fa9d07ef2cf9294c7"
+    },
+    {
+      "id": "layout-03",
+      "actor": "integrated_empirical",
+      "kind": "layout",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/preregistration.json",
+      "preregistrationSha256": "70475a0e660f8e4fee7429c9cca614549290e9ddacd85c908fed274164c14d34",
+      "frozenAtUtc": "2026-10-10T21:34:02.372Z",
+      "planned": {
+        "native": 2,
+        "control": 1,
+        "ordinarySlots": 9,
+        "profiles": 3,
+        "repeats": 3,
+        "payloadTrials": 0
+      },
+      "outcomes": [
+        {
+          "id": "control-normal",
+          "kind": "control",
+          "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 1
+        },
+        {
+          "id": "reverse-regular",
+          "kind": "native",
+          "pngSha256": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            },
+            {
+              "branch": "inverted-stock-second-scan",
+              "strict": false,
+              "intendedFirst": false
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 4
+        },
+        {
+          "id": "reverse-bold",
+          "kind": "native",
+          "pngSha256": "5cfb42352b6fc90e9b7a00ac7755aa6d44019f43b33631361dd5d16d332ccebc",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            },
+            {
+              "branch": "inverted-stock-second-scan",
+              "strict": false,
+              "intendedFirst": false
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 4
+        }
+      ],
+      "captures": 3,
+      "ordinaryApiCalls": 9,
+      "passiveApiCalls": 3,
+      "nestedPassiveMatrixDecoderInvocations": 9,
+      "repeatAttempts": 3,
+      "exactRepeats": 3,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/run-results.json",
+      "attempted": {
+        "nativeCaptures": 2,
+        "controlCaptures": 1,
+        "ordinaryApiCalls": 9,
+        "passiveProfiles": 3,
+        "repeats": 3,
+        "exploratoryPayloadTrials": 0
+      },
+      "unattempted": {
+        "captures": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": null,
+      "outcome": "completed-no-qualifying-native",
+      "rejected": {
+        "batchStops": 0
+      },
+      "resultsSha256": "28851183cee746c627646aba2af07dbae7a41880193c37a7b9d008adbb056a29"
+    },
+    {
+      "id": "layout-04",
+      "actor": "integrated_empirical",
+      "kind": "layout",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/preregistration.json",
+      "preregistrationSha256": "c812835732bb02d5f40b6e3f3225052db3b8afe9c5b89ed0f85fddb2e7647677",
+      "frozenAtUtc": "2026-10-10T21:37:19.292Z",
+      "planned": {
+        "native": 1,
+        "control": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "repeats": 1,
+        "payloadTrials": 0
+      },
+      "outcomes": [
+        {
+          "id": "reverse-stroke1",
+          "kind": "native",
+          "pngSha256": "0618e3ffd06eb77b6e08e22aee135844ad80c5a5eac177e89c6cdb74a517c3bd",
+          "repeatExact": true,
+          "ordinary": [],
+          "strict": null
+        }
+      ],
+      "captures": 1,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 1,
+      "exactRepeats": 1,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/run-results.json",
+      "attempted": {
+        "nativeCaptures": 1,
+        "controlCaptures": 0,
+        "ordinaryApiCalls": 0,
+        "passiveProfiles": 0,
+        "repeats": 1,
+        "exploratoryPayloadTrials": 0
+      },
+      "unattempted": {
+        "captures": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": null,
+      "outcome": "completed-no-qualifying-native",
+      "rejected": {
+        "batchStops": 0
+      },
+      "resultsSha256": "6947f9bdf41354528a58cf56d5d39d09f8d75c1569f9cc8bffb6e76707276929"
+    },
+    {
+      "id": "layout-05",
+      "actor": "integrated_empirical",
+      "kind": "layout",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/preregistration.json",
+      "preregistrationSha256": "e023238dfa76794f716aef953bd191e83aaa7e0d59c173002f1978ecc57941ec",
+      "frozenAtUtc": "2026-10-10T21:46:04.539Z",
+      "planned": {
+        "native": 2,
+        "control": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "repeats": 2,
+        "payloadTrials": 0
+      },
+      "outcomes": [
+        {
+          "id": "v5-reverse-regular",
+          "kind": "native",
+          "pngSha256": "4ee7f9841d4d87a915ca635c85240616d0b2d5cc105a1c704699be62243ffff0",
+          "repeatExact": true,
+          "ordinary": [],
+          "strict": null
+        },
+        {
+          "id": "v5-reverse-bold",
+          "kind": "native",
+          "pngSha256": "27f1022e454a37cd6d81f19bf24a12553630dcf128f15d8e36ad8ac0b6db8370",
+          "repeatExact": true,
+          "ordinary": [],
+          "strict": null
+        }
+      ],
+      "captures": 2,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 2,
+      "exactRepeats": 2,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/run-results.json",
+      "attempted": {
+        "nativeCaptures": 2,
+        "controlCaptures": 0,
+        "ordinaryApiCalls": 0,
+        "passiveProfiles": 0,
+        "repeats": 2,
+        "exploratoryPayloadTrials": 0
+      },
+      "unattempted": {
+        "captures": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": null,
+      "outcome": "completed-no-qualifying-native",
+      "rejected": {
+        "batchStops": 0
+      },
+      "resultsSha256": "95ad6d6c57b83485cfcb3dd12d2d789f831b84a45c83b8402f0651682adc8efa"
+    },
+    {
+      "id": "payload-01",
+      "actor": "integrated_empirical",
+      "kind": "payload",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/preregistration.json",
+      "preregistrationSha256": "74d3d8a0f58a3bad75c9c8773d9452facd05ad3e9967ea1afa27f63dba8d400a",
+      "frozenAtUtc": "2026-10-10T21:40:32.595Z",
+      "planned": {
+        "native": 1,
+        "control": 1,
+        "ordinarySlots": 6,
+        "profiles": 2,
+        "repeats": 2,
+        "payloadTrials": 1
+      },
+      "outcomes": [
+        {
+          "id": "canonical-control",
+          "kind": "control",
+          "pngSha256": "21f608c8127ad743d92069c8604ceda6f6f14f8a8b56b560a1178fc419b50158",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 1
+        },
+        {
+          "id": "native-projection",
+          "kind": "native",
+          "pngSha256": "3b36925fd80dfd5b9b36f90a952575469fc976e936c1367f74f481cabeb38e14",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            },
+            {
+              "branch": "inverted-stock-second-scan",
+              "strict": false,
+              "intendedFirst": false
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 3
+        }
+      ],
+      "captures": 2,
+      "ordinaryApiCalls": 6,
+      "passiveApiCalls": 2,
+      "nestedPassiveMatrixDecoderInvocations": 4,
+      "repeatAttempts": 2,
+      "exactRepeats": 2,
+      "exploratoryPayloadTrials": 1,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/run-results.json",
+      "attempted": {
+        "nativeCaptures": 1,
+        "controlCaptures": 1,
+        "ordinaryApiCalls": 6,
+        "passiveProfiles": 2,
+        "repeats": 2,
+        "exploratoryPayloadTrials": 1
+      },
+      "unattempted": {
+        "captures": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": null,
+      "outcome": "completed-no-qualifying-native",
+      "rejected": {
+        "batchStops": 0
+      },
+      "resultsSha256": "83e4fb556f8e3971aa655a1acb76524175ec1717783973002d740694a48f4141"
+    },
+    {
+      "id": "payload-02",
+      "actor": "integrated_empirical",
+      "kind": "payload",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/preregistration.json",
+      "preregistrationSha256": "582b223bdfff02e05e9e7970309e7bdf751cd30e424aed7c39faa28473918a61",
+      "frozenAtUtc": "2026-10-10T21:47:51.255Z",
+      "planned": {
+        "native": 1,
+        "control": 1,
+        "ordinarySlots": 6,
+        "profiles": 2,
+        "repeats": 2,
+        "payloadTrials": 1
+      },
+      "outcomes": [
+        {
+          "id": "canonical-control",
+          "kind": "control",
+          "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 1
+        },
+        {
+          "id": "native-projection",
+          "kind": "native",
+          "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            },
+            {
+              "branch": "inverted-stock-second-scan",
+              "strict": false,
+              "intendedFirst": false
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 4
+        }
+      ],
+      "captures": 2,
+      "ordinaryApiCalls": 6,
+      "passiveApiCalls": 2,
+      "nestedPassiveMatrixDecoderInvocations": 5,
+      "repeatAttempts": 2,
+      "exactRepeats": 2,
+      "exploratoryPayloadTrials": 1,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/run-results.json",
+      "attempted": {
+        "nativeCaptures": 1,
+        "controlCaptures": 1,
+        "ordinaryApiCalls": 6,
+        "passiveProfiles": 2,
+        "repeats": 2,
+        "exploratoryPayloadTrials": 1
+      },
+      "unattempted": {
+        "captures": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": null,
+      "outcome": "completed-no-qualifying-native",
+      "rejected": {
+        "batchStops": 0
+      },
+      "resultsSha256": "85bbeaef6fa56e3e57d4cbb8cd0a065714aabe70605d0801fd0ab3dd44388b9f"
+    },
+    {
+      "id": "payload-03",
+      "actor": "integrated_empirical",
+      "kind": "payload",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-03/preregistration.json",
+      "preregistrationSha256": "4ec686c5d299649d14c8fd92bcc589db99faa74c018e4b6e05a661bd014c1d99",
+      "frozenAtUtc": "2026-10-10T22:10:58.579Z",
+      "planned": {
+        "native": 1,
+        "control": 1,
+        "ordinarySlots": 6,
+        "profiles": 2,
+        "repeats": 2,
+        "payloadTrials": 1,
+        "fullSourceDiagnostics": 1
+      },
+      "outcomes": [
+        {
+          "id": "canonical-control",
+          "kind": "control",
+          "pngSha256": "8bca3f8b05e63b764d44b98c6f4dfb4ca664b1c55f7b94243c0ac8184798ec54",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "unattempted",
+              "texts": [],
+              "exactURL": null
+            },
+            {
+              "engine": "jsqr",
+              "status": "unattempted",
+              "texts": [],
+              "exactURL": null
+            }
+          ],
+          "strict": null
+        }
+      ],
+      "captures": 1,
+      "ordinaryApiCalls": 1,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 1,
+      "exactRepeats": 1,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-03/run-results.json",
+      "attempted": {
+        "nativeCaptures": 0,
+        "controlCaptures": 1,
+        "ordinaryApiCalls": 1,
+        "passiveProfiles": 0,
+        "repeats": 1,
+        "exploratoryPayloadTrials": 0
+      },
+      "unattempted": {
+        "captures": 1,
+        "ordinarySlots": 5,
+        "profiles": 2,
+        "exploratoryPayloadTrials": 1
+      },
+      "stop": {
+        "atUtc": "2026-10-10T22:11:03.739Z",
+        "current": "canonical-control",
+        "message": "Invalid control: canonical-control/opencv",
+        "stack": "AssertionError [ERR_ASSERTION]: Invalid control: canonical-control/opencv\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs:466:9"
+      },
+      "outcome": "stopped-preserved",
+      "rejected": {
+        "batchStops": 1
+      },
+      "resultsSha256": "bbb8ca9953208aa45786e2a9db6433885391e130205ee2c82fbb6383805994c6"
+    },
+    {
+      "id": "payload-04",
+      "actor": "integrated_empirical",
+      "kind": "payload",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/preregistration.json",
+      "preregistrationSha256": "7eb8f99bd92c54ffcd69d6586c3f2cf65971876dfb46defeed6d687915803801",
+      "frozenAtUtc": "2026-10-10T22:12:06.676Z",
+      "planned": {
+        "native": 1,
+        "control": 1,
+        "ordinarySlots": 6,
+        "profiles": 2,
+        "repeats": 2,
+        "payloadTrials": 1,
+        "fullSourceDiagnostics": 1
+      },
+      "outcomes": [
+        {
+          "id": "canonical-control",
+          "kind": "control",
+          "pngSha256": "35ebf4530d4499e33f59b3741b7be6266bea572b5ee17c60be23baef480e28e7",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": ["https://example.com/"],
+              "exactURL": true
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": true
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 1
+        },
+        {
+          "id": "continuous-native",
+          "kind": "native",
+          "pngSha256": "49b9230b76508e3a7a9393cdda6876ecc03a44928c0a77760adb9ee54cb29cf5",
+          "repeatExact": true,
+          "ordinary": [
+            {
+              "engine": "opencv",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "zxing",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            },
+            {
+              "engine": "jsqr",
+              "status": "completed",
+              "texts": [],
+              "exactURL": false
+            }
+          ],
+          "strict": [
+            {
+              "branch": "normal-stock-first-scan",
+              "strict": false,
+              "intendedFirst": false
+            },
+            {
+              "branch": "inverted-stock-second-scan",
+              "strict": false,
+              "intendedFirst": false
+            }
+          ],
+          "nestedPassiveMatrixDecoderInvocations": 4
+        }
+      ],
+      "captures": 2,
+      "ordinaryApiCalls": 6,
+      "passiveApiCalls": 2,
+      "nestedPassiveMatrixDecoderInvocations": 5,
+      "repeatAttempts": 2,
+      "exactRepeats": 2,
+      "exploratoryPayloadTrials": 1,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/run-results.json",
+      "attempted": {
+        "nativeCaptures": 1,
+        "controlCaptures": 1,
+        "ordinaryApiCalls": 6,
+        "passiveProfiles": 2,
+        "repeats": 2,
+        "exploratoryPayloadTrials": 1
+      },
+      "unattempted": {
+        "captures": 0,
+        "ordinarySlots": 0,
+        "profiles": 0,
+        "exploratoryPayloadTrials": 0
+      },
+      "stop": null,
+      "outcome": "completed-no-qualifying-native",
+      "rejected": {
+        "batchStops": 0
+      },
+      "resultsSha256": "b6559d64355c1b980f3dae76d3712057bbb01a464bfbcba3f62783b180659bd1"
+    },
+    {
+      "id": "resources-01",
+      "actor": "integrated_empirical",
+      "kind": "resources",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/preregistration.json",
+      "preregistrationSha256": "2cbdb70eb9ae30dea6a6389588414544c1ab987818a3a4ce55d7ad1ebf924ea5",
+      "frozenAtUtc": "2026-10-10T21:27:03.753Z",
+      "planned": {
+        "resources": 68,
+        "diagnostics": 68,
+        "ordinaryApiCalls": 0,
+        "profiles": 0,
+        "repeats": 0
+      },
+      "outcomes": [
+        {
+          "capturedRowsRemainEvidenceRegardlessOfStop": true,
+          "sourceEligibility": "Resource diagnostics only, never ordinary first-selection or payload recovery",
+          "rows": [
+            {
+              "id": "g00-0-10",
+              "font": "Arial-Black",
+              "sourceSha256": "9ceec1028184e3775a0942503bc68118873d732d5483d454dafcdad5cd7bf601",
+              "pngSha256": "c733a6c6f6221dd412387522e9a3e316e97fe164e36a45c84d7813c663358109",
+              "selectedExact": true
+            },
+            {
+              "id": "g00-0-14",
+              "font": "Arial-Black",
+              "sourceSha256": "d2ed76e542c98c42b52090607477e9634bec5593243f8531f6e7e3c998cad422",
+              "pngSha256": "b4d0c6a327288e0808d0afef8de5d14db2342777d15bfc8400969fd7116ed9c7",
+              "selectedExact": true
+            },
+            {
+              "id": "g00-1-10",
+              "font": "Arial-Black",
+              "sourceSha256": "9f02744bf0e9d7dcd750ebf0a0889af2c325ca51b91be258b8f0ff2cbc7c94aa",
+              "pngSha256": "d3495e349dc407944b3abf0770e8c9ee8e58297d4be254ff176b61534e802ce4",
+              "selectedExact": true
+            },
+            {
+              "id": "g00-1-14",
+              "font": "Arial-Black",
+              "sourceSha256": "6a53ecf5a1cb4dcff587016ca1636d4645a8146b842a19ca6ff096c2878d36e0",
+              "pngSha256": "3835e527965a9246e4454606a8bba349b4c8ce295f0d297d8094fd085e1da57b",
+              "selectedExact": true
+            },
+            {
+              "id": "g01-0-10",
+              "font": "ArialRoundedMTBold",
+              "sourceSha256": "5a11626e4c022a7a286e8f4ea421423754b9d18278457f620e349616b2152cd9",
+              "pngSha256": "7d42af1d11f7620c7f841b7dffa5b7699501c61259c24404db9cf4bb782fe199",
+              "selectedExact": true
+            },
+            {
+              "id": "g01-0-14",
+              "font": "ArialRoundedMTBold",
+              "sourceSha256": "47cef48d6a093a7dc2230ffb1e52689ee324ba3b00a211a40ccd7edaa82d5eb6",
+              "pngSha256": "d4bb92d3dd7af2066b817a2ddcb6faeabfefeacf692c079e5a51928848c7ab77",
+              "selectedExact": true
+            },
+            {
+              "id": "g01-1-10",
+              "font": "ArialRoundedMTBold",
+              "sourceSha256": "5b2f36256903e009e7d8125e488de08f87fa59e51b6bd800008b22956655354c",
+              "pngSha256": "55f138bcc6e08a1028ba98ffb0519eece8b42e62c33f1a0616b84569bd5a7409",
+              "selectedExact": true
+            },
+            {
+              "id": "g01-1-14",
+              "font": "ArialRoundedMTBold",
+              "sourceSha256": "b17423e5408e712d8a23dd033379a73f4f5b14ce21366392106bba3962d3a1ec",
+              "pngSha256": "9dfd2af6d3039c8bc272713f9a7503d26d2e2392fe7723cedac3aa665b56f0ed",
+              "selectedExact": true
+            },
+            {
+              "id": "g02-0-10",
+              "font": "AvenirNext-Heavy",
+              "sourceSha256": "feb70f5f261e7717ddba874f3431eede8774188a663aff8e478eada8fe251bea",
+              "pngSha256": "085fbef4112d6cfab476f4aa5c811e9d55d01026181c718512fd9470dd293d97",
+              "selectedExact": true
+            },
+            {
+              "id": "g02-0-14",
+              "font": "AvenirNext-Heavy",
+              "sourceSha256": "cfc66741bfb7436f78db809af2dae3a86cd5f8d0e90fda4f892048d4815e9f97",
+              "pngSha256": "387472e38588d86878159ddbdb1128b7b5eb7f819f36c19979b4ab13ebe3679d",
+              "selectedExact": true
+            },
+            {
+              "id": "g02-1-10",
+              "font": "AvenirNext-Heavy",
+              "sourceSha256": "b7126af96fb566ec242fa54ef4d9205f64b6e8ad959c47e00914d5d925c160b0",
+              "pngSha256": "53abba26013359f74a3bd82c9a015bf6a509f11a3317da33df59a4c6b57ad172",
+              "selectedExact": true
+            },
+            {
+              "id": "g02-1-14",
+              "font": "AvenirNext-Heavy",
+              "sourceSha256": "b666a3fd289808af388a64543c3c60538b4ace4878738c2ed159be45d213e0fc",
+              "pngSha256": "0237c109d2cfc1d352ee2a067c752375aba4bc793c87d106ef9087498b86929a",
+              "selectedExact": true
+            },
+            {
+              "id": "g03-0-10",
+              "font": "Avenir-Black",
+              "sourceSha256": "a480e92ba3814a35d3c79159f59571ea576a25d7457cee85e1ca904f1a4df52b",
+              "pngSha256": "e3a41c77e2633adb8de835b84b21d28861c60c70d8f5029dfaa3dc6953061482",
+              "selectedExact": true
+            },
+            {
+              "id": "g03-0-14",
+              "font": "Avenir-Black",
+              "sourceSha256": "53d54c6c72fce0813624fd31a75536f72688184a706fb26f2513d4e73bcf62d6",
+              "pngSha256": "4d09bc71bc1a9ac17f33b17a9dd68840204625b5872f135226697bb9efd29afc",
+              "selectedExact": true
+            },
+            {
+              "id": "g03-1-10",
+              "font": "Avenir-Black",
+              "sourceSha256": "3f31b2575ccef60bffbccdaebd469a88521c722b1fdc2a8c15547ed48b738159",
+              "pngSha256": "e10989dbd4c941458916d9582062b69a847df949f924772f1e60a4cb8347aa74",
+              "selectedExact": true
+            },
+            {
+              "id": "g03-1-14",
+              "font": "Avenir-Black",
+              "sourceSha256": "f78dccd24f20398d4e9365671eef4e2931af6b6d1fe1553c73cc1ae51c79369b",
+              "pngSha256": "4e05592db239dc1fc1ebc8e3ca60ce050a39110ff42c05505c87e58c7e2e6dad",
+              "selectedExact": true
+            },
+            {
+              "id": "g04-0-10",
+              "font": "HelveticaNeue-CondensedBlack",
+              "sourceSha256": "623a76f8b07d48f59f8e55fcb8e0cc30a8601cc996e92e0e7674f64e6071fb77",
+              "pngSha256": "814fb02a84fbe50afa635f92cedc08d5d583bdc66f4083231a5ef6ff1c62dad9",
+              "selectedExact": true
+            },
+            {
+              "id": "g04-0-14",
+              "font": "HelveticaNeue-CondensedBlack",
+              "sourceSha256": "4a884dbcf3e5b3ff6d5c7f9aeddd5ce6c35090508fe7ea453cb5a027fe8eb3ac",
+              "pngSha256": "692dac7d2c8a260d96959a04dfeaf2bba6bbbb11cda6f710ad84301226f56d10",
+              "selectedExact": true
+            },
+            {
+              "id": "g04-1-10",
+              "font": "HelveticaNeue-CondensedBlack",
+              "sourceSha256": "3ec06130ea1a1eb1c7e5c3d1641f9aba4889db31b4b8ccd33a1d89110df5f347",
+              "pngSha256": "2499e502e7fffbb5e338c764bd08576175249881b74e39aa56529d3ce1da930f",
+              "selectedExact": true
+            },
+            {
+              "id": "g04-1-14",
+              "font": "HelveticaNeue-CondensedBlack",
+              "sourceSha256": "2742cba386186ab232a1fdef7c5ea254e60c154c1d6a031328ae7942a938675b",
+              "pngSha256": "de6270f02bf46191a1c5589b45745b525b857dc9b9cd5221ed0e7f566a88c8dc",
+              "selectedExact": true
+            },
+            {
+              "id": "g05-0-10",
+              "font": "Futura-Bold",
+              "sourceSha256": "0d3d7ba389543c3b1d2f958e2d741e6235ada1009c8b6875339dcaac81cc709e",
+              "pngSha256": "d965362792cb267f6deffeb50ff583216cc4d3ae11a1b2fd92065497798f8a2c",
+              "selectedExact": true
+            },
+            {
+              "id": "g05-0-14",
+              "font": "Futura-Bold",
+              "sourceSha256": "0c28393d403e4f1ace848eb77badaa2bf0154f3f5f3d5f52f50328046be4b6ab",
+              "pngSha256": "11ad4119b3c9ef3bd43d49258dd91fcd85c4ed272747f6e6830560d66a7ae0ee",
+              "selectedExact": true
+            },
+            {
+              "id": "g05-1-10",
+              "font": "Futura-Bold",
+              "sourceSha256": "67a49a93f6d10c344c8a1b6907ac709e211d2d954c5e090f09558ae0c0e24c12",
+              "pngSha256": "865a390fb2e1f9b1f701248768f348e0cd1cd0b7e3cafb684cc48b8270f4b1b2",
+              "selectedExact": true
+            },
+            {
+              "id": "g05-1-14",
+              "font": "Futura-Bold",
+              "sourceSha256": "9170b4b0ff93dce46969f6c8f70728fc5c40a2198bda9e3a4bafe3b41f22918e",
+              "pngSha256": "497356af4d056a15b1958b4fa93e3cbee290492c4564ab92b024e9be4c70a3db",
+              "selectedExact": true
+            },
+            {
+              "id": "g06-0-10",
+              "font": "Futura-CondensedExtraBold",
+              "sourceSha256": "7f5e7b1dad66bbb07f7aa23de4f57bc31787292e5077784f0245f3cdf6cb670e",
+              "pngSha256": "a6d1fd7dfa971f1082f0194d835cc72c323e1b721d685885b2d53a732e72090d",
+              "selectedExact": true
+            },
+            {
+              "id": "g06-0-14",
+              "font": "Futura-CondensedExtraBold",
+              "sourceSha256": "918be54357a8f10ec722ffb738fda315d42eb4ea2d9a32dd637eb2ef84f9a445",
+              "pngSha256": "6e4dbf9702536e93bb280e57067080651a27c42c201bd19e69aa3851e6a97bb1",
+              "selectedExact": true
+            },
+            {
+              "id": "g06-1-10",
+              "font": "Futura-CondensedExtraBold",
+              "sourceSha256": "5ec74e2d26dbc09935fade18662f56443a8da49c9e317bbad2243056f59bd479",
+              "pngSha256": "1400a48c723b38f4f7604489aae8591cf3ccd5bb5b5d9683361d09fbdf76e747",
+              "selectedExact": true
+            },
+            {
+              "id": "g06-1-14",
+              "font": "Futura-CondensedExtraBold",
+              "sourceSha256": "2e560c8d0960469b5cb98c732d4b3ef8e5061ecb8bf6b3be278786dd9e4206d1",
+              "pngSha256": "bf3a66412794612ebed747ad76fa0861d6d3414d51f9d54bee80fa96b54cf8b2",
+              "selectedExact": true
+            },
+            {
+              "id": "g07-0-10",
+              "font": "Impact",
+              "sourceSha256": "4ae65df60c1c35cbcba88cef2840298a754f9a71195daf89906f6d9ba5ca8ef7",
+              "pngSha256": "64f360ca025619ceba2469647697b2cbc07bbf26dbe429f5dd310be75702dccd",
+              "selectedExact": true
+            },
+            {
+              "id": "g07-0-14",
+              "font": "Impact",
+              "sourceSha256": "5ee78b54e474227c9cb0049e28b177a356b0a8baf893d7f1f70b9605ed5a3ab3",
+              "pngSha256": "1798bd819dfb0e276bf5e83fe577df437fcf7794b4c2233bff396ac98fd975d6",
+              "selectedExact": true
+            },
+            {
+              "id": "g07-1-10",
+              "font": "Impact",
+              "sourceSha256": "fc96555f66fa284435b05254648b7c67eb0aaecbc24213b264248d2b046a5f0f",
+              "pngSha256": "cd3044da68fa7ca5c939f8a6d3547ab1ff3e98c7aa80a45544957d581012f766",
+              "selectedExact": true
+            },
+            {
+              "id": "g07-1-14",
+              "font": "Impact",
+              "sourceSha256": "78825768a84fd4a386b2967a2b843b5e36e547d8c74b1a5de3bdc606543610c3",
+              "pngSha256": "81e8edfb924f28c27a5ca6e6eadac5fd5e9652fd7486a4e3b51099fe9ac34414",
+              "selectedExact": true
+            },
+            {
+              "id": "g08-0-10",
+              "font": "Phosphate-Solid",
+              "sourceSha256": "8d34870516aff39f6e9195c67546ce4686969005265bb3fde61f29519f69e70e",
+              "pngSha256": "e92f1b7ab1cfbd6fdabba0d9f90e5dadf0a59f57794fb2fe7b07469b10417dc6",
+              "selectedExact": true
+            },
+            {
+              "id": "g08-0-14",
+              "font": "Phosphate-Solid",
+              "sourceSha256": "c958faa1e960b6859fd0c6638ed02a4ab979f449a63cb548f7cfe18dbeaec91e",
+              "pngSha256": "9e3c9c146ac82b0040a4f786db15eab31cb21014e619a0dbd6ae604f551997ff",
+              "selectedExact": true
+            },
+            {
+              "id": "g08-1-10",
+              "font": "Phosphate-Solid",
+              "sourceSha256": "6e16bfe2ccde3fc075c6136d950e8d93fe268c15e73268e4c0f39ff2d57aca45",
+              "pngSha256": "e92f1b7ab1cfbd6fdabba0d9f90e5dadf0a59f57794fb2fe7b07469b10417dc6",
+              "selectedExact": true
+            },
+            {
+              "id": "g08-1-14",
+              "font": "Phosphate-Solid",
+              "sourceSha256": "010a927cdd2b6c656fe5bd10d205cf5868e54ee9c7a9a07797daef0b161be10d",
+              "pngSha256": "9e3c9c146ac82b0040a4f786db15eab31cb21014e619a0dbd6ae604f551997ff",
+              "selectedExact": true
+            },
+            {
+              "id": "g09-0-10",
+              "font": "Phosphate-Inline",
+              "sourceSha256": "5548ef40962dc3f41e6163a0dd371ac5b2ae0b0842b98a2944ed79e0f351e56a",
+              "pngSha256": "018e8fb9c9c50d83b3be75515d19d1c6ef1d090d38bc2a4032bd18e527db7755",
+              "selectedExact": true
+            },
+            {
+              "id": "g09-0-14",
+              "font": "Phosphate-Inline",
+              "sourceSha256": "71f9e01d1ddf0a300e512e2351d830670ac064aae51b8a4ab9f6ff9d11e3a35a",
+              "pngSha256": "0765c5901418b8d8099bcfe8941a4b274325bfdc95cc4cdbe2948b5a7d3b4ad4",
+              "selectedExact": true
+            },
+            {
+              "id": "g09-1-10",
+              "font": "Phosphate-Inline",
+              "sourceSha256": "74d704993d02cdf3fcdeaa56ed6d8609d115ed3eda2ee7acef5b82d336ddbe39",
+              "pngSha256": "018e8fb9c9c50d83b3be75515d19d1c6ef1d090d38bc2a4032bd18e527db7755",
+              "selectedExact": true
+            },
+            {
+              "id": "g09-1-14",
+              "font": "Phosphate-Inline",
+              "sourceSha256": "89163c9498fef41ed8065167c82999835208b8628b4236090f42354c728db479",
+              "pngSha256": "0765c5901418b8d8099bcfe8941a4b274325bfdc95cc4cdbe2948b5a7d3b4ad4",
+              "selectedExact": true
+            },
+            {
+              "id": "g10-0-10",
+              "font": "AmericanTypewriter-Bold",
+              "sourceSha256": "3c4107001c73a9eade120b49f0340898da5a682419fead7dbf9d41d10ee43d15",
+              "pngSha256": "70c5f74303431f9623ab9938a7bb73ea16f8d6e46785f137fe2ede7092cdd406",
+              "selectedExact": true
+            },
+            {
+              "id": "g10-0-14",
+              "font": "AmericanTypewriter-Bold",
+              "sourceSha256": "595dab8cf6239f8fb100eed909aba7faba62aa784b1477edbda4ab025531c995",
+              "pngSha256": "788fe9a2c868bcea16b6f5f08975eac133af81aace8993f833fffed53c52a526",
+              "selectedExact": true
+            },
+            {
+              "id": "g10-1-10",
+              "font": "AmericanTypewriter-Bold",
+              "sourceSha256": "9fa00abf9e28fa0771456d000a40c16c14e4004665830a49234899ef5ac75eeb",
+              "pngSha256": "515e193a1e6b68289227bd4e4f8ad95d41ec20a6bf312115458b41b9799613c5",
+              "selectedExact": true
+            },
+            {
+              "id": "g10-1-14",
+              "font": "AmericanTypewriter-Bold",
+              "sourceSha256": "941468d303b75dd207cfe1fcc9d2ea15fd409de686287a2a9fa560aa50d15cc5",
+              "pngSha256": "3840236184918ffed8fe5d58c6ac15e9f4f0fd30b053c31575004bbfa6fd67cf",
+              "selectedExact": true
+            },
+            {
+              "id": "g11-0-10",
+              "font": "Verdana-Bold",
+              "sourceSha256": "15c22a7b8521e8f0bce40b050c83417e0ecb86fc5238e584b4916e48d9f2fd86",
+              "pngSha256": "bd7ea395a4f32611fc435661b7866f2f147397d3f9793a3d1037dcb158b47358",
+              "selectedExact": true
+            },
+            {
+              "id": "g11-0-14",
+              "font": "Verdana-Bold",
+              "sourceSha256": "b20eda3152b2be22e61a45b8def6ec266d4197a4f788accd264a950a330e60e9",
+              "pngSha256": "762e36c29344f38efcc2a92fd8253dffd6b161dc69355c230007baf149619763",
+              "selectedExact": true
+            },
+            {
+              "id": "g11-1-10",
+              "font": "Verdana-Bold",
+              "sourceSha256": "f0286760a8e6776ae158f2e592440d5e7c6ee48190c35e3ec372bc42804404a0",
+              "pngSha256": "1f0c7782227c7afc0324482a3324e7d6bc5038cae98c3c5c27db5d620ff46345",
+              "selectedExact": true
+            },
+            {
+              "id": "g11-1-14",
+              "font": "Verdana-Bold",
+              "sourceSha256": "d00c4f4e7344b42717f8bb44950be21da3206b8bc37abc3b5f49e8249bf76b38",
+              "pngSha256": "900f65b2ed8da0b6b297dfd21efe71cd0177a95fd0702b64250126adadf34efe",
+              "selectedExact": true
+            },
+            {
+              "id": "g12-0-10",
+              "font": "Geneva",
+              "sourceSha256": "1ef1742d05ac7737ed9caa8a3e070248c9524e4de48a5154bb77c279fbab2163",
+              "pngSha256": "e895855d7c95094614196ff5b32969a010f48c67f36b3bb1d82410218de47fd6",
+              "selectedExact": true
+            },
+            {
+              "id": "g12-0-14",
+              "font": "Geneva",
+              "sourceSha256": "cd77a55da877cf6cb4a15e849c69b950f730ecd4a991697f16f62bb20abfc707",
+              "pngSha256": "16ec8769164ab79d47bb25b268a03fc70f2ffb27e036e161a3ff79791f904c75",
+              "selectedExact": true
+            },
+            {
+              "id": "g12-1-10",
+              "font": "Geneva",
+              "sourceSha256": "e596335fa58b4d1bee3fc7fba9e13a0c1b8f797552a60f4f54067aef5381d6bd",
+              "pngSha256": "a0e6222e343f829fdf592521d7190c96e92a8488a7ade523b787c9c87103fda6",
+              "selectedExact": true
+            },
+            {
+              "id": "g12-1-14",
+              "font": "Geneva",
+              "sourceSha256": "e40f797bf24dd963e8e05093d1f1ed20e2b225eb09595eec16644d6f531310fe",
+              "pngSha256": "9da976afe71efe44aefb4049fc06ecc2c2b7f0299a189daf82cf3dd7e0ec521b",
+              "selectedExact": true
+            },
+            {
+              "id": "g13-0-10",
+              "font": "ChalkboardSE-Bold",
+              "sourceSha256": "550c9332e878a0176b44a5b1aef725edaa2bd8aac2cb2c6c340ffee9b97742ad",
+              "pngSha256": "c586c853043ffe6de090f0ff6c419210405445f688922a66565b04e12deaf316",
+              "selectedExact": true
+            },
+            {
+              "id": "g13-0-14",
+              "font": "ChalkboardSE-Bold",
+              "sourceSha256": "f246292529b2c008b4e2a77c9923348abcbd8d08d361e9a7f2ec025b0b1dae40",
+              "pngSha256": "7173a3c46585d47d8a797a60e9c70981465d08acd53e6f53b5f4dc1e3f5338e4",
+              "selectedExact": true
+            },
+            {
+              "id": "g13-1-10",
+              "font": "ChalkboardSE-Bold",
+              "sourceSha256": "5e76423f480ab45c32309c4b5a1bbee07606a905849f107a0edcd40d3d09084c",
+              "pngSha256": "46d0a5cf1f2fc18fb16134f58c1ddd8216a4f072ea174e01cbe0b7053e608c9f",
+              "selectedExact": true
+            },
+            {
+              "id": "g13-1-14",
+              "font": "ChalkboardSE-Bold",
+              "sourceSha256": "83d701f737b8155ce7e68bd68a159908146d685d05a4cd72e82fdc0d0f72799d",
+              "pngSha256": "5f509b9ecfc7f53438eab36dbbc05eb7992fedd05506afaa611b5a2454141d9b",
+              "selectedExact": true
+            },
+            {
+              "id": "g14-0-10",
+              "font": "Skia-Regular_Black",
+              "sourceSha256": "7bb0454980b4bdbebf993e2a6c9a3a12ab4e05bca4ff95fcc144730e4d382804",
+              "pngSha256": "fd60fe25906189e49c36b4db3abf61e75c9d702a1208b4572220871254d4cf58",
+              "selectedExact": true
+            }
+          ]
+        }
+      ],
+      "captures": 57,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/results.json",
+      "attempted": {
+        "resources": 57,
+        "diagnostics": 57,
+        "retainedDiagnosticRows": 57,
+        "completedSlots": null,
+        "failedSlots": null
+      },
+      "unattempted": {
+        "resources": 11
+      },
+      "failedSetupBeforeCapture": 0,
+      "stop": {
+        "current": "g14-0-10",
+        "message": "Font substitution",
+        "stack": "AssertionError [ERR_ASSERTION]: Font substitution\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs:19:584",
+        "atUtc": "2026-10-10T21:27:22.709Z"
+      },
+      "rejected": {
+        "capturedStoppedSlots": 1,
+        "failedSetupBeforeCapture": 0
+      },
+      "outcome": "stopped-preserved",
+      "resultsSha256": "61434dc63f52e665b327f5c4c8efcbbc7420335424c66d39058f0c486228aa7d"
+    },
+    {
+      "id": "resources-02",
+      "actor": "integrated_empirical",
+      "kind": "resources",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/preregistration.json",
+      "preregistrationSha256": "e44e999b51f334fb2fcdb2a8cce8de065d635d5d7938b9ad09d2869ed9c0c617",
+      "frozenAtUtc": "2026-10-10T21:27:56.076Z",
+      "planned": {
+        "resources": 10,
+        "diagnostics": 10,
+        "ordinaryApiCalls": 0,
+        "profiles": 0,
+        "repeats": 0
+      },
+      "outcomes": [
+        {
+          "capturedRowsRemainEvidenceRegardlessOfStop": true,
+          "sourceEligibility": "Resource diagnostics only, never ordinary first-selection or payload recovery",
+          "rows": [
+            {
+              "id": "futura-O-64",
+              "font": "Futura-Bold",
+              "sourceSha256": "efcb9c5e717dfbf7c93c094648ef20bd47a9c9452d5697a12b2a20df4e68a67b",
+              "pngSha256": "7b0dd0a6a051da34664799759849bfcdf1368834603937e29f235ab1644de182",
+              "selectedExact": true
+            },
+            {
+              "id": "futura-O-80",
+              "font": "Futura-Bold",
+              "sourceSha256": "fdd3f61d1fc02909e997d641b4922d65c994014ec1aa1661cc770bef705d2682",
+              "pngSha256": "59f8984a8d8533c83e563053289fc8e26c99767817acdcf95d7fab61d57b9605",
+              "selectedExact": true
+            },
+            {
+              "id": "futura-O-96",
+              "font": "Futura-Bold",
+              "sourceSha256": "fdb9b6d7498a11f5ebe0c5cb328062ad96423760e43f4f0bd39140ef7828808b",
+              "pngSha256": "ce2c700a37849309e51566b46e5e64290da0472b30296dbb8130a00eb2704dd3",
+              "selectedExact": true
+            },
+            {
+              "id": "avenir-o-100",
+              "font": "Avenir-Black",
+              "sourceSha256": "df730b659e2f013652c8be2ddf77766f3bd3e68e684be66faeff3a112212fc33",
+              "pngSha256": "eba97686da32245673038cf9e57429de8f1c1705bf6ad9dc18d76cd2f5ff6d57",
+              "selectedExact": true
+            },
+            {
+              "id": "avenir-o-126",
+              "font": "Avenir-Black",
+              "sourceSha256": "c54080a1a71a1cf40b70e6a596a71a6df2afd8e2a4a257a366d850ddaf01d82f",
+              "pngSha256": "83573494623e4e325ab62b8aa6933ba15f3568468a78e5f54557762ea2ff2dc2",
+              "selectedExact": true
+            },
+            {
+              "id": "avenir-o-150",
+              "font": "Avenir-Black",
+              "sourceSha256": "4beb3dbec367f9464dcc3cd0895210be618ed303e50c9abd0750316d5ed24466",
+              "pngSha256": "f4eaf76e46b6ecec2b82bba49d662771d9889760df76ab690f096d234008a1a8",
+              "selectedExact": true
+            },
+            {
+              "id": "body-0",
+              "font": "ArialMT",
+              "sourceSha256": "86c760658fa35b7fbaf691fd1a9c090d30991a12177f0f013251bd4dacf02b95",
+              "pngSha256": "86aa6621963a88a4f55c9f3190fe032e4f5f052a4b51da02fc04bdf2bc20e032",
+              "selectedExact": true
+            },
+            {
+              "id": "body-1",
+              "font": "Arial-BoldMT",
+              "sourceSha256": "ba390c1f3151c014d1620ec7f6f3d31f9cb866e7de8acb48c0b6c2ffcaae2209",
+              "pngSha256": "7c1b3294ca291e24dd6efb44a4419dcd277d051269257bd59c9d535fb0286fae",
+              "selectedExact": true
+            },
+            {
+              "id": "body-2",
+              "font": "HelveticaNeue",
+              "sourceSha256": "12844785f7f96f074fdf445113f0b69ab241df38db926cc23f2f551cdf1c35be",
+              "pngSha256": "95ad351777ec47157f493f289679fb1dc2d64dce1fece9a6a86e48699ea8608e",
+              "selectedExact": true
+            },
+            {
+              "id": "body-3",
+              "font": "Menlo-Regular",
+              "sourceSha256": "71401585b531097a81b04b7099e0934ce20c8ed3b6460471fdf89021ed1a611c",
+              "pngSha256": "15e703c0b188fad107102c99e36b389688bfa1491ca839bb0690230b7cb4c323",
+              "selectedExact": true
+            }
+          ]
+        }
+      ],
+      "captures": 10,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/results.json",
+      "attempted": {
+        "resources": 10,
+        "diagnostics": 10,
+        "retainedDiagnosticRows": 10,
+        "completedSlots": null,
+        "failedSlots": null
+      },
+      "unattempted": {
+        "resources": 0
+      },
+      "failedSetupBeforeCapture": 0,
+      "stop": null,
+      "rejected": {
+        "capturedStoppedSlots": 0,
+        "failedSetupBeforeCapture": 0
+      },
+      "outcome": "completed-source-only",
+      "resultsSha256": "61719442cb62162528517f53e59c01515e56cb8142d0a6dea5ece51e97e5a807"
+    },
+    {
+      "id": "resources-03",
+      "actor": "integrated_empirical",
+      "kind": "resources",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/preregistration.json",
+      "preregistrationSha256": "78318c1e793d47dbdc21b3d8a1dd10948c7b7be1d31476ebe0f357a1bd76214e",
+      "frozenAtUtc": "2026-10-10T21:58:03.250Z",
+      "planned": {
+        "resources": 10,
+        "diagnostics": 10,
+        "ordinaryApiCalls": 0,
+        "profiles": 0,
+        "repeats": 0
+      },
+      "outcomes": [
+        {
+          "capturedRowsRemainEvidenceRegardlessOfStop": true,
+          "sourceEligibility": "Resource diagnostics only, never ordinary first-selection or payload recovery",
+          "rows": [
+            {
+              "id": "ornament-AppleSymbols-25c9",
+              "font": "AppleSymbols",
+              "sourceSha256": "5bde1932b36940fedccde2844299b707cfcc0bb78942a1ae319d84de883d87d7",
+              "pngSha256": "332748aff6e8bb6bb1bf6a7c7a930fea82be7c2d2a9cacd1c5556652cff72019",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 0.8219869343737972
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "ornament-AppleSymbols-2299",
+              "font": "AppleSymbols",
+              "sourceSha256": "be2a8148a6c631d176b3ba29da44b19c5b0f529a1206a2a0cf198b3bc4ee0d5d",
+              "pngSha256": "efe7e25f284cefc20196f234ec7c668f285b5a7fed55cd5a33c1d6842cf1ddad",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 1.1322189671667302
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "ornament-ArialUnicodeMS-25c9",
+              "font": "ArialUnicodeMS",
+              "sourceSha256": "f1d28e5a64031fa52780d63984845712679829671ba74f91d6b9cacf2e74050a",
+              "pngSha256": "e2070426480a1fe2e3d121a1c45e216210f299dc5920d79eedd2e2349fb57dad",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 0.3033657424581728
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "ornament-ArialUnicodeMS-2299",
+              "font": "ArialUnicodeMS",
+              "sourceSha256": "8df841460ef23faf5ea8e045bef64eead052ada7850124c048ea80599633583c",
+              "pngSha256": "13a067c7f9312b804e20b83f1ed601c0ad4c96a18b5cd3ba34433a60bc726a5c",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 1.108474751753658
+                }
+              ],
+              "selectedExact": true
+            }
+          ]
+        }
+      ],
+      "captures": 4,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/results.json",
+      "attempted": {
+        "resources": 4,
+        "diagnostics": 4,
+        "retainedDiagnosticRows": 4,
+        "completedSlots": 4,
+        "failedSlots": 1
+      },
+      "unattempted": {
+        "resources": 5
+      },
+      "failedSetupBeforeCapture": 1,
+      "stop": {
+        "current": "continuous-gray-153-shadow-0",
+        "atUtc": "2026-10-10T21:58:05.999Z",
+        "message": "Native font descriptor mismatch",
+        "stack": "AssertionError [ERR_ASSERTION]: Native font descriptor mismatch\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs:196:5"
+      },
+      "rejected": {
+        "capturedStoppedSlots": 0,
+        "failedSetupBeforeCapture": 1
+      },
+      "outcome": "stopped-preserved",
+      "resultsSha256": "616001af36375c86b8212706850725f263ff5aa48aeef0257ab5659589f3c29c"
+    },
+    {
+      "id": "resources-04",
+      "actor": "integrated_empirical",
+      "kind": "resources",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/preregistration.json",
+      "preregistrationSha256": "e1da761c6e65b11d63082599a332d27e844c78a6116fb11a7b3632e576ee4390",
+      "frozenAtUtc": "2026-10-10T21:59:08.398Z",
+      "planned": {
+        "resources": 6,
+        "diagnostics": 6,
+        "ordinaryApiCalls": 0,
+        "profiles": 0,
+        "repeats": 0
+      },
+      "outcomes": [
+        {
+          "capturedRowsRemainEvidenceRegardlessOfStop": true,
+          "sourceEligibility": "Resource diagnostics only, never ordinary first-selection or payload recovery",
+          "rows": [
+            {
+              "id": "continuous-gray-153-shadow-0",
+              "font": "Menlo-Bold",
+              "sourceSha256": "815e1541e87d44a088ef5a3aa8c9e460306c404dbb4bafea7a94d3fe17975598",
+              "pngSha256": "e2887c829452bc75eac17251d366226a4b41bce4a39a0b1f2df6c471f2688d84",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "continuous-gray-153-shadow-1p5",
+              "font": "Menlo-Bold",
+              "sourceSha256": "ca45cfc081f043d530dbc3ea0679e204c950963604c1aa0b3d0c5108bb18a989",
+              "pngSha256": "c1eb9508b279e8ee50578c44275b8837f37e38cba6f2630a5cf3352bc0325569",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "continuous-gray-180-shadow-0",
+              "font": "Menlo-Bold",
+              "sourceSha256": "a584ca284473877d76317cc392a8160109eabbefd5e689db30afba4d8d789932",
+              "pngSha256": "0c0c79151b2e9ba75da05aa906123344e664213308ee3e34230953764a324574",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "continuous-gray-180-shadow-1p5",
+              "font": "Menlo-Bold",
+              "sourceSha256": "4be6e438473f8d5b2b3c275f88552b7d843b1bd91b360388cee9e6089add9f5d",
+              "pngSha256": "e0f0636aa677382feb9aa90bea05713be2935ceb142205d64cb3cc456b154442",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "continuous-gray-204-shadow-0",
+              "font": "Menlo-Bold",
+              "sourceSha256": "e3130afd6f44848d1dd8e23fd0437c7ebaa169e46ec41840ab977164a1fbc7b3",
+              "pngSha256": "dab4a91bfcfe18f971a68548649c6392f264969b319a136dac2d77d4d9c0e845",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "continuous-gray-204-shadow-1p5",
+              "font": "Menlo-Bold",
+              "sourceSha256": "17e6f9dc804dc72e5d9b985fe588621e17c3f124e3fad6950dc21dc1db618548",
+              "pngSha256": "332917b37788165277a38dfc485947d4f3cce5512c911b235ff60e8dc19393d7",
+              "models": [],
+              "selectedExact": true
+            }
+          ]
+        }
+      ],
+      "captures": 6,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/results.json",
+      "attempted": {
+        "resources": 6,
+        "diagnostics": 6,
+        "retainedDiagnosticRows": 6,
+        "completedSlots": 6,
+        "failedSlots": 0
+      },
+      "unattempted": {
+        "resources": 0
+      },
+      "failedSetupBeforeCapture": 0,
+      "stop": null,
+      "rejected": {
+        "capturedStoppedSlots": 0,
+        "failedSetupBeforeCapture": 0
+      },
+      "outcome": "completed-source-only",
+      "resultsSha256": "20bcc0bbec8119ef899f5378c166283b774b5a59dfc74f1b58a1d3f866623c12"
+    },
+    {
+      "id": "resources-05",
+      "actor": "integrated_empirical",
+      "kind": "resources",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/preregistration.json",
+      "preregistrationSha256": "73f59970533dcbd4a6070a19bffe3865189588e67e2e2baca5764458bd92c37a",
+      "frozenAtUtc": "2026-10-10T22:19:13.261Z",
+      "planned": {
+        "resources": 8,
+        "diagnostics": 8,
+        "ordinaryApiCalls": 0,
+        "profiles": 0,
+        "repeats": 0
+      },
+      "outcomes": [
+        {
+          "capturedRowsRemainEvidenceRegardlessOfStop": true,
+          "sourceEligibility": "Resource diagnostics only, never ordinary first-selection or payload recovery",
+          "rows": [
+            {
+              "id": "square-ArialUnicodeMS-25a3",
+              "font": "ArialUnicodeMS",
+              "sourceSha256": "e50450866840049a0c259a5569753d0c84817b1995a076199e1e4b2397b6b8a7",
+              "pngSha256": "745d4c33e02496418b2a5504273f1a9184d8d15f05785f919ccf75fbd0bdcc84",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 0.3423892043452028
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "square-ArialUnicodeMS-25a9",
+              "font": "ArialUnicodeMS",
+              "sourceSha256": "e939909eaeb2bb3c2f06571a8b0d95edf7e20f52fc8d41d485be7840420a9946",
+              "pngSha256": "0177a14f9864a423729983fd213c2ac56a30e7bce5c1f84115a492198ab6389b",
+              "models": [
+                {
+                  "axes": 2,
+                  "worstRMS": 1.2793588751121248
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "square-AppleSymbols-25a3",
+              "font": "AppleSymbols",
+              "sourceSha256": "bb96bbad085844aa1923cf4ee4b36a306a310d9325136a7c5a1febb57a3a4649",
+              "pngSha256": "0ae3c0aff6e34999f5c211c8dcab4f2a083d02b3e26379a4e8687b2b62a763b0",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 0.4735202775881908
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "square-AppleSymbols-25a9",
+              "font": "AppleSymbols",
+              "sourceSha256": "cc76bb89d259f87e43a8df6e2efe3ac75572c1d00e312717b2c276492e31e704",
+              "pngSha256": "f4e0d19a5ceb9b292e51b73af24dc8ed61644bfbc91f9580567b265a9892ac91",
+              "models": [
+                {
+                  "axes": 2,
+                  "worstRMS": 1.0957321325260112
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "phase-stroke-180-0p75",
+              "font": "Menlo-Bold",
+              "sourceSha256": "add29e3e672a1c79427680d6250f4d3be87c39531bd5e4aea36ac99625fd5dbe",
+              "pngSha256": "0e87ec25af4d2f6d14ab5d607084057942d7d0be917de5627586845b5c770103",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "phase-stroke-180-1",
+              "font": "Menlo-Bold",
+              "sourceSha256": "e3c0faf726680ccf6900dea61704eb71a0ff6c57eef37d6b25314980b67e0b6d",
+              "pngSha256": "4f298dd4cfd3abe4d86378bdc2154ebf80211a5725ea4789ee50593aed84a627",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "phase-stroke-204-0p75",
+              "font": "Menlo-Bold",
+              "sourceSha256": "337545e85dd232ff3cbfcd36612a90523e00aaff380deebc7fcc0a75e676172f",
+              "pngSha256": "af1cdf109cbe961addf65449c48bced7c4efb2b3ff22a2eca54c6a5a2497f583",
+              "models": [],
+              "selectedExact": true
+            },
+            {
+              "id": "phase-stroke-204-1",
+              "font": "Menlo-Bold",
+              "sourceSha256": "6ad0ad7fb845b86ac8178250d3bd88d48e5b3a8c6ad1e1f5a592dba1ba0a2b42",
+              "pngSha256": "da55a4d116e4950174191cc098b8f0686e29461f25c553965068f3b9e22aad08",
+              "models": [],
+              "selectedExact": true
+            }
+          ]
+        }
+      ],
+      "captures": 8,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/results.json",
+      "attempted": {
+        "resources": 8,
+        "diagnostics": 8,
+        "retainedDiagnosticRows": 8,
+        "completedSlots": 8,
+        "failedSlots": 0
+      },
+      "unattempted": {
+        "resources": 0
+      },
+      "failedSetupBeforeCapture": 0,
+      "stop": null,
+      "rejected": {
+        "capturedStoppedSlots": 0,
+        "failedSetupBeforeCapture": 0
+      },
+      "outcome": "completed-source-only",
+      "resultsSha256": "e13c834648204eedf136d2d2105ef1d53c1d00b183d3dd82e18229dddc6c0a84"
+    },
+    {
+      "id": "resources-06",
+      "actor": "integrated_empirical",
+      "kind": "resources",
+      "preregistrationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/preregistration.json",
+      "preregistrationSha256": "b940a2a629c3c881ed6442d0dfc0c8d1ee46eb3084e71affbbaa4673837b35bd",
+      "frozenAtUtc": "2026-10-10T22:24:24.535Z",
+      "planned": {
+        "resources": 5,
+        "diagnostics": 5,
+        "ordinaryApiCalls": 0,
+        "profiles": 0,
+        "repeats": 0
+      },
+      "outcomes": [
+        {
+          "capturedRowsRemainEvidenceRegardlessOfStop": true,
+          "sourceEligibility": "Resource diagnostics only, never ordinary first-selection or payload recovery",
+          "rows": [
+            {
+              "id": "calibrated-ArialUnicodeMS-25a3-624",
+              "font": "ArialUnicodeMS",
+              "sourceSha256": "7a6a76c04cea9cd0e9505b4a7953bf4d70cc443325af912c6cf793a76b8ce747",
+              "pngSha256": "1711605a10bb63d2a1c97988bc3d78b33035c145339a8388e0ca8bed9453158f",
+              "models": [
+                {
+                  "axes": 4,
+                  "worstRMS": 0.38304742340991643
+                }
+              ],
+              "selectedExact": true
+            },
+            {
+              "id": "cutoff-gray-228-stroke-0p75",
+              "font": "Menlo-Bold",
+              "sourceSha256": "67b317dc3e3f1f85fa377cb42761cd4bed685df215bb46d7aeaf0a35aaee7c4f",
+              "pngSha256": "4e3b834092b468c14e4133ae0391fe73d87274154d75fa2d715c1d9a8381eb60",
+              "models": [],
+              "selectedExact": true
+            }
+          ]
+        }
+      ],
+      "captures": 2,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/results.json",
+      "attempted": {
+        "resources": 2,
+        "diagnostics": 2,
+        "retainedDiagnosticRows": 2,
+        "completedSlots": 1,
+        "failedSlots": 1
+      },
+      "unattempted": {
+        "resources": 3
+      },
+      "failedSetupBeforeCapture": 0,
+      "stop": {
+        "current": "cutoff-gray-228-stroke-0p75",
+        "atUtc": "2026-10-10T22:24:36.773Z",
+        "message": "Unacceptable source readability/fullink/overlap",
+        "stack": "AssertionError [ERR_ASSERTION]: Unacceptable source readability/fullink/overlap\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v5.mjs:424:7"
+      },
+      "rejected": {
+        "capturedStoppedSlots": 1,
+        "failedSetupBeforeCapture": 0
+      },
+      "outcome": "stopped-preserved",
+      "resultsSha256": "98d28932568ff37b99b06de1974faeba3294b1e9c872628c196559b8a22e646d"
+    },
+    {
+      "id": "layout-01-prepare-01",
+      "actor": "integrated_empirical",
+      "kind": "setup-failure",
+      "planned": {
+        "setupInvocations": 1
+      },
+      "attempted": {
+        "setupInvocations": 1,
+        "captures": 0,
+        "ordinaryApiCalls": 0,
+        "profiles": 0
+      },
+      "unattempted": {
+        "experimentalBatch": "Not yet frozen; no experimental denominator invented"
+      },
+      "preregistrationPath": null,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01.prepare.stderr.txt",
+      "resultsSha256": "ad647a633e78c0684f1aac5805d638b55d9e4053fe0ec378974e52f51dbe0bc6",
+      "sourceSnapshot": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01.prepare-failed-source.mjs.gz",
+      "outcome": "rejected-before-experiment",
+      "stop": {
+        "reason": "Wrong relative vendor import; no source/preregistration generated"
+      },
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0
+    },
+    {
+      "id": "layout-01-prepare-02",
+      "actor": "integrated_empirical",
+      "kind": "setup-failure",
+      "planned": {
+        "setupInvocations": 1
+      },
+      "attempted": {
+        "setupInvocations": 1,
+        "captures": 0,
+        "ordinaryApiCalls": 0,
+        "profiles": 0
+      },
+      "unattempted": {
+        "experimentalBatch": "Not yet frozen; no experimental denominator invented"
+      },
+      "preregistrationPath": null,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01.prepare-fixed.stderr.txt",
+      "resultsSha256": "5888d27ba87436c07de5e2724b42e99bf119be834c5b15126474514032a292d1",
+      "sourceSnapshot": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01.prepare-failed-source2.mjs.gz",
+      "outcome": "rejected-before-experiment",
+      "stop": {
+        "reason": "Wrong named vendor exports; pinned encoder exports default"
+      },
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0
+    },
+    {
+      "id": "layout-01-invocation-01",
+      "actor": "integrated_empirical",
+      "kind": "setup-failure",
+      "planned": {
+        "setupInvocations": 1
+      },
+      "attempted": {
+        "setupInvocations": 1,
+        "captures": 0,
+        "ordinaryApiCalls": 0,
+        "profiles": 0
+      },
+      "unattempted": {
+        "experimentalBatch": "Not yet frozen; no experimental denominator invented"
+      },
+      "preregistrationPath": null,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01.stderr.txt",
+      "resultsSha256": "d8f1b25f460c09a687b1bafb4c7b700300ea8d3463426b489526a490ce560567",
+      "sourceSnapshot": null,
+      "outcome": "rejected-before-experiment",
+      "stop": {
+        "reason": "Runner invoked before preregistration existed; ENOENT before browser/capture/reader"
+      },
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0
+    },
+    {
+      "id": "selection-preflight",
+      "actor": "integrated_empirical",
+      "kind": "selection-preflight",
+      "planned": {
+        "domSelectionChecks": 1
+      },
+      "attempted": {
+        "domSelectionChecks": 1,
+        "captures": 0,
+        "ordinaryApiCalls": 0
+      },
+      "preregistrationPath": null,
+      "resultsPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/selection-preflight.json",
+      "resultsSha256": "686af33e4883df8728e21e7d6a32d257ab225b8f26e0e31ec254a72345d63161",
+      "outcome": "source-spacing-rejected-before-captures",
+      "stop": {
+        "reason": "Normal white-space trimmed absolute-span trailing spaces; subsequent frozen sources use white-space:pre"
+      },
+      "captures": 0,
+      "ordinaryApiCalls": 0,
+      "passiveApiCalls": 0,
+      "nestedPassiveMatrixDecoderInvocations": 0,
+      "repeatAttempts": 0,
+      "exactRepeats": 0,
+      "exploratoryPayloadTrials": 0
+    }
+  ],
+  "budget": {
+    "glyphResources": 87,
+    "nativeCaptures": 9,
+    "controlCaptures": 8,
+    "ordinaryCalls": 37,
+    "profiles": 11,
+    "repeats": 17,
+    "payloadTrials": 3
+  },
+  "accounting": {
+    "primaryOrdinaryApiCalls": 37,
+    "passiveInstrumentedApiCalls": 11,
+    "additionalStockParityCalls": 0,
+    "nestedPassiveMatrixDecoderInvocations": 27,
+    "conservativeInclusiveSum": 75,
+    "repeatsAttempted": 17,
+    "exactRepeats": 16,
+    "exploratoryTrialsActuallyCaptured": 3
+  },
+  "nonExperimentClosingChecks": "Verification, source hashing, formatting/syntax checks, report building and pure retained-profile arithmetic add no captures/readers/profiles. Source adaptive binarizer calls remain separately declared diagnostics.",
+  "newCaptures": 0,
+  "newReaderCalls": 0
+}

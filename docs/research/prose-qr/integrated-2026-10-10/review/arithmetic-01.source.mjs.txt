@@ -1,0 +1,173 @@
+// Independent arithmetic check only: encoder observation and saved values.
+// No rasterizer, browser, QR decoder, locator, or binarizer is imported.
+import { readFileSync, writeFileSync } from "node:fs";
+import { gunzipSync } from "node:zlib";
+import { createHash } from "node:crypto";
+import assert from "node:assert/strict";
+import qrcodegen from "../../../../vendor/qrcodegen.mjs";
+import { construct } from "../design/padding-solver.mjs";
+
+const run = "docs/research/prose-qr/integrated-2026-10-10";
+const read = (p) => {
+  const b = readFileSync(p);
+  return JSON.parse(p.endsWith(".gz") ? gunzipSync(b) : b);
+};
+const checks = [];
+function check(name, fn, details = null) {
+  try {
+    fn();
+    checks.push({ name, passed: true, details });
+  } catch (error) {
+    checks.push({ name, passed: false, error: error.message, details });
+  }
+}
+const maskAt = (m, x, y) =>
+  [
+    (x + y) % 2 === 0,
+    y % 2 === 0,
+    x % 3 === 0,
+    (x + y) % 3 === 0,
+    (Math.floor(x / 3) + Math.floor(y / 2)) % 2 === 0,
+    ((x * y) % 2) + ((x * y) % 3) === 0,
+    (((x * y) % 2) + ((x * y) % 3)) % 2 === 0,
+    (((x + y) % 2) + ((x * y) % 3)) % 2 === 0,
+  ][m];
+
+function validateMapping(b, version, ecc, mask) {
+  const level = {
+    L: qrcodegen.QrCode.Ecc.LOW,
+    M: qrcodegen.QrCode.Ecc.MEDIUM,
+    Q: qrcodegen.QrCode.Ecc.QUARTILE,
+    H: qrcodegen.QrCode.Ecc.HIGH,
+  }[ecc];
+  const pinned = qrcodegen.QrCode.encodeSegments(
+    [qrcodegen.QrSegment.makeBytes([...Buffer.from("https://example.com/")])],
+    level,
+    version,
+    version,
+    mask,
+    false,
+  );
+  assert.deepEqual(b.matrix, pinned.modules.map((r) => r.map(Number)));
+  const words = b.code.interleavedCodewords;
+  const seen = new Set();
+  for (let y = 0; y < b.matrix.length; y++) {
+    for (let x = 0; x < b.matrix.length; x++) {
+      const m = b.map[y][x];
+      if (m.streamByte === undefined) continue;
+      assert(!seen.has(`${m.streamByte}:${m.bit}`));
+      seen.add(`${m.streamByte}:${m.bit}`);
+      const bit = ((words[m.streamByte] >>> (7 - m.bit)) & 1) ^ +maskAt(mask, x, y);
+      assert.equal(b.matrix[y][x], bit);
+    }
+  }
+  assert.equal(seen.size, words.length * 8);
+  // Verify block ownership by independently producing each block's RS parity.
+  for (const block of b.ownership.blocks) {
+    const data = b.canonical.data.slice(block.offset, block.offset + block.dataLength);
+    const eccwords = qrcodegen.QrCode.reedSolomonComputeRemainder(
+      data,
+      qrcodegen.QrCode.reedSolomonComputeDivisor(block.eccLength),
+    );
+    for (let i = 0; i < b.ownership.stream.length; i++) {
+      const owner = b.ownership.stream[i];
+      if (owner.block !== block.block) continue;
+      assert.equal(words[i], owner.kind === "data" ? b.canonical.data[owner.index] : eccwords[owner.index]);
+    }
+  }
+}
+
+function closureCounts(input, b) {
+  const fixed = new Set(b.ownership.blocks.filter((q) => q.offset + q.dataLength <= b.canonical.prefixBytes).map((q) => q.block));
+  const bitsByWord = new Map();
+  for (const s of input.samples) {
+    const m = b.map[s.y][s.x];
+    if (!((m.kind === "data" && m.index < b.canonical.prefixBytes) || (m.kind === "ecc" && fixed.has(m.block)))) continue;
+    const rows = bitsByWord.get(m.streamByte) ?? [];
+    rows.push({ ...s, required: b.matrix[s.y][s.x] ^ s.base });
+    bitsByWord.set(m.streamByte, rows);
+  }
+  const errors = new Set();
+  for (const [word, bits] of bitsByWord) {
+    const stateRequirements = new Map();
+    for (const s of bits) {
+      if (!s.toggle && s.required === 1) errors.add(word);
+      if (s.toggle) {
+        if (stateRequirements.has(s.group) && stateRequirements.get(s.group) !== s.required) errors.add(word);
+        stateRequirements.set(s.group, s.required);
+      }
+    }
+  }
+  return {
+    fixed: [...fixed],
+    counts: b.ownership.blocks.map((q) => [...errors].filter((w) => b.ownership.stream[w].block === q.block).length),
+  };
+}
+
+const closure = [];
+for (const version of [10, 5]) {
+  const input = read(`${run}/design/${version === 10 ? "measured-02" : "measured-04-v5"}/native-input.json.gz`);
+  for (const ecc of ["L", "M", "Q", "H"]) {
+    for (let mask = 0; mask < 8; mask++) {
+      const b = construct(version, ecc, mask);
+      check(`V${version}/${ecc}/${mask} pinned matrix, all codeword bits and parity ownership`, () => validateMapping(b, version, ecc, mask));
+      const file = `${run}/design/${version === 10 ? "measured-03-closure" : "measured-04-v5"}/case-${ecc}-${mask}.json${version === 5 ? ".gz" : ""}`;
+      const saved = read(file);
+      const expected = version === 10 ? saved : saved.closure;
+      const actual = closureCounts(input, b);
+      check(`V${version}/${ecc}/${mask} closure counts`, () => {
+        assert.deepEqual(actual.fixed, expected.wholeFixedDataBlocks);
+        assert.deepEqual(actual.counts, expected.blocks.map((q) => q.unavoidableImmutableSymbolErrors));
+        assert(actual.counts.some((n, i) => n > Math.floor(b.ownership.blocks[i].eccLength / 2)));
+      });
+      closure.push({ version, ecc, mask, fixedBlocks: actual.fixed, lowerBoundWrongWords: actual.counts, radii: b.ownership.blocks.map((q) => Math.floor(q.eccLength / 2)) });
+    }
+  }
+}
+
+const ledger = read(`${run}/empirical/payload-04/continuous-native/actual-ledger.json`);
+const colors = read(`${run}/mechanism/color-bound-01/result.json.gz`);
+const colorRows = [];
+for (const saved of colors.cases) {
+  let b;
+  try {
+    b = construct(2, saved.ecc, saved.mask);
+  } catch (error) {
+    check(`V2/${saved.ecc}/${saved.mask} overflow retained`, () => assert.equal(saved.status, "exact-payload-overflow-rejected"));
+    colorRows.push({ ecc: saved.ecc, mask: saved.mask, overflow: true });
+    continue;
+  }
+  check(`V2/${saved.ecc}/${saved.mask} canonical target/map`, () => validateMapping(b, 2, saved.ecc, saved.mask));
+  const wrong = new Set();
+  for (const s of ledger.samples) {
+    if (s.gray < 219 || b.matrix[s.y][s.x] !== 1) continue;
+    const m = b.map[s.y][s.x];
+    if (m.streamByte === undefined) continue;
+    const q = b.ownership.blocks[m.block];
+    if ((m.kind === "data" && m.index < b.canonical.prefixBytes) || (m.kind === "ecc" && q.offset + q.dataLength <= b.canonical.prefixBytes)) wrong.add(m.streamByte);
+  }
+  const counts = b.ownership.blocks.map((q) => [...wrong].filter((w) => b.ownership.stream[w].block === q.block).length);
+  check(`V2/${saved.ecc}/${saved.mask} fixed-alpha recoloring bound`, () => {
+    assert.deepEqual(counts, saved.blocks.map((q) => q.unavoidableWrongSymbols));
+    assert(counts.some((n, i) => n > Math.floor(b.ownership.blocks[i].eccLength / 2)));
+  });
+  colorRows.push({ ecc: saved.ecc, mask: saved.mask, prefixBytes: b.canonical.prefixBytes, paddingBytes: b.canonical.paddingBytes, counts, radii: b.ownership.blocks.map((q) => Math.floor(q.eccLength / 2)) });
+}
+check("fixed-alpha 219 threshold including one gray-unit slack", () => {
+  assert(3.4 * (219 - 1) - 612 > 128);
+  assert.equal(ledger.samples.filter((s) => s.gray >= 219).length, 412);
+});
+const actual = construct(2, "Q", 1);
+for (const mode of ["literal", "adaptive"]) {
+  const wrong = ledger.samples.filter((s) => s[mode] !== actual.matrix[s.y][s.x]);
+  const functionWrong = wrong.filter((s) => actual.map[s.y][s.x].kind === "function");
+  const words = new Set(wrong.filter((s) => actual.map[s.y][s.x].streamByte !== undefined).map((s) => actual.map[s.y][s.x].streamByte));
+  const expected = mode === "literal" ? [203, 65, 41] : [240, 68, 44];
+  check(`actual ${mode} saved-bit mismatch ledger`, () => {
+    assert.deepEqual([wrong.length, functionWrong.length, words.size], expected);
+    assert.equal(ledger.quiet.filter((s) => s[mode]).length, 0);
+  }, { moduleWrong: wrong.length, functionWrong: functionWrong.length, wrongWords: words.size, radius: 11, quietDark: 0, quietDenominator: ledger.quiet.length });
+}
+const report = { schema: "aqrobat.independent-arithmetic-review.v1", atUtc: new Date().toISOString(), passed: checks.every((c) => c.passed), checks, closureCases: closure, colorCases: colorRows, limits: "Saved-bit and exact encoder arithmetic only. Fixed-alpha recoloring and whole-glyph affine bounds are conditional within-radius exclusions, not ordinary-decoder or general-prose impossibility claims.", operations: { capture: 0, decoder: 0, locator: 0, binarizer: 0 } };
+writeFileSync(`${run}/review/arithmetic-checks.json`, JSON.stringify(report, null, 2) + "\n");
+console.log(JSON.stringify({ passed: report.passed, checks: checks.length, failures: checks.filter((c) => !c.passed), closureCases: closure.length, colorCases: colorRows.length, sourceSha256: createHash("sha256").update(readFileSync(import.meta.filename)).digest("hex") }, null, 2));

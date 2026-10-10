@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import { construct, PAYLOAD } from './padding-solver.mjs';
+
+// Additive diagnostic. Does not change the source used for measured-02.
+export function immutableClosureBound(input) {
+  assert.equal(input.payload, PAYLOAD);
+  const built = construct(input.version, input.ecc, input.mask);
+  const fixedBlocks = new Set(built.ownership.blocks.filter(b => b.offset + b.dataLength <= built.canonical.prefixBytes).map(b => b.block));
+  const immutable = m => (m.kind === 'data' && m.index < built.canonical.prefixBytes) || (m.kind === 'ecc' && fixedBlocks.has(m.block));
+  const words = new Map();
+  for (const s of input.samples) {
+    const m = built.map[s.y][s.x];
+    if (!immutable(m)) continue;
+    const points = words.get(m.streamByte) ?? [];
+    points.push({...s, required: built.matrix[s.y][s.x] ^ s.base, meta:m});
+    words.set(m.streamByte, points);
+  }
+  const proofs=[];
+  for (const points of words.values()) {
+    const states=new Map(); let proof=null;
+    for (const p of points) {
+      if (!p.toggle && p.required) {proof=[p]; break;}
+      if (!p.toggle) continue;
+      const prior=states.get(p.group);
+      if (prior && prior.required!==p.required) {proof=[prior,p];break;}
+      states.set(p.group,p);
+    }
+    if(proof) proofs.push({streamByte:points[0].meta.streamByte,kind:points[0].meta.kind,block:points[0].meta.block,index:points[0].meta.index,proof:proof.map(({x,y,base,toggle,group,required})=>({x,y,base,toggle:!!toggle,group:group??null,required}))});
+  }
+  const blocks=built.ownership.blocks.map(b=>({block:b.block,dataLength:b.dataLength,eccLength:b.eccLength,allDataImmutable:fixedBlocks.has(b.block),immutableDataCodewords:Math.max(0,Math.min(b.dataLength,built.canonical.prefixBytes-b.offset)),immutableParityCodewords:fixedBlocks.has(b.block)?b.eccLength:0,symbolRadius:Math.floor(b.eccLength/2),unavoidableImmutableSymbolErrors:proofs.filter(p=>p.block===b.block).length,words:proofs.filter(p=>p.block===b.block)}));
+  return {schema:'aqrobat.immutable-closure-bound.v1',payload:PAYLOAD,version:input.version,ecc:input.ecc,mask:input.mask,prefixBytes:built.canonical.prefixBytes,wholeFixedDataBlocks:[...fixedBlocks],suppliedImmutableCodewords:words.size,blocks,exceedsDeclaredRadius:blocks.some(b=>b.unavoidableImmutableSymbolErrors>b.symbolRadius),claim:'Necessary local symbol lower bound in the frozen whole-glyph affine sample model. All parity words are fixed when every data byte in their RS block is fixed. Partial-block parity may also contain fixed output bits, but this diagnostic conservatively omits them. One wrong locked bit or contradictory requirements for one native style group proves that whole codeword erroneous. Exceeding the ideal unknown-symbol radius excludes a within-radius explanation in this model; it does not prove ordinary reader impossibility or strict native eligibility.'};
+}

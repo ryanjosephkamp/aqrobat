@@ -1,0 +1,40 @@
+{
+  "schema": "aqrobat.native-module-constraints.v1",
+  "payload": "https://example.com/",
+  "version": 10,
+  "ecc": "L",
+  "mask": 0,
+  "padding": "canonical",
+  "complete": true,
+  "geometry": {
+    "pitch": 6.5,
+    "origin": [64, 64],
+    "samplePolicy": "One frozen source-space native ink sample at each module center; no reader output is consulted. Measurement method, threshold and actual raster hashes must be recorded by empirical owner.",
+    "status": "example schema only; no measurements or source supplied here"
+  },
+  "groups": [
+    {
+      "id": "p1:3",
+      "paragraph": 0,
+      "codePointIndex": 3,
+      "character": "e",
+      "state0": "Arial regular, black, native visible text",
+      "state1": "Arial bold, black, native visible text"
+    }
+  ],
+  "samples": [
+    { "x": 0, "y": 0, "base": 1 },
+    { "x": 12, "y": 12, "base": 0, "toggle": true, "group": "p1:3" },
+    { "x": 13, "y": 12, "base": 1, "toggle": false, "group": "p1:3" }
+  ],
+  "inputRequirements": [
+    "This illustrative file is deliberately incomplete and is rejected as solver input.",
+    "Use all n*n coordinates exactly once for complete=true. Partial input must say complete=false and cannot establish complete sample feasibility.",
+    "base is measured state0 ink at the sample. toggle means measured state1 differs from state0 at that same sample.",
+    "Tie every variable to one real source character, or a declared larger whole-text unit. Never invent independent pixel controls.",
+    "A sample influenced by more than one independently styled glyph is unsupported by this affine schema; reject overlap or supply a correct separate nonlinear model.",
+    "Native finder ink is included in all samples, including ink outside nominal seven-module boxes. No clipping or assumed envelope.",
+    "No white, transparent, hidden, duplicated or faint-text state. Both styles must retain visible readable native source text.",
+    "Changing the font/weight may change advance or ink placement; freeze exact full-source positions and measure both states, with actual complete source hashes."
+  ]
+}

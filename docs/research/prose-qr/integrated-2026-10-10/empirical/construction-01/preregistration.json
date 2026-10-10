@@ -1,0 +1,39 @@
+{
+  "schema": "aqrobat.integrated.native-sampling.v1",
+  "frozenAtUtc": "2026-10-10T21:36:01.132Z",
+  "capturedInputs": {
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/input.png": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/repeat.png": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/source.html.txt": "436f9df8a7f49d6003dfe5aea0b27f7e4e89bba63574486a6b121ce581cda8bd",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/dom.json": "20a8b8eedb0bbbc8819e36bd907485f244fc93c70ebc167dd53022d965af897e",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/capture.json": "3f30bc99f1824e359cea29b3389a065f2151f34c52e55c187f3fcca8f89fcd4d",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/input.png": "5cfb42352b6fc90e9b7a00ac7755aa6d44019f43b33631361dd5d16d332ccebc",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/repeat.png": "5cfb42352b6fc90e9b7a00ac7755aa6d44019f43b33631361dd5d16d332ccebc",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/source.html.txt": "9def049b16f0f3972db3c83ce20d926e5138e7695f15b293773406bfa41b7054",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/dom.json": "07e00ccf996065e8fa16b52f2af141dacad1eef98078b791fcb31877137b9d05",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/capture.json": "e133fa87f34f0c67a98c81f8e3856958685eda77b9555bc4ec3ce8e6fa8225cf"
+  },
+  "sourceHashes": {
+    "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs": "9be556ce85a5056dddd74a85340e7d6480bee29860d6874a3d5c47625ba62f77",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0"
+  },
+  "denominator": {
+    "moduleSamplesPerMap": 3249,
+    "quietSamplesPerMap": 976,
+    "maps": 2,
+    "sourceCaptures": 0,
+    "ordinaryCalls": 0,
+    "passiveProfiles": 0
+  },
+  "polarity": "Normal: native raw black is logical QR1, raw white QR0. No image transformation.",
+  "primary": "Frozen rawgray128 per-cell samples plus unique real glyph union ink bounds of measured regular/bold states. Lock all groups implicated by overlapping ownership. Complete all3249 cells. Exact native mixed style needs own capture/sample verification before decode.",
+  "diagnostic": "Pinned ordinary-jsQR adaptive binarizer sampled separately on unchanged regular and bold PNGs. Neighborhood coupling makes affine mixed prediction unsupported; diagnostic only, not solver input.",
+  "samplePolicy": "floor(origin+(index+.5)*pitch), origin64 pitch6.5 dimension57. Four-module external ring sampled identically including every976 cells; no quiet omission.",
+  "stops": [
+    "input/source mismatch",
+    "RGBA read failure",
+    "source identity/position drift",
+    "changed pixel with no unique glyph attribution after conservative group locks",
+    "out-of-bounds sample"
+  ]
+}

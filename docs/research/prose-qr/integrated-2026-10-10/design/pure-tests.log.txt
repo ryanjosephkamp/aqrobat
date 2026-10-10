@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: canonical byte header, URL and every mask agree with unchanged pinned encoder
+ok 1 - canonical byte header, URL and every mask agree with unchanged pinned encoder
+  ---
+  duration_ms: 69.312584
+  type: 'test'
+  ...
+# Subtest: all module and codeword ownership are complete, including alignment/version/remainder
+ok 2 - all module and codeword ownership are complete, including alignment/version/remainder
+  ---
+  duration_ms: 6.58975
+  type: 'test'
+  ...
+# Subtest: canonical full synthetic target is satisfied with no style or padding freedom
+ok 3 - canonical full synthetic target is satisfied with no style or padding freedom
+  ---
+  duration_ms: 1.576084
+  type: 'test'
+  ...
+# Subtest: wrong immutable function module returns a verified contradiction, not candidate output
+ok 4 - wrong immutable function module returns a verified contradiction, not candidate output
+  ---
+  duration_ms: 1.431291
+  type: 'test'
+  ...
+# Subtest: complete altered-padding targets recover exact data and parity across unequal blocks
+ok 5 - complete altered-padding targets recover exact data and parity across unequal blocks
+  ---
+  duration_ms: 132.449417
+  type: 'test'
+  ...
+# Subtest: style state is coupled across all samples of the same real glyph group
+ok 6 - style state is coupled across all samples of the same real glyph group
+  ---
+  duration_ms: 1.559458
+  type: 'test'
+  ...
+# Subtest: bad ownership, missing cells and changed payload are rejected; quiet conflict stays explicit
+ok 7 - bad ownership, missing cells and changed payload are rejected; quiet conflict stays explicit
+  ---
+  duration_ms: 1.783833
+  type: 'test'
+  ...
+# Subtest: canonical whole-glyph least-mismatch choice preserves coupled source states
+ok 8 - canonical whole-glyph least-mismatch choice preserves coupled source states
+  ---
+  duration_ms: 0.70475
+  type: 'test'
+  ...
+# Subtest: radius construction retains function defects and bounds real symbol mismatch count
+ok 9 - radius construction retains function defects and bounds real symbol mismatch count
+  ---
+  duration_ms: 1.590291
+  type: 'test'
+  ...
+# Subtest: radius route exhaustion remains a limited failure, not an impossibility result
+ok 10 - radius route exhaustion remains a limited failure, not an impossibility result
+  ---
+  duration_ms: 1.87825
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 287.822625

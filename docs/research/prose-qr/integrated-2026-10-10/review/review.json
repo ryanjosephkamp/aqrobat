@@ -1,0 +1,302 @@
+{
+  "schema": "aqrobat.integrated.independent-review.v1",
+  "atUtc": "2026-10-10T22:35:59.870683+00:00",
+  "status": "bounded_evidence_review_complete_with_documented_limits",
+  "integrityConclusion": "No material undisclosed inconsistency found in the reviewed frozen evidence. Pure checks pass. Scientific objective remains unfinished.",
+  "goalAchieved": false,
+  "ownerScanCandidate": null,
+  "reviewer": {
+    "role": "fourth/final independent worker",
+    "modelRequested": "GPT-6.1 Sol Xhigh",
+    "FastOrBillingVerified": false,
+    "deadlineUtc": "2026-10-10T23:10:22Z"
+  },
+  "checkout": {
+    "cwd": "/Users/noir/Documents/aqrobat",
+    "branch": "codex/aqrobat-foundation",
+    "baselineHEAD": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222",
+    "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+    "ownedDirtyState": "Only the two fresh integrated run trees untracked at review; tracked files unchanged. PR1 draft status inherited from recorded START; reviewer made no PR/Git mutations."
+  },
+  "operations": {
+    "screenshots": 0,
+    "captures": 0,
+    "imageDisplays": 0,
+    "renderers": 0,
+    "browsers": 0,
+    "nativeApps": 0,
+    "readers": 0,
+    "locators": 0,
+    "binarizers": 0,
+    "agentsSpawned": 0,
+    "chatsStarted": 0,
+    "peopleMessaged": 0,
+    "productChanges": 0,
+    "gitMutations": 0
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "high",
+      "category": "objective-blocker",
+      "status": "unresolved-documented",
+      "title": "No qualifying native-prose scan candidate",
+      "finding": "Three actually captured native payload trials each returned no result in OpenCV, ZXing and jsQR. None meets the required exact URL recovery in two independent ordinary implementations. No owner scan candidate or goal-completion claim is supported.",
+      "evidence": [
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json",
+          "sha256": "6f803585c98614912bac63b4893968b392eff689fe22f5dd728a019a90ed03c9",
+          "bytes": 19861,
+          "line": 5,
+          "lineAnchor": "\"goalAchieved\": false"
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/ledger.json",
+          "sha256": "c7d69f9a662d5e67246c67bfe18dfdf9c2c5476c2d33b5fd85cccc76d5e0e627",
+          "bytes": 2737,
+          "line": 43,
+          "lineAnchor": "\"id\": \"continuous-native\""
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "severity": "medium",
+      "category": "reproducibility-limit",
+      "status": "unresolved-documented",
+      "title": "Some early successful diagnostic/test streams are unavailable",
+      "finding": "Successful resources-01/02 contour stderr was not separately saved by execFileSync. Initial mechanism article-test failures retain exact source/test bytes and contemporaneous summaries, but not reconstructed raw stdout. Hashes and later checks cannot recover discarded streams. Reports disclose both limits and no rerun or silent reconstruction occurred.",
+      "evidence": [
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json",
+          "sha256": "6f803585c98614912bac63b4893968b392eff689fe22f5dd728a019a90ed03c9",
+          "bytes": 19861,
+          "line": 192,
+          "lineAnchor": "successful resource contour stderr unavailable"
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/mechanism/RESULTS.md",
+          "sha256": "7e869c1a8ee268f142804b31d88c9a4d329ee9620eb651da719ee9b6bd1976b3",
+          "bytes": 9814,
+          "line": 39,
+          "lineAnchor": "contemporaneous summaries"
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "severity": "medium",
+      "category": "scientific-claim-boundary",
+      "status": "unresolved-assumptions-explicit",
+      "title": "Arithmetic exclusions are conditional within-radius statements",
+      "finding": "All 64 V10/V5 immutable-closure alternatives and all 24 fitting V2 fixed-alpha recoloring alternatives exceed the stated ideal unknown-symbol correction radii. The eight V2-H overflow rows remain rejected. These are sound necessary bounds in the frozen whole-glyph affine or unchanged-alpha literal-center models. Native color/raster invariance is unmeasured; adaptive thresholds, other grids/layouts, erasure decoding and ordinary recovery beyond the declared radius are outside the bounds. No universal prose or decoder impossibility follows.",
+      "evidence": [
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/design/RESULTS.md",
+          "sha256": "1b5559e93f4a142123f9f95d254a8730f881d1d4fd33e54f42186db42e057b3c",
+          "bytes": 10015,
+          "line": 54,
+          "lineAnchor": "necessary in the sampled affine model only"
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/mechanism/MECHANISM.md",
+          "sha256": "7095b2795f27e94dcfb574a3d9d0585d469ecfedf1fd7b27cab7c9aa6595009a",
+          "bytes": 13332,
+          "line": 39,
+          "lineAnchor": "color-dependent rasterization has not been measured"
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/review/arithmetic-checks.json",
+          "sha256": "eb8041345c9b04cb3180721cb5ab799e709c96b9cd20b381c59ab26362cb7d97",
+          "bytes": 36968,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "severity": "medium",
+      "category": "acceptance-limit",
+      "status": "unresolved-untested",
+      "title": "Exact Selection and saved pixels do not establish transfer or owner acceptance",
+      "finding": "Source-order paragraph characters, two-LF full-document Selection, native CDP faces and exact PNG/RGBA repeat custody are supported. Readability remains the empirical worker/parent's direct observation, not a new visual judgment by this source-only reviewer. Plain/styled paste, native apps, phone scans, physical print and owner readability/scan acceptance remain untested.",
+      "evidence": [
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json",
+          "sha256": "6f803585c98614912bac63b4893968b392eff689fe22f5dd728a019a90ed03c9",
+          "bytes": 19861,
+          "line": 197,
+          "lineAnchor": "portable plain/styled paste"
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/final-stop.json",
+          "sha256": "0cd003f51929288dc112894c2e5ebd53d9f84a9b78008cba96b259bc40639622",
+          "bytes": 575,
+          "line": 5,
+          "lineAnchor": "\"parentObserved\""
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/review/pure-checks.json",
+          "sha256": "ca58028bcb05b04cd9900038672503a6a72cddbe3dbeb894cdbb66ed0fabacaf",
+          "bytes": 343685,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "severity": "low",
+      "category": "reporting-precision",
+      "status": "resolved-in-parent-draft",
+      "title": "Strict-gate observation denominator is five captures, ten branches",
+      "finding": "Five of nine native captures have passive strict observations and all ten executed branches fail. Layout-01 light-regular stopped on its empty-string wrong payload; layout-04 and layout-05's three native captures were capture-only. Their strict gates are unobserved. Parent acknowledged this precision and updated the draft; zero observed passes is supported.",
+      "evidence": [
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/review/supplementary-checks.json",
+          "sha256": "523ea9a6edeab84b72a031d8b17ed6e98164b77f379c6faf42215f26fc39670d",
+          "bytes": 6220,
+          "line": 173,
+          "lineAnchor": "\"profiledCaptures\": 5"
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "severity": "low",
+      "category": "executed-source-provenance",
+      "status": "resolved-by-exact-archive",
+      "title": "Earlier closure execution bytes remain recoverable",
+      "finding": "The closure module changed formatting between V10 and V5. Earlier archived bytes match preregistered hash 77a998ab70e0a91031a4a8aecdb72be7b01c81c73744b0a218aefc5ca09afaad. Formatting that archive to stdout in the review tree yields the current V5 module byte-for-byte. V5 separately preregistered current hash 1c223bf29e5eb0616cea2231ce7bdc8cc0078f386a3d62c456ece56d0f5df166. Original receipts/results were preserved.",
+      "evidence": [
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/preregistration.json",
+          "sha256": "b952c5fda3659dd4a8583ea07cd5ed5df95c5ecc6667a3d3758b7154455c7a6f",
+          "bytes": 2665,
+          "line": 10,
+          "lineAnchor": "77a998"
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/immutable-closure.frozen-source.mjs.txt",
+          "sha256": "77a998ab70e0a91031a4a8aecdb72be7b01c81c73744b0a218aefc5ca09afaad",
+          "bytes": 2891,
+          "line": 1
+        },
+        {
+          "path": "docs/research/prose-qr/integrated-2026-10-10/review/supplementary-checks.json",
+          "sha256": "523ea9a6edeab84b72a031d8b17ed6e98164b77f379c6faf42215f26fc39670d",
+          "bytes": 6220,
+          "line": 67,
+          "lineAnchor": "formats exactly"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "controlCaptures": 8,
+    "repeatAttempts": 17,
+    "exactRepeats": 16,
+    "nativeCaptures": 9,
+    "ordinaryCalls": 37,
+    "ordinaryUnattempted": 23,
+    "fullUnattempted": 6,
+    "profilesUnattempted": 9,
+    "payloadTrials": 3,
+    "profiles": 11,
+    "nestedDecoderInvocations": 27,
+    "resources": 87,
+    "resourceDiagnostics": 87,
+    "resourcesUnattempted": 19,
+    "resourceSetupFailures": 1,
+    "inclusiveCalls": 75,
+    "resourceSlots": 107,
+    "resourceDiagnosticAdaptiveCalls": 87,
+    "constructionAdaptiveSourceCalls": 10,
+    "fullNativeAdaptiveSourceCalls": 1,
+    "totalSourceAdaptiveDiagnosticCalls": 98,
+    "frozenFullCaptureSlots": 23,
+    "frozenOrdinarySlots": 60,
+    "frozenPassiveProfiles": 20,
+    "exploratoryTrialsAllowed": 4,
+    "exploratoryTrialsUnused": 1,
+    "reviewChecks": 1845,
+    "inputFilesHashed": 1493
+  },
+  "callBoundary": "37 primary ordinary API calls plus 11 passive instrumented API calls plus 27 nested decoder invocations observed inside passive profiles gives 75 under the conservative inclusive accounting convention. Primary public APIs' uninstrumented internal loops are not separately counted or known. Source diagnostics are separate and contain no payload decoding.",
+  "strictGate": {
+    "profiledCaptures": 5,
+    "executedBranches": 10,
+    "allProfiledBranchesFail": true,
+    "unprofiledCaptures": [
+      {
+        "batch": "layout-01",
+        "id": "light-regular",
+        "reason": "Wrong payload"
+      },
+      {
+        "batch": "layout-04",
+        "id": "reverse-stroke1",
+        "reason": "preregistered capture-only"
+      },
+      {
+        "batch": "layout-05",
+        "id": "v5-reverse-regular",
+        "reason": "preregistered capture-only"
+      },
+      {
+        "batch": "layout-05",
+        "id": "v5-reverse-bold",
+        "reason": "preregistered capture-only"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/review/pure-checks.json",
+      "count": 1223,
+      "passed": true,
+      "sha256": "ca58028bcb05b04cd9900038672503a6a72cddbe3dbeb894cdbb66ed0fabacaf"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/review/arithmetic-checks.json",
+      "count": 187,
+      "passed": true,
+      "sha256": "eb8041345c9b04cb3180721cb5ab799e709c96b9cd20b381c59ab26362cb7d97"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/review/report-checks.json",
+      "count": 402,
+      "passed": true,
+      "sha256": "48db3c93cdaba291ce305598f0a4629debc5df7a4c7d381f9bb8c8e252491d96"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/review/supplementary-checks.json",
+      "count": 33,
+      "passed": true,
+      "sha256": "523ea9a6edeab84b72a031d8b17ed6e98164b77f379c6faf42215f26fc39670d"
+    }
+  ],
+  "boundaries": [
+    "No new render, display, reader, locator or binarizer. PNG decoding only reverses lossless byte filters for custody and reads already declared literal samples.",
+    "All actual capture/source/ordinary/passive records were read; pure encoder/RS/bit-ownership arithmetic validates saved results without invoking QR decoders.",
+    "HTML source, links and embedded PNG bytes were checked; rendered layout/readability/accessibility was not tested. Parent draft intentionally awaits CLOSURE.json and final packaging.",
+    "Product tests/build/browser/text-browser/native extension checks were not run because no product files changed. Parent owns final global format/custody/Git/PR closure.",
+    "Prior clocks, frozen source/evidence, original prototypes, owner profiles/clipboard/documents, other repositories and jobs were not mutated by this reviewer.",
+    "Scoped hash manifest covers complete empirical/design/mechanism trees and selected authorization/baseline files; parent mutable coordination and draft report have separate revision hashes in report-checks.json."
+  ],
+  "preservedLimitations": [
+    "Invalid resources-01 canvas font shorthand measurements are explicitly rejected; PNG/CDP/Range remain separate.",
+    "Skia variable descriptor mismatch remains unresolved, not proven substitution; 21 of 22 actual faces have exact named version mapping and18 installed font-file hashes were independently verified.",
+    "Resources-03 nested font query failed before body capture; fresh query-root amendment retains original failure and five unattempted rows.",
+    "Resources-05 grid supports row 0 / 13 centers only; no unmeasured row or scaled glyph transfer is inferred.",
+    "The final 624 px square's RMS 0.383047 fails the unchanged 0.35 boundary; small 192 px RMS 0.342389 does not transfer.",
+    "Gray228 resource readability rejection stops resources-06 at 2/5; gray232 remains untested and the final payload allowance unused.",
+    "No hidden QR modules, graphics, duplicate source characters or remote/custom glyph substitution found in native sources. Uniform black V10/V5 article fields are single page backgrounds, not per-module patterns; V2 is uniform white."
+  ],
+  "reviewHarnessHistory": [
+    "Initial audit incorrectly treated every CSS @font-face declaration as custom. Preserved local aliases and actual CDP isCustomFont=false resolve the false positive; initial source/result retained as .txt.",
+    "Initial static CSV check expected nullable fields as empty rather than literal null; source/trace and failed receipt retained. Final comparison normalizes only empty/null to JSON None.",
+    "Arithmetic check source was formatted after its first pure-check execution; exact first source/stdout/result archived, then formatted current source rerun. No scientific worker bytes changed."
+  ],
+  "reviewHashManifest": "docs/research/prose-qr/integrated-2026-10-10/review/review-scope-hashes.json",
+  "nextActionForParent": "Reconcile this review, generate final closure and self-contained handback, verify only authorized fresh trees, preserve reported frozen-format exceptions, and finish Git backup with PR1 draft. Do not claim objective achieved or begin another experiment/allowance."
+}

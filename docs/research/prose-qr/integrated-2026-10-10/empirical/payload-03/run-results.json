@@ -1,0 +1,114 @@
+{
+  "startedAtUtc": "2026-10-10T22:11:02.208Z",
+  "finishedAtUtc": "2026-10-10T22:11:04.039Z",
+  "stop": {
+    "atUtc": "2026-10-10T22:11:03.739Z",
+    "current": "canonical-control",
+    "message": "Invalid control: canonical-control/opencv",
+    "stack": "AssertionError [ERR_ASSERTION]: Invalid control: canonical-control/opencv\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs:466:9"
+  },
+  "captures": [
+    {
+      "id": "canonical-control",
+      "kind": "control",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-03/canonical-control",
+      "sourceHtmlSha256": "572d028f36fe1d248cfe7e5345741ef05dde953631f6bbbf28c8cb8a3846aa30",
+      "payload": "https://example.com/",
+      "geometry": {
+        "version": 2,
+        "dimension": 25,
+        "unit": 38.53125,
+        "origin": 154.125,
+        "counters": [
+          {
+            "x": 288.984375,
+            "y": 288.984375
+          },
+          {
+            "x": 982.546875,
+            "y": 288.984375
+          },
+          {
+            "x": 288.984375,
+            "y": 982.546875
+          }
+        ],
+        "alignment": {
+          "x": 866.953125,
+          "y": 866.953125
+        }
+      },
+      "startedAtUtc": "2026-10-10T22:11:02.993Z",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-03/canonical-control/input.png",
+      "width": 1272,
+      "height": 1272,
+      "pngSha256": "8bca3f8b05e63b764d44b98c6f4dfb4ca664b1c55f7b94243c0ac8184798ec54",
+      "repeatSha256": "8bca3f8b05e63b764d44b98c6f4dfb4ca664b1c55f7b94243c0ac8184798ec54",
+      "repeatExact": true,
+      "rgbaSha256": "0742b91bf73c9da93baf5fffe027af8f011726fa5ad03d019924e8f157b3ff3d",
+      "repeatRgbaSha256": "0742b91bf73c9da93baf5fffe027af8f011726fa5ad03d019924e8f157b3ff3d",
+      "sourceVerifiedAfterCapture": true,
+      "completedAtUtc": "2026-10-10T22:11:03.485Z"
+    }
+  ],
+  "profiles": [],
+  "slots": [
+    {
+      "id": "canonical-control",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T22:11:03.494Z",
+      "exactExpected": false,
+      "pngSha256": "8bca3f8b05e63b764d44b98c6f4dfb4ca664b1c55f7b94243c0ac8184798ec54",
+      "rawSha256": "b8065a9f6f1d10495c19cd815615e755feb3521b5d317f66e5de4772103241be",
+      "completedAtUtc": "2026-10-10T22:11:03.736Z"
+    },
+    {
+      "id": "canonical-control",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "canonical-control",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "continuous-native",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "continuous-native",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "continuous-native",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    }
+  ],
+  "budget": {
+    "glyphResources": 77,
+    "nativeCaptures": 8,
+    "controlCaptures": 7,
+    "ordinaryCalls": 31,
+    "profiles": 9,
+    "repeats": 15,
+    "payloadTrials": 2
+  },
+  "bytesAtEnd": 21139345,
+  "browserClosed": true
+}

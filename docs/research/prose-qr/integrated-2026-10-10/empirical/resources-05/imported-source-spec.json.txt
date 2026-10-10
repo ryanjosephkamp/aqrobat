@@ -1,0 +1,336 @@
+{
+  "schema": "aqrobat.square-and-phase-stroke-resource-proposal.v1",
+  "atUtc": "2026-10-10T22:18:20.320Z",
+  "sourceSha256": "b7525684d7810fdb43f99d641449cffc08fb36d5ccb4aff967c71e39e4b6a109",
+  "priorSourceSha256": "1b7168a27fc111e50479a3b37dcb1e94dcdd329892096a4276bc606fc0b74565",
+  "denominator": 8,
+  "sources": [
+    {
+      "id": "square-ArialUnicodeMS-25a3",
+      "kind": "ornament-resource",
+      "font": "ArialUnicodeMS",
+      "size": 192,
+      "symbol": "▣",
+      "expectedSelection": "▣",
+      "expectedFonts": [
+        "ArialUnicodeMS"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "A genuine installed native U+25A3 or U+25A9 source ornament, tested as a distinct square-symbol resource. No alphabetic finder success, custom font, image, substitution or emoji atlas. Any full prose must visibly name/select the actual square symbol and retain normal words as data-bearing text.",
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-ArialUnicodeMS-25a3/source.html.txt",
+      "htmlSha256": "e50450866840049a0c259a5569753d0c84817b1995a076199e1e4b2397b6b8a7",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-ArialUnicodeMS-25a3"
+    },
+    {
+      "id": "square-ArialUnicodeMS-25a9",
+      "kind": "ornament-resource",
+      "font": "ArialUnicodeMS",
+      "size": 192,
+      "symbol": "▩",
+      "expectedSelection": "▩",
+      "expectedFonts": [
+        "ArialUnicodeMS"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "A genuine installed native U+25A3 or U+25A9 source ornament, tested as a distinct square-symbol resource. No alphabetic finder success, custom font, image, substitution or emoji atlas. Any full prose must visibly name/select the actual square symbol and retain normal words as data-bearing text.",
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-ArialUnicodeMS-25a9/source.html.txt",
+      "htmlSha256": "e939909eaeb2bb3c2f06571a8b0d95edf7e20f52fc8d41d485be7840420a9946",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-ArialUnicodeMS-25a9"
+    },
+    {
+      "id": "square-AppleSymbols-25a3",
+      "kind": "ornament-resource",
+      "font": "AppleSymbols",
+      "size": 192,
+      "symbol": "▣",
+      "expectedSelection": "▣",
+      "expectedFonts": [
+        "AppleSymbols"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "A genuine installed native U+25A3 or U+25A9 source ornament, tested as a distinct square-symbol resource. No alphabetic finder success, custom font, image, substitution or emoji atlas. Any full prose must visibly name/select the actual square symbol and retain normal words as data-bearing text.",
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-AppleSymbols-25a3/source.html.txt",
+      "htmlSha256": "bb96bbad085844aa1923cf4ee4b36a306a310d9325136a7c5a1febb57a3a4649",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-AppleSymbols-25a3"
+    },
+    {
+      "id": "square-AppleSymbols-25a9",
+      "kind": "ornament-resource",
+      "font": "AppleSymbols",
+      "size": 192,
+      "symbol": "▩",
+      "expectedSelection": "▩",
+      "expectedFonts": [
+        "AppleSymbols"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "A genuine installed native U+25A3 or U+25A9 source ornament, tested as a distinct square-symbol resource. No alphabetic finder success, custom font, image, substitution or emoji atlas. Any full prose must visibly name/select the actual square symbol and retain normal words as data-bearing text.",
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-AppleSymbols-25a9/source.html.txt",
+      "htmlSha256": "cc76bb89d259f87e43a8df6e2efe3ac75572c1d00e312717b2c276492e31e704",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/square-AppleSymbols-25a9"
+    },
+    {
+      "id": "phase-stroke-180-0p75",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 180,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Continuous native prose with visible genuine foreground stroke0.75or1px and same-color shadow1.5px. This tests added native glyph support coupled to corrected sampling phase. No graphics, hidden modules, removed ink, custom font or duplicate source. Reject if ordinary words or letterforms become unreadable or overlap.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles."
+      },
+      "stroke": 0.75,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-180-0p75/source.html.txt",
+      "htmlSha256": "add29e3e672a1c79427680d6250f4d3be87c39531bd5e4aea36ac99625fd5dbe",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-180-0p75"
+    },
+    {
+      "id": "phase-stroke-180-1",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 180,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Continuous native prose with visible genuine foreground stroke0.75or1px and same-color shadow1.5px. This tests added native glyph support coupled to corrected sampling phase. No graphics, hidden modules, removed ink, custom font or duplicate source. Reject if ordinary words or letterforms become unreadable or overlap.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles."
+      },
+      "stroke": 1,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-180-1/source.html.txt",
+      "htmlSha256": "e3c0faf726680ccf6900dea61704eb71a0ff6c57eef37d6b25314980b67e0b6d",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-180-1"
+    },
+    {
+      "id": "phase-stroke-204-0p75",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 204,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Continuous native prose with visible genuine foreground stroke0.75or1px and same-color shadow1.5px. This tests added native glyph support coupled to corrected sampling phase. No graphics, hidden modules, removed ink, custom font or duplicate source. Reject if ordinary words or letterforms become unreadable or overlap.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles."
+      },
+      "stroke": 0.75,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-204-0p75/source.html.txt",
+      "htmlSha256": "337545e85dd232ff3cbfcd36612a90523e00aaff380deebc7fcc0a75e676172f",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-204-0p75"
+    },
+    {
+      "id": "phase-stroke-204-1",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 204,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Continuous native prose with visible genuine foreground stroke0.75or1px and same-color shadow1.5px. This tests added native glyph support coupled to corrected sampling phase. No graphics, hidden modules, removed ink, custom font or duplicate source. Reject if ordinary words or letterforms become unreadable or overlap.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles."
+      },
+      "stroke": 1,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-204-1/source.html.txt",
+      "htmlSha256": "6ad0ad7fb845b86ac8178250d3bd88d48e5b3a8c6ad1e1f5a592dba1ba0a2b42",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/mechanism/square-resources-01/phase-stroke-204-1"
+    }
+  ],
+  "ordinaryCalls": 0,
+  "fullNativeCalls": 0,
+  "diagnosticLimit": "One preregistered resource pipeline each; literal/adaptive grids and complete glyph/contour receipts. Never replace ordinary first-selected output with a chosen source point.",
+  "subsequentSelection": "At most one fresh calibrated square resource may follow if actual font/Selection/fullink and four-axis geometry are useful. No full trial is automatically authorized by a resource score. A final source must couple source-specific center support and actual square geometry, preserve exact canonical V2Qmask1 and historical samegeometry control custody, and keep words coherent/readable.",
+  "stops": [
+    "font substitution",
+    "wrong selected codepoint/text",
+    "clipped ink",
+    "unreadable/overlapping actual letterforms",
+    "source/hash/cap failure"
+  ]
+}

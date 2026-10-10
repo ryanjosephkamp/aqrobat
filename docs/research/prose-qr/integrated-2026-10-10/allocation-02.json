@@ -1,0 +1,24 @@
+{
+  "issuedAtUtc": "2026-10-10T21:50:41.256557+00:00",
+  "purpose": "Release remaining experimental reserve to sole empirical worker while third worker investigates new mechanism with zero captures/readers. All global ceilings unchanged.",
+  "supersedesAllocationOnly": "START.json initial allocations; original record retained",
+  "empiricalTotalCeilings": {
+    "glyphResources": 128,
+    "nativeCaptures": 24,
+    "controlCaptures": 8,
+    "ordinaryReaderCalls": 96,
+    "exploratoryGateFailedPayloadTrials": 4,
+    "bytes": 48000000
+  },
+  "otherByteCeilings": {
+    "design": 4000000,
+    "mechanism": 3000000,
+    "review": 3000000,
+    "parent": 6000000
+  },
+  "globalBytes": 64000000,
+  "controlCapturesRemainingAtIssue": 2,
+  "exploratoryPayloadTrialsRemainingAtIssue": 2,
+  "newExperimentHold": "Empirical waits for materially different justified source mechanism; no unchanged projections retested.",
+  "deadlineUnchanged": "2026-10-11T00:24:22Z"
+}

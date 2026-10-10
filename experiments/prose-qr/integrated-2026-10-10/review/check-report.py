@@ -1,0 +1,94 @@
+"""Static report/link/embedded-byte check; never opens a renderer or browser."""
+
+import base64
+import csv
+import hashlib
+import json
+from datetime import datetime, timezone
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import unquote, urlparse
+
+root = Path(__file__).resolve().parents[4]
+run = root / "docs/research/prose-qr/integrated-2026-10-10"
+
+
+class Parser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links, self.images, self.text, self.scripts, self.ids = [], [], [], [], []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if a.get("id"):
+            self.ids.append(a["id"])
+        if tag == "a":
+            self.links.append(a.get("href", ""))
+        if tag == "img":
+            self.images.append(a)
+        if tag == "script":
+            self.scripts.append(a)
+
+    def handle_data(self, d):
+        if d.strip():
+            self.text.append(d.strip())
+
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+checks, reports = [], []
+
+
+def check(name, result, details=None):
+    checks.append({"name": name, "passed": bool(result), "details": details})
+
+
+pngs = {sha(p.read_bytes()): str(p.relative_to(root)) for p in run.rglob("*.png")}
+for relative in ["handback.html", "empirical/REPORT.html"]:
+    path = run / relative
+    b = path.read_bytes()
+    p = Parser()
+    p.feed(b.decode())
+    missing, embedded = [], []
+    for href in p.links:
+        u = urlparse(href)
+        if u.scheme or u.netloc:
+            continue
+        if not u.path:
+            if u.fragment and unquote(u.fragment) not in p.ids:
+                missing.append(href)
+        else:
+            target = (path.parent / unquote(u.path)).resolve()
+            if not target.exists():
+                missing.append(href)
+    for image in p.images:
+        src = image.get("src", "")
+        if src.startswith("data:image/png;base64,"):
+            s = sha(base64.b64decode(src.split(",", 1)[1], validate=True))
+            embedded.append({"sha256": s, "retainedPNG": pngs.get(s), "alt": image.get("alt")})
+            check(relative + " actual embedded PNG custody", s in pngs and bool(image.get("alt")), s)
+    # The parent draft deliberately links the forthcoming review and closure.
+    expected_pending = {"review/REVIEW.md", "CLOSURE.json"} if relative == "handback.html" else set()
+    unexpected = [h for h in missing if h not in expected_pending]
+    check(relative + " static local evidence links", not unexpected, {"missing": missing, "unexpected": unexpected, "expectedDraftPending": sorted(expected_pending)})
+    check(relative + " embedded figures", len(embedded) >= 3)
+    check(relative + " no executing scripts", not p.scripts)
+    reports.append({"path": str(path.relative_to(root)), "bytes": len(b), "sha256": sha(b), "links": len(p.links), "missingAtReview": missing, "images": embedded, "boundary": "Static markup/source and embedded bytes reviewed; no visual rendering or layout acceptance exercised."})
+
+summary = json.loads((run / "empirical/batch-summary.json").read_text())
+rows = list(csv.DictReader((run / "empirical/batch-summary.csv").open()))
+check("24 JSON/CSV rows in identical order", len(rows) == len(summary["rows"]) == 24 and [r["id"] for r in rows] == [r["id"] for r in summary["rows"]])
+for csv_row, row in zip(rows, summary["rows"]):
+    for k in ["planned", "attempted", "unattempted", "rejected", "stop"]:
+        check(row["id"] + " CSV " + k, (json.loads(csv_row[k]) if csv_row[k] else None) == row.get(k))
+    for k in ["actor", "kind", "outcome", "preregistrationPath", "resultsPath"]:
+        value = row.get(k)
+        check(row["id"] + " CSV " + k, csv_row[k] == value or (value is None and csv_row[k] in ("", "null")))
+    for k in ["ordinaryApiCalls", "passiveApiCalls", "nestedPassiveMatrixDecoderInvocations", "repeatAttempts", "exactRepeats", "exploratoryPayloadTrials"]:
+        check(row["id"] + " CSV " + k, int(csv_row[k]) == row.get(k, 0))
+
+receipt = {"schema": "aqrobat.independent-static-report-review.v1", "atUtc": datetime.now(timezone.utc).isoformat(), "passed": all(c["passed"] for c in checks), "checks": checks, "reports": reports, "newCaptures": 0, "browserLaunches": 0, "imageDisplays": 0, "readerCalls": 0}
+(run / "review/report-checks.json").write_text(json.dumps(receipt, indent=2) + "\n")
+print(json.dumps({"passed": receipt["passed"], "checks": len(checks), "failures": [c for c in checks if not c["passed"]], "reports": reports}, indent=2))

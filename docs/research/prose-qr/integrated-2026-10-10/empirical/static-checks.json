@@ -1,0 +1,254 @@
+{
+  "atUtc": "2026-10-10T21:56:52.616996+00:00",
+  "checkout": [
+    {
+      "args": ["git", "rev-parse", "--show-toplevel"],
+      "returncode": 0,
+      "stdout": "/Users/noir/Documents/aqrobat\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "remote", "-v"],
+      "returncode": 0,
+      "stdout": "origin\thttps://github.com/ryanjosephkamp/aqrobat.git (fetch)\norigin\thttps://github.com/ryanjosephkamp/aqrobat.git (push)\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+      "returncode": 0,
+      "stdout": "codex/aqrobat-foundation\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "rev-parse", "HEAD"],
+      "returncode": 0,
+      "stdout": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--name-only"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--cached", "--name-only"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "pinnedEncoderBaselineExact": true,
+  "pinnedEncoderSha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+  "license": "Original inline MIT license remains exact baseline bytes.",
+  "syntax": [
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/common.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/custody.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/metrics.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/passive.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload-v5.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-v5.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report-v2.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/report.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v5.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5-v2.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v2.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/verify.mjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/holes.py",
+      "status": 0,
+      "method": "Python ast.parse; no cache files created"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/ordinary.py",
+      "status": 0,
+      "method": "Python ast.parse; no cache files created"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resource02.py",
+      "status": 0,
+      "method": "Python ast.parse; no cache files created"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/empirical/setup.py",
+      "status": 0,
+      "method": "Python ast.parse; no cache files created"
+    }
+  ],
+  "newCaptures": 0,
+  "newReaders": 0
+}

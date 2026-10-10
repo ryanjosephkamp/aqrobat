@@ -1,0 +1,175 @@
+{
+  "schema": "aqrobat.native-prose-construction-design.v1",
+  "payload": "https://example.com/",
+  "payloadUtf8Bytes": 20,
+  "baseline": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222",
+  "branch": "codex/aqrobat-foundation",
+  "mode": "Pure source/matrix arithmetic and construction infrastructure; zero renderer/reader calls",
+  "nativeCandidateStatus": "Actual source, sample ownership and later captures/readers belong to empirical lane; no native recovery established by design lane",
+  "ownership": {
+    "source": "experiments/prose-qr/integrated-2026-10-10/design/",
+    "docs": "docs/research/prose-qr/integrated-2026-10-10/design/",
+    "byteCap": 4000000,
+    "captureCap": 0,
+    "readerCap": 0,
+    "cutoffUtc": "2026-10-10T22:14:22Z"
+  },
+  "routes": [
+    {
+      "id": "canonical-fit",
+      "sourceAPI": "fitCanonical",
+      "payloadPadding": "canonical",
+      "nativeControls": "One measured two-state style per real source character; no independently controlled pixels",
+      "result": "Whole-glyph minimum sample-mismatch style recipe and complete function/codeword residual ledger"
+    },
+    {
+      "id": "exact-affine",
+      "sourceAPI": "solve",
+      "payloadPadding": [
+        "canonical",
+        "post-terminator-affine explicitly noncanonical"
+      ],
+      "result": "Complete ideal module-center solution with full codewords and native style choices, or verified XOR contradiction for this exact sample model",
+      "immutable": [
+        "Exact URL bytes",
+        "mode/count",
+        "terminator/byte alignment",
+        "function modules",
+        "encoder parity method"
+      ]
+    },
+    {
+      "id": "radius-construction",
+      "sourceAPI": "constructWithinRadius",
+      "defaultMaxXorsPerSolve": 2000000,
+      "defaultMaxRounds": "min(96, sum floor(ECC-per-block / 2) + 1)",
+      "greedyRule": "Most frequent stream codeword in current verified contradiction with remaining block radius; then ECC before data; then ascending stream-byte index",
+      "retainedDefects": [
+        "Every function-role sample mismatch",
+        "Every remainder mismatch",
+        "Quiet-ring samples",
+        "Every ignored codeword and original block"
+      ],
+      "result": "Ideal-data-radius-met exploratory native style plan or limited greedy-route failure; never a strict-gate or reader claim"
+    }
+  ],
+  "referenceGeometry": {
+    "version": 10,
+    "dimension": 57,
+    "ecc": "L",
+    "pitch": 6.5,
+    "origin": [64, 64],
+    "classification": "Empirical lane selection; actual native source samples required. Not mandatory geometry or a new measurement by design lane.",
+    "dataBytes": 274,
+    "fixedPrefixBytes": 23,
+    "noncanonicalPaddingBits": 2008,
+    "eccBytes": 72,
+    "blocks": 4,
+    "eccBytesPerBlock": 18,
+    "idealSymbolRadiusPerBlock": 9,
+    "functionModules": 481
+  },
+  "finiteArithmeticBatch": {
+    "inputs": "One frozen complete native regular/bold sample-ownership map per distinct native theme",
+    "maskOrder": [0, 1, 2, 3, 4, 5, 6, 7],
+    "selectionRule": "First radius-met source recipe in mask order. If none, canonical fits remain proposals with full residual/excess ledger.",
+    "zeroCapturesOrReaders": true,
+    "stopConditions": [
+      "Changed URL or incomplete duplicate ownership",
+      "Source/state geometry mismatch",
+      "Unowned or multiply owned independent pixel changes",
+      "Operation/round cap",
+      "Design cutoff"
+    ]
+  },
+  "empiricalBeforeReader": [
+    "Freeze actual source with chosen whole-glyph styles and exact text separator policy",
+    "Canonical conventional control at same geometry",
+    "Additional exact-codeword conventional control if padding is noncanonical",
+    "Visible source integrity, per-paragraph and whole-document exact Selection",
+    "Source and immediate-repeat custody; no sealed-source repair",
+    "Unchanged every-record strict native gate reported separately",
+    "Preregister full reader denominator/order and exploratory trial allocation; stop on wrong payload or invalid control"
+  ],
+  "ownerScanRequirements": [
+    "Exact URL from two independent ordinary readers on unchanged native input",
+    "Repeat/source custody and honest visible native text",
+    "Exact paragraph/full-document source checks",
+    "Actual source and PNG plus explicit strict-gate status"
+  ],
+  "separateUntestedLanes": [
+    "Portable styled/plain clipboard",
+    "Native application paste",
+    "Phone",
+    "Physical print"
+  ],
+  "prohibited": [
+    "Hidden solid modules",
+    "Patterned QR background/image",
+    "Duplicate hidden text",
+    "White/transparent/faint text state",
+    "Custom glyph substitution",
+    "Clipping",
+    "Character mosaic called prose",
+    "Invented glyph metrics",
+    "Threshold relaxation"
+  ],
+  "fastAndBilling": "unverified",
+  "finalResults": {
+    "handback": "RESULTS.md",
+    "pureMeasuredCases": {
+      "v10": 32,
+      "v5": 32,
+      "closureSupplementV10": 32
+    },
+    "mechanicalInputFailure": {
+      "attempted": 0,
+      "unattempted": 32,
+      "artifact": "measured-01/"
+    },
+    "withinIdealRadius": 0,
+    "immutableClosureExcludes": {
+      "v10": 32,
+      "v5": 32
+    },
+    "scope": "Only two frozen native prose layouts and their finite whole-glyph style models; no general impossibility claim",
+    "nativePayloadAcceptance": false,
+    "reportedEmpiricalOrdinary": {
+      "v10": {
+        "canonicalExactUrl": 3,
+        "nativeResults": 0,
+        "readers": 3
+      },
+      "v5": {
+        "canonicalExactUrl": 3,
+        "nativeResults": 0,
+        "readers": 3
+      }
+    },
+    "newConstructionAPI": {
+      "file": "experiments/prose-qr/integrated-2026-10-10/design/immutable-closure.mjs",
+      "export": "immutableClosureBound",
+      "includes": "Systematic exact-payload prefix plus all parity codewords of wholly fixed RS data blocks"
+    },
+    "changedProse": {
+      "generator": "experiments/prose-qr/integrated-2026-10-10/design/prepare-v5.mjs",
+      "source": "v5-short-prose/source-spec.json",
+      "sourceCharacters": 106,
+      "paragraphs": 3
+    },
+    "tests": {
+      "passed": 14,
+      "log": "pure-tests-final.log.txt",
+      "classification": "Pure synthetic/arithmetic/source-serialization checks only"
+    },
+    "formatting": {
+      "log": "format-check-final.log.txt",
+      "status": "Initial scoped check found24warnings, including one new handback markdown file subsequently formatted. Frozen source/spec/codeword/receipt bytes retained; no silent post-use rewrite."
+    },
+    "designCaptures": 0,
+    "designReaders": 0,
+    "designGlyphMeasurements": 0,
+    "modelBillingFast": "Unverified",
+    "closedAtParentRequest": true
+  }
+}

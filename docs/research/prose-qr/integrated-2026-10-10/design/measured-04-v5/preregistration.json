@@ -1,0 +1,174 @@
+{
+  "schema": "aqrobat.changed-layout-pure-batch.v1",
+  "frozenAtUtc": "2026-10-10T21:47:08.923Z",
+  "input": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/native-input.json",
+    "sha256": "287b7b9fbe65841b473a81dd69fa6f16d56aea05f8428a427ef84404956e022c",
+    "bytes": 147204
+  },
+  "adapter": "Copy declared geometry.polarity to top-level and rename quietSamples[].base to logical without changing coordinates/value. No native sample changes.",
+  "adaptedSha256": "9ae437c899d83223a708be3546b516c57c4c91793bf2da21f6041404e94fa3bb",
+  "sources": {
+    "experiments/prose-qr/integrated-2026-10-10/design/measured-v5-batch.mjs": "784820f50986301f08540ddefddfcdedc0608e886253238be346d17d9c3e74ba",
+    "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.mjs": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+    "experiments/prose-qr/integrated-2026-10-10/design/immutable-closure.mjs": "1c223bf29e5eb0616cea2231ce7bdc8cc0078f386a3d62c456ece56d0f5df166",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+  },
+  "cases": [
+    {
+      "ecc": "L",
+      "mask": 0
+    },
+    {
+      "ecc": "L",
+      "mask": 1
+    },
+    {
+      "ecc": "L",
+      "mask": 2
+    },
+    {
+      "ecc": "L",
+      "mask": 3
+    },
+    {
+      "ecc": "L",
+      "mask": 4
+    },
+    {
+      "ecc": "L",
+      "mask": 5
+    },
+    {
+      "ecc": "L",
+      "mask": 6
+    },
+    {
+      "ecc": "L",
+      "mask": 7
+    },
+    {
+      "ecc": "M",
+      "mask": 0
+    },
+    {
+      "ecc": "M",
+      "mask": 1
+    },
+    {
+      "ecc": "M",
+      "mask": 2
+    },
+    {
+      "ecc": "M",
+      "mask": 3
+    },
+    {
+      "ecc": "M",
+      "mask": 4
+    },
+    {
+      "ecc": "M",
+      "mask": 5
+    },
+    {
+      "ecc": "M",
+      "mask": 6
+    },
+    {
+      "ecc": "M",
+      "mask": 7
+    },
+    {
+      "ecc": "Q",
+      "mask": 0
+    },
+    {
+      "ecc": "Q",
+      "mask": 1
+    },
+    {
+      "ecc": "Q",
+      "mask": 2
+    },
+    {
+      "ecc": "Q",
+      "mask": 3
+    },
+    {
+      "ecc": "Q",
+      "mask": 4
+    },
+    {
+      "ecc": "Q",
+      "mask": 5
+    },
+    {
+      "ecc": "Q",
+      "mask": 6
+    },
+    {
+      "ecc": "Q",
+      "mask": 7
+    },
+    {
+      "ecc": "H",
+      "mask": 0
+    },
+    {
+      "ecc": "H",
+      "mask": 1
+    },
+    {
+      "ecc": "H",
+      "mask": 2
+    },
+    {
+      "ecc": "H",
+      "mask": 3
+    },
+    {
+      "ecc": "H",
+      "mask": 4
+    },
+    {
+      "ecc": "H",
+      "mask": 5
+    },
+    {
+      "ecc": "H",
+      "mask": 6
+    },
+    {
+      "ecc": "H",
+      "mask": 7
+    }
+  ],
+  "denominator": 32,
+  "diagnostics": [
+    "canonical-fit",
+    "exact-canonical",
+    "exact-post-terminator-affine",
+    "immutable-data-and-whole-block-parity-closure",
+    "bounded-post-terminator-radius-unless-closure-already-excludes-it"
+  ],
+  "maxXors": 2000000,
+  "maxRadiusRounds": 96,
+  "ranking": [
+    "sum max(0, block symbol errors-radius)",
+    "worst block excess",
+    "function mismatch",
+    "module mismatch",
+    "ECC L,M,Q,H",
+    "mask ascending"
+  ],
+  "captures": 0,
+  "readers": 0,
+  "claims": "Necessary bounds and finite pure hypotheses; no standard conformance claim for arbitrary padding, no reader/gate implication.",
+  "stop": [
+    "input/source custody changed",
+    "canonical parity failure",
+    "unexpected exception",
+    "design deadline22:14:22Z"
+  ]
+}

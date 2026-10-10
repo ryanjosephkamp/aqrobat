@@ -1,0 +1,798 @@
+{
+  "schema": "aqrobat.design-final-manifest.v1",
+  "closedAtUtc": "2026-10-10T21:50:12.312Z",
+  "baseline": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222",
+  "branch": "codex/aqrobat-foundation",
+  "ownedRoots": [
+    "experiments/prose-qr/integrated-2026-10-10/design",
+    "docs/research/prose-qr/integrated-2026-10-10/design"
+  ],
+  "totalBytesExcludingManifest": 2024517,
+  "byteCap": 4000000,
+  "files": 140,
+  "artifacts": [
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/catalog.mjs",
+      "bytes": 3500,
+      "sha256": "89bfec756b33e8e925180126330a0d4a960cfe9a8bff80e53cd72e407a609f7e"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/closure-batch.mjs",
+      "bytes": 2145,
+      "sha256": "81ed127a234abd4e441a44d6795e8913532df97f217e64562f561b84d2a74c2d"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/immutable-closure.mjs",
+      "bytes": 3360,
+      "sha256": "1c223bf29e5eb0616cea2231ce7bdc8cc0078f386a3d62c456ece56d0f5df166"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/immutable-closure.test.mjs",
+      "bytes": 3090,
+      "sha256": "6b77a9cbd2dc1078a4d3e87d23b1dc06be8623326c42f2d70b3a4346a5808e32"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/measured-batch.mjs",
+      "bytes": 7044,
+      "sha256": "3a3cf8694db1d17b10c40609f03e495442e050ac28445249c40b5d38daf489dd"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/measured-batch02.mjs",
+      "bytes": 7716,
+      "sha256": "02c5290a3c64ce58c2ce9d9915c1bcf0848f4bc1c117bb0dbc6693d4cef6aa34"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/measured-v5-batch.mjs",
+      "bytes": 7369,
+      "sha256": "784820f50986301f08540ddefddfcdedc0608e886253238be346d17d9c3e74ba"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.mjs",
+      "bytes": 27338,
+      "sha256": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.test.mjs",
+      "bytes": 8825,
+      "sha256": "c20cdd0563b64e3ded2d50078d2de12cef8447a819403911c140b4b4d6b20d34"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/prepare-v5.mjs",
+      "bytes": 9748,
+      "sha256": "013219e54fc203d842242441c720cbee3129e7350800e7fd3148b2438f24f350"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/sample-contract.json",
+      "bytes": 2097,
+      "sha256": "ef5f831b24806c3b9e89743a552aadb3a5fe7880d5662d9f1723efd09f567ff3"
+    },
+    {
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/solve.mjs",
+      "bytes": 1735,
+      "sha256": "9b0eb4fe2c4f267db0d1e889de6b91e6f3f695489c553b8d09ddf8f3bfad346c"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/DESIGN.md",
+      "bytes": 12579,
+      "sha256": "eabcd7b1d95c3d65384d3e346a42d32538e920c618f918a04ebdc5a259b492ee"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/RESULTS.md",
+      "bytes": 10015,
+      "sha256": "1b5559e93f4a142123f9f95d254a8730f881d1d4fd33e54f42186db42e057b3c"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/canonical-v10-L.json",
+      "bytes": 127011,
+      "sha256": "d08f36a26acd03d74a160de765721cc420874ea79be57db8533176d0f8d20e90"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/capacity.json",
+      "bytes": 96338,
+      "sha256": "9496af3872714e77d2ecb72334ff8443cf82597ee19ace006d9a766afd2d487c"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/construction.json",
+      "bytes": 6681,
+      "sha256": "22cdca1e4215435c458d022f3de4a4c2914adac0063fc7aa0827659fa0e32eb2"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/format-check-final.log.txt",
+      "bytes": 2289,
+      "sha256": "432bab1517181d14169c5334390b94e33c0c327a460ae60c79153be4c47bbac0"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/format-check-preserved.log.txt",
+      "bytes": 2219,
+      "sha256": "461612a55412ed4900c3ab093870cad782247c653a2eda3cd9ff7c474c6a47da"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/input-provenance.json",
+      "bytes": 2243,
+      "sha256": "266a85cedd6c9697c094213c4bd24a3c12a3502eb64803a6367e22db3b01e588"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-01/abort.txt",
+      "bytes": 467,
+      "sha256": "93310c8db8dc841e5674e27c652f2ed57ba73bcd84340645adf8b2ad17fc7bac"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-01/native-input.json.gz",
+      "bytes": 27304,
+      "sha256": "7a25cb723d7a5323b61a50322d2c407f1e8c1ae006ac7206ef828a4a5e7ad71d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-01/preregistration.json",
+      "bytes": 3407,
+      "sha256": "8f2ec5bb2fdbd96d8d934f3350dd5d41366b2ebe1f4097a8cfc9bd5bc0a534ac"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-01/summary.json",
+      "bytes": 1734,
+      "sha256": "c4c4f5f11196b1e03eccc47c2f18d8c29e063f7aee8165cecb8a238d2670b965"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-01.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/best-canonical-proposal.json",
+      "bytes": 96040,
+      "sha256": "6123bf168158231e84a6da4fd4c37c64bec13d43c9bd785666f7c1695d31b298"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-0.json.gz",
+      "bytes": 7305,
+      "sha256": "9d4b0ef1d46bbc91d8dda055b3ab5d84fbdedcd8b878f344da1d422d336aece7"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-1.json.gz",
+      "bytes": 6785,
+      "sha256": "fc2d316340f05845452f44a78b9288788204ad3c16fe11711025f302d1648696"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-2.json.gz",
+      "bytes": 6766,
+      "sha256": "6cf7c6673a93c22c54290c99734921614e568b5ac57a549f51f49af3b3fbf6be"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-3.json.gz",
+      "bytes": 6783,
+      "sha256": "f799e025abe2cca2052876459964e784cfe3726ac130570eb1e14f590796369b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-4.json.gz",
+      "bytes": 6768,
+      "sha256": "65753ae0f1b8b9beb7c2eb6614e64f2d3c109b4e7014e20877adb1bff78767b2"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-5.json.gz",
+      "bytes": 6730,
+      "sha256": "cd7773f77a926147bdd89a41d5dcee482bb9475dbaa4954b1652c3160dba843a"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-6.json.gz",
+      "bytes": 6793,
+      "sha256": "8677d3799406e3d7840b826c9e7d6b2e709aa89f460b678c81b60001160535be"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-H-7.json.gz",
+      "bytes": 6794,
+      "sha256": "dd8631127d160b27ccac002e78205360e6a6347925b2d1e9198500d31cec738f"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-0.json.gz",
+      "bytes": 6468,
+      "sha256": "2fa455fa1c87d961717f73d1edb6143405079e8b9a16f5e0efba8b68d8851639"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-1.json.gz",
+      "bytes": 6421,
+      "sha256": "f81251e5f78ac8ae6095c9a35e01c0e80a2482d72d4ffd1dfab3bdaaf6c5606a"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-2.json.gz",
+      "bytes": 6442,
+      "sha256": "9212104dc3b58cfdf60374f888615149ea5e03d01521330627b60328563117db"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-3.json.gz",
+      "bytes": 6507,
+      "sha256": "1bdc84ec9375798864cc92b38f477f02b1e76507ba9397e18ec3c6b740732b7d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-4.json.gz",
+      "bytes": 6477,
+      "sha256": "19294d3e3745824be841fe8a9ceaa334f21bd49d4e6b9524a73a16619b3163ca"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-5.json.gz",
+      "bytes": 6519,
+      "sha256": "f79213d8f1c7eae588f9aa4bcd689db3f19c27c95746d4457d1e5fc25064e47e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-6.json.gz",
+      "bytes": 6511,
+      "sha256": "a449a7322db9940e9d0927ec00b814408035cc272a7f32db01f1e6bd30387db3"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-L-7.json.gz",
+      "bytes": 6546,
+      "sha256": "54f5557e42333cf3480418c1f334378bf5502ce2896b7601b87d5e796a78080c"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-0.json.gz",
+      "bytes": 6504,
+      "sha256": "45b2d3ebd35a6bdb200b2223f692bfb62b956e205ff33c4d73203735e86a9862"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-1.json.gz",
+      "bytes": 6531,
+      "sha256": "55ddb9301acd4c4cb6449e61c6f60ab15c333c1b5c530697554d539796725581"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-2.json.gz",
+      "bytes": 6495,
+      "sha256": "0c8a42f2ebfbdf46716d865ac8a3de6074f1a5d0683e3d36cd1de76dc089eb90"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-3.json.gz",
+      "bytes": 6563,
+      "sha256": "6e2a26b68731da4f389f09d4f694e1e5747803c171570dd1cb4d467d1b34b10d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-4.json.gz",
+      "bytes": 6502,
+      "sha256": "897cfffd50fcb5b224a403bcc72dc02aab52a07ae22be0c6a4b85dbe6e3f451d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-5.json.gz",
+      "bytes": 6543,
+      "sha256": "b0185f4adf027ee2fc8df6e705d2e7a0a2a6af76b574704cbd1ad229d2620d12"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-6.json.gz",
+      "bytes": 6539,
+      "sha256": "9cbad31e4a9330f080a65a8f787b6bc566bb8ac54f032ac29df9d260f7c2273b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-M-7.json.gz",
+      "bytes": 6580,
+      "sha256": "3aa686d4f77bcc5d352833df8f8667d5a2110671c1dcd486cd892ae696f9adcc"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-0.json.gz",
+      "bytes": 6755,
+      "sha256": "4f16545a3be7ee6b36888b90e84591fd7c15e31f08e04f3087520fc0316c21de"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-1.json.gz",
+      "bytes": 6750,
+      "sha256": "e1805c73cf98f3c951e6aefda3041f087d5ea190191ae6fbd38f0d55b7768c07"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-2.json.gz",
+      "bytes": 6767,
+      "sha256": "1a885005d70b049ff2b213a2432a484e4e3c8ddd440d5ece5aa49fdefd60b833"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-3.json.gz",
+      "bytes": 6771,
+      "sha256": "cba14a8e0f037517c98f04ffe7789a9396a58021dbfe6a801a1e029c01abee8c"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-4.json.gz",
+      "bytes": 6791,
+      "sha256": "ff2a54a75a41edeb53b458f2a20eff9e3216867de8d60eefcd2a79199a634a54"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-5.json.gz",
+      "bytes": 6789,
+      "sha256": "e3bd341675fb80023f4f789a728ba0093b592a9bca234925cead4b2fa4735334"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-6.json.gz",
+      "bytes": 6791,
+      "sha256": "540677300b66b15707455ff077f01abd5dc4faaa97e5eb956b14e23996983578"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/case-Q-7.json.gz",
+      "bytes": 6772,
+      "sha256": "7120529465ed895ed84aae4920e9cf70d24a81eda95e05bc6ba94f56fc9ee111"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/native-input.json.gz",
+      "bytes": 27304,
+      "sha256": "7a25cb723d7a5323b61a50322d2c407f1e8c1ae006ac7206ef828a4a5e7ad71d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/preregistration.json",
+      "bytes": 3852,
+      "sha256": "a47b57ea43ffdac098c125ddb6a9e0990fe7a4915a2cdb07c14a75e4fb4e786e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02/summary.json",
+      "bytes": 68883,
+      "sha256": "f928ccba361a552cdc169febbd92183ddd27699a9c17cd8568f35b6b1004f776"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-02.stdout.txt",
+      "bytes": 11943,
+      "sha256": "f9990d477ab5707d4a83a6d45f7afe389d4a478d12c86c11d76213c82c709c3d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-0.json",
+      "bytes": 20002,
+      "sha256": "9bfce6b43409a453e178c702dca9d8efe5b2a57aba2357b560f6c490efcfa3de"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-1.json",
+      "bytes": 20339,
+      "sha256": "08cefe8da1b2edecb7d88f308df514fe056dcbe9cbf236b18e137f31089c7eef"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-2.json",
+      "bytes": 20001,
+      "sha256": "639fcfca8a1432461a5ccfa250752f13527c06f6fb5cbe4a2d55be50dedf70eb"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-3.json",
+      "bytes": 20000,
+      "sha256": "a1cf92d85bbf77c3c21e30aad308f34a68bf7dc773539687bd0012d738c9d28f"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-4.json",
+      "bytes": 19999,
+      "sha256": "0530f50c0f999eae428401ddaccdca7fc1c3ccff8bf763c8b90b52d1678a9aaa"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-5.json",
+      "bytes": 19999,
+      "sha256": "e84a28fa0935fa286d8e118674b69e1cbb7d4744b12e4b04690cb12cc778ca6c"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-6.json",
+      "bytes": 20339,
+      "sha256": "0cfd4ba005a5e0fc2de91e08b7c2f5676a7a5b9a37ebb23ff8d966c614f0f5f6"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-H-7.json",
+      "bytes": 20340,
+      "sha256": "7e64aaa4193080a2b5694d32e5c8feb1d4d9949dbcf594cefaa86fdd72f402c1"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-0.json",
+      "bytes": 9734,
+      "sha256": "e9ea622506255b145b3951dc9300eda768cee3d6e0fa5ed5176039ea9534e63f"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-1.json",
+      "bytes": 9733,
+      "sha256": "eca577e05913709d240e84dc3d38f74081d30fc45ab2806098272663f4e7242a"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-2.json",
+      "bytes": 9733,
+      "sha256": "baad95a707509ed5d998ffb55cb2d7fd95ccf24bc6e6f852b7431ea738ad9e37"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-3.json",
+      "bytes": 9733,
+      "sha256": "f64da919675e9281f9f68470dcaa6a3a951367329b3cf38d6df6e81a3f231efc"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-4.json",
+      "bytes": 9733,
+      "sha256": "fd7039e06eece90a7bf58fe6658ee0b42147b41a23678e86c48f17782801f726"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-5.json",
+      "bytes": 9733,
+      "sha256": "8048e946913373f3627fce063d3c3e25ccf659ba9c58ca25d983c9609ca547f8"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-6.json",
+      "bytes": 9733,
+      "sha256": "4409e60d65316acd2d1287b23893046ab2085ec6927053ae04e2c7c3f43765aa"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-L-7.json",
+      "bytes": 9734,
+      "sha256": "1f352188086f3d17dbe4ecb7012c0815be4822b5c5e4a81e93ca7e1cf9bc994b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-0.json",
+      "bytes": 10012,
+      "sha256": "936fbaf22285b2e70d0166fa044751c6718110a2bc7fa29555ba2c1da29b2313"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-1.json",
+      "bytes": 10012,
+      "sha256": "f548dd58333264f08a9c389f7fcb270e732d3201ef0432bf5d5d69844b18bfc5"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-2.json",
+      "bytes": 10012,
+      "sha256": "8389a2a4c1b94fcb1dd7ada791738af673b337cdeb8e4ab4a6f8a7f20bbad9c8"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-3.json",
+      "bytes": 10012,
+      "sha256": "530527ba0ab2a19838ee2fa73ad9e8f19fccfbcca48dc30ca95ab2690f5f87af"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-4.json",
+      "bytes": 10012,
+      "sha256": "a5e9e1116f24c21fd23df36022196c916d67a0dbd8113cd9f759c30555067dca"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-5.json",
+      "bytes": 10012,
+      "sha256": "129ce1059edf64de08f061bbb2bfe251aef4d1c29b75b2565b5b37a3a9c11b0e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-6.json",
+      "bytes": 9673,
+      "sha256": "a86ba053f460ace93b606ca2e105a8dd277ffb87143f612762603c1fedaff15e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-M-7.json",
+      "bytes": 10012,
+      "sha256": "4e0cea5e2b3179aa692ea74173b646774cd3adcfe18ef74f90bf3865f29c9415"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-0.json",
+      "bytes": 18645,
+      "sha256": "178600ba5d1bc9dedfc8288ec4df84c579438ceb4ce0a40e10df110001202415"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-1.json",
+      "bytes": 18984,
+      "sha256": "b118a3f1f9a830bca583804c20085ad25ebb5b56deb405e2a3d8f91c812df85a"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-2.json",
+      "bytes": 18985,
+      "sha256": "f70492f614e9e0d04cdacc5c2a39a63844c6ab0bb659ab7ebabedfd3f8038568"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-3.json",
+      "bytes": 18645,
+      "sha256": "e1ec135adf3a410ae1b48ab7347e02a1d3b76a8df6570da36c39baf854f5412e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-4.json",
+      "bytes": 18984,
+      "sha256": "965ec36b1fa7c917ab659c0ec7e938cdc346bea9025e0cf8da197a1677c87563"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-5.json",
+      "bytes": 18984,
+      "sha256": "00f89009da54734f4d6460a98906edff16bd5d2ecc1e9af7ca37d963a63fe928"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-6.json",
+      "bytes": 18984,
+      "sha256": "a1472dc408ca95ea6234655e8699850088a033f121b8407f165533cb24b1958b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/case-Q-7.json",
+      "bytes": 18984,
+      "sha256": "7863fe62b13317c33b29742052c62ca356ff0172b560fe477c06446d86bb850d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/immutable-closure.frozen-source.mjs.txt",
+      "bytes": 2891,
+      "sha256": "77a998ab70e0a91031a4a8aecdb72be7b01c81c73744b0a218aefc5ca09afaad"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/preregistration.json",
+      "bytes": 2665,
+      "sha256": "b952c5fda3659dd4a8583ea07cd5ed5df95c5ecc6667a3d3758b7154455c7a6f"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/summary.json",
+      "bytes": 63625,
+      "sha256": "cfe06af242552faaa45d2395765c100253f490c97d673e7b5243d9a3c1eb10a2"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/best-canonical-proposal.json",
+      "bytes": 39623,
+      "sha256": "e606b1b388df80590e183881479286a161792408cb2ce2eb2bd059e69e3e394e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-0.json.gz",
+      "bytes": 4949,
+      "sha256": "8f851009e89a95ffd9e900def4673393ac6dfcfa1b9f7e65b43544d21aba67a2"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-1.json.gz",
+      "bytes": 4950,
+      "sha256": "9f207810ad1cfb6b9da06b08f1a866f2a209baf7c9a97eb643513a819c4990f8"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-2.json.gz",
+      "bytes": 4937,
+      "sha256": "4515725708eb47af15426352450b4256ba2023beb42a16ce2a0440df5bf8f7c1"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-3.json.gz",
+      "bytes": 4968,
+      "sha256": "c948fde5e1fd52d1058cd07faa8f78b86aa48ec796f2cc8f8d4efe70865b909e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-4.json.gz",
+      "bytes": 4951,
+      "sha256": "cba8b45ff661bd7f46f6c4990818b1a6ab79b20c05e16376415064a4726dd6c1"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-5.json.gz",
+      "bytes": 4938,
+      "sha256": "0d94dd538866b301b4188796d829849ee96c88049cff72082a50b064cb0c8e0b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-6.json.gz",
+      "bytes": 4936,
+      "sha256": "b6a0c05cce77483d1712adc0211ba8386ae2c685bfc808e0fc6460a44c7edbb8"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-H-7.json.gz",
+      "bytes": 4916,
+      "sha256": "11e15de4e090ee587949396381a90412dc38708a058f3002ca69796fe4266621"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-0.json.gz",
+      "bytes": 4151,
+      "sha256": "ea663eebed918a5d3b622af8a24905cad0441ecac0c25e47b6ab377e76356106"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-1.json.gz",
+      "bytes": 4123,
+      "sha256": "fafae52f99603ea59aa92ef4377caac6ba0aa5bcea41fc878c3b1df41475d512"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-2.json.gz",
+      "bytes": 4161,
+      "sha256": "ff55f40f93098f7c64b218875722b50dac7b1065efa03d68c7b7d0ec66903367"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-3.json.gz",
+      "bytes": 4176,
+      "sha256": "f2b74f5bff618db813c7df4a0369b9cb8a1a0ed3efb6e9cd5c5456462e0f4c79"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-4.json.gz",
+      "bytes": 4165,
+      "sha256": "463a714c74e8893c12a3ce30cb7700d687ce15f6b058d34d1a6b9c71b685a5e1"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-5.json.gz",
+      "bytes": 4174,
+      "sha256": "58635f1ae55aa775f2f5a07d37997a6c2790229e096fcccf215bae30502b4a5e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-6.json.gz",
+      "bytes": 4182,
+      "sha256": "b40a4f4eefeff53231232d420ecc86cc33ce4b46854d074f4bd47be2b11e7d8f"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-L-7.json.gz",
+      "bytes": 4177,
+      "sha256": "dee53113da32e438169a8c038db2c535b5b7c0f81ae38c91d9be9b76b319ec91"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-0.json.gz",
+      "bytes": 4345,
+      "sha256": "8e87d1bf01a95f9811219ec96d3751bf84496a9ed28946497f76c42bd21436cb"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-1.json.gz",
+      "bytes": 4355,
+      "sha256": "a4fd68125f3270a7d93b07c4b82184fed6b5203b32a12b9bd066ff51f9c503e1"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-2.json.gz",
+      "bytes": 4354,
+      "sha256": "42ef03231db085a7cbf5afb5c9edf803c3ec99a6c0bc07bc35d50ef72cce28f4"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-3.json.gz",
+      "bytes": 4381,
+      "sha256": "a429afe1923f50f4caac7abbc8bf1ac23ad3351508d30cf5fd6ca5b2f9bcb128"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-4.json.gz",
+      "bytes": 4341,
+      "sha256": "69d06809118d8c52135452f228bb818389fdc85d8da0052922aadddb84203c0b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-5.json.gz",
+      "bytes": 4365,
+      "sha256": "5bffc3a5746dccb10c22efe085751959a030cf386ddc73801dc187fafa4a7a67"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-6.json.gz",
+      "bytes": 4354,
+      "sha256": "f04d28d270e0f8f884ddef5437a7e645cb43522767edb7472d46ee1383cf0f84"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-M-7.json.gz",
+      "bytes": 4394,
+      "sha256": "757842b0bb8c25b7c650f1f10426b6c594146766e640da2f9f199483a90126e2"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-0.json.gz",
+      "bytes": 4689,
+      "sha256": "40404c5d63f78b513c727e6d3207ad19669f0d9c255f7029a8c9ad4b9afc69ad"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-1.json.gz",
+      "bytes": 4665,
+      "sha256": "d900a5c50c1d3817e3de2467c4d293e25a031bfddbe261e5c7e8f5942969db3e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-2.json.gz",
+      "bytes": 4610,
+      "sha256": "8bbd87a25033b9c15c98e3d5368a7fc8f843091d775a9c9047ba39bb0bd1936a"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-3.json.gz",
+      "bytes": 4659,
+      "sha256": "3048db7df972f45fa1d5206c018ca7f0c43bf95b76e2e8c8ea9a3a6231b784a7"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-4.json.gz",
+      "bytes": 4642,
+      "sha256": "627fbca843c70ebb5b834f80cad38a03e11168cb27a45802b593ad97d2413549"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-5.json.gz",
+      "bytes": 4649,
+      "sha256": "431da49ebb6d97efa920ea07343793b27baa4ee4097331a4bff2574cb08c5ee6"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-6.json.gz",
+      "bytes": 4645,
+      "sha256": "44816677e17cabc16f9c85c87c32e7cb0ed1372583c8e870e52e086a997e3ff0"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/case-Q-7.json.gz",
+      "bytes": 4662,
+      "sha256": "079baf25f7addf01609f2a80dd5d145c442204ec7e74bf49d1c47e8d2cb7fa40"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/native-input.json.gz",
+      "bytes": 9526,
+      "sha256": "455a03fc147aa681f7fbae5c2d5ad7ce080597665d7fa2f95ea9f93c61e87822"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/preregistration.json",
+      "bytes": 3445,
+      "sha256": "a4f72ea8025103bf4712d7f5d7635047e2165cc7f5f0e97333b32751285a9c14"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5/summary.json",
+      "bytes": 52156,
+      "sha256": "64686715abc935ea6523e5d91ed2e0641e01726a863cbc5c526e9825e544039b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-04-v5.stdout.txt",
+      "bytes": 31592,
+      "sha256": "20feaf516a39eeab5842caa1609a997e2cb9cd0858e9d196017b318a4c01e56b"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/pure-tests-final.log.txt",
+      "bytes": 1438,
+      "sha256": "2929de3d28b840e0abf90c28bb6013c3061cd684e295053fc95e53bff9f33b41"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/pure-tests.log.txt",
+      "bytes": 2445,
+      "sha256": "163ba6147750d341acabd75d782671d0b84199e629ba1a9a200da5093bb5b985"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/v5-short-prose/canonical-targets.json",
+      "bytes": 298886,
+      "sha256": "f40ec5ddbd0d6efa7686aa81cc9eace3513c99c02095bb1e364f44309f79c17d"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/v5-short-prose/source-spec.json",
+      "bytes": 59004,
+      "sha256": "75f62b3d27bd60d961f50de8a220e24e5bcd6eebbd2e848d14d2a65707f30bee"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/v5-short-prose/v5-reverse-bold/source.html.txt",
+      "bytes": 22267,
+      "sha256": "7c35bd7e12be16b61517b20e663a1d87b66ea615458992c210d9ec1d279b502e"
+    },
+    {
+      "path": "docs/research/prose-qr/integrated-2026-10-10/design/v5-short-prose/v5-reverse-regular/source.html.txt",
+      "bytes": 22819,
+      "sha256": "2a4fa8a2de18644d65761451a98fccdb2cd124585aa116ac36c25fc325fecb4c"
+    }
+  ],
+  "frozenSourceChecks": [
+    {
+      "batch": "measured-02",
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/measured-batch02.mjs",
+      "expected": "02c5290a3c64ce58c2ce9d9915c1bcf0848f4bc1c117bb0dbc6693d4cef6aa34",
+      "actual": "02c5290a3c64ce58c2ce9d9915c1bcf0848f4bc1c117bb0dbc6693d4cef6aa34",
+      "matches": true
+    },
+    {
+      "batch": "measured-02",
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.mjs",
+      "expected": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+      "actual": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+      "matches": true
+    },
+    {
+      "batch": "measured-02",
+      "path": "vendor/qrcodegen.mjs",
+      "expected": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "actual": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "matches": true
+    },
+    {
+      "batch": "measured-02",
+      "path": "package-lock.json",
+      "expected": "c965918835df6b4562db31a9738c3f9a82a2470bd77997370184901b93178606",
+      "actual": "c965918835df6b4562db31a9738c3f9a82a2470bd77997370184901b93178606",
+      "matches": true
+    },
+    {
+      "batch": "measured-04-v5",
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/measured-v5-batch.mjs",
+      "expected": "784820f50986301f08540ddefddfcdedc0608e886253238be346d17d9c3e74ba",
+      "actual": "784820f50986301f08540ddefddfcdedc0608e886253238be346d17d9c3e74ba",
+      "matches": true
+    },
+    {
+      "batch": "measured-04-v5",
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.mjs",
+      "expected": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+      "actual": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+      "matches": true
+    },
+    {
+      "batch": "measured-04-v5",
+      "path": "experiments/prose-qr/integrated-2026-10-10/design/immutable-closure.mjs",
+      "expected": "1c223bf29e5eb0616cea2231ce7bdc8cc0078f386a3d62c456ece56d0f5df166",
+      "actual": "1c223bf29e5eb0616cea2231ce7bdc8cc0078f386a3d62c456ece56d0f5df166",
+      "matches": true
+    },
+    {
+      "batch": "measured-04-v5",
+      "path": "vendor/qrcodegen.mjs",
+      "expected": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "actual": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "matches": true
+    }
+  ],
+  "archivedClosureVersion": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/design/measured-03-closure/immutable-closure.frozen-source.mjs.txt",
+    "sha256": "77a998ab70e0a91031a4a8aecdb72be7b01c81c73744b0a218aefc5ca09afaad",
+    "matchesMeasured03": true,
+    "currentFormattedVersionPreserved": true
+  },
+  "validation": {
+    "pureTests": 14,
+    "passed": 14,
+    "format": "Scoped preserved-source check has23warnings; exact frozen source/spec/receipt bytes intentionally retained. See format-check-preserved.log.txt. New handback markdown and construction ledger formatted."
+  },
+  "allocation": {
+    "captures": 0,
+    "screenshots": 0,
+    "readerCalls": 0,
+    "locatorCalls": 0,
+    "binarizerCalls": 0,
+    "browserAppLaunches": 0,
+    "newGlyphMeasurements": 0,
+    "installs": 0,
+    "downloads": 0,
+    "newModels": 0,
+    "gitMutations": 0
+  },
+  "closure": "Stopped after parent-requested final handback. Task acceptance remains unmet for two finite measured constructions. No all-routes impossibility or scanner-readiness claim."
+}
