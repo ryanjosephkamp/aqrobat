@@ -1,0 +1,66 @@
+{
+  "schema": "aqrobat.control-panel-parent-verification.v1",
+  "verifiedAtUtc": "2026-10-10T19:14:17.310639+00:00",
+  "scope": "targeted saved-evidence reconciliation; no experiment rerun",
+  "workerInventoryEntriesMatched": 69,
+  "workerVerificationSha256": "730cc7e66d960d975021f05f7d0a4edb8afc7315e060471e5aa0a753d3947e49",
+  "workerChecksReported": 454,
+  "preregisteredAtUtc": "2026-10-10T19:07:56.047Z",
+  "firstCaptureAtUtc": "2026-10-10T19:08:01.301Z",
+  "allSourcesPreregisteredBeforeCapture": true,
+  "sharedNonFinderSourceHash": true,
+  "strictFunctionBytesUnchanged": true,
+  "cases": [
+    {
+      "id": "square",
+      "sourceHashesMatched": true,
+      "repeatExact": true,
+      "rawOrdinarySlotsMatched": 3,
+      "fullPassiveParity": true,
+      "branches": 1,
+      "strictPass": true
+    },
+    {
+      "id": "circle",
+      "sourceHashesMatched": true,
+      "repeatExact": true,
+      "rawOrdinarySlotsMatched": 3,
+      "fullPassiveParity": true,
+      "branches": 1,
+      "strictPass": false
+    },
+    {
+      "id": "rounded-one-third",
+      "sourceHashesMatched": true,
+      "repeatExact": true,
+      "rawOrdinarySlotsMatched": 3,
+      "fullPassiveParity": true,
+      "branches": 1,
+      "strictPass": false
+    },
+    {
+      "id": "rounded-two-thirds",
+      "sourceHashesMatched": true,
+      "repeatExact": true,
+      "rawOrdinarySlotsMatched": 3,
+      "fullPassiveParity": true,
+      "branches": 1,
+      "strictPass": false
+    }
+  ],
+  "completedOrdinarySlots": 12,
+  "exactRecoveries": 9,
+  "emptyReturns": 3,
+  "wrongPayloads": 0,
+  "allEndpointGatesHold": true,
+  "trackedFilesUnchangedBeforeStaging": true,
+  "npmPrivate": true,
+  "staticReportsChecked": ["index.html", "handback.html"],
+  "embeddedPngsEach": 4,
+  "embeddedPngBytesMatchRetainedSources": true,
+  "remoteRenderingAssets": 0,
+  "browserReportQaRun": false,
+  "newScientificRendersReadersLocators": 0,
+  "workerOutputsPreserved": true,
+  "nextProposalExecuted": false
+}

@@ -1,0 +1,1547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · fixed curved-finder control panel</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f5f4ef;
+        color: #18262a;
+        font:
+          17px/1.55 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 24px 90px;
+      }
+      h1 {
+        font-size: clamp(30px, 5vw, 52px);
+        line-height: 1.08;
+        max-width: 900px;
+      }
+      h2 {
+        margin-top: 42px;
+        font-size: 25px;
+      }
+      h3 {
+        font-size: 19px;
+      }
+      .lead {
+        font-size: 21px;
+        max-width: 1000px;
+      }
+      .status {
+        border-left: 5px solid #247368;
+        padding: 16px 22px;
+        background: #e8f1ea;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+      figure {
+        margin: 0;
+        background: white;
+        padding: 12px;
+        border: 1px solid #c6cdc6;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      figcaption {
+        margin-top: 10px;
+        font-weight: 650;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+        background: #fff;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 12px;
+        border: 1px solid #ccd2cf;
+      }
+      thead {
+        background: #e7ece7;
+      }
+      .scroll {
+        overflow: auto;
+      }
+      code {
+        display: block;
+        font:
+          12px/1.5 ui-monospace,
+          monospace;
+        overflow-wrap: anywhere;
+        margin: 6px 0;
+      }
+      a {
+        color: #135d61;
+      }
+      article {
+        margin: 24px 0;
+      }
+      .muted {
+        color: #4c5b60;
+      }
+      @media (max-width: 750px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        main {
+          padding: 24px 14px 70px;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+        }
+        main {
+          padding: 0;
+        }
+        table {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="muted">
+        AQROBAT · D1 · October 10, 2026 · bounded conventional-image evidence
+      </p>
+      <h1>
+        The curved-finder gate disagreement persists at both intermediate
+        curvatures.
+      </h1>
+      <p class="lead">
+        Square passes the fixed strict gate and all three readers. Curvature
+        1/3, curvature 2/3 and circles recover the exact URL in default ZXing
+        and jsQR while failing the strict shape conjunction. Default OpenCV
+        returns empty text for all three curved treatments.
+      </p>
+      <div class="status">
+        <strong
+          >Complete panel; all endpoint comparability and custody gates
+          hold.</strong
+        >
+        12/12 ordinary slots completed, 9 exact recoveries and 3 empty returns;
+        0 wrong payloads, errors, timeouts, stops or unattempted slots. Four
+        captures, four byte-identical immediate-repeat receipts, four separate
+        passive profiles and four actual normal stock scan branches. All
+        complete passive returns match the saved ordinary jsQR return.
+      </div>
+      <h2>Four frozen treatments, four saved inputs</h2>
+      <p>
+        Payload <strong>https://example.com/</strong>; pinned encoder, version
+        2, ECC M, mask 0, no boost; 12 px pitch; four-module quiet zone; 396×396
+        px at DPR 1. Curvature is each nested square’s corner radius divided by
+        its own half-side. Each finder replaces its complete 7×7 module region.
+        No square finder modules remain beneath the visible replacement shapes.
+        The non-finder SVG module string is byte-identical in all four sources.
+      </p>
+      <div class="grid">
+        <figure>
+          <img
+            width="396"
+            height="396"
+            alt="Saved input PNG for square"
+            src="data:image/png;base64,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"
+          />
+          <figcaption>square · curvature 0</figcaption>
+        </figure>
+        <figure>
+          <img
+            width="396"
+            height="396"
+            alt="Saved input PNG for rounded-one-third"
+            src="data:image/png;base64,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"
+          />
+          <figcaption>rounded-one-third · curvature 1/3</figcaption>
+        </figure>
+        <figure>
+          <img
+            width="396"
+            height="396"
+            alt="Saved input PNG for rounded-two-thirds"
+            src="data:image/png;base64,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"
+          />
+          <figcaption>rounded-two-thirds · curvature 2/3</figcaption>
+        </figure>
+        <figure>
+          <img
+            width="396"
+            height="396"
+            alt="Saved input PNG for circle"
+            src="data:image/png;base64,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"
+          />
+          <figcaption>circle · curvature 1</figcaption>
+        </figure>
+      </div>
+      <p class="muted">
+        These images embed the exact retained input PNG bytes. They are the four
+        authorized source captures, not additional screenshots or trials.
+        Execution order was square → circle → 1/3 → 2/3; display order follows
+        curvature.
+      </p>
+      <h2>Ordinary readers and the unchanged strict gate</h2>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Treatment</th>
+              <th>OpenCV</th>
+              <th>ZXing</th>
+              <th>jsQR</th>
+              <th>Strict gate</th>
+              <th>Min balance / span</th>
+              <th>Min stable fraction</th>
+              <th>Max scored RMS</th>
+              <th>Max true RMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>square</th>
+              <td>exact URL</td>
+              <td>exact URL</td>
+              <td>exact URL</td>
+              <td>PASS</td>
+              <td>1.000000/1.000000</td>
+              <td>1.000000</td>
+              <td>0.010154</td>
+              <td>0.024096</td>
+            </tr>
+            <tr>
+              <th>rounded-one-third</th>
+              <td>empty</td>
+              <td>exact URL</td>
+              <td>exact URL</td>
+              <td>FAIL</td>
+              <td>0.777778/0.777778</td>
+              <td>0.972222</td>
+              <td>0.018537</td>
+              <td>0.057812</td>
+            </tr>
+            <tr>
+              <th>rounded-two-thirds</th>
+              <td>empty</td>
+              <td>exact URL</td>
+              <td>exact URL</td>
+              <td>FAIL</td>
+              <td>0.500000/0.500000</td>
+              <td>0.805556</td>
+              <td>0.039718</td>
+              <td>0.049050</td>
+            </tr>
+            <tr>
+              <th>circle</th>
+              <td>empty</td>
+              <td>exact URL</td>
+              <td>exact URL</td>
+              <td>FAIL</td>
+              <td>0.222222/0.222222</td>
+              <td>0.611111</td>
+              <td>0.058203</td>
+              <td>0.055701</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The table aggregates the three selected points conservatively: minima
+        for balance/span/stability and maxima for RMS. Every selected point has
+        one scored record, all four scored axes, and all four true-geometry
+        axes. Every scored and true RMS passes ≤0.35. Curvature 1/3 fails
+        balance and nominal span at 0.777778 versus ≥0.8; curvature 2/3 fails
+        both at 0.5. Circle fails both at 0.222222 and stability at 22/36 =
+        0.611111. Square passes every condition.
+      </p>
+      <p>
+        The exact conjunction requires the
+        <em>first location within each naturally executed branch</em> to match
+        intended dimension 25 and all three centers within &lt;12 px; exactly
+        three selected points; every point’s quad balance, nominal span and
+        stable-wide-row fraction ≥0.8; a nonempty scored-record set with
+        <strong>every record</strong> having four axes and worst RMS ≤0.35; and
+        true geometry with four axes and worst RMS ≤0.35. The gate and all
+        thresholds are unchanged. Source-aligned checks remain diagnostic; no
+        later location replaces the first.
+      </p>
+      <h2>First branches and point-level failures</h2>
+      <p>
+        All four default jsQR calls recover in their normal first scan. Thus
+        each passive profile naturally executes exactly one normal branch; zero
+        inverted branches execute. The 1/3 centers shift 0.25 px horizontally.
+        The other three treatments have zero center error. All first locations
+        have intended dimension 25.
+      </p>
+      <article>
+        <h3>square · normal-stock-first-scan</h3>
+        <p>
+          First location dimension 25; intended source match True. Center errors
+          in pixels: {&#x27;topLeft&#x27;: 0, &#x27;topRight&#x27;: 0,
+          &#x27;bottomLeft&#x27;: 0}. Passive/ordinary complete-return parity:
+          True.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Point</th>
+                <th>Selected center</th>
+                <th>Balance</th>
+                <th>Nominal span</th>
+                <th>Stable rows</th>
+                <th>Scored records / axes</th>
+                <th>Failing gates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>topLeft</th>
+                <td>{&#x27;x&#x27;: 90, &#x27;y&#x27;: 90}</td>
+                <td>1.000000</td>
+                <td>1.000000</td>
+                <td>36/36</td>
+                <td>1 / [4]</td>
+                <td>none</td>
+              </tr>
+              <tr>
+                <th>topRight</th>
+                <td>{&#x27;x&#x27;: 306, &#x27;y&#x27;: 90}</td>
+                <td>1.000000</td>
+                <td>1.000000</td>
+                <td>36/36</td>
+                <td>1 / [4]</td>
+                <td>none</td>
+              </tr>
+              <tr>
+                <th>bottomLeft</th>
+                <td>{&#x27;x&#x27;: 90, &#x27;y&#x27;: 306}</td>
+                <td>1.000000</td>
+                <td>1.000000</td>
+                <td>36/36</td>
+                <td>1 / [4]</td>
+                <td>none</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article>
+        <h3>rounded-one-third · normal-stock-first-scan</h3>
+        <p>
+          First location dimension 25; intended source match True. Center errors
+          in pixels: {&#x27;topLeft&#x27;: 0.25, &#x27;topRight&#x27;: 0.25,
+          &#x27;bottomLeft&#x27;: 0.25}. Passive/ordinary complete-return
+          parity: True.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Point</th>
+                <th>Selected center</th>
+                <th>Balance</th>
+                <th>Nominal span</th>
+                <th>Stable rows</th>
+                <th>Scored records / axes</th>
+                <th>Failing gates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>topLeft</th>
+                <td>{&#x27;x&#x27;: 90.25, &#x27;y&#x27;: 90}</td>
+                <td>0.777778</td>
+                <td>0.777778</td>
+                <td>35/36</td>
+                <td>1 / [4]</td>
+                <td>quad balance 0.777778; nominal span 0.777778</td>
+              </tr>
+              <tr>
+                <th>topRight</th>
+                <td>{&#x27;x&#x27;: 306.25, &#x27;y&#x27;: 90}</td>
+                <td>0.777778</td>
+                <td>0.777778</td>
+                <td>35/36</td>
+                <td>1 / [4]</td>
+                <td>quad balance 0.777778; nominal span 0.777778</td>
+              </tr>
+              <tr>
+                <th>bottomLeft</th>
+                <td>{&#x27;x&#x27;: 90.25, &#x27;y&#x27;: 306}</td>
+                <td>0.777778</td>
+                <td>0.777778</td>
+                <td>35/36</td>
+                <td>1 / [4]</td>
+                <td>quad balance 0.777778; nominal span 0.777778</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article>
+        <h3>rounded-two-thirds · normal-stock-first-scan</h3>
+        <p>
+          First location dimension 25; intended source match True. Center errors
+          in pixels: {&#x27;topLeft&#x27;: 0, &#x27;topRight&#x27;: 0,
+          &#x27;bottomLeft&#x27;: 0}. Passive/ordinary complete-return parity:
+          True.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Point</th>
+                <th>Selected center</th>
+                <th>Balance</th>
+                <th>Nominal span</th>
+                <th>Stable rows</th>
+                <th>Scored records / axes</th>
+                <th>Failing gates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>topLeft</th>
+                <td>{&#x27;x&#x27;: 90, &#x27;y&#x27;: 90}</td>
+                <td>0.500000</td>
+                <td>0.500000</td>
+                <td>29/36</td>
+                <td>1 / [4]</td>
+                <td>quad balance 0.500000; nominal span 0.500000</td>
+              </tr>
+              <tr>
+                <th>topRight</th>
+                <td>{&#x27;x&#x27;: 306, &#x27;y&#x27;: 90}</td>
+                <td>0.500000</td>
+                <td>0.500000</td>
+                <td>29/36</td>
+                <td>1 / [4]</td>
+                <td>quad balance 0.500000; nominal span 0.500000</td>
+              </tr>
+              <tr>
+                <th>bottomLeft</th>
+                <td>{&#x27;x&#x27;: 90, &#x27;y&#x27;: 306}</td>
+                <td>0.500000</td>
+                <td>0.500000</td>
+                <td>29/36</td>
+                <td>1 / [4]</td>
+                <td>quad balance 0.500000; nominal span 0.500000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article>
+        <h3>circle · normal-stock-first-scan</h3>
+        <p>
+          First location dimension 25; intended source match True. Center errors
+          in pixels: {&#x27;topLeft&#x27;: 0, &#x27;topRight&#x27;: 0,
+          &#x27;bottomLeft&#x27;: 0}. Passive/ordinary complete-return parity:
+          True.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Point</th>
+                <th>Selected center</th>
+                <th>Balance</th>
+                <th>Nominal span</th>
+                <th>Stable rows</th>
+                <th>Scored records / axes</th>
+                <th>Failing gates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>topLeft</th>
+                <td>{&#x27;x&#x27;: 90, &#x27;y&#x27;: 90}</td>
+                <td>0.222222</td>
+                <td>0.222222</td>
+                <td>22/36</td>
+                <td>1 / [4]</td>
+                <td>
+                  quad balance 0.222222; nominal span 0.222222; stable rows
+                  0.611111
+                </td>
+              </tr>
+              <tr>
+                <th>topRight</th>
+                <td>{&#x27;x&#x27;: 306, &#x27;y&#x27;: 90}</td>
+                <td>0.222222</td>
+                <td>0.222222</td>
+                <td>22/36</td>
+                <td>1 / [4]</td>
+                <td>
+                  quad balance 0.222222; nominal span 0.222222; stable rows
+                  0.611111
+                </td>
+              </tr>
+              <tr>
+                <th>bottomLeft</th>
+                <td>{&#x27;x&#x27;: 90, &#x27;y&#x27;: 306}</td>
+                <td>0.222222</td>
+                <td>0.222222</td>
+                <td>22/36</td>
+                <td>1 / [4]</td>
+                <td>
+                  quad balance 0.222222; nominal span 0.222222; stable rows
+                  0.611111
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <h2>What these observations establish</h2>
+      <p>
+        For these four frozen conventional controls at one scale and rasterizer,
+        the added shape gate rejects three images that default ZXing and jsQR
+        decode exactly. This limited discrepancy is already present at the
+        preregistered curvature 1/3. It does not estimate a false-negative rate,
+        establish standards conformance, isolate the mechanism of OpenCV’s empty
+        returns, or justify weakening the native gate.
+      </p>
+      <p>
+        <strong>Native prose remains unsolved.</strong> Conventional image
+        decoding, matrix/finder structure, copyable plain text, styled text,
+        native-app paste, phone scanning and physical print are separate
+        evidence lanes. This run adds evidence only to conventional image
+        decoding and passive finder geometry. It includes zero native prose
+        sources, native payload proposals, clipboard operations, native-app
+        tests, phone tests or print tests.
+      </p>
+      <h2>Custody, defaults and limits</h2>
+      <p>
+        All four SVG and HTML hashes and the executed harness hashes were frozen
+        before the first capture in
+        <a href="preregistration.json">preregistration</a> and
+        <a href="provenance.json">provenance</a>. Exact source aliases end in
+        .txt to preserve bytes through formatting. Full raw passive receipts are
+        gzip-compressed losslessly; their uncompressed hashes and paths are
+        retained in each summary. Ordinary raw stdout is retained as
+        .raw.json.txt. Identical repeats are represented by exact PNG and RGBA
+        hashes in capture.json; no duplicate PNG is needed. Encoder and license
+        notices are copied intact as text.
+      </p>
+      <p>
+        Ordinary reader calls used no options argument: OpenCV
+        QRCodeDetector().detectAndDecode(image), ZXing readBarcodes(imageData),
+        and jsQR(rgba,width,height). Passive instrumentation separately uses
+        attemptBoth, the jsQR default, and compares the <em>entire</em> return.
+        It never supplies the ordinary result. Installed versions: OpenCV
+        4.13.0; jsQR 1.4.0; zxing-wasm 3.1.5; Playwright 1.56.1; Node v26.10.0.
+        Full runtime paths, default ZXing settings and pinned WASM identifiers
+        are in the retained receipts.
+      </p>
+      <p>
+        Caps: four source captures plus one immediate repeat each; 12 ordinary
+        slots; one passive profile per treatment; 4,000,000 bytes across both
+        fresh trees, with parent reserve. No retries, transforms, tuning, rescue
+        profiles or extra source locations. The worker harness enforced a
+        3,800,000-byte write ceiling. The authorized clock began 19:04:44 UTC;
+        experimental work ran 2026-10-10T19:08:00.038Z through
+        2026-10-10T19:08:06.532Z, before the 19:24:44 cutoff. The worker
+        handback is due 19:26:44 and full-run close 19:29:44. The old Astra
+        clock was never reopened. The fresh Playwright-owned browser and
+        temporary profile were closed; owner profiles and running jobs were
+        untouched.
+      </p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Frozen source hashes</th>
+              <th>Saved input / repeat custody</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>square</th>
+              <td>
+                <a href="square/source.svg.txt">SVG bytes</a
+                ><code
+                  >21f5b89b8c92be0dd7b011ce762e5b3700d713ff8844eec9b632552feb5abdcd</code
+                ><a href="square/source.html.txt">HTML bytes</a
+                ><code
+                  >2610f58ef9909a36f37b6bc10672fa5286704ad010569556338b46f78db2107b</code
+                >
+              </td>
+              <td>
+                <code
+                  >b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9</code
+                >Repeat True; RGBA
+                <code
+                  >9245c108e9426f9fe02280f3401c27c3ac7d83c5b5379a0227c67d901bdaa839</code
+                >
+              </td>
+            </tr>
+            <tr>
+              <th>rounded-one-third</th>
+              <td>
+                <a href="rounded-one-third/source.svg.txt">SVG bytes</a
+                ><code
+                  >f4ea88295e5cd623db33e05666d87730579203e50e91341882d109478c6a3c78</code
+                ><a href="rounded-one-third/source.html.txt">HTML bytes</a
+                ><code
+                  >2b5d439678fe67508e1e501fa0f0c32f3ebf2c4cadf73b0303e340ac9e9955e1</code
+                >
+              </td>
+              <td>
+                <code
+                  >270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56</code
+                >Repeat True; RGBA
+                <code
+                  >373e6b312c937b8200996c28caaf325e02c1b32f53b197292aadb8bcebd70df6</code
+                >
+              </td>
+            </tr>
+            <tr>
+              <th>rounded-two-thirds</th>
+              <td>
+                <a href="rounded-two-thirds/source.svg.txt">SVG bytes</a
+                ><code
+                  >c22802965f923b088677d0c7e2aea230ebb222c1ebca70d8427cd5b50e88bdfb</code
+                ><a href="rounded-two-thirds/source.html.txt">HTML bytes</a
+                ><code
+                  >57b3d56727bfc02fbf976e56bf3b53a546ceaa0dd7214ebbc9de7dc51a777393</code
+                >
+              </td>
+              <td>
+                <code
+                  >d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1</code
+                >Repeat True; RGBA
+                <code
+                  >869219584de822c84b0ab39555e0c144c7874908baf50ebc309ec2a56592a36b</code
+                >
+              </td>
+            </tr>
+            <tr>
+              <th>circle</th>
+              <td>
+                <a href="circle/source.svg.txt">SVG bytes</a
+                ><code
+                  >b9165d627bbc1f8fbaedbb36f13f5944e4bd90879d333b4bf4c52ab66c0f031b</code
+                ><a href="circle/source.html.txt">HTML bytes</a
+                ><code
+                  >e6bad43f459d46933654c71f2e156b768efb34dcd37a2c25baedda117c2d9392</code
+                >
+              </td>
+              <td>
+                <code
+                  >cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5</code
+                >Repeat True; RGBA
+                <code
+                  >60648cf776cbb49640d2087dcbd9f2592e25f5252eb7a4db3caa7a5a89d704f6</code
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Validation and reproducibility boundary</h2>
+      <p>
+        Read-only reconciliation checks frozen/executed hashes, source module
+        omission and radius definitions, PNG/RGBA custody, exact repeats, all 12
+        slot/result links, default call syntax, passive return parity,
+        first-location summaries, every-record gate arithmetic, metric RMS
+        arithmetic, source/archive mapping, byte budget and embedded-image
+        identity without rerunning a reader.
+        <a href="final-verification.json">Final verification</a> records exact
+        artifact bytes, hashes, checks and worker timing at seal.
+        <a href="worker-receipt.json">Worker receipt</a> records scope and
+        cleanup.
+      </p>
+      <p>
+        Harness syntax checks and repository npm run format:check are required;
+        their saved outcomes are in the final verification. Product
+        unit/build/browser/text-browser suites were skipped as irrelevant to
+        these additive research artifacts; product/download outputs were
+        preserved. Optional installed-extension/native-text checks were not run
+        and provide no evidence here. No check was declared unavailable. Direct
+        visual inspection used only the four already-retained PNGs; no
+        additional capture was taken.
+      </p>
+      <h2>One next-step proposal only</h2>
+      <p>
+        Request an owner-selected source-layout redesign study that reports
+        detector geometry separately from the fixed native eligibility gate;
+        keep thresholds unchanged and authorize no native payload/phone work
+        through this panel. This is a proposal for Ryan’s separate decision, not
+        a dispatched experiment or gate change.
+      </p>
+      <p>
+        <a href="README.md">README</a> ·
+        <a href="comparison.json">Complete comparison JSON</a> ·
+        <a href="ledger.json">12-slot ledger</a> ·
+        <a href="events.json">Event timing</a> ·
+        <a href="run-results.json">Run receipt</a>
+      </p>
+      <script type="application/json" id="comparison-data">
+        {
+          "generatedAtUtc": "2026-10-10T19:09:39.154062+00:00",
+          "classification": "Complete finite conventional-image comparison; native prose remains unsolved",
+          "endpointComparability": true,
+          "stop": null,
+          "counts": {
+            "captures": 4,
+            "immediateRepeats": 4,
+            "ordinaryAttempted": 12,
+            "ordinaryCompleted": 12,
+            "ordinaryUnattempted": 0,
+            "exactRecoveries": 9,
+            "passiveProfiles": 4,
+            "actualStockBranches": 4
+          },
+          "rows": [
+            {
+              "id": "square",
+              "curvature": 0,
+              "source": {
+                "id": "square",
+                "curvature": 0,
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/square",
+                "svgPath": "docs/research/prose-qr/control-panel-2026-10-10/square/source.svg.txt",
+                "htmlPath": "docs/research/prose-qr/control-panel-2026-10-10/square/source.html.txt",
+                "svgSha256": "21f5b89b8c92be0dd7b011ce762e5b3700d713ff8844eec9b632552feb5abdcd",
+                "htmlSha256": "2610f58ef9909a36f37b6bc10672fa5286704ad010569556338b46f78db2107b",
+                "nonFinderModulesSha256": "0cc984059c087ab43fbefe94028fff1debf9893af1ffe6793b2968a76749e01c",
+                "nestedRadiiModules": [0, 0, 0]
+              },
+              "capture": {
+                "id": "square",
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/square",
+                "sourceHtmlSha256": "2610f58ef9909a36f37b6bc10672fa5286704ad010569556338b46f78db2107b",
+                "sourceSvgSha256": "21f5b89b8c92be0dd7b011ce762e5b3700d713ff8844eec9b632552feb5abdcd",
+                "payload": "https://example.com/",
+                "geometry": {
+                  "unit": 12,
+                  "dimension": 25,
+                  "counters": [
+                    { "x": 90, "y": 90 },
+                    { "x": 306, "y": 90 },
+                    { "x": 90, "y": 306 }
+                  ]
+                },
+                "startedAtUtc": "2026-10-10T19:08:01.294Z",
+                "pngPath": "docs/research/prose-qr/control-panel-2026-10-10/square/input.png",
+                "pngSha256": "b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9",
+                "repeatSha256": "b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9",
+                "repeatExact": true,
+                "repeatRepresentation": "Byte-identical PNG; exact repeat hash receipt, no redundant PNG file",
+                "rgbaSha256": "9245c108e9426f9fe02280f3401c27c3ac7d83c5b5379a0227c67d901bdaa839",
+                "repeatRgbaSha256": "9245c108e9426f9fe02280f3401c27c3ac7d83c5b5379a0227c67d901bdaa839",
+                "width": 396,
+                "height": 396,
+                "sourceVerifiedAfterCapture": true,
+                "completedAtUtc": "2026-10-10T19:08:01.515Z"
+              },
+              "readers": [
+                {
+                  "id": "square",
+                  "engine": "opencv",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:01.516Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/square/opencv.raw.json.txt",
+                  "rawSha256": "5869eb2142dcfa33504f9c237ebfc446ab228d39e949632f833587592182d9c7",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9",
+                  "completedAtUtc": "2026-10-10T19:08:01.656Z"
+                },
+                {
+                  "id": "square",
+                  "engine": "zxing",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:01.657Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/square/zxing.raw.json.txt",
+                  "rawSha256": "dd0312466a7979749954f6100f92cc2dba05d5878381fc943ca4aa033d80444b",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9",
+                  "rgbaSha256": "9245c108e9426f9fe02280f3401c27c3ac7d83c5b5379a0227c67d901bdaa839",
+                  "completedAtUtc": "2026-10-10T19:08:02.161Z"
+                },
+                {
+                  "id": "square",
+                  "engine": "jsqr",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:02.161Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/square/jsqr.raw.json.txt",
+                  "rawSha256": "67dbf5ecbd878b905ab3814dd32a502c65f90fac466704f0d37d280d58aaae6d",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9",
+                  "rgbaSha256": "9245c108e9426f9fe02280f3401c27c3ac7d83c5b5379a0227c67d901bdaa839",
+                  "completedAtUtc": "2026-10-10T19:08:02.373Z"
+                }
+              ],
+              "passiveParity": true,
+              "branches": [
+                {
+                  "branch": "normal-stock-first-scan",
+                  "firstLocation": {
+                    "alignmentPattern": { "x": 270, "y": 270 },
+                    "bottomLeft": { "x": 90, "y": 306 },
+                    "dimension": 25,
+                    "topLeft": { "x": 90, "y": 90 },
+                    "topRight": { "x": 306, "y": 90 }
+                  },
+                  "firstIntendedGeometry": {
+                    "location": {
+                      "alignmentPattern": { "x": 270, "y": 270 },
+                      "bottomLeft": { "x": 90, "y": 306 },
+                      "dimension": 25,
+                      "topLeft": { "x": 90, "y": 90 },
+                      "topRight": { "x": 306, "y": 90 }
+                    },
+                    "dimensionMatches": true,
+                    "pointDeltas": {
+                      "topLeft": 0,
+                      "topRight": 0,
+                      "bottomLeft": 0
+                    },
+                    "intendedGeometry": true
+                  },
+                  "strictPass": true,
+                  "points": [
+                    {
+                      "point": "topLeft",
+                      "location": { "x": 90, "y": 90 },
+                      "balance": 1,
+                      "nominalSpan": 1,
+                      "stableRows": {
+                        "stable": 36,
+                        "total": 36,
+                        "fraction": 1,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.0069494166739098254],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.024096385542168794,
+                      "failures": []
+                    },
+                    {
+                      "point": "topRight",
+                      "location": { "x": 306, "y": 90 },
+                      "balance": 1,
+                      "nominalSpan": 1,
+                      "stableRows": {
+                        "stable": 36,
+                        "total": 36,
+                        "fraction": 1,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.01015416637941999],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.024096385542168794,
+                      "failures": []
+                    },
+                    {
+                      "point": "bottomLeft",
+                      "location": { "x": 90, "y": 306 },
+                      "balance": 1,
+                      "nominalSpan": 1,
+                      "stableRows": {
+                        "stable": 36,
+                        "total": 36,
+                        "fraction": 1,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.01015416637941999],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.024096385542168794,
+                      "failures": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "rounded-one-third",
+              "curvature": 0.3333333333333333,
+              "source": {
+                "id": "rounded-one-third",
+                "curvature": 0.3333333333333333,
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third",
+                "svgPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/source.svg.txt",
+                "htmlPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/source.html.txt",
+                "svgSha256": "f4ea88295e5cd623db33e05666d87730579203e50e91341882d109478c6a3c78",
+                "htmlSha256": "2b5d439678fe67508e1e501fa0f0c32f3ebf2c4cadf73b0303e340ac9e9955e1",
+                "nonFinderModulesSha256": "0cc984059c087ab43fbefe94028fff1debf9893af1ffe6793b2968a76749e01c",
+                "nestedRadiiModules": [
+                  1.1666666666666665, 0.8333333333333333, 0.5
+                ]
+              },
+              "capture": {
+                "id": "rounded-one-third",
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third",
+                "sourceHtmlSha256": "2b5d439678fe67508e1e501fa0f0c32f3ebf2c4cadf73b0303e340ac9e9955e1",
+                "sourceSvgSha256": "f4ea88295e5cd623db33e05666d87730579203e50e91341882d109478c6a3c78",
+                "payload": "https://example.com/",
+                "geometry": {
+                  "unit": 12,
+                  "dimension": 25,
+                  "counters": [
+                    { "x": 90, "y": 90 },
+                    { "x": 306, "y": 90 },
+                    { "x": 90, "y": 306 }
+                  ]
+                },
+                "startedAtUtc": "2026-10-10T19:08:03.807Z",
+                "pngPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/input.png",
+                "pngSha256": "270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56",
+                "repeatSha256": "270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56",
+                "repeatExact": true,
+                "repeatRepresentation": "Byte-identical PNG; exact repeat hash receipt, no redundant PNG file",
+                "rgbaSha256": "373e6b312c937b8200996c28caaf325e02c1b32f53b197292aadb8bcebd70df6",
+                "repeatRgbaSha256": "373e6b312c937b8200996c28caaf325e02c1b32f53b197292aadb8bcebd70df6",
+                "width": 396,
+                "height": 396,
+                "sourceVerifiedAfterCapture": true,
+                "completedAtUtc": "2026-10-10T19:08:04.022Z"
+              },
+              "readers": [
+                {
+                  "id": "rounded-one-third",
+                  "engine": "opencv",
+                  "status": "completed",
+                  "texts": [],
+                  "startedAtUtc": "2026-10-10T19:08:04.023Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/opencv.raw.json.txt",
+                  "rawSha256": "849dd81cf6663bb4331bfaeb30a85d5d62c3aa7e2ff1fa1ebe3610df86a86461",
+                  "exactExpected": false,
+                  "unexpectedText": [],
+                  "pngSha256": "270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56",
+                  "completedAtUtc": "2026-10-10T19:08:04.154Z"
+                },
+                {
+                  "id": "rounded-one-third",
+                  "engine": "zxing",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:04.155Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/zxing.raw.json.txt",
+                  "rawSha256": "82d0cc7d7196578b5dd4d7a1e83fb938c65628a578b769d5644fdb24d3f9c94d",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56",
+                  "rgbaSha256": "373e6b312c937b8200996c28caaf325e02c1b32f53b197292aadb8bcebd70df6",
+                  "completedAtUtc": "2026-10-10T19:08:04.650Z"
+                },
+                {
+                  "id": "rounded-one-third",
+                  "engine": "jsqr",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:04.650Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/jsqr.raw.json.txt",
+                  "rawSha256": "4890532a6f681d9241f8fef5c53d766b136f52af03fd40dfa1fe2088f61fb972",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56",
+                  "rgbaSha256": "373e6b312c937b8200996c28caaf325e02c1b32f53b197292aadb8bcebd70df6",
+                  "completedAtUtc": "2026-10-10T19:08:04.856Z"
+                }
+              ],
+              "passiveParity": true,
+              "branches": [
+                {
+                  "branch": "normal-stock-first-scan",
+                  "firstLocation": {
+                    "alignmentPattern": { "x": 270, "y": 270 },
+                    "bottomLeft": { "x": 90.25, "y": 306 },
+                    "dimension": 25,
+                    "topLeft": { "x": 90.25, "y": 90 },
+                    "topRight": { "x": 306.25, "y": 90 }
+                  },
+                  "firstIntendedGeometry": {
+                    "location": {
+                      "alignmentPattern": { "x": 270, "y": 270 },
+                      "bottomLeft": { "x": 90.25, "y": 306 },
+                      "dimension": 25,
+                      "topLeft": { "x": 90.25, "y": 90 },
+                      "topRight": { "x": 306.25, "y": 90 }
+                    },
+                    "dimensionMatches": true,
+                    "pointDeltas": {
+                      "topLeft": 0.25,
+                      "topRight": 0.25,
+                      "bottomLeft": 0.25
+                    },
+                    "intendedGeometry": true
+                  },
+                  "strictPass": false,
+                  "points": [
+                    {
+                      "point": "topLeft",
+                      "location": { "x": 90.25, "y": 90 },
+                      "balance": 0.7777777777777778,
+                      "nominalSpan": 0.7777777777777778,
+                      "stableRows": {
+                        "stable": 35,
+                        "total": 36,
+                        "fraction": 0.9722222222222222,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.01853663562498582],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.05781195570314347,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.7777777777777778,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.7777777777777778,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "point": "topRight",
+                      "location": { "x": 306.25, "y": 90 },
+                      "balance": 0.7777777777777778,
+                      "nominalSpan": 0.7777777777777778,
+                      "stableRows": {
+                        "stable": 35,
+                        "total": 36,
+                        "fraction": 0.9722222222222222,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.01853663562498582],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.05781195570314347,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.7777777777777778,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.7777777777777778,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "point": "bottomLeft",
+                      "location": { "x": 90.25, "y": 306 },
+                      "balance": 0.7777777777777778,
+                      "nominalSpan": 0.7777777777777778,
+                      "stableRows": {
+                        "stable": 35,
+                        "total": 36,
+                        "fraction": 0.9722222222222222,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.01853663562498582],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.05781195570314347,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.7777777777777778,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.7777777777777778,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "rounded-two-thirds",
+              "curvature": 0.6666666666666666,
+              "source": {
+                "id": "rounded-two-thirds",
+                "curvature": 0.6666666666666666,
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds",
+                "svgPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/source.svg.txt",
+                "htmlPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/source.html.txt",
+                "svgSha256": "c22802965f923b088677d0c7e2aea230ebb222c1ebca70d8427cd5b50e88bdfb",
+                "htmlSha256": "57b3d56727bfc02fbf976e56bf3b53a546ceaa0dd7214ebbc9de7dc51a777393",
+                "nonFinderModulesSha256": "0cc984059c087ab43fbefe94028fff1debf9893af1ffe6793b2968a76749e01c",
+                "nestedRadiiModules": [2.333333333333333, 1.6666666666666665, 1]
+              },
+              "capture": {
+                "id": "rounded-two-thirds",
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds",
+                "sourceHtmlSha256": "57b3d56727bfc02fbf976e56bf3b53a546ceaa0dd7214ebbc9de7dc51a777393",
+                "sourceSvgSha256": "c22802965f923b088677d0c7e2aea230ebb222c1ebca70d8427cd5b50e88bdfb",
+                "payload": "https://example.com/",
+                "geometry": {
+                  "unit": 12,
+                  "dimension": 25,
+                  "counters": [
+                    { "x": 90, "y": 90 },
+                    { "x": 306, "y": 90 },
+                    { "x": 90, "y": 306 }
+                  ]
+                },
+                "startedAtUtc": "2026-10-10T19:08:05.092Z",
+                "pngPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/input.png",
+                "pngSha256": "d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1",
+                "repeatSha256": "d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1",
+                "repeatExact": true,
+                "repeatRepresentation": "Byte-identical PNG; exact repeat hash receipt, no redundant PNG file",
+                "rgbaSha256": "869219584de822c84b0ab39555e0c144c7874908baf50ebc309ec2a56592a36b",
+                "repeatRgbaSha256": "869219584de822c84b0ab39555e0c144c7874908baf50ebc309ec2a56592a36b",
+                "width": 396,
+                "height": 396,
+                "sourceVerifiedAfterCapture": true,
+                "completedAtUtc": "2026-10-10T19:08:05.282Z"
+              },
+              "readers": [
+                {
+                  "id": "rounded-two-thirds",
+                  "engine": "opencv",
+                  "status": "completed",
+                  "texts": [],
+                  "startedAtUtc": "2026-10-10T19:08:05.283Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/opencv.raw.json.txt",
+                  "rawSha256": "b3cd06dfc16b836198d5e4140b0f3cfd99d9a5c8c52b67b56d909f93b7b2445e",
+                  "exactExpected": false,
+                  "unexpectedText": [],
+                  "pngSha256": "d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1",
+                  "completedAtUtc": "2026-10-10T19:08:05.393Z"
+                },
+                {
+                  "id": "rounded-two-thirds",
+                  "engine": "zxing",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:05.394Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/zxing.raw.json.txt",
+                  "rawSha256": "b6275624d46832640f82823c559737d582fe8131c32bd0b90a319c303c56f976",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1",
+                  "rgbaSha256": "869219584de822c84b0ab39555e0c144c7874908baf50ebc309ec2a56592a36b",
+                  "completedAtUtc": "2026-10-10T19:08:05.793Z"
+                },
+                {
+                  "id": "rounded-two-thirds",
+                  "engine": "jsqr",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:05.793Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/jsqr.raw.json.txt",
+                  "rawSha256": "a45fc48d848b18f0de766831917e4bfe540617f1310fc1aa8e57e24beaedfd38",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1",
+                  "rgbaSha256": "869219584de822c84b0ab39555e0c144c7874908baf50ebc309ec2a56592a36b",
+                  "completedAtUtc": "2026-10-10T19:08:06.003Z"
+                }
+              ],
+              "passiveParity": true,
+              "branches": [
+                {
+                  "branch": "normal-stock-first-scan",
+                  "firstLocation": {
+                    "alignmentPattern": { "x": 270, "y": 270 },
+                    "bottomLeft": { "x": 90, "y": 306 },
+                    "dimension": 25,
+                    "topLeft": { "x": 90, "y": 90 },
+                    "topRight": { "x": 306, "y": 90 }
+                  },
+                  "firstIntendedGeometry": {
+                    "location": {
+                      "alignmentPattern": { "x": 270, "y": 270 },
+                      "bottomLeft": { "x": 90, "y": 306 },
+                      "dimension": 25,
+                      "topLeft": { "x": 90, "y": 90 },
+                      "topRight": { "x": 306, "y": 90 }
+                    },
+                    "dimensionMatches": true,
+                    "pointDeltas": {
+                      "topLeft": 0,
+                      "topRight": 0,
+                      "bottomLeft": 0
+                    },
+                    "intendedGeometry": true
+                  },
+                  "strictPass": false,
+                  "points": [
+                    {
+                      "point": "topLeft",
+                      "location": { "x": 90, "y": 90 },
+                      "balance": 0.5,
+                      "nominalSpan": 0.5,
+                      "stableRows": {
+                        "stable": 29,
+                        "total": 36,
+                        "fraction": 0.8055555555555556,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.039717826213689446],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.049049781269119304,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.5,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.5,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "point": "topRight",
+                      "location": { "x": 306, "y": 90 },
+                      "balance": 0.5,
+                      "nominalSpan": 0.5,
+                      "stableRows": {
+                        "stable": 29,
+                        "total": 36,
+                        "fraction": 0.8055555555555556,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.039717826213689446],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.049049781269119304,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.5,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.5,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "point": "bottomLeft",
+                      "location": { "x": 90, "y": 306 },
+                      "balance": 0.5,
+                      "nominalSpan": 0.5,
+                      "stableRows": {
+                        "stable": 29,
+                        "total": 36,
+                        "fraction": 0.8055555555555556,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.039717826213689446],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.049049781269119304,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.5,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.5,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "circle",
+              "curvature": 1,
+              "source": {
+                "id": "circle",
+                "curvature": 1,
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/circle",
+                "svgPath": "docs/research/prose-qr/control-panel-2026-10-10/circle/source.svg.txt",
+                "htmlPath": "docs/research/prose-qr/control-panel-2026-10-10/circle/source.html.txt",
+                "svgSha256": "b9165d627bbc1f8fbaedbb36f13f5944e4bd90879d333b4bf4c52ab66c0f031b",
+                "htmlSha256": "e6bad43f459d46933654c71f2e156b768efb34dcd37a2c25baedda117c2d9392",
+                "nonFinderModulesSha256": "0cc984059c087ab43fbefe94028fff1debf9893af1ffe6793b2968a76749e01c",
+                "nestedRadiiModules": [3.5, 2.5, 1.5]
+              },
+              "capture": {
+                "id": "circle",
+                "dir": "docs/research/prose-qr/control-panel-2026-10-10/circle",
+                "sourceHtmlSha256": "e6bad43f459d46933654c71f2e156b768efb34dcd37a2c25baedda117c2d9392",
+                "sourceSvgSha256": "b9165d627bbc1f8fbaedbb36f13f5944e4bd90879d333b4bf4c52ab66c0f031b",
+                "payload": "https://example.com/",
+                "geometry": {
+                  "unit": 12,
+                  "dimension": 25,
+                  "counters": [
+                    { "x": 90, "y": 90 },
+                    { "x": 306, "y": 90 },
+                    { "x": 90, "y": 306 }
+                  ]
+                },
+                "startedAtUtc": "2026-10-10T19:08:02.605Z",
+                "pngPath": "docs/research/prose-qr/control-panel-2026-10-10/circle/input.png",
+                "pngSha256": "cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5",
+                "repeatSha256": "cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5",
+                "repeatExact": true,
+                "repeatRepresentation": "Byte-identical PNG; exact repeat hash receipt, no redundant PNG file",
+                "rgbaSha256": "60648cf776cbb49640d2087dcbd9f2592e25f5252eb7a4db3caa7a5a89d704f6",
+                "repeatRgbaSha256": "60648cf776cbb49640d2087dcbd9f2592e25f5252eb7a4db3caa7a5a89d704f6",
+                "width": 396,
+                "height": 396,
+                "sourceVerifiedAfterCapture": true,
+                "completedAtUtc": "2026-10-10T19:08:02.766Z"
+              },
+              "readers": [
+                {
+                  "id": "circle",
+                  "engine": "opencv",
+                  "status": "completed",
+                  "texts": [],
+                  "startedAtUtc": "2026-10-10T19:08:02.767Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/circle/opencv.raw.json.txt",
+                  "rawSha256": "f92a9489faa40132c35df0926552d3a777406fc1e3f10fe113e91558af9b4821",
+                  "exactExpected": false,
+                  "unexpectedText": [],
+                  "pngSha256": "cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5",
+                  "completedAtUtc": "2026-10-10T19:08:02.940Z"
+                },
+                {
+                  "id": "circle",
+                  "engine": "zxing",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:02.942Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/circle/zxing.raw.json.txt",
+                  "rawSha256": "c35fb4d1b27b03792e92c6632d4e3874e6b11ca03d598b276aaa65ebbc4a7d76",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5",
+                  "rgbaSha256": "60648cf776cbb49640d2087dcbd9f2592e25f5252eb7a4db3caa7a5a89d704f6",
+                  "completedAtUtc": "2026-10-10T19:08:03.364Z"
+                },
+                {
+                  "id": "circle",
+                  "engine": "jsqr",
+                  "status": "completed",
+                  "texts": ["https://example.com/"],
+                  "startedAtUtc": "2026-10-10T19:08:03.365Z",
+                  "rawPath": "docs/research/prose-qr/control-panel-2026-10-10/circle/jsqr.raw.json.txt",
+                  "rawSha256": "ea57fdb5335365178ad96384689f355bc0039c5712791704e7c3fc777f98aa31",
+                  "exactExpected": true,
+                  "unexpectedText": [],
+                  "pngSha256": "cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5",
+                  "rgbaSha256": "60648cf776cbb49640d2087dcbd9f2592e25f5252eb7a4db3caa7a5a89d704f6",
+                  "completedAtUtc": "2026-10-10T19:08:03.571Z"
+                }
+              ],
+              "passiveParity": true,
+              "branches": [
+                {
+                  "branch": "normal-stock-first-scan",
+                  "firstLocation": {
+                    "alignmentPattern": { "x": 270, "y": 270 },
+                    "bottomLeft": { "x": 90, "y": 306 },
+                    "dimension": 25,
+                    "topLeft": { "x": 90, "y": 90 },
+                    "topRight": { "x": 306, "y": 90 }
+                  },
+                  "firstIntendedGeometry": {
+                    "location": {
+                      "alignmentPattern": { "x": 270, "y": 270 },
+                      "bottomLeft": { "x": 90, "y": 306 },
+                      "dimension": 25,
+                      "topLeft": { "x": 90, "y": 90 },
+                      "topRight": { "x": 306, "y": 90 }
+                    },
+                    "dimensionMatches": true,
+                    "pointDeltas": {
+                      "topLeft": 0,
+                      "topRight": 0,
+                      "bottomLeft": 0
+                    },
+                    "intendedGeometry": true
+                  },
+                  "strictPass": false,
+                  "points": [
+                    {
+                      "point": "topLeft",
+                      "location": { "x": 90, "y": 90 },
+                      "balance": 0.2222222222222222,
+                      "nominalSpan": 0.2222222222222222,
+                      "stableRows": {
+                        "stable": 22,
+                        "total": 36,
+                        "fraction": 0.6111111111111112,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.05820310075367695],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.055700599068321976,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.2222222222222222,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.2222222222222222,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "stable rows",
+                          "value": 0.6111111111111112,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "point": "topRight",
+                      "location": { "x": 306, "y": 90 },
+                      "balance": 0.2222222222222222,
+                      "nominalSpan": 0.2222222222222222,
+                      "stableRows": {
+                        "stable": 22,
+                        "total": 36,
+                        "fraction": 0.6111111111111112,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.05820310075367695],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.055700599068321976,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.2222222222222222,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.2222222222222222,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "stable rows",
+                          "value": 0.6111111111111112,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "point": "bottomLeft",
+                      "location": { "x": 90, "y": 306 },
+                      "balance": 0.2222222222222222,
+                      "nominalSpan": 0.2222222222222222,
+                      "stableRows": {
+                        "stable": 22,
+                        "total": 36,
+                        "fraction": 0.6111111111111112,
+                        "classification": "Actual selected point, source nominal span used only for post-return diagnostic denominator"
+                      },
+                      "scoredRecords": 1,
+                      "scoredCompleteAxes": [4],
+                      "scoredWorstRMS": [0.05820310075367695],
+                      "trueCompleteAxes": 4,
+                      "trueWorstRMS": 0.055700599068321976,
+                      "failures": [
+                        {
+                          "metric": "quad balance",
+                          "value": 0.2222222222222222,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "nominal span",
+                          "value": 0.2222222222222222,
+                          "requiredMinimum": 0.8
+                        },
+                        {
+                          "metric": "stable rows",
+                          "value": 0.6111111111111112,
+                          "requiredMinimum": 0.8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "runtime": {
+            "node": "v26.10.0",
+            "executable": "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+            "versions": {
+              "playwright": "1.56.1",
+              "jsqr": "1.4.0",
+              "zxing-wasm": "3.1.5",
+              "prettier": "3.8.1"
+            },
+            "python": {
+              "python": "3.12.1 (v3.12.1:2305ca5144, Dec  7 2023, 17:23:38) [Clang 13.0.0 (clang-1300.0.29.30)]",
+              "executable": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+              "opencv": "4.13.0",
+              "module": "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/cv2/__init__.py"
+            },
+            "browserExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+            "browserProfile": "Playwright-created fresh ephemeral user-data-dir; no existing profile opened"
+          },
+          "oneNextStepProposal": "Request an owner-selected source-layout redesign study that reports detector geometry separately from the fixed native eligibility gate; keep thresholds unchanged and authorize no native payload/phone work through this panel."
+        }
+      </script>
+    </main>
+  </body>
+</html>
