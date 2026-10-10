@@ -1,0 +1,576 @@
+{
+  "at": "post-probe, no acceptance input changes",
+  "classification": "Expected coordinates used only for post-render source fidelity diagnostics, never supplied to a reader or used to repair pixels",
+  "regions": [
+    {
+      "x": 840,
+      "y": 840,
+      "width": 1176,
+      "height": 1176
+    },
+    {
+      "x": 3864,
+      "y": 840,
+      "width": 1176,
+      "height": 1176
+    },
+    {
+      "x": 840,
+      "y": 3864,
+      "width": 1176,
+      "height": 1176
+    }
+  ],
+  "plannedInputs": 4,
+  "results": [
+    {
+      "id": "reference",
+      "input": "docs/research/prose-qr/phase-27/run-02/native.png",
+      "pngSha256": "2a8b830ab32db116bdce49ef9238a221f249673e93a67e5139c4f4afda960eb0",
+      "sourceFinderRegionsBGRASha256": [
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c"
+      ],
+      "regionsExactToReference": true,
+      "ordinaryReturnedSymbols": [
+        {
+          "position": {
+            "topLeft": {
+              "x": 837,
+              "y": 864
+            },
+            "topRight": {
+              "x": 5049,
+              "y": 864
+            },
+            "bottomRight": {
+              "x": 5049,
+              "y": 5049
+            },
+            "bottomLeft": {
+              "x": 837,
+              "y": 5049
+            }
+          },
+          "finderWrongCells": [[], [], []],
+          "audit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "mixed",
+      "input": "docs/research/prose-qr/phase-29/run-01/native.png",
+      "pngSha256": "407029b01f1fd21372559acd5f1d95207dc0e2107f9b0b8527526ef060f44d96",
+      "sourceFinderRegionsBGRASha256": [
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c"
+      ],
+      "regionsExactToReference": true,
+      "ordinaryReturnedSymbols": [
+        {
+          "position": {
+            "topLeft": {
+              "x": 810,
+              "y": 837
+            },
+            "topRight": {
+              "x": 5076,
+              "y": 837
+            },
+            "bottomRight": {
+              "x": 5076,
+              "y": 5049
+            },
+            "bottomLeft": {
+              "x": 810,
+              "y": 5049
+            }
+          },
+          "finderWrongCells": [
+            [],
+            [],
+            [
+              [2, 20],
+              [2, 21],
+              [2, 22]
+            ]
+          ],
+          "audit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 3,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  }
+                ],
+                "complete": false
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "ill",
+      "input": "docs/research/prose-qr/phase-30/run-01/native.png",
+      "pngSha256": "ca91fe333155640b92490b892384ef58e2830ec1340f2279efca206ac95e5dd7",
+      "sourceFinderRegionsBGRASha256": [
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c"
+      ],
+      "regionsExactToReference": true,
+      "ordinaryReturnedSymbols": [
+        {
+          "position": {
+            "topLeft": {
+              "x": 810,
+              "y": 837
+            },
+            "topRight": {
+              "x": 5076,
+              "y": 837
+            },
+            "bottomRight": {
+              "x": 5076,
+              "y": 5049
+            },
+            "bottomLeft": {
+              "x": 810,
+              "y": 5049
+            }
+          },
+          "finderWrongCells": [
+            [],
+            [],
+            [
+              [2, 20],
+              [2, 21],
+              [2, 22]
+            ]
+          ],
+          "audit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 3,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  }
+                ],
+                "complete": false
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "it",
+      "input": "docs/research/prose-qr/phase-30/run-02/native.png",
+      "pngSha256": "ecc69e8c3e2c229bf3b2e4dca5f61e95fd68e52af2701fac8983331e0aba9908",
+      "sourceFinderRegionsBGRASha256": [
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c",
+        "877489422df25a2a4cc91f8de9d32c52aebb674f905d21eb7baa5bd91c56de4c"
+      ],
+      "regionsExactToReference": true,
+      "ordinaryReturnedSymbols": [
+        {
+          "position": {
+            "topLeft": {
+              "x": 810,
+              "y": 837
+            },
+            "topRight": {
+              "x": 5076,
+              "y": 837
+            },
+            "bottomRight": {
+              "x": 5076,
+              "y": 5049
+            },
+            "bottomLeft": {
+              "x": 810,
+              "y": 5049
+            }
+          },
+          "finderWrongCells": [
+            [],
+            [],
+            [
+              [2, 20],
+              [2, 21],
+              [2, 22]
+            ]
+          ],
+          "audit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 3,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 0, 1, 1, 0, 1],
+                    "exact": false
+                  }
+                ],
+                "complete": false
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": false
+          }
+        }
+      ]
+    }
+  ],
+  "sourceSha256": "aba1063ab4b07e6292fc5c46225fa47717f2c09e50e426a4de7a74158bb4bc2c"
+}

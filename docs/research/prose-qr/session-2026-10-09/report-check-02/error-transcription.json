@@ -1,0 +1,8 @@
+{
+  "kind": "Observed report UI checker error, manually transcribed after unhandled promise exit",
+  "executedSourceSha256": "a623c2516a0d09790d42d5e55c5ef8f093116e9fe86b510c4cc0c33f149181ba",
+  "error": "page.waitForEvent: Timeout 30000ms exceeded while waiting for event download",
+  "cause": "Checker tried source download buttons inside a closed details element; wait promise rejected before awaited click timeout",
+  "nativeEvidenceChanged": false,
+  "preserved": "Screenshots and exact checkpoint download remain; this is not a passing report check"
+}
