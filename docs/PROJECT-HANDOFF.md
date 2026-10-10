@@ -1,96 +1,82 @@
 # Aqrobat project handoff — October 10, 2026
 
-Ryan has now explicitly chosen a **new local Codex project and fresh chat** for
-Aqrobat, using the existing folder `/Users/noir/Documents/aqrobat`. This
-supersedes older notes that deferred the project move or required staying in
-the previous chat. No files, repository, branch, or Git history need to move.
-The user will create the project/chat; this handoff has not launched one.
+The bounded Astra prose QR run has reached an **incomplete scientific checkpoint**.
+The prose goal remains unsolved. Read the
+[complete self-contained illustrated handback](research/prose-qr/astra-2026-10-10/index.html),
+[run README](research/prose-qr/astra-2026-10-10/README.md),
+[checkpoint](research/prose-qr/astra-2026-10-10/CHECKPOINT.md), and final
+verification/custody/backup receipts in that directory before continuing.
 
-The active next task is a maximum-three-hour **prose QR research run with
-GPT-6 Astra at Xhigh effort**. Start with
-[the current bootstrap](bootstrap/astra-2026-10-10/README.md),
-[the execution prompt](bootstrap/astra-2026-10-10/RUN-PROMPT.md), or
-[the phone-friendly setup guide](bootstrap/astra-2026-10-10/index.html).
-The timer begins when that new chat executes the run, not during this handoff.
+## Workspace and Git boundaries
 
-## Exact workspace and Git boundaries
+- Existing independent repository: `/Users/noir/Documents/aqrobat`.
+- Remote: <https://github.com/ryanjosephkamp/aqrobat>.
+- Branch: `codex/aqrobat-foundation`; continue it unless Ryan selects otherwise.
+- Existing PR: <https://github.com/ryanjosephkamp/aqrobat/pull/1>, keep OPEN/draft.
+- Run anchor: `3cd8aa07dc946a7c746440a37c98e8b5747f0089`.
+- First pushed research milestone: `638f917f3491eacbe50d5a9d7e09636f68a3711c`.
+  Verify current local/remote HEAD and dirty state; do not reset to either hash.
+- npm package0.4.2 remains private and unpublished. No merge, release, store,
+  package publication, new host, migration, or deployment/sharing changes.
+- Preserve product, extension, downloads, pinned encoder/license, prototypes,
+  earlier research/errors, owner profiles, other repositories, chats and jobs.
+  No additional chats/agents, model changes, goals, automations or messages.
 
-- Directory: `/Users/noir/Documents/aqrobat` — already an independent Git repository.
-- Remote: <https://github.com/ryanjosephkamp/aqrobat>
-- Branch: `codex/aqrobat-foundation`
-- Existing PR: <https://github.com/ryanjosephkamp/aqrobat/pull/1> — OPEN, keep draft.
-- Research baseline: `227eaff4da4bdd1c631d796048f076faffa4d249`.
-- Planning baseline: `bacae8e51a34daadee79e7a1e7a1067e0b97f69d`.
-  This bootstrap follows it; verify the live HEAD and remote instead of resetting.
-- Package: 0.4.2, npm `private: true`, unpublished.
-- Preserve the product, extension, downloads, all research/prototypes, owner
-  profiles, other repositories/tasks/jobs. No merge, npm publication, release,
-  store submission, new host, deployment configuration change, or messages.
-- The user-created project/chat is authorized. Additional chats/agents and
-  physical repository migration remain outside this run.
+Ryan authorized this independent local project/chat and this run. The earlier
+bootstrap remains historical; it is not a standing authorization to execute a
+new three-hour run. Its recorded start was16:56:57UTC, with new-experiment cutoff
+19:36:57UTC and absolute deadline19:56:57UTC on October10,2026. Do not reset that
+allowance after interruption. Any further research scope needs Ryan's selection.
+The [safe continuation prompt](research/prose-qr/astra-2026-10-10/CONTINUE.txt)
+requests a read-only scientific review, not renewed experimental execution.
 
-Use the local checkout for this task. Do not clone into another folder, create
-an empty replacement repository, switch to main, or create a worktree as part
-of setup. Do not inherit Splashery instructions. Only the new chat should run
-this research; the previous chat is handing off and has no research job running.
+## Latest scientific state
 
-## Current scientific state
+The run retains10 full native captures and10 exact immediate-repeat receipts,
+14 small glyph resources,2 new conventional controls with2 exact repeats,
+39/39 completed primary ordinary slots, and5 separate saved-source jsQR audit
+slots. All native strict gates fail. There are **zero native payload proposals,
+zero phone tests and no candidate for owner scanning**. Full counts and all
+actually executed stock branches are in the report and verification receipts.
 
-The prose goal remains **unsolved**. The latest completed work is
-[session D](research/prose-qr/session-2026-10-10-d/CHECKPOINT.md), covering
-phases 70–74. It retains 15 native captures and 15 exact immediate-repeat
-receipts; 75/87 planned primary reader slots completed, while 12 were
-unattempted after a preserved setup abort. All strict selected structure gates
-fail. There is no new payload source or phone candidate.
+The important findings are source-scale calibration, a decodable conventional
+circular-finder control that the surrogate gates reject, improved native
+per-paragraph selection, and measured body-text coupling/field-coverage limits.
+The fixed acceptance thresholds were not relaxed. The invisible-initial
+context03 source and its3 premature reader calls remain explicitly rejected and
+retained. Context04 visibly paints the initials and preserves Once/Our/Often in
+selection, but still fails spans and one true diagonal. Native selection is not
+portable clipboard/plain-text/native-app acceptance.
 
-PILL retains stable central rows and more balanced spans, but the true diagonal
-still fails (0.5563 versus 0.35) and ordinary dimension 113 differs from source 125. These are outlined Latin structural controls, not natural prose or an
-unstyled-text result. No new phone results exist.
+Do not rerun sealed scripts in their old output directories. Exact executed
+source bytes are retained as gzip snapshots;28 native HTML/SVG sources use
+byte-identical `.txt` aliases to protect whitespace from formatting. Use the
+archive mapping and source receipts. Historical phase65 ERRATA, phase72 setup
+abort and all earlier unknowns remain unchanged. The corrected article is
+styled Latin; Hebrew, conventional controls, ordinary body diagnostics, image
+rendering, unstyled ASCII, native apps, phone and print remain separate lanes.
 
-The [40-idea bank](research/prose-qr/sol-three-hour-plan-2026-10-10/IDEAS.md)
-remains useful. Its older Sol/stay-in-chat recommendation is superseded by the
-current owner choice; the idea bank and sealed receipts stay unchanged. The
-new Astra prompt retains its scientific gates, exact-payload requirement,
-three-hour ceiling, 40-MB overall file cap, and preservation rules.
+## Product work and acceptance remain separate
 
-Read and verify the session D plans, results, executed source, historical source
-snapshots, custody, and download hashes before new experiments. Do not rerun
-sealed scripts in old output directories. Start fresh exclusive directories,
-record all outcomes, and back up milestones on the existing branch. A successful
-structure metric is not payload recovery; automated recovery is not phone
-acceptance. Keep styled, bold, intrinsic-heavy, logographic, regular Latin,
-and uniform-black ASCII results separate.
-
-## Product work is preserved and separate
-
-The product already includes deterministic character/emoji QR generation,
-image exports and comparison grids, text/RTF/HTML outputs, recipes, and saved
-recipe browser insertion. Read [browser insertion](browser-insertion.md),
+The product retains deterministic character/emoji QR generation, image exports,
+comparison grids, text/RTF/HTML outputs, recipes and browser insertion. For later
+product work, read [browser insertion](browser-insertion.md),
 [text portability](text-portability.md), [validation](validation.md), and
-[distribution](distribution.md) when returning to product work.
+[distribution](distribution.md), then run the relevant AGENTS.md checks.
+Do not rebuild downloads for research-only changes.
 
-Open acceptance items include Gmail insertion and saved/received layout,
-portable plain-text copying, installed-extension observations, physical print,
-and broader phone testing. Ryan's earlier successful RTF and character-QR
-observations are historical and scenario-specific. They do not establish prose
-QR recovery or universal paste/scan reliability. The emoji atlas remains a
-proposal; do not fold it into the three-hour prose run.
+Open acceptance items still include Gmail insertion and saved/received layout,
+portable plain-text copying, installed-extension observations, physical print
+and broader phone testing. Historical owner RTF/character-QR observations are
+scenario-specific and do not establish prose QR recovery. The emoji atlas
+remains a proposal pending owner selection after text review.
 
-Do not rebuild product downloads for research-only changes. For later product
-changes, use the applicable tests listed in AGENTS.md and the validation docs.
-Reusing this existing checkout preserves installed dependencies; no setup
-installation is necessary just to create the project.
+The forty-idea bank is still available in the
+[earlier planning package](research/prose-qr/sol-three-hour-plan-2026-10-10/IDEAS.md),
+with its old model/chat recommendation superseded. The current run stopped
+before its ceiling because no defensible next native construction was identified
+under the fixed gates; unspent time and caps are not success or impossibility.
 
-## Recovery and historical records
-
-The former version of this handoff is preserved byte-for-byte at
-[PROJECT-HANDOFF.previous.md](bootstrap/astra-2026-10-10/PROJECT-HANDOFF.previous.md).
-Older review prompts are historical and do not override this owner-approved
-project switch. Original external prototypes and the private PDF archive remain
-in their existing locations; this bootstrap does not copy or modify them.
-
-The bootstrap verification checks saved evidence/source bytes and Git tracking,
-not new decoding or device behavior. See
-[the fresh backup receipt](bootstrap/astra-2026-10-10/backup-verification-02.json).
-For a future interrupted run, first read that run's newest checkpoint and
-original deadline; do not automatically restart a three-hour allowance.
+The prior handoff is preserved byte-for-byte at
+[PROJECT-HANDOFF.previous.md](research/prose-qr/astra-2026-10-10/PROJECT-HANDOFF.previous.md).
+No original external prototype or private PDF archive was moved or modified.

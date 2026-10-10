@@ -78,7 +78,7 @@ for p in ROOT.rglob('*.json'):
     def collect(d):
         if isinstance(d, dict):
             for k,v in d.items():
-                if isinstance(v,str) and len(v)==64 and k.startswith(('docs/','experiments/','vendor/','node_modules/')):
+                if isinstance(v,str) and len(v)==64 and k.startswith(('docs/','experiments/','vendor/','node_modules/','/Users/noir/Documents/aqrobat/')):
                     q=Path(k); current=q.is_file() and sha(q.read_bytes())==v
                     assert current or (k,v) in snapshots, (str(p),k,v)
                     refs.add((k,v))

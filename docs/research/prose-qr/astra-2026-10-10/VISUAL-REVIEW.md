@@ -11,3 +11,31 @@ The task agent inspected unchanged native resource images and complete article/b
 - Calibration01: square/circular sources are overt conventional QR controls, not text or prose. Their results cannot be transferred to the articles.
 
 Mechanical source checks covered font identity, geometry, bounds, row clearance and exact immediate repeats. Initial-word outlines/body separation were inspected visually. The early context harness did not serialize a complete adjacent-glyph ink-gap ledger; a separate post-capture DOM measurement will record this limitation and measure it without taking another screenshot or changing the sealed native output. No strict pass will be claimed from a missing check.
+
+## Completed retrospective review and correction
+
+The DOM-only audit retained all early sources and found selection mismatch in
+all five initial context sources. It also found conservative adjacent-ink bound
+flags in six sources: Copperplate article, both Arial g layouts and all three
+body diagnostics. Those mathematical flags do not prove visible merging, but
+they invalidate any claim that the early harness comprehensively checked glyph
+separation. No early source is promoted to an accepted candidate.
+
+Context03 is rejected: its three initial O glyphs were invisible. The full
+native page visibly starts with nce/ur/ften. The recorded browser computed
+stroke was0; the harness failed to assert it before reader calls. Its source,
+capture and three completed negative reader slots remain in the denominator.
+
+Context04 was inspected as a complete900px native page before reader calls.
+Once/Our/Often and their outlined O initials are visible, with coherent18px body
+text. The paragraph layout remains conspicuously designed around three large
+initials and generous whitespace; it is an intermediate styled article. The
+expanded actual-stroke/font/selection/bounds checks pass. Native glyph boxes
+have minimum body gap0.6914px and initial/body gaps above2px. This does not
+establish owner acceptance or portable paste. Independent saved-pixel review
+counts0/0/0 dark pixels in context03 initial rectangles versus632/631/632 in04.
+
+The report's optional overlay is a source-layout illustration over the unchanged
+embedded PNG. It is never an acceptance reader input. Display scaling in the
+report is for navigation; open the embedded original at its native dimensions
+for image review. No phone or physical-print result has been created.

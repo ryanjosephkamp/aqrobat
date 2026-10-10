@@ -1,7 +1,9 @@
 # Exact executed source custody
 
-`source-archive.json` maps 227 pre-format source/evidence entries to 210
-content-addressed gzip snapshots. Decompression yields their original SHA-256
+`source-archive.json` initially mapped 227 pre-format source/evidence entries to
+210 content-addressed gzip snapshots. Four later entries preserve the verifier,
+layout-audit plan/script, and previous current handoff, for231 entries and214
+distinct snapshots in the closing catalog. Decompression yields their original SHA-256
 bytes. These include the preregistered plans, executed scripts, raw JSON receipts,
 and rejected sources. Repository formatting subsequently changed some current
 textual files; it did not replace their executed versions.
