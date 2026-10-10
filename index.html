@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en" data-theme="violet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Make experimental QR codes from real text characters and emoji. A free, local-first generator with reproducible recipes."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Aqrobat · QR codes, in character</title>
+    <link rel="icon" href="web/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="web/style.css" />
+    <script type="module" src="web/app.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="#">aqrobat<span aria-hidden="true">↗</span></a>
+      <nav aria-label="Main">
+        <a href="#make">Make</a><a href="#how">How it works</a
+        ><a href="https://github.com/ryanjosephkamp/aqrobat">GitHub</a>
+      </nav>
+      <details class="appearance">
+        <summary aria-label="Appearance">◐ Theme</summary>
+        <div class="pair">
+          <div>
+            <label for="theme">Page theme</label
+            ><select id="theme"></select>
+          </div>
+          <div>
+            <label for="icon-color">Extension icon color</label>
+            <div class="icon-control">
+              <canvas
+                id="icon-preview"
+                width="32"
+                height="32"
+                aria-label="Extension icon preview"
+              ></canvas
+              ><select id="icon-color"></select>
+            </div>
+          </div>
+        </div>
+        <p class="hint" id="icon-hint"></p>
+        <p class="hint">
+          Appearance preferences are saved on this browser. QR artwork keeps its
+          original colors.
+        </p>
+      </details>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">SMALL TOOL. MANY CHARACTERS.</p>
+        <h1>QR codes,<br />in character.</h1>
+        <p class="lede">
+          A link, a little text, a whole new look. Build QR artwork from
+          letters, symbols, or emoji—right in your browser.
+        </p>
+        <p class="fine">
+          Free · No account · No AI required · Experimental scanning
+        </p>
+        <p class="hint">
+          <a href="downloads/aqrobat-offline.html" download
+            >Download offline page</a
+          >
+          ·
+          <a href="downloads/aqrobat-extension.zip" download
+            >Unpacked Chrome extension</a
+          >
+        </p>
+      </section>
+      <section class="workspace" id="make" aria-label="QR generator">
+        <form id="controls" class="panel">
+          <h2>Make yours</h2>
+          <label for="payload">Your link or text</label
+          ><textarea id="payload" rows="3" spellcheck="false" maxlength="1024">
+https://example.com</textarea
+          >
+          <p class="hint" id="bytes">
+            Up to 1024 UTF-8 bytes. Nothing gets shortened.
+          </p>
+          <div class="pair">
+            <div>
+              <label for="preset">Character</label
+              ><select id="preset"></select>
+            </div>
+            <div>
+              <label for="glyph">Custom symbols / emoji</label
+              ><input
+                id="glyph"
+                value="#"
+                maxlength="4096"
+                spellcheck="false"
+                autocomplete="off"
+                aria-describedby="palette-info"
+              />
+            </div>
+          </div>
+          <p class="hint" id="palette-info">
+            Unique symbols cycle in entry order; repeats and spaces are ignored.
+          </p>
+          <div class="pair">
+            <div>
+              <label for="density">Density per module</label
+              ><select id="density">
+                <option value="4x2">4 across × 2 rows</option>
+                <option value="2x1">2 across × 1 row</option>
+                <option value="1x1">1 across × 1 row</option>
+              </select>
+            </div>
+            <div>
+              <label for="font">Font</label
+              ><select id="font">
+                <option>Menlo</option>
+                <option>Courier New</option>
+                <option value="monospace">System monospace</option>
+              </select>
+            </div>
+          </div>
+          <label for="width">Export size <span>200–1536 px</span></label>
+          <div class="size-control">
+            <input
+              id="size"
+              type="range"
+              min="200"
+              max="1536"
+              step="1"
+              value="656"
+              aria-label="Export size slider"
+            /><input
+              id="width"
+              type="number"
+              min="200"
+              max="1536"
+              step="1"
+              value="656"
+              aria-label="Export size in pixels"
+            />
+          </div>
+          <div class="pair">
+            <div>
+              <label for="ecc">Error correction</label
+              ><select id="ecc">
+                <option value="M">M · medium</option>
+                <option value="H">H · high</option>
+                <option value="Q">Q · quartile</option>
+                <option value="L">L · low</option>
+              </select>
+            </div>
+            <div class="checks">
+              <label
+                ><input type="checkbox" id="thick" checked /> Thicken glyph
+                ink</label
+              ><label
+                ><input type="checkbox" id="boost" checked /> Boost ECC if it
+                fits</label
+              >
+            </div>
+          </div>
+          <button class="primary" type="submit">
+            Generate QR <span aria-hidden="true">↗</span>
+          </button>
+          <p id="error" role="alert"></p>
+        </form>
+        <div class="preview-panel">
+          <div class="preview-heading">
+            <span>YOUR CHARACTER QR</span
+            ><span class="badge">Scan status: untested</span>
+          </div>
+          <div class="stage">
+            <canvas
+              id="preview"
+              aria-label="Experimental QR drawn from characters"
+            ></canvas>
+          </div>
+          <p id="metadata" class="hint"></p>
+          <div class="exports" aria-label="Export options">
+            <button id="copy-formatted" type="button">Copy text</button
+            ><button id="copy" type="button">Plain text</button
+            ><button id="png" type="button">PNG</button
+            ><button id="svg" type="button">SVG</button
+            ><button id="txt" type="button">TXT</button
+            ><button id="html" type="button">Image print / HTML</button
+            ><button id="recipe" type="button">Recipe</button>
+          </div>
+          <p class="hint" id="status" role="status" aria-live="polite">
+            Nothing is sent to a QR service. Try scanning this exact display.
+          </p>
+          <div id="extension-save" hidden>
+            <label for="recipe-name">Name for this saved QR</label
+            ><input
+              id="recipe-name"
+              maxlength="80"
+              value="My text QR"
+              autocomplete="off"
+            />
+            <div class="exports">
+              <button id="save-local" type="button">Save for insertion</button>
+            </div>
+            <p class="hint">
+              Next: open your destination page, then Aqrobat → Choose where to
+              insert. Saved locally in this extension.
+            </p>
+          </div>
+          <label for="filename">Save filename (without extension)</label
+          ><input
+            id="filename"
+            value="aqrobat"
+            maxlength="80"
+            autocomplete="off"
+          />
+          <p class="hint" id="unsaved" role="status"></p>
+          <label class="file-label"
+            >Load a recipe
+            <input
+              type="file"
+              id="import-recipe"
+              accept=".json,application/json"
+          /></label>
+        </div>
+      </section>
+      <section class="text-section panel" aria-labelledby="text-heading">
+        <h2 id="text-heading">Copyable text</h2>
+        <p>
+          Formatted text carries the layout into editors that accept HTML. Plain
+          TXT uses wider blanks for emoji and balanced repetition for ordinary
+          letters. Both contain real characters.
+        </p>
+        <div class="lab-actions exports">
+          <button id="text-html" type="button">Text HTML</button
+          ><button id="rtf" type="button">RTF document</button
+          ><button id="snippet" type="button">Copy website HTML</button>
+          <a href="downloads/aqrobat-insertion-practice.html" target="_blank"
+            >Try direct insertion</a
+          >
+        </div>
+        <details open>
+          <summary>Formatted text preview</summary>
+          <div class="text-scroll"><div id="formatted-preview"></div></div>
+        </details>
+        <details open>
+          <summary>View / select the plain text</summary>
+          <p class="hint" id="text-info"></p>
+          <div class="raw-wrap">
+            <textarea
+              id="raw"
+              readonly
+              wrap="off"
+              spellcheck="false"
+              aria-label="Plain text QR"
+            ></textarea>
+          </div>
+        </details>
+        <p class="hint">
+          For TextEdit, open RTF or paste formatted text in rich text mode. For
+          websites, keep the Text HTML styles. Email and blog editors may remove
+          styles. TXT cannot store a font or line spacing: preserve every blank
+          and newline, choose the matching monospace font, and test the pasted
+          result. In TextEdit, start with Menlo; for plain emoji TXT, use 30 pt
+          or larger to avoid macOS’s small-emoji width expansion. RTF sets its
+          own spacing.
+        </p>
+      </section>
+      <section id="recipe-library" class="panel text-section" hidden>
+        <h2>Your saved QRs · extension</h2>
+        <p>
+          Use <strong>Save for insertion</strong> under the QR preview. Manage
+          your saved QRs here. On your destination page, open Aqrobat’s toolbar
+          and choose <strong>Choose where to insert</strong>.
+        </p>
+        <p class="hint">
+          Saving stores this payload and its settings in this installed
+          extension until you remove it. No cloud sync. Keep a Recipe JSON
+          backup before reinstalling the extension.
+        </p>
+        <label for="saved-recipes">Saved recipes</label
+        ><select id="saved-recipes"></select>
+        <div class="exports">
+          <button id="load-saved" type="button">Load saved</button
+          ><button id="delete-saved" type="button">Remove saved</button>
+        </div>
+        <p id="library-status" class="hint" role="status"></p>
+        <p>
+          <a href="practice.html" target="_blank"
+            >Open the insertion practice page</a
+          >
+        </p>
+      </section>
+      <section class="lab" id="test">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">MAKE OBSERVATIONS, NOT PROMISES</p>
+            <h2>A little scan lab.</h2>
+          </div>
+          <button id="compare" type="button">Build 12 image comparisons</button>
+        </div>
+        <p>
+          Compare this symbol palette at two densities, two fonts, and three
+          export sizes. Each mark belongs to its exact recipe. A good QR matrix
+          can still be hard to scan when the glyphs are faint, colorful, small,
+          or spaced differently.
+        </p>
+        <div class="pair">
+          <div>
+            <label for="scanner">Phone / scanner</label
+            ><input
+              id="scanner"
+              placeholder="e.g. Samsung Camera on Galaxy S25 Ultra"
+              maxlength="160"
+            />
+          </div>
+          <div>
+            <label for="conditions">Conditions</label
+            ><input
+              id="conditions"
+              placeholder="Screen or paper, brightness, distance, notes"
+              maxlength="500"
+            />
+          </div>
+        </div>
+        <div class="lab-actions">
+          <button id="export-results" type="button">Export results</button
+          ><label class="file-label"
+            >Import results
+            <input
+              id="import-results"
+              type="file"
+              accept=".json,application/json" /></label
+          ><button id="print-grid" type="button">Print comparison grid</button>
+        </div>
+        <p class="hint">
+          Results stay in this open page. Export a backup before closing.
+          Printed codes are 65 mm square; paper scanning has not been verified.
+        </p>
+        <label
+          ><input id="compare-text" type="checkbox" /> Also build a plain-text
+          comparison grid</label
+        >
+        <p class="hint">
+          Text observations are separate from images. These are actual
+          characters, with normal 1.2 line spacing. Print both grids or scan on
+          screen.
+        </p>
+        <div id="grid" class="grid"></div>
+        <div id="text-grid" class="grid"></div>
+      </section>
+      <section class="explanation" id="how">
+        <p class="eyebrow">UNDER THE HOOD</p>
+        <h2>Ordinary QR logic.<br />Unusual ink.</h2>
+        <div class="three">
+          <article>
+            <h3>01 / Encode</h3>
+            <p>
+              Nayuki’s MIT-licensed encoder turns your exact input into a
+              standard QR matrix. Error correction and the three familiar corner
+              markers are part of that matrix.
+            </p>
+          </article>
+          <article>
+            <h3>02 / Draw</h3>
+            <p>
+              Aqrobat replaces dark modules with repeated glyphs and leaves
+              light modules as spaces. The canvas uses real font artwork. There
+              is no solid QR hidden behind the characters.
+            </p>
+          </article>
+          <article>
+            <h3>03 / Try</h3>
+            <p>
+              A scanner sees the light and dark pattern. Ink coverage, contrast,
+              font, size, brightness, and camera software all matter. Every new
+              recipe starts untested.
+            </p>
+          </article>
+        </div>
+        <details>
+          <summary>Sizes, emoji, and portability</summary>
+          <p>
+            The old 328, 492, and 656 px choices were presets. Pixel width can
+            vary continuously here. QR matrix dimensions change in four-module
+            steps as payload and error correction require more room; shrinking
+            the artwork does not shrink that matrix.
+          </p>
+          <p>
+            A custom palette can mix letters, punctuation, and whole emoji
+            sequences, including flags or families. Enter
+            <code>🤣.☄️1:a</code> or any combination up to 4096 UTF-8 bytes.
+            Unique symbols cycle through dark modules in entry order; duplicate
+            symbols and spaces are ignored. Emoji artwork comes from your system
+            fonts and may change across devices. PNG keeps the rendered artwork;
+            TXT and SVG depend on receiving fonts and spacing. Formatted text
+            and RTF retain layout instructions, but receiving editors can still
+            change typography. Sparse dots and colorful faces are experiments,
+            not reliable defaults.
+          </p>
+          <p>
+            Short inputs usually need fewer modules. Bigger artwork can help a
+            camera distinguish those modules, but there is no universal minimum
+            scannable size. Decorative text QR is not encryption or a way to
+            hide the payload from machines.
+          </p>
+        </details>
+        <details>
+          <summary>Use with an agent or from the command line</summary>
+          <p>
+            The same deterministic core powers this page, the CLI, and the
+            unpacked extension. An agent chooses settings and calls the tool; it
+            does not need to invent the QR pattern.
+          </p>
+          <pre class="command">
+node bin/aqrobat.mjs 'https://example.com' --glyph '#' --density 4x2 --format recipe --out qr.json</pre
+          >
+          <p>
+            The repository includes an npm-ready package layout. It has not been
+            published to npm.
+            <a
+              href="https://github.com/ryanjosephkamp/aqrobat/blob/codex/aqrobat-foundation/docs/agents.md"
+              >Agent instructions</a
+            >
+            ·
+            <a
+              href="https://github.com/ryanjosephkamp/aqrobat/blob/codex/aqrobat-foundation/docs/distribution.md"
+              >Install the unpacked extension</a
+            >
+          </p>
+        </details>
+        <details>
+          <summary>Prior art and what we are exploring</summary>
+          <p>
+            Text and emoji QR codes already exist.
+            <a href="https://github.com/gtanner/qrcode-terminal"
+              >qrcode-terminal</a
+            >
+            offers terminal output and a CLI;
+            <a href="https://github.com/soldair/node-qrcode">node-qrcode</a>
+            provides a general QR package;
+            <a href="https://oshiqr.com/en">OshiQR</a> offers text and custom
+            emoji modes. Aqrobat explores a small shared toolchain, reproducible
+            recipes, and visible scan evidence. This is a product direction, not
+            a novelty claim.
+          </p>
+          <p>
+            Next: test more emoji against specific font/scanner combinations,
+            with separate software and phone results. A full emoji atlas is
+            planned research, not an existing scan guarantee.
+            <a href="https://www.qrcode.com/en/about/version.html"
+              >QR versions (DENSO WAVE)</a
+            >
+            ·
+            <a href="https://www.nayuki.io/page/qr-code-generator-library"
+              >Encoder</a
+            >
+            ·
+            <a href="https://www.unicode.org/reports/tr51/"
+              >Unicode emoji specification</a
+            >
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer>
+      <div class="credit">
+        <p class="made">
+          Made by <a href="https://ryanjosephkamp.github.io/">Ryan Kamp</a>
+        </p>
+        <ul class="social" aria-label="Ryan Kamp online">
+          <li>
+            <a
+              href="https://ryanjosephkamp.github.io/"
+              aria-label="Ryan Kamp on Website"
+              title="Website"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9.2" />
+                  <path
+                    d="M2.8 12h18.4M12 2.8c2.6 2.6 3.9 5.7 3.9 9.2s-1.3 6.6-3.9 9.2c-2.6-2.6-3.9-5.7-3.9-9.2S9.4 5.4 12 2.8Z"
+                  />
+                </g></svg
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ryanjosephkamp/"
+              aria-label="Ryan Kamp on GitHub"
+              title="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                /></svg
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ryanjosephkamp/"
+              aria-label="Ryan Kamp on LinkedIn"
+              title="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                /></svg
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/ryanjosephkamp"
+              aria-label="Ryan Kamp on X"
+              title="X"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                /></svg
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@RyanJosephKamp?app=desktop"
+              aria-label="Ryan Kamp on YouTube"
+              title="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+        <a
+          class="sponsor"
+          href="https://github.com/sponsors/ryanjosephkamp"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg viewBox="0 0 20 20" aria-hidden="true">
+            <path
+              d="M10 16.8S3 12.6 3 7.6A3.6 3.6 0 0 1 10 6a3.6 3.6 0 0 1 7 1.6c0 5-7 9.2-7 9.2Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            /></svg
+          >Sponsor on GitHub</a
+        >
+      </div>
+      <p class="footer-fine">
+        Aqrobat 0.4.0 ·
+        <a href="https://github.com/ryanjosephkamp/aqrobat"
+          >MIT license · Source &amp; docs</a
+        >
+        · Free to use. Sponsorship is optional.
+      </p>
+    </footer>
+    <noscript
+      ><p>
+        This generator needs JavaScript enabled. Its generation runs locally and
+        requires no AI service.
+      </p></noscript
+    >
+  </body>
+</html>

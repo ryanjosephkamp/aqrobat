@@ -1,0 +1,5 @@
+# Phase 62 — intended dimensions, incomplete native strokes
+
+All six native sources and immediate repeats are saved. Four requested Medium/Semibold faces resolve to Regular and are rejected; their 12 primary reader slots remain unattempted. The two Regular sources complete six native slots plus six conventional slots. The 64px inverted stock branch returns intended centers and dimension65, but strict native structure still fails: central span fraction0.769, stable wide rows14/18 and worst four-axis ratio error about0.506. No payload is encoded. Native glyph shapes are distinct, but the large repetitive logographic control is not natural prose, normal-page usability or phone acceptance.
+
+Harness limitation: the executed capture computes DOM target origins and phase drift but omits origins from its returned object. The promised direct origin receipt is therefore missing. This metadata gap remains explicit; source formulas are not substituted for a measured receipt. No executed source was repaired or rerun.

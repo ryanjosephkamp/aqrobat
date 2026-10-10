@@ -1,0 +1,32 @@
+{
+  "phase": 25,
+  "nativeRenderings": 1,
+  "exactImmediateRepeats": 1,
+  "mechanicalLegibilityRejections": 1,
+  "completeFinderGates": 0,
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "goal": "unsolved",
+  "note": "One globally uppercase visible black/gray Impact source. Native rendering and repeat complete, but punctuation descender envelope fails conservative row-clearance gate. No diagnostic symbol. Legibility rejection retained, no payload.",
+  "results": [
+    {
+      "run": "run-01",
+      "payload": null,
+      "font": "Impact",
+      "size": 20,
+      "leading": 19,
+      "unit": 144,
+      "nativePngSha256": "3db38d50827f37a925a94c10d25b36da75b5e4e4ee54c8e968e20319916200d0",
+      "repeatExact": true,
+      "nativeLegibilityRejected": true,
+      "legibilityReasons": ["Native row ink clearance below 2 px"],
+      "nativeClearance": 0.8359375,
+      "sampledDiagnostics": [],
+      "sources": {
+        "docs/research/prose-qr/phase-25/run-01/capture.json": "e925c7245121979ab5cad1561f0ab50d6545cbb4fd32741a32edb214a23dfdf8",
+        "docs/research/prose-qr/phase-25/run-01/native-metrics.json": "dbf17d6ac802fa67c4e16be170328ca8d146a10607f50e061a8e007162f9fc26",
+        "docs/research/prose-qr/phase-25/run-01/native-zxing-errors-diagnostic.json": "1a98f1d86bf32fd606e6705004d607d40e306551878ae3ae044f62899962d413"
+      }
+    }
+  ]
+}

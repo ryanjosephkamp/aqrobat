@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-10T05:37:49.345Z",
+  "phase": 46,
+  "goal": "unsolved",
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "newNativeSources": 0,
+  "plannedOrdinaryProfiles": 2,
+  "plannedReaderCalls": 4,
+  "completedResultRows": 2,
+  "checkerErrors": [
+    {
+      "at": "2026-10-10T05:36:28.451Z",
+      "error": "Error: spawnSync swift ETIMEDOUT\n    at Object.spawnSync (node:internal/child_process:1175:20)\n    at spawnSync (node:child_process:929:24)\n    at execFileSync (node:child_process:972:15)\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/context-other-readers/run-vision.mjs:44:15",
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "ordinary": [
+    {
+      "reader": "Apple Vision default",
+      "exact": null,
+      "observations": null,
+      "error": "Profile output unavailable"
+    },
+    {
+      "reader": "ZBar default retained wrapper",
+      "exact": false,
+      "results": [],
+      "error": null
+    }
+  ],
+  "exactOrdinaryNativeReturns": 0,
+  "exactOrdinaryControls": 1,
+  "controlResults": [
+    { "reader": "Apple Vision default", "exact": null, "error": null },
+    { "reader": "ZBar default retained wrapper", "exact": true }
+  ],
+  "sources": {
+    "experiments/prose-qr/context-other-readers/analyze.mjs": "af86c877c81af16ea4d9b8556ed4f1b0393248dd691eb03795947fc63ce02cf9",
+    "docs/research/prose-qr/phase-46/vision-01/error.json": "f37ae922e2981d0b4574a9353f89bf34b53d3e8a15eda0a364cf495a25b1cc7e",
+    "docs/research/prose-qr/phase-46/zbar-01/native.json": "28c330f7d4abcf0c2ee61d08522e3684a4caf483eb7e031032f9f4e0e1749c13",
+    "docs/research/prose-qr/phase-46/zbar-01/control.json": "3891563ac597f177524e7c5e058849abaa7304e29aa30228466d83a7aa5faf24"
+  }
+}

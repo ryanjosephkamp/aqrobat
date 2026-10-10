@@ -1,0 +1,172 @@
+{
+  "phase": 27,
+  "nativeRenderings": 2,
+  "exactImmediateRepeats": 2,
+  "mechanicalLegibilityRejections": 0,
+  "completeFinderGates": 1,
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "goal": "unsolved",
+  "note": "Two row/advance-aligned pitches. Pitch140 gives no diagnostic symbol. Pitch168 passes all147 cells, twelve directional sequences and nominal geometry. Native14 excerpts read clearly to agent, repetitive words; owner untested. This justified only the one phase28 confirmation, not phone/prose acceptance.",
+  "results": [
+    {
+      "run": "run-01",
+      "payload": null,
+      "font": "Monaco",
+      "size": 14,
+      "leading": 14,
+      "unit": 140,
+      "nativePngSha256": "bd1476e4d7f903f59e0f83f4ace89e47f04c012e8d41083a56ce7d9034a6dc7b",
+      "repeatExact": true,
+      "nativeLegibilityRejected": false,
+      "legibilityReasons": [],
+      "nativeClearance": 2.43359375,
+      "sampledDiagnostics": [],
+      "sources": {
+        "docs/research/prose-qr/phase-27/run-01/capture.json": "38624ebb5afe2c5589274afd5a531174770c5512a402d1b4fdf9b4594fc6db54",
+        "docs/research/prose-qr/phase-27/run-01/native-metrics.json": "6a3d24564438d4402112589316b0e840091df95cac52892eae7b750fa6c234e0",
+        "docs/research/prose-qr/phase-27/run-01/native-zxing-errors-diagnostic.json": "e51d54f34a5828641f0bf42c8e1f97fef763deeb50b0874c0f2dddd8229b5862"
+      }
+    },
+    {
+      "run": "run-02",
+      "payload": null,
+      "font": "Monaco",
+      "size": 14,
+      "leading": 14,
+      "unit": 168,
+      "nativePngSha256": "2a8b830ab32db116bdce49ef9238a221f249673e93a67e5139c4f4afda960eb0",
+      "repeatExact": true,
+      "nativeLegibilityRejected": false,
+      "legibilityReasons": [],
+      "nativeClearance": 2.43359375,
+      "sampledDiagnostics": [
+        {
+          "width": 25,
+          "height": 25,
+          "position": {
+            "topLeft": {
+              "x": 837,
+              "y": 864
+            },
+            "topRight": {
+              "x": 5049,
+              "y": 864
+            },
+            "bottomRight": {
+              "x": 5049,
+              "y": 5049
+            },
+            "bottomLeft": {
+              "x": 837,
+              "y": 5049
+            }
+          },
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "finderAudit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": true
+          }
+        }
+      ],
+      "sources": {
+        "docs/research/prose-qr/phase-27/run-02/capture.json": "dd0a9b7db0ed8a82d79aba45739a04ad4d6c2515297cd633a05c14a21f6fea46",
+        "docs/research/prose-qr/phase-27/run-02/native-metrics.json": "9c19599b65e64ff609d6f214a4261bc13d9415ee7313d3e16834284c52555f2f",
+        "docs/research/prose-qr/phase-27/run-02/native-zxing-errors-diagnostic.json": "a185bfe033b9d3127f0c05e9deceef815898711670117bd8aefd2ffe43e90467"
+      }
+    }
+  ]
+}

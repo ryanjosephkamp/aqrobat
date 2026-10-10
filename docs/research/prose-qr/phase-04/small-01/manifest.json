@@ -1,0 +1,117 @@
+{
+  "startedAt": "2026-10-09T16:13:35.439Z",
+  "specs": [
+    {
+      "id": "small-1",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "gray": 246,
+      "outputSize": 70,
+      "track": "Actual small browser presentation, not native-size legibility or phone acceptance"
+    },
+    {
+      "id": "small-2",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "gray": 246,
+      "outputSize": 105,
+      "track": "Actual small browser presentation, not native-size legibility or phone acceptance"
+    },
+    {
+      "id": "small-3",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "gray": 246,
+      "outputSize": 140,
+      "track": "Actual small browser presentation, not native-size legibility or phone acceptance"
+    },
+    {
+      "id": "small-4",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "fontSize": 20,
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "content": "story",
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "gray": 230,
+      "outputSize": 140,
+      "track": "Actual small browser presentation with variable weight/color, not plain ASCII or native-size legibility"
+    },
+    {
+      "id": "small-5",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "fontSize": 20,
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "content": "story",
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "gray": 230,
+      "outputSize": 210,
+      "track": "Actual small browser presentation with variable weight/color, not plain ASCII or native-size legibility"
+    },
+    {
+      "id": "small-6",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "fontSize": 20,
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "content": "story",
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "gray": 230,
+      "outputSize": 280,
+      "track": "Actual small browser presentation with variable weight/color, not plain ASCII or native-size legibility"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/phone-readability/small-view.mjs": "1939a6d6d9f348ffa7e7f0c53d547929ce85f6bb487a4c362a34dbde6cff8b00",
+    "experiments/prose-qr/phone-readability/capture.mjs": "72e3ef912ca1d5cff98200c7ab207fba30dc0bd2f916f396bf069fc74e599ed6",
+    "experiments/prose-qr/phone-readability/proportional.mjs": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+    "experiments/prose-qr/flow/layout.mjs": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+    "docs/research/prose-qr/phase-04/font-metrics.json": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "jsQR and ZXing using their ordinary binarizer/downscaling; no tuned reader settings, no expected payload/matrix input"
+}

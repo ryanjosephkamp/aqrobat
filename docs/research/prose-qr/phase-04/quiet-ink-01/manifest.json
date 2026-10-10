@@ -1,0 +1,138 @@
+{
+  "startedAt": "2026-10-09T16:07:26.547Z",
+  "specs": [
+    {
+      "id": "quiet-1",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 238,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-2",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": true,
+      "gray": 238,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-3",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 246,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-4",
+      "payload": "https://example.com/",
+      "font": "Impact",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": true,
+      "gray": 246,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-5",
+      "payload": "https://example.com/",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 238,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-6",
+      "payload": "https://example.com/",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": true,
+      "gray": 238,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-7",
+      "payload": "https://example.com/",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": false,
+      "gray": 246,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    },
+    {
+      "id": "quiet-8",
+      "payload": "https://example.com/",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "leading": 1,
+      "linesPerModule": 1,
+      "quiet": 5,
+      "ecc": "Q",
+      "upper": true,
+      "gray": 246,
+      "blur": 0,
+      "track": "Native text with near-white foreground in light regions; visibility compromise, no invisible text or underlay"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/phone-readability/capture.mjs": "16eaa1760c282bc052d6eff6d447ac8320d6bd7c62bf48dad045b0c18a20b171",
+    "experiments/prose-qr/phone-readability/proportional.mjs": "7c0e38fb85f8633700b8cc9c045a153e6c1d882ee89989d1e69fab5ad95d373e",
+    "experiments/prose-qr/phone-readability/quiet-ink.mjs": "6ae02572f080980204c0b9479a28d71292e6b42496a27a6c5e4a2820141fa415",
+    "docs/research/prose-qr/phase-04/font-metrics.json": "fd4882b0291a005f8e6036ac4c27925130828a05fa5a62f991175d96b28d97db"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "jsQR and ZXing using their ordinary binarizer/downscaling; no tuned reader settings, no expected payload/matrix input"
+}

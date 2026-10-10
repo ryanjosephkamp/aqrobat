@@ -1,0 +1,86 @@
+{
+  "schema": "aqrobat-prose-pilot-results-v1",
+  "startedAt": "2026-10-09T00:12:20Z",
+  "finishedAt": "2026-10-09T00:18:28.752Z",
+  "elapsedSeconds": 369,
+  "halt": {
+    "kind": "error",
+    "reason": "Independent positive control failed",
+    "stack": "AssertionError [ERR_ASSERTION]: Independent positive control failed\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/run.mjs:193:5"
+  },
+  "generatedBytesBeforeSummary": 14302,
+  "controls": [
+    {
+      "kind": "conventional QR positive",
+      "size": 320,
+      "path": "raw/control-positive-320.png",
+      "jsQR": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true
+      },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      },
+      "rgbaSha256": "19dd51270006dae01cd165499aeaa2ec5292af23fba4c5ffaf0f57675ba94950"
+    },
+    {
+      "kind": "conventional QR positive",
+      "size": 640,
+      "path": "raw/control-positive-640.png",
+      "jsQR": {
+        "found": false,
+        "payload": null,
+        "exact": false
+      },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      },
+      "rgbaSha256": "3ae42e86dcf85446c47c5be67ff11f4a94d917ef708e26b94d6254609758a57c"
+    }
+  ],
+  "counts": {
+    "strict": {
+      "attempted": 0,
+      "complete": 0,
+      "rawCasesRecoveredByJsQR": 0,
+      "rawCasesRecoveredByZXing": 0,
+      "rawRasters": 0
+    },
+    "styled": {
+      "attempted": 0,
+      "complete": 0,
+      "rawCasesRecoveredByJsQR": 0,
+      "rawCasesRecoveredByZXing": 0,
+      "rawRasters": 0
+    }
+  },
+  "records": [],
+  "diagnostics": [],
+  "errors": [],
+  "requests": [],
+  "phone": "not tested",
+  "physicalPrint": "not tested",
+  "semanticProse": "not attempted; real-word structural pilot only",
+  "hiding": "not independently reviewed"
+}

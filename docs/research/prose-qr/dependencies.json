@@ -1,0 +1,29 @@
+{
+  "zxingWasm": {
+    "version": "3.1.5",
+    "cppCommit": "2ecec3f5be0ee803f6e14a5a2c7028c0cfe525b4",
+    "lock": {
+      "version": "3.1.5",
+      "resolved": "https://registry.npmjs.org/zxing-wasm/-/zxing-wasm-3.1.5.tgz",
+      "integrity": "sha512-jmxXvTCR/qZxMz2XwR6V+nL2BlDTD1aux7ZWSH9BV77TG9u4k0VyHba/NCCHBHJ60Wg6VV0QL/SMlJczKhJI4w==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "@types/emscripten": "^1.41.6",
+        "type-fest": "^5.10.0"
+      },
+      "peerDependencies": { "@types/emscripten": ">=1.39.6" }
+    },
+    "wrapperLicense": "MIT",
+    "wrapperLicenseSha256": "fb506e4ade12d7a9efa67c9d76a9a28c8e15d347ca49a69e48e29b40b34ad2ab",
+    "upstreamLicenseLayers": "Official project documents MIT wrapper, Apache-2.0 C++ components and BSD-3-Clause zint components; only the reader is loaded in this pilot",
+    "source": "https://github.com/Sec-ant/zxing-wasm"
+  },
+  "jsQR": {
+    "version": "1.4.0",
+    "integrity": "sha512-dxLob7q65Xg2DvstYkRpkYtmKm2sPJ9oFhrhmudT1dZvNFFTlroai3AWSpLey/w5vMcLBXRgOJsbXpdN9HzU/A==",
+    "source": "https://github.com/cozmo/jsQR"
+  },
+  "install": "npm install --save-dev --save-exact --ignore-scripts zxing-wasm@3.1.5; no runtime dependency or publication",
+  "network": "decoder WASM loaded from the local installed package; no QR service or CDN calls"
+}

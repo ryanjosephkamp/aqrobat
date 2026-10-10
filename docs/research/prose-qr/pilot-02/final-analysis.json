@@ -1,0 +1,1179 @@
+{
+  "schema": "aqrobat-prose-pilot-final-v1",
+  "baseline": "e32e4971b7d2eb50af0ddfa55939c2631b866ed9",
+  "startedAt": "2026-10-09T00:12:20.000Z",
+  "rawGridComplete": true,
+  "initialGrid": { "strict": 48, "styled": 108 },
+  "urlFollowups": 2,
+  "counts": {
+    "strict": {
+      "candidates": 49,
+      "complete": 49,
+      "rawRasters": 147,
+      "rawRastersExactJsQR": 0,
+      "rawRastersExactZXing": 0
+    },
+    "styled": {
+      "candidates": 109,
+      "complete": 109,
+      "rawRasters": 327,
+      "rawRastersExactJsQR": 0,
+      "rawRastersExactZXing": 0
+    }
+  },
+  "caseCount": 158,
+  "rawRasterCount": 474,
+  "rawRastersExactJsQR": 0,
+  "rawRastersExactZXing": 0,
+  "diagnostics": {
+    "rasters": 16,
+    "exactJsQR": 11,
+    "exactZXing": 12,
+    "classification": "Processed images only, not raw-output scanning success",
+    "selection": "Eight font/track/light-policy cases selected at the first storage pause; no claim that they are the best of the final full grid"
+  },
+  "controls": {
+    "positivePassedEachDecoder": 3,
+    "negativeNotRecognizedEachDecoder": 6,
+    "initialCalibrationFailure": "pilot-01 retains fractional-edge SVG control failure before integer-pixel correction"
+  },
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "sourceReceiptLines": 159,
+  "uniqueCases": 158,
+  "continuation": "One partial candidate resumed only its previously untested 960-px scale; all other existing frames reused unchanged. Replays archived losslessly; compression manifest verifies original bytes.",
+  "actualBorder": {
+    "rastersBelowFourModulesAtThreshold128": 452,
+    "minimumAcrossGrid": 3.6249999999999996,
+    "note": "Some original input labels say clear four-module border. That is the nominal layout intent, not the verified dark-pixel margin. Consult border-metrics.json."
+  },
+  "readingMetrics": [
+    {
+      "id": "strict-001",
+      "maximumOpticalInkHeightToLineHeight": 0.8375236550419031,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-001",
+      "maximumOpticalInkHeightToLineHeight": 1.1306569343065693,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-025",
+      "maximumOpticalInkHeightToLineHeight": 0.6346623270951993,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-055",
+      "maximumOpticalInkHeightToLineHeight": 0.8882831570382425,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-002",
+      "maximumOpticalInkHeightToLineHeight": 0.8375236550419031,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-002",
+      "maximumOpticalInkHeightToLineHeight": 1.1306569343065693,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-026",
+      "maximumOpticalInkHeightToLineHeight": 0.6346623270951993,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-056",
+      "maximumOpticalInkHeightToLineHeight": 0.8882831570382425,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-003",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-003",
+      "maximumOpticalInkHeightToLineHeight": 1.1306569343065693,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-027",
+      "maximumOpticalInkHeightToLineHeight": 0.9519934906427989,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-057",
+      "maximumOpticalInkHeightToLineHeight": 0.8882831570382425,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-004",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-004",
+      "maximumOpticalInkHeightToLineHeight": 1.3558646177786422,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-028",
+      "maximumOpticalInkHeightToLineHeight": 0.9519934906427989,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-058",
+      "maximumOpticalInkHeightToLineHeight": 1.0659050966608083,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-005",
+      "maximumOpticalInkHeightToLineHeight": 0.8375236550419031,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-005",
+      "maximumOpticalInkHeightToLineHeight": 1.3558646177786422,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-029",
+      "maximumOpticalInkHeightToLineHeight": 0.6579875237320315,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-059",
+      "maximumOpticalInkHeightToLineHeight": 1.0659050966608083,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-006",
+      "maximumOpticalInkHeightToLineHeight": 0.8375236550419031,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-006",
+      "maximumOpticalInkHeightToLineHeight": 1.3558646177786422,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-030",
+      "maximumOpticalInkHeightToLineHeight": 0.6579875237320315,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-060",
+      "maximumOpticalInkHeightToLineHeight": 1.0659050966608083,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-007",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-007",
+      "maximumOpticalInkHeightToLineHeight": 1.6931017731357785,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-031",
+      "maximumOpticalInkHeightToLineHeight": 0.9869812855980472,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-061",
+      "maximumOpticalInkHeightToLineHeight": 1.332316329021235,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-008",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-008",
+      "maximumOpticalInkHeightToLineHeight": 1.6931017731357785,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-032",
+      "maximumOpticalInkHeightToLineHeight": 0.9869812855980472,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-062",
+      "maximumOpticalInkHeightToLineHeight": 1.332316329021235,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-009",
+      "maximumOpticalInkHeightToLineHeight": 0.942214111922141,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-009",
+      "maximumOpticalInkHeightToLineHeight": 1.6931017731357785,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-033",
+      "maximumOpticalInkHeightToLineHeight": 0.7506102522375916,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-063",
+      "maximumOpticalInkHeightToLineHeight": 1.332316329021235,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-010",
+      "maximumOpticalInkHeightToLineHeight": 0.942214111922141,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-010",
+      "maximumOpticalInkHeightToLineHeight": 1.6959854014598539,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-034",
+      "maximumOpticalInkHeightToLineHeight": 0.7506102522375916,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-064",
+      "maximumOpticalInkHeightToLineHeight": 1.3324247355573637,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-011",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-011",
+      "maximumOpticalInkHeightToLineHeight": 1.6959854014598539,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-035",
+      "maximumOpticalInkHeightToLineHeight": 1.0008136696501222,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-065",
+      "maximumOpticalInkHeightToLineHeight": 1.3324247355573637,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-012",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-012",
+      "maximumOpticalInkHeightToLineHeight": 1.6959854014598539,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-036",
+      "maximumOpticalInkHeightToLineHeight": 1.0008136696501222,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-066",
+      "maximumOpticalInkHeightToLineHeight": 1.3324247355573637,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-013",
+      "maximumOpticalInkHeightToLineHeight": 0.942214111922141,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-013",
+      "maximumOpticalInkHeightToLineHeight": 2.033796926667963,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-037",
+      "maximumOpticalInkHeightToLineHeight": 0.7768510984540278,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-067",
+      "maximumOpticalInkHeightToLineHeight": 1.5988576449912124,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-014",
+      "maximumOpticalInkHeightToLineHeight": 0.942214111922141,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-014",
+      "maximumOpticalInkHeightToLineHeight": 2.033796926667963,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-038",
+      "maximumOpticalInkHeightToLineHeight": 0.7768510984540278,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-068",
+      "maximumOpticalInkHeightToLineHeight": 1.5988576449912124,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-015",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-015",
+      "maximumOpticalInkHeightToLineHeight": 2.033796926667963,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-039",
+      "maximumOpticalInkHeightToLineHeight": 1.0358014646053704,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-069",
+      "maximumOpticalInkHeightToLineHeight": 1.5988576449912124,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-016",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628547,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-016",
+      "maximumOpticalInkHeightToLineHeight": 2.5396526597036675,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-040",
+      "maximumOpticalInkHeightToLineHeight": 1.0358014646053704,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-070",
+      "maximumOpticalInkHeightToLineHeight": 1.9984744935318524,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-017",
+      "maximumOpticalInkHeightToLineHeight": 1.0050283860502838,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-017",
+      "maximumOpticalInkHeightToLineHeight": 2.5396526597036675,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-041",
+      "maximumOpticalInkHeightToLineHeight": 0.8006509357200976,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-071",
+      "maximumOpticalInkHeightToLineHeight": 1.9984744935318524,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-018",
+      "maximumOpticalInkHeightToLineHeight": 1.0050283860502838,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-018",
+      "maximumOpticalInkHeightToLineHeight": 2.5396526597036675,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-042",
+      "maximumOpticalInkHeightToLineHeight": 0.8006509357200976,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-072",
+      "maximumOpticalInkHeightToLineHeight": 1.9984744935318524,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-019",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628549,
+      "wordCount": 1080,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-019",
+      "maximumOpticalInkHeightToLineHeight": 0.7537712895377129,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-043",
+      "maximumOpticalInkHeightToLineHeight": 1.0008136696501222,
+      "wordCount": 1080,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-073",
+      "maximumOpticalInkHeightToLineHeight": 0.6214808787632221,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-020",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628549,
+      "wordCount": 2205,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-020",
+      "maximumOpticalInkHeightToLineHeight": 0.7537712895377129,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-044",
+      "maximumOpticalInkHeightToLineHeight": 1.0008136696501222,
+      "wordCount": 2205,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-074",
+      "maximumOpticalInkHeightToLineHeight": 0.6214808787632221,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-021",
+      "maximumOpticalInkHeightToLineHeight": 1.0050283860502838,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-021",
+      "maximumOpticalInkHeightToLineHeight": 0.7537712895377129,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-045",
+      "maximumOpticalInkHeightToLineHeight": 0.8286411716842963,
+      "wordCount": 864,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-075",
+      "maximumOpticalInkHeightToLineHeight": 0.6214808787632221,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-022",
+      "maximumOpticalInkHeightToLineHeight": 1.0050283860502838,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-022",
+      "maximumOpticalInkHeightToLineHeight": 0.9039097451857615,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-046",
+      "maximumOpticalInkHeightToLineHeight": 0.8286411716842963,
+      "wordCount": 1764,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-url-1",
+      "maximumOpticalInkHeightToLineHeight": 1.0050283860502838,
+      "wordCount": 1320,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-url-1",
+      "maximumOpticalInkHeightToLineHeight": 0.9039097451857616,
+      "wordCount": 660,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-023",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628549,
+      "wordCount": 1080,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-023",
+      "maximumOpticalInkHeightToLineHeight": 0.9039097451857615,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-076",
+      "maximumOpticalInkHeightToLineHeight": 0.7457527826596368,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-024",
+      "maximumOpticalInkHeightToLineHeight": 1.2562854825628549,
+      "wordCount": 2205,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-024",
+      "maximumOpticalInkHeightToLineHeight": 0.9039097451857615,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-047",
+      "maximumOpticalInkHeightToLineHeight": 1.0358014646053704,
+      "wordCount": 1080,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-077",
+      "maximumOpticalInkHeightToLineHeight": 0.7457527826596368,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-025",
+      "maximumOpticalInkHeightToLineHeight": 1.1287345154238524,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "strict-048",
+      "maximumOpticalInkHeightToLineHeight": 1.0358014646053704,
+      "wordCount": 2205,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-078",
+      "maximumOpticalInkHeightToLineHeight": 0.7457527826596368,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-026",
+      "maximumOpticalInkHeightToLineHeight": 1.1287345154238524,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-079",
+      "maximumOpticalInkHeightToLineHeight": 0.9321454722968026,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-027",
+      "maximumOpticalInkHeightToLineHeight": 1.1287345154238524,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-080",
+      "maximumOpticalInkHeightToLineHeight": 0.9321454722968026,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-028",
+      "maximumOpticalInkHeightToLineHeight": 1.1306569343065693,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-081",
+      "maximumOpticalInkHeightToLineHeight": 0.9321454722968026,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-029",
+      "maximumOpticalInkHeightToLineHeight": 1.1306569343065693,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-082",
+      "maximumOpticalInkHeightToLineHeight": 0.9322213181448331,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-030",
+      "maximumOpticalInkHeightToLineHeight": 1.1306569343065693,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-083",
+      "maximumOpticalInkHeightToLineHeight": 0.9322213181448331,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-031",
+      "maximumOpticalInkHeightToLineHeight": 1.3558646177786422,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-084",
+      "maximumOpticalInkHeightToLineHeight": 0.9322213181448331,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-032",
+      "maximumOpticalInkHeightToLineHeight": 1.3558646177786422,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-085",
+      "maximumOpticalInkHeightToLineHeight": 1.1186291739894552,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-033",
+      "maximumOpticalInkHeightToLineHeight": 1.3558646177786422,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-086",
+      "maximumOpticalInkHeightToLineHeight": 1.1186291739894552,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-034",
+      "maximumOpticalInkHeightToLineHeight": 1.6931017731357785,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-087",
+      "maximumOpticalInkHeightToLineHeight": 1.1186291739894552,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-035",
+      "maximumOpticalInkHeightToLineHeight": 1.6931017731357785,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-088",
+      "maximumOpticalInkHeightToLineHeight": 1.3982182084452037,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-036",
+      "maximumOpticalInkHeightToLineHeight": 1.6931017731357785,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-089",
+      "maximumOpticalInkHeightToLineHeight": 1.3982182084452037,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-037",
+      "maximumOpticalInkHeightToLineHeight": 0.5653284671532847,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-090",
+      "maximumOpticalInkHeightToLineHeight": 1.3982182084452037,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-038",
+      "maximumOpticalInkHeightToLineHeight": 0.5653284671532847,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-091",
+      "maximumOpticalInkHeightToLineHeight": 0.46611065907241656,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-039",
+      "maximumOpticalInkHeightToLineHeight": 0.5653284671532847,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-092",
+      "maximumOpticalInkHeightToLineHeight": 0.46611065907241656,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-040",
+      "maximumOpticalInkHeightToLineHeight": 0.6779323088893211,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-093",
+      "maximumOpticalInkHeightToLineHeight": 0.46611065907241656,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-041",
+      "maximumOpticalInkHeightToLineHeight": 0.6779323088893211,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-094",
+      "maximumOpticalInkHeightToLineHeight": 0.5593145869947276,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-042",
+      "maximumOpticalInkHeightToLineHeight": 0.6779323088893211,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-095",
+      "maximumOpticalInkHeightToLineHeight": 0.5593145869947276,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-043",
+      "maximumOpticalInkHeightToLineHeight": 0.8465508865678892,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-096",
+      "maximumOpticalInkHeightToLineHeight": 0.5593145869947276,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-044",
+      "maximumOpticalInkHeightToLineHeight": 0.8465508865678892,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-097",
+      "maximumOpticalInkHeightToLineHeight": 0.6991091042226019,
+      "wordCount": 432,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-045",
+      "maximumOpticalInkHeightToLineHeight": 0.8465508865678892,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-098",
+      "maximumOpticalInkHeightToLineHeight": 0.6991091042226019,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-046",
+      "maximumOpticalInkHeightToLineHeight": 0.8479927007299269,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-099",
+      "maximumOpticalInkHeightToLineHeight": 0.6991091042226019,
+      "wordCount": 882,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-047",
+      "maximumOpticalInkHeightToLineHeight": 0.8479927007299269,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-100",
+      "maximumOpticalInkHeightToLineHeight": 0.6991659886086249,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-048",
+      "maximumOpticalInkHeightToLineHeight": 0.8479927007299269,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-101",
+      "maximumOpticalInkHeightToLineHeight": 0.6991659886086249,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-049",
+      "maximumOpticalInkHeightToLineHeight": 1.0168984633339815,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-102",
+      "maximumOpticalInkHeightToLineHeight": 0.6991659886086249,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-050",
+      "maximumOpticalInkHeightToLineHeight": 1.0168984633339815,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-103",
+      "maximumOpticalInkHeightToLineHeight": 0.8389718804920913,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-051",
+      "maximumOpticalInkHeightToLineHeight": 1.0168984633339815,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-104",
+      "maximumOpticalInkHeightToLineHeight": 0.8389718804920913,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-052",
+      "maximumOpticalInkHeightToLineHeight": 1.2698263298518337,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-105",
+      "maximumOpticalInkHeightToLineHeight": 0.8389718804920913,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-053",
+      "maximumOpticalInkHeightToLineHeight": 1.2698263298518337,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-106",
+      "maximumOpticalInkHeightToLineHeight": 1.048663656333903,
+      "wordCount": 648,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-054",
+      "maximumOpticalInkHeightToLineHeight": 1.2698263298518337,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-107",
+      "maximumOpticalInkHeightToLineHeight": 1.048663656333903,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    },
+    {
+      "id": "styled-108",
+      "maximumOpticalInkHeightToLineHeight": 1.048663656333903,
+      "wordCount": 1323,
+      "readability": "real-word membership only; no human readability acceptance",
+      "semantics": "not grammatical prose"
+    }
+  ],
+  "conclusion": "No unchanged raw word raster decoded in either software reader. Some processed word layouts retain recoverable QR structure. Hidden, readable, ordinarily scannable prose is unproved.",
+  "phone": "not tested",
+  "physicalPrint": "not tested",
+  "coherentParagraph": "not attempted",
+  "newChatsAgents": "none",
+  "npm": "private/unpublished",
+  "pr": "draft #1",
+  "storedEvidenceBytesBeforeFinal": 42197711,
+  "finalizedAt": "2026-10-09T00:33:51.770Z",
+  "elapsedSeconds": 1292,
+  "gate": "Pause at pilot handback; next research phase needs owner selection"
+}

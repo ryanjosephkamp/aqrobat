@@ -1,0 +1,57 @@
+{
+  "name": "aqrobat",
+  "version": "0.4.2",
+  "private": true,
+  "description": "Deterministic text and emoji QR experiments, without AI or a server.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ryan Kamp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanjosephkamp/aqrobat.git"
+  },
+  "homepage": "https://ryanjosephkamp.github.io/aqrobat/",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "aqrobat": "bin/aqrobat.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/core.d.ts",
+      "import": "./src/core.mjs"
+    },
+    "./render": "./src/render.mjs",
+    "./text": {
+      "types": "./src/text.d.ts",
+      "import": "./src/text.mjs"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "vendor",
+    "LICENSE",
+    "NOTICE.md",
+    "docs/agents.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "build": "node tools/build.mjs",
+    "format:check": "prettier --check .",
+    "serve": "node tools/serve.mjs",
+    "prepack": "npm test",
+    "test:text-browser": "node tests/text-browser.mjs",
+    "test:extension": "node tests/installed-extension.mjs",
+    "test:native-text": "node tests/native-text.mjs",
+    "test:insertion": "node tests/insertion-browser.mjs"
+  },
+  "devDependencies": {
+    "jsqr": "1.4.0",
+    "playwright": "1.56.1",
+    "prettier": "3.8.1",
+    "zxing-wasm": "3.1.5"
+  }
+}

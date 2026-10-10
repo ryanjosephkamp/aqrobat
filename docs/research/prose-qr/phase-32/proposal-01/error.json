@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-10T04:19:13.874903+00:00",
+  "stage": "source producer, before any config/native capture",
+  "kind": "transcribed actual tool output",
+  "executedSource": "experiments/prose-qr/context-stability/proposal.mjs",
+  "executedSourceSha256": "b7a6532801d5101b1c6ccd63b6e2f356b165f046dd763edc214350af5ea0f687",
+  "snapshot": "experiments/prose-qr/context-stability/proposal-v1.executed.mjs",
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value: assert(c) at proposal.mjs:87:7",
+  "savedConfigs": 0,
+  "nativeAttempts": 0,
+  "firstGuard": 0,
+  "laterGuardsUnattempted": [0.12, 0.24],
+  "row": "not recorded by the initial source",
+  "cause": "DP permitted a terminal ordinary space rather than a terminal complete word; reconstruction reached an undefined next choice"
+}

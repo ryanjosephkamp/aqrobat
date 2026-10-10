@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-10T16:21:43.734Z",
+  "goal": "unsolved",
+  "phaseRange": [70, 74],
+  "totals": {
+    "plannedNativeProfileSlots": 17,
+    "nativeCaptures": 15,
+    "nativeExactRepeats": 15,
+    "plannedPrimaryReaderSlots": 87,
+    "completedPrimaryReaderSlots": 75,
+    "unattemptedPrimaryReaderSlots": 12,
+    "passiveProfiles": 25,
+    "actualStockBranches": 45,
+    "nativeFirstIntendedBranches": 2,
+    "nativeStrictSelectedPasses": 0,
+    "controlSlots": 30,
+    "controlExactSlots": 25,
+    "uniqueNativePNGHashes": 15
+  },
+  "newPayloadSources": 0,
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "independentPrimaryImplementations": ["OpenCV", "ZXing", "jsQR"],
+  "classification": "Visible outlined Latin structural controls, separate from unstyled Latin, uniform-black ASCII, logographic and earlier bold prose. Large repetitive word arrays are not natural prose.",
+  "setupAbort": {
+    "phase": 72,
+    "profile": "run-01",
+    "readerCalls": 0,
+    "unattemptedPrimarySlots": 12,
+    "error": "Source guard expected one background declaration; saved HTML has two. Corrected run-02 uses an artifact-specific string. Both executed sources and original plan retained."
+  },
+  "notable": {
+    "phase73Pave": {
+      "quadBalance": 0.9,
+      "nominalSpanFraction": 0.810778202292379,
+      "stableRows": "9/11",
+      "trueWorst": 0.5562979917466013,
+      "sourceDimension": 133,
+      "ordinaryDimension": 125
+    },
+    "phase74Pill": {
+      "minimumQuadBalance": 0.8181818181818182,
+      "minimumNominalSpan": 0.8221206183322448,
+      "minimumStableRowsFraction": 1,
+      "trueWorst": 0.5562979917466013,
+      "sourceDimension": 125,
+      "ordinaryDimension": 113
+    }
+  },
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-d/report.mjs": "3106ff96696b149f8ce127a40b81dc82509f52152fa698a6679d12f352aed867",
+    "docs/research/prose-qr/phase-70/analysis.json": "a50356bab6de5e5d5cb992e1110bd1b0596eb5d3f1636a32fa7d6b282af61dd2",
+    "docs/research/prose-qr/phase-71/analysis.json": "5596b07cfa685dad13e9e8cc9a476e545431423224ac3bc69cf356fd630af805",
+    "docs/research/prose-qr/phase-72/analysis.json": "caf8180d60bb3833fb5cd200362af4d1721fe8bd27c084a32eb2b71bf50d7847",
+    "docs/research/prose-qr/phase-73/analysis.json": "bbd1ad4f29aaf94b22102855838cfecd673de27b07d4ef4027b5a65043763f9e",
+    "docs/research/prose-qr/phase-74/analysis.json": "ed337287fdcf767e97d0d15abb354aa4c755cd4a57c9fdf35aae3be52e98352b"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "startedAt": "2026-10-09T15:03:25.999Z",
+  "parameters": [
+    {
+      "id": "compact-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 2,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 4,
+      "topChoices": 1,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 2,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 3,
+      "topChoices": 2,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-3",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 2,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 4,
+      "topChoices": 1,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-4",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 2,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 3,
+      "topChoices": 2,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-5",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 3,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 4,
+      "topChoices": 1,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-6",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 3,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 3,
+      "topChoices": 2,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-7",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 3,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 4,
+      "topChoices": 1,
+      "track": "plain-black"
+    },
+    {
+      "id": "compact-8",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "content": "fabricated",
+      "caseMode": "word-caps",
+      "charsPerModule": 3,
+      "linesPerModule": 1,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "vowelEvery": 3,
+      "topChoices": 2,
+      "track": "plain-black"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/unweighted/compact.mjs": "90489793406cc96f784152b6faf8e05e969861f43fcb8f5337426c325e74abf9",
+    "experiments/prose-qr/unweighted/plain-layout.mjs": "313930bfe3baeac1b89237e584f0c6155145fca16ea264b3e8bd13694bf78c39",
+    "experiments/prose-qr/unweighted/capture.mjs": "9fcfe7da39fd3edddfcac241311e4efa133ede411fe2f9f93125dbbc7a6a6d94"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "configuredReader": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "classification": "Unchanged native paragraph screenshots. Uniform 400 weight. Color-only and uniform-black letter-choice tracks kept separate. No external preprocessing, repair, crop, or expected-payload/matrix input to decoders."
+}

@@ -1,0 +1,503 @@
+{
+  "at": "2026-10-10T16:19:47.964Z",
+  "phase": 74,
+  "anchorHead": "f028c72870572a942d6d978d4df93d194e751442",
+  "goal": "unsolved",
+  "cap": 4000000,
+  "prior": [
+    {
+      "path": "docs/research/prose-qr/session-2026-10-10-c/custody.json",
+      "sha256": "425382e31e0c04fd1ffa02cb7bc3efdec43e895843e91caa0c5e0fecf4ce0234"
+    }
+  ],
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-d/analyze-seal.mjs": "cd32e6f58e97a37688f9e08ca5fd6c6d2cdec936bfeed58867ec680020d1557c"
+  },
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/phase-74/PLAN.md",
+      "bytes": 2533,
+      "sha256": "2ce756df64cf38f337294b383a943aa286f322e1d6e492759a8323977dfdd962"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/README.md",
+      "bytes": 666,
+      "sha256": "0f50832c53f022f563806d561de166365d46740e4fbad6228affb7e2ba68b7bf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/analysis.json",
+      "bytes": 160545,
+      "sha256": "ed337287fdcf767e97d0d15abb354aa4c755cd4a57c9fdf35aae3be52e98352b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/capture.json",
+      "bytes": 1658,
+      "sha256": "e5b2f301959304ec25c0dfc2ecac01a8e37663b4002ba7cf2f34bcf69f99cdfa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/filled-holes.json",
+      "bytes": 620,
+      "sha256": "ea56fb00706ebe5c62a6e57992a38849182ff216abb628fcaa0d9f3b1898d128"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/filled-holes.raw.json.gz",
+      "bytes": 263,
+      "sha256": "537221786baf1c4fb14225ebb0077803442b1847b3da698f45d97a4238377d23"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/filled-resource-fonts.json",
+      "bytes": 184,
+      "sha256": "d4b92825f7e45104130d5984ac06894d43b34f0d991daef2a5b9ed869bf6710f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/filled-resource.html.gz",
+      "bytes": 407,
+      "sha256": "6098e1d4e7cf3208b64c97fff2c22c229c0e0248cc67ac23701a7cda93c98eca"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/filled-resource.png",
+      "bytes": 1514,
+      "sha256": "d34adbb00441735315bfecf7ba27fe3e8365921c6b8fe516ce5398b9959fdfa3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/glyph.html.gz",
+      "bytes": 408,
+      "sha256": "a8de309869ec6d1cc34eb8c25ec32af811cf21b42a94e2ed50d7e48a9c0b490a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/glyph.png",
+      "bytes": 2522,
+      "sha256": "d74d74e29c93db87d1c7cf8257915680e6c6605ad01e1a54fe83291bd9085ef5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/holes.json",
+      "bytes": 754,
+      "sha256": "cd527782ba1f30ea5f7e6ea45858e69eab9656167c7265c85b28daa558ed0ae7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/holes.raw.json.gz",
+      "bytes": 309,
+      "sha256": "310d150847c476313cab030c3a090740048b223d46f32ac948ea7a3cd22ac2e6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/letters.png",
+      "bytes": 6892,
+      "sha256": "57734be03c53d0396a471f7c24bc2e2c88764e87a727ebc7245c9da1dcbf95a6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/native.html.gz",
+      "bytes": 439,
+      "sha256": "15094471fc545c5b68701c6ab0067ff5e6c38bf16f73fca27db076437c9b4d8b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/native.png",
+      "bytes": 147406,
+      "sha256": "bbe2b4b8cba4811f2a18a9c8a4ee53ee4b89bbf580319383f0c78f5496212d05"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/native.txt",
+      "bytes": 259,
+      "sha256": "2eae2550452e264b264879b48a1633d8396cb449dff318adb2c63c6b7f6825d7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/opencv.json",
+      "bytes": 440,
+      "sha256": "682dca3c3ace4145121dc0a61c0bff39f78eaa5a78c5c971896d7a8e61657b8e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/opencv.raw.json.gz",
+      "bytes": 305,
+      "sha256": "c4b1cc0d1cc7739b61767621511ecfd3b85d7ed257eec8b2a7c3f35510194533"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/passive-full.json.gz",
+      "bytes": 68377,
+      "sha256": "b1b3b32694e1587980ebe86ee5c536492a04d08375f8e19be803774c6261811d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/passive-summary.json",
+      "bytes": 30310,
+      "sha256": "79b905d7c3acef88047697585a422245038e25c0536d1dc5ae9f05ce6345f1d0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/pixels.json",
+      "bytes": 273,
+      "sha256": "9aa99b8339fbc9efdf75c23faa3098b238fadf8f92b8a0b155e486af6ccdacd8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/recipe.json",
+      "bytes": 1976,
+      "sha256": "217048e1a28d069bc5e6becc71036b2402f5e88156754b1b69f18525092f8586"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/resource-fonts.json",
+      "bytes": 184,
+      "sha256": "7bfbbe5ef8e88f333e514ab0f845ce3ea83a68d697e47e9f8ef0f792b755bd4b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/resource-profile.json",
+      "bytes": 1789,
+      "sha256": "d74557258daf516fa6b06919968d726059450b77d010c51e0ac95d9978d38444"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/bill/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/captures.json",
+      "bytes": 6317,
+      "sha256": "4474faa384892140442136950f0a38343f5bf9cb52e44f8e026f69663d827d25"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/jsqr.json",
+      "bytes": 962,
+      "sha256": "942e592d6a6f214e1c948af5e38c9df4d8c3fd844eaa4809b86627b4d67d57da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/opencv.json",
+      "bytes": 356,
+      "sha256": "68a1fb003146592f5415f77d86a341095e06304db7fdc4b8904758deb4c03c88"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/opencv.raw.json.gz",
+      "bytes": 269,
+      "sha256": "b7f460a12702985870a66864e819568c3aebb46caa0881264eb33a4205dd6174"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/passive-full.json.gz",
+      "bytes": 4664,
+      "sha256": "590921888d4dc6646ef044572f093f1c9fbcbfd52eec9b2da16f3e3dc82d9163"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/passive-summary.json",
+      "bytes": 25812,
+      "sha256": "bb41f268ac97661e45f707ce2dab83393812a85c4021b72d89242b816233bdd7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/pixels.json",
+      "bytes": 284,
+      "sha256": "2a1d899bc2b967d0df80e0f9b5f3a6e0809c2847a9d773f053c164ae64665261"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-inverted/zxing.json",
+      "bytes": 378,
+      "sha256": "8e650798cc2bc4dbf9d9fa606227ea6af77fff79c630d7b3d66e14ad2a19a3c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/jsqr.json",
+      "bytes": 962,
+      "sha256": "942e592d6a6f214e1c948af5e38c9df4d8c3fd844eaa4809b86627b4d67d57da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/opencv.json",
+      "bytes": 453,
+      "sha256": "f02861bcea5aeec55b18095df9e60c3aafdedacd3f6c35003fde213712d69f7e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/opencv.raw.json.gz",
+      "bytes": 305,
+      "sha256": "be55eff6126eec0b680ef84b3798a90c4f70108c62ef32ef4d98f2d524cf396a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/passive-full.json.gz",
+      "bytes": 2231,
+      "sha256": "16ff6f0794c62db183a2b15de244a89f4866eeef5711bc394422082f4eced811"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/passive-summary.json",
+      "bytes": 12762,
+      "sha256": "e2948c939ae8d6ef6055a9aaca722f30865b8c78334c27c90edb58ffecc5f95f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/pixels.json",
+      "bytes": 282,
+      "sha256": "0a39d23a6a0d437e8dc51cc02483e6f5bd284e858b1258c7e3b0998a12c0bcb8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/control-normal/zxing.json",
+      "bytes": 378,
+      "sha256": "8e650798cc2bc4dbf9d9fa606227ea6af77fff79c630d7b3d66e14ad2a19a3c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/done.json",
+      "bytes": 297,
+      "sha256": "3cb6ebdfbefc7404532e325b7e95d80ce6a5997b321c1eef97aaf27910261df0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/manifest.json",
+      "bytes": 2681,
+      "sha256": "6c80dba4c4745d3f3b798ea4c3d91c1959f000fce254f64dc8553bed957710c1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/capture.json",
+      "bytes": 1662,
+      "sha256": "d7080aa41f9bc1c5ffcc70eafef02904cf08d84412224e64a50ccb92ec7e798d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/filled-holes.json",
+      "bytes": 445,
+      "sha256": "df814813cbb228dd4ebfa99a77dc6788321a948ddc2b48d8f9e29c64b152faa6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/filled-holes.raw.json.gz",
+      "bytes": 208,
+      "sha256": "cb6db19bf6165b61c1d74a5d743dbab9bca728391be1b8aabc532ad7ea8342e9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/filled-resource-fonts.json",
+      "bytes": 184,
+      "sha256": "d4b92825f7e45104130d5984ac06894d43b34f0d991daef2a5b9ed869bf6710f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/filled-resource.html.gz",
+      "bytes": 409,
+      "sha256": "4911cc2a1f1084048fb2cbe795961430645de6beac4139fc587ba6f446cb865d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/filled-resource.png",
+      "bytes": 1168,
+      "sha256": "1fc5d438d9375a1be5daafdcea5e738aa1ec7d29dca1e764d46ab8576f583fe8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/glyph.html.gz",
+      "bytes": 411,
+      "sha256": "d0757f66af30ddc15d3241b0b3f9664f46440d466fc64a15d741bd9d313ebcb7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/glyph.png",
+      "bytes": 1835,
+      "sha256": "b6a4a5faccad73b6545cf926f332b913272783840f46fdbb235e92116b4711e8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/holes.json",
+      "bytes": 607,
+      "sha256": "ab11f9e8e471848491b5e59e8e3fce8e48762d9e7fec3b5fed754b65ec16eea7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/holes.raw.json.gz",
+      "bytes": 276,
+      "sha256": "2788da7470f7f5fe2bb0ea0c9c5c44067a2b4f1be9363dd30e39415ed983a590"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/letters.png",
+      "bytes": 6542,
+      "sha256": "82c0cc1c4e1cc98acf6ad55adaaa5f54b58216acb1889aab6921db854e4c40c4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/native.html.gz",
+      "bytes": 441,
+      "sha256": "e7fca41c690ef03d1c257649a03a2816daac88b3dded51ff343e46650c730e35"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/native.png",
+      "bytes": 149619,
+      "sha256": "84eb37c17600c11caf24b3c9e096964a6d378aa19f4e159362749e92b6d4bf3b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/native.txt",
+      "bytes": 259,
+      "sha256": "876298bad4fea4d5e9987ddb4228e36289842eee3951f3fea10068d73a0d4dd7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/opencv.json",
+      "bytes": 439,
+      "sha256": "a7b418b97e925c2a0f635073db3a5de7bf6d8b5bdb43bb68e9fe84bdd885b81d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/opencv.raw.json.gz",
+      "bytes": 304,
+      "sha256": "68e367033db94bf4175d83fe21d5e63bbc8b1fb40e8a19bba83baf820deaa82f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/passive-full.json.gz",
+      "bytes": 67229,
+      "sha256": "647ec491fd0969025427d6850b19ea9bd3063396108faad16987a5e673bd52bb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/passive-summary.json",
+      "bytes": 30377,
+      "sha256": "2aa3b7174ef20c129ae483e309d366ddfd81f01e6288fe1bdac33a5f70487d74"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/pixels.json",
+      "bytes": 273,
+      "sha256": "a4f04640d6d66d217600346729e53cf73da322b79eaab5f8603e36389b3a0e48"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/recipe.json",
+      "bytes": 1997,
+      "sha256": "e34e4684d389aa6ba8b5d2c84c9cf591bde563a80e66d676a0e1383fa17c4819"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/resource-fonts.json",
+      "bytes": 184,
+      "sha256": "7bfbbe5ef8e88f333e514ab0f845ce3ea83a68d697e47e9f8ef0f792b755bd4b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/resource-profile.json",
+      "bytes": 1815,
+      "sha256": "6ff1e0778d3ba202a2e259dd26607ab78e6e5d80a3132b1d5deae21336052581"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/pill/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/capture.json",
+      "bytes": 1588,
+      "sha256": "f74f2cc2b8862c11b0d5f2e51a722a28f84cb068af5e97e8904097d2f79f67b8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/filled-holes.json",
+      "bytes": 484,
+      "sha256": "de2bc3f0285dfb88bc2aafb6bdf3e4bfcd703f568378dd45b32e423af925fb8e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/filled-holes.raw.json.gz",
+      "bytes": 225,
+      "sha256": "4ef2b6a1fa270b3e96c5383c4b8b6e81244fb4a285c60117c43c9900c1068634"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/filled-resource-fonts.json",
+      "bytes": 184,
+      "sha256": "d4b92825f7e45104130d5984ac06894d43b34f0d991daef2a5b9ed869bf6710f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/filled-resource.html.gz",
+      "bytes": 408,
+      "sha256": "92768308eef473a7ece9cc42f37daa10baa81dd9a4c4720d5ad5667a0c418c61"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/filled-resource.png",
+      "bytes": 1513,
+      "sha256": "19aa552c2bbfd45c63b9f6946dc4b96d757f005a8e72f1de509630ebb21412e4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/glyph.html.gz",
+      "bytes": 409,
+      "sha256": "3893e342619b463acebabfa96af229c7d41be8acae0f9f8ba22a0deed9a58523"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/glyph.png",
+      "bytes": 2537,
+      "sha256": "f118a59357d1430461845d77f88dc0108b1b248a0729936735c51d87bc01a931"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/holes.json",
+      "bytes": 580,
+      "sha256": "4e41d8d31c35e73bcee63a2cfa1135fd5338cdb9a658fcbea00c740cb3dba798"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/holes.raw.json.gz",
+      "bytes": 277,
+      "sha256": "f647de2e3477deb93bf06a3c228337bb0bf72d2f9cb029c0b8a45cb4c9fb7a48"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/letters.png",
+      "bytes": 6347,
+      "sha256": "28f793cddd599791d54ad0507379ab627a0efb966250d1ec31fc456e984ece77"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/native.html.gz",
+      "bytes": 441,
+      "sha256": "ab624ef4257aa37e66d2b1a07f8499885f3211441cbbf5167c3869ac8cf929a1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/native.png",
+      "bytes": 147476,
+      "sha256": "6b8cc62a6dac61feb58eab3ff54b7b07f51b23eecb8f87bef082b6e8836cdade"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/native.txt",
+      "bytes": 259,
+      "sha256": "2f3862ec617ebb6d24fc683136030da426a2386ceb32cdfcf25a70785bc89142"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/opencv.json",
+      "bytes": 439,
+      "sha256": "b0b4ee86085ab502d13ddd9f8f43155d5ef0fe9a4e4b890361707359e630afda"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/opencv.raw.json.gz",
+      "bytes": 304,
+      "sha256": "1e87c48468b6a7a5086bc6fa7fd347a97a88b406a7a6c3c4208b6d500c21327b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/passive-full.json.gz",
+      "bytes": 68086,
+      "sha256": "2ba1dfc5aa2448e2bb312da933c98c96d4030b7ca7f6707666aaa4597c52602c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/passive-summary.json",
+      "bytes": 30227,
+      "sha256": "4b165aa2c7c091c68b1ff72fe9c5e7e62f08dfde2ff02defadae05e2c7a92750"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/pixels.json",
+      "bytes": 273,
+      "sha256": "4134ece7d9e8d204672b3d1d52d64c2f6acc1116ea6e6f2856891dd0147a10ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/recipe.json",
+      "bytes": 1972,
+      "sha256": "0687d8bcfac463ac4089ba252e615d1f170261fee9b46ef61700978450f64338"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/resource-fonts.json",
+      "bytes": 184,
+      "sha256": "7bfbbe5ef8e88f333e514ab0f845ce3ea83a68d697e47e9f8ef0f792b755bd4b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/resource-profile.json",
+      "bytes": 1817,
+      "sha256": "8095abcbfa7b74a1ad5deab9b32b5bf967e3bd140923b67c301d270ccc2fe6d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-74/run-01/rill/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "experiments/prose-qr/outline-counter-appendages/common.mjs",
+      "bytes": 1097,
+      "sha256": "6a24464f6354ab44e2f42f66982c36e3274c79eb7b7c6177a7e355f12b50d5ad"
+    },
+    {
+      "path": "experiments/prose-qr/outline-counter-appendages/holes.py",
+      "bytes": 1121,
+      "sha256": "7d42149282901a68c841c013daefc34c2ba535e247c99a158856412ff535e0f1"
+    },
+    {
+      "path": "experiments/prose-qr/outline-counter-appendages/passive.mjs",
+      "bytes": 6249,
+      "sha256": "46e8e84e8817e2f9bade90c90a8e75d096f8f5661d342899b56974d9c568b61d"
+    },
+    {
+      "path": "experiments/prose-qr/outline-counter-appendages/profile.mjs",
+      "bytes": 1332,
+      "sha256": "46d3ca9375ab38d2903b8492a0cceace8c0d4617064aee028a572a99963eb53b"
+    },
+    {
+      "path": "experiments/prose-qr/outline-counter-appendages/run.mjs",
+      "bytes": 17261,
+      "sha256": "f5a4d939061900a97f13af9f718491c3edf62fb6e44f79f57e983fe48ee94f37"
+    }
+  ]
+}

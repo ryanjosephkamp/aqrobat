@@ -1,0 +1,320 @@
+{
+  "phase": 19,
+  "nativeRenderings": 2,
+  "exactImmediateRepeats": 2,
+  "mechanicalLegibilityRejections": 0,
+  "completeFinderGates": 0,
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "goal": "unsolved",
+  "note": "Two full text-field finder-only contexts, with and without structural locator aids. No encoded data or format. Both fail complete finder gate. Default OpenCV replay: 12 native inputs, zero intended geometry, one conventional control exact.",
+  "results": [
+    {
+      "run": "run-01",
+      "payload": null,
+      "font": "Monaco",
+      "size": 14,
+      "leading": 14,
+      "unit": 144,
+      "nativePngSha256": "7d451443db544e6875eef2f7a9cfe24dac6762b7717ae51dcf1ac361217de263",
+      "repeatExact": true,
+      "nativeLegibilityRejected": false,
+      "legibilityReasons": [],
+      "nativeClearance": 2.43359375,
+      "sampledDiagnostics": [
+        {
+          "width": 25,
+          "height": 25,
+          "position": {
+            "topLeft": {
+              "x": 729,
+              "y": 702
+            },
+            "topRight": {
+              "x": 4347,
+              "y": 729
+            },
+            "bottomRight": {
+              "x": 4401,
+              "y": 4374
+            },
+            "bottomLeft": {
+              "x": 729,
+              "y": 4320
+            }
+          },
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "finderAudit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 1,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": false
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": false
+          }
+        }
+      ],
+      "sources": {
+        "docs/research/prose-qr/phase-19/run-01/capture.json": "7c571c2597735c99ba6f89ee54e431f265e65a593487fb4c267b65e56b291f2f",
+        "docs/research/prose-qr/phase-19/run-01/native-metrics.json": "b14728e8ab1c4bcda86bb5194835a56caf71fd9598e95ed5e8b3cf94aded2008",
+        "docs/research/prose-qr/phase-19/run-01/native-zxing-errors-diagnostic.json": "58bf9a22cd3e7a948e843192b9e8ed4d80bff00fcffb615e2de06db954cf462a"
+      }
+    },
+    {
+      "run": "run-02",
+      "payload": null,
+      "font": "Monaco",
+      "size": 14,
+      "leading": 14,
+      "unit": 144,
+      "nativePngSha256": "4df2a6f5cb67d1a3b2b3bb8bd0bb9879622c0fb41fb05b829ad73eca6aa424a4",
+      "repeatExact": true,
+      "nativeLegibilityRejected": false,
+      "legibilityReasons": [],
+      "nativeClearance": 2.43359375,
+      "sampledDiagnostics": [
+        {
+          "width": 25,
+          "height": 25,
+          "position": {
+            "topLeft": {
+              "x": 729,
+              "y": 702
+            },
+            "topRight": {
+              "x": 4347,
+              "y": 729
+            },
+            "bottomRight": {
+              "x": 4401,
+              "y": 4374
+            },
+            "bottomLeft": {
+              "x": 729,
+              "y": 4320
+            }
+          },
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "finderAudit": {
+            "finders": [
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              },
+              {
+                "wrong": 4,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 0],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": false
+              },
+              {
+                "wrong": 0,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": true
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": false
+          }
+        },
+        {
+          "width": 17,
+          "height": 17,
+          "position": {
+            "topLeft": {
+              "x": 729,
+              "y": 729
+            },
+            "topRight": {
+              "x": 3213,
+              "y": 729
+            },
+            "bottomRight": {
+              "x": 3159,
+              "y": 3132
+            },
+            "bottomLeft": {
+              "x": 729,
+              "y": 3159
+            }
+          },
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "finderAudit": {
+            "complete": false,
+            "reason": "Missing square sampled symbol"
+          }
+        }
+      ],
+      "sources": {
+        "docs/research/prose-qr/phase-19/run-02/capture.json": "b6103e56176c1a3f1736b20e2f836f16c95f4910a3d535cfe9eecaa39a6e65df",
+        "docs/research/prose-qr/phase-19/run-02/native-metrics.json": "01c849be3b4847567f1bd514feed4c75bfbab18b0046d475c7b9dfdb9ace936d",
+        "docs/research/prose-qr/phase-19/run-02/native-zxing-errors-diagnostic.json": "835002e20c5e865cd5aeceefff55ee734b9b0decbcd679a69af2fa519dd69aac"
+      }
+    }
+  ]
+}

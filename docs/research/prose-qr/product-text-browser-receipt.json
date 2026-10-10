@@ -1,0 +1,115 @@
+{
+  "checks": [
+    "three supplied recipes: complete plain-text height/width, custom filenames, TXT/RTF/text-HTML exports and single-page 150 mm A4 PDFs, HTML+plain clipboard and actual rich-editor paste, image pixels unchanged by text operations",
+    "separate image/text observations, retained image grid, close/reload guard after unsaved edits"
+  ],
+  "nativePhone": "not run",
+  "physicalPrint": "not run",
+  "samples": [
+    {
+      "name": "rocket",
+      "recipe": {
+        "schema": "aqrobat-recipe-v2",
+        "payload": "https://example.com",
+        "options": {
+          "glyph": "🚀",
+          "repeatX": 1,
+          "repeatY": 1,
+          "ecc": "L",
+          "boost": true,
+          "width": 1536,
+          "font": "Menlo",
+          "stroke": 0.1
+        }
+      },
+      "geometry": {
+        "scrollHeight": 1327,
+        "clientHeight": 1327,
+        "scrollWidth": 1080,
+        "clientWidth": 1080,
+        "rows": 34
+      },
+      "imageSha256": "641e3c7e2022dd89a66cbc1d0e29fbb5ffd52e545040100dbeecf76e3602e78a",
+      "clipboardTypes": ["text/plain", "text/html"]
+    },
+    {
+      "name": "circle",
+      "recipe": {
+        "schema": "aqrobat-recipe-v2",
+        "payload": "https://example.com",
+        "options": {
+          "glyph": "⚫️",
+          "repeatX": 1,
+          "repeatY": 1,
+          "ecc": "M",
+          "boost": true,
+          "width": 724,
+          "font": "Menlo",
+          "stroke": 0.1
+        }
+      },
+      "geometry": {
+        "scrollHeight": 1327,
+        "clientHeight": 1327,
+        "scrollWidth": 1080,
+        "clientWidth": 1080,
+        "rows": 34
+      },
+      "imageSha256": "ac92a7ab26883b405cc3ef638bf3f1d5c65c94e4de1334cfc91c9de178a9a92e",
+      "clipboardTypes": ["text/plain", "text/html"]
+    },
+    {
+      "name": "hash",
+      "recipe": {
+        "schema": "aqrobat-recipe-v1",
+        "payload": "https://english-openlist.pages.dev/",
+        "options": {
+          "glyph": "#",
+          "repeatX": 1,
+          "repeatY": 1,
+          "ecc": "M",
+          "boost": true,
+          "width": 656,
+          "font": "Menlo",
+          "stroke": 0.1
+        }
+      },
+      "geometry": {
+        "scrollHeight": 1107,
+        "clientHeight": 1107,
+        "scrollWidth": 1080,
+        "clientWidth": 1080,
+        "rows": 38
+      },
+      "imageSha256": "c93b48ae57636def4a7d662fc4d53d5adfe8985b37331a30f44926d69095fcfa",
+      "clipboardTypes": ["text/plain", "text/html"]
+    }
+  ],
+  "plainTextDecodes": [
+    {
+      "glyph": "#",
+      "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "🚀",
+      "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "⚫️",
+      "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    },
+    {
+      "glyph": "🤣.☄️1:a",
+      "renderer": "ordinary text rows; 700 Menlo, Apple Color Emoji fallback; normal 1.2 line spacing; 1200px canvas",
+      "decoder": "jsQR 1.4.0",
+      "result": "not recovered"
+    }
+  ],
+  "browser": "155.0.8059.39"
+}

@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · Native prose QR checkpoint</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f4f2ea;
+        --ink: #263139;
+        --soft: #526169;
+        --line: #d7ded9;
+        --accent: #a33d27;
+        --card: #fffef9;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          17px/1.65 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 860px;
+        margin: auto;
+        padding: 36px 24px 70px;
+      }
+      .eyebrow {
+        font:
+          700 12px/1.5 ui-monospace,
+          monospace;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--soft);
+      }
+      h1 {
+        font:
+          500 clamp(38px, 6vw, 62px)/1.07 Georgia,
+          serif;
+        letter-spacing: -0.025em;
+        margin: 16px 0 24px;
+      }
+      h2 {
+        font:
+          500 28px/1.2 Georgia,
+          serif;
+        margin: 0 0 14px;
+      }
+      p {
+        margin: 0 0 18px;
+      }
+      a {
+        color: #31576a;
+        text-underline-offset: 3px;
+      }
+      section {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+        margin: 22px 0;
+      }
+      .status {
+        display: inline-block;
+        background: #fbe2d6;
+        color: #7f291a;
+        padding: 7px 12px;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .intro {
+        max-width: 690px;
+        font-size: 20px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .stat {
+        border-top: 2px solid var(--ink);
+        padding-top: 9px;
+      }
+      .stat b {
+        display: block;
+        font:
+          500 34px/1.2 Georgia,
+          serif;
+      }
+      .stat span {
+        font-size: 14px;
+        color: var(--soft);
+      }
+      .callout {
+        border-left: 4px solid var(--accent);
+        padding-left: 18px;
+      }
+      .small {
+        font-size: 14px;
+        color: var(--soft);
+      }
+      .controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+      }
+      label {
+        font-size: 14px;
+        display: block;
+        flex: 1;
+        min-width: 140px;
+      }
+      select,
+      button {
+        font: inherit;
+        border: 1px solid #8b9c9d;
+        border-radius: 8px;
+        background: white;
+        color: var(--ink);
+        padding: 10px 12px;
+      }
+      select {
+        width: 100%;
+        margin-top: 4px;
+      }
+      button {
+        cursor: pointer;
+        background: #263f4d;
+        color: white;
+        font-size: 15px;
+      }
+      .bar {
+        height: 30px;
+        display: flex;
+        background: white;
+        border: 1px solid #536169;
+        margin: 6px 0 8px;
+        overflow: hidden;
+      }
+      .run {
+        height: 100%;
+        flex-shrink: 0;
+      }
+      .trace-label {
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      td,
+      th {
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        color: var(--soft);
+        font-weight: 600;
+      }
+      td:nth-child(2) {
+        white-space: nowrap;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 14px 0;
+      }
+      textarea {
+        width: 100%;
+        height: 320px;
+        padding: 14px;
+        font:
+          13px/1.5 ui-monospace,
+          monospace;
+        background: #f5f7f7;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        resize: vertical;
+      }
+      details {
+        margin-top: 16px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .footer {
+        font-size: 14px;
+        color: var(--soft);
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
+      }
+      output {
+        display: block;
+        font-size: 14px;
+        min-height: 24px;
+      }
+      @media (max-width: 580px) {
+        main {
+          padding: 24px 16px 48px;
+        }
+        section {
+          padding: 20px 16px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          gap: 8px;
+        }
+        .stat b {
+          font-size: 30px;
+        }
+        .intro {
+          font-size: 18px;
+        }
+        td,
+        th {
+          padding: 9px 5px;
+        }
+        body {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">Aqrobat research · October 9, 2026 · Phase 05</div>
+      <h1>The letters align.<br />The QR corners still break.</h1>
+      <p class="intro">
+        This continuation found a useful failure mode: a paragraph can match
+        every intended QR sampling point and still fail ordinary readers. The
+        letter strokes leave gaps across the larger corner patterns.
+      </p>
+      <p>
+        <span class="status">Research incomplete · No new phone candidate</span>
+      </p>
+      <div class="stats">
+        <div class="stat"><b>40</b><span>native text captures</span></div>
+        <div class="stat"><b>0</b><span>payload recoveries</span></div>
+        <div class="stat"><b>6</b><span>passing controls</span></div>
+      </div>
+      <section>
+        <h2>What changed</h2>
+        <p>
+          I measured installed Menlo and Courier New letter shapes at a native
+          20-pixel size. Moving the text upward by half a line corrected a
+          sampling alignment problem. Later cases match all
+          <strong>625 of 625</strong> intended black/white module centers after
+          ordinary binarization.
+        </p>
+        <p class="callout">
+          Those cases still fail jsQR and default ZXing. Their corner patterns
+          contain many short runs of ink and gaps, where readers need the
+          broader finder pattern.
+        </p>
+        <p>
+          Tighter spacing, a thresholded glyph model, and full-paragraph
+          feedback did not solve the tested outputs. The fabricated words remain
+          repetitive; crowded typography has not passed a human legibility
+          review.
+        </p>
+      </section>
+      <section>
+        <h2>See the corner-pattern problem</h2>
+        <p>
+          This diagram shows a line through one corner after the ordinary jsQR
+          binarizer. The text example has perfect target-center samples, yet its
+          long dark bands are fragmented. These are diagnostic traces drawn at a
+          common display width.
+        </p>
+        <div class="controls">
+          <label
+            >Corner<select id="corner">
+              <option value="topLeft">Top left</option>
+              <option value="topRight">Top right</option>
+              <option value="bottomLeft">Bottom left</option>
+            </select></label
+          ><label
+            >Direction<select id="axis">
+              <option value="horizontal">Horizontal</option>
+              <option value="vertical">Vertical</option>
+            </select></label
+          >
+        </div>
+        <div class="trace-label">Conventional control</div>
+        <div id="controlBar" class="bar" role="img"></div>
+        <p id="controlStats" class="small"></p>
+        <div class="trace-label">Native text · corridor-05 · uniform 700</div>
+        <div id="candidateBar" class="bar" role="img"></div>
+        <p id="candidateStats" class="small"></p>
+        <p class="small">
+          A perfect source-aligned sample score is a rendering measurement. The
+          acceptance readers receive the entire unchanged image and must locate
+          and decode it independently.
+        </p>
+      </section>
+      <section>
+        <h2>What was tested</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Batch</th>
+                <th>Native cases</th>
+                <th>Ordinary recovery</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Glyph mass vs. spatial shape</td>
+                <td>16</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Half-line alignment shift</td>
+                <td>8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Thresholded glyph / corner objective</td>
+                <td>8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Closer leading</td>
+                <td>4</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Full-paragraph feedback selections</td>
+                <td>4</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">
+          All 40 fail jsQR, default ZXing, and the retained baseline: 120
+          exact-payload attempts. Six conventional controls pass all three
+          profiles: 18 control attempts. There are two decoder families; the two
+          ZXing profiles use the same engine.
+        </p>
+        <p>
+          The feedback step retains <strong>384 model proposals</strong> and
+          their scores, decisions and source changes. Model loss improves, but
+          the final native outputs fail. All four canvas-model/native-text pixel
+          hashes differ. Model evaluations are separate from payload tests.
+        </p>
+        <p class="small">
+          One earlier paragraph run aborted before any model proposal or native
+          decoding. Its control and four uncompleted planned cases are
+          preserved. All 40 immediate same-HTML native repeats reproduce their
+          PNG hashes. Phase 04’s separate six-of-eight display replay limitation
+          remains open.
+        </p>
+      </section>
+      <section>
+        <h2>What you need to do</h2>
+        <p>
+          <strong
+            >No additional scan review is needed for this checkpoint.</strong
+          >
+          There is no screened phone candidate to send you. Your earlier
+          failures with both Samsung scanners remain recorded; this phase adds
+          no phone or print observations.
+        </p>
+        <p>
+          The next useful research step is smaller than another full paragraph
+          sweep: try to form readable native-letter finder patterns, and see
+          whether ordinary binarization preserves their broad runs. Then a full
+          unchanged output must decode in both ordinary reader families before
+          phone review.
+        </p>
+        <p>
+          This phase uses approximately 11 MB of its 12 MB file allowance.
+          Further captures should begin a fresh modest phase. Product 0.4.2,
+          exports, extension, original prototypes, the previous research and PDF
+          archive are preserved. PR #1 stays draft; npm stays private and
+          unpublished.
+        </p>
+      </section>
+      <section>
+        <h2>Safe continuation</h2>
+        <p>
+          The prompt below carries the checkpoint and all preservation
+          boundaries forward. Research remains incomplete.
+        </p>
+        <div class="actions">
+          <button id="copy" type="button">Copy continuation prompt</button
+          ><button id="download" type="button">Save checkpoint TXT</button>
+        </div>
+        <output id="notice" aria-live="polite"></output>
+        <details>
+          <summary>View or select the full checkpoint</summary>
+          <textarea
+            id="checkpoint"
+            readonly
+            aria-label="Checkpoint and continuation prompt"
+          ></textarea>
+        </details>
+      </section>
+      <section>
+        <h2>Evidence and method</h2>
+        <p>
+          <a
+            href="https://github.com/ryanjosephkamp/aqrobat/tree/codex/aqrobat-foundation/docs/research/prose-qr/phase-05"
+            >Phase report, retained outcomes and custody</a
+          >
+          ·
+          <a href="https://github.com/ryanjosephkamp/aqrobat/pull/1"
+            >Draft PR #1</a
+          >
+        </p>
+        <p>
+          The
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/locator/index.ts"
+            >jsQR locator</a
+          >
+          searches for black/white runs with a 1:1:3:1:1 proportion. Its
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/binarizer/index.ts"
+            >binarizer</a
+          >
+          classifies local neighborhoods. This phase pins the installed bundle
+          and uses unchanged final pixels for independent decoding. Expected
+          geometry stays in the renderer and diagnostics.
+        </p>
+        <p class="small">
+          18 product unit tests pass; formatting, source and pixel custody,
+          download hashes and Git scope are checked. These checks establish the
+          recorded software behavior. Gmail, native clipboard,
+          installed-extension acceptance, phone/print tests and the deferred
+          emoji atlas remain separate work.
+        </p>
+      </section>
+      <p class="footer">
+        Aqrobat · Made by
+        <a href="https://ryanjosephkamp.github.io/">Ryan Kamp</a>. No new agent,
+        chat, host, font/dependency install, release, merge, migration or
+        external message.
+      </p>
+    </main>
+    <script>
+      const data = {
+        candidate: {
+          topLeft: {
+            horizontal: {
+              pixels: 189,
+              agreement: 0.7724867724867724,
+              runs: [
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 10 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 11 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 6 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 8 },
+                { black: false, pixels: 11 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 9 },
+              ],
+              longestCentralBlackFraction: 0.09874400327860948,
+            },
+            vertical: {
+              pixels: 189,
+              agreement: 0.5925925925925926,
+              runs: [
+                { black: true, pixels: 1 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 12 },
+                { black: false, pixels: 18 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 9 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 7 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 15 },
+                { black: true, pixels: 12 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 5 },
+              ],
+              longestCentralBlackFraction: 0.11108700368843567,
+            },
+          },
+          topRight: {
+            horizontal: {
+              pixels: 189,
+              agreement: 0.7195767195767195,
+              runs: [
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 8 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 1 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 11 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 8 },
+                { black: false, pixels: 12 },
+                { black: true, pixels: 1 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 6 },
+              ],
+              longestCentralBlackFraction: 0.09874400327860948,
+            },
+            vertical: {
+              pixels: 189,
+              agreement: 0.5978835978835979,
+              runs: [
+                { black: true, pixels: 1 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 12 },
+                { black: false, pixels: 18 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 9 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 7 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 15 },
+                { black: true, pixels: 12 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 5 },
+              ],
+              longestCentralBlackFraction: 0.11108700368843567,
+            },
+          },
+          bottomLeft: {
+            horizontal: {
+              pixels: 189,
+              agreement: 0.7724867724867724,
+              runs: [
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 10 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 11 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 6 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 8 },
+                { black: false, pixels: 11 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 9 },
+              ],
+              longestCentralBlackFraction: 0.09874400327860948,
+            },
+            vertical: {
+              pixels: 189,
+              agreement: 0.5925925925925926,
+              runs: [
+                { black: false, pixels: 9 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 12 },
+                { black: false, pixels: 18 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 9 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 4 },
+                { black: false, pixels: 3 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 5 },
+                { black: true, pixels: 5 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 7 },
+                { black: true, pixels: 3 },
+                { black: false, pixels: 15 },
+                { black: true, pixels: 12 },
+                { black: false, pixels: 4 },
+                { black: true, pixels: 6 },
+                { black: false, pixels: 2 },
+                { black: true, pixels: 2 },
+                { black: false, pixels: 1 },
+                { black: true, pixels: 7 },
+              ],
+              longestCentralBlackFraction: 0.11108700368843567,
+            },
+          },
+        },
+        control: {
+          topLeft: {
+            horizontal: {
+              pixels: 139,
+              agreement: 0.9856115107913669,
+              runs: [
+                { black: true, pixels: 20 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 59 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 20 },
+              ],
+              longestCentralBlackFraction: 0.9893292682926829,
+            },
+            vertical: {
+              pixels: 139,
+              agreement: 0.9856115107913669,
+              runs: [
+                { black: true, pixels: 20 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 59 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 20 },
+              ],
+              longestCentralBlackFraction: 0.9893292682926829,
+            },
+          },
+          topRight: {
+            horizontal: {
+              pixels: 139,
+              agreement: 0.9856115107913669,
+              runs: [
+                { black: true, pixels: 20 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 59 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 20 },
+              ],
+              longestCentralBlackFraction: 0.9893292682926829,
+            },
+            vertical: {
+              pixels: 139,
+              agreement: 0.9856115107913669,
+              runs: [
+                { black: true, pixels: 20 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 59 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 20 },
+              ],
+              longestCentralBlackFraction: 0.9893292682926829,
+            },
+          },
+          bottomLeft: {
+            horizontal: {
+              pixels: 139,
+              agreement: 0.9856115107913669,
+              runs: [
+                { black: true, pixels: 20 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 59 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 20 },
+              ],
+              longestCentralBlackFraction: 0.9893292682926829,
+            },
+            vertical: {
+              pixels: 139,
+              agreement: 0.9856115107913669,
+              runs: [
+                { black: true, pixels: 20 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 59 },
+                { black: false, pixels: 20 },
+                { black: true, pixels: 20 },
+              ],
+              longestCentralBlackFraction: 0.9893292682926829,
+            },
+          },
+        },
+      };
+      const checkpoint =
+        "# Prose QR checkpoint — phase 05\n\nOctober 9, 2026. Work only in `/Users/noir/Documents/aqrobat`,\n`codex/aqrobat-foundation`, existing draft PR #1. Phase baseline is clean\n`dbcd32f86830486b4ba2fc99006fcef58691b607`. No migration requested.\n\nThe final checkpoint retains 40 native text captures in five completed fresh\nbatches; all fail jsQR, ordinary-default ZXing and the retained baseline. Six\nconventional controls pass all three. All 40 immediate same-HTML native repeats\nhave identical PNG hashes. The older phase-04 display replay limit remains open.\nNo new phone results; Ryan's earlier full-PNG failures with both Samsung scanners\nremain distinct observations without a specified exact denominator.\n\nMeasured target-center correctness can be perfect while the actual finder axes\nremain fragmented into dozens of runs. Close-leading and a thresholded isolated\nglyph model do not solve that problem in the tested cases. Read `README.md`,\nthe batch plans, `verification-final.json`, `model-audit-01.json`, `custody.json`,\nand the executed-source snapshots. The 36-case `verification-01.json` milestone\nand 40-case `verification-02.json` reconciliation remain preserved.\nExisting product 0.4.2, downloads and all 460 prior inventory files are unchanged.\nResearch is **incomplete**. No successful normal-phone candidate is handed over.\n\nThe final paragraph objective retains 384 model proposals (not payload probes).\nModel loss improves, but all four selected native DOM outputs fail. Their model\nand DOM pixel hashes differ. The first paragraph batch aborts before any proposal\nor native decoding; four uncompleted cases and its passing control remain.\nAll task-owned capture/audit/browser jobs are closed at handback.\n\nEach capture script uses exclusive creation: never rerun it into an existing\noutput directory. Before another adaptive batch, register a specific objective\nand fresh output path, preserve superseded executed source hashes, and respect\nthe 12-MB logical-file phase cap. This phase uses approximately 11 MB; start a\nfresh modest phase for further captures. Close only task-owned jobs.\n\n## Resume prompt\n\n> Continue prose QR research only in /Users/noir/Documents/aqrobat. Read AGENTS.md,\n> docs/research/prose-qr/phase-05/CHECKPOINT.md, README.md, the latest verification\n> receipt and custody receipt if present. Verify Git branch, remote, HEAD, dirty\n> state, draft PR #1 and saved evidence before edits. Preserve all prior phases,\n> original prototypes, product/download/extension, Splashery, PDF archive, owner\n> profiles, other tasks and running jobs. Keep npm private/unpublished and PR #1\n> draft. No merge, migration, host, chat/agent, release, store submission or\n> messages. Continue toward readable unchanged native text that ordinary\n> independent readers decode, followed by phone acceptance. Perfect source-aligned\n> center samples do not establish QR recovery: phase 05 has a perfect-center\n> failure with heavily fragmented finder axes. Explore only a small preregistered\n> finder-only objective through actual native-letter binarization before\n> another full-QR sweep; preserve legibility\n> and all outcomes. Use expected geometry only in the renderer and diagnostics,\n> never to repair pixels or force a decoder. No hidden blocks, invisible text,\n> acceptance-reader tuning or unreadable raster compression. Start fresh exclusive\n> directories; respect the phase file cap or begin a fresh modest phase. Back up\n> milestones on the existing branch. Do not present failed grids as successful\n> phone candidates or claim completion because a time block ends.\n";
+      const q = (id) => document.getElementById(id);
+      q("checkpoint").value = checkpoint;
+      function draw() {
+        for (const name of ["control", "candidate"]) {
+          const item = data[name][q("corner").value][q("axis").value],
+            bar = q(name + "Bar");
+          bar.replaceChildren();
+          for (const r of item.runs) {
+            const s = document.createElement("span");
+            s.className = "run";
+            s.style.width = (r.pixels / item.pixels) * 100 + "%";
+            s.style.background = r.black ? "#151515" : "white";
+            bar.append(s);
+          }
+          const text =
+            item.runs.length +
+            " alternating runs · longest central black stretch " +
+            (item.longestCentralBlackFraction * 100).toFixed(1) +
+            "% of its intended band";
+          q(name + "Stats").textContent = text;
+          bar.setAttribute("aria-label", name + ": " + text);
+        }
+      }
+      q("corner").addEventListener("change", draw);
+      q("axis").addEventListener("change", draw);
+      draw();
+      q("copy").addEventListener("click", async () => {
+        const prompt = checkpoint
+          .slice(checkpoint.indexOf("> Continue"))
+          .replace(/^> ?/gm, "");
+        try {
+          await navigator.clipboard.writeText(prompt);
+          q("notice").textContent = "Continuation prompt copied.";
+        } catch {
+          q("checkpoint").value = prompt;
+          q("checkpoint").closest("details").open = true;
+          q("checkpoint").focus();
+          q("checkpoint").select();
+          q("notice").textContent = "Select and copy the prompt below.";
+        }
+      });
+      q("download").addEventListener("click", () => {
+        const url = URL.createObjectURL(
+            new Blob([checkpoint], { type: "text/plain;charset=utf-8" }),
+          ),
+          a = document.createElement("a");
+        a.href = url;
+        a.download = "aqrobat-prose-qr-phase-05-checkpoint.txt";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        q("notice").textContent = "Checkpoint TXT download requested.";
+      });
+    </script>
+  </body>
+</html>

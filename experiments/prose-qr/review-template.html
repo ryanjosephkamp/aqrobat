@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Aqrobat · Prose-QR first pilot</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f1fa;
+        --card: #fff;
+        --ink: #282034;
+        --muted: #665d73;
+        --line: #ddd3ea;
+        --accent: #684498;
+        --soft: #eee6f9;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1080px;
+        margin: auto;
+        padding: 26px 20px 70px;
+      }
+      h1 {
+        font:
+          600 clamp(35px, 7vw, 58px)/1.1 Georgia,
+          serif;
+        margin: 16px 0;
+      }
+      h2 {
+        font:
+          600 29px/1.2 Georgia,
+          serif;
+        margin: 0 0 16px;
+      }
+      h3 {
+        font-size: 19px;
+        margin: 18px 0 6px;
+      }
+      p {
+        margin: 10px 0;
+      }
+      .eyebrow {
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+      }
+      section {
+        padding: 26px;
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 18px;
+        margin: 22px 0;
+      }
+      a {
+        color: var(--accent);
+        overflow-wrap: anywhere;
+      }
+      small,
+      .muted {
+        color: var(--muted);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .stat {
+        background: var(--soft);
+        padding: 16px;
+        border-radius: 12px;
+      }
+      .stat strong {
+        display: block;
+        font-size: 29px;
+      }
+      .callout {
+        padding: 15px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+        margin: 18px 0;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      button {
+        font: inherit;
+        background: var(--soft);
+        color: var(--ink);
+        border: 1px solid var(--accent);
+        border-radius: 9px;
+        padding: 9px 13px;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      input,
+      select,
+      textarea {
+        font: inherit;
+        color: var(--ink);
+        background: var(--card);
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        width: 100%;
+        max-width: 100%;
+      }
+      label {
+        display: block;
+        margin: 12px 0 5px;
+        font-weight: 600;
+      }
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      figure {
+        margin: 18px 0;
+      }
+      .plate {
+        background: white;
+        color: black;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0;
+        overflow: auto;
+        min-height: 100px;
+        max-height: 980px;
+      }
+      .plate img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: auto;
+      }
+      .plate iframe {
+        display: block;
+        border: 0;
+        background: white;
+      }
+      .caption {
+        font-size: 14px;
+        color: var(--muted);
+        overflow-wrap: anywhere;
+      }
+      .badge {
+        display: inline-block;
+        background: var(--soft);
+        padding: 5px 10px;
+        border-radius: 7px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 650;
+      }
+      .diagnostics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .diagnostic {
+        max-width: 100%;
+        width: 240px;
+      }
+      .diagnostic img {
+        display: block;
+        background: white;
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        background: var(--soft);
+        padding: 2px 4px;
+        border-radius: 4px;
+        overflow-wrap: anywhere;
+      }
+      .table-wrap {
+        overflow: auto;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+      }
+      th,
+      td {
+        border-bottom: 1px solid var(--line);
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .status {
+        font-size: 14px;
+        min-height: 1.6em;
+        color: var(--muted);
+      }
+      .hidden {
+        display: none !important;
+      }
+      #reply {
+        font:
+          14px/1.5 ui-monospace,
+          monospace;
+        min-height: 190px;
+      }
+      li {
+        margin: 9px 0;
+      }
+      @media (max-width: 700px) {
+        main {
+          padding: 18px 12px 50px;
+        }
+        section {
+          padding: 20px 16px;
+        }
+        .pair {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .stat strong {
+          font-size: 25px;
+        }
+        button {
+          flex: 1;
+        }
+        .diagnostic {
+          width: 100%;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #191520;
+          --card: #251f2e;
+          --ink: #f2ebfa;
+          --muted: #bfb3cd;
+          --line: #4a3e59;
+          --accent: #bd9aec;
+          --soft: #352940;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+          color: black;
+        }
+        header,
+        .stats,
+        .controls,
+        .actions,
+        .feedback,
+        #findings,
+        #next,
+        footer,
+        details {
+          display: none;
+        }
+        main {
+          padding: 0;
+          max-width: none;
+        }
+        section {
+          border: none;
+          margin: 0;
+          padding: 0;
+        }
+        #stage {
+          overflow: visible;
+          border: none;
+          max-height: none;
+        }
+        #raw-img {
+          width: 160mm !important;
+          max-width: 160mm;
+        }
+        h2 {
+          font-size: 18pt;
+        }
+        .plate iframe {
+          display: none;
+        }
+        #raw-img.hidden {
+          display: block !important;
+        }
+        figure {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">
+          AQROBAT · OCTOBER 8, 2026 · BOUNDED RESEARCH PILOT
+        </div>
+        <h1>Can words carry<br />a QR pattern?</h1>
+        <p>
+          We tested real words first, before trying meaningful sentences or a
+          coherent paragraph. This is an experiment beside Aqrobat, with the
+          existing generator and extension preserved.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <strong>158 candidates</strong
+            ><span
+              >Two fonts, two tracks, three sizes. All 474 raw screenshots
+              retained.</span
+            >
+          </div>
+          <div class="stat">
+            <strong>0 / 474 raw</strong
+            ><span
+              >Exact recovery in each decoder: jsQR and ZXing. The visible
+              originals remain unproved.</span
+            >
+          </div>
+          <div class="stat">
+            <strong>11 / 16 · 12 / 16</strong
+            ><span
+              >Exact recovery from processed diagnostics: jsQR · ZXing. Separate
+              evidence.</span
+            >
+          </div>
+        </div>
+        <div class="callout">
+          <strong>The prose goal is still open.</strong> Some word layouts
+          retain a recoverable QR pattern after image processing. We have not
+          produced a readable paragraph that scans as an unchanged image. New
+          phone and paper tests have not been done.
+        </div>
+      </header>
+      <section id="review">
+        <h2>A small manual review</h2>
+        <ol>
+          <li>
+            Scan the <strong>clean control</strong> first. Then choose one
+            original word layout below.
+          </li>
+          <li>
+            Try the <strong>Original screenshot</strong> view on the Mac screen,
+            preferably at its source size. Record Samsung Camera and Samsung’s
+            dedicated QR scanner separately.
+          </li>
+          <li>
+            Optionally compare <strong>Selectable text replay</strong>. It uses
+            the same text/styles, but fonts and rendering can differ on your
+            device.
+          </li>
+          <li>
+            Record the actual output you scanned. Export your notes, or paste
+            the short reply at the end. A processed diagnostic scan never
+            becomes an original-layout pass.
+          </li>
+        </ol>
+        <details>
+          <summary>Clean controls — distinct from the word experiment</summary>
+          <p>
+            Both software decoders recovered the short-text control at 320, 640,
+            and 960 px. The URL control is also recorded separately. Phone
+            results are not prefilled.
+          </p>
+          <div id="control-images" class="diagnostics"></div>
+          <p class="muted">
+            Expected short text: <code>AQROBAT-TEST</code>. Expected URL:
+            <code>https://example.com</code>. If a clean control does not scan
+            in an app, report that before interpreting its word-layout result.
+          </p>
+        </details>
+        <div class="controls">
+          <label for="case">Choose a candidate</label
+          ><select id="case"></select>
+          <div class="pair">
+            <div>
+              <label for="scale">Source size</label
+              ><select id="scale">
+                <option>320</option>
+                <option>640</option>
+                <option>960</option>
+              </select>
+            </div>
+            <div>
+              <label for="mode">Output</label
+              ><select id="mode">
+                <option value="raw">Original screenshot</option>
+                <option value="live">Selectable text replay</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <h3 id="case-title"></h3>
+        <p id="case-description"></p>
+        <span class="badge">Raw software result: no exact recovery</span>
+        <p>Expected payload: <code id="expected"></code></p>
+        <figure>
+          <div class="plate" id="stage">
+            <img id="raw-img" alt="Original word-layout screenshot" /><iframe
+              class="hidden"
+              id="live-frame"
+              sandbox
+              title="Selectable word-layout replay"
+            ></iframe>
+          </div>
+          <figcaption id="caption" class="caption"></figcaption>
+        </figure>
+        <p id="geometry" class="muted"></p>
+        <div class="actions">
+          <button id="png">Save original PNG</button
+          ><button id="html">Save replay HTML</button
+          ><button id="text">Copy plain words</button
+          ><button id="print">Print this original</button>
+        </div>
+        <p id="output-status" class="status" role="status"></p>
+        <details>
+          <summary>Processed diagnostic comparison</summary>
+          <p>
+            These are whole-image blur/downsample or blur/threshold operations
+            applied to the recorded original. No QR matrix was reconstructed.
+            They are
+            <strong>processed outputs, not original scan successes</strong>.
+          </p>
+          <div id="diagnostic-images" class="diagnostics"></div>
+        </details>
+        <div class="feedback">
+          <h3>Your observations for this exact view</h3>
+          <p class="muted">
+            Not tested is the default. Notes stay in this browser when storage
+            is available; they are never uploaded. Export them to bring them
+            back to our chat. Changing candidate/size/output keeps separate
+            records.
+          </p>
+          <div class="pair">
+            <div>
+              <label for="camera">Samsung Camera</label
+              ><select id="camera"></select>
+            </div>
+            <div>
+              <label for="dedicated">Samsung Scan QR code</label
+              ><select id="dedicated"></select>
+            </div>
+          </div>
+          <div class="pair">
+            <div>
+              <label for="reading">Word readability</label
+              ><select id="reading">
+                <option>Not reviewed</option>
+                <option>Words readable</option>
+                <option>Some words hard to read</option>
+                <option>Words overlap or are unreadable</option>
+              </select>
+            </div>
+            <div>
+              <label for="hiding">Does it look like normal text?</label
+              ><select id="hiding">
+                <option>Not reviewed</option>
+                <option>Clearly QR-shaped</option>
+                <option>Pattern noticeable, but subtle</option>
+                <option>Looks like ordinary text</option>
+              </select>
+            </div>
+          </div>
+          <label for="conditions"
+            >Screen/browser, zoom, distance, brightness, notes</label
+          ><textarea
+            id="conditions"
+            maxlength="2000"
+            placeholder="e.g. MacBook Pro / Chrome / 100%; scanned only from farther away. Record the exact recognized text if the app shows it."
+          ></textarea
+          ><label for="paper">Physical print</label
+          ><select id="paper">
+            <option>Not tested</option>
+            <option>Printed, not scanned</option>
+            <option>Expected payload recognized</option>
+            <option>No scan</option>
+            <option>Different payload</option>
+          </select>
+          <p id="note-status" class="status" role="status"></p>
+        </div>
+      </section>
+      <section class="feedback">
+        <h2>Bring the results back</h2>
+        <div class="actions">
+          <button id="export">Export observations JSON</button
+          ><button id="copy-reply">Copy short reply</button>
+        </div>
+        <label for="import">Import a saved observations file</label
+        ><input id="import" type="file" accept=".json,application/json" />
+        <p id="io-status" class="status" role="status"></p>
+        <label for="reply">Short reply — editable for extra notes</label
+        ><textarea id="reply"></textarea>
+        <p class="muted">
+          You can paste this into our chat. No files or screenshots are required
+          for the first response. Export/import transfers the complete
+          view-specific notes; ordinary clipboard copying does not transfer
+          typography.
+        </p>
+      </section>
+      <section id="findings">
+        <h2>What the pilot established</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Evidence</th>
+                <th>Result</th>
+                <th>What it means</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Strict text</td>
+                <td>
+                  49 candidates / 147 raw screenshots / zero exact recoveries in
+                  either decoder
+                </td>
+                <td>
+                  Uniform font/weight/size/color; word choice, line layout,
+                  blank or thin-word light regions
+                </td>
+              </tr>
+              <tr>
+                <td>Typography-assisted</td>
+                <td>
+                  109 candidates / 327 raw screenshots / zero exact recoveries
+                  in either decoder
+                </td>
+                <td>
+                  Recorded size, spacing, and weight differences; selectable
+                  words, no solid-module underlay
+                </td>
+              </tr>
+              <tr>
+                <td>Processed diagnostics</td>
+                <td>16 images; jsQR 11 exact / ZXing 12 exact</td>
+                <td>
+                  Spatial structure is recoverable for some cases after
+                  processing; phone scanning of originals remains unproved
+                </td>
+              </tr>
+              <tr>
+                <td>Calibration</td>
+                <td>
+                  Short control 3/3 exact per decoder; ordinary-text negatives
+                  6/6 unrecognized
+                </td>
+                <td>
+                  The recorded harness can decode conventional QR and reject
+                  these text-only controls
+                </td>
+              </tr>
+              <tr>
+                <td>Reading / hiding / phone / paper</td>
+                <td>Independent acceptance pending</td>
+                <td>
+                  Real words are not yet grammatical prose; readable text,
+                  inconspicuousness, and scanning are separate goals
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Metrics were measured in the installed Menlo regular/bold and Courier
+          New regular/bold fonts. Chrome’s platform-font report confirmed those
+          fonts for the word probes; font-file hashes are retained. A browser
+          requesting the same font elsewhere does not guarantee the same glyphs.
+        </p>
+        <p>
+          Dense word tiles can overlap vertically or spill slightly into the
+          intended blank margin. Pixel border measurements and optical
+          line-height ratios are retained per case. The original input labels
+          describe a <em>nominal</em> four-module border, not a guarantee of its
+          exact rendered size.
+        </p>
+        <details>
+          <summary>How the experiment works</summary>
+          <p>
+            The standard encoder supplies a QR matrix. A small original word
+            list supplies high-ink words and lower-ink words. The strict track
+            places complete words with uniform typography. The assisted track
+            can shrink light-region words and change spacing, while keeping
+            actual characters. No hidden black squares or custom font shapes sit
+            behind the words.
+          </p>
+          <p>
+            Each raw input is a screenshot of the DOM at a recorded size. Its
+            original PNG and pixel hashes are saved. Diagnostic processing uses
+            the whole original image; it does not consult the target matrix to
+            repair pixels. Exact decoded text is compared with the intended
+            payload.
+          </p>
+          <p>
+            My inference: the results expose a tension between readable word
+            spacing and strong finder/data patterns. The diagnostic passes
+            justify testing optical conditions; they do not establish that an
+            ordinary paragraph can conceal a camera-readable QR.
+          </p>
+        </details>
+        <details>
+          <summary>Custody, limits, and the calibration correction</summary>
+          <p>
+            The first fractional-edge SVG control failed jsQR at 640 px. That
+            failure is retained in pilot-01. Integer pixel boundaries corrected
+            the control, which then passed both decoders at all three sizes.
+          </p>
+          <p>
+            Large replay HTML files triggered a conservative storage pause. The
+            summary writer also reapplied the reporting reserve; its output was
+            recovered from already flushed receipts. Replay source was archived
+            losslessly, then only unattempted cases and one previously untested
+            scale continued. Existing raw frames were not rerun or removed.
+            Every failure remains recorded.
+          </p>
+          <p>
+            The full grid finished within the 60-minute execution limit. Stored
+            evidence stayed under 50 MiB, including the lossless replay archives
+            and calibration failure. No model sessions, font downloads, GPU
+            training, email activity, or new hosting surface were created.
+          </p>
+        </details>
+        <p>
+          <a href="https://github.com/cozmo/jsQR">jsQR source</a> ·
+          <a href="https://github.com/Sec-ant/zxing-wasm"
+            >ZXing-WASM source and licenses</a
+          >
+          ·
+          <a href="https://www.qrcode.com/en/howto/code.html"
+            >DENSO WAVE margin guidance</a
+          >
+          ·
+          <a
+            href="https://github.com/ryanjosephkamp/aqrobat/tree/codex/aqrobat-foundation/docs/research/prose-qr"
+            >Full receipts and report</a
+          >
+        </p>
+      </section>
+      <section id="next">
+        <h2>Where to go after your review</h2>
+        <p>
+          I recommend testing a few <strong>originals</strong> with both Samsung
+          apps before selecting another automated search. A raw phone recovery
+          would tell us which optical conditions are worth optimizing. If
+          originals fail, the next bounded proposal should focus on readable
+          spacing, finder geometry, and verified margins.
+        </p>
+        <p>
+          Coherent sentences and paragraphs remain a later stage. The emoji
+          atlas, Gmail review, npm release, and project migration stay separate.
+          PR #1 remains draft, npm private/unpublished, and the existing
+          tool/extension is unchanged.
+        </p>
+        <p>
+          <strong>This pilot ends at the handback.</strong> Returning notes does
+          not automatically start another experiment or authorize a release.
+        </p>
+      </section>
+      <footer class="muted">
+        <p>
+          Aqrobat · Built by Codex for Ryan Kamp. Other repositories, original
+          prototypes, the private PDF archive, and owner browser profiles are
+          preserved.
+        </p>
+      </footer>
+    </main>
+    <script id="pilot-data" type="application/json">
+      __PILOT_DATA__
+    </script>
+    <script>
+      const DATA = JSON.parse(
+          document.getElementById("pilot-data").textContent,
+        ),
+        el = (id) => document.getElementById(id);
+      const choices = [
+        "Not tested",
+        "Recognized expected text / link",
+        "No scan",
+        "Recognized different content",
+      ];
+      const key = "aqrobat-prose-review-pilot-01",
+        validIds = new Set(DATA.cases.map((c) => c.id));
+      let observations = {},
+        epoch = 0;
+      function validNote(n) {
+        return (
+          n &&
+          choices.includes(n.camera) &&
+          choices.includes(n.dedicated) &&
+          [
+            "Not reviewed",
+            "Words readable",
+            "Some words hard to read",
+            "Words overlap or are unreadable",
+          ].includes(n.reading) &&
+          [
+            "Not reviewed",
+            "Clearly QR-shaped",
+            "Pattern noticeable, but subtle",
+            "Looks like ordinary text",
+          ].includes(n.hiding) &&
+          [
+            "Not tested",
+            "Printed, not scanned",
+            "Expected payload recognized",
+            "No scan",
+            "Different payload",
+          ].includes(n.paper) &&
+          typeof n.conditions === "string" &&
+          n.conditions.length <= 2000
+        );
+      }
+      function validate(o) {
+        if (
+          !o ||
+          o.schema !== "aqrobat-prose-observations-v1" ||
+          !o.observations ||
+          typeof o.observations !== "object" ||
+          Array.isArray(o.observations) ||
+          Object.keys(o.observations).length > 100
+        )
+          throw Error("Not a valid pilot observations file. Nothing changed.");
+        for (const [k, n] of Object.entries(o.observations)) {
+          const [id, size, mode] = k.split("|");
+          if (
+            k.split("|").length !== 3 ||
+            !validIds.has(id) ||
+            !["320", "640", "960"].includes(size) ||
+            !["raw", "live"].includes(mode) ||
+            !validNote(n)
+          )
+            throw Error("Unsupported view or observation. Nothing changed.");
+        }
+        return o.observations;
+      }
+      try {
+        const saved = localStorage.getItem(key);
+        if (saved) observations = validate(JSON.parse(saved));
+      } catch {}
+      for (const id of ["camera", "dedicated"])
+        for (const c of choices) {
+          const option = document.createElement("option");
+          option.textContent = c;
+          el(id).append(option);
+        }
+      for (const c of DATA.cases) {
+        const option = document.createElement("option");
+        option.value = c.id;
+        option.textContent = c.label;
+        el("case").append(option);
+      }
+      function current() {
+        return DATA.cases.find((c) => c.id === el("case").value);
+      }
+      function viewKey() {
+        return `${el("case").value}|${el("scale").value}|${el("mode").value}`;
+      }
+      function blank() {
+        return {
+          camera: "Not tested",
+          dedicated: "Not tested",
+          reading: "Not reviewed",
+          hiding: "Not reviewed",
+          paper: "Not tested",
+          conditions: "",
+        };
+      }
+      function loadNote() {
+        const n = observations[viewKey()] || blank();
+        for (const id of [
+          "camera",
+          "dedicated",
+          "reading",
+          "hiding",
+          "paper",
+          "conditions",
+        ])
+          el(id).value = n[id];
+        reply();
+      }
+      function reply() {
+        const reviewed = Object.entries(observations).filter(
+          ([, n]) =>
+            n.camera !== "Not tested" ||
+            n.dedicated !== "Not tested" ||
+            n.reading !== "Not reviewed" ||
+            n.hiding !== "Not reviewed" ||
+            n.paper !== "Not tested" ||
+            n.conditions,
+        );
+        el("reply").value =
+          `Review the Aqrobat prose-QR first pilot using these observations.\n${reviewed.length ? reviewed.map(([view, n]) => `${view}\nSamsung Camera: ${n.camera}; dedicated scanner: ${n.dedicated}\nReading: ${n.reading}; appearance: ${n.hiding}; print: ${n.paper}\nNotes: ${n.conditions || "[none]"}`).join("\n\n") : "[No observations recorded yet. Add your notes here.]"}\n\nKeep raw screenshots, selectable-text replays, processed diagnostics, and phone/print evidence separate. Keep PR #1 draft and npm private/unpublished. Preserve the existing tool, prototypes, Splashery, and PDF archive. Propose the next bounded step; do not automatically start another phase, launch chats/agents, merge, publish, or send messages.`;
+      }
+      function saveNote() {
+        const n = {};
+        for (const id of [
+          "camera",
+          "dedicated",
+          "reading",
+          "hiding",
+          "paper",
+          "conditions",
+        ])
+          n[id] = el(id).value;
+        n.recordedAt = new Date().toISOString();
+        n.view = {
+          sourceSize: Number(el("scale").value),
+          output: el("mode").value,
+          displayWidth: Math.round(
+            (el("mode").value === "raw"
+              ? el("raw-img")
+              : el("live-frame")
+            ).getBoundingClientRect().width,
+          ),
+          browser: navigator.userAgent,
+        };
+        observations[viewKey()] = n;
+        try {
+          localStorage.setItem(
+            key,
+            JSON.stringify({
+              schema: "aqrobat-prose-observations-v1",
+              observations,
+            }),
+          );
+          el("note-status").textContent =
+            "Saved in this browser. Export to bring the notes back.";
+        } catch {
+          el("note-status").textContent =
+            "Browser storage unavailable. Export before closing this page.";
+        }
+        reply();
+      }
+      async function expand(base64) {
+        if (typeof DecompressionStream === "undefined")
+          throw Error(
+            "This browser cannot expand the compressed replay. Original screenshots remain available.",
+          );
+        const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+        return new Response(
+          new Blob([bytes])
+            .stream()
+            .pipeThrough(new DecompressionStream("gzip")),
+        ).text();
+      }
+      function caption() {
+        const c = current(),
+          size = el("scale").value;
+        const w = (
+          el("mode").value === "raw" ? el("raw-img") : el("live-frame")
+        ).getBoundingClientRect().width;
+        el("caption").textContent =
+          `${c.id} · ${size} px source / ${Math.round(w)} px displayed · ${el("mode").value === "raw" ? "Original PNG from the measured Mac render. Display resizing changes viewing conditions." : "Actual selectable characters; rerendered on this device. No software scan result is assigned to this view."}`;
+      }
+      async function render() {
+        const token = ++epoch,
+          c = current(),
+          size = el("scale").value,
+          frame = c.frames[size];
+        el("case-title").textContent = c.label;
+        el("case-description").textContent = c.description;
+        el("expected").textContent = c.payload;
+        el("raw-img").src = "data:image/png;base64," + frame.png;
+        el("raw-img").style.width = size + "px";
+        el("raw-img").alt =
+          `Original ${c.id} word-layout screenshot at ${size}px`;
+        el("raw-img").classList.toggle("hidden", el("mode").value === "live");
+        el("live-frame").classList.toggle(
+          "hidden",
+          el("mode").value !== "live",
+        );
+        el("live-frame").style.width = size + "px";
+        el("live-frame").style.height = size + "px";
+        el("geometry").textContent =
+          `Measured minimum dark-pixel border: ${frame.minimumBorder.toFixed(2)} modules. Optical letter height / line height: ${c.opticalRatio.toFixed(2)} (values above 1 can overlap). Real words only; no coherent paragraph.`;
+        el("diagnostic-images").replaceChildren();
+        for (const d of c.diagnostics) {
+          const figure = document.createElement("figure");
+          figure.className = "diagnostic";
+          const img = document.createElement("img");
+          img.src = "data:image/png;base64," + d.png;
+          img.alt = "Processed diagnostic " + d.label;
+          const cap = document.createElement("figcaption");
+          cap.className = "caption";
+          cap.textContent = `${d.label}: jsQR ${d.jsQR ? "exact" : "no recovery"} / ZXing ${d.zxing ? "exact" : "no recovery"}. Processed, not raw.`;
+          figure.append(img, cap);
+          el("diagnostic-images").append(figure);
+        }
+        if (!c.diagnostics.length)
+          el("diagnostic-images").textContent =
+            "No processed diagnostic was run for this candidate; original raw results are retained.";
+        loadNote();
+        el("output-status").textContent = "";
+        if (el("mode").value === "live") {
+          try {
+            const html = await expand(frame.htmlGzip);
+            if (token !== epoch) return;
+            el("live-frame").srcdoc = html;
+          } catch (e) {
+            if (token === epoch) el("output-status").textContent = e.message;
+          }
+        }
+        caption();
+      }
+      function download(name, data, type) {
+        const url = URL.createObjectURL(new Blob([data], { type }));
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = name;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+      function bytes(base64) {
+        return Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+      }
+      for (const id of ["case", "scale", "mode"]) el(id).onchange = render;
+      for (const id of [
+        "camera",
+        "dedicated",
+        "reading",
+        "hiding",
+        "paper",
+        "conditions",
+      ])
+        el(id).addEventListener("input", saveNote);
+      el("raw-img").onload = caption;
+      window.addEventListener("resize", caption);
+      el("png").onclick = () =>
+        download(
+          current().id + "-" + el("scale").value + "-original.png",
+          bytes(current().frames[el("scale").value].png),
+          "image/png",
+        );
+      el("html").onclick = async () => {
+        try {
+          download(
+            current().id + "-" + el("scale").value + "-words.html",
+            await expand(current().frames[el("scale").value].htmlGzip),
+            "text/html;charset=utf-8",
+          );
+        } catch (e) {
+          el("output-status").textContent = e.message;
+        }
+      };
+      el("text").onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(current().plainText);
+          el("output-status").textContent =
+            "Plain words copied. Typography is not included; this paste is a new, untested output.";
+        } catch {
+          download(
+            current().id + "-words.txt",
+            current().plainText,
+            "text/plain;charset=utf-8",
+          );
+          el("output-status").textContent =
+            "Clipboard unavailable; downloaded plain words. Typography is not included.";
+        }
+      };
+      el("print").onclick = () => window.print();
+      el("export").onclick = () =>
+        download(
+          "aqrobat-prose-observations.json",
+          JSON.stringify(
+            {
+              schema: "aqrobat-prose-observations-v1",
+              exportedAt: new Date().toISOString(),
+              observations,
+            },
+            null,
+            2,
+          ) + "\n",
+          "application/json",
+        );
+      el("copy-reply").onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(el("reply").value);
+          el("io-status").textContent =
+            "Copied. Paste into our chat when ready.";
+        } catch {
+          el("reply").focus();
+          el("reply").select();
+          el("io-status").textContent =
+            "Select/copy the reply, or export the observations JSON.";
+        }
+      };
+      el("import").onchange = async () => {
+        try {
+          const file = el("import").files[0];
+          if (!file) return;
+          if (file.size > 1024 * 1024)
+            throw Error("File too large. Nothing changed.");
+          const imported = validate(JSON.parse(await file.text()));
+          const combined = { ...observations, ...imported };
+          validate({
+            schema: "aqrobat-prose-observations-v1",
+            observations: combined,
+          });
+          observations = combined;
+          try {
+            localStorage.setItem(
+              key,
+              JSON.stringify({
+                schema: "aqrobat-prose-observations-v1",
+                observations,
+              }),
+            );
+          } catch {}
+          loadNote();
+          el("io-status").textContent =
+            "Imported valid notes. No QR result was changed by the software.";
+        } catch (e) {
+          el("io-status").textContent = e.message;
+        }
+        el("import").value = "";
+      };
+      for (const c of DATA.controls) {
+        const f = document.createElement("figure");
+        f.className = "diagnostic";
+        const img = document.createElement("img");
+        img.src = "data:image/png;base64," + c.png;
+        img.alt = "Conventional QR control for " + c.payload;
+        const cap = document.createElement("figcaption");
+        cap.className = "caption";
+        cap.textContent = `Clean control · ${c.payload} · ${c.size}px · software ${c.exact ? "both exact" : "not certified"}. Phone untested.`;
+        f.append(img, cap);
+        el("control-images").append(f);
+      }
+      render();
+    </script>
+  </body>
+</html>

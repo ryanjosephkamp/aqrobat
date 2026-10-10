@@ -1,0 +1,2586 @@
+{
+  "at": "2026-10-09T20:40:39.515Z",
+  "sourceScriptSha256": "7f2e2f6b2311f1a7d9c2a72022d4e5fdf4d0945d2fa2e997f789a10cfa0fdfe7",
+  "bundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "patchedDiagnosticSha256": "afb3a0895eb8dce77a3667f4cfa7cb90d32c54f20c8709c112c3e828fe8a7c03",
+  "fullReceipt": "span-audit-01.json.gz",
+  "gzipSha256": "36883b4085715a35cc90b7f8cefa5d797350d0ea1a7156e9ac32e8465f68341a",
+  "gzipBytes": 106785,
+  "uncompressedBytes": 967212,
+  "newCaptures": 0,
+  "newPayloadProbes": 0,
+  "results": [
+    {
+      "id": "seam-01",
+      "instrumentedLocationsMatch": true,
+      "rawQuadCount": 1118,
+      "scoredPointCount": 1071,
+      "groupCount": 5,
+      "ordinaryLocations": [
+        {
+          "alignmentPattern": { "x": 203, "y": 816.5 },
+          "bottomLeft": { "x": 180.25, "y": 208.5 },
+          "dimension": 93,
+          "topLeft": { "x": 221, "y": 283.5 },
+          "topRight": { "x": 180.25, "y": 795.5 }
+        },
+        {
+          "alignmentPattern": { "x": 203, "y": 816.5 },
+          "bottomLeft": { "x": 180, "y": 211.5 },
+          "topLeft": { "x": 221, "y": 284 },
+          "topRight": { "x": 180, "y": 798.5 },
+          "dimension": 79
+        }
+      ],
+      "pointsWithinOneModule": {
+        "topLeft": [
+          {
+            "score": 209.86180549100976,
+            "x": 273,
+            "y": 274.5,
+            "size": 3.6666666666666665,
+            "rank": 249,
+            "distance": 5.102633914339685,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1862.1835090210307,
+            "x": 283,
+            "y": 272,
+            "size": 4,
+            "rank": 846,
+            "distance": 7.784434452082536,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 329.5761320027902,
+            "x": 277,
+            "y": 285.5,
+            "size": 7,
+            "rank": 403,
+            "distance": 8.22544628660169,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 118.2012351066956,
+            "x": 267,
+            "y": 274.5,
+            "size": 3.6666666666666665,
+            "rank": 90,
+            "distance": 10.648400601206244,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 118.2012351066956,
+            "x": 266.75,
+            "y": 275,
+            "size": 6.333333333333333,
+            "rank": 91,
+            "distance": 10.77317441269144,
+            "centralSizeRelativeToExpected": 0.06471613512686437
+          },
+          {
+            "score": 3897.926827301221,
+            "x": 285.75,
+            "y": 285.5,
+            "size": 7.333333333333333,
+            "rank": 948,
+            "distance": 11.803930332786175,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 1860.4180038719096,
+            "x": 283,
+            "y": 266.5,
+            "size": 3.6666666666666665,
+            "rank": 842,
+            "distance": 12.203265356607202,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 134.45645088742646,
+            "x": 268,
+            "y": 285.5,
+            "size": 7,
+            "rank": 120,
+            "distance": 12.396987955296622,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 116.91206988975514,
+            "x": 264,
+            "y": 266.5,
+            "size": 3.6666666666666665,
+            "rank": 86,
+            "distance": 17.10359513709821,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 293.2219078032142,
+            "x": 273,
+            "y": 258.5,
+            "size": 3.6666666666666665,
+            "rank": 375,
+            "distance": 19.260695025459736,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 271.0910016652438,
+            "x": 259.25,
+            "y": 285.5,
+            "size": 7.333333333333333,
+            "rank": 353,
+            "distance": 19.815032315801798,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 2610.676957524894,
+            "x": 283,
+            "y": 296.5,
+            "size": 3.6666666666666665,
+            "rank": 889,
+            "distance": 20.053973991799467,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 218.9396499036175,
+            "x": 295.75,
+            "y": 269,
+            "size": 7,
+            "rank": 266,
+            "distance": 20.24138410969639,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 120.4778376490929,
+            "x": 259.5,
+            "y": 266.5,
+            "size": 3,
+            "rank": 95,
+            "distance": 20.79174447921024,
+            "centralSizeRelativeToExpected": 0.030655011375883126
+          },
+          {
+            "score": 70.44278525493117,
+            "x": 292.75,
+            "y": 292,
+            "size": 11.666666666666666,
+            "rank": 29,
+            "distance": 21.355134176030585,
+            "centralSizeRelativeToExpected": 0.11921393312843438
+          },
+          {
+            "score": 672.3984044770665,
+            "x": 267,
+            "y": 258.5,
+            "size": 3.6666666666666665,
+            "rank": 593,
+            "distance": 21.408548184399837,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1860.5345158999132,
+            "x": 283,
+            "y": 255,
+            "size": 4,
+            "rank": 843,
+            "distance": 23.00203281209662,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 2608.2030432857364,
+            "x": 283,
+            "y": 303,
+            "size": 4,
+            "rank": 887,
+            "distance": 26.349212767913382,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 739.1797925283223,
+            "x": 259.25,
+            "y": 296.5,
+            "size": 3.3333333333333335,
+            "rank": 626,
+            "distance": 26.353196664280965,
+            "centralSizeRelativeToExpected": 0.034061123750981255
+          },
+          {
+            "score": 256.80097536270017,
+            "x": 296.25,
+            "y": 296.5,
+            "size": 3.3333333333333335,
+            "rank": 321,
+            "distance": 27.005980924163254,
+            "centralSizeRelativeToExpected": 0.034061123750981255
+          },
+          {
+            "score": 722.71837437056,
+            "x": 303,
+            "y": 286,
+            "size": 8,
+            "rank": 623,
+            "distance": 27.158888641451618,
+            "centralSizeRelativeToExpected": 0.08174669700235501
+          },
+          {
+            "score": 244.39646556247556,
+            "x": 252,
+            "y": 266.5,
+            "size": 3.6666666666666665,
+            "rank": 304,
+            "distance": 27.48155911904871,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 97.46028532976727,
+            "x": 262.5,
+            "y": 254,
+            "size": 6.666666666666667,
+            "rank": 53,
+            "distance": 27.574504149916635,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 923.2652871060786,
+            "x": 250.75,
+            "y": 285.5,
+            "size": 7.333333333333333,
+            "rank": 712,
+            "distance": 27.773792548934857,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 217.57102248409396,
+            "x": 262.5,
+            "y": 302.5,
+            "size": 6.333333333333333,
+            "rank": 264,
+            "distance": 29.23202836340252,
+            "centralSizeRelativeToExpected": 0.06471613512686437
+          },
+          {
+            "score": 157.65053492501517,
+            "x": 296.25,
+            "y": 255,
+            "size": 3.6666666666666665,
+            "rank": 153,
+            "distance": 29.261829168752755,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1859.2775883726722,
+            "x": 283,
+            "y": 248.5,
+            "size": 3.6666666666666665,
+            "rank": 841,
+            "distance": 29.342364813759804,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 629.6700704385969,
+            "x": 273,
+            "y": 306.5,
+            "size": 3.6666666666666665,
+            "rank": 569,
+            "distance": 29.532386846710672,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 4419.774664678438,
+            "x": 291.75,
+            "y": 250.5,
+            "size": 8,
+            "rank": 956,
+            "distance": 30.438987993218,
+            "centralSizeRelativeToExpected": 0.08174669700235501
+          },
+          {
+            "score": 752.7675136836804,
+            "x": 267,
+            "y": 306.5,
+            "size": 3.6666666666666665,
+            "rank": 636,
+            "distance": 30.97601387144204,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 249.11188787022036,
+            "x": 296,
+            "y": 303,
+            "size": 4,
+            "rank": 311,
+            "distance": 31.812250702186564,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          }
+        ],
+        "topRight": [
+          {
+            "score": 1849.7103542283953,
+            "x": 870,
+            "y": 272,
+            "size": 4,
+            "rank": 836,
+            "distance": 7.653354143829939,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 662.1022549912407,
+            "x": 864,
+            "y": 285.5,
+            "size": 7,
+            "rank": 584,
+            "distance": 8.233506332412631,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 3896.2329431201347,
+            "x": 873,
+            "y": 285.5,
+            "size": 7,
+            "rank": 947,
+            "distance": 11.854488929341446,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 1854.0333809308268,
+            "x": 870,
+            "y": 266.5,
+            "size": 3.6666666666666665,
+            "rank": 838,
+            "distance": 12.120069936921936,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 133.6207763682419,
+            "x": 855.25,
+            "y": 285.5,
+            "size": 7.333333333333333,
+            "rank": 117,
+            "distance": 12.344446244703684,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 227.90373734804058,
+            "x": 858.25,
+            "y": 265,
+            "size": 6.333333333333333,
+            "rank": 281,
+            "distance": 13.759818992754917,
+            "centralSizeRelativeToExpected": 0.06471613512686437
+          },
+          {
+            "score": 1596.1632523257674,
+            "x": 878,
+            "y": 272.5,
+            "size": 3.6666666666666665,
+            "rank": 811,
+            "distance": 14.35969299030724,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1595.968420966599,
+            "x": 878,
+            "y": 266.5,
+            "size": 3.6666666666666665,
+            "rank": 810,
+            "distance": 17.30758057256643,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 249.14139345029247,
+            "x": 846.75,
+            "y": 285.5,
+            "size": 7.333333333333333,
+            "rank": 312,
+            "distance": 19.524038707792474,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 2545.342984585378,
+            "x": 870,
+            "y": 296.5,
+            "size": 3.6666666666666665,
+            "rank": 885,
+            "distance": 20.003456770665387,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 207.7673528310886,
+            "x": 879.75,
+            "y": 292,
+            "size": 11.666666666666666,
+            "rank": 243,
+            "distance": 21.225321183397412,
+            "centralSizeRelativeToExpected": 0.11921393312843438
+          },
+          {
+            "score": 228.85966931356378,
+            "x": 855.75,
+            "y": 297.5,
+            "size": 6.666666666666667,
+            "rank": 284,
+            "distance": 22.016431221098912,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 1860.723534808534,
+            "x": 870,
+            "y": 255,
+            "size": 4,
+            "rank": 845,
+            "distance": 22.958003471575633,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 140.08764480625632,
+            "x": 849.5,
+            "y": 256.5,
+            "size": 7.666666666666667,
+            "rank": 126,
+            "distance": 25.603718326658708,
+            "centralSizeRelativeToExpected": 0.07834058462725689
+          },
+          {
+            "score": 741.3769471927485,
+            "x": 846.5,
+            "y": 296.5,
+            "size": 3,
+            "rank": 630,
+            "distance": 26.305143002859324,
+            "centralSizeRelativeToExpected": 0.030655011375883126
+          },
+          {
+            "score": 2502.11953840611,
+            "x": 870,
+            "y": 303,
+            "size": 4,
+            "rank": 881,
+            "distance": 26.31078530566655,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 172.4515127752596,
+            "x": 883.5,
+            "y": 296.5,
+            "size": 3,
+            "rank": 172,
+            "distance": 27.055419136485007,
+            "centralSizeRelativeToExpected": 0.030655011375883126
+          },
+          {
+            "score": 796.1318712495175,
+            "x": 890.25,
+            "y": 286,
+            "size": 8.333333333333334,
+            "rank": 658,
+            "distance": 27.225487139138192,
+            "centralSizeRelativeToExpected": 0.08515280937745313
+          },
+          {
+            "score": 830.8431872953568,
+            "x": 838,
+            "y": 285.5,
+            "size": 7,
+            "rank": 671,
+            "distance": 27.706638446875488,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 1852.3311743767076,
+            "x": 870,
+            "y": 248.5,
+            "size": 3.6666666666666665,
+            "rank": 837,
+            "distance": 29.30786213247017,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 272.50138054163114,
+            "x": 858.25,
+            "y": 248.5,
+            "size": 6,
+            "rank": 356,
+            "distance": 29.441457429760145,
+            "centralSizeRelativeToExpected": 0.06131002275176625
+          },
+          {
+            "score": 78.02358272713956,
+            "x": 884,
+            "y": 255,
+            "size": 4,
+            "rank": 32,
+            "distance": 29.634749212721182,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 339.66353835976054,
+            "x": 878.75,
+            "y": 250.5,
+            "size": 8,
+            "rank": 413,
+            "distance": 30.35397615986049,
+            "centralSizeRelativeToExpected": 0.08174669700235501
+          },
+          {
+            "score": 436.7105995793014,
+            "x": 835.5,
+            "y": 267,
+            "size": 8.666666666666666,
+            "rank": 485,
+            "distance": 30.72924861228922,
+            "centralSizeRelativeToExpected": 0.08855892175255126
+          },
+          {
+            "score": 134.17691664919184,
+            "x": 893.75,
+            "y": 267.5,
+            "size": 8,
+            "rank": 119,
+            "distance": 30.880386068075296,
+            "centralSizeRelativeToExpected": 0.08174669700235501
+          },
+          {
+            "score": 207.7638835024165,
+            "x": 849.5,
+            "y": 304.5,
+            "size": 7.666666666666667,
+            "rank": 242,
+            "distance": 31.060230072407364,
+            "centralSizeRelativeToExpected": 0.07834058462725689
+          },
+          {
+            "score": 149.82935941925274,
+            "x": 884,
+            "y": 303,
+            "size": 4,
+            "rank": 140,
+            "distance": 32.301793462606355,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          }
+        ],
+        "bottomLeft": [
+          {
+            "score": 203.3562162523698,
+            "x": 273,
+            "y": 861.5,
+            "size": 3.6666666666666665,
+            "rank": 230,
+            "distance": 5.202688754469068,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1217.1066916120926,
+            "x": 283,
+            "y": 859,
+            "size": 4,
+            "rank": 771,
+            "distance": 7.907398728461776,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 854.0381091584595,
+            "x": 277,
+            "y": 872.5,
+            "size": 7,
+            "rank": 679,
+            "distance": 8.04586471585739,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 116.75443922249623,
+            "x": 267,
+            "y": 861.5,
+            "size": 3.6666666666666665,
+            "rank": 83,
+            "distance": 10.696706632224654,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 116.75443922249623,
+            "x": 266.75,
+            "y": 862,
+            "size": 6.333333333333333,
+            "rank": 84,
+            "distance": 10.812617483217416,
+            "centralSizeRelativeToExpected": 0.06471613512686437
+          },
+          {
+            "score": 3990.1499723448796,
+            "x": 285.75,
+            "y": 872.5,
+            "size": 7.333333333333333,
+            "rank": 949,
+            "distance": 11.679501004468422,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 134.5113803916722,
+            "x": 268,
+            "y": 872.5,
+            "size": 7,
+            "rank": 121,
+            "distance": 12.278570062343535,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 1200.9772634749443,
+            "x": 283,
+            "y": 853.5,
+            "size": 3.6666666666666665,
+            "rank": 768,
+            "distance": 12.362272557093977,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 196.39119358556283,
+            "x": 264,
+            "y": 853,
+            "size": 4,
+            "rank": 216,
+            "distance": 17.53989875685943,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 290.4829999814349,
+            "x": 273,
+            "y": 845.5,
+            "size": 3.6666666666666665,
+            "rank": 370,
+            "distance": 19.43593245192725,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1235.331334183603,
+            "x": 292.25,
+            "y": 852,
+            "size": 4.333333333333333,
+            "rank": 774,
+            "distance": 19.47686431932458,
+            "centralSizeRelativeToExpected": 0.04427946087627563
+          },
+          {
+            "score": 4199.136776112781,
+            "x": 283,
+            "y": 883.5,
+            "size": 3.6666666666666665,
+            "rank": 952,
+            "distance": 19.88181883721605,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 197.85597441906467,
+            "x": 259,
+            "y": 872.5,
+            "size": 7,
+            "rank": 221,
+            "distance": 19.969742775656346,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 201.93012811073731,
+            "x": 295.75,
+            "y": 856,
+            "size": 7,
+            "rank": 228,
+            "distance": 20.31554307884431,
+            "centralSizeRelativeToExpected": 0.07152835987706063
+          },
+          {
+            "score": 152.56172927786253,
+            "x": 259.5,
+            "y": 853.5,
+            "size": 3,
+            "rank": 145,
+            "distance": 20.885467097981767,
+            "centralSizeRelativeToExpected": 0.030655011375883126
+          },
+          {
+            "score": 68.46647866516349,
+            "x": 292.75,
+            "y": 879,
+            "size": 11.666666666666666,
+            "rank": 28,
+            "distance": 21.231669519573323,
+            "centralSizeRelativeToExpected": 0.11921393312843438
+          },
+          {
+            "score": 674.3486819754436,
+            "x": 267,
+            "y": 845.5,
+            "size": 3.6666666666666665,
+            "rank": 594,
+            "distance": 21.566340273117248,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1200.4656480439853,
+            "x": 283,
+            "y": 842,
+            "size": 4,
+            "rank": 766,
+            "distance": 23.176117522157995,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 4199.6029517523,
+            "x": 283,
+            "y": 890,
+            "size": 4,
+            "rank": 953,
+            "distance": 26.17384044042599,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 740.4970666004472,
+            "x": 259.25,
+            "y": 883.5,
+            "size": 3.3333333333333335,
+            "rank": 628,
+            "distance": 26.222429747038674,
+            "centralSizeRelativeToExpected": 0.034061123750981255
+          },
+          {
+            "score": 248.6445017873457,
+            "x": 296,
+            "y": 883.5,
+            "size": 3.6666666666666665,
+            "rank": 309,
+            "distance": 26.702527998784664,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 699.9981303753304,
+            "x": 303,
+            "y": 873,
+            "size": 8,
+            "rank": 612,
+            "distance": 27.10172535376445,
+            "centralSizeRelativeToExpected": 0.08174669700235501
+          },
+          {
+            "score": 240.39381516634788,
+            "x": 252,
+            "y": 853.5,
+            "size": 3.6666666666666665,
+            "rank": 300,
+            "distance": 27.552535074397035,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 381.10971109418665,
+            "x": 250.75,
+            "y": 872.5,
+            "size": 7.333333333333333,
+            "rank": 461,
+            "distance": 27.72113859428178,
+            "centralSizeRelativeToExpected": 0.07493447225215875
+          },
+          {
+            "score": 100.59924182598893,
+            "x": 262.5,
+            "y": 841,
+            "size": 6.666666666666667,
+            "rank": 60,
+            "distance": 27.72636947070205,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 210.98292705480355,
+            "x": 262.5,
+            "y": 889.5,
+            "size": 6.333333333333333,
+            "rank": 251,
+            "distance": 29.077140155986438,
+            "centralSizeRelativeToExpected": 0.06471613512686437
+          },
+          {
+            "score": 158.34160706254755,
+            "x": 273,
+            "y": 893.5,
+            "size": 3.6666666666666665,
+            "rank": 155,
+            "distance": 29.354607309175147,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 1199.5351674020997,
+            "x": 283,
+            "y": 835.5,
+            "size": 3.6666666666666665,
+            "rank": 764,
+            "distance": 29.518624972648695,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 100.76284508359747,
+            "x": 296.5,
+            "y": 842,
+            "size": 4,
+            "rank": 62,
+            "distance": 29.56080864550019,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          },
+          {
+            "score": 1360.9910472983997,
+            "x": 291.75,
+            "y": 837.5,
+            "size": 8,
+            "rank": 784,
+            "distance": 30.597190842679968,
+            "centralSizeRelativeToExpected": 0.08174669700235501
+          },
+          {
+            "score": 752.1693828499709,
+            "x": 267,
+            "y": 893.5,
+            "size": 3.6666666666666665,
+            "rank": 635,
+            "distance": 30.80656639055834,
+            "centralSizeRelativeToExpected": 0.03746723612607938
+          },
+          {
+            "score": 111.52519036133695,
+            "x": 296.5,
+            "y": 890,
+            "size": 4,
+            "rank": 74,
+            "distance": 31.965276594703184,
+            "centralSizeRelativeToExpected": 0.040873348501177506
+          }
+        ]
+      }
+    },
+    {
+      "id": "span-01",
+      "instrumentedLocationsMatch": true,
+      "rawQuadCount": 1445,
+      "scoredPointCount": 1418,
+      "groupCount": 5,
+      "ordinaryLocations": [
+        {
+          "alignmentPattern": { "x": 355, "y": 1031 },
+          "bottomLeft": { "x": 352, "y": 977.5 },
+          "dimension": 33,
+          "topLeft": { "x": 369.5, "y": 1155 },
+          "topRight": { "x": 369.5, "y": 1165.5 }
+        },
+        {
+          "alignmentPattern": { "x": 355, "y": 1031 },
+          "bottomLeft": { "x": 351, "y": 983 },
+          "topLeft": { "x": 369, "y": 1154.5 },
+          "topRight": { "x": 369, "y": 1165 },
+          "dimension": 31
+        }
+      ],
+      "pointsWithinOneModule": {
+        "topLeft": [
+          {
+            "score": 1149.2664204620444,
+            "x": 332.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 978,
+            "distance": 9.767674847364107,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 2291.7546581647484,
+            "x": 339.5,
+            "y": 325.5,
+            "size": 5,
+            "rank": 1186,
+            "distance": 9.905079349698722,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 5632.478558661424,
+            "x": 342.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1320,
+            "distance": 13.80957446570425,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 2296.046292294724,
+            "x": 339.5,
+            "y": 319.5,
+            "size": 4.333333333333333,
+            "rank": 1188,
+            "distance": 14.863797358812022,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 227.78661489614387,
+            "x": 321.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 221,
+            "distance": 14.885594023210087,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 273.6005850327296,
+            "x": 325.5,
+            "y": 316.5,
+            "size": 7,
+            "rank": 317,
+            "distance": 17.774357496793655,
+            "centralSizeRelativeToExpected": 0.0596069665642172
+          },
+          {
+            "score": 2274.7511272919464,
+            "x": 349,
+            "y": 325.5,
+            "size": 4.333333333333333,
+            "rank": 1180,
+            "distance": 17.801478258106247,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 367.95700217728654,
+            "x": 315,
+            "y": 326,
+            "size": 8,
+            "rank": 476,
+            "distance": 18.97098038910548,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 549.3223918381549,
+            "x": 318,
+            "y": 320,
+            "size": 6,
+            "rank": 666,
+            "distance": 19.475857732685984,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 2280.5322966629983,
+            "x": 349,
+            "y": 319.5,
+            "size": 3.6666666666666665,
+            "rank": 1182,
+            "distance": 20.96937059555743,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 410.97829313324974,
+            "x": 327.5,
+            "y": 310.5,
+            "size": 4.333333333333333,
+            "rank": 539,
+            "distance": 22.843139767199787,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 2455.3529926557558,
+            "x": 353.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1200,
+            "distance": 22.946261338698125,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 369.7564385787735,
+            "x": 311.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 479,
+            "distance": 23.37271987646766,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 3864.608645015723,
+            "x": 339.5,
+            "y": 356,
+            "size": 4.666666666666667,
+            "rank": 1262,
+            "distance": 24.22841442756484,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          },
+          {
+            "score": 226.40381720412492,
+            "x": 325.25,
+            "y": 356,
+            "size": 7.666666666666667,
+            "rank": 217,
+            "distance": 24.439323206644456,
+            "centralSizeRelativeToExpected": 0.06528382052271407
+          },
+          {
+            "score": 180.96601244094046,
+            "x": 311,
+            "y": 319.5,
+            "size": 3.6666666666666665,
+            "rank": 144,
+            "distance": 25.44771852590765,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 2292.2541748537806,
+            "x": 339.5,
+            "y": 305.5,
+            "size": 5,
+            "rank": 1187,
+            "distance": 28.06273056785147,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 373.81319080563753,
+            "x": 304,
+            "y": 332,
+            "size": 6,
+            "rank": 488,
+            "distance": 28.74455877942509,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 2923.9278602480663,
+            "x": 360.5,
+            "y": 325,
+            "size": 4.666666666666667,
+            "rank": 1231,
+            "distance": 28.822199615467085,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          },
+          {
+            "score": 1237.2264865209474,
+            "x": 317.75,
+            "y": 359.5,
+            "size": 6,
+            "rank": 1011,
+            "distance": 30.6742851391655,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 722.3954026387668,
+            "x": 350.5,
+            "y": 358.5,
+            "size": 9.666666666666666,
+            "rank": 752,
+            "distance": 31.29563622813625,
+            "centralSizeRelativeToExpected": 0.0823143823982047
+          },
+          {
+            "score": 3860.2849500764105,
+            "x": 339.5,
+            "y": 363.5,
+            "size": 5,
+            "rank": 1259,
+            "distance": 31.499820982409304,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1097.7764379151088,
+            "x": 311,
+            "y": 356,
+            "size": 4,
+            "rank": 948,
+            "distance": 31.838184180694544,
+            "centralSizeRelativeToExpected": 0.034061123750981255
+          },
+          {
+            "score": 309.3508800341522,
+            "x": 363.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 380,
+            "distance": 32.27735714744678,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 335.69273005730065,
+            "x": 315.25,
+            "y": 305.5,
+            "size": 7.333333333333333,
+            "rank": 419,
+            "distance": 32.364864051140735,
+            "centralSizeRelativeToExpected": 0.06244539354346563
+          },
+          {
+            "score": 412.10004831653174,
+            "x": 302.5,
+            "y": 319.5,
+            "size": 4.333333333333333,
+            "rank": 541,
+            "distance": 33.00506073958692,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 1297.7403692845958,
+            "x": 300.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1026,
+            "distance": 33.68170826908613,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 285.6469470932998,
+            "x": 317,
+            "y": 363.5,
+            "size": 10.333333333333334,
+            "rank": 335,
+            "distance": 34.5553288679739,
+            "centralSizeRelativeToExpected": 0.08799123635670159
+          },
+          {
+            "score": 2290.4625592891953,
+            "x": 339.5,
+            "y": 298,
+            "size": 4.666666666666667,
+            "rank": 1185,
+            "distance": 35.387768941737825,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          },
+          {
+            "score": 479.0117929173767,
+            "x": 325.5,
+            "y": 297.5,
+            "size": 7,
+            "rank": 608,
+            "distance": 35.97031723412823,
+            "centralSizeRelativeToExpected": 0.0596069665642172
+          },
+          {
+            "score": 924.762021547458,
+            "x": 327.5,
+            "y": 368.5,
+            "size": 4.333333333333333,
+            "rank": 838,
+            "distance": 36.14596671032374,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 316.63704358415265,
+            "x": 350.25,
+            "y": 300.5,
+            "size": 9.333333333333334,
+            "rank": 397,
+            "distance": 36.68616973804742,
+            "centralSizeRelativeToExpected": 0.07947595541895626
+          },
+          {
+            "score": 3526.6195529511497,
+            "x": 296.5,
+            "y": 325.5,
+            "size": 4.333333333333333,
+            "rank": 1252,
+            "distance": 36.9504267150438,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 207.8766049588859,
+            "x": 302.5,
+            "y": 309,
+            "size": 4.666666666666667,
+            "rank": 186,
+            "distance": 38.43855246590096,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          }
+        ],
+        "topRight": [
+          {
+            "score": 1974.4199957309754,
+            "x": 1036.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1150,
+            "distance": 9.801836674688415,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 2056.4919255459577,
+            "x": 1044,
+            "y": 325.5,
+            "size": 4.333333333333333,
+            "rank": 1162,
+            "distance": 9.826474237856894,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 1152.4593070910278,
+            "x": 1038,
+            "y": 322.5,
+            "size": 7.666666666666667,
+            "rank": 982,
+            "distance": 10.255725642160298,
+            "centralSizeRelativeToExpected": 0.06528382052271407
+          },
+          {
+            "score": 5711.884436350639,
+            "x": 1047.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1322,
+            "distance": 14.083991433442009,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 223.798936046701,
+            "x": 1026.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 214,
+            "distance": 14.597658277863129,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 279.7035937730915,
+            "x": 1032,
+            "y": 318.5,
+            "size": 4.333333333333333,
+            "rank": 325,
+            "distance": 15.207581446346529,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 2281.170821896842,
+            "x": 1053.5,
+            "y": 325.5,
+            "size": 5,
+            "rank": 1183,
+            "distance": 17.695896479050337,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 306.81570941453936,
+            "x": 1027,
+            "y": 317.5,
+            "size": 3.6666666666666665,
+            "rank": 374,
+            "distance": 18.418704038212425,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 351.8714841967928,
+            "x": 1019.5,
+            "y": 326,
+            "size": 8,
+            "rank": 450,
+            "distance": 19.079117404829372,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 405.707409673234,
+            "x": 1022.75,
+            "y": 318.5,
+            "size": 6.666666666666667,
+            "rank": 533,
+            "distance": 20.391725934120004,
+            "centralSizeRelativeToExpected": 0.05676853958496876
+          },
+          {
+            "score": 2450.443507744258,
+            "x": 1057.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1199,
+            "distance": 22.390694265637876,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 415.39318179652,
+            "x": 1016,
+            "y": 342.5,
+            "size": 7.666666666666667,
+            "rank": 549,
+            "distance": 23.477820031835684,
+            "centralSizeRelativeToExpected": 0.06528382052271407
+          },
+          {
+            "score": 277.6500350471444,
+            "x": 1030.25,
+            "y": 355.5,
+            "size": 7.333333333333333,
+            "rank": 323,
+            "distance": 23.846576385768003,
+            "centralSizeRelativeToExpected": 0.06244539354346563
+          },
+          {
+            "score": 244.01900272405896,
+            "x": 1016,
+            "y": 319.5,
+            "size": 3.6666666666666665,
+            "rank": 260,
+            "distance": 25.120215384173402,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 517.5643169433648,
+            "x": 1056.5,
+            "y": 352.5,
+            "size": 7,
+            "rank": 642,
+            "distance": 27.519840609953942,
+            "centralSizeRelativeToExpected": 0.0596069665642172
+          },
+          {
+            "score": 3526.767321780191,
+            "x": 1065.25,
+            "y": 325,
+            "size": 4.333333333333333,
+            "rank": 1253,
+            "distance": 28.95166746618003,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 1148.2824868223393,
+            "x": 1016,
+            "y": 356.5,
+            "size": 3.6666666666666665,
+            "rank": 975,
+            "distance": 31.94720110506188,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 289.2306619438771,
+            "x": 1068.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 343,
+            "distance": 32.64392749344462,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 452.0135652537509,
+            "x": 1019.75,
+            "y": 305,
+            "size": 8.333333333333334,
+            "rank": 584,
+            "distance": 32.84853714889386,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 304.6112641197043,
+            "x": 1007,
+            "y": 319.5,
+            "size": 3.6666666666666665,
+            "rank": 368,
+            "distance": 33.11101453364516,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 1338.3913005471504,
+            "x": 1005.5,
+            "y": 342.5,
+            "size": 8.333333333333334,
+            "rank": 1043,
+            "distance": 33.314027671496945,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 73.43661491509205,
+            "x": 1057.25,
+            "y": 360,
+            "size": 8.333333333333334,
+            "rank": 16,
+            "distance": 33.75426804971885,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 79.86030084066824,
+            "x": 1071,
+            "y": 326,
+            "size": 4,
+            "rank": 22,
+            "distance": 34.31664686704207,
+            "centralSizeRelativeToExpected": 0.034061123750981255
+          },
+          {
+            "score": 597.8299014486514,
+            "x": 1019.75,
+            "y": 363.5,
+            "size": 8,
+            "rank": 702,
+            "distance": 35.44380216021227,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 742.3205567646472,
+            "x": 1057.25,
+            "y": 302,
+            "size": 8.333333333333334,
+            "rank": 758,
+            "distance": 36.61459731544597,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          }
+        ],
+        "bottomLeft": [
+          {
+            "score": 1495.293419226672,
+            "x": 339.5,
+            "y": 1030.5,
+            "size": 5,
+            "rank": 1081,
+            "distance": 9.62789253664923,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1210.8327880339823,
+            "x": 332.5,
+            "y": 1047.5,
+            "size": 8.333333333333334,
+            "rank": 1004,
+            "distance": 10.151942656322804,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 5634.584963015432,
+            "x": 342.5,
+            "y": 1047.5,
+            "size": 8.333333333333334,
+            "rank": 1321,
+            "distance": 14.083991433442009,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 1461.2783670445563,
+            "x": 339.5,
+            "y": 1024.5,
+            "size": 4.333333333333333,
+            "rank": 1073,
+            "distance": 14.522592389007734,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 211.00332186258174,
+            "x": 321.5,
+            "y": 1047.5,
+            "size": 8.333333333333334,
+            "rank": 193,
+            "distance": 15.140521034537255,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 319.31093179693903,
+            "x": 325.5,
+            "y": 1021.5,
+            "size": 7,
+            "rank": 400,
+            "distance": 17.42397062087925,
+            "centralSizeRelativeToExpected": 0.0596069665642172
+          },
+          {
+            "score": 391.45408527538126,
+            "x": 349,
+            "y": 1030.5,
+            "size": 4.333333333333333,
+            "rank": 513,
+            "distance": 17.648749132651503,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 355.9487634334552,
+            "x": 315,
+            "y": 1031,
+            "size": 8,
+            "rank": 463,
+            "distance": 18.837945474421108,
+            "centralSizeRelativeToExpected": 0.06812224750196251
+          },
+          {
+            "score": 441.2724153342753,
+            "x": 318,
+            "y": 1025,
+            "size": 6,
+            "rank": 574,
+            "distance": 19.226716495472193,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 393.8681471954178,
+            "x": 349,
+            "y": 1024.5,
+            "size": 3.6666666666666665,
+            "rank": 516,
+            "distance": 20.728910269169162,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 294.7390418501766,
+            "x": 327.5,
+            "y": 1015.5,
+            "size": 4.333333333333333,
+            "rank": 354,
+            "distance": 22.469167812744267,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 355.46872563565285,
+            "x": 311.5,
+            "y": 1047.5,
+            "size": 8.333333333333334,
+            "rank": 461,
+            "distance": 23.535898159986665,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 1460.3966721126035,
+            "x": 339.5,
+            "y": 1060,
+            "size": 4.666666666666667,
+            "rank": 1071,
+            "distance": 23.637897980727235,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          },
+          {
+            "score": 61.48076905233612,
+            "x": 325.25,
+            "y": 1060,
+            "size": 7.666666666666667,
+            "rank": 8,
+            "distance": 23.854028466325484,
+            "centralSizeRelativeToExpected": 0.06528382052271407
+          },
+          {
+            "score": 236.8720019042869,
+            "x": 311,
+            "y": 1024.5,
+            "size": 3.6666666666666665,
+            "rank": 246,
+            "distance": 25.2499424939397,
+            "centralSizeRelativeToExpected": 0.031222696771732814
+          },
+          {
+            "score": 100.40710321230195,
+            "x": 351.5,
+            "y": 1055,
+            "size": 13.333333333333334,
+            "rank": 41,
+            "distance": 25.760712013592904,
+            "centralSizeRelativeToExpected": 0.11353707916993752
+          },
+          {
+            "score": 1459.16534787772,
+            "x": 339.5,
+            "y": 1010.5,
+            "size": 5,
+            "rank": 1070,
+            "distance": 27.6898458770948,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 904.1161013803636,
+            "x": 360.5,
+            "y": 1030,
+            "size": 4.666666666666667,
+            "rank": 819,
+            "distance": 28.721429864254127,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          },
+          {
+            "score": 340.5029408262206,
+            "x": 303.75,
+            "y": 1037,
+            "size": 5.666666666666667,
+            "rank": 432,
+            "distance": 28.98727876711199,
+            "centralSizeRelativeToExpected": 0.04825325864722345
+          },
+          {
+            "score": 349.6745382105547,
+            "x": 315.25,
+            "y": 1013,
+            "size": 9,
+            "rank": 446,
+            "distance": 29.978179340518015,
+            "centralSizeRelativeToExpected": 0.07663752843970782
+          },
+          {
+            "score": 1208.252906924868,
+            "x": 317.75,
+            "y": 1063.5,
+            "size": 6,
+            "rank": 1001,
+            "distance": 30.13862221589212,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 1457.3573497489995,
+            "x": 339.5,
+            "y": 1067.5,
+            "size": 5,
+            "rank": 1069,
+            "distance": 30.89884305596683,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1096.414658406028,
+            "x": 311,
+            "y": 1060,
+            "size": 4,
+            "rank": 945,
+            "distance": 31.391147274307524,
+            "centralSizeRelativeToExpected": 0.034061123750981255
+          },
+          {
+            "score": 233.69288847168826,
+            "x": 363.5,
+            "y": 1047.5,
+            "size": 8.333333333333334,
+            "rank": 233,
+            "distance": 32.39571348492375,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 323.04446978289786,
+            "x": 302.5,
+            "y": 1024.5,
+            "size": 4.333333333333333,
+            "rank": 408,
+            "distance": 32.852811937447,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 574.5752350098688,
+            "x": 300.5,
+            "y": 1047.5,
+            "size": 8.333333333333334,
+            "rank": 689,
+            "distance": 33.79514668850044,
+            "centralSizeRelativeToExpected": 0.07096067448121095
+          },
+          {
+            "score": 263.7908075966245,
+            "x": 317,
+            "y": 1067.5,
+            "size": 10.333333333333334,
+            "rank": 302,
+            "distance": 34.00838916278256,
+            "centralSizeRelativeToExpected": 0.08799123635670159
+          },
+          {
+            "score": 352.69885206545905,
+            "x": 318,
+            "y": 1006,
+            "size": 6,
+            "rank": 456,
+            "distance": 34.640962958573496,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 1460.6125862253152,
+            "x": 339.5,
+            "y": 1003,
+            "size": 4.666666666666667,
+            "rank": 1072,
+            "distance": 35.01055959917326,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          },
+          {
+            "score": 150.55363382295684,
+            "x": 327.5,
+            "y": 1072.5,
+            "size": 4.333333333333333,
+            "rank": 108,
+            "distance": 35.53694471528564,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 327.27130489930886,
+            "x": 325.5,
+            "y": 1002.5,
+            "size": 7,
+            "rank": 412,
+            "distance": 35.59388205432587,
+            "centralSizeRelativeToExpected": 0.0596069665642172
+          },
+          {
+            "score": 648.1275461593449,
+            "x": 350.25,
+            "y": 1005.5,
+            "size": 9.333333333333334,
+            "rank": 725,
+            "distance": 36.34889293805611,
+            "centralSizeRelativeToExpected": 0.07947595541895626
+          },
+          {
+            "score": 392.8191904750954,
+            "x": 296.5,
+            "y": 1030.5,
+            "size": 4.333333333333333,
+            "rank": 515,
+            "distance": 36.87708980108462,
+            "centralSizeRelativeToExpected": 0.03689955073022969
+          },
+          {
+            "score": 338.84869496218266,
+            "x": 302.75,
+            "y": 1014.5,
+            "size": 4.666666666666667,
+            "rank": 427,
+            "distance": 37.6997055568377,
+            "centralSizeRelativeToExpected": 0.03973797770947813
+          }
+        ]
+      }
+    },
+    {
+      "id": "span-02",
+      "instrumentedLocationsMatch": true,
+      "rawQuadCount": 1615,
+      "scoredPointCount": 1589,
+      "groupCount": 5,
+      "ordinaryLocations": [
+        {
+          "alignmentPattern": { "x": 544.5, "y": 297.5 },
+          "bottomLeft": { "x": 546, "y": 574 },
+          "dimension": 41,
+          "topLeft": { "x": 487, "y": 576 },
+          "topRight": { "x": 492.5, "y": 292 }
+        },
+        {
+          "alignmentPattern": { "x": 544.5, "y": 297.5 },
+          "bottomLeft": { "x": 545.5, "y": 573.5 },
+          "topLeft": { "x": 486.5, "y": 568 },
+          "topRight": { "x": 492, "y": 291.5 },
+          "dimension": 49
+        }
+      ],
+      "pointsWithinOneModule": {
+        "topLeft": [
+          {
+            "score": 786.1509886028182,
+            "x": 437,
+            "y": 443,
+            "size": 10,
+            "rank": 935,
+            "distance": 6.6782778117753026,
+            "centralSizeRelativeToExpected": 0.06386460703308984
+          },
+          {
+            "score": 687.2414122509024,
+            "x": 452.5,
+            "y": 434,
+            "size": 6.666666666666667,
+            "rank": 814,
+            "distance": 13.093510588503376,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1943.038971378946,
+            "x": 444,
+            "y": 457.5,
+            "size": 11,
+            "rank": 1280,
+            "distance": 13.857624959972375,
+            "centralSizeRelativeToExpected": 0.07025106773639883
+          },
+          {
+            "score": 2351.6707551352297,
+            "x": 455,
+            "y": 457.5,
+            "size": 11,
+            "rank": 1365,
+            "distance": 17.9109608768276,
+            "centralSizeRelativeToExpected": 0.07025106773639883
+          },
+          {
+            "score": 457.5629604205502,
+            "x": 429,
+            "y": 457,
+            "size": 10.666666666666666,
+            "rank": 395,
+            "distance": 19.82011338341055,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 756.2884632257214,
+            "x": 452.5,
+            "y": 425.5,
+            "size": 5.666666666666667,
+            "rank": 910,
+            "distance": 20.191257873922822,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          },
+          {
+            "score": 372.1260330494488,
+            "x": 465,
+            "y": 434,
+            "size": 6,
+            "rank": 238,
+            "distance": 23.431136219382307,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 2348.2361606285835,
+            "x": 472.5,
+            "y": 440.5,
+            "size": 7,
+            "rank": 1364,
+            "distance": 29.02422513231402,
+            "centralSizeRelativeToExpected": 0.04470522492316289
+          },
+          {
+            "score": 2101.733122621052,
+            "x": 467,
+            "y": 426,
+            "size": 8,
+            "rank": 1314,
+            "distance": 29.270815576803624,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 1846.0846115295928,
+            "x": 471,
+            "y": 457,
+            "size": 10.666666666666666,
+            "rank": 1252,
+            "distance": 30.43845256466314,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 740.1283314812093,
+            "x": 415,
+            "y": 457,
+            "size": 10.666666666666666,
+            "rank": 897,
+            "distance": 31.606160705331654,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 1393.7885200036105,
+            "x": 452.5,
+            "y": 474.5,
+            "size": 6.333333333333333,
+            "rank": 1151,
+            "distance": 32.098179769750935,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 565.7606784962538,
+            "x": 415,
+            "y": 425.5,
+            "size": 5,
+            "rank": 615,
+            "distance": 33.910949847081135,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 700.2894848211097,
+            "x": 452.5,
+            "y": 408,
+            "size": 6.666666666666667,
+            "rank": 840,
+            "distance": 36.72979062738108,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 390.8908742591463,
+            "x": 480.75,
+            "y": 434,
+            "size": 6.333333333333333,
+            "rank": 264,
+            "distance": 38.33671976097132,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 411.5248217234812,
+            "x": 420,
+            "y": 410.5,
+            "size": 12.333333333333334,
+            "rank": 312,
+            "distance": 40.7171956245915,
+            "centralSizeRelativeToExpected": 0.07876634867414414
+          },
+          {
+            "score": 1556.526897469156,
+            "x": 467.5,
+            "y": 478,
+            "size": 12.666666666666666,
+            "rank": 1175,
+            "distance": 41.8223477285918,
+            "centralSizeRelativeToExpected": 0.08089516890858046
+          },
+          {
+            "score": 655.1401347750741,
+            "x": 414.75,
+            "y": 474.5,
+            "size": 5.333333333333333,
+            "rank": 758,
+            "distance": 42.27226877080587,
+            "centralSizeRelativeToExpected": 0.03406112375098125
+          },
+          {
+            "score": 1315.6684575260813,
+            "x": 452.5,
+            "y": 485,
+            "size": 6.666666666666667,
+            "rank": 1138,
+            "distance": 42.290173439361155,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1846.7432403783419,
+            "x": 485,
+            "y": 457,
+            "size": 10.666666666666666,
+            "rank": 1253,
+            "distance": 43.45557380280748,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 494.81231903566726,
+            "x": 403.25,
+            "y": 425.5,
+            "size": 5.333333333333333,
+            "rank": 463,
+            "distance": 44.28562500441032,
+            "centralSizeRelativeToExpected": 0.03406112375098125
+          },
+          {
+            "score": 1688.4991512852416,
+            "x": 399.5,
+            "y": 439.5,
+            "size": 7.666666666666667,
+            "rank": 1206,
+            "distance": 44.34121270929847,
+            "centralSizeRelativeToExpected": 0.04896286539203555
+          },
+          {
+            "score": 1812.4856349896638,
+            "x": 401,
+            "y": 457,
+            "size": 10.666666666666666,
+            "rank": 1241,
+            "distance": 44.68849845912538,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 693.5833134891657,
+            "x": 452.5,
+            "y": 397.5,
+            "size": 6.333333333333333,
+            "rank": 829,
+            "distance": 46.98842298408463,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 918.1620176741752,
+            "x": 467.5,
+            "y": 401,
+            "size": 12.666666666666666,
+            "rank": 1012,
+            "distance": 48.864378841148195,
+            "centralSizeRelativeToExpected": 0.08089516890858046
+          },
+          {
+            "score": 400.21045083732713,
+            "x": 395.5,
+            "y": 434,
+            "size": 6,
+            "rank": 288,
+            "distance": 49.10380605952305,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 542.12256407686,
+            "x": 420,
+            "y": 487.5,
+            "size": 12.333333333333334,
+            "rank": 571,
+            "distance": 49.82239726800838,
+            "centralSizeRelativeToExpected": 0.07876634867414414
+          },
+          {
+            "score": 373.11600417589426,
+            "x": 403.25,
+            "y": 413,
+            "size": 6.333333333333333,
+            "rank": 240,
+            "distance": 50.70639463648795,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 292.5239870267721,
+            "x": 422.5,
+            "y": 396.5,
+            "size": 4.333333333333333,
+            "rank": 146,
+            "distance": 51.67221830472593,
+            "centralSizeRelativeToExpected": 0.027674663047672264
+          }
+        ],
+        "topRight": [
+          {
+            "score": 4086.8188994481775,
+            "x": 1384,
+            "y": 431.5,
+            "size": 10.333333333333334,
+            "rank": 1418,
+            "distance": 12.17767953701568,
+            "centralSizeRelativeToExpected": 0.06599342726752618
+          },
+          {
+            "score": 764.0311089970033,
+            "x": 1392,
+            "y": 434,
+            "size": 6,
+            "rank": 918,
+            "distance": 13.10196565047584,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 1614.6311833146308,
+            "x": 1383.25,
+            "y": 457.5,
+            "size": 11.333333333333334,
+            "rank": 1192,
+            "distance": 13.853607523177828,
+            "centralSizeRelativeToExpected": 0.07237988797083517
+          },
+          {
+            "score": 649.7447940215649,
+            "x": 1366.5,
+            "y": 439.5,
+            "size": 5.666666666666667,
+            "rank": 752,
+            "distance": 17.143482840608943,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          },
+          {
+            "score": 10172.775761286646,
+            "x": 1396.5,
+            "y": 457,
+            "size": 11.333333333333334,
+            "rank": 1479,
+            "distance": 18.89301137739156,
+            "centralSizeRelativeToExpected": 0.07237988797083517
+          },
+          {
+            "score": 430.8128302675954,
+            "x": 1368.5,
+            "y": 457,
+            "size": 11.333333333333334,
+            "rank": 347,
+            "distance": 19.810877792421316,
+            "centralSizeRelativeToExpected": 0.07237988797083517
+          },
+          {
+            "score": 740.0073190811747,
+            "x": 1392,
+            "y": 425.5,
+            "size": 5,
+            "rank": 896,
+            "distance": 20.196741789364175,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 493.3858391732648,
+            "x": 1404.75,
+            "y": 434,
+            "size": 6.333333333333333,
+            "rank": 457,
+            "distance": 23.670602894861943,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 285.95725331889236,
+            "x": 1359.5,
+            "y": 434.5,
+            "size": 10.333333333333334,
+            "rank": 137,
+            "distance": 25.342632142424645,
+            "centralSizeRelativeToExpected": 0.06599342726752618
+          },
+          {
+            "score": 4079.442446032429,
+            "x": 1384,
+            "y": 417.5,
+            "size": 5,
+            "rank": 1416,
+            "distance": 26.161199875125206,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 441.09422608358335,
+            "x": 1405,
+            "y": 425.5,
+            "size": 5,
+            "rank": 366,
+            "distance": 28.41504229992007,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 528.6271593189329,
+            "x": 1362,
+            "y": 424.5,
+            "size": 5,
+            "rank": 537,
+            "distance": 28.51779495168332,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 611.1022507828901,
+            "x": 1354.5,
+            "y": 457,
+            "size": 11.333333333333334,
+            "rank": 682,
+            "distance": 31.59483152204257,
+            "centralSizeRelativeToExpected": 0.07237988797083517
+          },
+          {
+            "score": 781.8675770765516,
+            "x": 1392,
+            "y": 474.5,
+            "size": 5.666666666666667,
+            "rank": 929,
+            "distance": 32.101629692373045,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          },
+          {
+            "score": 688.5271733117099,
+            "x": 1354.5,
+            "y": 425.5,
+            "size": 4.333333333333333,
+            "rank": 818,
+            "distance": 33.90039091081777,
+            "centralSizeRelativeToExpected": 0.027674663047672264
+          },
+          {
+            "score": 1599.267103913442,
+            "x": 1408,
+            "y": 467.5,
+            "size": 18.333333333333332,
+            "rank": 1185,
+            "distance": 34.45679728161404,
+            "centralSizeRelativeToExpected": 0.11708511289399805
+          },
+          {
+            "score": 895.4419757731888,
+            "x": 1392,
+            "y": 408,
+            "size": 6,
+            "rank": 996,
+            "distance": 36.732805554521015,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 404.2927299985008,
+            "x": 1359.5,
+            "y": 410.5,
+            "size": 12.333333333333334,
+            "rank": 299,
+            "distance": 40.709937409756066,
+            "centralSizeRelativeToExpected": 0.07876634867414414
+          },
+          {
+            "score": 1581.1973203527064,
+            "x": 1424.25,
+            "y": 439.5,
+            "size": 7.333333333333333,
+            "rank": 1181,
+            "distance": 41.32422039683559,
+            "centralSizeRelativeToExpected": 0.046834045157599216
+          },
+          {
+            "score": 652.1757449827859,
+            "x": 1354.25,
+            "y": 474.5,
+            "size": 5.333333333333333,
+            "rank": 754,
+            "distance": 42.26372488797283,
+            "centralSizeRelativeToExpected": 0.03406112375098125
+          },
+          {
+            "score": 691.3610384195172,
+            "x": 1392,
+            "y": 485,
+            "size": 6,
+            "rank": 822,
+            "distance": 42.292791985233684,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 1606.2964133023233,
+            "x": 1424.25,
+            "y": 457.5,
+            "size": 12.666666666666666,
+            "rank": 1189,
+            "distance": 43.38667642728862,
+            "centralSizeRelativeToExpected": 0.08089516890858046
+          },
+          {
+            "score": 1981.065650282687,
+            "x": 1340.5,
+            "y": 457,
+            "size": 11.333333333333334,
+            "rank": 1291,
+            "distance": 44.67656968598033,
+            "centralSizeRelativeToExpected": 0.07237988797083517
+          },
+          {
+            "score": 617.0250249525923,
+            "x": 1341,
+            "y": 426,
+            "size": 8,
+            "rank": 694,
+            "distance": 45.68060588374741,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 154.38365314165853,
+            "x": 1428,
+            "y": 434.5,
+            "size": 5.666666666666667,
+            "rank": 37,
+            "distance": 45.788531630816045,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          },
+          {
+            "score": 761.9191144303893,
+            "x": 1392,
+            "y": 397.5,
+            "size": 5.666666666666667,
+            "rank": 916,
+            "distance": 46.99077972226308,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          },
+          {
+            "score": 430.2348192704399,
+            "x": 1428,
+            "y": 425.5,
+            "size": 5,
+            "rank": 345,
+            "distance": 48.39662569752402,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 8227.492046200929,
+            "x": 1406.75,
+            "y": 401,
+            "size": 13,
+            "rank": 1465,
+            "distance": 48.74888400164919,
+            "centralSizeRelativeToExpected": 0.0830239891430168
+          },
+          {
+            "score": 527.697564326766,
+            "x": 1359.5,
+            "y": 487.5,
+            "size": 12.333333333333334,
+            "rank": 534,
+            "distance": 49.81646569063538,
+            "centralSizeRelativeToExpected": 0.07876634867414414
+          },
+          {
+            "score": 639.6790582327072,
+            "x": 1366.5,
+            "y": 491.5,
+            "size": 5.666666666666667,
+            "rank": 727,
+            "distance": 50.66185945961963,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          }
+        ],
+        "bottomLeft": [
+          {
+            "score": 383.4413197320756,
+            "x": 437,
+            "y": 1382.5,
+            "size": 9.666666666666666,
+            "rank": 252,
+            "distance": 6.677078620643194,
+            "centralSizeRelativeToExpected": 0.06173578679865351
+          },
+          {
+            "score": 894.4207493857205,
+            "x": 452.5,
+            "y": 1374,
+            "size": 6.666666666666667,
+            "rank": 993,
+            "distance": 12.720637912709066,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1176.0408131170966,
+            "x": 444,
+            "y": 1396.5,
+            "size": 11,
+            "rank": 1107,
+            "distance": 13.370289036002458,
+            "centralSizeRelativeToExpected": 0.07025106773639883
+          },
+          {
+            "score": 1884.0158085225933,
+            "x": 455,
+            "y": 1396.5,
+            "size": 11,
+            "rank": 1264,
+            "distance": 17.5366296336054,
+            "centralSizeRelativeToExpected": 0.07025106773639883
+          },
+          {
+            "score": 337.8514122017366,
+            "x": 429,
+            "y": 1396,
+            "size": 10.666666666666666,
+            "rank": 198,
+            "distance": 19.495005870895458,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 691.2475304190167,
+            "x": 452.5,
+            "y": 1365.5,
+            "size": 5.666666666666667,
+            "rank": 821,
+            "distance": 19.731928539964176,
+            "centralSizeRelativeToExpected": 0.03618994398541758
+          },
+          {
+            "score": 689.1237707241108,
+            "x": 465,
+            "y": 1374,
+            "size": 6,
+            "rank": 819,
+            "distance": 23.224830546340925,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 681.8616840412985,
+            "x": 420.25,
+            "y": 1374.5,
+            "size": 10.666666666666666,
+            "rank": 804,
+            "distance": 24.939250016916155,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 694.3126305314863,
+            "x": 467,
+            "y": 1366,
+            "size": 8,
+            "rank": 831,
+            "distance": 28.96472430226554,
+            "centralSizeRelativeToExpected": 0.05109168562647188
+          },
+          {
+            "score": 527.3168560611135,
+            "x": 471,
+            "y": 1396,
+            "size": 10.666666666666666,
+            "rank": 532,
+            "distance": 30.22776461973737,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 557.1671659460096,
+            "x": 415,
+            "y": 1396,
+            "size": 10.666666666666666,
+            "rank": 599,
+            "distance": 31.403308008970154,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 2372.6828275063926,
+            "x": 452.5,
+            "y": 1413.5,
+            "size": 6.333333333333333,
+            "rank": 1370,
+            "distance": 31.62987518006108,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 372.23327986895833,
+            "x": 415,
+            "y": 1365.5,
+            "size": 5,
+            "rank": 239,
+            "distance": 33.639480211594446,
+            "centralSizeRelativeToExpected": 0.03193230351654492
+          },
+          {
+            "score": 1116.5699987202252,
+            "x": 452.5,
+            "y": 1347,
+            "size": 6.666666666666667,
+            "rank": 1091,
+            "distance": 37.203103081681995,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 682.6921954814329,
+            "x": 480.75,
+            "y": 1374,
+            "size": 6.333333333333333,
+            "rank": 805,
+            "distance": 38.21097605932424,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 591.7903967317346,
+            "x": 420,
+            "y": 1349.5,
+            "size": 12.333333333333334,
+            "rank": 655,
+            "distance": 41.11503227417263,
+            "centralSizeRelativeToExpected": 0.07876634867414414
+          },
+          {
+            "score": 683.6261986707866,
+            "x": 467.5,
+            "y": 1417,
+            "size": 12.666666666666666,
+            "rank": 808,
+            "distance": 41.42284549504346,
+            "centralSizeRelativeToExpected": 0.08089516890858046
+          },
+          {
+            "score": 2366.27354600985,
+            "x": 452.5,
+            "y": 1424,
+            "size": 6.666666666666667,
+            "rank": 1368,
+            "distance": 41.81359980803186,
+            "centralSizeRelativeToExpected": 0.04257640468872657
+          },
+          {
+            "score": 1720.280807254108,
+            "x": 414.75,
+            "y": 1413.5,
+            "size": 5.333333333333333,
+            "rank": 1216,
+            "distance": 41.91778341475424,
+            "centralSizeRelativeToExpected": 0.03406112375098125
+          },
+          {
+            "score": 575.2444735735526,
+            "x": 485,
+            "y": 1396,
+            "size": 10.666666666666666,
+            "rank": 624,
+            "distance": 43.30825849542147,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 1406.2152613787716,
+            "x": 403.25,
+            "y": 1365.5,
+            "size": 5.333333333333333,
+            "rank": 1153,
+            "distance": 44.078097638240415,
+            "centralSizeRelativeToExpected": 0.03406112375098125
+          },
+          {
+            "score": 660.4249081574408,
+            "x": 401,
+            "y": 1396,
+            "size": 10.666666666666666,
+            "rank": 767,
+            "distance": 44.545260734518656,
+            "centralSizeRelativeToExpected": 0.0681222475019625
+          },
+          {
+            "score": 1105.8198534087524,
+            "x": 452.5,
+            "y": 1336.5,
+            "size": 6.333333333333333,
+            "rank": 1089,
+            "distance": 47.4672808775293,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          },
+          {
+            "score": 691.4772385629033,
+            "x": 395.5,
+            "y": 1374,
+            "size": 6,
+            "rank": 824,
+            "distance": 49.00569741271166,
+            "centralSizeRelativeToExpected": 0.038318764219853904
+          },
+          {
+            "score": 851.5275741889782,
+            "x": 467.5,
+            "y": 1340,
+            "size": 12.666666666666666,
+            "rank": 971,
+            "distance": 49.290423805301735,
+            "centralSizeRelativeToExpected": 0.08089516890858046
+          },
+          {
+            "score": 1044.0861179162446,
+            "x": 420,
+            "y": 1426.5,
+            "size": 12.333333333333334,
+            "rank": 1069,
+            "distance": 49.393847075382205,
+            "centralSizeRelativeToExpected": 0.07876634867414414
+          },
+          {
+            "score": 635.4939612410224,
+            "x": 403.25,
+            "y": 1352,
+            "size": 6.333333333333333,
+            "rank": 716,
+            "distance": 51.002517745757,
+            "centralSizeRelativeToExpected": 0.04044758445429023
+          }
+        ]
+      }
+    },
+    {
+      "id": "solid-finder-control",
+      "instrumentedLocationsMatch": true,
+      "rawQuadCount": 3,
+      "scoredPointCount": 3,
+      "groupCount": 3,
+      "ordinaryLocations": [
+        {
+          "alignmentPattern": { "x": 636, "y": 204 },
+          "bottomLeft": { "x": 204, "y": 636 },
+          "dimension": 25,
+          "topLeft": { "x": 204, "y": 204 },
+          "topRight": { "x": 636, "y": 204 }
+        },
+        {
+          "alignmentPattern": { "x": 636, "y": 204 },
+          "bottomLeft": { "x": 203.5, "y": 635.5 },
+          "topLeft": { "x": 203.5, "y": 203.5 },
+          "topRight": { "x": 635.5, "y": 203.5 },
+          "dimension": 25
+        }
+      ],
+      "pointsWithinOneModule": {
+        "topLeft": [
+          {
+            "score": 3.5475012234361922,
+            "x": 204,
+            "y": 204,
+            "size": 72,
+            "rank": 2,
+            "distance": 0,
+            "centralSizeRelativeToExpected": 1
+          }
+        ],
+        "topRight": [
+          {
+            "score": 2.7828317229362503,
+            "x": 636,
+            "y": 204,
+            "size": 72,
+            "rank": 0,
+            "distance": 0,
+            "centralSizeRelativeToExpected": 1
+          }
+        ],
+        "bottomLeft": [
+          {
+            "score": 2.7828317229362503,
+            "x": 204,
+            "y": 636,
+            "size": 72,
+            "rank": 1,
+            "distance": 0,
+            "centralSizeRelativeToExpected": 1
+          }
+        ]
+      }
+    }
+  ]
+}

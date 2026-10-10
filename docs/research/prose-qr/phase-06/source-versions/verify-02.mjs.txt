@@ -1,0 +1,273 @@
+import { readFile, writeFile, readdir, stat } from "node:fs/promises";
+import { resolve, relative } from "node:path";
+import { createHash } from "node:crypto";
+import { gunzipSync } from "node:zlib";
+import { format } from "prettier";
+import assert from "node:assert/strict";
+const root = resolve("docs/research/prose-qr/phase-06"),
+  sha = (b) => createHash("sha256").update(b).digest("hex");
+async function files(p) {
+  const all = [];
+  for (const e of await readdir(p, { withFileTypes: true })) {
+    const q = resolve(p, e.name);
+    all.push(...(e.isDirectory() ? await files(q) : [q]));
+  }
+  return all;
+}
+const list = await files(root),
+  archives = new Map();
+for (const p of list.filter((p) => p.endsWith(".mjs.txt")))
+  archives.set(sha(await readFile(p)), relative(process.cwd(), p));
+const nativeRows = [],
+  rejected = [],
+  seedReplays = [];
+const batches = [],
+  sources = [],
+  wins = [],
+  ids = new Set();
+let candidates = 0,
+  replays = 0,
+  fullControls = 0,
+  solidControls = 0;
+async function png(base, r) {
+  const b = await readFile(resolve(base, r.path));
+  assert.equal(sha(b), r.pngSha256);
+  assert.equal(b.readUInt32BE(16), r.width);
+  assert.equal(b.readUInt32BE(20), r.height);
+}
+for (const manifestPath of list
+  .filter((p) => p.endsWith("/manifest.json"))
+  .sort()) {
+  const base = resolve(manifestPath, ".."),
+    m = JSON.parse(await readFile(manifestPath, "utf8"));
+  for (const [p, h] of Object.entries(m.sourceHashes)) {
+    const same = sha(await readFile(p)) === h,
+      archived = archives.get(h);
+    assert(same || archived, "Missing executed source " + p);
+    sources.push({
+      batch: relative(root, base),
+      path: p,
+      sha256: h,
+      preservedAt: same ? p : archived,
+    });
+  }
+  let rows = [],
+    abort = null;
+  try {
+    rows = (await readFile(resolve(base, "results.jsonl"), "utf8"))
+      .trim()
+      .split("\n")
+      .filter(Boolean)
+      .map(JSON.parse);
+  } catch (e) {
+    if (e.code !== "ENOENT") throw e;
+  }
+  try {
+    abort = JSON.parse(await readFile(resolve(base, "aborted.json"), "utf8"));
+    assert.equal(abort.completed, rows.length);
+  } catch (e) {
+    if (e.code !== "ENOENT") throw e;
+  }
+  if (!abort) assert.equal(rows.length, m.specs.length);
+  nativeRows.push(...rows.map((r) => ({ ...r, batch: relative(root, base) })));
+  for (const r of rows) {
+    assert(!ids.has(r.id), "Duplicated native case ID");
+    ids.add(r.id);
+    assert.deepEqual(
+      r.spec,
+      m.specs.find((s) => s.id === r.id),
+    );
+    await png(base, r);
+    assert.equal(
+      sha(await readFile(resolve(base, r.id + ".html.gz"))),
+      r.gzipSha256,
+    );
+    assert(
+      gunzipSync(await readFile(resolve(base, r.id + ".html.gz")))
+        .toString()
+        .includes('id="corner-0"'),
+    );
+    const txt = await readFile(resolve(base, r.id + ".txt"));
+    assert.equal(sha(txt), r.txtSha256);
+    const l = JSON.parse(
+      await readFile(resolve(base, r.id + "-layout.json"), "utf8"),
+    );
+    assert.equal(l.plainText, txt.toString());
+    assert(!l.plainText.includes("  "));
+    assert(l.plainText.split("\n").every((s) => s.trim()));
+    assert(l.structural.globalInkEnvelope <= l.lineHeight);
+    assert(l.actualAdvances.every((w) => w <= l.field));
+    assert.equal(r.fit.childElements, 0);
+    assert.equal(r.encodedPayload, null);
+    if (r.replay.repeatMatches) {
+      assert.equal(r.replay.repeatedPNGHash, r.pngSha256);
+      replays++;
+    } else
+      assert.equal(
+        sha(await readFile(resolve(base, "raw/" + r.id + "-repeat.png"))),
+        r.replay.repeatedPNGHash,
+      );
+    if (r.diagnostic.correctFinder) wins.push(r.id);
+  }
+  if (m.specs.some((s) => s.id.startsWith("feedback-"))) {
+    const replay = JSON.parse(
+      await readFile(resolve(base, "seed-replay.json"), "utf8"),
+    );
+    assert(replay.matches);
+    assert.equal(replay.expectedPNGHash, replay.replayedPNGHash);
+    seedReplays.push({ batch: relative(root, base), ...replay });
+    for (const r of rows) {
+      const computed = Object.values(r.diagnostic.corridors)
+        .flatMap((x) => Object.values(x))
+        .reduce(
+          (n, a) =>
+            n +
+            Math.round((1 - a.agreement) * a.pixels) +
+            2 * Math.max(0, a.runs.length - 5),
+          0,
+        );
+      assert.equal(r.score, computed);
+      const parent =
+        r.parentId === "cap-02"
+          ? nativeRows.find((x) => x.id === "cap-02")
+          : nativeRows.find((x) => x.id === r.parentId);
+      assert(parent, "Missing native feedback parent");
+      const parentText = await readFile(
+        resolve(root, parent.batch, parent.id + ".txt"),
+        "utf8",
+      );
+      assert.equal(sha(parentText), r.parentTextSha256);
+      const lines = parentText.split("\n");
+      if (r.spec.stage === "horizontal") lines[7] = r.spec.centerLine + ".";
+      else
+        for (const i of [2, 3, 10, 11])
+          lines[i] = lines[i].replace(/^\S+/, r.spec.firstWord);
+      assert.equal(lines.join("\n"), r.plainText);
+    }
+  }
+  if (m.specs.some((s) => s.id.startsWith("seam-"))) {
+    const replay = JSON.parse(
+      await readFile(resolve(base, "seed-replay.json"), "utf8"),
+    );
+    assert(replay.matches);
+    assert.equal(replay.expectedPNGHash, replay.replayedPNGHash);
+    seedReplays.push({ batch: relative(root, base), ...replay });
+    for (const r of rows)
+      assert.equal(
+        await readFile(resolve(base, r.id + ".txt"), "utf8"),
+        await readFile(resolve(root, "feedback-02/feedback-11.txt"), "utf8"),
+      );
+  }
+  try {
+    const reject = JSON.parse(
+      await readFile(resolve(base, "source-width-rejection.json"), "utf8"),
+    );
+    assert.equal(reject.nativeCapture, false);
+    assert(reject.actualAdvances.some((w) => w > reject.field));
+    assert(!ids.has(reject.id));
+    rejected.push(reject);
+  } catch (e) {
+    if (e.code !== "ENOENT") throw e;
+  }
+  const c = JSON.parse(await readFile(resolve(base, "controls.json"), "utf8"));
+  await png(base, c.fullQR);
+  assert(
+    c.fullQR.baseline.jsQR.exact &&
+      c.fullQR.baseline.zxing.exact &&
+      c.fullQR.ordinaryZXing.exact,
+  );
+  await png(base, c.solidFinder);
+  assert(c.solidFinder.diagnostic.correctFinder);
+  fullControls++;
+  solidControls++;
+  candidates += rows.length;
+  batches.push({
+    batch: relative(root, base),
+    planned: m.specs.length,
+    retainedNative: rows.length,
+    abort,
+    uncompleted: m.specs
+      .filter((s) => !rows.some((r) => r.id === s.id))
+      .map((s) => s.id),
+  });
+}
+const prior = [];
+for (const phase of ["phase-04", "phase-05"]) {
+  const path = "docs/research/prose-qr/" + phase + "/custody.json",
+    b = await readFile(path),
+    c = JSON.parse(b);
+  for (const r of c.inventory) {
+    const actual = await readFile(r.path);
+    assert.equal(actual.length, r.bytes);
+    assert.equal(sha(actual), r.sha256);
+  }
+  prior.push({
+    phase,
+    path,
+    sha256: sha(b),
+    inventoryEntriesUnchanged: c.inventory.length,
+  });
+}
+const old = JSON.parse(
+  await readFile(
+    "docs/research/prose-qr/phase-05/verification-final.json",
+    "utf8",
+  ),
+);
+for (const r of old.downloads)
+  assert.equal(sha(await readFile("downloads/" + r.name)), r.sha256);
+const pkg = JSON.parse(await readFile("package.json", "utf8"));
+assert(pkg.private);
+assert.equal(pkg.version, "0.4.2");
+let bytes = 0;
+for (const p of [
+  ...list,
+  ...(await files(resolve("experiments/prose-qr/finder-native"))),
+])
+  bytes += (await stat(p)).size;
+assert(bytes < 6_000_000);
+const output = process.argv[2] || "verification-01.json";
+assert(/^[a-z0-9-]+\.json$/.test(output));
+await writeFile(
+  resolve(root, output),
+  await format(
+    JSON.stringify({
+      at: new Date().toISOString(),
+      sourceScriptSha256: sha(await readFile(new URL(import.meta.url))),
+      baseline: "52fa086b970d585e8087db25503114ab55c65c8f",
+      batches,
+      candidates,
+      correctFinderGeometry: wins,
+      sourceWidthRejections: rejected,
+      exactSeedReplays: seedReplays,
+      exactNativeRepeats: replays,
+      fullQrControls: fullControls,
+      passingFullQrControlProbeAttempts: fullControls * 3,
+      solidFinderControls: solidControls,
+      encodedCandidatePayloads: 0,
+      phoneCandidates: 0,
+      sourceCustody: sources,
+      prior,
+      downloads: old.downloads,
+      phaseBytesBeforeReceipt: bytes,
+      logicalFileSafeguardBytes: 6_000_000,
+      npmPrivate: pkg.private,
+      productVersion: pkg.version,
+      proseAcceptance: "unsolved",
+      classification:
+        "Read-only custody/count reconciliation; no new capture, locator or payload probe",
+    }),
+    { parser: "json" },
+  ),
+  { flag: "wx" },
+);
+console.log(
+  JSON.stringify({
+    candidates,
+    wins,
+    replays,
+    fullControls,
+    solidControls,
+    bytes,
+  }),
+);

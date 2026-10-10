@@ -1,0 +1,859 @@
+{
+  "at": "2026-10-10T14:54:25.864Z",
+  "phase": 52,
+  "anchorHead": "7e0b9015285f55c288bd221f3a13cabadccc2332",
+  "goal": "unsolved",
+  "cap": 4000000,
+  "prior": [
+    {
+      "path": "docs/research/prose-qr/session-2026-10-10/custody.json",
+      "sha256": "c30e3d33b6e04158ba56206db16011e85ee8b4c4a5ff5f010eda32cc09ef9c8e"
+    }
+  ],
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-b/seal-next.mjs": "799c7102f3ec84663bf8754aed3fe3189d469e970b8fce7a9204be5e6ee21324",
+    "docs/research/prose-qr/phase-52/analysis.json": "9c39c6a66e56c8660f0f2fefeb9177f1b34eb9c01b6c333986289ad8e164d20c"
+  },
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/phase-52/PLAN.md",
+      "bytes": 4114,
+      "sha256": "fc4fdb4616e4a1f93f67510fb971c90d8903044157b14a50cb16a532e67c3f43"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/README.md",
+      "bytes": 610,
+      "sha256": "851fd8555e242688ab90d293a19ccb7cc9ac0708553727620a4f0eca8a20f687"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/analysis.json",
+      "bytes": 1036,
+      "sha256": "9c39c6a66e56c8660f0f2fefeb9177f1b34eb9c01b6c333986289ad8e164d20c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w1-multi.html.gz",
+      "bytes": 307,
+      "sha256": "e57da9e91d1b6c709d2e06b0fdc7226dbb4810718845785b7368c9f772573aa7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w1-multi.png",
+      "bytes": 22659,
+      "sha256": "323019abc17f7e770933035d61ef2b015f2ce6f406c4c322f243d2cf59cf1733"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w1-single.html.gz",
+      "bytes": 300,
+      "sha256": "4c89c67a1d8f0d5018c224303ebcdea608d8c5d0ebe38fcf6f04bbe54db1262e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w1-single.png",
+      "bytes": 3591,
+      "sha256": "ab33de3a7ed58e1f331d98454312648f2826e2a5dd94a1de5317fb5f857e68f9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w1.json",
+      "bytes": 2869,
+      "sha256": "ca0c8be3fe3ffb3bd7fd8724c233a67997420f37bb5c990e8c2ed3ac0fd07199"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w2-multi.html.gz",
+      "bytes": 307,
+      "sha256": "63fb14e4dd7c6d06039bd98ea94de2a34d5ce09e337d2d86d21ebd8cf3da5363"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w2-multi.png",
+      "bytes": 27021,
+      "sha256": "d8c8317598bae14b036976c353bef36879a58ac92436a48e0819afffc23d3a19"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w2-single.html.gz",
+      "bytes": 300,
+      "sha256": "db61e56509f8dfdf199c79d921d1648d08dc78a4ba5a7ad94203cdbe42f2a5d4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w2-single.png",
+      "bytes": 4188,
+      "sha256": "0722c53f3ca06891c5110ed407e5f369e64da8f8cc8d4fc2e28ca57022242e89"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w2.json",
+      "bytes": 3067,
+      "sha256": "fa4ed99969c83b955e891927a9bbe0dd3aede6c25facd8c8c2030572f84954dc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w3-multi.html.gz",
+      "bytes": 307,
+      "sha256": "912f5cc1af3fc2356fadd635795d008b49692d5761935290a3c8894cd7cebe6b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w3-multi.png",
+      "bytes": 31502,
+      "sha256": "0f6e1a25281756bd7a22bc38d78cb7b28f86ddcdc60ad08fdcf7d7d916a9cda5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w3-single.html.gz",
+      "bytes": 300,
+      "sha256": "563b201abeedfd082391509c5e55a6a3da5b78311f2ab3752a4e4c6aab47a2c7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w3-single.png",
+      "bytes": 4808,
+      "sha256": "05c08c21b6bb939527b6ca549a892a95aa146803c7ffda2aebff8b307438b801"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w3.json",
+      "bytes": 3088,
+      "sha256": "1a3a488441e2174ee8f49ec22d17ac91f8dc2f792235029d3e1a1203f9358f07"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w4-multi.html.gz",
+      "bytes": 307,
+      "sha256": "ab6c2129ed2e2d25d6a29c97d24ec880cba37a8983e6d6454bf252acb0afca3c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w4-multi.png",
+      "bytes": 27570,
+      "sha256": "af4766babf6f6ef451a7d20e2155a792593c91fc88bb493778ce384433eb116d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w4-single.html.gz",
+      "bytes": 302,
+      "sha256": "521c7f59ec0fd32c381d4828b7712556ee2b10f86dec64ae2ca39296ee87df9d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w4-single.png",
+      "bytes": 4280,
+      "sha256": "3351a29a15779c907d6730acea38de6f1b3d19838915686de2b85db860255200"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w4.json",
+      "bytes": 3076,
+      "sha256": "449026562a9ffb2f473026dfeeb774802ed73520ca64451ec82997b70dfc8345"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w5-multi.html.gz",
+      "bytes": 309,
+      "sha256": "dfaf2a112c7dca1ff1597e4be77ff137c48b42ceaeeabd58489d034a504b5605"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w5-multi.png",
+      "bytes": 16494,
+      "sha256": "46b73fe259b94a1e7ba4191a750599ec9cbc93aabb76e381c0ee69e7dbbbc871"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w5-single.html.gz",
+      "bytes": 300,
+      "sha256": "3c1b787da1eb5c87fcebb14debad0b1c45fd49c782fb4c5e68de18d9513ccc4c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w5-single.png",
+      "bytes": 2793,
+      "sha256": "ba064edf0b3264b1ed938ca6ee5b8a87c4582d163f671fdd5be56157fddbece4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w5.json",
+      "bytes": 2877,
+      "sha256": "858a6202236a8b7c4a4233335caf0209d88c4d4338f8bbf7e4aca73d0647515e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w6-multi.html.gz",
+      "bytes": 309,
+      "sha256": "d0ca504af8d0b85ea2c247d5b9f71acf376dc8fbd9e90b76461443c3b6106dd5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w6-multi.png",
+      "bytes": 24569,
+      "sha256": "d21493030f9d08a09b38b4f6ff5138c3a9c502eac888bd79914120b5c9c7141c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w6-single.html.gz",
+      "bytes": 300,
+      "sha256": "15990d85d283e24bdfc761d241892a630f176c98ce72504ed2ccfb77fe7e5239"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w6-single.png",
+      "bytes": 3882,
+      "sha256": "ed958fe0ec63b6d097a44244e7fb485038551ddac297df4e10e74378e130b842"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w6.json",
+      "bytes": 3089,
+      "sha256": "901bf241c19727942e6222d5d942dfad4aed6fa1a244643787bcb6146d2bdcda"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w7-multi.html.gz",
+      "bytes": 309,
+      "sha256": "72e16b2b8c389ed12eead14a012aa03fbdfe187bdc3952fe1d8fdfca1b8bb080"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w7-multi.png",
+      "bytes": 28738,
+      "sha256": "951098fe7a8977da47879728b84c95c3c7ba5f03bab8b2966c7794773d9097cf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w7-single.html.gz",
+      "bytes": 300,
+      "sha256": "29ce50e94550f3a8ca7bc0226ac643b3b8c5278c42352b8ad84794563ff8bc2d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w7-single.png",
+      "bytes": 4462,
+      "sha256": "a1bfc910fb5f5518de3f353e99864f02be5dfdde2ad2908c5ba3be1361e7ee11"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w7.json",
+      "bytes": 3088,
+      "sha256": "ad3196bfa6ae8a4007373af3a696eead228bd5a70c4127206f7ef27cc06a6835"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w8-multi.html.gz",
+      "bytes": 307,
+      "sha256": "8187a0e950ce7884f5bfeafa372b1c268adead54431b4af1ea3544d41c2c05cc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w8-multi.png",
+      "bytes": 13168,
+      "sha256": "bb0f1e029e88b0af36a787cec814143bc0a486b5da67574b4922dfe26d604ca2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w8-single.html.gz",
+      "bytes": 300,
+      "sha256": "4a0f43db02f6782878e715f4e50551d74a143027f5b2dd027598424443666401"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w8-single.png",
+      "bytes": 2345,
+      "sha256": "2b6ed2f41ae699fb40dd5fbb6b20d2b2ad51761179df9dd7e23dbc89a715ff8e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l24-w8.json",
+      "bytes": 3079,
+      "sha256": "8fd88f7688ad3299c95a1d79826da8899c6559ccc08431551a4a4e300a9ca90e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w1-multi.html.gz",
+      "bytes": 312,
+      "sha256": "e17deb926bfe8dbe4f04c7c77eced632b531980f0e2896a4fc65a22dd40bf631"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w1-multi.png",
+      "bytes": 23105,
+      "sha256": "42f7f33c653d090e3348a736f1c173439f97140b063b1b0d6d5fd242c4ddb934"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w1-single.html.gz",
+      "bytes": 302,
+      "sha256": "0cb479082e2da4795c0c9f532f5de943e83874c650ad400fae3165570c300009"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w1-single.png",
+      "bytes": 3588,
+      "sha256": "85a2f6bdede4d98a3658e034dd757abc1acf1fe13fe48b405d1dfc3105193313"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w1.json",
+      "bytes": 2873,
+      "sha256": "56671dcc5cef2ccc2434eeb2253a593228b692f6893c511988c75e6b49cb55b2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w2-multi.html.gz",
+      "bytes": 311,
+      "sha256": "88d4ee65d14c59eff5de629a4711d52003b4197de6c94a6c28b360c69d415d2a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w2-multi.png",
+      "bytes": 27586,
+      "sha256": "2da3eb0f239d3f41842bbf4e597078dcb1c3c68dab0535ca5c77e175241d7a72"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w2-single.html.gz",
+      "bytes": 301,
+      "sha256": "1dccf09c537386a2e237ec463916154d573dabdbd6f2b74b9e97e6d11a56b405"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w2-single.png",
+      "bytes": 4189,
+      "sha256": "f14c27a65a25e9ae644e0a9b698710c0d66fbd9b86032663e5e339fcdb0be376"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w2.json",
+      "bytes": 3082,
+      "sha256": "f576e780456914d7da056f0efdd37dcebba76a907717150bca74b939e8e5df30"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w3-multi.html.gz",
+      "bytes": 312,
+      "sha256": "382d5e7f3e9b57e9506800ca11974088bba0b995bc690a955421c5fc63dc27f5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w3-multi.png",
+      "bytes": 32188,
+      "sha256": "a6f66523ec66b6d3fc7e1f8e267290a7a20ee9d602c993cb632c1cdb141135de"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w3-single.html.gz",
+      "bytes": 302,
+      "sha256": "3a5eaacd17f7867bf478166f0c8dffadba8b53253e635b604e6a2a5d23bc18a4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w3-single.png",
+      "bytes": 4808,
+      "sha256": "314c83ffb7beb79071ebfe0a2c7f6b455ce8fb46e6a7217df48c7cd0c70f57fb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w3.json",
+      "bytes": 3090,
+      "sha256": "aa41f4a5aeb36015df79f203dc1f761b67233600beba157b8ff224c1840fcca2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w4-multi.html.gz",
+      "bytes": 312,
+      "sha256": "9adcea4799f2857e2a6c9722dc5b3d1d80fa50e8512d142e95ea1147ff30bb3f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w4-multi.png",
+      "bytes": 28132,
+      "sha256": "541f3420bc30c2b16ef339203ff1b0dbcc7fbeb27fd10c6c5042e0bafc4ac88c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w4-single.html.gz",
+      "bytes": 303,
+      "sha256": "b5ed301214e947776675404197a91f56481e3e2d51e05018a63769ce1a8931ba"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w4-single.png",
+      "bytes": 4280,
+      "sha256": "f4feed6283317208c66177e5bf3efe30b24afb8aa0e6f40a81ca08de0294b2ba"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w4.json",
+      "bytes": 3080,
+      "sha256": "bd1e40a888cdac5c4e12848020ce304242b8c8787783668dab3eccf93e744051"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w5-multi.html.gz",
+      "bytes": 312,
+      "sha256": "89b7e5f80a353ec878b87f1af618f5dab48d01a8541f48288995676f0b900a62"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w5-multi.png",
+      "bytes": 16948,
+      "sha256": "7ca52d82a0a57c2ac48c574a5d80221756efe0d68bee9ab71ec4af00ae0e139e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w5-single.html.gz",
+      "bytes": 302,
+      "sha256": "d518a7b01bd4125ff4d1088ecad93e784ddf85de9c874de0c2c9c992dcd233b5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w5-single.png",
+      "bytes": 2793,
+      "sha256": "eb25ce382b7199932f6585b942053175c083298aa922cde0234ec76cbe3fa06f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w5.json",
+      "bytes": 2880,
+      "sha256": "86bd971ce8f1a81b2aa68081e443addf2595f1b539eca23aef533782eada41ad"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w6-multi.html.gz",
+      "bytes": 313,
+      "sha256": "125b49ffd69ed47f8555e39752ef78cc02159bae672ef946171fea2b095e1f44"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w6-multi.png",
+      "bytes": 25178,
+      "sha256": "34906045b7b5ffce4d8bd3c009319261f511a1ef12ce874c35da2c4e0909d65e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w6-single.html.gz",
+      "bytes": 302,
+      "sha256": "f7e28c272c239f86f7a78f32cb4614b60b7b9b507d3e41b79a2362a1c4683dd8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w6-single.png",
+      "bytes": 3882,
+      "sha256": "dc69e66c0151a8f5d2cfa5693e6886a3732f7c230189244b6a5c6d49ead732fe"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w6.json",
+      "bytes": 3093,
+      "sha256": "23d2602f19188e3e675358737374c91ee7e81929e6d6bd1383fc09358633453c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w7-multi.html.gz",
+      "bytes": 313,
+      "sha256": "fe36096234608dfb62c7662b522c697d0684a143411dd021be64d07761bbc290"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w7-multi.png",
+      "bytes": 29407,
+      "sha256": "359780acba4de6fe6297dad49bb435356859f646ea6ba43c079778116feb355c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w7-single.html.gz",
+      "bytes": 302,
+      "sha256": "fb4223d055ff11dcc8b9966efb85b8b4bc127b7f29b48df4d23f864832e5006e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w7-single.png",
+      "bytes": 4462,
+      "sha256": "dae9ce751b2a62d12924c2c5329f39cca115e85c6e061b205f12d522319d005e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w7.json",
+      "bytes": 3091,
+      "sha256": "e5bcef102b49afb74cadd628973684016bb8029adb526d3490fce098eab6a26e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w8-multi.html.gz",
+      "bytes": 312,
+      "sha256": "25bf7a3cb78b378920aa6c860c6819ef779a225f7c2c05b03685c295aafd718d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w8-multi.png",
+      "bytes": 13613,
+      "sha256": "f7847568b4969b39bd8393029f19532504266dd7f1e724a512b5970ae0805c74"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w8-single.html.gz",
+      "bytes": 301,
+      "sha256": "ac904519a7c31abe312c24636c6ae17f2c3d08136bd2dd05f7540849d5c68a1c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w8-single.png",
+      "bytes": 2345,
+      "sha256": "7ee2da51113eb11fb9eeabcdc67b56aea327707010b311bad5e9c6c9aa8a1ab5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f1-l30-w8.json",
+      "bytes": 3083,
+      "sha256": "102e9217b7b25621debcb4923dc78ce848813c5eca5a36f7be2c176b01e7e595"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w1-multi.html.gz",
+      "bytes": 310,
+      "sha256": "7fb70bfbba5564b56ea938ec991f1eb5a2e30f0760224e5f1cbbc205568b239b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w1-multi.png",
+      "bytes": 13066,
+      "sha256": "a891c7a7ebb602cee31a9a7c18bd0a731b261d270ca508c607330b8dc4d0eddf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w1-single.html.gz",
+      "bytes": 305,
+      "sha256": "51c59af2bf1b170492f724de25632af0842f054c6b32b7c4a4ff03984e7cf5be"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w1-single.png",
+      "bytes": 2299,
+      "sha256": "8f61d6862089dd1c4d5dec4ab8b523754d276fd4e4b1fe590061ab28d19fee78"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w1.json",
+      "bytes": 2957,
+      "sha256": "413abb28b4a8b530c0465f398af1b80dcc1c41547980a79b32034f647b67023e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w2-multi.html.gz",
+      "bytes": 310,
+      "sha256": "2ff171426fa3c5f518702c117eb6069eff6bea80842bf005adaeb86c5221a547"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w2-multi.png",
+      "bytes": 31876,
+      "sha256": "50ff6f243b0b1983183fda47c19c87f15a8d91952baec8bccd194e05824f1a18"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w2-single.html.gz",
+      "bytes": 305,
+      "sha256": "962eee1e718336fe28157203d7c236e90451ba025bddee6f3997d365fa010245"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w2-single.png",
+      "bytes": 4823,
+      "sha256": "f9fa1997c431135a8cb5836474a65e3d6ee05f95e6028d2004c63b080dcc0cd6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w2.json",
+      "bytes": 3166,
+      "sha256": "c5630583db3e5d8a146a5b2f37f1fe7668778a391d09df73bf21b66111acce80"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w3-multi.html.gz",
+      "bytes": 310,
+      "sha256": "e38797d8a638d4291be22299e72e0af84dfac682f3e25e5b1cc0d2ab6fa3cf04"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w3-multi.png",
+      "bytes": 33482,
+      "sha256": "9a5115f69d76dde9f62e99c7004b62779f8ec58e08ba11905fd40682cbbfac6c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w3-single.html.gz",
+      "bytes": 305,
+      "sha256": "9c39d379f9826a5c2a9fee72d0ecf7f399a4ad21af85e58a78fb89f470eaf63c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w3-single.png",
+      "bytes": 5146,
+      "sha256": "a17d91dc918bb3770435dbb12ad6398fdc501a41f8f7c303e1a675895a1c0c95"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w3.json",
+      "bytes": 3163,
+      "sha256": "d4df063f98fc1152eef1d6128ee6556d3b5c2a060f07c0176f1512c64336ee76"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w4-multi.html.gz",
+      "bytes": 309,
+      "sha256": "42fed9024797dc6ebeffd6fa8549d3773b3ebe0ec325fc4ae263fd9061fc96b2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w4-multi.png",
+      "bytes": 20203,
+      "sha256": "28cec1ddaa21f0dbfd79a6318d8a561c39d33fa81818f5dd72b6f6f09bc5139a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w4-single.html.gz",
+      "bytes": 305,
+      "sha256": "d84519aae13a9b36e3e88c35b21dd95c142e152518ffe70ac81830e2e072d6fc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w4-single.png",
+      "bytes": 3280,
+      "sha256": "68dff75e77af0bc55efbda49798c533621659225445df6c7d2d0facecd79539d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w4.json",
+      "bytes": 3161,
+      "sha256": "846a26a92a0f94d2a32a04c3a85e2ffb86ce0507780e9868edce7f351cf9098f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w5-multi.html.gz",
+      "bytes": 311,
+      "sha256": "78d89dc61178319fde8699814633b360528c5a2d3af0b4086480644793c4c68d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w5-multi.png",
+      "bytes": 25127,
+      "sha256": "b32a06322e2cd92303c724e658a86455a05374358bde3ee01fc6771852c4607e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w5-single.html.gz",
+      "bytes": 304,
+      "sha256": "7a9a8832d4a21a7c3f7998d4aa72514cc4b3f46d250c4785c4c72dd609dd64dc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w5-single.png",
+      "bytes": 4001,
+      "sha256": "576a1d8f5d4d172c4c0a8d321ddf0295c7fac3e3a1886700af7357b785ce5ff3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w5.json",
+      "bytes": 2962,
+      "sha256": "b052479b1add65d8307498ad232eb9d2870068ab7ac42bd3c74682820a0a1de5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w6-multi.html.gz",
+      "bytes": 312,
+      "sha256": "02de18faba4f6bb010cdad05578e35cb0192b7cb0bd50b905b106618000566a3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w6-multi.png",
+      "bytes": 29279,
+      "sha256": "5ff13dd11d433bda0067ec9c4ea3d17e7a0273b8fb1754fdbb86bf56a784531c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w6-single.html.gz",
+      "bytes": 304,
+      "sha256": "124bb8c960d326adededd68f3609c085057fa2ea7a9613403c2aea4eb7927e96"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w6-single.png",
+      "bytes": 4571,
+      "sha256": "7bb2091dd4af2219ceca862bd630a643d336763fcfe0b3117a3e3dc5206d5af9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w6.json",
+      "bytes": 3162,
+      "sha256": "238ed8e661e2fa4890dbca08897e3ea09cca56d86829fac6984bd5a470949b84"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w7-multi.html.gz",
+      "bytes": 313,
+      "sha256": "edb83da993c87c942f694b4c35781edea671a4df696baba32b5607c17f465f36"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w7-multi.png",
+      "bytes": 32653,
+      "sha256": "14334bb7096380ca4e2445b555735650d65620373f8085a37f96a7bfb6fd30b7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w7-single.html.gz",
+      "bytes": 304,
+      "sha256": "750d3cb88b8543f0a3d6c90aaae397102eba37f702421b18268cfc9ebe18b870"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w7-single.png",
+      "bytes": 5035,
+      "sha256": "d4f1140b2ec44adcd97f8669f3b97bb0bb330a735a360ac6038695f264d02721"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w7.json",
+      "bytes": 3167,
+      "sha256": "70c2f2f03b963058f4ce8982f761befdbdac35259cf927633dad015186c68876"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w8-multi.html.gz",
+      "bytes": 312,
+      "sha256": "80cf58ac7b9efe1639ac10d0a7c65d24b98b7a6bf8f93c75deedcff97dbbe97a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w8-multi.png",
+      "bytes": 32801,
+      "sha256": "634558ad3dccee12e458add57de3242c1589b578d04aecf29348818b9b23450f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w8-single.html.gz",
+      "bytes": 304,
+      "sha256": "db9d4c57b631bbf1c60ba2a77f8469abd0a05ae97cc66ae4bfc13eda15d6ebe5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w8-single.png",
+      "bytes": 5055,
+      "sha256": "f326eca93044c7ba1f954ef1bafe7be6c5c4e185e33d7b2e8b389f116cdb86ca"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l24-w8.json",
+      "bytes": 3165,
+      "sha256": "ed1579c88befb1f9bfadfac8aefbf85ce6778664683ab97cba40f39ddd971254"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w1-multi.html.gz",
+      "bytes": 315,
+      "sha256": "4468a8d6d0d7e3b37f5a5c7338414c769170f332c05fd58c959d4844f3b50cec"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w1-multi.png",
+      "bytes": 13416,
+      "sha256": "9a4696d4e52256c0799643531f18268d1ae89b78b47a7894cbf0e87df3e4d4f5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w1-single.html.gz",
+      "bytes": 306,
+      "sha256": "329ee304c505acc0e70d376834849be2e72b5ca3881083eeff8ce3f8ee1e9056"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w1-single.png",
+      "bytes": 2299,
+      "sha256": "e34b3546931e58ab94273aca3f4473d767a635fc3c8e3923c66bdfddf8c35c1c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w1.json",
+      "bytes": 2959,
+      "sha256": "60b164a8e802521e224fcc090b37d88e8698285b56165833cb13901b28acc912"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w2-multi.html.gz",
+      "bytes": 315,
+      "sha256": "fb348daf2df150e57e70ec10d4af7b1da920d6f7f9af60048d2a0ea3c0cb9ee6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w2-multi.png",
+      "bytes": 32395,
+      "sha256": "c8664006cf1c45cdcd85ee3890b1edce2688bb4953a7c37788889969a824f19d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w2-single.html.gz",
+      "bytes": 306,
+      "sha256": "4446af3d56e77eda033e87c4615f2c60e23e68b56ecd7cc1fed3e0418decfa42"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w2-single.png",
+      "bytes": 4823,
+      "sha256": "51c03576839cccc45413cf568a4b1a4beb33ecd9fee43cd67ef3da830c423094"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w2.json",
+      "bytes": 3167,
+      "sha256": "3aee90b1a79863b1fbd805ad64791fb86b3acaa18732cec36e3539929c646739"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w3-multi.html.gz",
+      "bytes": 315,
+      "sha256": "e4fa0c96dd1e49667a20485f18176fa67148879065dd89eca034c5c18a60a870"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w3-multi.png",
+      "bytes": 34451,
+      "sha256": "51cdcc62607b83b800c530fced4edd543455670192af42d2656f3ae5d9d287ed"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w3-single.html.gz",
+      "bytes": 306,
+      "sha256": "453fff3c2eadba1fec245f4b0c8198321b68ffffac0b5e855199a5caa274e5ca"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w3-single.png",
+      "bytes": 5143,
+      "sha256": "c39911279cad687c531e2172bd654136e765a451661fafb28685b2f2c23cec6a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w3.json",
+      "bytes": 3167,
+      "sha256": "bed6f3274f0c6313d4f5cb0715c2ec9e317b7bfe7e7b92d6f10e2288012dff16"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w4-multi.html.gz",
+      "bytes": 314,
+      "sha256": "84e3cf7f3bc77986e0427755a8e07569eff83288c5d0347379b721c23aa13604"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w4-multi.png",
+      "bytes": 20693,
+      "sha256": "bc436cd9b006cb573cbd25f5a239845d34a15a946f69b45acce35e23bc328654"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w4-single.html.gz",
+      "bytes": 307,
+      "sha256": "1e097767fa1a9d43e6d41dcb0e5e9b80e9251eaba01d238381b0b5b30b56838c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w4-single.png",
+      "bytes": 3280,
+      "sha256": "4a97bb7bb1c91cd6472cdbc6c53e2af23ecc8b7b73164ee91175ffa9054fd771"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w4.json",
+      "bytes": 3164,
+      "sha256": "abd34cc1c3f5fb4034fb20dc69cfc095101e1b32cac8bff44cc0fa20b80ef1de"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w5-multi.html.gz",
+      "bytes": 315,
+      "sha256": "8b84916bb06728106b9c210689d277468a40bf53eccb4c89a1a52c837febcf0b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w5-multi.png",
+      "bytes": 25936,
+      "sha256": "f3dc6ecb2c04a0729fb3dc0a952a686e17cd00663b7838a2a6e7ffc4c4bd9114"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w5-single.html.gz",
+      "bytes": 305,
+      "sha256": "12a4828f2c23b91c6102deea0cbbbe609c88cf110bacdcefa1bcc9cfd064f12a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w5-single.png",
+      "bytes": 4001,
+      "sha256": "fe67a8b461f23b3b5f5f5a73654f1a4887249c76c5cd7fd87ba258495dbba1a7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w5.json",
+      "bytes": 2950,
+      "sha256": "9ed2aa3baf84f157391b00b8d653bf2e5f5d0816de08fe0cb598dd417d425483"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w6-multi.html.gz",
+      "bytes": 316,
+      "sha256": "b6d6272cb9e4a351ab84f897cdac2df421c4581e436cd564478b36d8c9ec1070"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w6-multi.png",
+      "bytes": 30213,
+      "sha256": "ddb8ba2f46b9e712b35fc6880ea39f363082e77e73c132646f010c7155401309"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w6-single.html.gz",
+      "bytes": 305,
+      "sha256": "8f75782e009ecd166c5f6b4245495df4e0d05659b2bd1f723f318112d9e705b2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w6-single.png",
+      "bytes": 4571,
+      "sha256": "25a3a9df6a6a75c3a4e8f956c4ed1363acc194dfad1ff59919a9dc8bdeffb8f8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w6.json",
+      "bytes": 3166,
+      "sha256": "085f88b1c236a072b2dbbbc271f9b12241a6d9b6136178260cb3cfc500fc0b4b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w7-multi.html.gz",
+      "bytes": 317,
+      "sha256": "4b4a76b092f9de3d119f7d53a04a08821dad02dfe579c98c01e98d6a80e05ccf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w7-multi.png",
+      "bytes": 33660,
+      "sha256": "fd4877cd17c6b9eefb5d1305b4f3550943a02b1c18e181e41bd2ebcaf6e8e256"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w7-single.html.gz",
+      "bytes": 305,
+      "sha256": "62b7b61b222c1fe8cf05acea53628ff6a789fa5f3e5ed510c997f754866236ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w7-single.png",
+      "bytes": 5035,
+      "sha256": "9f0fa0e6c95d38bbc08d4e6336c4aa8db76387c631ee4dda1dcdd342bfbc2f5f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w7.json",
+      "bytes": 3168,
+      "sha256": "6e4b22752210842a15964013c8e989c7e374ee9db50e92cbe386122597d730a7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w8-multi.html.gz",
+      "bytes": 317,
+      "sha256": "386885ddeac001b7c04eeeaa37194d86e004bb9f0aa90fc4023db852a6e0bc8f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w8-multi.png",
+      "bytes": 33808,
+      "sha256": "1f59d6d061b57e7fa1ed31a67b825c88ada3ff733119ee5de4119e4586f727b0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w8-single.html.gz",
+      "bytes": 306,
+      "sha256": "a92b77d864df8de56fb6df9e749dc04634634fb6c3f0e7105f4cc0758bba3cf6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w8-single.png",
+      "bytes": 5056,
+      "sha256": "0feafffe423b4a71875f21c865896356770669e5ac075608ee25fb02359fc563"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/f2-l30-w8.json",
+      "bytes": 3168,
+      "sha256": "b226f19ee14cdcfe05ab1c5f909a783168b4d37c2e14ea294709a6931b48db38"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/manifest.json",
+      "bytes": 1214,
+      "sha256": "54679d915b8c27737206bf2ae1c128833b49e45d28a1cb2a83c129e17c49db2d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-52/metrics-01/summary.json",
+      "bytes": 19010,
+      "sha256": "7d45b6563bd775638d084037227e93c60b0116ff50efb4926739c7229196f2a9"
+    },
+    {
+      "path": "experiments/prose-qr/context-script-connections/common.mjs",
+      "bytes": 1097,
+      "sha256": "0b2106c67b65550c14d72ab996be895a5c60eba55938636ba5507315f000d6cb"
+    },
+    {
+      "path": "experiments/prose-qr/context-script-connections/components.mjs",
+      "bytes": 2238,
+      "sha256": "7a94c3e1f7f518e7c4c693a905b568690da6cb8f4386e2a8a270661981e09f52"
+    },
+    {
+      "path": "experiments/prose-qr/context-script-connections/resources.mjs",
+      "bytes": 11142,
+      "sha256": "d02feaf90f6d55f66013da893d67f0d4abd4bd14c72df3a3064728d8497ff310"
+    }
+  ]
+}

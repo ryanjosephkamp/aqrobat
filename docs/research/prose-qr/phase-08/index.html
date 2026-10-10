@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Aqrobat · phase 08 research</title
+  ><style>
+    :root {
+      color-scheme: light;
+      --ink: #26233b;
+      --muted: #615b72;
+      --paper: #faf8f3;
+      --accent: #6150b8;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font:
+        17px/1.65 system-ui,
+        sans-serif;
+    }
+    main {
+      max-width: 920px;
+      margin: auto;
+      padding: 30px 20px 70px;
+    }
+    h1 {
+      font:
+        clamp(2rem, 6vw, 3.5rem)/1.12 Georgia,
+        serif;
+      max-width: 750px;
+    }
+    h2 {
+      font:
+        1.65rem Georgia,
+        serif;
+      margin-top: 1.8em;
+    }
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .status {
+      background: #eee8fb;
+      border-left: 4px solid var(--accent);
+      padding: 18px;
+      border-radius: 7px;
+    }
+    a {
+      color: #514294;
+    }
+    article {
+      background: white;
+      border: 1px solid #ded8e9;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .stats b {
+      display: block;
+      font-size: 2rem;
+    }
+    .stats span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    select,
+    button {
+      font: inherit;
+      padding: 10px 13px;
+      border-radius: 9px;
+      border: 1px solid #c9bfdf;
+      background: white;
+      color: var(--ink);
+    }
+    button {
+      cursor: pointer;
+    }
+    svg {
+      width: 100%;
+      max-height: 240px;
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin: 16px 0;
+      font:
+        14px/1.5 ui-monospace,
+        monospace;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 9px;
+    }
+    .table-wrap {
+      overflow: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    th,
+    td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #e0dce8;
+    }
+    code {
+      overflow-wrap: anywhere;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 14px;
+    }
+    small {
+      color: var(--muted);
+    }
+    .bars {
+      display: grid;
+      gap: 8px;
+    }
+    .bar {
+      display: grid;
+      grid-template-columns: 110px 1fr 60px;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+    .track {
+      height: 12px;
+      background: #ece8f2;
+      border-radius: 6px;
+    }
+    .fill {
+      height: 100%;
+      background: #8674c8;
+      border-radius: 6px;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 480px) {
+      .stats b {
+        font-size: 1.7rem;
+      }
+      article {
+        padding: 16px;
+      }
+      .bar {
+        grid-template-columns: 90px 1fr 50px;
+        gap: 6px;
+      }
+      main {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+  <main>
+    <p class="eyebrow">Aqrobat · October 9, 2026 · Phase 08</p>
+    <h1>A narrow locator milestone. The prose QR goal is still open.</h1>
+    <p class="status">
+      Three readable native-word layouts now produce the intended ordinary
+      finder coordinates and dimension. Their finder structure is incomplete.
+      <strong>No payload, no phone candidate, no new phone test.</strong>
+    </p>
+    <div class="stats">
+      <div><b>27</b><span>native layouts retained</span></div>
+      <div><b>3</b><span>coordinate/dimension passes</span></div>
+      <div><b>0</b><span>stable wide-span layouts</span></div>
+    </div>
+    <article>
+      <h2>What changed</h2>
+      <p>
+        The experiment holds letters at 20 pixels, line spacing at 24 pixels and
+        tracking at zero. It scores the actual native output across regions,
+        neighboring rows, both diagonals and surviving candidates. Word
+        substitutions do little. Smaller module pitch exposes a consistent
+        arrangement of native-letter points; three registered source offsets
+        align them without helping the reader.
+      </p>
+      <p>
+        The words are <code>wee / RUM / if IT.</code> in three isolated
+        clusters. They are distinguishable letters, but this is still a finder
+        experiment, not a paragraph or a complete QR code. The ordinary reader
+        receives only unchanged new pixels.
+      </p>
+    </article>
+    <article>
+      <h2>Why correct coordinates are insufficient</h2>
+      <label for="case">Source offset </label
+      ><select id="case">
+        <option value="0">+7 px</option>
+        <option value="1">+8 px</option>
+        <option value="2">+9 px</option>
+      </select>
+      <p id="location"></p>
+      <svg
+        viewBox="0 0 400 200"
+        role="img"
+        aria-label="Diagram comparing nominal central region and surviving native candidate"
+      >
+        <rect
+          x="38"
+          y="20"
+          width="144"
+          height="144"
+          fill="none"
+          stroke="#b3a8ca"
+          stroke-width="2"
+          stroke-dasharray="5 4"
+        />
+        <rect x="90" y="80" width="40" height="24" fill="#6150b8" />
+        <text x="220" y="65" font-size="18" fill="#26233b">
+          Nominal: 18 × 18 px
+        </text>
+        <text x="220" y="105" font-size="18" fill="#6150b8">
+          Selected: 5 × 3 px
+        </text>
+        <text x="38" y="192" font-size="13" fill="#615b72">
+          Post-probe diagram, not pixels given to a reader
+        </text>
+      </svg>
+      <p>
+        The surviving quad is only 5 pixels wide and 3 pixels high. Its computed
+        size is 4.33, versus an intended central span of 18. None of the 27
+        layouts has a central row spanning at least 80% of its intended width.
+      </p>
+      <div id="bars" class="bars"></div>
+      <small
+        >Diagnostic components are 0–1. Their sum is an optimization score, not
+        a probability of scanning.</small
+      >
+      <h3>Actual scoring runs, top-left point</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Axis</th>
+              <th>Native word</th>
+              <th>Solid control</th>
+            </tr>
+          </thead>
+          <tbody id="runs"></tbody>
+        </table>
+      </div>
+      <p>
+        Zeros mean missing runs in the measured scoring input. A native word
+        texture can produce a matching triangle while these transitions remain
+        incomplete. The passive logger returns exactly the same locations as the
+        ordinary reader.
+      </p>
+    </article>
+    <article>
+      <h2>What is preserved and checked</h2>
+      <ul>
+        <li>
+          29 source proposals: 27 native images and two original source-packing
+          rejections. Two revised packing versions are separate outcomes.
+        </li>
+        <li>
+          27 exact immediate repeats; four old-seed replays. Final read-only
+          replay checks 35 PNG/RGBA pairs.
+        </li>
+        <li>
+          Four conventional full controls pass three profiles; four solid finder
+          controls locate correctly. These control successes do not transfer to
+          prose.
+        </li>
+        <li>
+          All 1,062 prior inventoried files, 40 saved executed-source hashes and
+          three product downloads match unchanged.
+        </li>
+        <li>
+          Eight large-field Impact layouts fail the conservative ink-bounds
+          overlap gate. Mechanical pass does not establish owner readability.
+        </li>
+      </ul>
+      <p>
+        The source optimizer’s end-of-line allowance caused two Monaco packing
+        failures. Their exceptions and original sources survive. A verifier
+        denominator error and its original executed source also survive;
+        corrected replay includes the rejected proposals explicitly.
+      </p>
+      <p>
+        Earlier styled prose, uniform-black ASCII and configured-reader proofs
+        remain separate. No new Samsung, print, Gmail or clipboard acceptance is
+        claimed. PR #1 stays draft; npm stays private. Product, extension and
+        other repositories are untouched.
+      </p>
+    </article>
+    <article>
+      <h2>Where to go next</h2>
+      <p>
+        Use the actual selected candidate’s horizontal, vertical and diagonal
+        runs as the next native-letter objective. Require balanced spans and
+        clear letters before spending on a full-QR sweep. Keep the three
+        coordinate passes as a narrow result. They do not show that a phone can
+        read a link.
+      </p>
+      <p>
+        This phase is sealed under a 3 MB logical-file cap. More native work
+        belongs in a fresh bounded phase, preserving all prior evidence.
+      </p>
+    </article>
+    <article>
+      <h2>Resume safely</h2>
+      <p>
+        No scan review is needed for these finder-only layouts. The prompt below
+        carries the scope and unresolved gates forward.
+      </p>
+      <div class="actions">
+        <button id="copy">Copy continuation prompt</button
+        ><button id="download">Download checkpoint</button>
+      </div>
+      <p id="copy-status" role="status"></p>
+      <textarea id="prompt" readonly aria-label="Continuation prompt">
+Continue prose QR research only in /Users/noir/Documents/aqrobat, branch codex/aqrobat-foundation and existing draft PR #1. Read AGENTS.md and docs/research/prose-qr/phase-08/CHECKPOINT.md, README.md, verification-final.json, analysis.json, score-audit-summary.json and custody.json. Verify Git branch/remote/HEAD/dirty state, PR draft status, source hashes, prior custody and product downloads before edits. Preserve all phases, original prototypes, product/extension, Splashery, PDF archive, profiles, other tasks and jobs. npm stays private/unpublished. No merge, migration, host, chat/agent, release, store or messages.
+
+Phase 08 retains 29 source proposals: 27 native finder-only layouts, two original DP packing rejections, including two revised packing proposals and three source-placement probes. All 27 immediate repeats match; final read-only replay contains 35 PNG/RGBA pairs. Three Impact placements (+7,+8,+9 px; 20 px native font, 24 px leading, pitch 6) pass ordinary coordinate/dimension geometry, but ALL 27 have zero stable wide central rows. The selected native quad is 5 by 3 pixels, scored size 4.33, versus nominal central span 18. Passive scoring traces retain missing vertical/diagonal runs; the solid control has complete runs. These are narrow locator results, not QR payloads or phone candidates. No new phone tests; prose goal unsolved. Eight larger Impact layouts fail the explicit conservative ink-bounds overlap gate; mechanical pass is not owner legibility acceptance.
+
+Preserve the first verifier denominator error and its executed source, two source-packing failures, original recipes, all corrected-source versions and every outcome. Phase 08 is sealed under a 3-MB logical-file cap and close to its cap; do not append native sweeps or reuse fixed output directories. Start a fresh modest phase, preregister a small objective based on actual native selected-candidate horizontal/vertical/both diagonal runs, balanced spans and clear legible letters. Geometry is allowed only in source rendering and post-probe diagnostics, never to repair pixels, force extraction/corners or tune acceptance readers. Retain negative outcomes/rejections/aborts/errors and exact denominators. No full-QR sweep based merely on the three coordinate passes; complete finder structure and legibility remain unresolved. No hidden blocks, invisible text or unreadable raster compression as a solution. Keep styled prose and uniform-black ASCII separate. Back up milestones on the same branch. Continue toward readable unchanged native text decoded by independent ordinary readers, then phone acceptance; do not claim completion at a time-block boundary.</textarea
+      >
+      <p>
+        <a href="README.md">Research report</a> ·
+        <a href="verification-final.json">Final verification</a> ·
+        <a href="analysis.json">Analysis</a> ·
+        <a href="score-audit-summary.json">Scoring audit</a> ·
+        <a href="custody.json">Custody</a>
+      </p>
+      <p>
+        <small
+          >Code context: opened
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/locator/index.ts"
+            >jsQR locator</a
+          >
+          and
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/binarizer/index.ts"
+            >binarizer</a
+          >. Measurements come from the exact locally installed bundle. This
+          page runs offline; it sends no automatic requests.</small
+        >
+      </p>
+    </article>
+  </main>
+  <script>
+    const data = {
+        placements: [
+          {
+            id: "impact-placement-7",
+            pass: true,
+            components: {
+              agreement: 0.4928193499622071,
+              axisMean: 0.39351851851851855,
+              stableFraction: 0,
+              balancedFraction: 0.16666666666666666,
+            },
+            corners: {
+              alignmentPattern: { x: 65.5, y: 169.5 },
+              bottomLeft: { x: 50.5, y: 158.5 },
+              dimension: 25,
+              topLeft: { x: 50.5, y: 50.5 },
+              topRight: { x: 158.5, y: 50.5 },
+            },
+            quad: {
+              quad: {
+                top: { startX: 48, endX: 53, y: 49 },
+                bottom: { startX: 48, endX: 53, y: 51 },
+              },
+              x: 50.5,
+              y: 50.5,
+              top: 5,
+              bottom: 5,
+              height: 3,
+              balance: 0.16666666666666666,
+              distance: 0.7071067811865476,
+            },
+          },
+          {
+            id: "impact-placement-8",
+            pass: true,
+            components: {
+              agreement: 0.5015117157974301,
+              axisMean: 0.28703703703703703,
+              stableFraction: 0,
+              balancedFraction: 0.16666666666666666,
+            },
+            corners: {
+              alignmentPattern: { x: 66.5, y: 169.5 },
+              bottomLeft: { x: 51.5, y: 158.5 },
+              dimension: 25,
+              topLeft: { x: 51.5, y: 50.5 },
+              topRight: { x: 159.5, y: 50.5 },
+            },
+            quad: {
+              quad: {
+                top: { startX: 49, endX: 54, y: 49 },
+                bottom: { startX: 49, endX: 54, y: 51 },
+              },
+              x: 51.5,
+              y: 50.5,
+              top: 5,
+              bottom: 5,
+              height: 3,
+              balance: 0.16666666666666666,
+              distance: 0.7071067811865476,
+            },
+          },
+          {
+            id: "impact-placement-9",
+            pass: true,
+            components: {
+              agreement: 0.5272108843537415,
+              axisMean: 0.38425925925925924,
+              stableFraction: 0,
+              balancedFraction: 0.16666666666666666,
+            },
+            corners: {
+              alignmentPattern: { x: 67.5, y: 169.5 },
+              bottomLeft: { x: 52.5, y: 158.5 },
+              dimension: 25,
+              topLeft: { x: 52.5, y: 50.5 },
+              topRight: { x: 160.5, y: 50.5 },
+            },
+            quad: {
+              quad: {
+                top: { startX: 50, endX: 55, y: 49 },
+                bottom: { startX: 50, endX: 55, y: 51 },
+              },
+              x: 52.5,
+              y: 50.5,
+              top: 5,
+              bottom: 5,
+              height: 3,
+              balance: 0.16666666666666666,
+              distance: 1.5811388300841898,
+            },
+          },
+        ],
+        runs: [
+          {
+            point: { x: 51, y: 51 },
+            horizontal: [1, 4, 5, 1, 4],
+            vertical: [0, 0, 16, 10, 9],
+            diagonalDown: [
+              1.4142135623730951, 5.656854249492381, 7.485281374238571, 0, 0,
+            ],
+            diagonalUp: [
+              0, 0, 7.485281374238571, 1.4142135623730951, 5.656854249492381,
+            ],
+          },
+          {
+            point: { x: 52, y: 51 },
+            horizontal: [1, 4, 5, 1, 4],
+            vertical: [0, 0, 16, 10, 9],
+            diagonalDown: [
+              1.4142135623730951, 5.656854249492381, 7.485281374238571, 0, 0,
+            ],
+            diagonalUp: [
+              0, 0, 7.485281374238571, 1.4142135623730951, 5.656854249492381,
+            ],
+          },
+          {
+            point: { x: 53, y: 51 },
+            horizontal: [1, 4, 5, 1, 4],
+            vertical: [0, 0, 16, 10, 9],
+            diagonalDown: [
+              1.4142135623730951, 5.656854249492381, 7.485281374238571, 0, 0,
+            ],
+            diagonalUp: [
+              13.45362404707371, 1.4142135623730951, 7.485281374238571,
+              1.4142135623730951, 5.656854249492381,
+            ],
+          },
+          {
+            point: { x: 204, y: 204 },
+            horizontal: [24, 24, 72, 24, 24],
+            vertical: [24, 24, 72, 24, 24],
+            diagonalDown: [
+              33.94112549695428, 33.94112549695428, 102.23759005323595,
+              33.94112549695428, 33.94112549695428,
+            ],
+            diagonalUp: [
+              33.94112549695428, 33.94112549695428, 102.23759005323595,
+              33.94112549695428, 33.94112549695428,
+            ],
+          },
+        ],
+      },
+      checkpoint =
+        "# Prose QR checkpoint \u2014 phase 08\n\nOctober 9, 2026. Baseline `3bead571699cc767d03d5f96e829c0c85f694dd4`.\nWork only in Aqrobat on the existing branch/draft PR. No migration requested.\nFinal commit is verified via live Git/remote/PR, rather than embedded in this\nself-referential checkpoint. No task-owned browser/job remains at final handback.\n\nA narrow milestone: three source placements pass ordinary corner coordinates\nand dimension 25. The selected quad is only 5 \u00d7 3 px, scored size 4.33; nominal\ncentral span is 18. All 27 layouts have zero stable wide central rows. Vertical\nand diagonal scoring runs contain missing transitions. No encoded payload,\nfull-QR candidate, phone candidate or new phone observation. Goal remains unsolved.\n\n29 source proposals: 16 initial/native-feedback, eight pitch proposals (six\nnative and two source DP rejections), two separately revised packing proposals,\nthree fixed native placements. 27 native captures, 27 exact immediate repeats,\nfour ordinary full controls passing three profiles (12 initial attempts), four\nsolid finder controls. Final read-only replay: 35 PNG/RGBA pairs and 12 additional\nfull-control profile attempts. Earlier separate replay: 26 pairs and six control\nattempts. Passive score audit: four inputs, identical ordinary return values.\nThe first verifier denominator failure is retained; its unreceipted partial\nprobes are not added to successful replay counts. Prior 1,062 inventory entries,\n40 old executed-source hashes and three product downloads match unchanged.\nEight native outputs fail conservative overlapping ink-bounds rejection; no\nowner prose-legibility acceptance. See reports for exact qualifications.\n\nDo not rerun exclusive capture scripts. All sources/outputs/errors survive.\nThe fresh phase has a 3,000,000-byte logical cap including custody, excluding Git\nobjects; read its final receipt. Use a fresh modest phase for more native work.\n\n## Resume prompt\n\nContinue prose QR research only in /Users/noir/Documents/aqrobat, branch codex/aqrobat-foundation and existing draft PR #1. Read AGENTS.md and docs/research/prose-qr/phase-08/CHECKPOINT.md, README.md, verification-final.json, analysis.json, score-audit-summary.json and custody.json. Verify Git branch/remote/HEAD/dirty state, PR draft status, source hashes, prior custody and product downloads before edits. Preserve all phases, original prototypes, product/extension, Splashery, PDF archive, profiles, other tasks and jobs. npm stays private/unpublished. No merge, migration, host, chat/agent, release, store or messages.\n\nPhase 08 retains 29 source proposals: 27 native finder-only layouts, two original DP packing rejections, including two revised packing proposals and three source-placement probes. All 27 immediate repeats match; final read-only replay contains 35 PNG/RGBA pairs. Three Impact placements (+7,+8,+9 px; 20 px native font, 24 px leading, pitch 6) pass ordinary coordinate/dimension geometry, but ALL 27 have zero stable wide central rows. The selected native quad is 5 by 3 pixels, scored size 4.33, versus nominal central span 18. Passive scoring traces retain missing vertical/diagonal runs; the solid control has complete runs. These are narrow locator results, not QR payloads or phone candidates. No new phone tests; prose goal unsolved. Eight larger Impact layouts fail the explicit conservative ink-bounds overlap gate; mechanical pass is not owner legibility acceptance.\n\nPreserve the first verifier denominator error and its executed source, two source-packing failures, original recipes, all corrected-source versions and every outcome. Phase 08 is sealed under a 3-MB logical-file cap and close to its cap; do not append native sweeps or reuse fixed output directories. Start a fresh modest phase, preregister a small objective based on actual native selected-candidate horizontal/vertical/both diagonal runs, balanced spans and clear legible letters. Geometry is allowed only in source rendering and post-probe diagnostics, never to repair pixels, force extraction/corners or tune acceptance readers. Retain negative outcomes/rejections/aborts/errors and exact denominators. No full-QR sweep based merely on the three coordinate passes; complete finder structure and legibility remain unresolved. No hidden blocks, invisible text or unreadable raster compression as a solution. Keep styled prose and uniform-black ASCII separate. Back up milestones on the same branch. Continue toward readable unchanged native text decoded by independent ordinary readers, then phone acceptance; do not claim completion at a time-block boundary.\n";
+    const fmt = (a) => a.map((x) => Number(x.toFixed(2))).join(" · ");
+    function render() {
+      const n = Number(document.getElementById("case").value),
+        r = data.placements[n],
+        p = r.corners.topLeft;
+      document.getElementById("location").textContent =
+        `Ordinary top-left (${p.x}, ${p.y}); dimension ${r.corners.dimension}. Intended center (51, 51). Coordinate check: ${r.pass ? "pass" : "fail"}. Full finder structure: unresolved.`;
+      const labels = {
+        agreement: "Region match",
+        axisMean: "Continuity",
+        stableFraction: "Stable rows",
+        balancedFraction: "Quad balance",
+      };
+      document.getElementById("bars").innerHTML = Object.entries(r.components)
+        .map(
+          ([k, v]) =>
+            `<div class="bar"><span>${labels[k]}</span><span class="track"><span class="fill" style="display:block;width:${v * 100}%"></span></span><span>${(v * 100).toFixed(1)}%</span></div>`,
+        )
+        .join("");
+      document.getElementById("runs").innerHTML = [
+        "horizontal",
+        "vertical",
+        "diagonalDown",
+        "diagonalUp",
+      ]
+        .map(
+          (k) =>
+            `<tr><th>${k}</th><td>${fmt(data.runs[n][k])}</td><td>${fmt(data.runs[3][k])}</td></tr>`,
+        )
+        .join("");
+    }
+    document.getElementById("case").onchange = render;
+    render();
+    document.getElementById("copy").onclick = async () => {
+      const p = document.getElementById("prompt"),
+        s = document.getElementById("copy-status");
+      try {
+        await navigator.clipboard.writeText(p.value);
+        s.textContent = "Prompt copied.";
+      } catch {
+        p.focus();
+        p.select();
+        s.textContent = "Prompt selected. Use your device’s Copy command.";
+      }
+    };
+    document.getElementById("download").onclick = () => {
+      const u = URL.createObjectURL(
+          new Blob([checkpoint], { type: "text/markdown;charset=utf-8" }),
+        ),
+        a = document.createElement("a");
+      a.href = u;
+      a.download = "aqrobat-phase-08-checkpoint.md";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(u), 1000);
+    };
+  </script>
+</html>

@@ -1,0 +1,130 @@
+{
+  "at": "2026-10-10T15:45:55.685Z",
+  "phase": 60,
+  "goal": "unsolved",
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "plannedNativeSources": 4,
+  "completedNativeSources": 2,
+  "nativeExactRepeats": 2,
+  "completedGlyphResources": 2,
+  "fontLoadAttempts": 3,
+  "fontLoadErrors": 1,
+  "unattemptedNativeSources": 2,
+  "plannedPrimaryReaderSlots": 18,
+  "completedPrimaryReaderSlots": 0,
+  "unattemptedPrimaryReaderSlots": 18,
+  "completedPassiveProfiles": 0,
+  "actualStockScanBranches": 0,
+  "newPayloadSources": 0,
+  "nativeIntendedGeometryBranches": 0,
+  "nativeStrictSelectedPasses": 0,
+  "nativeOpenCVOutlines": 0,
+  "originalProfileAborted": true,
+  "error": {
+    "current": "songti24",
+    "error": "page.evaluate: NetworkError: A network error occurred.\n    at /Users/noir/Documents/aqrobat/experiments/prose-qr/context-native-ideographs/run.mjs:92:16",
+    "completedCaptures": 2
+  },
+  "cases": [
+    {
+      "id": "pingfang24",
+      "postscript": "PingFangSC-Regular",
+      "size": 24,
+      "symbol": "回",
+      "tracking": 0,
+      "lane": "native-logographic-structural-control",
+      "dir": "docs/research/prose-qr/phase-60/run-01/pingfang24/",
+      "native": {
+        "width": 1037.265625,
+        "height": 519.5,
+        "counters": [
+          { "x": 603.578125, "y": 168.875 },
+          { "x": 733.4375, "y": 168.875 },
+          { "x": 603.578125, "y": 298.75 }
+        ],
+        "textNodeOnly": true,
+        "style": {
+          "size": "24px",
+          "leading": "32.4688px",
+          "weight": "400",
+          "tracking": "normal"
+        },
+        "platformFonts": [
+          {
+            "familyName": "蘋方-簡",
+            "postScriptName": "PingFangSC-Regular",
+            "isCustomFont": false,
+            "glyphCount": 756
+          }
+        ],
+        "allLineMinimumInkGap": 2.0217596888542175
+      },
+      "unit": 1.6649226653270233,
+      "dimension": 85,
+      "clearance": 10.65040397644043,
+      "dx": 129.859375,
+      "dy": 129.875,
+      "pngPath": "docs/research/prose-qr/phase-60/run-01/pingfang24/native.png",
+      "pngSha256": "5817aa2fa86920a860a5ad1b8872f3999addfaa5d25e90c2d0548a8ba56fde9d",
+      "repeatSha256": "5817aa2fa86920a860a5ad1b8872f3999addfaa5d25e90c2d0548a8ba56fde9d",
+      "repeatExact": true,
+      "reasons": [],
+      "rejected": false,
+      "payload": null,
+      "phoneCandidate": false
+    },
+    {
+      "id": "pingfang32",
+      "postscript": "PingFangSC-Regular",
+      "size": 32,
+      "symbol": "回",
+      "tracking": 0,
+      "lane": "native-logographic-structural-control",
+      "dir": "docs/research/prose-qr/phase-60/run-01/pingfang32/",
+      "native": {
+        "width": 1376.875,
+        "height": 689.5,
+        "counters": [
+          { "x": 793.609375, "y": 217.375 },
+          { "x": 965.984375, "y": 217.375 },
+          { "x": 793.609375, "y": 389.75 }
+        ],
+        "textNodeOnly": true,
+        "style": {
+          "size": "32px",
+          "leading": "43.0938px",
+          "weight": "400",
+          "tracking": "normal"
+        },
+        "platformFonts": [
+          {
+            "familyName": "蘋方-簡",
+            "postScriptName": "PingFangSC-Regular",
+            "isCustomFont": false,
+            "glyphCount": 756
+          }
+        ],
+        "allLineMinimumInkGap": 2.567678689956665
+      },
+      "unit": 2.329512931205131,
+      "dimension": 81,
+      "clearance": 14.002622604370117,
+      "dx": 172.375,
+      "dy": 172.375,
+      "pngPath": "docs/research/prose-qr/phase-60/run-01/pingfang32/native.png",
+      "pngSha256": "6cef693fe546c5be3d144cd8a0ae63c1fce54d6ad476b129d053086ef2d625ca",
+      "repeatSha256": "6cef693fe546c5be3d144cd8a0ae63c1fce54d6ad476b129d053086ef2d625ca",
+      "repeatExact": true,
+      "reasons": [],
+      "rejected": false,
+      "payload": null,
+      "phoneCandidate": false
+    }
+  ],
+  "classification": "Capture-stage abort before all readers; unattempted reader slots are not decoder negatives or completed unknown results.",
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-b/seal-last.mjs": "ef5d1777eb4593c09fd8ec7b54ebab98e7e67631a018bad07ea70424257ec7c4",
+    "docs/research/prose-qr/phase-60/run-01/capture-error.json": "cca380e2b678a79d7eea2e32730b8c0bb8e9eb06450746c288439bdd71b22df2"
+  }
+}

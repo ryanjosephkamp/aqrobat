@@ -1,0 +1,135 @@
+{
+  "startedAt": "2026-10-09T14:50:56.562Z",
+  "parameters": [
+    {
+      "id": "words-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": false,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": true,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-3",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "charsPerModule": 5,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": false,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-4",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "charsPerModule": 5,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": true,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-5",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": false,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-6",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": true,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-7",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "charsPerModule": 5,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": false,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    },
+    {
+      "id": "words-8",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "charsPerModule": 5,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "varied": true,
+      "content": "real-word-cells",
+      "track": "plain-black"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/unweighted/word-cells.mjs": "b905577742b0ddd06ee2a8591b8cacbd1edca3680f000157009a59737168903e",
+    "experiments/prose-qr/unweighted/capture.mjs": "23382aceca70f25f4f5dabcebad9aa188eb1bf9d716d5ec1fbd0a512009f9ba8"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "configuredReader": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "classification": "Unchanged native paragraph screenshots. Uniform 400 weight. Color-only and uniform-black letter-choice tracks kept separate. No external preprocessing, repair, crop, or expected-payload/matrix input to decoders."
+}

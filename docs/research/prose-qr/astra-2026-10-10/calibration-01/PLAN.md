@@ -1,0 +1,9 @@
+# Calibration 01: does the strict quad gate reject recoverable shapes?
+
+Preregistered before rendering. Context01 Copperplate returns intended source dimension85, true/scored four-axis ratios<=0.35 and stable rows>=0.8, but top/bottom quad spans make balance0.333 and nominal span0.354, so it remains a strict failure. Test whether that gate is a conservative sufficient surrogate or a necessary recovery condition on conventional controls. This is a diagnostic calibration, not permission to relax a threshold.
+
+Exactly two new conventional vector QR control sources, no native-text proposals: pinned Nayuki encoder, exact https://example.com/, byte segment, ECC M, fixed version2, mask0, no boost, quiet zone4, unit12,396x396. Identical standard data/timing/alignment/format modules. One source has standard7x7 square finders; the other replaces only the three visible finder regions with concentric black/white/black circles of radii3.5/2.5/1.5 modules. No letters, text overlay or hidden QR. This is explicitly conventional QR artwork and cannot be a prose success. No parameter search or favorable-mask selection.
+
+Two unchanged complete browser captures and two immediate source reload/repeat receipts. All pixels retained. Six ordinary primary control slots: OpenCV default outside ZXing, ZXing default QR options, stock jsQR attemptBoth. Two passive parity profiles with unchanged strict gates and exact source geometry. Each child45s, capture30s, phase job180s. Preserve every failure/error/timeout. Cap1.5MB inclusive source/evidence. Controls/repeats counted separately from four new native proposals and ten glyph resources used so far.
+
+A circle exact recovery with gate failure establishes a false negative for this conventional calibration only, not that Copperplate prose decodes, not that all gates are unnecessary, and not authorization for payload experiments. Native full-payload proposals remain gated by the owner's existing rules. No phone result.

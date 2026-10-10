@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · native finder research</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f6f2ea;
+        --ink: #252d2b;
+        --muted: #5b6661;
+        --line: #d6d8cf;
+        --accent: #8e3e2c;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          17px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 950px;
+        margin: auto;
+        padding: 28px 20px 70px;
+      }
+      a {
+        color: var(--accent);
+        overflow-wrap: anywhere;
+      }
+      header {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .eyebrow {
+        font: 700 12px/1.4 system-ui;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      h1 {
+        font:
+          500 clamp(34px, 6vw, 60px)/1.07 Georgia,
+          serif;
+        max-width: 700px;
+        margin: 18px 0;
+      }
+      h2 {
+        font:
+          500 29px/1.2 Georgia,
+          serif;
+        margin: 0 0 18px;
+      }
+      p {
+        max-width: 760px;
+      }
+      section {
+        padding: 30px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .status {
+        padding: 14px 17px;
+        border-left: 4px solid var(--accent);
+        background: #fff8ee;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin: 25px 0;
+      }
+      .stat {
+        padding: 18px;
+        background: #fffdf8;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+      }
+      .stat b {
+        display: block;
+        font: 500 39px/1.1 Georgia;
+      }
+      .stat span {
+        font-size: 14px;
+      }
+      .controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      .controls label {
+        display: grid;
+        gap: 4px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      button,
+      select {
+        font: inherit;
+        color: var(--ink);
+        background: white;
+        border: 1px solid #aab1a8;
+        border-radius: 8px;
+        padding: 10px 13px;
+        max-width: 100%;
+      }
+      button {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      button:hover {
+        border-color: var(--accent);
+      }
+      button:focus-visible,
+      select:focus-visible {
+        outline: 3px solid #d6a58c;
+        outline-offset: 3px;
+      }
+      .diagram {
+        background: #fffdf8;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        padding: 18px;
+      }
+      .diagram svg {
+        display: block;
+        width: 100%;
+        height: 46px;
+        background: white;
+        border: 1px solid #c5c9c1;
+      }
+      .trace-label {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 14px 0 7px;
+      }
+      .summary {
+        font-size: 15px;
+        color: var(--muted);
+        overflow-wrap: anywhere;
+      }
+      .code {
+        font:
+          13px/1.6 ui-monospace,
+          monospace;
+        overflow-wrap: anywhere;
+      }
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      article {
+        background: #fffdf8;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        padding: 20px;
+      }
+      article h3 {
+        margin: 0;
+        font-size: 19px;
+      }
+      article p {
+        font-size: 15px;
+        margin-bottom: 0;
+      }
+      .details {
+        font-size: 15px;
+        color: var(--muted);
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 650;
+      }
+      details img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 15px 0;
+        border: 1px solid var(--line);
+      }
+      textarea {
+        width: 100%;
+        height: 370px;
+        resize: vertical;
+        padding: 15px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+        color: var(--ink);
+        font:
+          14px/1.5 ui-monospace,
+          monospace;
+      }
+      li {
+        margin: 8px 0;
+      }
+      footer {
+        padding-top: 24px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      @media (max-width: 520px) {
+        main {
+          padding: 18px 16px 45px;
+        }
+        .stats {
+          gap: 7px;
+        }
+        .stat {
+          padding: 12px 10px;
+        }
+        .stat b {
+          font-size: 32px;
+        }
+        .stat span {
+          font-size: 12px;
+        }
+        .comparison {
+          grid-template-columns: 1fr;
+        }
+        .diagram {
+          padding: 12px;
+        }
+        h2 {
+          font-size: 27px;
+        }
+        .controls {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">Aqrobat research · October 9, 2026 · phase 06</div>
+        <h1>Finder geometry: a narrower failure.</h1>
+        <p>
+          Native letter spacing now produces much cleaner black-and-white bands.
+          The ordinary locator still fails to recover the intended three
+          corners. We have a more specific next objective.
+        </p>
+        <p class="status">
+          <strong>Prose QR remains unsolved.</strong> These incomplete finder
+          layouts contain no encoded link. No phone scanning is requested at
+          this checkpoint.
+        </p>
+      </header>
+      <div class="stats">
+        <div class="stat">
+          <b>39</b><span>native finder layouts retained</span>
+        </div>
+        <div class="stat"><b>0</b><span>intended locator geometries</span></div>
+        <div class="stat">
+          <b>39</b><span>exact immediate native repeats</span>
+        </div>
+      </div>
+      <section>
+        <h2>What the ordinary pixels show</h2>
+        <p>
+          Moving the scan band toward capital T top bars improved horizontal
+          continuity. Selecting whole words using native binarized pixels
+          improved spacing. Reducing row seams helped the vertical direction.
+          This diagram uses the saved measurements; it does not alter a QR
+          image.
+        </p>
+        <div class="controls">
+          <label>Retained diagnostic<select id="case"></select></label
+          ><label
+            >Corner<select id="corner">
+              <option value="topLeft">Top left</option>
+              <option value="topRight">Top right</option>
+              <option value="bottomLeft">Bottom left</option>
+            </select></label
+          ><label
+            >Direction<select id="axis">
+              <option value="horizontal">Horizontal</option>
+              <option value="vertical">Vertical</option>
+            </select></label
+          >
+        </div>
+        <div class="diagram">
+          <div class="trace-label">
+            Expected source bands · diagnostic reference
+          </div>
+          <svg
+            id="expected"
+            role="img"
+            aria-label="Expected five alternating bands"
+          ></svg>
+          <div class="trace-label">
+            Actual native pixels through ordinary binarization
+          </div>
+          <svg
+            id="actual"
+            role="img"
+            aria-label="Retained binarized axis runs"
+          ></svg>
+          <p id="trace-summary" class="summary" aria-live="polite"></p>
+          <p id="run-list" class="code"></p>
+        </div>
+        <p class="details">
+          Six runs can include edge white space around the five main bands.
+          Clean center axes alone do not establish a valid finder region or
+          recover a payload. The seam example still varies between corners.
+        </p>
+      </section>
+      <section>
+        <h2>The decisive diagnostic</h2>
+        <div class="comparison">
+          <article>
+            <h3>Native seam example</h3>
+            <p>
+              The ordinary pipeline creates
+              <strong>1,071 scored points</strong>. Near the intended centers,
+              the largest point size is only <strong>11.67 px</strong>; the
+              expected central size is about <strong>97.86 px</strong>. The
+              returned dimensions are 93 and 79, versus the intended 25.
+            </p>
+          </article>
+          <article>
+            <h3>Solid finder control</h3>
+            <p>
+              The same ordinary pipeline creates
+              <strong>three scored points</strong>, each exactly
+              <strong>72 px</strong>, matching the expected 72 px. All intended
+              corners are located.
+            </p>
+          </article>
+        </div>
+        <p>
+          The large intended candidates are absent from the scored set in the
+          two audited text examples. Improving a center cross is insufficient
+          here. The source also checks diagonal patterns and builds candidates
+          across rows.
+        </p>
+        <p class="details">
+          A separate, passively instrumented diagnostic copy snapshots candidate
+          ranking. Its returned locations exactly match the ordinary
+          implementation on three retained inputs. It supplies no expected
+          coordinates and changes no thresholds or ranking. It is not an
+          acceptance reader.
+        </p>
+        <details>
+          <summary>Inspect one failed native finder diagnostic</summary>
+          <p class="details">
+            This is an incomplete three-corner test, with no QR payload. The
+            archived PNG is unchanged; this page scales its display to fit your
+            screen. Tight, repeated letters remain crowded and conspicuous.
+          </p>
+          <img
+            src="seam-02/raw/seam-01.png"
+            alt="Failed finder-only layout made of repeated, closely spaced native letters"
+          /><a href="seam-02/raw/seam-01.png">Open original PNG</a> ·
+          <a href="seam-02/seam-01.txt">Exact visible text</a>
+        </details>
+      </section>
+      <section>
+        <h2>What this checkpoint establishes</h2>
+        <ul>
+          <li>
+            <strong>Controls:</strong> ten conventional full QR codes pass all
+            three fixed reader profiles. Ten solid finder controls locate
+            correctly. These are separate checks.
+          </li>
+          <li>
+            <strong>Replay:</strong> all 59 retained PNG/RGBA pairs and their
+            diagnostic/control outcomes reproduce in a read-only replay. This is
+            separate from 39 immediate native repeats.
+          </li>
+          <li>
+            <strong>Preservation:</strong> 241 phase-05 and 460 phase-04
+            inventoried files and all original product download hashes remain
+            unchanged.
+          </li>
+          <li>
+            <strong>Limits:</strong> words are repetitive and partly synthetic.
+            Tight rows join strokes. There is no owner legibility acceptance,
+            new phone test or physical-print result.
+          </li>
+        </ul>
+        <p class="details">
+          Four capture aborts, one source-width rejection, source snapshots,
+          uncompleted manifest entries and checker/audit repairs are retained.
+          Administrative restarts are not additional failed scans. Aqrobat 0.4.2
+          is unchanged, npm stays private/unpublished, and PR #1 stays draft.
+        </p>
+      </section>
+      <section>
+        <h2>The next bounded research step</h2>
+        <ol>
+          <li>
+            Optimize the full two-dimensional native finder region, including
+            diagonal continuity and formation of correctly sized ordinary
+            candidates.
+          </li>
+          <li>
+            Reject dense joined lettering as a solution. Require readable native
+            output and intended ordinary finder geometry before a full-QR test.
+          </li>
+          <li>
+            Then test exact payload recovery with independent ordinary readers,
+            followed by phone acceptance. No successful phone candidate exists
+            yet.
+          </li>
+        </ol>
+        <p>
+          Continue in this repository and branch. No project migration, new
+          agent/chat, new host, release or product integration is planned at
+          this checkpoint.
+        </p>
+        <label for="prompt"><strong>Safe continuation prompt</strong></label
+        ><textarea id="prompt" readonly spellcheck="false"></textarea>
+        <div class="controls">
+          <button id="copy">Copy continuation prompt</button
+          ><button id="download">Save checkpoint</button>
+        </div>
+        <p id="copy-status" class="summary" aria-live="polite"></p>
+      </section>
+      <section>
+        <h2>Evidence</h2>
+        <p>
+          <a href="README.md">Phase report</a> ·
+          <a href="CHECKPOINT.md">Checkpoint</a> ·
+          <a href="verification-final.json">Final verification</a> ·
+          <a href="custody.json">Custody inventory</a> ·
+          <a href="pixel-replay-02.json">Retained-pixel replay</a> ·
+          <a href="rank-audit-summary-02.json">Passive rank audit</a> ·
+          <a href="rank-audit-02.json.gz">Full audit, lossless gzip JSON</a>
+        </p>
+        <p class="details">
+          Opened primary sources:
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/locator/index.ts"
+            >jsQR locator</a
+          >
+          and
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/binarizer/index.ts"
+            >binarizer</a
+          >. Exact installed source hashes are pinned in the evidence.
+        </p>
+      </section>
+      <footer>
+        No data is uploaded by this page. Copying and downloads are local.
+        Splashery, the PDF archive, original prototypes, owner profiles and
+        other jobs are preserved. Research remains incomplete.
+      </footer>
+    </main>
+    <script>
+      const data = {
+        cases: [
+          {
+            id: "touch-03",
+            label: "Tighter leading",
+            corridors: {
+              topLeft: {
+                horizontal: {
+                  pixels: 221,
+                  agreement: 0.746606334841629,
+                  runs: [
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 8 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 8 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 6 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 5 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 7 },
+                  ],
+                  longestCentralBlackFraction: 0.13703932468602018,
+                },
+                vertical: {
+                  pixels: 221,
+                  agreement: 0.8778280542986425,
+                  runs: [
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 29 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 39 },
+                    { black: true, pixels: 24 },
+                    { black: false, pixels: 6 },
+                  ],
+                  longestCentralBlackFraction: 0.9276508132592135,
+                },
+              },
+              topRight: {
+                horizontal: {
+                  pixels: 221,
+                  agreement: 0.7420814479638009,
+                  runs: [
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 12 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 8 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 12 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 5 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 6 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 7 },
+                  ],
+                  longestCentralBlackFraction: 0.13703932468602018,
+                },
+                vertical: {
+                  pixels: 221,
+                  agreement: 0.8778280542986425,
+                  runs: [
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 93 },
+                    { black: false, pixels: 42 },
+                    { black: true, pixels: 23 },
+                    { black: false, pixels: 5 },
+                  ],
+                  longestCentralBlackFraction: 0.9171093267449043,
+                },
+              },
+              bottomLeft: {
+                horizontal: {
+                  pixels: 221,
+                  agreement: 0.746606334841629,
+                  runs: [
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 8 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 13 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 8 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 3 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 3 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 6 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 5 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 7 },
+                  ],
+                  longestCentralBlackFraction: 0.13703932468602018,
+                },
+                vertical: {
+                  pixels: 221,
+                  agreement: 0.8868778280542986,
+                  runs: [
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 38 },
+                    { black: true, pixels: 24 },
+                    { black: false, pixels: 6 },
+                  ],
+                  longestCentralBlackFraction: 0.9381922997735227,
+                },
+              },
+            },
+            unit: 31.62109375,
+            locations: [
+              {
+                alignmentPattern: { x: 349.5, y: 800.5 },
+                bottomLeft: { x: 317.5, y: 954.5 },
+                dimension: 177,
+                topLeft: { x: 294.5, y: 296.5 },
+                topRight: { x: 864, y: 248.5 },
+              },
+              {
+                alignmentPattern: { x: 349.5, y: 800.5 },
+                bottomLeft: { x: 317, y: 943.5 },
+                topLeft: { x: 294, y: 294.5 },
+                topRight: { x: 863.5, y: 246.5 },
+                dimension: 183,
+              },
+            ],
+          },
+          {
+            id: "cap-02",
+            label: "Capital top bars",
+            corridors: {
+              topLeft: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9166666666666666,
+                  runs: [
+                    { black: true, pixels: 35 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 87 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 35 },
+                    { black: true, pixels: 8 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 7 },
+                  ],
+                  longestCentralBlackFraction: 0.8889953299006107,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.8552631578947368,
+                  runs: [
+                    { black: true, pixels: 31 },
+                    { black: false, pixels: 20 },
+                    { black: true, pixels: 5 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 23 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 64 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 19 },
+                    { black: true, pixels: 5 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 33 },
+                  ],
+                  longestCentralBlackFraction: 0.6539735760188401,
+                },
+              },
+              topRight: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9122807017543859,
+                  runs: [
+                    { black: true, pixels: 36 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 87 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 35 },
+                    { black: true, pixels: 9 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 6 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 7 },
+                  ],
+                  longestCentralBlackFraction: 0.8889953299006107,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.8640350877192983,
+                  runs: [
+                    { black: true, pixels: 31 },
+                    { black: false, pixels: 21 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 23 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 64 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 20 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 33 },
+                  ],
+                  longestCentralBlackFraction: 0.6539735760188401,
+                },
+              },
+              bottomLeft: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9166666666666666,
+                  runs: [
+                    { black: true, pixels: 35 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 87 },
+                    { black: false, pixels: 4 },
+                    { black: true, pixels: 4 },
+                    { black: false, pixels: 35 },
+                    { black: true, pixels: 8 },
+                    { black: false, pixels: 2 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 7 },
+                    { black: false, pixels: 7 },
+                  ],
+                  longestCentralBlackFraction: 0.8889953299006107,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.8508771929824561,
+                  runs: [
+                    { black: true, pixels: 31 },
+                    { black: false, pixels: 20 },
+                    { black: true, pixels: 5 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 23 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 48 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 20 },
+                    { black: true, pixels: 5 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 39 },
+                    { black: false, pixels: 1 },
+                  ],
+                  longestCentralBlackFraction: 0.49048018201413,
+                },
+              },
+            },
+            unit: 32.62109375,
+            locations: [
+              {
+                alignmentPattern: { x: 205.5, y: 807.5 },
+                bottomLeft: { x: 192, y: 227.5 },
+                dimension: 95,
+                topLeft: { x: 221, y: 283.5 },
+                topRight: { x: 221, y: 870.5 },
+              },
+              {
+                alignmentPattern: { x: 205.5, y: 807.5 },
+                bottomLeft: { x: 191.5, y: 226.5 },
+                topLeft: { x: 221, y: 284 },
+                topRight: { x: 221, y: 871 },
+                dimension: 81,
+              },
+            ],
+          },
+          {
+            id: "feedback-11",
+            label: "Native word feedback",
+            corridors: {
+              topLeft: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: true, pixels: 35 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 9 },
+                  ],
+                  longestCentralBlackFraction: 0.98096036402826,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.9605263157894737,
+                  runs: [
+                    { black: true, pixels: 31 },
+                    { black: false, pixels: 33 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 64 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 33 },
+                    { black: true, pixels: 33 },
+                  ],
+                  longestCentralBlackFraction: 0.6539735760188401,
+                },
+              },
+              topRight: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: true, pixels: 36 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 26 },
+                    { black: false, pixels: 9 },
+                  ],
+                  longestCentralBlackFraction: 0.98096036402826,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.9078947368421053,
+                  runs: [
+                    { black: true, pixels: 31 },
+                    { black: false, pixels: 33 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 64 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 17 },
+                    { black: true, pixels: 33 },
+                  ],
+                  longestCentralBlackFraction: 0.6539735760188401,
+                },
+              },
+              bottomLeft: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: true, pixels: 35 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 9 },
+                  ],
+                  longestCentralBlackFraction: 0.98096036402826,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.956140350877193,
+                  runs: [
+                    { black: true, pixels: 31 },
+                    { black: false, pixels: 33 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 48 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 33 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 1 },
+                  ],
+                  longestCentralBlackFraction: 0.49048018201413,
+                },
+              },
+            },
+            unit: 32.62109375,
+            locations: [
+              {
+                alignmentPattern: { x: 251.75, y: 778.5 },
+                bottomLeft: { x: 221, y: 870.5 },
+                dimension: 149,
+                topLeft: { x: 221, y: 283.5 },
+                topRight: { x: 250.5, y: 167.5 },
+              },
+              {
+                alignmentPattern: { x: 251.75, y: 778.5 },
+                bottomLeft: { x: 221, y: 871 },
+                topLeft: { x: 221, y: 284 },
+                topRight: { x: 252.5, y: 168.5 },
+                dimension: 133,
+              },
+            ],
+          },
+          {
+            id: "seam-01",
+            label: "Native seam adjustment",
+            corridors: {
+              topLeft: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: true, pixels: 35 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 9 },
+                  ],
+                  longestCentralBlackFraction: 0.98096036402826,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.9692982456140351,
+                  runs: [
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 32 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 33 },
+                    { black: true, pixels: 34 },
+                  ],
+                  longestCentralBlackFraction: 0.9707420269029657,
+                },
+              },
+              topRight: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: true, pixels: 36 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 26 },
+                    { black: false, pixels: 9 },
+                  ],
+                  longestCentralBlackFraction: 0.98096036402826,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 32 },
+                    { black: true, pixels: 112 },
+                    { black: false, pixels: 17 },
+                    { black: true, pixels: 34 },
+                  ],
+                  longestCentralBlackFraction: 0.9911787011535544,
+                },
+              },
+              bottomLeft: {
+                horizontal: {
+                  pixels: 228,
+                  agreement: 0.9254385964912281,
+                  runs: [
+                    { black: true, pixels: 35 },
+                    { black: false, pixels: 31 },
+                    { black: true, pixels: 96 },
+                    { black: false, pixels: 30 },
+                    { black: true, pixels: 27 },
+                    { black: false, pixels: 9 },
+                  ],
+                  longestCentralBlackFraction: 0.98096036402826,
+                },
+                vertical: {
+                  pixels: 228,
+                  agreement: 0.9692982456140351,
+                  runs: [
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 32 },
+                    { black: false, pixels: 32 },
+                    { black: true, pixels: 80 },
+                    { black: false, pixels: 1 },
+                    { black: true, pixels: 16 },
+                    { black: false, pixels: 32 },
+                    { black: true, pixels: 34 },
+                  ],
+                  longestCentralBlackFraction: 0.8072486328982557,
+                },
+              },
+            },
+            unit: 32.62109375,
+            locations: [
+              {
+                alignmentPattern: { x: 203, y: 816.5 },
+                bottomLeft: { x: 180.25, y: 208.5 },
+                dimension: 93,
+                topLeft: { x: 221, y: 283.5 },
+                topRight: { x: 180.25, y: 795.5 },
+              },
+              {
+                alignmentPattern: { x: 203, y: 816.5 },
+                bottomLeft: { x: 180, y: 211.5 },
+                topLeft: { x: 221, y: 284 },
+                topRight: { x: 180, y: 798.5 },
+                dimension: 79,
+              },
+            ],
+          },
+        ],
+        checkpoint:
+          "# Prose QR checkpoint — phase 06\n\nOctober 9, 2026. Work only in `/Users/noir/Documents/aqrobat`, branch\n`codex/aqrobat-foundation`, existing draft PR #1. No migration requested.\nPhase baseline: `52fa086b970d585e8087db25503114ab55c65c8f`.\nBacked-up 16-case milestone: `e81719e3bc64f7093444e9f22f6ff583a85e20f4`.\nVerify the current final commit against origin and the PR before continuing.\n\nThe prose goal remains unsolved. Phase 06 retains 39 native finder-only layouts,\nzero intended ordinary locator geometry, 39 exact immediate native repeats and\none explicit source-width rejection before capture. There are no encoded\ncandidate payloads or phone candidates. Ten full-QR controls pass three profiles;\nten solid finder triplets have correct ordinary geometry. A separate read-only\n59-PNG replay reproduces all RGBA hashes and serialized diagnostics/control\noutcomes. Its earlier VM-prototype comparison error receipt is preserved.\n\nNative-pixel word feedback and smaller leading gaps improve center-axis runs,\nbut the locator still chooses incorrect geometry. A passive three-input audit\nshows cap-02/seam-01 each has over 1,000 scored points, with no correctly sized\npoint near the intended centers. The solid control has three correctly sized\npoints. Diagonal/region structure and native legibility remain unresolved.\nWords are repetitive, partly synthetic and crowded; no prose acceptance claim.\n\nFour capture aborts, uncompleted manifest entries, rejected source, source\nsnapshots and audit/checker repair records survive. Administrative re-entry is\nnot another native failure. All 241 phase-05 and 460 phase-04 inventory files and\nthree product download hashes are unchanged. Product 0.4.2 and npm private:true\nremain unchanged. No new phone tests; both prior Samsung scanner failures stand.\n\nAll task-owned browser/capture/audit jobs are closed at handback. Every capture\nscript creates output exclusively: never rerun it into an existing directory.\nPhase 06 has a 6-MB logical-file cap, with reporting/custody included. Read the\nfinal custody byte total before adding files. Start a fresh modest phase for a\nnew objective rather than overwrite results or append an unbounded sweep.\n\n## Resume prompt\n\nContinue prose QR research only in /Users/noir/Documents/aqrobat. Read AGENTS.md,\ndocs/research/prose-qr/phase-06/CHECKPOINT.md, README.md, verification-final.json,\npixel-replay-02.json, rank-audit-summary-02.json and custody.json. Verify Git\nbranch, remote, HEAD, dirty state, draft PR #1 and saved source/evidence hashes\nbefore edits. Preserve all prior phases, original prototypes, product/download/\nextension, Splashery, PDF archive, owner profiles, other tasks and running jobs.\nKeep npm private/unpublished and PR #1 draft. No merge, migration, new host,\nchat/agent, release, store submission or messages. The goal remains unsolved:\n39 native finder-only layouts return incorrect ordinary locator geometry;\nthey contain no payload and are not phone candidates. Near-correct center-axis\nruns still produce small letter-derived candidates; the two audited text cases\nhave no correctly sized scored finder candidate near their intended centers.\nExplore only a small preregistered two-dimensional native-letter finder objective,\nincluding diagonal continuity and candidate-region formation, before any full-QR\nsweep. Preserve native letter legibility; reject dense joined textures as a\nsolution. Keep styled prose and uniform-black ASCII separate. Geometry may guide\nthe renderer and diagnostics only; never repair pixels, force corners/extraction,\ntune acceptance readers, hide blocks/text or claim unreadable raster compression\nas a solution. Use fresh exclusive directories and preserve every outcome,\nsource version, rejection, abort and checker repair. Respect the 6-MB phase cap;\nstart a fresh modest phase if needed. Back up milestones on the existing branch.\nContinue toward readable unchanged native text that ordinary independent readers\ndecode, then phone acceptance. No new phone observations. Do not present failed\ngrids as successful phone candidates or claim completion at a time boundary.\n",
+        prompt:
+          "Continue prose QR research only in /Users/noir/Documents/aqrobat. Read AGENTS.md,\ndocs/research/prose-qr/phase-06/CHECKPOINT.md, README.md, verification-final.json,\npixel-replay-02.json, rank-audit-summary-02.json and custody.json. Verify Git\nbranch, remote, HEAD, dirty state, draft PR #1 and saved source/evidence hashes\nbefore edits. Preserve all prior phases, original prototypes, product/download/\nextension, Splashery, PDF archive, owner profiles, other tasks and running jobs.\nKeep npm private/unpublished and PR #1 draft. No merge, migration, new host,\nchat/agent, release, store submission or messages. The goal remains unsolved:\n39 native finder-only layouts return incorrect ordinary locator geometry;\nthey contain no payload and are not phone candidates. Near-correct center-axis\nruns still produce small letter-derived candidates; the two audited text cases\nhave no correctly sized scored finder candidate near their intended centers.\nExplore only a small preregistered two-dimensional native-letter finder objective,\nincluding diagonal continuity and candidate-region formation, before any full-QR\nsweep. Preserve native letter legibility; reject dense joined textures as a\nsolution. Keep styled prose and uniform-black ASCII separate. Geometry may guide\nthe renderer and diagnostics only; never repair pixels, force corners/extraction,\ntune acceptance readers, hide blocks/text or claim unreadable raster compression\nas a solution. Use fresh exclusive directories and preserve every outcome,\nsource version, rejection, abort and checker repair. Respect the 6-MB phase cap;\nstart a fresh modest phase if needed. Back up milestones on the existing branch.\nContinue toward readable unchanged native text that ordinary independent readers\ndecode, then phone acceptance. No new phone observations. Do not present failed\ngrids as successful phone candidates or claim completion at a time boundary.",
+      };
+      const byId = (id) => document.getElementById(id),
+        ns = "http://www.w3.org/2000/svg";
+      data.cases.forEach((c, i) => {
+        const o = document.createElement("option");
+        o.value = i;
+        o.textContent = c.label + " · " + c.id;
+        byId("case").append(o);
+      });
+      byId("case").value = 3;
+      byId("prompt").value = data.prompt;
+      function paint(id, runs, total) {
+        const svg = byId(id);
+        svg.replaceChildren();
+        svg.setAttribute("viewBox", "0 0 " + total + " 24");
+        svg.setAttribute("preserveAspectRatio", "none");
+        let x = 0;
+        for (const r of runs) {
+          const rect = document.createElementNS(ns, "rect");
+          rect.setAttribute("x", x);
+          rect.setAttribute("y", 0);
+          rect.setAttribute("width", r.pixels);
+          rect.setAttribute("height", 24);
+          rect.setAttribute("fill", r.black ? "#111" : "#fff");
+          svg.append(rect);
+          x += r.pixels;
+        }
+      }
+      function update() {
+        const c = data.cases[Number(byId("case").value)],
+          a = c.corridors[byId("corner").value][byId("axis").value];
+        paint(
+          "expected",
+          [
+            { black: true, pixels: c.unit },
+            { black: false, pixels: c.unit },
+            { black: true, pixels: 3 * c.unit },
+            { black: false, pixels: c.unit },
+            { black: true, pixels: c.unit },
+          ],
+          7 * c.unit,
+        );
+        paint("actual", a.runs, a.pixels);
+        byId("trace-summary").textContent =
+          a.runs.length +
+          " runs · " +
+          (a.agreement * 100).toFixed(1) +
+          "% axis agreement · intended ordinary locator geometry failed.";
+        byId("run-list").textContent = a.runs
+          .map((r) => (r.black ? "B" : "W") + r.pixels)
+          .join(" / ");
+      }
+      ["case", "corner", "axis"].forEach((id) =>
+        byId(id).addEventListener("change", update),
+      );
+      update();
+      byId("copy").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(data.prompt);
+          byId("copy-status").textContent = "Prompt copied.";
+        } catch {
+          byId("prompt").focus();
+          byId("prompt").select();
+          byId("copy-status").textContent =
+            "Prompt selected. Use your device’s Copy command.";
+        }
+      });
+      byId("download").addEventListener("click", () => {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(
+          new Blob([data.checkpoint], { type: "text/plain;charset=utf-8" }),
+        );
+        a.download = "aqrobat-prose-qr-phase-06-checkpoint.md";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      });
+    </script>
+  </body>
+</html>

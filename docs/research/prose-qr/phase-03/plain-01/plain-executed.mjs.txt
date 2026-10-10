@@ -1,0 +1,27 @@
+import { captureBatch } from "./capture.mjs";
+import { plainLayout } from "./plain-layout.mjs";
+const parameters = [];
+for (const font of ["Menlo", "Courier New"])
+  for (const chars of [4, 6])
+    for (const caseMode of ["lower", "word-caps"])
+      for (const content of ["fabricated", "dictionary"])
+        parameters.push({
+          id: `plain-${String(parameters.length + 1).padStart(3, "0")}`,
+          payload: "AQROBAT-TEST",
+          font,
+          content,
+          caseMode,
+          charsPerModule: chars,
+          linesPerModule: chars / 2,
+          fontSize: 20,
+          quiet: 5,
+          ecc: "Q",
+          vowelEvery: 4,
+          topChoices: 1,
+          track: "plain-black",
+        });
+await captureBatch("plain-01", parameters, plainLayout, [
+  "experiments/prose-qr/unweighted/plain.mjs",
+  "experiments/prose-qr/unweighted/plain-layout.mjs",
+  "experiments/prose-qr/unweighted/capture.mjs",
+]);

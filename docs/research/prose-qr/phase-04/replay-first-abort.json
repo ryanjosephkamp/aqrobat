@@ -1,0 +1,9 @@
+{
+  "stage": "Replay check before any new QR decoding",
+  "case": "ascii-test-35",
+  "viewport": { "width": 1000, "height": 900 },
+  "expectedCapturedPNGSha256": "666393a86ab3240fb356596f6c79990c7e084e5fb37f32358a7424148a2a24f9",
+  "actualReplayPNGSha256": "20f2270bde9492281bb14439e024887a68fb221d52daff57292e00525a71ea3b",
+  "result": "PNG hash assertion stopped the first replay check; no replay PNG persisted, no payload decoder attempt",
+  "sourceSnapshot": "source-versions/replay-first.mjs.txt"
+}

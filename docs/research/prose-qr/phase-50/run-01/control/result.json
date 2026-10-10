@@ -1,0 +1,27 @@
+{
+  "id": "control",
+  "at": "2026-10-10T14:20:41.600Z",
+  "finished": "2026-10-10T14:20:41.813Z",
+  "receipt": {
+    "path": "docs/research/prose-qr/phase-12/run-01/raw/full.png",
+    "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+    "rgbaSha256": "a5a54e758f50df5fcc243be0d601847878088af0bffe5ccc8309073312cdd4ec",
+    "width": 656,
+    "height": 656
+  },
+  "result": null,
+  "error": {
+    "name": "Error",
+    "status": 1,
+    "signal": null,
+    "message": "Command failed: python3 experiments/prose-qr/context-decode-log/read.py docs/research/prose-qr/phase-12/run-01/raw/full.png\nTraceback (most recent call last):\n  File \"/Users/noir/Documents/aqrobat/experiments/prose-qr/context-decode-log/read.py\", line 4, in <module>\n    row={'path':str(p),'pngSha256':hashlib.sha256(b).hexdigest(),'opencv':cv2.__version__,'loggingLevel':cv2.getLogLevel(),'options':'default QRCodeDetector.detectAndDecode, stock DEBUG logging only'}\n                                                                                                         ^^^^^^^^^^^^^^^\nAttributeError: module 'cv2' has no attribute 'getLogLevel'\n"
+  },
+  "outcome": "unknown",
+  "baselineParity": null,
+  "qrLogs": [],
+  "rawStdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "rawStdoutBytes": 0,
+  "rawStderrSha256": "91735662f1ab82c91ae317cd892e30168a709bd5db89fca78b7f5a0513c8952e",
+  "rawStderrBytes": 525,
+  "classification": "Same ordinary implementation with passive verbosity; no new independent-engine count"
+}

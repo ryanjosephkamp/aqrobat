@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Aqrobat · Next steps and a simpler Gmail review</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f2fc;
+        --card: #fff;
+        --ink: #271b3b;
+        --muted: #655d70;
+        --line: #dfd2f1;
+        --accent: #68449b;
+        --soft: #f1e9fc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 960px;
+        padding: 28px 20px 80px;
+        margin: auto;
+      }
+      header {
+        padding: 30px 0;
+      }
+      h1 {
+        font:
+          600 clamp(32px, 7vw, 54px)/1.12 Georgia,
+          serif;
+        margin: 14px 0;
+      }
+      h2 {
+        font:
+          600 29px/1.2 Georgia,
+          serif;
+        margin: 0 0 18px;
+      }
+      h3 {
+        font-size: 19px;
+        margin: 20px 0 8px;
+      }
+      p {
+        margin: 10px 0;
+      }
+      section {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 26px;
+        margin: 22px 0;
+        scroll-margin-top: 16px;
+      }
+      .eyebrow,
+      .tag {
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.05em;
+      }
+      .muted,
+      small {
+        color: var(--muted);
+      }
+      nav,
+      .actions,
+      .flow {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      nav a,
+      .flow span {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        padding: 8px 12px;
+        border-radius: 9px;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 3px;
+        overflow-wrap: anywhere;
+      }
+      button {
+        font: inherit;
+        border: 1px solid var(--accent);
+        border-radius: 9px;
+        padding: 10px 14px;
+        background: var(--soft);
+        color: var(--ink);
+        cursor: pointer;
+      }
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      button.primary {
+        background: var(--accent);
+        color: white;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin: 15px 0 6px;
+      }
+      input,
+      textarea,
+      select {
+        font: inherit;
+        color: var(--ink);
+        background: var(--card);
+        border: 1px solid var(--line);
+        padding: 10px;
+        border-radius: 9px;
+        width: 100%;
+        max-width: 100%;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      textarea.prompt {
+        min-height: 310px;
+        font:
+          14px/1.5 ui-monospace,
+          monospace;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+      .callout {
+        padding: 14px;
+        border-left: 4px solid var(--accent);
+        background: var(--soft);
+        margin: 18px 0;
+      }
+      .step-list {
+        padding-left: 25px;
+      }
+      .step-list li {
+        padding-left: 5px;
+        margin: 17px 0;
+      }
+      .step-list li::marker {
+        font-weight: 800;
+        color: var(--accent);
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        min-width: 580px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+      }
+      code {
+        background: var(--soft);
+        border-radius: 4px;
+        padding: 2px 4px;
+        overflow-wrap: anywhere;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      ul {
+        padding-left: 23px;
+      }
+      li {
+        margin: 9px 0;
+      }
+      .status {
+        min-height: 1.6em;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .checks {
+        font-size: 15px;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 16px 12px 50px;
+        }
+        section {
+          padding: 20px 17px;
+          border-radius: 14px;
+        }
+        .pair {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        body {
+          font-size: 16px;
+        }
+        button {
+          flex-grow: 1;
+        }
+        .flow span {
+          font-size: 14px;
+        }
+        textarea.prompt {
+          min-height: 350px;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #18131f;
+          --card: #241d2e;
+          --ink: #f0e9fa;
+          --muted: #c0b5ce;
+          --line: #4b3d5e;
+          --accent: #bc9aec;
+          --soft: #33283f;
+        }
+        button.primary {
+          color: #211431;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+          color: black;
+        }
+        section {
+          break-inside: avoid;
+        }
+        nav,
+        .actions,
+        .feedback-controls {
+          display: none;
+        }
+        textarea {
+          border: 1px solid #999;
+          height: auto;
+        }
+        a {
+          color: inherit;
+        }
+        main {
+          padding: 0;
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">AQROBAT · OCTOBER 8, 2026 · REVIEW 0.4.2</div>
+        <h1>Make. Save. Insert.<br />Then explore prose.</h1>
+        <p>
+          You want the extension to feel like a special copy-and-paste tool, and
+          you want to explore a QR hidden in readable words. This handoff
+          simplifies the first review and gives the new idea a separate, bounded
+          starting point.
+        </p>
+        <p class="muted">
+          Housekeeping completed. Gmail acceptance is open. Prose-QR experiments
+          have not started.
+        </p>
+        <nav aria-label="On this page">
+          <a href="#gmail">Gmail steps</a><a href="#feedback">Send feedback</a
+          ><a href="#remaining">What remains</a><a href="#prose">Prose idea</a
+          ><a href="#approve">Next prompt</a>
+        </nav>
+      </header>
+      <section>
+        <h2>What changed today</h2>
+        <div class="flow" aria-label="Extension workflow">
+          <span>1 · Open QR workbench</span><span>2 · Save for insertion</span
+          ><span>3 · Choose where to insert</span
+          ><span>4 · Preview → Insert QR</span>
+        </div>
+        <p>
+          <strong>Save for insertion</strong> now sits directly under the QR
+          preview. The toolbar shows two numbered stages. Insertion uses the
+          same storage and layout checks as before; this is a usability cleanup.
+        </p>
+        <p>
+          Make the first QR <strong>inside the extension’s workbench</strong>.
+          It can save directly to the extension. The public website currently
+          transfers a recipe by download/import; ordinary Copy text does not
+          save it into the extension.
+        </p>
+        <p>
+          Image exports, comparison grids, RTF, and original prototypes remain
+          available. PR #1 stays a draft, npm stays private and unpublished, and
+          the project move is deferred.
+        </p>
+        <p id="verification" class="checks">
+          18 unit tests, build, browser/text/insertion checks, and the actual
+          ZIP’s installed-extension persistence checks passed. All 11 image
+          raster hashes match 0.4.1. This guide passed mobile-layout and
+          synthetic feedback-export checks. Actual Gmail, phone, and print
+          review remains open.
+        </p>
+      </section>
+      <section id="gmail">
+        <div class="tag">WHEN YOU ARE BACK AT THE MAC</div>
+        <h2>The first Gmail review</h2>
+        <p>
+          Use <strong>one QR in one fresh draft</strong>. You do not need to
+          download/import recipe files or test every symbol yet. The Mac runs
+          Chrome; the Samsung phone scans the Mac screen.
+        </p>
+        <details>
+          <summary>First, update your existing extension to 0.4.2</summary>
+          <ol class="step-list">
+            <li>
+              Download the
+              <a
+                href="https://ryanjosephkamp.github.io/aqrobat/downloads/aqrobat-extension.zip"
+                >extension ZIP</a
+              >
+              and extract it.
+            </li>
+            <li>
+              Replace the files
+              <em>inside the same unpacked extension folder you already use</em
+              >. Keep that folder in place.
+            </li>
+            <li>
+              Open <code>chrome://extensions</code>, click Aqrobat’s
+              <strong>Reload</strong>, and confirm version
+              <strong>0.4.2</strong>.
+            </li>
+          </ol>
+          <p class="muted">
+            Keeping the same folder/extension ID preserves the local library. If
+            you reinstall instead, export Recipe backups first. This task did
+            not change your installed copy.
+          </p>
+        </details>
+        <ol class="step-list">
+          <li>Open Aqrobat’s toolbar → <strong>Open QR workbench</strong>.</li>
+          <li>
+            Enter <code>https://example.com</code>. Choose
+            <strong>⚫️ / Black circle</strong>,
+            <strong>1 across × 1 row</strong>, <strong>Menlo</strong>, and
+            <strong>328 px</strong>. Leave ECC <strong>M</strong>,
+            <strong>Thicken glyph ink</strong>, and
+            <strong>Boost ECC if it fits</strong> enabled. Click
+            <strong>Generate QR</strong>.
+          </li>
+          <li>
+            Under the preview, enter the name <strong>Email test</strong> →
+            <strong>Save for insertion</strong>.
+          </li>
+          <li>
+            Switch to Gmail → <strong>Compose</strong> a fresh draft with
+            <strong>no recipient</strong>. Type <code>Before the QR</code>, then
+            press Enter to leave a blank line. In the compose window’s
+            <strong>More options</strong> menu, ensure
+            <strong>Plain text mode</strong> is off.
+            <a
+              href="https://support.google.com/mail/answer/8260?co=GENIE.Platform%3DDesktop&amp;hl=en-EN"
+              >Google’s instructions</a
+            >.
+          </li>
+          <li>
+            On the Gmail tab, open Aqrobat’s toolbar. Select
+            <strong>Email test</strong> →
+            <strong>Choose where to insert</strong>.
+          </li>
+          <li>
+            Click the <strong>blank line in the message body</strong>. In the
+            helper panel, keep
+            <strong>Formatted text · email / rich editors</strong> and
+            <strong>328 px</strong>. Click <strong>Preview</strong> →
+            <strong>Insert QR</strong>.
+          </li>
+          <li>
+            Inspect and scan the <strong>actual Gmail draft</strong> with
+            Samsung Camera. Does it recognize <code>https://example.com</code>?
+            Scanning the helper preview is a separate test.
+          </li>
+          <li>
+            With the cursor in the message body, press <strong>⌘Z</strong>. Did
+            the QR disappear while <code>Before the QR</code> stayed?
+          </li>
+        </ol>
+        <div class="callout">
+          <strong>That is enough for the first pass.</strong> Report insertion,
+          draft scan, and Undo. You can leave the draft unsent. Saved drafts and
+          received email can follow later as separate tests.
+        </div>
+        <details>
+          <summary>If you get stuck</summary>
+          <ul>
+            <li>
+              <strong>No saved QR:</strong> use the extension’s workbench, then
+              Save for insertion. Creating it only on the website does not add
+              it to the extension.
+            </li>
+            <li>
+              <strong>Too narrow:</strong> widen Gmail’s compose window first.
+              If you change the insertion width, report that number.
+            </li>
+            <li>
+              <strong>Refusal or changed layout:</strong> record the panel’s
+              exact message and the step where it happened. Use Undo if
+              necessary. A screenshot is optional; hide private email details.
+            </li>
+            <li>
+              <strong>No scan:</strong> that is useful feedback. Keep it
+              separate from whether the layout looks right. Do not manually add
+              spaces for the first recorded case.
+            </li>
+          </ul>
+        </details>
+      </section>
+      <section id="feedback">
+        <h2>Three results, then reply</h2>
+        <p>
+          These controls only prepare your notes. Nothing is submitted or sent.
+          Keep this page open, or download the notes before closing it.
+        </p>
+        <div class="feedback-controls">
+          <div class="pair">
+            <div>
+              <label for="insert-result">Insertion</label
+              ><select id="insert-result">
+                <option>Not tested</option>
+                <option>Worked and aligned</option>
+                <option>Refused</option>
+                <option>Inserted but layout changed</option>
+              </select>
+            </div>
+            <div>
+              <label for="scan-result">Actual Gmail draft scan</label
+              ><select id="scan-result">
+                <option>Not tested</option>
+                <option>Recognized expected link</option>
+                <option>No scan</option>
+              </select>
+            </div>
+          </div>
+          <div class="pair">
+            <div>
+              <label for="undo-result">Undo</label
+              ><select id="undo-result">
+                <option>Not tested</option>
+                <option>QR removed; original text kept</option>
+                <option>Problem</option>
+              </select>
+            </div>
+            <div>
+              <label for="scanner">Scanner</label
+              ><input id="scanner" value="Samsung Camera on Galaxy S25 Ultra" />
+            </div>
+          </div>
+          <label for="conditions">Screen / browser / zoom</label
+          ><input id="conditions" value="MacBook Pro / Chrome / [zoom]" />
+          <label for="notes"
+            >Panel message, changed settings, or where you got stuck</label
+          ><textarea
+            id="notes"
+            placeholder="Optional saved-draft / received-email observations can go here too."
+          ></textarea>
+        </div>
+        <label for="feedback-text"
+          >Feedback prompt — copy this into our chat</label
+        ><textarea class="prompt" id="feedback-text" readonly></textarea>
+        <div class="actions">
+          <button type="button" data-copy="feedback-text">Copy feedback</button
+          ><button type="button" id="download-feedback">
+            Download notes.txt
+          </button>
+        </div>
+        <p id="feedback-status" class="status" role="status"></p>
+        <p class="muted">
+          No JSON file is required. A camera recognizing the expected link is
+          useful phone evidence; it is not an exact raw-string decoder check
+          unless the scanner exposes that string.
+        </p>
+      </section>
+      <section id="remaining">
+        <h2>What remains</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Work</th>
+                <th>State</th>
+                <th>Recommended next step</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Copyable text in Gmail</td>
+                <td>Primary acceptance open</td>
+                <td>One-code review above when you return to the Mac</td>
+              </tr>
+              <tr>
+                <td>
+                  Saved/received mail, blog/browser, document destinations
+                </td>
+                <td>Open by destination</td>
+                <td>
+                  Follow the first Gmail result; successful RTF is useful
+                  historical evidence
+                </td>
+              </tr>
+              <tr>
+                <td>Current phone scans / physical print</td>
+                <td>Open</td>
+                <td>
+                  Record exact output and app; paper can wait for a printer
+                </td>
+              </tr>
+              <tr>
+                <td>QR hidden in real words</td>
+                <td>New proposal; unstarted</td>
+                <td>
+                  Bounded pilot after your approval; can run while you are AFK
+                </td>
+              </tr>
+              <tr>
+                <td>More extension convenience</td>
+                <td>Proposals</td>
+                <td>
+                  Evaluate this simpler flow before adding another mechanism
+                </td>
+              </tr>
+              <tr>
+                <td>Emoji atlas</td>
+                <td>Previous proposal; unstarted</td>
+                <td>Defer behind prose pilot; not a prerequisite</td>
+              </tr>
+              <tr>
+                <td>npm name/release and polished demos</td>
+                <td>Optional release work</td>
+                <td>
+                  After acceptance and explicit selection; no publication now
+                </td>
+              </tr>
+              <tr>
+                <td>Dedicated Codex project / merge</td>
+                <td>Deferred owner choices</td>
+                <td>
+                  Refresh handoff only when you say you are ready; PR remains
+                  draft
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <details>
+          <summary>What is already built?</summary>
+          <p>
+            The deterministic core, website, offline page, CLI/private package,
+            unpacked extension, multi-symbol palettes, themes/icon persistence,
+            image and text comparison grids, TXT/HTML/RTF/image/recipe exports,
+            custom filenames, and direct browser insertion exist. No AI is
+            needed to generate a QR.
+          </p>
+          <p>
+            The unresolved part is dependable text layout and scanning in actual
+            destinations. Browser fixtures, phone observations, and
+            received-email behavior remain separate evidence.
+          </p>
+        </details>
+        <h3>Possible later usability improvements</h3>
+        <ul>
+          <li>Remember the last selected QR for repeat insertion.</li>
+          <li>
+            Add an explicit website-to-extension transfer, such as Save to
+            Aqrobat or Copy for Aqrobat. This is
+            <strong>not shipped today</strong> and needs a deliberate
+            import/permission design.
+          </li>
+          <li>
+            Provide a recipe example gallery with visible payloads that users
+            can download/import.
+          </li>
+        </ul>
+      </section>
+      <section id="prose">
+        <div class="tag">PLANNING ONLY</div>
+        <h2>A QR hidden in readable prose</h2>
+        <p>
+          I understand the target: the same visible block should read as words
+          to a person and as a QR to a normal scanner. First prove a block of
+          real words, then grammar, then a coherent paragraph. We would judge
+          <strong>meaning, scanning, and how hidden it looks</strong>
+          separately.
+        </p>
+        <p>
+          My hypothesis is that word choice and local ink placement can help.
+          Letters’ average darkness is only part of it: spaces, line breaks,
+          font metrics, and the locations of QR patterns also matter. Standard
+          QR guidance calls for a clear four-module border.
+          <a href="https://www.qrcode.com/en/howto/code.html"
+            >DENSO WAVE guidance</a
+          >.
+        </p>
+        <div class="pair">
+          <div>
+            <h3>Track A · Strict text</h3>
+            <p>
+              Real words and ordinary punctuation; one standard font, size,
+              weight, and color. Choose words and line layout. Record awkward
+              gaps or forced language.
+            </p>
+          </div>
+          <div>
+            <h3>Track B · Typography-assisted</h3>
+            <p>
+              Still real selectable words, with recorded weight, size, or
+              spacing adjustments. Results depend on those styles. Report them
+              separately from plain text.
+            </p>
+          </div>
+        </div>
+        <p>
+          Neither track gets a hidden solid QR underneath, a picture posing as
+          text, or conventional QR squares substituted for its corners. Custom
+          decoding of hidden data would be an adjacent project, not success at
+          ordinary QR scanning.
+        </p>
+        <h3>The first pilot I recommend</h3>
+        <ol>
+          <li>
+            Calibrate existing jsQR and a pinned independent ZXing decoder with
+            clean controls. Measure two existing fonts using a small original
+            word list.
+          </li>
+          <li>
+            Try real-word candidates, starting with a short payload. Keep all
+            results and test unchanged visible rasters at three scales.
+          </li>
+          <li>
+            Use blur/threshold/crop variants only as separately labeled
+            diagnostics.
+          </li>
+          <li>
+            Hand back a small HTML board, original text/styles, screenshots, and
+            exact-payload receipts. Phone and print observations stay separate.
+          </li>
+        </ol>
+        <p>
+          <strong>First checkpoint:</strong> at most 128 candidates per track,
+          60 minutes of execution, or 50 MB of generated evidence. Stop at the
+          first limit and report what happened. These bounds keep the first pass
+          manageable; they do not decide whether longer research is worthwhile.
+        </p>
+        <p>
+          Coherent-paragraph work comes after the structural pilot. No new chat,
+          agent swarm, GPU work, or Astra switch is needed for the first pass. I
+          recommend keeping this chat and current model/effort.
+        </p>
+        <details>
+          <summary>Related work I actually opened</summary>
+          <ul>
+            <li>
+              <a
+                href="https://etd.lib.nycu.edu.tw/cgi-bin/gs32/hugsweb.cgi?o=dnthucdr&amp;s=id%3D%22GH02103062549%22.&amp;searchmode=basic"
+                >Optimized Text Embedding in QR Codes (2016 thesis)</a
+              >
+              combines word art/text with QR images using layout analysis and
+              character deformation. Its abstract does not establish a natural
+              paragraph made only of unchanged standard-font letters.
+            </li>
+            <li>
+              <a href="https://www.cs.columbia.edu/cg/fontcode/">FontCode</a>
+              hides data using glyph perturbations and its own decoding system.
+              It is related, but does not establish ordinary-camera QR recovery
+              from prose.
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2403.06452">Text2QR (2024)</a> uses
+              text prompts to generate aesthetic QR imagery. The visible output
+              is not the ordinary-word paragraph you described.
+            </li>
+          </ul>
+          <p class="muted">
+            This was a bounded project-description/abstract review, not an
+            exhaustive novelty search or a replication. I have not generated or
+            tested a prose candidate.
+          </p>
+        </details>
+      </section>
+      <section>
+        <h2>ChatGPT Sites</h2>
+        <p>
+          A private review Site could make phone handoffs easier later. The
+          installed hosting guidance says new Sites start private and static
+          pages do not need a build/install step. I recommend keeping GitHub
+          Pages as Aqrobat’s product home and using a separate private Site only
+          if you want a shareable review URL.
+        </p>
+        <p>
+          <strong>No ChatGPT Site was created.</strong> This local file and the
+          existing Pages preview are sufficient for this planning pass. A Site
+          can be a separate choice after alignment.
+        </p>
+      </section>
+      <section id="approve">
+        <h2>Choose the next research step</h2>
+        <p>
+          You can simply reply
+          <strong>“Execute the prose-QR feasibility plan”</strong> to use the
+          recommended defaults. Or change these optional choices and copy the
+          prompt. This page cannot start work by itself.
+        </p>
+        <label for="tracks">First pilot</label
+        ><select id="tracks">
+          <option value="both">
+            Both tracks, reported separately · recommended
+          </option>
+          <option value="strict">Strict text only</option>
+          <option value="styled">Typography-assisted only</option>
+        </select>
+        <label for="payload-start">Payload sequence</label
+        ><select id="payload-start">
+          <option value="short">
+            Short test payload first, URL after promising result · recommended
+          </option>
+          <option value="url">URL from the start</option>
+        </select>
+        <label for="approval-text">Approval prompt</label
+        ><textarea class="prompt" id="approval-text" readonly></textarea>
+        <div class="actions">
+          <button class="primary" type="button" data-copy="approval-text">
+            Copy next prompt</button
+          ><button type="button" id="download-prompt">
+            Download prompt.txt
+          </button>
+        </div>
+        <p id="approval-status" class="status" role="status"></p>
+        <p class="muted">
+          Gmail notes and research approval are separate. You can approve the
+          pilot while AFK and return Gmail feedback later. Project migration and
+          the emoji atlas remain deferred.
+        </p>
+      </section>
+      <footer class="muted">
+        <p>
+          <a href="https://github.com/ryanjosephkamp/aqrobat/pull/1"
+            >Draft PR #1</a
+          >
+          · <a href="https://ryanjosephkamp.github.io/aqrobat/">Generator</a> ·
+          <a
+            href="https://github.com/ryanjosephkamp/aqrobat/blob/codex/aqrobat-foundation/docs/prose-qr-plan.md"
+            >Saved feasibility plan</a
+          >
+          ·
+          <a
+            href="https://github.com/ryanjosephkamp/aqrobat/blob/codex/aqrobat-foundation/docs/validation.md"
+            >Verification and limits</a
+          >
+        </p>
+        <p>
+          Original prototypes, Splashery, the private PDF archive, browser
+          profiles, and migration handoff are preserved.
+        </p>
+      </footer>
+    </main>
+    <script>
+      const el = (id) => document.getElementById(id);
+      function feedback() {
+        el("feedback-text").value =
+          `Review Aqrobat 0.4.2 using these Gmail notes.
+Insertion: ${el("insert-result").value}
+Actual Gmail draft scan: ${el("scan-result").value}
+Undo: ${el("undo-result").value}
+Scanner: ${el("scanner").value}
+Screen/browser/zoom: ${el("conditions").value}
+Panel message, changed settings, optional saved/received results: ${el("notes").value || "[none added]"}
+Keep PR #1 draft and npm private/unpublished. Preserve other repositories, original prototypes, and the PDF archive. Do not send messages, launch chats or agents, migrate projects, or start prose-QR or emoji experiments from these notes. Resolve concrete Aqrobat issues within the current review scope.`;
+      }
+      function approval() {
+        const track = el("tracks").value;
+        el("approval-text").value =
+          `Execute the prose-QR feasibility plan in /Users/noir/Documents/aqrobat/docs/prose-qr-plan.md.
+${track === "both" ? "Run the strict-text and typography-assisted tracks separately." : track === "strict" ? "Run only the strict-text track; defer typography-assisted work." : "Run only the typography-assisted track; defer strict-text work."} ${el("payload-start").value === "short" ? "Start with the short test payload, then add a URL after a promising result." : "Start with https://example.com as the payload; keep all other pilot limits."}
+Keep the first pilot within its 60-minute / 50-MB / 128-per-track limits, retain negative results, and deliver an HTML candidate board plus receipts. Do not claim success from a reconstructed QR or processed diagnostic alone.
+Keep work in the proposed experiment/research paths, except the pinned dev-only decoder dependency and lockfile if needed. Preserve exporters, extension behavior, original prototypes, Splashery, and the private PDF archive.
+Use this chat; launch no other chats or agents. Commit/push verified checkpoints on codex/aqrobat-foundation. Keep PR #1 draft and npm private/unpublished. Do not merge, send messages, deploy a new host, or submit to the Chrome Web Store.
+Do not start the emoji atlas or migrate projects. Pause at the pilot handback before expanding to coherent paragraphs or a second research phase.`;
+      }
+      for (const id of [
+        "insert-result",
+        "scan-result",
+        "undo-result",
+        "scanner",
+        "conditions",
+        "notes",
+      ])
+        el(id).addEventListener("input", feedback);
+      for (const id of ["tracks", "payload-start"])
+        el(id).addEventListener("change", approval);
+      for (const button of document.querySelectorAll("[data-copy]"))
+        button.addEventListener("click", async () => {
+          const area = el(button.dataset.copy);
+          const status = el(
+            button.dataset.copy === "feedback-text"
+              ? "feedback-status"
+              : "approval-status",
+          );
+          try {
+            await navigator.clipboard.writeText(area.value);
+            status.textContent = "Copied. Paste into our chat when ready.";
+          } catch {
+            area.focus();
+            area.select();
+            status.textContent = "Select/copy the text above, or use Download.";
+          }
+        });
+      function save(id, name) {
+        const url = URL.createObjectURL(
+          new Blob([el(id).value + "\n"], { type: "text/plain;charset=utf-8" }),
+        );
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = name;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+      el("download-feedback").onclick = () =>
+        save("feedback-text", "aqrobat-gmail-notes.txt");
+      el("download-prompt").onclick = () =>
+        save("approval-text", "aqrobat-prose-qr-prompt.txt");
+      feedback();
+      approval();
+    </script>
+  </body>
+</html>

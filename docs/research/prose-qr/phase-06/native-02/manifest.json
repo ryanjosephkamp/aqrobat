@@ -1,0 +1,68 @@
+{
+  "startedAt": "2026-10-09T20:13:14.548Z",
+  "baseline": "52fa086b970d585e8087db25503114ab55c65c8f",
+  "specs": [
+    {
+      "id": "finder-07",
+      "font": "Monaco",
+      "leading": "close",
+      "objective": "pixels"
+    },
+    {
+      "id": "finder-08",
+      "font": "Monaco",
+      "leading": "close",
+      "objective": "axes"
+    },
+    {
+      "id": "finder-09",
+      "font": "Impact",
+      "leading": "comfortable",
+      "objective": "pixels"
+    },
+    {
+      "id": "finder-10",
+      "font": "Impact",
+      "leading": "comfortable",
+      "objective": "axes"
+    },
+    {
+      "id": "finder-11",
+      "font": "Impact",
+      "leading": "close",
+      "objective": "pixels"
+    },
+    {
+      "id": "finder-12",
+      "font": "Impact",
+      "leading": "close",
+      "objective": "axes"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/finder-native/fonts.mjs": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+    "experiments/prose-qr/finder-native/layout.mjs": "b6019c595806295dbc8848fdfe8386260e05fe25a32120837b4e01827ad2726b",
+    "experiments/prose-qr/finder-native/capture.mjs": "135b61d9570b7756b891b9a36dbd4706a83c260734a1c4b94ceab0fed0d315ed",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+    "docs/research/prose-qr/phase-06/font-metrics.json": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+    "docs/research/prose-qr/phase-06/PLAN.md": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+    "docs/research/prose-qr/phase-06/PACKING-REPAIR.md": "a5926eed420613b6ee88737d963e36a23d6b4bb69d2d1ff7763a02ed3520ddef"
+  },
+  "diagnosticBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "controlsDecoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "Finder-only ordinary locator diagnostic on unchanged native pixels. No payload in candidate layouts; no phone candidates."
+}

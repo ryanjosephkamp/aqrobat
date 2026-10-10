@@ -1,0 +1,908 @@
+{
+  "at": "2026-10-09T20:37:57.593Z",
+  "sourceScriptSha256": "a2ada82e4fc348e38bde7ab9073236324cb785398a2599faac3ad80b660949e5",
+  "baseline": "52fa086b970d585e8087db25503114ab55c65c8f",
+  "batches": [
+    {
+      "batch": "cap-01",
+      "planned": 4,
+      "retainedNative": 4,
+      "abort": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "cross-01",
+      "planned": 4,
+      "retainedNative": 4,
+      "abort": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "feedback-01",
+      "planned": 12,
+      "retainedNative": 2,
+      "abort": {
+        "at": "2026-10-09T20:27:00.505Z",
+        "attempted": "feedback-03",
+        "completed": 2,
+        "message": "Native advance overflow"
+      },
+      "uncompleted": [
+        "feedback-03",
+        "feedback-04",
+        "feedback-05",
+        "feedback-06",
+        "feedback-07",
+        "feedback-08",
+        "feedback-09",
+        "feedback-10",
+        "feedback-11",
+        "feedback-12"
+      ]
+    },
+    {
+      "batch": "feedback-02",
+      "planned": 9,
+      "retainedNative": 9,
+      "abort": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "native-01",
+      "planned": 12,
+      "retainedNative": 6,
+      "abort": {
+        "at": "2026-10-09T20:12:15.052Z",
+        "attempted": "finder-07",
+        "completed": 6,
+        "message": "The expression evaluated to a falsy value:\n\n  assert(c)\n"
+      },
+      "uncompleted": [
+        "finder-07",
+        "finder-08",
+        "finder-09",
+        "finder-10",
+        "finder-11",
+        "finder-12"
+      ]
+    },
+    {
+      "batch": "native-02",
+      "planned": 6,
+      "retainedNative": 6,
+      "abort": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "seam-01",
+      "planned": 4,
+      "retainedNative": 0,
+      "abort": {
+        "at": "2026-10-09T20:28:34.626Z",
+        "attempted": "seam-01",
+        "completed": 0,
+        "message": "The expression evaluated to a falsy value:\n\n  assert(seed.structural.globalInkEnvelope <= lineHeight)\n"
+      },
+      "uncompleted": ["seam-01", "seam-02", "seam-03", "seam-04"]
+    },
+    {
+      "batch": "seam-02",
+      "planned": 4,
+      "retainedNative": 4,
+      "abort": null,
+      "uncompleted": []
+    },
+    {
+      "batch": "touch-01",
+      "planned": 4,
+      "retainedNative": 0,
+      "abort": {
+        "at": "2026-10-09T20:16:41.074Z",
+        "attempted": "touch-01",
+        "completed": 0,
+        "message": "Whole-word field packing failed"
+      },
+      "uncompleted": ["touch-01", "touch-02", "touch-03", "touch-04"]
+    },
+    {
+      "batch": "touch-02",
+      "planned": 4,
+      "retainedNative": 4,
+      "abort": null,
+      "uncompleted": []
+    }
+  ],
+  "candidates": 39,
+  "correctFinderGeometry": [],
+  "sourceWidthRejections": [
+    {
+      "id": "feedback-03",
+      "spec": {
+        "id": "feedback-03",
+        "font": "Impact",
+        "leading": "touch",
+        "inkGap": 0.5,
+        "tracking": -0.5,
+        "phase": 7,
+        "horizontalBoost": 4,
+        "synthetic": true,
+        "capWords": true,
+        "objective": "axes",
+        "stage": "horizontal",
+        "centerLine": "TTTT me TTTTTTTTTTTT me TTT"
+      },
+      "plainText": "MEMBER file will MANNER RAN\nMEMBER file will MANNER RAN\nHERE TTTT TTTT TTTT TTTT mill\nWEB a I I I a a a a a a a a a HER.\nWEB it a will will BEAR a a EAR\nWILL a a EAR will BEAR a a EAR\neeee a I see will eeee IF I see\nTTTT me TTTTTTTTTTTT me TTT.\nWILL a a EAR will BEAR a a EAR\nWILL a a EAR will BEAR a a EAR\nWEB or a TTTT I I TTTT a I I EAR\nWEB a I I I a a a a a a a a a HER.\nMEMBER file will RAN MANNER\nMEMBER file will MANNER RAN\na I I I TTTT TTTT I I TTTT TTTT.",
+      "actualAdvances": [
+        221.490234375, 221.490234375, 220.978515625, 219.943359375,
+        219.32421875, 219.365234375, 219.373046875, 230.23828125, 219.365234375,
+        219.365234375, 218.47265625, 219.943359375, 221.490234375,
+        221.490234375, 205.806640625
+      ],
+      "field": 228.34765625,
+      "nativeCapture": false,
+      "encodedPayload": null
+    }
+  ],
+  "exactSeedReplays": [
+    {
+      "batch": "feedback-01",
+      "seed": "cap-02",
+      "expectedPNGHash": "1ed6ed9b14b27750a53c583ebe75f99a76511f1bbc11641c19f11ed41815687d",
+      "replayedPNGHash": "1ed6ed9b14b27750a53c583ebe75f99a76511f1bbc11641c19f11ed41815687d",
+      "matches": true
+    },
+    {
+      "batch": "feedback-02",
+      "seed": "cap-02",
+      "expectedPNGHash": "1ed6ed9b14b27750a53c583ebe75f99a76511f1bbc11641c19f11ed41815687d",
+      "replayedPNGHash": "1ed6ed9b14b27750a53c583ebe75f99a76511f1bbc11641c19f11ed41815687d",
+      "matches": true
+    },
+    {
+      "batch": "seam-01",
+      "seed": "feedback-11",
+      "expectedPNGHash": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+      "replayedPNGHash": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+      "matches": true
+    },
+    {
+      "batch": "seam-02",
+      "seed": "feedback-11",
+      "expectedPNGHash": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+      "replayedPNGHash": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+      "matches": true
+    }
+  ],
+  "exactNativeRepeats": 39,
+  "uniquePlannedNativeCases": 40,
+  "abortedCaptureBatches": 4,
+  "retainedPixelReplay": {
+    "receipt": "pixel-replay-02.json",
+    "pngRgbaPairs": 59,
+    "passingSerializedDiagnosticAndControlChecks": 59,
+    "additionalControlPayloadAttempts": 30
+  },
+  "passiveRankAudit": {
+    "receipt": "rank-audit-summary-02.json",
+    "fixedRetainedInputs": 3,
+    "ordinaryLocatorReturnsMatch": 3,
+    "newCaptures": 0,
+    "newPayloadProbes": 0
+  },
+  "handbackBrowserCheck": {
+    "receipt": "browser-check.json",
+    "viewport": { "width": 390, "height": 844 },
+    "diagramCombinations": 24,
+    "checkpointDownloadExact": true
+  },
+  "fullQrControls": 10,
+  "passingFullQrControlProbeAttempts": 30,
+  "solidFinderControls": 10,
+  "encodedCandidatePayloads": 0,
+  "phoneCandidates": 0,
+  "sourceCustody": [
+    {
+      "batch": "cap-01",
+      "path": "experiments/prose-qr/finder-native/fonts.mjs",
+      "sha256": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+      "preservedAt": "experiments/prose-qr/finder-native/fonts.mjs"
+    },
+    {
+      "batch": "cap-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "cap-01",
+      "path": "experiments/prose-qr/finder-native/capture.mjs",
+      "sha256": "d873ba0e0cea4f5be45d162201d68f1dd2d2c4f4c1f95fb3348e3c3ee18cfe65",
+      "preservedAt": "experiments/prose-qr/finder-native/capture.mjs"
+    },
+    {
+      "batch": "cap-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "cap-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "cap-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/PLAN.md",
+      "sha256": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+      "preservedAt": "docs/research/prose-qr/phase-06/PLAN.md"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md",
+      "sha256": "a5926eed420613b6ee88737d963e36a23d6b4bb69d2d1ff7763a02ed3520ddef",
+      "preservedAt": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/CAP-PLAN.md",
+      "sha256": "13919ce4c2b6d63c009f2fd12690104dc8dcbd1c467e6cc8d2ac6a32da06a3f2",
+      "preservedAt": "docs/research/prose-qr/phase-06/CAP-PLAN.md"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/CROSS-PLAN.md",
+      "sha256": "6d3280ef5f37d406ef07019d9b63cfb15ed596fd21e03b069c41ac14322c7fcb",
+      "preservedAt": "docs/research/prose-qr/phase-06/CROSS-PLAN.md"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
+      "sha256": "e6f7e7b0545721ede74307331870b8016f5b8d1c356411f5ca30ab7f64bf64f6",
+      "preservedAt": "docs/research/prose-qr/phase-06/TAIL-REPAIR.md"
+    },
+    {
+      "batch": "cap-01",
+      "path": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
+      "sha256": "f08e9b420254157e0da648e20ab558fd6c0617210f7bf972b83182ad58ce5f8a",
+      "preservedAt": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md"
+    },
+    {
+      "batch": "cross-01",
+      "path": "experiments/prose-qr/finder-native/fonts.mjs",
+      "sha256": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+      "preservedAt": "experiments/prose-qr/finder-native/fonts.mjs"
+    },
+    {
+      "batch": "cross-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "342305faacf72227aacdcc9afb8f541262e69f5c35306b5a051de1c369707f1e",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/layout-cross-01.mjs.txt"
+    },
+    {
+      "batch": "cross-01",
+      "path": "experiments/prose-qr/finder-native/capture.mjs",
+      "sha256": "ffeeb5e293f40755e0f53a70e5c651c8ea010ba93fb3a025cfa3af2cd62a14aa",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/capture-cross-01.mjs.txt"
+    },
+    {
+      "batch": "cross-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "cross-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "cross-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "cross-01",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "cross-01",
+      "path": "docs/research/prose-qr/phase-06/PLAN.md",
+      "sha256": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+      "preservedAt": "docs/research/prose-qr/phase-06/PLAN.md"
+    },
+    {
+      "batch": "cross-01",
+      "path": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md",
+      "sha256": "a5926eed420613b6ee88737d963e36a23d6b4bb69d2d1ff7763a02ed3520ddef",
+      "preservedAt": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md"
+    },
+    {
+      "batch": "cross-01",
+      "path": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
+      "sha256": "f08e9b420254157e0da648e20ab558fd6c0617210f7bf972b83182ad58ce5f8a",
+      "preservedAt": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md"
+    },
+    {
+      "batch": "cross-01",
+      "path": "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
+      "sha256": "e6f7e7b0545721ede74307331870b8016f5b8d1c356411f5ca30ab7f64bf64f6",
+      "preservedAt": "docs/research/prose-qr/phase-06/TAIL-REPAIR.md"
+    },
+    {
+      "batch": "cross-01",
+      "path": "docs/research/prose-qr/phase-06/CROSS-PLAN.md",
+      "sha256": "6d3280ef5f37d406ef07019d9b63cfb15ed596fd21e03b069c41ac14322c7fcb",
+      "preservedAt": "docs/research/prose-qr/phase-06/CROSS-PLAN.md"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "experiments/prose-qr/finder-native/feedback.mjs",
+      "sha256": "9c1c156a329907121760e5ff8a2cb76a3bb39fcb3c1e0eef9658d4747a84ee17",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/feedback-01.mjs.txt"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "docs/research/prose-qr/phase-06/FEEDBACK-PLAN.md",
+      "sha256": "69bd9583ea55a2fc89b14f408ccc2585af5672564594bfcb6c2fd6d3c3b53d87",
+      "preservedAt": "docs/research/prose-qr/phase-06/FEEDBACK-PLAN.md"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "docs/research/prose-qr/phase-06/cap-01/cap-02-layout.json",
+      "sha256": "4abda452433974ab1215a9705164f15696fa6b744cb5e2e15fbeaf9368db28a5",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/cap-02-layout.json"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "docs/research/prose-qr/phase-06/cap-01/cap-02.html.gz",
+      "sha256": "1c6d3fe9ee1f0b9aca6ad1be1ebc78144c52a493e8d7be94ad4b5cf9a48e1a01",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/cap-02.html.gz"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "docs/research/prose-qr/phase-06/cap-01/raw/cap-02.png",
+      "sha256": "1ed6ed9b14b27750a53c583ebe75f99a76511f1bbc11641c19f11ed41815687d",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/raw/cap-02.png"
+    },
+    {
+      "batch": "feedback-01",
+      "path": "docs/research/prose-qr/phase-06/cap-01/results.jsonl",
+      "sha256": "7d9a2e9f4ae76c8e020333916ce11d62ea806fd8ec9ef17416e3f2a9726f7801",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/results.jsonl"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "experiments/prose-qr/finder-native/feedback.mjs",
+      "sha256": "1d73028da013b3a32e1ab560dcfd4c08a17ba4586b5c7f3de1edb6a0b620c35a",
+      "preservedAt": "experiments/prose-qr/finder-native/feedback.mjs"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/FEEDBACK-REPAIR.md",
+      "sha256": "9f1268df328f2b97494e689b93099ce99dcf9fd430c0daa0bed32b0350d51a45",
+      "preservedAt": "docs/research/prose-qr/phase-06/FEEDBACK-REPAIR.md"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/feedback-01/results.jsonl",
+      "sha256": "45ef729473168fb10a71c2b55d8a6cff18a0415b8bd8771d321149e6b23a6b18",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-01/results.jsonl"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/feedback-01/aborted.json",
+      "sha256": "e914aa450678905147041e0efc8fbcae5dae777136e1f5a16d5991eb0588d2b7",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-01/aborted.json"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/FEEDBACK-PLAN.md",
+      "sha256": "69bd9583ea55a2fc89b14f408ccc2585af5672564594bfcb6c2fd6d3c3b53d87",
+      "preservedAt": "docs/research/prose-qr/phase-06/FEEDBACK-PLAN.md"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/cap-01/cap-02-layout.json",
+      "sha256": "4abda452433974ab1215a9705164f15696fa6b744cb5e2e15fbeaf9368db28a5",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/cap-02-layout.json"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/cap-01/cap-02.html.gz",
+      "sha256": "1c6d3fe9ee1f0b9aca6ad1be1ebc78144c52a493e8d7be94ad4b5cf9a48e1a01",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/cap-02.html.gz"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/cap-01/raw/cap-02.png",
+      "sha256": "1ed6ed9b14b27750a53c583ebe75f99a76511f1bbc11641c19f11ed41815687d",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/raw/cap-02.png"
+    },
+    {
+      "batch": "feedback-02",
+      "path": "docs/research/prose-qr/phase-06/cap-01/results.jsonl",
+      "sha256": "7d9a2e9f4ae76c8e020333916ce11d62ea806fd8ec9ef17416e3f2a9726f7801",
+      "preservedAt": "docs/research/prose-qr/phase-06/cap-01/results.jsonl"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/finder-native/fonts.mjs",
+      "sha256": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+      "preservedAt": "experiments/prose-qr/finder-native/fonts.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "cdbdd5e65810e2b2999b01c0460f589d6f67947b5796270d44233f5ac0632d36",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/layout-native-abort.mjs.txt"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/finder-native/capture.mjs",
+      "sha256": "896769edbe39d8d8d8086b18fd9c267f913e8f2f7a1adb1573d28ba5afaf148b",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/capture-native-abort.mjs.txt"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "native-01",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "native-01",
+      "path": "docs/research/prose-qr/phase-06/PLAN.md",
+      "sha256": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+      "preservedAt": "docs/research/prose-qr/phase-06/PLAN.md"
+    },
+    {
+      "batch": "native-02",
+      "path": "experiments/prose-qr/finder-native/fonts.mjs",
+      "sha256": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+      "preservedAt": "experiments/prose-qr/finder-native/fonts.mjs"
+    },
+    {
+      "batch": "native-02",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "b6019c595806295dbc8848fdfe8386260e05fe25a32120837b4e01827ad2726b",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/layout-native-02.mjs.txt"
+    },
+    {
+      "batch": "native-02",
+      "path": "experiments/prose-qr/finder-native/capture.mjs",
+      "sha256": "135b61d9570b7756b891b9a36dbd4706a83c260734a1c4b94ceab0fed0d315ed",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/capture-native-02.mjs.txt"
+    },
+    {
+      "batch": "native-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "native-02",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "native-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "native-02",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "native-02",
+      "path": "docs/research/prose-qr/phase-06/PLAN.md",
+      "sha256": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+      "preservedAt": "docs/research/prose-qr/phase-06/PLAN.md"
+    },
+    {
+      "batch": "native-02",
+      "path": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md",
+      "sha256": "a5926eed420613b6ee88737d963e36a23d6b4bb69d2d1ff7763a02ed3520ddef",
+      "preservedAt": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md"
+    },
+    {
+      "batch": "seam-01",
+      "path": "experiments/prose-qr/finder-native/seams.mjs",
+      "sha256": "8f7f47951e02b4bdc7a274cbdb685fe32f4a69e6b5befa09b38194cd6d6fe16d",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/seams-abort.mjs.txt"
+    },
+    {
+      "batch": "seam-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "seam-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "seam-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "seam-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/SEAM-PLAN.md",
+      "sha256": "36b9db7ef8f9d0d29c1f1fe0d6796b9c72a6d52d44116ecd79708c2d687c83b3",
+      "preservedAt": "docs/research/prose-qr/phase-06/SEAM-PLAN.md"
+    },
+    {
+      "batch": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/feedback-11-layout.json",
+      "sha256": "078c5c3c95b08a1fec076a24043099fc6b9f3d8b0424d47fc2852d0cdd7f38d5",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/feedback-11-layout.json"
+    },
+    {
+      "batch": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/feedback-11.html.gz",
+      "sha256": "e11fa9962e16f7ce71479f9c7fec3ae5232e184b7835a860a8ed2a39c000a742",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/feedback-11.html.gz"
+    },
+    {
+      "batch": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/raw/feedback-11.png",
+      "sha256": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/raw/feedback-11.png"
+    },
+    {
+      "batch": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/results.jsonl",
+      "sha256": "583471f3811c51fae25099969da3c2c22a6bc8b1e82803279d164264b2f08ebd",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/results.jsonl"
+    },
+    {
+      "batch": "seam-02",
+      "path": "experiments/prose-qr/finder-native/seams.mjs",
+      "sha256": "ffcf900b09d7292ad5daff21a7c0319a34bc591082e2dcdd588eeb1c4d3b20cc",
+      "preservedAt": "experiments/prose-qr/finder-native/seams.mjs"
+    },
+    {
+      "batch": "seam-02",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preservedAt": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "seam-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "seam-02",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "seam-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/SEAM-PLAN.md",
+      "sha256": "36b9db7ef8f9d0d29c1f1fe0d6796b9c72a6d52d44116ecd79708c2d687c83b3",
+      "preservedAt": "docs/research/prose-qr/phase-06/SEAM-PLAN.md"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/SEAM-REPAIR.md",
+      "sha256": "596361e1326a58cfb8989b0ffb5475ce577fc6abfd6cb9edbaddb53fdfc5fc0d",
+      "preservedAt": "docs/research/prose-qr/phase-06/SEAM-REPAIR.md"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/feedback-11-layout.json",
+      "sha256": "078c5c3c95b08a1fec076a24043099fc6b9f3d8b0424d47fc2852d0cdd7f38d5",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/feedback-11-layout.json"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/feedback-11.html.gz",
+      "sha256": "e11fa9962e16f7ce71479f9c7fec3ae5232e184b7835a860a8ed2a39c000a742",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/feedback-11.html.gz"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/raw/feedback-11.png",
+      "sha256": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/raw/feedback-11.png"
+    },
+    {
+      "batch": "seam-02",
+      "path": "docs/research/prose-qr/phase-06/feedback-02/results.jsonl",
+      "sha256": "583471f3811c51fae25099969da3c2c22a6bc8b1e82803279d164264b2f08ebd",
+      "preservedAt": "docs/research/prose-qr/phase-06/feedback-02/results.jsonl"
+    },
+    {
+      "batch": "touch-01",
+      "path": "experiments/prose-qr/finder-native/fonts.mjs",
+      "sha256": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+      "preservedAt": "experiments/prose-qr/finder-native/fonts.mjs"
+    },
+    {
+      "batch": "touch-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "d0cd2d5dd6820996809e3e40a943a70ab5e95870069c65f403d1b88c67d689f3",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/layout-touch-abort.mjs.txt"
+    },
+    {
+      "batch": "touch-01",
+      "path": "experiments/prose-qr/finder-native/capture.mjs",
+      "sha256": "38fa1e2cf3baa12172b5be108f665b7287e5051e6a869059ac01cfd0ae56fd30",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/capture-touch-abort.mjs.txt"
+    },
+    {
+      "batch": "touch-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "touch-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "touch-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "touch-01",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "touch-01",
+      "path": "docs/research/prose-qr/phase-06/PLAN.md",
+      "sha256": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+      "preservedAt": "docs/research/prose-qr/phase-06/PLAN.md"
+    },
+    {
+      "batch": "touch-01",
+      "path": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md",
+      "sha256": "a5926eed420613b6ee88737d963e36a23d6b4bb69d2d1ff7763a02ed3520ddef",
+      "preservedAt": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md"
+    },
+    {
+      "batch": "touch-01",
+      "path": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
+      "sha256": "f08e9b420254157e0da648e20ab558fd6c0617210f7bf972b83182ad58ce5f8a",
+      "preservedAt": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md"
+    },
+    {
+      "batch": "touch-02",
+      "path": "experiments/prose-qr/finder-native/fonts.mjs",
+      "sha256": "c88bcdd696ecaaa1e26bfe7b55aca42d2fdafa50add44cc7eb040af1b9bc78cb",
+      "preservedAt": "experiments/prose-qr/finder-native/fonts.mjs"
+    },
+    {
+      "batch": "touch-02",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "sha256": "1a971518761f8b93abfed75f462e64a15e8840eb6b08e19dddd595b74e76db7d",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/layout-touch-02.mjs.txt"
+    },
+    {
+      "batch": "touch-02",
+      "path": "experiments/prose-qr/finder-native/capture.mjs",
+      "sha256": "b99b20e8e541c64d3de9473a52e2195db5da4da40d320c8ce1de3b8e54dc5e8a",
+      "preservedAt": "docs/research/prose-qr/phase-06/source-versions/capture-touch-02.mjs.txt"
+    },
+    {
+      "batch": "touch-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "sha256": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preservedAt": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "touch-02",
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preservedAt": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "touch-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "sha256": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preservedAt": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "touch-02",
+      "path": "docs/research/prose-qr/phase-06/font-metrics.json",
+      "sha256": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+      "preservedAt": "docs/research/prose-qr/phase-06/font-metrics.json"
+    },
+    {
+      "batch": "touch-02",
+      "path": "docs/research/prose-qr/phase-06/PLAN.md",
+      "sha256": "942d94946ef09646fc131a06434f5bd04147bde75bd6dc07e32334017f78fb5a",
+      "preservedAt": "docs/research/prose-qr/phase-06/PLAN.md"
+    },
+    {
+      "batch": "touch-02",
+      "path": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md",
+      "sha256": "a5926eed420613b6ee88737d963e36a23d6b4bb69d2d1ff7763a02ed3520ddef",
+      "preservedAt": "docs/research/prose-qr/phase-06/PACKING-REPAIR.md"
+    },
+    {
+      "batch": "touch-02",
+      "path": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md",
+      "sha256": "f08e9b420254157e0da648e20ab558fd6c0617210f7bf972b83182ad58ce5f8a",
+      "preservedAt": "docs/research/prose-qr/phase-06/TOUCH-PLAN.md"
+    },
+    {
+      "batch": "touch-02",
+      "path": "docs/research/prose-qr/phase-06/TAIL-REPAIR.md",
+      "sha256": "e6f7e7b0545721ede74307331870b8016f5b8d1c356411f5ca30ab7f64bf64f6",
+      "preservedAt": "docs/research/prose-qr/phase-06/TAIL-REPAIR.md"
+    }
+  ],
+  "prior": [
+    {
+      "phase": "phase-04",
+      "path": "docs/research/prose-qr/phase-04/custody.json",
+      "sha256": "28287d7abbfdf1b8086783732b20c59684b88c167daa6c62f75789810e8776b9",
+      "inventoryEntriesUnchanged": 460
+    },
+    {
+      "phase": "phase-05",
+      "path": "docs/research/prose-qr/phase-05/custody.json",
+      "sha256": "270129badddaa2971355730b56a8728b3955ee6ced7f61b76b6dfa2358ea917d",
+      "inventoryEntriesUnchanged": 241
+    }
+  ],
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "phaseBytesBeforeReceipt": 4992968,
+  "logicalFileSafeguardBytes": 6000000,
+  "npmPrivate": true,
+  "productVersion": "0.4.2",
+  "proseAcceptance": "unsolved",
+  "classification": "Read-only custody/count reconciliation; no new capture, locator or payload probe"
+}

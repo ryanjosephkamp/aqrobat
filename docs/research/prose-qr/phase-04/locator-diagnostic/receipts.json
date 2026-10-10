@@ -1,0 +1,135 @@
+{
+  "testedAt": "2026-10-09T15:52:06.228Z",
+  "sourceScriptSha256": "324a6ea0caacf174a1cff18448ded45fad342c379278acf5a28a3a7bc90eed89",
+  "installedBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "instrumentation": "return __webpack_require__(__webpack_require__.s = 3); exposed as globalThis.internals; no algorithm/input changes",
+  "classification": "Failure localization only. Binarized PNGs are diagnostics, never counted as candidate or phone successes",
+  "records": [
+    {
+      "batch": "contrast-01",
+      "path": "raw/control-1.png",
+      "id": "positive-control",
+      "inputPNGSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+      "binarySha256": "6529522f1cc7740f5bf0ad300a7f5ab8d16b17f2dc8b0ba0012b9d69e6128403",
+      "locations": [
+        {
+          "alignmentPattern": { "x": 447, "y": 447 },
+          "bottomLeft": { "x": 148.5, "y": 506.5 },
+          "dimension": 25,
+          "topLeft": { "x": 148.5, "y": 148.5 },
+          "topRight": { "x": 506.5, "y": 148.5 }
+        },
+        {
+          "alignmentPattern": { "x": 447, "y": 447 },
+          "bottomLeft": { "x": 148, "y": 506 },
+          "topLeft": { "x": 148, "y": 148 },
+          "topRight": { "x": 506, "y": 148 },
+          "dimension": 25
+        }
+      ],
+      "stage": "Location hypotheses exist; not a decoded payload"
+    },
+    {
+      "batch": "contrast-01",
+      "path": "raw/contrast-07.png",
+      "id": "sharp-Menlo-gray220",
+      "inputPNGSha256": "b32f9611677f1e47fdbc8a644af62645e1fa3020b738e87ecf0e84127197f223",
+      "binarySha256": "9929a0a084e0d073495ff4d43103f39eb33694ace2dc3f22bcf84861c6fcb70a",
+      "locations": [
+        {
+          "alignmentPattern": { "x": 1259.25, "y": 1121.5 },
+          "bottomLeft": { "x": 1293.5, "y": 1287.5 },
+          "dimension": 125,
+          "topLeft": { "x": 1259, "y": 1191.5 },
+          "topRight": { "x": 1283, "y": 1046.5 }
+        },
+        {
+          "alignmentPattern": { "x": 1259.25, "y": 1121.5 },
+          "bottomLeft": { "x": 1294.5, "y": 1289 },
+          "topLeft": { "x": 1258.5, "y": 1193 },
+          "topRight": { "x": 1282.5, "y": 1048 },
+          "dimension": 81
+        }
+      ],
+      "stage": "Location hypotheses exist; not a decoded payload"
+    },
+    {
+      "batch": "dense-01",
+      "path": "raw/dense-07.png",
+      "id": "sharp-Impact-uppercase-gray220",
+      "inputPNGSha256": "581bb28eb1b87724a505c147188f0c30800ac00be2666cd851050758d356f9a1",
+      "binarySha256": "4c05f807367adb5e4722403979bc84fa508cd315d85205123213b30ac05a3962",
+      "locations": [
+        {
+          "alignmentPattern": { "x": 248.5, "y": 1021.5 },
+          "bottomLeft": { "x": 367.5, "y": 732 },
+          "dimension": 189,
+          "topLeft": { "x": 830.5, "y": 1162 },
+          "topRight": { "x": 467.5, "y": 1434.5 }
+        },
+        {
+          "alignmentPattern": { "x": 248.5, "y": 1021.5 },
+          "bottomLeft": { "x": 367, "y": 731.5 },
+          "topLeft": { "x": 830, "y": 1163.5 },
+          "topRight": { "x": 467, "y": 1427.5 },
+          "dimension": 175
+        }
+      ],
+      "stage": "Location hypotheses exist; not a decoded payload"
+    },
+    {
+      "batch": "lowpass-01",
+      "path": "raw/lowpass-10.png",
+      "id": "native-Menlo-gray220-blur4",
+      "inputPNGSha256": "d39f4b485a5e8aac371ed80da27a02ac1a644bc7a747f5ba94db4b825e1ef6d2",
+      "binarySha256": "ba4cfcd63e1649a5fd72e140aa92e3fad17b529233aa06c970bc27edcf17b18b",
+      "locations": [
+        {
+          "alignmentPattern": { "x": 774.5, "y": 704.5 },
+          "bottomLeft": { "x": 879, "y": 255.5 },
+          "dimension": 95,
+          "topLeft": { "x": 1031.25, "y": 1053.5 },
+          "topRight": { "x": 978.25, "y": 1437.5 }
+        },
+        {
+          "alignmentPattern": { "x": 774.5, "y": 704.5 },
+          "bottomLeft": { "x": 890.5, "y": 254 },
+          "topLeft": { "x": 1031.5, "y": 1048 },
+          "topRight": { "x": 989.5, "y": 1433 },
+          "dimension": 93
+        }
+      ],
+      "stage": "Location hypotheses exist; not a decoded payload"
+    },
+    {
+      "batch": "lowpass-01",
+      "path": "raw/lowpass-12.png",
+      "id": "native-Menlo-gray220-blur7",
+      "inputPNGSha256": "3021106fc3bb38f702307dd45cbf55f2c32357c4fd9fabae65735fc26643e3f8",
+      "binarySha256": "17bca490b8cf7a74218eca026a148ebfa851afc3c0e034c6ec775479f5c2510a",
+      "locations": [
+        {
+          "alignmentPattern": {
+            "x": 398.0896454040897,
+            "y": 910.4032519562477
+          },
+          "bottomLeft": { "x": 440, "y": 545.5 },
+          "dimension": 17,
+          "topLeft": { "x": 492.5, "y": 1122 },
+          "topRight": { "x": 416.5, "y": 1410.5 }
+        },
+        {
+          "alignmentPattern": {
+            "x": 397.9168973360985,
+            "y": 908.8429705270983
+          },
+          "bottomLeft": { "x": 440, "y": 544 },
+          "topLeft": { "x": 492, "y": 1122 },
+          "topRight": { "x": 416, "y": 1410 },
+          "dimension": 17
+        }
+      ],
+      "stage": "Location hypotheses exist; not a decoded payload"
+    }
+  ]
+}

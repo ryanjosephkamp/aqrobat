@@ -1,0 +1,536 @@
+{
+  "scientificStatus": "unsolved; no native payload or phone candidate",
+  "counts": {
+    "fullNativeProposals": 10,
+    "fullNativeImmediateRepeatReceipts": 10,
+    "nativeFinderContextProposals": 7,
+    "nativeBodyDiagnosticProposals": 3,
+    "smallGlyphRenders": 14,
+    "newConventionalControls": 2,
+    "newControlImmediateRepeatReceipts": 2,
+    "reusedConventionalControlProfiles": 4,
+    "primaryOrdinarySlots": 39,
+    "completedPrimarySlots": 39,
+    "nativePrimarySlots": 21,
+    "conventionalPrimarySlots": 18,
+    "conventionalExactSlots": 15,
+    "wrongPayloadSlots": 0,
+    "errorSlots": 0,
+    "timeoutSlots": 0,
+    "unattemptedSlots": 0,
+    "savedSourceStockAuditSlots": 5,
+    "primaryPassiveProfiles": 13,
+    "primaryStockBranches": 22,
+    "auditPassiveProfiles": 5,
+    "auditStockBranches": 9,
+    "resourceBinarizerDiagnostics": 7,
+    "bodyBinarizerDiagnostics": 3,
+    "nativePayloadProposals": 0,
+    "nativeStrictPasses": 0,
+    "phoneTests": 0,
+    "physicalPrintTests": 0,
+    "nativeAppPasteTests": 0
+  },
+  "phases": [
+    {
+      "phase": "audit-01",
+      "objective": "Source-scale and gate audit",
+      "captureSummary": "0 native; 5 saved PNGs",
+      "readerSummary": "5 separate stock jsQR calls",
+      "outcome": "All saved returns reproduced. PILL scale mismatch diagnosed; old diagonal failure retained."
+    },
+    {
+      "phase": "resources-01",
+      "objective": "Five native counter hypotheses",
+      "captureSummary": "10 small resources",
+      "readerSummary": "5 binarizer diagnostics",
+      "outcome": "All glyphs recognizable; Copperplate O and Arial g selected for context. Font-shape hypotheses partly failed."
+    },
+    {
+      "phase": "context-01",
+      "objective": "Sparse words and English articles",
+      "captureSummary": "4 native + 4 repeats",
+      "readerSummary": "18 primary slots",
+      "outcome": "O has intended85 and better true axes, but spans fail. g has intended97 with shape failures. Later DOM audit flags selection/spacing."
+    },
+    {
+      "phase": "calibration-01",
+      "objective": "Square vs circular QR finders",
+      "captureSummary": "2 conventional + 2 repeats",
+      "readerSummary": "6 primary slots",
+      "outcome": "Square exact in3 readers. Circle exact in2, while strict gates reject it."
+    },
+    {
+      "phase": "resources-02",
+      "objective": "Angular P and Hebrew final mem",
+      "captureSummary": "4 small resources",
+      "readerSummary": "2 binarizer diagnostics",
+      "outcome": "P fails source ratios. Mem passes source ratios, with unequal H/V counter proportions."
+    },
+    {
+      "phase": "context-02",
+      "objective": "Hebrew alphabetic article",
+      "captureSummary": "1 native + 1 repeat",
+      "readerSummary": "9 primary slots",
+      "outcome": "Returns103 rather than101; span, stability and true-axis gates fail. Greeting selection lacks a separating space."
+    },
+    {
+      "phase": "coupling-01",
+      "objective": "Regular Latin body substitutions",
+      "captureSummary": "3 native + 3 repeats",
+      "readerSummary": "0 readers; 3 binarizer diagnostics",
+      "outcome": "One word choice affects many coupled pixels/cells. No payload, finder or independent-bit claim."
+    },
+    {
+      "phase": "dom-audit-01",
+      "objective": "Retrospective text contract",
+      "captureSummary": "8 DOM-only reopens",
+      "readerSummary": "0 captures/readers",
+      "outcome": "5 selection mismatches;6 conservative ink-bound flags. Earlier receipts retained."
+    },
+    {
+      "phase": "context-03",
+      "objective": "CSS first-letter attempt \u2014 REJECTED",
+      "captureSummary": "1 native + 1 repeat",
+      "readerSummary": "3 primary slots",
+      "outcome": "Browser ignored outline; white initials invisible. Harness omission and premature reader calls retained."
+    },
+    {
+      "phase": "context-04",
+      "objective": "Corrected inline initial article",
+      "captureSummary": "1 native + 1 repeat",
+      "readerSummary": "3 primary slots",
+      "outcome": "Actual stroke and paragraph selection verified; spacing passes. Dimension85, spans fail, true diagonal0.361325."
+    },
+    {
+      "phase": "layout-audit-01",
+      "objective": "Saved-layout feasibility",
+      "captureSummary": "0 new captures",
+      "readerSummary": "0 readers/binarizers",
+      "outcome": "226/527 body glyph boxes intersect nominal symbol;188 wholly inside. Quiet ring has visible ink."
+    }
+  ],
+  "fixedThresholds": {
+    "worstTrueAndScoredRMS": 0.35,
+    "minQuadBalance": 0.8,
+    "minNominalSpanFraction": 0.8,
+    "minStableWideRowFraction": 0.8
+  },
+  "primaryBranches": [
+    {
+      "phase": "calibration-01",
+      "case": "square",
+      "control": true,
+      "branch": "normal-stock-first-scan",
+      "dimension": 25,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": true,
+      "strictPass": true,
+      "worstTrueRMS": 0.024096385542168794,
+      "minQuadBalance": 1,
+      "minNominalSpanFraction": 1,
+      "minStableFraction": 1
+    },
+    {
+      "phase": "calibration-01",
+      "case": "circle",
+      "control": true,
+      "branch": "normal-stock-first-scan",
+      "dimension": 25,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": true,
+      "strictPass": false,
+      "worstTrueRMS": 0.055700599068321976,
+      "minQuadBalance": 0.2222222222222222,
+      "minNominalSpanFraction": 0.2222222222222222,
+      "minStableFraction": 0.6111111111111112
+    },
+    {
+      "phase": "context-01",
+      "case": "arial-g-sparse",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 31,
+      "sourceDimension": 97,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 3.0699257908039645,
+      "minQuadBalance": 0.2857142857142857,
+      "minNominalSpanFraction": 0.15819209039548024,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-01",
+      "case": "arial-g-sparse",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 97,
+      "sourceDimension": 97,
+      "intendedFirstGeometry": true,
+      "strictPass": false,
+      "worstTrueRMS": 0.49596711534272603,
+      "minQuadBalance": 0.3125,
+      "minNominalSpanFraction": 0.3954802259887006,
+      "minStableFraction": 0.6666666666666666
+    },
+    {
+      "phase": "context-01",
+      "case": "copperplate-article",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 33,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 3.0629959843437007,
+      "minQuadBalance": 0.2857142857142857,
+      "minNominalSpanFraction": 0.1414141414141414,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-01",
+      "case": "copperplate-article",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 85,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": true,
+      "strictPass": false,
+      "worstTrueRMS": 0.31068919803845413,
+      "minQuadBalance": 0.3333333333333333,
+      "minNominalSpanFraction": 0.35353535353535354,
+      "minStableFraction": 0.8461538461538461
+    },
+    {
+      "phase": "context-01",
+      "case": "copperplate-sparse",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 121,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 3.0486789363036264,
+      "minQuadBalance": 0.5,
+      "minNominalSpanFraction": 0.1414141414141414,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-01",
+      "case": "copperplate-sparse",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 85,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": true,
+      "strictPass": false,
+      "worstTrueRMS": 0.31068919803845413,
+      "minQuadBalance": 0.3333333333333333,
+      "minNominalSpanFraction": 0.35353535353535354,
+      "minStableFraction": 0.8461538461538461
+    },
+    {
+      "phase": "context-01",
+      "case": "control-normal",
+      "control": true,
+      "branch": "normal-stock-first-scan",
+      "dimension": 25,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": true,
+      "strictPass": true,
+      "worstTrueRMS": 0.024096385542168794,
+      "minQuadBalance": 1,
+      "minNominalSpanFraction": 1,
+      "minStableFraction": 1
+    },
+    {
+      "phase": "context-01",
+      "case": "arial-g-article",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 165,
+      "sourceDimension": 97,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 2.7263574034520905,
+      "minQuadBalance": 0.2857142857142857,
+      "minNominalSpanFraction": 0.15819209039548024,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-01",
+      "case": "arial-g-article",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 97,
+      "sourceDimension": 97,
+      "intendedFirstGeometry": true,
+      "strictPass": false,
+      "worstTrueRMS": 0.49596711534272603,
+      "minQuadBalance": 0.3125,
+      "minNominalSpanFraction": 0.3954802259887006,
+      "minStableFraction": 0.6666666666666666
+    },
+    {
+      "phase": "context-01",
+      "case": "control-inverted",
+      "control": true,
+      "branch": "normal-stock-first-scan",
+      "dimension": 13,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 1.1568368964284774,
+      "minQuadBalance": 0.25,
+      "minNominalSpanFraction": 0.3333333333333333,
+      "minStableFraction": 0.3333333333333333
+    },
+    {
+      "phase": "context-01",
+      "case": "control-inverted",
+      "control": true,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 25,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": true,
+      "strictPass": true,
+      "worstTrueRMS": 0.024096385542168794,
+      "minQuadBalance": 1,
+      "minNominalSpanFraction": 1,
+      "minStableFraction": 1
+    },
+    {
+      "phase": "context-02",
+      "case": "control-normal",
+      "control": true,
+      "branch": "normal-stock-first-scan",
+      "dimension": 25,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": true,
+      "strictPass": true,
+      "worstTrueRMS": 0.024096385542168794,
+      "minQuadBalance": 1,
+      "minNominalSpanFraction": 1,
+      "minStableFraction": 1
+    },
+    {
+      "phase": "context-02",
+      "case": "hebrew-article",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 85,
+      "sourceDimension": 101,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 3.0509651039143435,
+      "minQuadBalance": 0.125,
+      "minNominalSpanFraction": 0.08187134502923978,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-02",
+      "case": "hebrew-article",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 103,
+      "sourceDimension": 101,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 0.35292234813545464,
+      "minQuadBalance": 0.42857142857142855,
+      "minNominalSpanFraction": 0.4912280701754386,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-02",
+      "case": "control-inverted",
+      "control": true,
+      "branch": "normal-stock-first-scan",
+      "dimension": 13,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 1.1568368964284774,
+      "minQuadBalance": 0.25,
+      "minNominalSpanFraction": 0.3333333333333333,
+      "minStableFraction": 0.3333333333333333
+    },
+    {
+      "phase": "context-02",
+      "case": "control-inverted",
+      "control": true,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 25,
+      "sourceDimension": 25,
+      "intendedFirstGeometry": true,
+      "strictPass": true,
+      "worstTrueRMS": 0.024096385542168794,
+      "minQuadBalance": 1,
+      "minNominalSpanFraction": 1,
+      "minStableFraction": 1
+    },
+    {
+      "phase": "context-03",
+      "case": "continuous-article",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 81,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 2.490537240982695,
+      "minQuadBalance": 0.2857142857142857,
+      "minNominalSpanFraction": 0.1414141414141414,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-03",
+      "case": "continuous-article",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 29,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 2.9869972299747487,
+      "minQuadBalance": 0.2727272727272727,
+      "minNominalSpanFraction": 0.1414141414141414,
+      "minStableFraction": 0.3076923076923077
+    },
+    {
+      "phase": "context-04",
+      "case": "continuous-article",
+      "control": false,
+      "branch": "normal-stock-first-scan",
+      "dimension": 81,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": false,
+      "strictPass": false,
+      "worstTrueRMS": 2.490537240982695,
+      "minQuadBalance": 0.2857142857142857,
+      "minNominalSpanFraction": 0.1414141414141414,
+      "minStableFraction": 0
+    },
+    {
+      "phase": "context-04",
+      "case": "continuous-article",
+      "control": false,
+      "branch": "inverted-stock-second-scan",
+      "dimension": 85,
+      "sourceDimension": 85,
+      "intendedFirstGeometry": true,
+      "strictPass": false,
+      "worstTrueRMS": 0.36132472314464664,
+      "minQuadBalance": 0.26666666666666666,
+      "minNominalSpanFraction": 0.2828282828282828,
+      "minStableFraction": 0.9230769230769231
+    }
+  ],
+  "layoutAudit": {
+    "at": "2026-10-10T17:31:24.194579+00:00",
+    "sources": {
+      "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json": "65aa08a03374a0f84d98a8ee07945e958ab88d6febe9f738150be6bd67e729ee",
+      "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/native.png": "8f233610d28d206de5f8a3dd6a451a00f759550ef90e162aedf2be7a1a660b0b",
+      "docs/research/prose-qr/astra-2026-10-10/layout-audit-01/PLAN.md": "7315129df7d14e06e3bf8e9ae36aa04fe3bd9973f745765291c2265343eaffb2",
+      "/Users/noir/Documents/aqrobat/experiments/prose-qr/astra-2026-10-10/layout-audit.py": "bfbc639bcac25ba8ed2c103f7b9fafe32329a65f1eb6de8918240fa38506a037"
+    },
+    "newRenders": 0,
+    "readerCalls": 0,
+    "binarizerCalls": 0,
+    "sourceGeometry": {
+      "unit": 4.714285714285714,
+      "dimension": 85,
+      "counters": [
+        {
+          "x": 70.58215962441315,
+          "y": 146.77464788732394
+        },
+        {
+          "x": 438.2852846244132,
+          "y": 146.77464788732394
+        },
+        {
+          "x": 70.58215962441315,
+          "y": 514.4777728873239
+        }
+      ]
+    },
+    "nominalSymbolRectangle": {
+      "x": 54.08215962441315,
+      "y": 130.27464788732394,
+      "width": 400.7142857142857,
+      "height": 400.7142857142857
+    },
+    "nominalQuietOuterRectangle": {
+      "x": 35.22501676727029,
+      "y": 111.41750503018108,
+      "width": 438.42857142857144,
+      "height": 438.42857142857144
+    },
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "visibleBodyGlyphs": 174,
+        "bodyGlyphBoxesIntersectSymbol": 174,
+        "bodyGlyphBoxesWhollyInsideSymbol": 168,
+        "bodyGlyphBoxesIntersectQuietRing": 6,
+        "lineStepCssPixels": [51, 27, 27, 27, 27, 27],
+        "lineStepInSourceModules": [
+          10.818181818181818, 5.7272727272727275, 5.7272727272727275,
+          5.7272727272727275, 5.7272727272727275, 5.7272727272727275
+        ]
+      },
+      {
+        "paragraph": 2,
+        "visibleBodyGlyphs": 177,
+        "bodyGlyphBoxesIntersectSymbol": 26,
+        "bodyGlyphBoxesWhollyInsideSymbol": 20,
+        "bodyGlyphBoxesIntersectQuietRing": 19,
+        "lineStepCssPixels": [51, 27, 27, 27, 27, 27],
+        "lineStepInSourceModules": [
+          10.818181818181818, 5.7272727272727275, 5.7272727272727275,
+          5.7272727272727275, 5.7272727272727275, 5.7272727272727275
+        ]
+      },
+      {
+        "paragraph": 3,
+        "visibleBodyGlyphs": 176,
+        "bodyGlyphBoxesIntersectSymbol": 26,
+        "bodyGlyphBoxesWhollyInsideSymbol": 0,
+        "bodyGlyphBoxesIntersectQuietRing": 26,
+        "lineStepCssPixels": [51.0, 27.0, 27.0, 27.0, 27.0, 27.0],
+        "lineStepInSourceModules": [
+          10.818181818181818, 5.7272727272727275, 5.7272727272727275,
+          5.7272727272727275, 5.7272727272727275, 5.7272727272727275
+        ]
+      }
+    ],
+    "visibleBodyGlyphs": 527,
+    "medianBodyAdvanceCssPixels": 11.015625,
+    "medianBodyAdvanceInModules": 2.336647727272727,
+    "medianBodyInkHeightCssPixels": 9.755859375,
+    "medianBodyInkHeightInModules": 2.069424715909091,
+    "symbolSourcePixelAccounting": {
+      "nativePixels": 160000,
+      "gray128DarkPixels": 10636,
+      "gray128DarkFraction": 0.066475
+    },
+    "quietRingSourcePixelAccounting": {
+      "nativePixels": 31844,
+      "gray128DarkPixels": 1286,
+      "gray128DarkFraction": 0.04038437382238412
+    },
+    "classification": "Source-aligned saved native gray128/DOM diagnostic only; no reader input transformation, QR matrix, capacity proof, conformance claim or change to acceptance gates."
+  },
+  "stopReason": "No defensible new native construction with a measured mechanism for both fixed finder gates and body-field control. Parameter sweeps repeat the same failure; gate revision requires a new owner decision. Remaining budgets are not exhausted.",
+  "exactSourceArchive": {
+    "entries": 231,
+    "distinctSnapshots": 214,
+    "nativeAliases": 28
+  },
+  "reportBuiltAt": "2026-10-10T17:41:45.428377+00:00",
+  "builderSha256": "63f7a6f48b4006304897eb7c543b673d5f66a1e89e95192801b38c1f940dc6ea",
+  "milestoneCommit": "638f917f3491eacbe50d5a9d7e09636f68a3711c",
+  "newReaderCallsInReportBuild": 0,
+  "newNativeRendersInReportBuild": 0
+}

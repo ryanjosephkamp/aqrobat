@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-10T14:20:41.584Z",
+  "plannedInputs": 4,
+  "readerImplementations": 1,
+  "profile": "default OpenCV with stock diagnostic logging; no acceptance options",
+  "sources": {
+    "experiments/prose-qr/context-decode-log/read.py": "503da575ba48c282e364ab3ae8a9624bc06cd797062b934d567955a3b5f2366a",
+    "experiments/prose-qr/context-decode-log/run.mjs": "eab1cdd5408ae15327e899a61ee42c4352de56f3f547b63756853f9f99d8ab26",
+    "docs/research/prose-qr/phase-50/PLAN.md": "71a04218e8d715d53fe06e298d517df60b49f01004b350d23b733e9d18fdaec6",
+    "docs/research/prose-qr/phase-32/opencv-source-01/receipt.json": "63813dc7ce42060335d73893c1837318c077c92bb81524c2a26265c18c25657a",
+    "docs/research/prose-qr/phase-45/run-01/control-pixels.json": "24fe8673fe462ae5f34bbcb818c6ff520350a67136e08c4f7c2a3087b173acaa",
+    "docs/research/prose-qr/phase-45/opencv-01/control.json": "fa0888fef50784e5194f672803200751206ae0667321ed8bc725676fa8f21d08",
+    "docs/research/prose-qr/phase-45/run-01/native-pixels.json": "3e156d8629858dd719453e5a23cfc97ecdd3b23daf25d4f91ec93e188b458f01",
+    "docs/research/prose-qr/phase-45/opencv-01/run-01.json": "8d3fa2628a0cb9da0dbfdda320822e1e76bfce5e2253b81be15508144ae8a777",
+    "docs/research/prose-qr/phase-49/run-01/native-pixels.json": "a9583c0f5615c145fca4bb9551b87f5ed8f0d43cc2aaff97670880fc9f2f8650",
+    "docs/research/prose-qr/phase-49/run-01/native-opencv.json": "0130aa42841356ce9c712ea3e6d2285720dda7dc1fc649007a85fcbe648bd60a",
+    "docs/research/prose-qr/phase-49/run-02/native-pixels.json": "9e2bb8ea9c7f3d59709a28f1bb5380d18c3658959989d5ba2b96c609310c7073",
+    "docs/research/prose-qr/phase-49/run-02/native-opencv.json": "e0ad9d68605c2b07382b410eebb85bb3bb4837d3dda98a920a9401f4377eb774"
+  },
+  "inputs": [
+    {
+      "id": "control",
+      "receipt": "docs/research/prose-qr/phase-45/run-01/control-pixels.json",
+      "baseline": "docs/research/prose-qr/phase-45/opencv-01/control.json"
+    },
+    {
+      "id": "full-native",
+      "receipt": "docs/research/prose-qr/phase-45/run-01/native-pixels.json",
+      "baseline": "docs/research/prose-qr/phase-45/opencv-01/run-01.json"
+    },
+    {
+      "id": "tight-finder",
+      "receipt": "docs/research/prose-qr/phase-49/run-01/native-pixels.json",
+      "baseline": "docs/research/prose-qr/phase-49/run-01/native-opencv.json"
+    },
+    {
+      "id": "roomier-finder",
+      "receipt": "docs/research/prose-qr/phase-49/run-02/native-pixels.json",
+      "baseline": "docs/research/prose-qr/phase-49/run-02/native-opencv.json"
+    }
+  ]
+}

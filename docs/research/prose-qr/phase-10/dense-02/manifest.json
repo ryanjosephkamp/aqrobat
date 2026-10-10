@@ -1,0 +1,31 @@
+{
+  "startedAt": "2026-10-09T23:42:51.868Z",
+  "baseline": "1bdf1f335a2bdf5eb61cd67826793c0dbfb5795b",
+  "sources": {
+    "docs/research/prose-qr/phase-10/dense-02.json": "6db0c7b2826c93b262bb6c001d1d79277227281af814fbd2d6330dfc7dce846e",
+    "docs/research/prose-qr/phase-10/PLAN-02.md": "4d8b4746a002e217cc9c877d930d65131f6d64354b7031792704d10051ef0cc8",
+    "experiments/prose-qr/finder-density/capture.mjs": "c510e69adcc7d3e8d6ed53c239fd79943657af8dbb5b7324c46f6554f18b28ee",
+    "experiments/prose-qr/finder-runs/probe.mjs": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+    "experiments/prose-qr/finder-region/probe.mjs": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+    "experiments/prose-qr/layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "experiments/prose-qr/finder-native/layout.mjs": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7"
+  },
+  "passiveHash": "862a1480ba68eea50de3f03431db18087d238f94bb682c0171d85d43398ddd9d",
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "planned": 2,
+  "cap": 6000000,
+  "payloads": 0
+}

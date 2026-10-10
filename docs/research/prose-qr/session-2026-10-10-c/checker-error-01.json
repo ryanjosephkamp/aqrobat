@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-10T16:04:05.476078+00:00",
+  "stage": "Final read-only verifier source-list construction",
+  "error": "ENOENT opening experiments/prose-qr/session-2026-10-10-c/seal-last.mjs",
+  "cause": "The verifier listed the prior session-b source directory, then constructed session-c paths. The stale listing referenced a file absent from the new directory.",
+  "outcome": "Verifier exited before writing verification-final.json. No experiment or reader case was rerun. Original executed verifier remains unchanged; verify-v2.mjs corrects only the directory listing.",
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-c/verify.mjs": "689943e64fd6da69068375cc7f6c742275ad4c0981c54aca7de6e79adef049e2"
+  }
+}

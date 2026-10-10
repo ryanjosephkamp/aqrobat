@@ -1,0 +1,2407 @@
+{
+  "at": "2026-10-09T23:38:38.647Z",
+  "sourceScriptSha256": "8b43c60b90ee706fcd71e681d8d6217fcd0ece9f1f0fb5e16c6b3f5bcd7ca943",
+  "prior": [
+    {
+      "path": "docs/research/prose-qr/phase-04/custody.json",
+      "sha256": "28287d7abbfdf1b8086783732b20c59684b88c167daa6c62f75789810e8776b9",
+      "unchangedEntries": 460
+    },
+    {
+      "path": "docs/research/prose-qr/phase-05/custody.json",
+      "sha256": "270129badddaa2971355730b56a8728b3955ee6ced7f61b76b6dfa2358ea917d",
+      "unchangedEntries": 241
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "unchangedEntries": 284
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/custody.json",
+      "sha256": "1b55735e1f24b080688d61a94ebf6e0161eb0eca5499829970cf0c4917e9e25c",
+      "unchangedEntries": 77
+    },
+    {
+      "path": "docs/research/prose-qr/phase-08/custody.json",
+      "sha256": "0ba13fd12d5d4ee4e83bcc8bbdcc1e7c359aed52a7e499b5ae24629c417f0dbe",
+      "unchangedEntries": 206
+    }
+  ],
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "sources": [
+    {
+      "batch": "words-01",
+      "path": "docs/research/prose-qr/phase-09/words-01.json",
+      "expected": "5e959e2edcf1ff73dd8781d01ad49989899fb9be68b6a0eb9e206f7309d5bc77",
+      "preserved": "docs/research/prose-qr/phase-09/words-01.json"
+    },
+    {
+      "batch": "words-01",
+      "path": "docs/research/prose-qr/phase-09/PLAN.md",
+      "expected": "e585b3bfc3b68112b2d042688f3b49a47175d2e0337df0dba159ed0f1448e6ee",
+      "preserved": "docs/research/prose-qr/phase-09/PLAN.md"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/finder-runs/capture.mjs",
+      "expected": "ee9487df77fb85524455112503bad6f522e1a1463d613106b0dbf94f16c1da8e",
+      "preserved": "docs/research/prose-qr/phase-09/executed-sources/capture-v1.mjs"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/finder-runs/probe.mjs",
+      "expected": "aaa69687371f267efb00698ee486113ac9c090ced3487648a6f22be5fb99a319",
+      "preserved": "docs/research/prose-qr/phase-09/executed-sources/probe-v1.mjs"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/finder-region/probe.mjs",
+      "expected": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+      "preserved": "experiments/prose-qr/finder-region/probe.mjs"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "expected": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preserved": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "expected": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preserved": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "expected": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preserved": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "words-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "expected": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preserved": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "docs/research/prose-qr/phase-09/words-02.json",
+      "expected": "75370e94b4c59861472fc24188dc7510645c7aaed1cc2c7b0ebb468eeee21ab2",
+      "preserved": "docs/research/prose-qr/phase-09/words-02.json"
+    },
+    {
+      "batch": "words-02",
+      "path": "docs/research/prose-qr/phase-09/PLAN.md",
+      "expected": "e585b3bfc3b68112b2d042688f3b49a47175d2e0337df0dba159ed0f1448e6ee",
+      "preserved": "docs/research/prose-qr/phase-09/PLAN.md"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/finder-runs/capture.mjs",
+      "expected": "d9a28a0f73f7e0554a7d66595604d6c1a2113a71783076e52abc20e4e07cdd8d",
+      "preserved": "docs/research/prose-qr/phase-09/executed-sources/capture-v2.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/finder-runs/probe.mjs",
+      "expected": "aaa69687371f267efb00698ee486113ac9c090ced3487648a6f22be5fb99a319",
+      "preserved": "docs/research/prose-qr/phase-09/executed-sources/probe-v1.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/finder-region/probe.mjs",
+      "expected": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+      "preserved": "experiments/prose-qr/finder-region/probe.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "expected": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preserved": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "expected": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preserved": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/layout.mjs",
+      "expected": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preserved": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "words-02",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "expected": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preserved": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "docs/research/prose-qr/phase-09/fonts-02.json",
+      "expected": "368bda0b8c7d96260389f0b6098c3273b9e839155428b517780296b932da4bf2",
+      "preserved": "docs/research/prose-qr/phase-09/fonts-02.json"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "docs/research/prose-qr/phase-09/PLAN-03.md",
+      "expected": "5b862ef568efe27f16f1a10214f2ea779501ff5d409a5dacfc3c8614a079cf2b",
+      "preserved": "docs/research/prose-qr/phase-09/PLAN-03.md"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/finder-runs/capture.mjs",
+      "expected": "a59d31a1b0e2a7cd649671fb75be6d6cab4b3a49ea99a7874dcc3664055ad6b0",
+      "preserved": "docs/research/prose-qr/phase-09/executed-sources/capture-v3.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/finder-runs/probe.mjs",
+      "expected": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+      "preserved": "experiments/prose-qr/finder-runs/probe.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/finder-region/probe.mjs",
+      "expected": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+      "preserved": "experiments/prose-qr/finder-region/probe.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "expected": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preserved": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "expected": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preserved": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/layout.mjs",
+      "expected": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preserved": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "fonts-02",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "expected": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preserved": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "docs/research/prose-qr/phase-09/glyphs-01.json",
+      "expected": "ba8d992a3a4b89b86149770cd8503b7eefc1165b3649f9cd6d04aca0a47f2a7f",
+      "preserved": "docs/research/prose-qr/phase-09/glyphs-01.json"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "docs/research/prose-qr/phase-09/PLAN-05.md",
+      "expected": "2564a56bf66754398cb7151f88a18316bad59f9844aaaecd8d9e164b91aed7a2",
+      "preserved": "docs/research/prose-qr/phase-09/PLAN-05.md"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/finder-runs/capture.mjs",
+      "expected": "3020c1fb7e45a74d9d0c1f1df1dcc5718f1237bc8a5f06dceac9919f79c0a3df",
+      "preserved": "docs/research/prose-qr/phase-09/executed-sources/capture-v4.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/finder-runs/probe.mjs",
+      "expected": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+      "preserved": "experiments/prose-qr/finder-runs/probe.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/finder-region/probe.mjs",
+      "expected": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+      "preserved": "experiments/prose-qr/finder-region/probe.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "expected": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preserved": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "expected": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preserved": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "expected": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preserved": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "glyphs-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "expected": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preserved": "experiments/prose-qr/finder-native/layout.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "docs/research/prose-qr/phase-09/scale-01.json",
+      "expected": "33a4efbc69fb6653126c3c3e9dc8ead239a74b3f97232dcb8974436dc6b4bae7",
+      "preserved": "docs/research/prose-qr/phase-09/scale-01.json"
+    },
+    {
+      "batch": "scale-01",
+      "path": "docs/research/prose-qr/phase-09/PLAN-06.md",
+      "expected": "4ddc79fb0e1888de9ca5c5c9e9b01b021623b3e7b214febd486ea41d9fc06f30",
+      "preserved": "docs/research/prose-qr/phase-09/PLAN-06.md"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/finder-runs/capture.mjs",
+      "expected": "4d1cca9cc2734c0713a25cda207057bd0c13f95c52361d3672bffb0019e88c48",
+      "preserved": "experiments/prose-qr/finder-runs/capture.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/finder-runs/probe.mjs",
+      "expected": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+      "preserved": "experiments/prose-qr/finder-runs/probe.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/finder-region/probe.mjs",
+      "expected": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+      "preserved": "experiments/prose-qr/finder-region/probe.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+      "expected": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+      "preserved": "experiments/prose-qr/glyph-geometry/diagnostic.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/decoders.mjs",
+      "expected": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+      "preserved": "experiments/prose-qr/decoders.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/layout.mjs",
+      "expected": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+      "preserved": "experiments/prose-qr/layout.mjs"
+    },
+    {
+      "batch": "scale-01",
+      "path": "experiments/prose-qr/finder-native/layout.mjs",
+      "expected": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+      "preserved": "experiments/prose-qr/finder-native/layout.mjs"
+    }
+  ],
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/phase-09/detector-01/manifest.json",
+      "bytes": 11021,
+      "sha256": "454e924f92e3c271edb97cec801beae28fd4fe1b67a24b762e8a979fae0d7b10"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/detector-01/results.jsonl",
+      "bytes": 12930,
+      "sha256": "3f527f36d18f3c597e5b786a141dc96a1d8780848f23b6e02dad9d94a9320ad3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/detector-01/summary.json",
+      "bytes": 464,
+      "sha256": "a2b963514a52b4e6c771093ecee17b2b56bfedbed611b7840fdbbcbdc6d0188e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/executed-sources/capture-v1.mjs",
+      "bytes": 13436,
+      "sha256": "ee9487df77fb85524455112503bad6f522e1a1463d613106b0dbf94f16c1da8e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/executed-sources/capture-v2.mjs",
+      "bytes": 13487,
+      "sha256": "d9a28a0f73f7e0554a7d66595604d6c1a2113a71783076e52abc20e4e07cdd8d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/executed-sources/capture-v3.mjs",
+      "bytes": 13522,
+      "sha256": "a59d31a1b0e2a7cd649671fb75be6d6cab4b3a49ea99a7874dcc3664055ad6b0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/executed-sources/capture-v4.mjs",
+      "bytes": 13576,
+      "sha256": "3020c1fb7e45a74d9d0c1f1df1dcc5718f1237bc8a5f06dceac9919f79c0a3df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/executed-sources/probe-v1.mjs",
+      "bytes": 4890,
+      "sha256": "aaa69687371f267efb00698ee486113ac9c090ced3487648a6f22be5fb99a319"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/executed-sources/probe-v2.mjs",
+      "bytes": 6134,
+      "sha256": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-01/inventory.json",
+      "bytes": 16599,
+      "sha256": "1aa7b09efb71fa21ad125cde259563c74b49653990cf371f657ab78e221e4118"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-01/inventory.png",
+      "bytes": 39168,
+      "sha256": "838d10ddbd7ad543c142d5928357e22a577fc326f3d03a0a77c77c4b6e52dc4e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-01/source.html.gz",
+      "bytes": 601,
+      "sha256": "fdee72a5a3b067474b7267e744bbdebd00ae3cafbc2b2f04adb769c060a98ecd"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02.json",
+      "bytes": 2921,
+      "sha256": "368bda0b8c7d96260389f0b6098c3273b9e839155428b517780296b932da4bf2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-at-layout.json",
+      "bytes": 9714,
+      "sha256": "48e6159d5e7609035b4f6906db6067ab5c95c82d44eb03c27ede252e2b366e7a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-at-native.json",
+      "bytes": 835,
+      "sha256": "1f0deaba63a56ea1d1fd41c1df54f129fa135a488815cd1cbd206f9fcb2b57c7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-at-probe.json.gz",
+      "bytes": 6655,
+      "sha256": "2d33b12fb10b32c159fb745975dc0d8b44455935c17f94f5f692308eadd004b3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-at.html.gz",
+      "bytes": 478,
+      "sha256": "46e392cac53a4ee665695c08d7d74984bac34e5c5a88c0e664f14a77cef5e851"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-at.txt",
+      "bytes": 9,
+      "sha256": "14f29778d3f9a90d132bdd09b3d0199beaf86249e43979dfe6caaecba83794ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-bob-layout.json",
+      "bytes": 9719,
+      "sha256": "3f56a7546eca4d561d9596d76a42ecea682f334e3d5e985ee7f5d6771b91fbc6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-bob-native.json",
+      "bytes": 835,
+      "sha256": "80655fe0ec5abadda620550345220cdc53eb0908910b36561fb64cd4a2ed80ea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-bob-probe.json.gz",
+      "bytes": 7766,
+      "sha256": "40e6d8e5bf4dd4d401d1cbcf7759d940d6259108eb386889566fde33d44dc465"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-bob.html.gz",
+      "bytes": 478,
+      "sha256": "b5ebad1505e4732c6a6690987f6460618490d2e3c2262ee17f87d67ee5cb501f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-bob.txt",
+      "bytes": 11,
+      "sha256": "6e9a91a26a4db11945cfb0c88b5387c419ea534a6c499b17e311987f890b662f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-eye-layout.json",
+      "bytes": 9719,
+      "sha256": "cd13afa195359db4cdec79e0470e9b6ddb64ecb7c31977b082faa36606b289d1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-eye-native.json",
+      "bytes": 996,
+      "sha256": "84dd42eae76f7616f56e1f221423259fd748690f95138e43817c18d55522a34e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-eye-probe.json.gz",
+      "bytes": 6259,
+      "sha256": "38a1dde9047d2c559c3c08d69c3bd451bafcbeaa741fad1f0f58e17835b31a99"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-eye.html.gz",
+      "bytes": 477,
+      "sha256": "72c1cb82d598974836844e03e16249a88598994eb0a4c1c8448103a6c5957650"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/arial-black-eye.txt",
+      "bytes": 11,
+      "sha256": "5e90fc20c75a48ac151fc7146320c2be6a6b28152bb57b66552b3e35ff031f3c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/controls.json",
+      "bytes": 28511,
+      "sha256": "6d5b307da4df3d8b91aa9ff80f7123466f60e169fc785efe963301a8d37923d0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-at-layout.json",
+      "bytes": 9689,
+      "sha256": "72ccd7ed8aad8e2bd34f3a365f064a18889c29f8477fe022c5f8fee17a427b49"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-at-native.json",
+      "bytes": 822,
+      "sha256": "65ec4dcc239eaa4048e1d1aa5cded538755f3fba7cd3fbf5d6869e3308cd0f67"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-at-probe.json.gz",
+      "bytes": 4608,
+      "sha256": "744bbf61840d4d89def47141285cda31c36c0ed7d765ff72a6d2805a5b6eabbd"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-at.html.gz",
+      "bytes": 474,
+      "sha256": "d278846025a6a03d5f9aae431c1e60312d073382bb597d081d6fa9ec9102a6a7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-at.txt",
+      "bytes": 9,
+      "sha256": "14f29778d3f9a90d132bdd09b3d0199beaf86249e43979dfe6caaecba83794ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-bob-layout.json",
+      "bytes": 9694,
+      "sha256": "1707c671536ecea2f8792855ab3c279587e7403bae469941abbbe60d8900f4c3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-bob-native.json",
+      "bytes": 818,
+      "sha256": "5e41dc2f5b0c42aba9efe738e9cf98f339dc69a3b79a6e243bf57991c740e550"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-bob-probe.json.gz",
+      "bytes": 5631,
+      "sha256": "f60a52e1f3692ed133b9a9606f65949c718197b2c2079ff3ce5dbe98887c0fa0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-bob.html.gz",
+      "bytes": 472,
+      "sha256": "c0f2de818fc87d883bc565440061c07dbb3792b30894e413262deb9f1ab6dcfc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-bob.txt",
+      "bytes": 11,
+      "sha256": "6e9a91a26a4db11945cfb0c88b5387c419ea534a6c499b17e311987f890b662f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-eye-layout.json",
+      "bytes": 9694,
+      "sha256": "d10dc17acc0717ebf569019fb676c087c3bcb377b4287e31868f6404b57a08b1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-eye-native.json",
+      "bytes": 980,
+      "sha256": "f106d57218edd5d7cce199aa42654762a220e437af30f78bbfb6e8a038d68acf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-eye-probe.json.gz",
+      "bytes": 4739,
+      "sha256": "2ae010a6bcdccf05654973f62ec6b926753a4f4caed0412eab8d5aad7305c28e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-eye.html.gz",
+      "bytes": 473,
+      "sha256": "61880a7aec5b3d13f77fbc4bb631d59a2a17fecfd15efb61d921fb9af86a4c85"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/futura-eye.txt",
+      "bytes": 11,
+      "sha256": "5e90fc20c75a48ac151fc7146320c2be6a6b28152bb57b66552b3e35ff031f3c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-at-layout.json",
+      "bytes": 9694,
+      "sha256": "3ba7b6a38b9612bbd95d690185331851f0fc08ad141fbe271aa889922036ca26"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-at-native.json",
+      "bytes": 813,
+      "sha256": "dcf17beb9e3e3e26a027b35826d5fd1cb6710c83e57a5025f5162c726779ba79"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-at-probe.json.gz",
+      "bytes": 1472,
+      "sha256": "189dfdeadc164192a83a7219af510bd3bc46b686ea4a0b0819b60f41dff5db53"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-at.html.gz",
+      "bytes": 474,
+      "sha256": "3d348744bea9210566fd8b08f17874524b6dd20050771fffe48df7f26a629130"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-at.txt",
+      "bytes": 9,
+      "sha256": "14f29778d3f9a90d132bdd09b3d0199beaf86249e43979dfe6caaecba83794ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-bob-layout.json",
+      "bytes": 9699,
+      "sha256": "6d92b5adba8738dfd8595a02b3b73037c74e8ecf531754e057c135e858da557c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-bob-native.json",
+      "bytes": 811,
+      "sha256": "ddb876344d03cbe2c62db8e8b47ecc4d0dc160c38cd16b50f12b6301f76dedc2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-bob-probe.json.gz",
+      "bytes": 563,
+      "sha256": "08b02f8653da1c07410733d6da42a7b14548034928f4313ed23a987b9d98e3fd"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-bob.html.gz",
+      "bytes": 474,
+      "sha256": "7c14f6603c25177b540ce8b9ba89713a8c0ada8f295619b1a2e108683075e1bc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-bob.txt",
+      "bytes": 11,
+      "sha256": "6e9a91a26a4db11945cfb0c88b5387c419ea534a6c499b17e311987f890b662f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-eye-layout.json",
+      "bytes": 9699,
+      "sha256": "6d57db9c0a154e13b05f0fa339e1d6eddd7e8d7e99fc64f361f44aba25661b2e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-eye-native.json",
+      "bytes": 956,
+      "sha256": "907319bbde149c15d10106206500c07f229dd27f7fd60f48ed0f2dd2d2363584"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-eye-probe.json.gz",
+      "bytes": 2609,
+      "sha256": "f88a907b37e66ffaef7408e57ee2aa8ab1406a512486b5336c18ff8bde960a20"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-eye.html.gz",
+      "bytes": 475,
+      "sha256": "511b00d5fadc77d18da10def64d5ddc682a62c1f25bfefc39ae1de4aca4682ed"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/georgia-eye.txt",
+      "bytes": 11,
+      "sha256": "5e90fc20c75a48ac151fc7146320c2be6a6b28152bb57b66552b3e35ff031f3c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/manifest.json",
+      "bytes": 1681,
+      "sha256": "3c1a6b7ebc1125d02f35194e6a06ce055c19b5d68e626b1f84408c85a4c1c897"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/arial-black-at.png",
+      "bytes": 5567,
+      "sha256": "dc3bae9d1229d2d1a53c9c87b512ab6b85782102c6da3b7257c5d591b99db70f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/arial-black-bob.png",
+      "bytes": 4806,
+      "sha256": "3906fb48df0d8bf98589ee35a057057fc17cf65212f166d34b7a2f720392faae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/arial-black-eye.png",
+      "bytes": 5893,
+      "sha256": "04b8ecca32b48b7c3f90cd215406dc7a57dd3a102ecf7a0e136fcd277eb9e262"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/full.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/futura-at.png",
+      "bytes": 3535,
+      "sha256": "1b6d6ab523dfacd61549a3cf7ad835d5842e7f3adf8fe32f0734152be1e0f618"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/futura-bob.png",
+      "bytes": 2486,
+      "sha256": "f89a3e87c27879e994733a5367160546721c405d99248fe6ac2e79eb4caec656"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/futura-eye.png",
+      "bytes": 3410,
+      "sha256": "b7af484dec67a5933fe753c44e4908b52c0af56dcecb7d7779f13cbe8dbc6d89"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/georgia-at.png",
+      "bytes": 4618,
+      "sha256": "9e38181258711cd5a46cc5ab0ac0bc489b739bdafede68274e4f0021320da109"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/georgia-bob.png",
+      "bytes": 3679,
+      "sha256": "b1150bbb48875beb87c385e1fb55fe39496f31b78f9318140494b69c0b60466e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/georgia-eye.png",
+      "bytes": 4768,
+      "sha256": "c38555f50fb839a186332908cfdecf43e9f2d8ef37284642f774bcb41426622b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/solid.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/verdana-at.png",
+      "bytes": 5070,
+      "sha256": "8f6afc8af3849f899bc39220f6e220bce86cd4f3d0b909d340969a7cfa15cb46"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/verdana-bob.png",
+      "bytes": 4579,
+      "sha256": "eec27cdb5d46dd9d514def33314dec26f015bf493fe11c63a5259d1251e33f55"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/raw/verdana-eye.png",
+      "bytes": 5490,
+      "sha256": "febee21700af4e4870b1999d7c66b60fb8f3d06e4b0300fdea258853133ae04d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/results.jsonl",
+      "bytes": 101416,
+      "sha256": "8b105f8dba9b2ad577b4b824eb5c14f82995e7024069c8a5d3070b94b15afe83"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/seed-replay.json",
+      "bytes": 212,
+      "sha256": "8d2520b09efc090e0ca9fb0411400f9df0302f9228223c61bd4b5f13bb5cbe82"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/summary.json",
+      "bytes": 207,
+      "sha256": "318db47c09a57698426b56a906ab7c2e21dd4b5c4a232ea89eadbaab199719a8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-at-layout.json",
+      "bytes": 9694,
+      "sha256": "0eeede343085650f45ac0fedf0549c5ced0fa69dcde0eee6ab529707f45c028a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-at-native.json",
+      "bytes": 804,
+      "sha256": "93385be9b89859dd46b9b1fe96b12c63695a624846cc6f8e82a9a01086b114fc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-at-probe.json.gz",
+      "bytes": 2404,
+      "sha256": "c230df8b130b68be890a791a3b8fe41d512718635366799ebcf339d5519b63a5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-at.html.gz",
+      "bytes": 475,
+      "sha256": "059ee2c14089352ba289672e9e9d9f26fd2f77160494906050d5bc78b721531c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-at.txt",
+      "bytes": 9,
+      "sha256": "14f29778d3f9a90d132bdd09b3d0199beaf86249e43979dfe6caaecba83794ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-bob-layout.json",
+      "bytes": 9699,
+      "sha256": "6e2f4906012615679ab6aeec17a1b8ad16ddb0b84b1e8d2eaace4d499f0d6bab"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-bob-native.json",
+      "bytes": 822,
+      "sha256": "f910e7424184aaa4d5cc73271959676de8e7aa18e15c9161a8d5d9f758658e6c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-bob-probe.json.gz",
+      "bytes": 2774,
+      "sha256": "15197b0fc347d3ee71638e8ac799bb1f1eeb80fc0a6d171f092a17824dc0c91d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-bob.html.gz",
+      "bytes": 474,
+      "sha256": "b8b2c7a28c048bb2cb358fb7e86b58beca629fc79bdcb59b0bd6b7806ab73a12"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-bob.txt",
+      "bytes": 11,
+      "sha256": "6e9a91a26a4db11945cfb0c88b5387c419ea534a6c499b17e311987f890b662f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-eye-layout.json",
+      "bytes": 9699,
+      "sha256": "476162f45fdb2e2e17ed7cf9e7164ef95a8923a9013078c765ded5c7a7c2f3bc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-eye-native.json",
+      "bytes": 972,
+      "sha256": "2ab198001cccff781ad38a33a0946f149fbe6d36a5dec96e159d7809980869dd"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-eye-probe.json.gz",
+      "bytes": 2257,
+      "sha256": "7683360d8df857feb263800783a6979d0483b7e7504ef2f83c89c518ded43022"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-eye.html.gz",
+      "bytes": 474,
+      "sha256": "f4148572f21510b5567948e7357edb224cfa4659ccdb53ad60e22b64ad27773e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/fonts-02/verdana-eye.txt",
+      "bytes": 11,
+      "sha256": "5e90fc20c75a48ac151fc7146320c2be6a6b28152bb57b66552b3e35ff031f3c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01.json",
+      "bytes": 2974,
+      "sha256": "ba8d992a3a4b89b86149770cd8503b7eefc1165b3649f9cd6d04aca0a47f2a7f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-0-layout.json",
+      "bytes": 9706,
+      "sha256": "10a5eee2fe24e609ede2d2e9611925a38fe2c8ccfec967ebbaebd4470c3b2634"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-0-native.json",
+      "bytes": 645,
+      "sha256": "c7c2e7500bb294896045ec55ea2e6bb6654bd83890537657ec3886e7e9b02ebe"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-0-probe.json.gz",
+      "bytes": 1500,
+      "sha256": "a2e2743747ca93dd3ce4b43557e263fa6542974d08736ef20c957eeeb050a272"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-0.html.gz",
+      "bytes": 473,
+      "sha256": "dde1634b6a3b04c98980dfb8ef26dd0bbcc50aeef3c3af3cfd9e0c01c6ab0966"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-0.txt",
+      "bytes": 1,
+      "sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-1-layout.json",
+      "bytes": 9706,
+      "sha256": "d97b3a45aa42cab602db882a6a51a3a0d878244dc25945eec4bf7990e08527b3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-1-native.json",
+      "bytes": 644,
+      "sha256": "29ff146e708b64dd0bdd1563506f05f4ca59ecaa7ab59af83aabc83354158f9a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-1-probe.json.gz",
+      "bytes": 517,
+      "sha256": "4844fce8a2aa29ddc2fed678b3aa5772ffd079a1b30512acb6be7e2c2fbfdfec"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-1.html.gz",
+      "bytes": 473,
+      "sha256": "a77038170d1d556631efdf92a24a545d7f4d9230e5618c80b952d9a5641c3541"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/arial-black-glyph-1.txt",
+      "bytes": 1,
+      "sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/controls.json",
+      "bytes": 28511,
+      "sha256": "6d5b307da4df3d8b91aa9ff80f7123466f60e169fc785efe963301a8d37923d0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/manifest.json",
+      "bytes": 1682,
+      "sha256": "855ff9e5e4a397cb19a9ac49513a1bfd73fa9c0d35f5b8922c940be9d6ffa1bf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-0-layout.json",
+      "bytes": 9717,
+      "sha256": "09aa280bd23b7123a7b701a4ee6a27de0f739cc2f44a98c347060ed764f8f123"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-0-native.json",
+      "bytes": 707,
+      "sha256": "07b5d3948df9f40322cd9d0c29f50f7dfdec785daeda6b3cc6cdfa4c71aecad2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-0-probe.json.gz",
+      "bytes": 539,
+      "sha256": "e91cdae8a298caa6e292bce6fc0eedbfd1d8aceed7bd4b7bcb41964d33e071b2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-0.html.gz",
+      "bytes": 484,
+      "sha256": "d77322d4a20e95d13031c5c8f7cc7a7679016edd5376b0ca768bcf06b3972e35"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-0.txt",
+      "bytes": 3,
+      "sha256": "6da3e5c03ac7e66cdc5f307308e136ff9a65b05fdd2022bd96fc27132b9d6373"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-1-layout.json",
+      "bytes": 9717,
+      "sha256": "1b2727096785f4c82d734bccb9a73d2d8e0f8f3c98ea29d87c7e3e68bb19bf4b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-1-native.json",
+      "bytes": 705,
+      "sha256": "5c736b82ef03bb6c2d9a7d9ed191fa052171d06bf66b8c6273d4efaddd04615e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-1-probe.json.gz",
+      "bytes": 548,
+      "sha256": "fd3340de79a274aa3dc003dceb2a4ec8720dfdedc90a52156d74818af5ca4c05"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-1.html.gz",
+      "bytes": 485,
+      "sha256": "adbc9dc043b9d780bd3e611fb0e4d5d9e118ccacec0b47c39cdef74bcc900bd4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-1.txt",
+      "bytes": 3,
+      "sha256": "c3c5cdbfdfad5c3c747f7ea3c03b10928d4e6bc0279aef0a85584d9a58e62359"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-2-layout.json",
+      "bytes": 9717,
+      "sha256": "ec558b642cecdc4911cf25ad7bca8b4482a4d131f0d13cfbc2633e0e8e0ee651"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-2-native.json",
+      "bytes": 703,
+      "sha256": "08c3bf75961fa2bb2785ae5dbf97f58660c92a2f56c257a31496f56e688a3c8c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-2-probe.json.gz",
+      "bytes": 1945,
+      "sha256": "1fda16037a25d5f53e1b113eba885ff5e7e34f5ce0308fb3b8538a5fd072a110"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-2.html.gz",
+      "bytes": 485,
+      "sha256": "c863d36f87915cdd28d9a1fd625f6aef5bfcce072ac4de9add8fa35b790b3518"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-2.txt",
+      "bytes": 3,
+      "sha256": "2cc843897974458f2b74fd1dc74ae33ebc3772d33915e2dc00470084a237232f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-3-layout.json",
+      "bytes": 9717,
+      "sha256": "2fd53f202113334b6b8594f8abc3b7edf4454fff47bfe792974985d43b8ccfd0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-3-native.json",
+      "bytes": 705,
+      "sha256": "4e85a531668017ee7920d1ccc95137e3197ca2c83fdf8d526182883d1fd33974"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-3-probe.json.gz",
+      "bytes": 558,
+      "sha256": "e88f110030ca79579b6230c7848037f45a31d346f1f301c7ddd4edb97e18f648"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-3.html.gz",
+      "bytes": 485,
+      "sha256": "d0f9faf2d293e2b48be1fe6f1c6f65ebca36f735d88dc1118d8b3f5bc7767a55"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-3.txt",
+      "bytes": 3,
+      "sha256": "46cc24dff93e412779fe6e65c15bbf67801118e40f38b433a0db222617541baa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-4-layout.json",
+      "bytes": 9717,
+      "sha256": "44a1468189eb1372f5bbc447695e50a25908d41365b9702f949454699bc4beb6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-4-native.json",
+      "bytes": 705,
+      "sha256": "cea009a49bc19e3ac8256b164563fb0ecbf0b74d7a6091eebb96be2d5065b665"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-4-probe.json.gz",
+      "bytes": 515,
+      "sha256": "9db6e09b2469fdb22bd4ed162257480b8b4e65bb8c388dccddb920f2a7c2a38c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-4.html.gz",
+      "bytes": 485,
+      "sha256": "5947ace2d7594ec898b3af3e91bda60ecabda506fc8ed504aeff36a256b97a3f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-4.txt",
+      "bytes": 3,
+      "sha256": "65993cd607c85103427368ce09719c5520d923b06e338c517152dc8134c4e4da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-5-layout.json",
+      "bytes": 9717,
+      "sha256": "10810a48316c22f0816f53949a265bef4202a040b5ba642ffa49070950112983"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-5-native.json",
+      "bytes": 707,
+      "sha256": "a59317e9d37ca1e2b7d7eae523215785c73aa56e9db509ef3d308bb0e6f2156d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-5-probe.json.gz",
+      "bytes": 524,
+      "sha256": "75fd130d25df521950fe676c4b2afa5dda42d7999919d1cfdffb15333614352a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-5.html.gz",
+      "bytes": 485,
+      "sha256": "0830153fcb5d3b84295061e4da8f20bb0e62da32788a89eedacf276cfa29d60f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-5.txt",
+      "bytes": 3,
+      "sha256": "8909fb9f1179a44d5895ee1d6efc98edd36a4bcf7edea9c3c641a93fc028e6a2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-6-layout.json",
+      "bytes": 9705,
+      "sha256": "55a681d9580348254f21a0a00a8571ac3ca6fcfc7c7ff3d3a85ee443fa55ae6a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-6-native.json",
+      "bytes": 707,
+      "sha256": "d01fa12c89d3bac7cab4244b9cfac5a89baef59f6bcf80406ff3ef0be36ce608"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-6-probe.json.gz",
+      "bytes": 599,
+      "sha256": "c153a555ec3c81d12f8896ffadf2653546dc818a1d9020cf4a97129c3f5b5a79"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-6.html.gz",
+      "bytes": 478,
+      "sha256": "66a72332e581e42e7a3d6278f508cac1637b92ce6958e0a5b1e242a82cef1e4a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-6.txt",
+      "bytes": 1,
+      "sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-7-layout.json",
+      "bytes": 9705,
+      "sha256": "a3130ca462ad013079ea922ffd40ee0a6109f4e6d1df361c9c23b71f6ea89a51"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-7-native.json",
+      "bytes": 706,
+      "sha256": "bfa9f500eef0636cbae6a3aec57a48badccb942d3a345eb1a16eb4da71db6e3f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-7-probe.json.gz",
+      "bytes": 554,
+      "sha256": "703bc0b07ced927b068fca21d03adf4b092031a19cf602ea94abd2ea0821bd59"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-7.html.gz",
+      "bytes": 478,
+      "sha256": "b89f9f06b37c5e14bd1bde0e59b2b35abcfeb081ce47e3203118b63ed1a7ad61"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/pingfang-sc-glyph-7.txt",
+      "bytes": 1,
+      "sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/arial-black-glyph-0.png",
+      "bytes": 1127,
+      "sha256": "2bb6a0306fa5251a4fd7a0f3979daa48418d3efa17a5d25613375ef533bc1441"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/arial-black-glyph-1.png",
+      "bytes": 887,
+      "sha256": "ad54dd559ba92c970967a2fd34e114b7c8b2e8cd74c883a485ac19b012e504f7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/full.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-0.png",
+      "bytes": 667,
+      "sha256": "2e57a5d71f7974e9efd51620b5475c101aa0add5273d7979e42434c22372889f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-1.png",
+      "bytes": 831,
+      "sha256": "43d98203e05aa94a4cfd89f19d19475bb6a3ccd001f8d054d7381af128687697"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-2.png",
+      "bytes": 1026,
+      "sha256": "671ea8690eb8c4065f2e267eb68405b785475aa919ba7ac395dc15a0b7c6b06e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-3.png",
+      "bytes": 956,
+      "sha256": "87141ffc6d714ad1137e82928c6685d2db353ba91d79562e236a00ee958a38b8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-4.png",
+      "bytes": 1087,
+      "sha256": "b6e521ad0fda886e1be3252b629d445cc39d6321165aa8d4ef3569acffb177b8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-5.png",
+      "bytes": 1006,
+      "sha256": "ece492d1abc19dcca5a34fe854fdef984bc2bfff5c06f41e7e6b1b81739343aa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-6.png",
+      "bytes": 1211,
+      "sha256": "3ec1f64602d43640ce1107c960db6792cc11b3d71521e8e6e546e0b5ce0645ba"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/pingfang-sc-glyph-7.png",
+      "bytes": 884,
+      "sha256": "4bf1fed28958496a8fc8b916cb3aa9f4a7cb4b9d8fd18ec8f029d5f29f8d9d65"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/raw/solid.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/results.jsonl",
+      "bytes": 43528,
+      "sha256": "96214809e2c451c49f8324ae3d5e1a5f98952cbf6228c23aef10f904ab527009"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/seed-replay.json",
+      "bytes": 212,
+      "sha256": "8d2520b09efc090e0ca9fb0411400f9df0302f9228223c61bd4b5f13bb5cbe82"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/glyphs-01/summary.json",
+      "bytes": 207,
+      "sha256": "0fe55fe4d15f48ffe6d3e04e24252720fa37fcdc074b3ec1c36b9248ac399a50"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PLAN-02.md",
+      "bytes": 1077,
+      "sha256": "9c8cf73a78780a7971c054fc6befccb4dc38ab5f4745dd0b4b9e4ea472467e45"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PLAN-03.md",
+      "bytes": 1316,
+      "sha256": "5b862ef568efe27f16f1a10214f2ea779501ff5d409a5dacfc3c8614a079cf2b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PLAN-04.md",
+      "bytes": 1332,
+      "sha256": "97bc5534a83855020260f4e5dc2191455202dd72b5e6155b12d077178939cd06"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PLAN-05.md",
+      "bytes": 1784,
+      "sha256": "2564a56bf66754398cb7151f88a18316bad59f9844aaaecd8d9e164b91aed7a2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PLAN-06.md",
+      "bytes": 1779,
+      "sha256": "4ddc79fb0e1888de9ca5c5c9e9b01b021623b3e7b214febd486ea41d9fc06f30"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PLAN.md",
+      "bytes": 2635,
+      "sha256": "e585b3bfc3b68112b2d042688f3b49a47175d2e0337df0dba159ed0f1448e6ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/PROGRESS.md",
+      "bytes": 2616,
+      "sha256": "664400e4c0c7b16f37b8b4e60ccb3daa358d9c400e692842dda3e3d423e6daa9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/REPAIR-01.md",
+      "bytes": 810,
+      "sha256": "b722cf106da0eabdea58063e229e77f7e6fdcc68892e90587a20c9f49b2d4b37"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/RUN-DIRECTIONS.md",
+      "bytes": 1729,
+      "sha256": "07b746e71cf036b618810f07e95597b3f0e56e54796def3a7a1d7796d114b59c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01.json",
+      "bytes": 4927,
+      "sha256": "33a4efbc69fb6653126c3c3e9dc8ead239a74b3f97232dcb8974436dc6b4bae7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-0-layout.json",
+      "bytes": 50477,
+      "sha256": "86269e6aaa2b73513a5d682cd876bef7d907759ba06e55fb21890579c2126d6f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-0-native.json",
+      "bytes": 632,
+      "sha256": "988932b29f4d0dea5091b521332cced8d7038eb763c780cf957ee3215e085e8c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-0-probe.json.gz",
+      "bytes": 3686,
+      "sha256": "e51101f46549a00196d06dd27e1ab19f3f4ef5c38967b1c002fde8ca996764a3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-0.html.gz",
+      "bytes": 476,
+      "sha256": "a092b73e5d70e7e4fb81bb43616fcb6261f4159439331f3682886d43198c372f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-0.txt",
+      "bytes": 1,
+      "sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-1-layout.json",
+      "bytes": 50477,
+      "sha256": "6f2e1398c3ce0fde0216ae471f097b1c403519a692881d620046e2ef3e251af6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-1-native.json",
+      "bytes": 636,
+      "sha256": "b2e664ef5a518b0b8a10efef3b2ed95f9c08bce3a1d7e727b3b7b30114ee861c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-1-probe.json.gz",
+      "bytes": 535,
+      "sha256": "c83662bf8919ba9dc64aeec3695b05c6c604d67d2b2515854f5775114a42606e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-1.html.gz",
+      "bytes": 475,
+      "sha256": "1748a0d29601a835e86a1b658699c7a423317d3af62bd339b01262d33705d98f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-1.txt",
+      "bytes": 1,
+      "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-2-layout.json",
+      "bytes": 50477,
+      "sha256": "6171d334fbd4e1de20cb3e5b024874584f1163b12c66daf99320bf5e8cdba6af"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-2-native.json",
+      "bytes": 628,
+      "sha256": "205fad5bfea1cd413e6493ac9761b6c25aa30be7b3bff4717f882245dc13c8d4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-2-probe.json.gz",
+      "bytes": 545,
+      "sha256": "d9cf60a5728058e8855e1181499f156025f62b9092021fc95500543b6a59987c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-2.html.gz",
+      "bytes": 475,
+      "sha256": "3c2f4eec75b20151ad5e7a5d676ec4dec27a36e2d972e29773fbe6e718683355"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-2.txt",
+      "bytes": 1,
+      "sha256": "3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-3-layout.json",
+      "bytes": 50477,
+      "sha256": "ee4fde745258e082022b42b647ad9121fc058fe0694b2d6a02d6ce5c44b1a3b3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-3-native.json",
+      "bytes": 628,
+      "sha256": "5f52d0d7e91cec8610c3d8564979995a5930ebb2e35d0eaf51b49d887f43a854"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-3-probe.json.gz",
+      "bytes": 530,
+      "sha256": "faa5820af5240c535c185b211bd71a317cbd56f991c4f4fcdcefb3b57dbe5598"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-3.html.gz",
+      "bytes": 476,
+      "sha256": "d2c841808faf272bf03b7b902ebbdd995109167bff025c24a5b146d992ded684"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/arial-black-scale-3.txt",
+      "bytes": 1,
+      "sha256": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/controls.json",
+      "bytes": 28511,
+      "sha256": "6d5b307da4df3d8b91aa9ff80f7123466f60e169fc785efe963301a8d37923d0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-0-layout.json",
+      "bytes": 50510,
+      "sha256": "c0c3eefec911bee7be21fc45d0db6e0825f8a0ea7f8cdf154c50639422e145dc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-0-native.json",
+      "bytes": 640,
+      "sha256": "e8181936e56ed702e9b8fc8efca0314171d221676aa8255893fc05c16f00171d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-0-probe.json.gz",
+      "bytes": 2211,
+      "sha256": "7b6245cc5378c8d016ffa3405adf17bc91b6ad1cb9c29db4a811b4eb38a52f2c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-0.html.gz",
+      "bytes": 485,
+      "sha256": "4688506ea53ed9a71d69cf96ace206e7303df29fdf8f0dae12647fedfc037916"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-0.txt",
+      "bytes": 1,
+      "sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-1-layout.json",
+      "bytes": 50510,
+      "sha256": "2c29656444df35a28fcb5436a6fcc49a7c61b8ede1b2bcc2fe76b94dc115d20c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-1-native.json",
+      "bytes": 636,
+      "sha256": "e48ee00830320489e3e4751fec34bbf4cbf8b7aaed394698052d74fd73ac398f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-1-probe.json.gz",
+      "bytes": 550,
+      "sha256": "429c31758d5f54cdbe21e22e5e62bb6eb4173d78a26131c8e20ae6b1ac3d7417"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-1.html.gz",
+      "bytes": 485,
+      "sha256": "0541afe4318aef2841260c1bdf7d08778e7205aabbe26965c41209bee12c14bd"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-1.txt",
+      "bytes": 1,
+      "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-2-layout.json",
+      "bytes": 50510,
+      "sha256": "8317a83056070a9a92b73322f4f1c857b147c20bd5e47209ed032720218a9056"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-2-native.json",
+      "bytes": 636,
+      "sha256": "30c3ac61d3364e31f9d8a917427d52f94455e9e495008f8042dcfe19a8a2cda1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-2-probe.json.gz",
+      "bytes": 539,
+      "sha256": "b79ab1752850c33a86f78e0c8de5eafd375ead4188ffb690ee5dd0d935d886d3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-2.html.gz",
+      "bytes": 485,
+      "sha256": "79b174d5f91c818844f838237f2ab63fcb5977a3a2a4dd38438c6c9e44721753"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-2.txt",
+      "bytes": 1,
+      "sha256": "3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-3-layout.json",
+      "bytes": 50510,
+      "sha256": "7b3219b8a284123092abb80f9a3a7bae785ea44ba790c88db84540d2287d141c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-3-native.json",
+      "bytes": 621,
+      "sha256": "fd2fcc859330a1172f71974c43520dacc11e849c03b3798ed98b64b4caf26446"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-3-probe.json.gz",
+      "bytes": 531,
+      "sha256": "5296679b4ac1dad5b571ddb75f5284b37608e90a356cbdfb51eb9da4592b142d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-3.html.gz",
+      "bytes": 485,
+      "sha256": "dbc28a384f0d80ad6c3bccc0dbd16585817ffb3bcdb513070ecfc6b0e1ce4f79"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/gillsans-ultrabold-scale-3.txt",
+      "bytes": 1,
+      "sha256": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-0-layout.json",
+      "bytes": 50565,
+      "sha256": "f3e9388a7d7385347f0778f8da7d51f223b3d589912143cf9e3a4907bc0622ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-0-native.json",
+      "bytes": 699,
+      "sha256": "2c8b105e8726726c94079f55d9dd79cf10a20fe6da3712bb6f2c6beaf9f0ffee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-0-probe.json.gz",
+      "bytes": 3591,
+      "sha256": "be1b37c4105d8a0a7ed36f5853f57b32706eec990cb5778ff61564adb934796c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-0.html.gz",
+      "bytes": 492,
+      "sha256": "a4a6b43bb3c59e20365270c46d92d7b1afe9d0cd5039924d28cb6664519e556c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-0.txt",
+      "bytes": 1,
+      "sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-1-layout.json",
+      "bytes": 50565,
+      "sha256": "0153ddb754245d5fdf58142bce66f8f5ea1ff074e661ba61708e61de7bafe1cb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-1-native.json",
+      "bytes": 719,
+      "sha256": "cf01789e9200d0d0b0533878259f54497120ed21b50ebe43ca9d6df6aac628fe"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-1-probe.json.gz",
+      "bytes": 519,
+      "sha256": "25e9fd8cabd746d26aa8eb7f17684bc35924c83d8473187134db97de08a284ec"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-1.html.gz",
+      "bytes": 492,
+      "sha256": "fa022ff1e1778a0e0f36a7b8ae93d74a1ebe49a3532ac4099db1e2f62bf09fae"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-1.txt",
+      "bytes": 1,
+      "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-2-layout.json",
+      "bytes": 50565,
+      "sha256": "1565610dd828d38185ce32b9f75a4fd0dc299bc4dbd5dcd62913f1503e74ff8d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-2-native.json",
+      "bytes": 733,
+      "sha256": "39e8b14dd410a37d025e114ce8a8b7921e87b188aa2b9682b0b1a0e693dfb234"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-2-probe.json.gz",
+      "bytes": 535,
+      "sha256": "1b4478acf9d16a51d947eb21bdc5dfc7de96aa8c8849c9281a53e7aebd5f1fc0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-2.html.gz",
+      "bytes": 491,
+      "sha256": "1589ed276abc7ddf63f5d5353a7648ac1330b9cc3727abea3ef0c98bf936ac08"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-2.txt",
+      "bytes": 1,
+      "sha256": "3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-3-layout.json",
+      "bytes": 50565,
+      "sha256": "22c93364cfaf66b422a741066d21545890ff2d697328ef5508b6475f912f5802"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-3-native.json",
+      "bytes": 702,
+      "sha256": "3bf015df744ecfb19e2586c0e0694b0122bc5c034e4856e18ec173ef32f71947"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-3-probe.json.gz",
+      "bytes": 531,
+      "sha256": "d3ec1e58766eb5176ea6d566edf644a20cab4356ab3c91efffcbaeed3601aaf8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-3.html.gz",
+      "bytes": 492,
+      "sha256": "e25251c32eca21ffaeda1bbb175ef9a58bb830c8ec2cdfeeb57add4c22386a33"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/helveticaneue-condensedblack-scale-3.txt",
+      "bytes": 1,
+      "sha256": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/manifest.json",
+      "bytes": 1681,
+      "sha256": "2540b352a5b25578baf68cdc11a305d0e1b8d3dd3c2f59d62a879a0c1e8f230d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/arial-black-scale-0.png",
+      "bytes": 11172,
+      "sha256": "0a148ee814cd180ecc05825906f288e96cf866bd840364d198213015911ce001"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/arial-black-scale-1.png",
+      "bytes": 7167,
+      "sha256": "4aa456d77116a8e13a40b80563a1ce4ff825d2873f3f05b15805247a7d5a009b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/arial-black-scale-2.png",
+      "bytes": 6457,
+      "sha256": "396ca076b9ccf5d9a56747f3cfc9ac78deceb996ecab0b71e1699276bc7e72d1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/arial-black-scale-3.png",
+      "bytes": 5923,
+      "sha256": "dbf6ad764eade271ca1dcf08be91abbe15c14b539d70edb344be88c66f8a0dc4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/full.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/gillsans-ultrabold-scale-0.png",
+      "bytes": 10972,
+      "sha256": "e50fac2b8cee270c8143c6a733deadf71e0273bef0004858f27fad895773ce28"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/gillsans-ultrabold-scale-1.png",
+      "bytes": 6584,
+      "sha256": "189e265f3c494c5e8df80582ffa06ae15b2ece50668bde2c13d8f6c46eacc1f2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/gillsans-ultrabold-scale-2.png",
+      "bytes": 6501,
+      "sha256": "8210683986d1c731d410764a1dae565e9c9b05f839965c96e3c7931a868a1980"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/gillsans-ultrabold-scale-3.png",
+      "bytes": 6011,
+      "sha256": "3ce1d692010fc704901fd3e470d3f42fefe90967fd41fd267cda6fd81e299736"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/helveticaneue-condensedblack-scale-0.png",
+      "bytes": 9884,
+      "sha256": "e37d18960acc4a4260164e69275503a5e42e3e9cec594ceb155f08e8429a14d0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/helveticaneue-condensedblack-scale-1.png",
+      "bytes": 6493,
+      "sha256": "e4fdaf319305070bfd386b697f5b98a5fee940044871ffd38cb5a88b63408d43"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/helveticaneue-condensedblack-scale-2.png",
+      "bytes": 6072,
+      "sha256": "77e39f5e408d6b58ca4293168fc2b5919f7398907c4b099af5e3441f75a94428"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/helveticaneue-condensedblack-scale-3.png",
+      "bytes": 5801,
+      "sha256": "d16477129bb1b838928e09c8971ec2abfa2ec2e947e44b9bbd18e62761550808"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/raw/solid.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/results.jsonl",
+      "bytes": 54001,
+      "sha256": "449eceb3ff2c8308fe5d495d5d97e05ed4c84d78601094407ca0bce6bbc976df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/seed-replay.json",
+      "bytes": 212,
+      "sha256": "8d2520b09efc090e0ca9fb0411400f9df0302f9228223c61bd4b5f13bb5cbe82"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/scale-01/summary.json",
+      "bytes": 207,
+      "sha256": "aba17412724e4e698f7a48e452cff34813788010b3b80c83cf058df1889ce6ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01.json",
+      "bytes": 2628,
+      "sha256": "5e959e2edcf1ff73dd8781d01ad49989899fb9be68b6a0eb9e206f7309d5bc77"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/aborted.json",
+      "bytes": 500,
+      "sha256": "3e51a46f984e18af6015ae36c60e5d9a2c806722b9889eca43913f20f956b467"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/controls.json",
+      "bytes": 20681,
+      "sha256": "50380c64696f7dcbb42cdcb3560328f3b64f064a8845cf93a6fba1c32450557f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/impact-light-rum-layout.json",
+      "bytes": 1177,
+      "sha256": "c06df28650280b5149e9de64403c7c531a0d7b05ea57db6a08ebb83f2bf10590"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/impact-light-rum-native.json",
+      "bytes": 1549,
+      "sha256": "29491482f9c5bfcf07b274717549ca60df2cdf370e32421237608e1afb0d13bf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/impact-light-rum.html.gz",
+      "bytes": 468,
+      "sha256": "5693e4bd2095241266e5bb063189bb8fdb676d6f7ca23a16ed3ca9b2d8ca458f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/impact-light-rum.txt",
+      "bytes": 10,
+      "sha256": "6340c5377b10fdb3db5ae8c549a6cc0dcd7468b5fbf5b5e280a0c03ad0f4b6ab"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/manifest.json",
+      "bytes": 1678,
+      "sha256": "878aa071292540a287ee39409ac30d8a2cef3fd4f649046e1b9cbac528950d13"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/raw/full.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/raw/impact-light-rum.png",
+      "bytes": 3266,
+      "sha256": "3a27ff1dd404818cfb9354df5c7837eb1120514ec4c83b6cc4f37950524efcdb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/raw/solid.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-01/seed-replay.json",
+      "bytes": 212,
+      "sha256": "8d2520b09efc090e0ca9fb0411400f9df0302f9228223c61bd4b5f13bb5cbe82"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02.json",
+      "bytes": 2628,
+      "sha256": "75370e94b4c59861472fc24188dc7510645c7aaed1cc2c7b0ebb468eeee21ab2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/controls.json",
+      "bytes": 20681,
+      "sha256": "50380c64696f7dcbb42cdcb3560328f3b64f064a8845cf93a6fba1c32450557f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-bob-layout.json",
+      "bytes": 9527,
+      "sha256": "86a9b0474ec150423384ba80859b9c84cc4e8585d7b5428d9b10a0de4ed1f7be"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-bob-native.json",
+      "bytes": 1111,
+      "sha256": "b15795b4dab9026011de1c35d44c9f55129fc0aa314d4cdf07f4e4564be4d773"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-bob-probe.json.gz",
+      "bytes": 4007,
+      "sha256": "a7c1423548b0df0d8b8f59e6c9e19dd923dc553b72b7ec2948e583df59dadf64"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-bob.html.gz",
+      "bytes": 470,
+      "sha256": "4e8e3d8685270e4c00f70396dd2ac1a064249889828093a6398b497c0d70f67f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-bob.txt",
+      "bytes": 11,
+      "sha256": "5164463443f5e1b48b3d970b0dc54143e6d6b18a8e42f0a893d549a90abfa7ce"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mom-layout.json",
+      "bytes": 9527,
+      "sha256": "629a758798d012a4f7b66ebbad169893dee4ae4cc023a4caf27a49d490e8a7fa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mom-native.json",
+      "bytes": 963,
+      "sha256": "21365b7c066f2bd3c9bf0ab21f8aa6be8816301e7cbf8d53ecdd95ceca5195f5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mom-probe.json.gz",
+      "bytes": 2543,
+      "sha256": "93b4a1dce74b83c763d3840069fb72eec7f4c51013aa91e1238f5b19d22c6878"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mom.html.gz",
+      "bytes": 468,
+      "sha256": "c8f6f2daa7ed450c23dcd9cd65492ebfaaa800fc3858a82359f4edd7eac64992"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mom.txt",
+      "bytes": 11,
+      "sha256": "1ef8ac2a832eb13689f673296d097ddb940e0e208b3ba83f4f248bb0c4c33cac"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mum-layout.json",
+      "bytes": 9527,
+      "sha256": "9e161c8706d72192b376092032f1fd87d1e78dec01da44e2df8b52c178c562d9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mum-native.json",
+      "bytes": 802,
+      "sha256": "cbe03e116b894029630f0a17191dc2efc7dc13f1a481a85063652d570ccbf9ed"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mum-probe.json.gz",
+      "bytes": 2098,
+      "sha256": "1aae2668aece6286c93b102fdc9893a3b4fbd26eddfaf2745d4fa45fe8ee7b7a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mum.html.gz",
+      "bytes": 464,
+      "sha256": "bbc2b67c8f61d63ced8845902aa94764af413bb0dccb4f0782a4e5d96e867856"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-mum.txt",
+      "bytes": 11,
+      "sha256": "87be3e34bda7ef893c2d09ba6319c6fc7e22ecf4192b8ee39c0d2e5cec583a91"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-rum-layout.json",
+      "bytes": 9527,
+      "sha256": "6c033be3f2bb89c44753b42b79add36d9dc8e290728b1e5f423eabd1c16b15e3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-rum-native.json",
+      "bytes": 946,
+      "sha256": "0683f93138cadb7626b2e4fa84973121042f559a1294c8abe124500c0c3949cb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-rum-probe.json.gz",
+      "bytes": 2594,
+      "sha256": "b09928d0a296ad09f5753c3865174da52f7fbd13ec118edc382de34c84df1755"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-rum.html.gz",
+      "bytes": 467,
+      "sha256": "12df2462ed566fedc8f12d210239e8f267a6e3df649294d2cc07622e8056b37d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-rum.txt",
+      "bytes": 11,
+      "sha256": "ff2ee0f298b045b99acd04587000934fa5383c608d0247c9a0065b76aca32423"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-web-layout.json",
+      "bytes": 9527,
+      "sha256": "fc58f9b2722fd5fe84aa5b791630533153eb5871ac70b7999164870210ca3f49"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-web-native.json",
+      "bytes": 1236,
+      "sha256": "78d7863053681cd074816224418867a963906afbc6f5d7c384b566d80a227650"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-web-probe.json.gz",
+      "bytes": 2967,
+      "sha256": "2686d7209c1a738d2135adb58aa8d994a91c7e64c3cf1777f5bb77dcc1db42a7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-web.html.gz",
+      "bytes": 471,
+      "sha256": "65dbc240d1cd56acee13a3f30b3e57291b017ece8b34eb5fc415e56fc15120ed"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-web.txt",
+      "bytes": 11,
+      "sha256": "3a0be30b2e0f314e22f321bc83d7477c08b07fb083560bdfece3aa88acaa47d5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-wow-layout.json",
+      "bytes": 9527,
+      "sha256": "7b2be813fbf9fec3c96873c81ddac382841ee29f07c0a3ffd36ab7a30ee6bc38"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-wow-native.json",
+      "bytes": 1098,
+      "sha256": "48b04ecfb3fff79e8df93cb1fc9987789bcddfb375395e6df9bb4e2a25bde418"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-wow-rejection.json",
+      "bytes": 368,
+      "sha256": "dd667f84f5d53e85a09e4e5ceefd45ac35b7204f51c360c31114746576c8660a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-wow.html.gz",
+      "bytes": 469,
+      "sha256": "0b893f8ff8a2b8723ab4555ba2957762aed7e38e6df60e21a729d3aa9101e095"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-dense-wow.txt",
+      "bytes": 11,
+      "sha256": "0fbc5e0f6f939da826e49ce99a1555108615c30988bda70377e1d32429aac293"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-bob-layout.json",
+      "bytes": 9521,
+      "sha256": "57f427ba35f20fb9358d1b89e64ff08ff5c85e002fe9f16d0179a2bd3ed7d9d7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-bob-native.json",
+      "bytes": 1409,
+      "sha256": "2d62ae05abc83ea3908525db58f76ab1670c0d3fc8f433dfc509aa179f3281c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-bob-probe.json.gz",
+      "bytes": 3033,
+      "sha256": "8265b716db53efb0030458b3c45cbdf17601f327731d60a534aedd2fd6ad6b49"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-bob.html.gz",
+      "bytes": 466,
+      "sha256": "fb6eb3ce1291e1423c244f917468ffdea5dc4ed7d99035301dc71d663f8548cf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-bob.txt",
+      "bytes": 10,
+      "sha256": "09ff35931d0f451a44beebc43b6a1f86a606caf99d5b8235ad0a9108cf0f758d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mom-layout.json",
+      "bytes": 9521,
+      "sha256": "6a7d392399bc1c1ec6a9fca8c33ab2b4b90d1303c2c22d615d569906c7636ddf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mom-native.json",
+      "bytes": 1410,
+      "sha256": "ce5a15d20ccb822f68e06678414909f77eaff25421451cfd44432b9c6e0d1709"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mom-probe.json.gz",
+      "bytes": 1764,
+      "sha256": "8a34e0a9d3f09944f796d7509144a0bf7e6fb2b61015e45c4f10575e09f28fc4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mom.html.gz",
+      "bytes": 466,
+      "sha256": "9795f6436d011c533e2afabc9f83aca4ccab6ae937d32b5d49ecb1750d59d5a4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mom.txt",
+      "bytes": 10,
+      "sha256": "a09157ae38f29ac36f5b435a9b07704fa347523b5d4a1f0d12b6d249cb580a7c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mum-layout.json",
+      "bytes": 9521,
+      "sha256": "9a304aa783c5787f929fa5bcd41eab23c2f5065e78ce79629c60dbd1e9a0c3d6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mum-native.json",
+      "bytes": 1405,
+      "sha256": "a45a1389e536670a007a7e87e5d22fc391552d6322ee7ac5a66475a6ff90a90b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mum-probe.json.gz",
+      "bytes": 1286,
+      "sha256": "4ea0fbdf45d0a5ced4e09db5f1f2f19de00fd6680b9e2ecf9d7ce90ff05985c2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mum.html.gz",
+      "bytes": 466,
+      "sha256": "611c2182b2d39b26044ecc7dc2cb76c7954808db6fab482327b8256d5e0531ba"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-mum.txt",
+      "bytes": 10,
+      "sha256": "21df42889bb8e975c76a83a2e4f201bbbc8dd90904b71c89f2e2fadf80ec0d62"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-rum-layout.json",
+      "bytes": 9521,
+      "sha256": "35d141c43ed42a3c21c13d5f6e829daabb40cf216595b3fa98844db500f6d80a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-rum-native.json",
+      "bytes": 1549,
+      "sha256": "29491482f9c5bfcf07b274717549ca60df2cdf370e32421237608e1afb0d13bf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-rum-probe.json.gz",
+      "bytes": 1796,
+      "sha256": "b25c28799cb2d7318343e8bf9c51b3d8e79e2cedf6119df35a8aae7f7f921010"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-rum.html.gz",
+      "bytes": 468,
+      "sha256": "5693e4bd2095241266e5bb063189bb8fdb676d6f7ca23a16ed3ca9b2d8ca458f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-rum.txt",
+      "bytes": 10,
+      "sha256": "6340c5377b10fdb3db5ae8c549a6cc0dcd7468b5fbf5b5e280a0c03ad0f4b6ab"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-web-layout.json",
+      "bytes": 9521,
+      "sha256": "67e2c821b95e668a002f4c8bff0e4780ac59c5865fabdecaebde6daa61976ed5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-web-native.json",
+      "bytes": 1536,
+      "sha256": "87aaee40498990dbd7e1aaa1047860f3079bc92846261c3aa31c3ed76d63c779"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-web-probe.json.gz",
+      "bytes": 2365,
+      "sha256": "f81de99d3faa0283278d24635e5380ce207560a17fa29c893ae914cc85bc544a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-web.html.gz",
+      "bytes": 468,
+      "sha256": "5ad2fa5bb28b7cd143639179969f1351e759699b37e817af9232f20371b83370"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-web.txt",
+      "bytes": 10,
+      "sha256": "0388d6dbd1a021a9d7ef3db0fbc537a569b52635de58463bcbbb073970a389fa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-wow-layout.json",
+      "bytes": 9521,
+      "sha256": "49263a6a6617b5eb7b512d5ecfd3592d01c64e31bddce8117ace64fd1f6b8531"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-wow-native.json",
+      "bytes": 1399,
+      "sha256": "20b9f79c1d9c8234c7f3ee77b545f94307e8ba6a461e6e2211be39b875fd0d92"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-wow-rejection.json",
+      "bytes": 367,
+      "sha256": "aaaecb541fc3c5f8e68a2ae0531a25225d53fba4e27262f7c60ce4370faef61d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-wow.html.gz",
+      "bytes": 466,
+      "sha256": "4d47d3be01d99bd5a86c1ea60472a833c3d281aebd90911564b2b343dfa6b194"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/impact-light-wow.txt",
+      "bytes": 10,
+      "sha256": "fe2c086a0aeaeb6482161e0c01b2253ae7e9145ebb80a92dc3780aeeb5a8a393"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/manifest.json",
+      "bytes": 1678,
+      "sha256": "5ee780e13b7a8741da913c04d2a2244abd0e713c35fb2d2837af369073ab095f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-bob-layout.json",
+      "bytes": 9527,
+      "sha256": "06872b024ecf4e47e1b52f2feb28c7731a7fde320dd5f0d11e929390865d4fed"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-bob-native.json",
+      "bytes": 1115,
+      "sha256": "7f755d5ff74f3d234ed1778583cf97b75b89248e50bfbc2235baf7bd538ca06a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-bob-probe.json.gz",
+      "bytes": 4316,
+      "sha256": "e2cddf8370ea6ec4dcfe2d1565b49b3a49e2db9e9f6f1ad535143abfe75956c4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-bob.html.gz",
+      "bytes": 468,
+      "sha256": "417fb3c727967721ff214be0ffd397b1b0326d0bf55b5aa2bc5a69a6521742b3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-bob.txt",
+      "bytes": 11,
+      "sha256": "5164463443f5e1b48b3d970b0dc54143e6d6b18a8e42f0a893d549a90abfa7ce"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mom-layout.json",
+      "bytes": 9527,
+      "sha256": "dd87cee463f4c1a729f3153b3b090ae4f816afdf9058468bdc5671a9104abdb8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mom-native.json",
+      "bytes": 972,
+      "sha256": "368b89747ddfd588aefac6364c05c578b7c6f6bf108a0ab9a8fe89736342af21"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mom-probe.json.gz",
+      "bytes": 5293,
+      "sha256": "2c6315d1a9bec74c3e7d78d4e2c458b6386ec7075c1c7d6b70a5655aeaaa3400"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mom.html.gz",
+      "bytes": 467,
+      "sha256": "187fb2658667ad08a221ecf68ca8708552fdd509b5b605d12ac40bac8041c85d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mom.txt",
+      "bytes": 11,
+      "sha256": "1ef8ac2a832eb13689f673296d097ddb940e0e208b3ba83f4f248bb0c4c33cac"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mum-layout.json",
+      "bytes": 9527,
+      "sha256": "802e6470fced0293a5393fcb63589528fd20d736b36cbe183c2cf412c622bdaa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mum-native.json",
+      "bytes": 809,
+      "sha256": "3dffc2b09e40ca25a1f490bab4353116d2f63d8bfaf32a90e6976e1b214f6d1b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mum-probe.json.gz",
+      "bytes": 4124,
+      "sha256": "9eb6f45df93b8802676b41ca1f099a2f27dbd24fec28dd4da6679e2fbcc58216"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mum.html.gz",
+      "bytes": 463,
+      "sha256": "1089a7b15325ff8e34a3bc70eaf868270767946bb4e0c2a512666cda37728093"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-mum.txt",
+      "bytes": 11,
+      "sha256": "87be3e34bda7ef893c2d09ba6319c6fc7e22ecf4192b8ee39c0d2e5cec583a91"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-rum-layout.json",
+      "bytes": 9527,
+      "sha256": "0ad18bb743f00333894219a4e7afd0c8e025f16db55af1d3076a6c28f7f48147"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-rum-native.json",
+      "bytes": 957,
+      "sha256": "c91fdbbcb0d24face741a15f6be09276b0187b5c1105ca852053ff388d3f464e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-rum-probe.json.gz",
+      "bytes": 5040,
+      "sha256": "fdfa5f4f042abf26a5c378e2054e5bbe034b518610f53098cc3a4323dffa7183"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-rum.html.gz",
+      "bytes": 467,
+      "sha256": "75620544d15e2a7a7116ff7801867bcd38067e65cfe5676d2ed40d6d9217f8ea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-rum.txt",
+      "bytes": 11,
+      "sha256": "ff2ee0f298b045b99acd04587000934fa5383c608d0247c9a0065b76aca32423"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-web-layout.json",
+      "bytes": 9527,
+      "sha256": "e338426592a2c059ee0333e6733f14762e2debce748747537905841a3fa2fef0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-web-native.json",
+      "bytes": 1249,
+      "sha256": "c23b4b39b0f121e4b87f22600080beccfab5499275d7825b9ba78d64c72de04c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-web-probe.json.gz",
+      "bytes": 4247,
+      "sha256": "311e7d097627cd8ba008454bd646c0fadb0f0a9c404c7241b442a004e4dea78c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-web.html.gz",
+      "bytes": 469,
+      "sha256": "3d9afff22c5db0a9f4b7b23d73428e9e670da7c270247d209bd3771853f57b1b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-web.txt",
+      "bytes": 11,
+      "sha256": "3a0be30b2e0f314e22f321bc83d7477c08b07fb083560bdfece3aa88acaa47d5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-wow-layout.json",
+      "bytes": 9527,
+      "sha256": "395f696a1f28d2ebd9b150f1f754f1d03e825ec4cafad2d77839a3adf43009cf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-wow-native.json",
+      "bytes": 1119,
+      "sha256": "1e0a0f9ecc91e66d093667e3aefd20a0bf2e331ff8f3e9e33c6f241c39b48bea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-wow-probe.json.gz",
+      "bytes": 4717,
+      "sha256": "06cefac579d120e5b7766ed32abaeba1a63471003bdabb3fa881384294079253"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-wow.html.gz",
+      "bytes": 468,
+      "sha256": "add24d6e97aaa6ce3381b9387a249a04253fdc3c5b2c51cfd7183b59ca028d25"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-dense-wow.txt",
+      "bytes": 11,
+      "sha256": "0fbc5e0f6f939da826e49ce99a1555108615c30988bda70377e1d32429aac293"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-bob-layout.json",
+      "bytes": 9521,
+      "sha256": "505b9d40a4e3b9d8840a7898dc5a85cef62272c07ed1ddeacbf883242613a015"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-bob-native.json",
+      "bytes": 1409,
+      "sha256": "d58aca37176795fa0b82e38cd7cab2ecb11cc617bce8e7ac588f603ded1725e1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-bob-probe.json.gz",
+      "bytes": 2770,
+      "sha256": "e4f3c80f7523cc64d63cb0029c2dffa6829f336716508309e9c2c932c1ad6dcf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-bob.html.gz",
+      "bytes": 466,
+      "sha256": "0c23d04a7f2294c0a9d82b528b2b934c9c57071f2372fe728b45d0887f3d06a2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-bob.txt",
+      "bytes": 10,
+      "sha256": "09ff35931d0f451a44beebc43b6a1f86a606caf99d5b8235ad0a9108cf0f758d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mom-layout.json",
+      "bytes": 9521,
+      "sha256": "bd1d597b058b60685f6101849b8d2831dd1180c52adacecfa55ed7a6993b721a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mom-native.json",
+      "bytes": 1411,
+      "sha256": "117f864c8395cc9a975f57608279fe9aace7a386cb735cf152f02f2426e7a6ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mom-probe.json.gz",
+      "bytes": 4064,
+      "sha256": "755c78076a34f29453d364d5b6b5d47bd749c9a1b9511d2bc3b478aadb2962d0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mom.html.gz",
+      "bytes": 465,
+      "sha256": "476f0e44650aa224f42527259a5753e19ac8c93fced5a2775f0e9ba9eeedc588"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mom.txt",
+      "bytes": 10,
+      "sha256": "a09157ae38f29ac36f5b435a9b07704fa347523b5d4a1f0d12b6d249cb580a7c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mum-layout.json",
+      "bytes": 9521,
+      "sha256": "f90fa0b8f7501f2b1689f9e81798b20d23a502e2f32c63734a71940b9d029c2d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mum-native.json",
+      "bytes": 1407,
+      "sha256": "f73415252b358f598f1f5504529b1806ca071a61c0b50b0e605b3a4f7ab30f4f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mum-probe.json.gz",
+      "bytes": 3152,
+      "sha256": "e3f24abc31aa1b8e9e7ba8e910ce89efe2c786f207e60be2c83e7be248b10805"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mum.html.gz",
+      "bytes": 466,
+      "sha256": "83b8b945c157b67fec13ae38d431a86ba26b7fa431cb95b5017a66c7ad7782b5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-mum.txt",
+      "bytes": 10,
+      "sha256": "21df42889bb8e975c76a83a2e4f201bbbc8dd90904b71c89f2e2fadf80ec0d62"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-rum-layout.json",
+      "bytes": 9521,
+      "sha256": "0638448d4ad04a47952941efa128ab34dfe4ab5e661cba4c3da2348a433c780e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-rum-native.json",
+      "bytes": 1554,
+      "sha256": "60f9293ad5220e164f229536f7461ba00e9df24631beaf33ee935349b3e0bbfe"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-rum-probe.json.gz",
+      "bytes": 3830,
+      "sha256": "f51ab23aaf2e47d2d2648ee3042874737bd9345e228a5f741c4efcd2e90781b7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-rum.html.gz",
+      "bytes": 467,
+      "sha256": "ccb2c61801043c5bb3df9024b7ca249fc753f2a18d8d7e8b76ee51aee26f6b86"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-rum.txt",
+      "bytes": 10,
+      "sha256": "6340c5377b10fdb3db5ae8c549a6cc0dcd7468b5fbf5b5e280a0c03ad0f4b6ab"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-web-layout.json",
+      "bytes": 9521,
+      "sha256": "78ea971cd6cb8e79d4585826200da9f9bf2a577e8666c2370f430ac334842082"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-web-native.json",
+      "bytes": 1547,
+      "sha256": "de4a53b0830ecd93c694971c40c799f90fd8339705d010fa310a79ef514f7195"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-web-probe.json.gz",
+      "bytes": 2881,
+      "sha256": "31d80b15cad07f9b3e329cc581ff37593537d57b83113193ef77d78c93ca5804"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-web.html.gz",
+      "bytes": 467,
+      "sha256": "319d027198cd6de3c55bee97432e30dd6bdd9396aa028eb9ed97cd4f19505291"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-web.txt",
+      "bytes": 10,
+      "sha256": "0388d6dbd1a021a9d7ef3db0fbc537a569b52635de58463bcbbb073970a389fa"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-wow-layout.json",
+      "bytes": 9521,
+      "sha256": "c8b62906bbb0c100b19a81aeb7cfc1fbf058c840821e2f2f70f66c9a55c35bf1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-wow-native.json",
+      "bytes": 1412,
+      "sha256": "a32104fadabbf3aea3d24f059c83ed7a97bf02fe6161d3c7efc854cb011d648f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-wow-probe.json.gz",
+      "bytes": 3106,
+      "sha256": "eab7a02f134c97ee89b46ed05341c85b4ab9bb9a440100e1197c48b5e73f4d2f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-wow.html.gz",
+      "bytes": 466,
+      "sha256": "0e51059636754888c6a0208c0bc29f8ef68a6f66cc87a582f05b242f4924087c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/monaco-light-wow.txt",
+      "bytes": 10,
+      "sha256": "fe2c086a0aeaeb6482161e0c01b2253ae7e9145ebb80a92dc3780aeeb5a8a393"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/full.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-dense-bob.png",
+      "bytes": 2821,
+      "sha256": "4e5145e2409dbb22ab66e95bed6fe79945d7320a5ee55ea5e3eaf61190775cec"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-dense-mom.png",
+      "bytes": 2512,
+      "sha256": "bdf284657459d353b175cd0b491870b96de4c423121b3db360bb2cbb0b26202e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-dense-mum.png",
+      "bytes": 1887,
+      "sha256": "d034ce25a28bdb14d9982304fc98040108adca2489b0afaac19a7e29274b016a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-dense-rum.png",
+      "bytes": 2737,
+      "sha256": "82b90b50dcce102f8adcf558048ad5164b87634747aa4db30d70597c0bdd44e3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-dense-web.png",
+      "bytes": 3095,
+      "sha256": "5d307d3aa29f2f6a76dcc392e060d2d0d43a4832033af2df2bc29a847ddb61dc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-light-bob.png",
+      "bytes": 3331,
+      "sha256": "0dcc4ef18da279df40311cefab0f930871a9ba6cbde95e34d28115868b3dcf0e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-light-mom.png",
+      "bytes": 3420,
+      "sha256": "467b7e0482594829566a0cb371edaf582d3c5f29ae4ecea12862607ad0cfbe8d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-light-mum.png",
+      "bytes": 3216,
+      "sha256": "4c63cbef2a9fec76e430031981a82df30d1d271926a3f593a2ce8fe1fa0b9995"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-light-rum.png",
+      "bytes": 3266,
+      "sha256": "3a27ff1dd404818cfb9354df5c7837eb1120514ec4c83b6cc4f37950524efcdb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/impact-light-web.png",
+      "bytes": 3577,
+      "sha256": "ddcb92d0e5852574f66f29fe3d276d288309508ebf0cc39c9fc72c17f94c9b80"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-dense-bob.png",
+      "bytes": 3395,
+      "sha256": "6c6a6746af2f97301751f97e865695ba3d3c6287500e2197ad3c61f9b18f6fde"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-dense-mom.png",
+      "bytes": 2864,
+      "sha256": "656b546641f9a8882ad859a562cf969acf3e3e6fb5be4903a3112ee6b313dc86"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-dense-mum.png",
+      "bytes": 2010,
+      "sha256": "722b91d0493e11b7c228ef9d8b9e127b827f29987c23110e8dff5e8dcc7a97b8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-dense-rum.png",
+      "bytes": 2842,
+      "sha256": "a0aa4a61cdcbbe1d1ea745fd8766a2a1ac89b1d3d7552b6060354c4396d72ba2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-dense-web.png",
+      "bytes": 3547,
+      "sha256": "e486a574b7489eedc90119e5c9c21c9ca1b585bdbed09cad0628fe8663dc7800"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-dense-wow.png",
+      "bytes": 3492,
+      "sha256": "6e77c826da001936d05d9dbdda71d98ab264a9ed05d9cc4b2aaf8dba9141bfee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-light-bob.png",
+      "bytes": 4166,
+      "sha256": "4a6bcd7d2c00b1b9c3140162e3bf9b2a6cecad4e763b669e2650658e2d86471d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-light-mom.png",
+      "bytes": 4074,
+      "sha256": "6718465d34ac2cfac49758e46204d03d84cc0a3260c586018d6b33a0a82b4a8c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-light-mum.png",
+      "bytes": 3838,
+      "sha256": "cf0435767f9d70e50e43796f9da3c64ed9970dbc9b09ba2047e438d2ad488412"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-light-rum.png",
+      "bytes": 4284,
+      "sha256": "ba617818ed7eb10f71499fa89b99e5fbc867ef4ec0f3e1c6182d45521f3b91e1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-light-web.png",
+      "bytes": 4322,
+      "sha256": "f794744a790ac46c2b7632084302d60d55394d5c088a8ffc314db769c8206050"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/monaco-light-wow.png",
+      "bytes": 4274,
+      "sha256": "8c2061811fcd7cc191a5b8a8f8b8bf927643fe9bdd95e6c3234eaa1c8ded68f3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/raw/solid.png",
+      "bytes": 4079,
+      "sha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/results.jsonl",
+      "bytes": 149761,
+      "sha256": "5f578c4bc2fb7443c6e1b3b09380a4ca15512bc8618096d527f7519b3e1748fc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/seed-replay.json",
+      "bytes": 212,
+      "sha256": "8d2520b09efc090e0ca9fb0411400f9df0302f9228223c61bd4b5f13bb5cbe82"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-09/words-02/summary.json",
+      "bytes": 1042,
+      "sha256": "f40eaa0efba10bcae329d300e52b1f0f213938a825c0c9783fb0f25ad731d997"
+    },
+    {
+      "path": "experiments/prose-qr/finder-runs/capture.mjs",
+      "bytes": 13608,
+      "sha256": "4d1cca9cc2734c0713a25cda207057bd0c13f95c52361d3672bffb0019e88c48"
+    },
+    {
+      "path": "experiments/prose-qr/finder-runs/custody-check.mjs",
+      "bytes": 3007,
+      "sha256": "8b43c60b90ee706fcd71e681d8d6217fcd0ece9f1f0fb5e16c6b3f5bcd7ca943"
+    },
+    {
+      "path": "experiments/prose-qr/finder-runs/fonts.mjs",
+      "bytes": 3658,
+      "sha256": "7372b710c698ff58bc9b0797797daa7f38e27699d7cf6a734bbfda0fe38f9593"
+    },
+    {
+      "path": "experiments/prose-qr/finder-runs/opencv.py",
+      "bytes": 3135,
+      "sha256": "32116dc3fee51c71ed20fc24578aa71f5786db1f3bbee5c5edbad9b77f3c31df"
+    },
+    {
+      "path": "experiments/prose-qr/finder-runs/probe.mjs",
+      "bytes": 6134,
+      "sha256": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189"
+    }
+  ],
+  "logicalBytesBeforeReceipt": 2236882,
+  "phaseSealed": false,
+  "unitTests": 18,
+  "formatCheck": true,
+  "npmPrivate": true
+}

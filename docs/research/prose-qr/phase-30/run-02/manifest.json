@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-10T00:35:25.809Z",
+  "plannedNative": 1,
+  "plannedRepeat": 1,
+  "plannedControls": 1,
+  "baseline": "f396c1c36deb2eeda5d2fb3efbd9e064b96adc65",
+  "sources": {
+    "experiments/prose-qr/finder-context-lexicon/capture.mjs": "2641b702230fec4c8b0f0ea124ea2199a01eb6d0bdb9bd3cc19e9e2634ef7972",
+    "experiments/prose-qr/finder-context-lexicon/proposal.mjs": "93cd63e0e925ff4de87d641031dade1b05fda846fdb94e819494fc5dcc346eb2",
+    "experiments/prose-qr/finder-page/symbol-audit.mjs": "dc3a81e0d16069247cf2bfd15a09470b90e0b1b31f7f60e44965521d29988043",
+    "docs/research/prose-qr/phase-30/run-02.json": "a54efb854ff53ac114a28323cdf7773fe2b866491d98f8f4e99ffb3393841aef",
+    "docs/research/prose-qr/phase-30/PLAN.md": "94db0068e04bb848584c9b79a2a719d3867ea84e846670f22db49554c2812020",
+    "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd"
+  },
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "cap": 8000000
+}

@@ -1,0 +1,429 @@
+{
+  "at": "2026-10-10T16:00:34.033Z",
+  "phase": 69,
+  "anchorHead": "867f1ea0b2ec37a9e659a17bdc5798e0f1ef4de0",
+  "goal": "unsolved",
+  "cap": 4000000,
+  "prior": [
+    {
+      "path": "docs/research/prose-qr/session-2026-10-10-b/custody.json",
+      "sha256": "370ee03a1d8f3568174505624f73dec959ea8f86803139406f8eeaec583a4f98"
+    }
+  ],
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-c/seal-siblings.mjs": "7f0c13e7b70e749bae8f2b6f0ac7367b4ad2ed23fab6675635bbbe6269ba5a56",
+    "docs/research/prose-qr/phase-69/analysis.json": "83eb3fb25678a3502d46dc039f1699af48c48249b9d2e9dcf432a32a2c1ff24f"
+  },
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/phase-69/PLAN.md",
+      "bytes": 2023,
+      "sha256": "21cd4ac6e18f6a5f48c9643e59ef2267e335c0a1e9551610ef14afde40d5f246"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/README.md",
+      "bytes": 600,
+      "sha256": "242a8a70d8f25c9079974291aaf15c6041ac6cb9dd4fc07e29278c281d16d1bf"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/analysis.json",
+      "bytes": 203636,
+      "sha256": "83eb3fb25678a3502d46dc039f1699af48c48249b9d2e9dcf432a32a2c1ff24f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/captures.json",
+      "bytes": 6982,
+      "sha256": "02de51ef185010cd95c2448e76de767ae36229af6f58317675bc36d1f6902b6a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/jsqr.json",
+      "bytes": 962,
+      "sha256": "942e592d6a6f214e1c948af5e38c9df4d8c3fd844eaa4809b86627b4d67d57da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/opencv.json",
+      "bytes": 356,
+      "sha256": "05331faf0a7cf9df743da6c1e43910af313f7b72b604ce1d9e8c211af08a09a7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/opencv.raw.json.gz",
+      "bytes": 268,
+      "sha256": "27dba4af18530e8cd52853076e68dcb535b03d75a4c6f026d8029c717bc70e53"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/passive-full.json.gz",
+      "bytes": 4664,
+      "sha256": "590921888d4dc6646ef044572f093f1c9fbcbfd52eec9b2da16f3e3dc82d9163"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/passive-summary.json",
+      "bytes": 25812,
+      "sha256": "bb41f268ac97661e45f707ce2dab83393812a85c4021b72d89242b816233bdd7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/pixels.json",
+      "bytes": 284,
+      "sha256": "2a1d899bc2b967d0df80e0f9b5f3a6e0809c2847a9d773f053c164ae64665261"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-inverted/zxing.json",
+      "bytes": 378,
+      "sha256": "8e650798cc2bc4dbf9d9fa606227ea6af77fff79c630d7b3d66e14ad2a19a3c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/jsqr.json",
+      "bytes": 962,
+      "sha256": "942e592d6a6f214e1c948af5e38c9df4d8c3fd844eaa4809b86627b4d67d57da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/opencv.json",
+      "bytes": 452,
+      "sha256": "19542db4f550226b03bfcde7fda145dce241e2aba8c65ca539bd559471631517"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/opencv.raw.json.gz",
+      "bytes": 304,
+      "sha256": "7a6a73a5e9c24d8d7021f43fa8c4c282b7cd966d280456153cafaab4807d2dfb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/passive-full.json.gz",
+      "bytes": 2231,
+      "sha256": "16ff6f0794c62db183a2b15de244a89f4866eeef5711bc394422082f4eced811"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/passive-summary.json",
+      "bytes": 12762,
+      "sha256": "e2948c939ae8d6ef6055a9aaca722f30865b8c78334c27c90edb58ffecc5f95f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/pixels.json",
+      "bytes": 282,
+      "sha256": "0a39d23a6a0d437e8dc51cc02483e6f5bd284e858b1258c7e3b0998a12c0bcb8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/control-normal/zxing.json",
+      "bytes": 378,
+      "sha256": "8e650798cc2bc4dbf9d9fa606227ea6af77fff79c630d7b3d66e14ad2a19a3c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/done.json",
+      "bytes": 297,
+      "sha256": "3cb6ebdfbefc7404532e325b7e95d80ce6a5997b321c1eef97aaf27910261df0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/capture.json",
+      "bytes": 1824,
+      "sha256": "78c160035c660b4dbaa77a6d980624e620e377142e8a0b7a99ea3c2be55c815c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/glyph.html.gz",
+      "bytes": 400,
+      "sha256": "9c3b28a609ee06bf502c6d18c5b9a6e145e5b59a85a86747c59aa1a596a03092"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/glyph.png",
+      "bytes": 1195,
+      "sha256": "7def4b649c5f8d959323f155a93a87717e854466819728200140fadd5d6b758b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/holes.json",
+      "bytes": 771,
+      "sha256": "fd3292111338abd423f760a968e559feeb15bd83fc474b3bbd74158d51cbf3eb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/holes.raw.json.gz",
+      "bytes": 357,
+      "sha256": "f16e3ed4ee1fb2221d50cd34221d112f3800be6bda078a18f0edba5298742069"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/letters.png",
+      "bytes": 10346,
+      "sha256": "11e1b26c10008bda0142fc268e40543b7e80d9b66196f22fa10259502f836a1a"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/native.html.gz",
+      "bytes": 463,
+      "sha256": "e3422e726c2f8a49c696df8b841ee691b6a56a6178002ecb0ab9a78a71d551ac"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/native.png",
+      "bytes": 110956,
+      "sha256": "5781a13778bb7a5ac6f099e4f725a3da345b211d093ebd2b42eef30b80520c9c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/opencv.json",
+      "bytes": 437,
+      "sha256": "72c754bf1b6fca487a65d0060159ca154dbf06005ea3d7b8a8e8dde9e9ce4352"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/opencv.raw.json.gz",
+      "bytes": 300,
+      "sha256": "1d5ae666ac8f539c417115831f5d60ee9e0e6c290d8c4d63e9d03d9a2aec635b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/passive-full.json.gz",
+      "bytes": 29382,
+      "sha256": "b44b746c4faefc530e80c37fc975100774559ed05b72f5933010e42d752a191b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/passive-summary.json",
+      "bytes": 30193,
+      "sha256": "66dbe7fafb39d116eaae73edb205f857096d43155f4e7a1a1b0f2d057f8d021c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/pixels.json",
+      "bytes": 280,
+      "sha256": "f98ef31ed3e09a90e055b5c9176f61148bc09e417f2e4ad9911a29ce869f4106"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/recipe.json",
+      "bytes": 4549,
+      "sha256": "9d538d3142189c19d07ede4718683e795a9ba56e356fa20aebb1c223a02eefcb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/resource-fonts.json",
+      "bytes": 215,
+      "sha256": "3990a358f9200b2e2c1f208cbeedf7b057afc50f2cf5ec52d715dd687602bece"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/resource-profile.json",
+      "bytes": 1777,
+      "sha256": "b9d58ab969ac0478c48e00c3226cf89349a0be0f13dd92968614ea9377b4e994"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w4/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/capture.json",
+      "bytes": 1833,
+      "sha256": "634e3ea7d0c595e36a105ace859fbe2ecb2e3f5c7ae529015b1e819a1a5d0fcb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/glyph.html.gz",
+      "bytes": 401,
+      "sha256": "127fcea6aaa113d29e612e923f9578a026620455a4a3e3dbe41defb6956bfe96"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/glyph.png",
+      "bytes": 1252,
+      "sha256": "cfc670d324ed0ab3eba4d5b8e38acbb0adcba6db2fd66d5c6c9c74b1096f81e5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/holes.json",
+      "bytes": 752,
+      "sha256": "a1117a07a311583b3fc9579e75a3159812d7ed0795547f57ed58a660564b7475"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/holes.raw.json.gz",
+      "bytes": 364,
+      "sha256": "1c973a72ed363def4bced84a4151b926c6723c5e4f27bb389fdb395a6e9e095d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/letters.png",
+      "bytes": 10238,
+      "sha256": "4944ee3b42c49b31e8455d7711aeb5395b0a761b100e365fd000f87877b6e74d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/native.html.gz",
+      "bytes": 464,
+      "sha256": "5ea9126aa9a1d0072b9838009a6f08806393cd125b6cd37d9eb25adb3c79e749"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/native.png",
+      "bytes": 110573,
+      "sha256": "61fccbdb7245ab5a9739e29688007ea23e60b8b3c00c2d92ae6d023febbc1ec2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/opencv.json",
+      "bytes": 437,
+      "sha256": "c620586657c2f3e4db29f83f526b4bbf538a4ac06a590dc442dcc7a5dd6371dc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/opencv.raw.json.gz",
+      "bytes": 301,
+      "sha256": "ae1b8ff3ac7d18eef653bfe0c999cfc01c382bf29580b923ec6344d4a4fb2455"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/passive-full.json.gz",
+      "bytes": 26738,
+      "sha256": "c8824894a35a3ac391a18cf4c97ae765b7620261232e94a03c309399aa322299"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/passive-summary.json",
+      "bytes": 30330,
+      "sha256": "113a5f641e33fb97908c22fef763fd313017852625ab0073d9c3c04134aef3ce"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/pixels.json",
+      "bytes": 280,
+      "sha256": "1f31b36bc6b71e929c00dfc3ff643f00c9dbee87a2da2c959ef2544423a634b5"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/recipe.json",
+      "bytes": 4629,
+      "sha256": "9f39c894e6deb86eeb9efbef581dbaac218eca09305a82471676bc34983ddde3"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/resource-fonts.json",
+      "bytes": 215,
+      "sha256": "a267aa67def1b5fe190f85390f6922c3f16d6bbbbc83813c42894f672245c608"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/resource-profile.json",
+      "bytes": 1814,
+      "sha256": "780844b18e6f912e970714044a000c5d71f437dd2665b9128d522d8540bf2e16"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/hiragino-w5/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/manifest.json",
+      "bytes": 3457,
+      "sha256": "bd0257fc53ff409fac3535395166208b5c4f12189368dea07dd24d31706d84dc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/capture.json",
+      "bytes": 1826,
+      "sha256": "924002969444f8b14b5ca8ba4c56ee309f13a7b3a5c953efcac06daf23c75b6d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/glyph.html.gz",
+      "bytes": 410,
+      "sha256": "a5c9c77e6334361cfcebc4e3e98465fa1cc446e5e813af23186b05bddc52d606"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/glyph.png",
+      "bytes": 899,
+      "sha256": "7efd78ce4e62fd263a70584cf66c17a08e8799f444376dd6dc1f4e0cc015d224"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/holes.json",
+      "bytes": 718,
+      "sha256": "0d779c09df93001326245786362597d3c003903c18312acd83182d321ff850c9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/holes.raw.json.gz",
+      "bytes": 350,
+      "sha256": "2a3cb20f5a346d74b1d91673c26f3e71401617632b2e9ba212ccf87eee232b15"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/letters.png",
+      "bytes": 8439,
+      "sha256": "02e714473986affbc8e1001551c738cf48b680568a65d4492cb99cf7bc5568f8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/native.html.gz",
+      "bytes": 471,
+      "sha256": "629868b9e865b2ab8a62f34eaf72cdfe3e783e121290c53bd2d1a9b2887e8646"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/native.png",
+      "bytes": 89188,
+      "sha256": "866c4a15e14b4cd6437bef3a63b9378e3170cc392c073ee25cff5d7cf05956f6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/opencv.json",
+      "bytes": 435,
+      "sha256": "0514c6dc6e565cc99d2d5106acaa9de519159d750e088982d92e099ccc0f9109"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/opencv.raw.json.gz",
+      "bytes": 298,
+      "sha256": "4294604b4d78f9cb88bdf78862e1a2b848908b03f7968df2cb5b1e9c550554de"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/passive-full.json.gz",
+      "bytes": 25676,
+      "sha256": "6777457c23cb0b03da885b562918d7dda6c517dbcb9c5205587f6dc474a4b426"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/passive-summary.json",
+      "bytes": 30095,
+      "sha256": "49105735bcfb9739d49e4efab4c03e3e0e4d1a88533268fb23bbb9a7bf75cc35"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/pixels.json",
+      "bytes": 278,
+      "sha256": "899f9a1495dc044688ebff04adfd6953326df5b37c4087c25660d3327d2f82f0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/recipe.json",
+      "bytes": 4628,
+      "sha256": "b0551e537b02b684f46187c2eb1ce33442330dc665362b934ee6c6b614274073"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/resource-fonts.json",
+      "bytes": 235,
+      "sha256": "e6afc32b24576125428bfc9e2425e45fc3790df77ca9b58de76c2c96ba61b7d4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/resource-profile.json",
+      "bytes": 1797,
+      "sha256": "85e2d65031b3c45048c0497837ce1f5819b096be9769412038fc14cb007e0120"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-69/run-01/neo-light/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-sibling/common.mjs",
+      "bytes": 1094,
+      "sha256": "7ec70aeca7dc4989698f73261be018b204b7edbe4f44b160b6140bb52833db1c"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-sibling/holes.py",
+      "bytes": 1131,
+      "sha256": "1248f536613bd0ed99e881b779294e0f86a7bd82fe58c170e124953d619d1d49"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-sibling/passive.mjs",
+      "bytes": 6249,
+      "sha256": "46e8e84e8817e2f9bade90c90a8e75d096f8f5661d342899b56974d9c568b61d"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-sibling/profile.mjs",
+      "bytes": 1332,
+      "sha256": "46d3ca9375ab38d2903b8492a0cceace8c0d4617064aee028a572a99963eb53b"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-sibling/run.mjs",
+      "bytes": 18487,
+      "sha256": "72f17729f7de152f1e49cf37e0b1993d317bd1640b5c35c69ffceee124015009"
+    }
+  ]
+}
