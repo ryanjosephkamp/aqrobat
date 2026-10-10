@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-10T16:02:41.361Z",
+  "goal": "unsolved",
+  "phases": [
+    {
+      "phase": 64,
+      "analysis": "docs/research/prose-qr/phase-64/analysis.json",
+      "sha256": "9511fe2c77a682f4265969a656beb0782034320fe97d33b25613504fbb2bdfba",
+      "plannedNative": 6,
+      "nativeCaptures": 0,
+      "nativeRepeats": 0,
+      "primaryPlanned": 24,
+      "primaryCompleted": 6,
+      "primaryUnattempted": 18,
+      "passiveProfiles": 2,
+      "intendedBranches": 0,
+      "strictPasses": 0,
+      "readOnly": false
+    },
+    {
+      "phase": 65,
+      "analysis": "docs/research/prose-qr/phase-65/analysis.json",
+      "sha256": "f884c0bb41fc7a418e81704ef3f06a869da979c4c1241b948098b9602ed647c9",
+      "plannedNative": 4,
+      "nativeCaptures": 4,
+      "nativeRepeats": 4,
+      "primaryPlanned": 18,
+      "primaryCompleted": 18,
+      "primaryUnattempted": 0,
+      "passiveProfiles": 6,
+      "intendedBranches": 4,
+      "strictPasses": 0,
+      "readOnly": false
+    },
+    {
+      "phase": 66,
+      "analysis": "docs/research/prose-qr/phase-66/analysis.json",
+      "sha256": "aef5cff5663f1b1fa7eba6c8b233119a83a5cb46bf840643262c348a3b229fe9",
+      "plannedNative": 0,
+      "nativeCaptures": 0,
+      "nativeRepeats": 0,
+      "primaryPlanned": 0,
+      "primaryCompleted": 0,
+      "primaryUnattempted": 0,
+      "passiveProfiles": 0,
+      "intendedBranches": 0,
+      "strictPasses": 0,
+      "readOnly": true
+    },
+    {
+      "phase": 67,
+      "analysis": "docs/research/prose-qr/phase-67/analysis.json",
+      "sha256": "c2c178ff53fbe4d50ccdf0a4aa4be9f8c26657249e3f86f4f82b7f5b8b418e20",
+      "plannedNative": 3,
+      "nativeCaptures": 3,
+      "nativeRepeats": 3,
+      "primaryPlanned": 15,
+      "primaryCompleted": 15,
+      "primaryUnattempted": 0,
+      "passiveProfiles": 5,
+      "intendedBranches": 3,
+      "strictPasses": 0,
+      "readOnly": false
+    },
+    {
+      "phase": 68,
+      "analysis": "docs/research/prose-qr/phase-68/analysis.json",
+      "sha256": "b3b04c91bf021d9fb82150610e984c7846370dc0ef4627159d0f88215c38e349",
+      "plannedNative": 4,
+      "nativeCaptures": 4,
+      "nativeRepeats": 4,
+      "primaryPlanned": 18,
+      "primaryCompleted": 18,
+      "primaryUnattempted": 0,
+      "passiveProfiles": 6,
+      "intendedBranches": 2,
+      "strictPasses": 0,
+      "readOnly": false
+    },
+    {
+      "phase": 69,
+      "analysis": "docs/research/prose-qr/phase-69/analysis.json",
+      "sha256": "83eb3fb25678a3502d46dc039f1699af48c48249b9d2e9dcf432a32a2c1ff24f",
+      "plannedNative": 3,
+      "nativeCaptures": 3,
+      "nativeRepeats": 3,
+      "primaryPlanned": 15,
+      "primaryCompleted": 15,
+      "primaryUnattempted": 0,
+      "passiveProfiles": 5,
+      "intendedBranches": 2,
+      "strictPasses": 0,
+      "readOnly": false
+    }
+  ],
+  "totals": {
+    "nativeResourceProposals": 20,
+    "nativeCaptureAttempts": 14,
+    "nativeExactImmediateRepeats": 14,
+    "uniqueNativePNGHashes": 11,
+    "plannedPrimaryReaderSlots": 90,
+    "completedPrimaryReaderSlots": 72,
+    "unattemptedPrimaryReaderSlots": 18,
+    "passiveProfiles": 24,
+    "intendedNativeGeometryBranches": 11,
+    "strictNativePasses": 0,
+    "newPayloadSources": 0,
+    "phoneTests": 0,
+    "phoneCandidates": 0
+  },
+  "scope": "Logographic structural controls at fixed native64px; no semantic or English prose result.",
+  "bestObserved": {
+    "phase": 65,
+    "case": "heiti-sc",
+    "quadBalance": 0.9333333333333333,
+    "nominalSpanFraction": 0.875,
+    "stableWideRowFraction": 1,
+    "worstTrueAxisRMS": 0.3803039805262239,
+    "requiredMaximumTrueAxisRMS": 0.35,
+    "strictPass": false
+  },
+  "pointAudit": {
+    "phase": 66,
+    "inputs": 4,
+    "actualSelectedPoints": 12,
+    "sourcePoints": 12,
+    "translatedResourcePoints": 12,
+    "secondActuallyReturnedPoints": 12,
+    "newReaderCalls": 0,
+    "substitutedAcceptancePoints": 0
+  },
+  "controls": {
+    "primarySlots": 30,
+    "exactSlots": 25,
+    "knownLimitation": "Stock OpenCV inverted conventional control fails; normal control passes all three, inverted ZXing/jsQR pass."
+  },
+  "preservedReportingError": "Phase65 README duplicate-pair sentence is superseded by ERRATA.md; raw hashes and analysis remain correct.",
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-c/report.mjs": "4ad39e83729797835364d847994363966950c77b92ef7708288a3db276aa5edb",
+    "docs/research/prose-qr/session-2026-10-10-c/ERRATA.md": "466409d5b0f9f152ece3191df6e3dabe952efb607f5ba64b027cdec73cc164b9"
+  }
+}
