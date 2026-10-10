@@ -1,0 +1,3 @@
+# Phase51 — default-return parity, internal log trace unavailable
+
+The fresh complete four-input profile runs with only stock DEBUG verbosity. All four returned payload/corner pairs equal their ordinary baselines. The conventional URL recovers exactly, the saved full native URL has its earlier intended outline but no payload, and both phase49 finder-only images have no outline. No QR internal debug messages are exposed by this build, so the exact internal failed stage remains unknown. This is one OpenCV implementation across profiles, not a new independent engine. Phase50's four original setup unknowns and phase46's two original Vision unknowns remain preserved. No new native image/payload/phone candidate.

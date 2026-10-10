@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-10T14:16:30.048Z",
+  "plannedNative": 2,
+  "selected": {
+    "font": {
+      "name": "Monaco",
+      "postscript": "Monaco",
+      "lane": "regular-body-font"
+    },
+    "dark": "f1-c1-w1",
+    "light": "f1-c1-w6",
+    "darkWord": "MOM",
+    "lightWord": "ill",
+    "margin": 0.1663438256658596,
+    "darkOccupancy": 0.38272800645682004,
+    "lightOccupancy": 0.21638418079096045
+  },
+  "observation": {
+    "at": "2026-10-10",
+    "selectedResources": ["f1-c1-w1", "f1-c1-w6"],
+    "agentObservation": "At native 1:1 both MOM and ill remain identifiable. Line spacing is conspicuously tight; some letters align into vertical columns, so a mechanical pass does not establish comfortable paragraph reading. No word is raster-resized or hidden. The conditional finder comparison is eligible for research only; owner and portable legibility untested.",
+    "eligible": true,
+    "phoneCandidate": false
+  },
+  "cases": [
+    {
+      "batch": "run-01",
+      "rows": 333,
+      "leading": 16.78125,
+      "clearance": 0.25,
+      "words": 38628,
+      "minRightSlack": 41.095703125
+    },
+    {
+      "batch": "run-02",
+      "rows": 302,
+      "leading": 18.53125,
+      "clearance": 2,
+      "words": 35032,
+      "minRightSlack": 41.095703125
+    }
+  ],
+  "sources": {
+    "experiments/prose-qr/context-native-period/proposal.mjs": "d241f0e14415edfb515cca59e083843df926e00ea2722c49bfdf2b1338e86832",
+    "experiments/prose-qr/context-native-period/common.mjs": "10e0e60a879f5ac9484a3fa3803ed0c7ad410acdd212dfe6d8a8701fafcc5641",
+    "docs/research/prose-qr/phase-49/PLAN.md": "4226fbf0d17563f26ad43161ac00c202b4e0445373a9265b2c8e52fc594ea749",
+    "docs/research/prose-qr/phase-49/metrics-01/summary.json": "29315988750470a509669b85d8dc13edf8c9a5c6192788f7315a1e167c4a921e",
+    "docs/research/prose-qr/phase-49/resource-legibility.json": "2eccb987a8a090377e677510e64aaf77a149cc3e556d6d7307dbcb831d608933",
+    "experiments/prose-qr/finder-native/layout.mjs": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+    "docs/research/prose-qr/phase-49/run-01.json": "2c653a928bca49012d78cc424f1246c94c8668eadd85649739ecfa695afd8a94",
+    "docs/research/prose-qr/phase-49/run-02.json": "0adf743e95e17d9d8c4e1283f9c7f029a870277f84362bd00dda7dee9d23bf6e"
+  }
+}
