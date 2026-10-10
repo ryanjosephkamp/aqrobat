@@ -1,0 +1,3 @@
+# Phase52 — wider cursive strokes remain vertically short
+
+All32 multirow and32 single-line native resources completed, with32 exact immediate multirow repeats. No resource fails the mechanical gates, but no same-font pair meets the preregistered component/contrast objective. The largest measured minimum component span is18px against48 required; both conditional full-context native slots are unattempted. No QR payload, native finder, decoder slot or phone candidate is created. Regular script and intrinsic Black-face resources stay separate; local word visibility is not owner/natural-prose acceptance.

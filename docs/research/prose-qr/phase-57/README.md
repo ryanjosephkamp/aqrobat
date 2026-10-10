@@ -1,0 +1,3 @@
+# Phase57 — serif-dot/stem context
+
+Six glyph resources complete: three row-clearance rejections leave nine native primary slots unattempted; three regular serif sources and exact repeats complete. All15 completed primary slots and five passive parity profiles retain no intended native geometry. No ordinary OpenCV native outline occurs. See analysis.json for exact branches and native structure. Source-letter adjustments and positive tracking are rendering only. Expected geometry, source-aligned samples and nearest unselected quads never replace actual reader selection. No text payload or phone candidate is created. No phone/print results; research remains unsolved.
