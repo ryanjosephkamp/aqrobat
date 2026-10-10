@@ -1,0 +1,117 @@
+{
+  "classification": "Post-default-return init replica, never input to a reader",
+  "sourceURL": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/modules/objdetect/src/qrcode.cpp",
+  "rgbaInputSha256": "2a14a879aefda8dd14059502ea716f4445d1af3a53da4a93a4beb48726c4550f",
+  "grayReplicaSha256": "17037f2c7a93d8fdac49ae57b4af7d98abb43f5aa039b0281915ca5594a09a1b",
+  "binaryReplicaSha256": "bddd0fbf1b90d2c286810af97205df098f7a5f6fc9001dda6ff7cdab5e53c27e",
+  "pngSha256": "71a3e3de097b647a772326bfac53f0ef819c8e4589e27e0e24efcb749abe66ce",
+  "actualDefaultQuad": [
+    [
+      [1490.0, 1470.0],
+      [8749.0, 1470.0],
+      [8749.0, 8769.0],
+      [1490.0, 8769.0]
+    ]
+  ],
+  "expectedRegionRays": [
+    {
+      "point": [124.34285714285713, 124.34285714285713],
+      "classification": "Expected source-region replica diagnostic; not selected geometry",
+      "axes": {
+        "horizontal": {
+          "runs": [14, 18, 36, 20, 14],
+          "complete": true,
+          "rms": 0.30903354203679284,
+          "centralSpan": 36
+        },
+        "vertical": {
+          "runs": [15, 19, 35, 19, 14],
+          "complete": true,
+          "rms": 0.330088008023827,
+          "centralSpan": 35
+        },
+        "diagonalDown": {
+          "runs": [14, 19, 35, 19, 14],
+          "complete": true,
+          "rms": 0.3262823178868135,
+          "centralSpan": 35
+        },
+        "diagonalUp": {
+          "runs": [14, 19, 35, 19, 15],
+          "complete": true,
+          "rms": 0.330088008023827,
+          "centralSpan": 35
+        }
+      },
+      "balancedCentralSpans": 0.9722222222222222,
+      "completeAxes": 4,
+      "wideRowFraction": 0.813953488372093
+    },
+    {
+      "point": [387.65714285714284, 124.34285714285713],
+      "classification": "Expected source-region replica diagnostic; not selected geometry",
+      "axes": {
+        "horizontal": {
+          "runs": [16, 18, 36, 18, 14],
+          "complete": true,
+          "rms": 0.2836028977531693,
+          "centralSpan": 36
+        },
+        "vertical": {
+          "runs": [15, 19, 35, 19, 14],
+          "complete": true,
+          "rms": 0.330088008023827,
+          "centralSpan": 35
+        },
+        "diagonalDown": {
+          "runs": [15, 19, 35, 18, 14],
+          "complete": true,
+          "rms": 0.3142843138596665,
+          "centralSpan": 35
+        },
+        "diagonalUp": {
+          "runs": [14, 19, 35, 18, 14],
+          "complete": true,
+          "rms": 0.30977411124882603,
+          "centralSpan": 35
+        }
+      },
+      "balancedCentralSpans": 0.9722222222222222,
+      "completeAxes": 4,
+      "wideRowFraction": 0.813953488372093
+    },
+    {
+      "point": [124.34285714285713, 387.65714285714284],
+      "classification": "Expected source-region replica diagnostic; not selected geometry",
+      "axes": {
+        "horizontal": {
+          "runs": [14, 18, 36, 20, 14],
+          "complete": true,
+          "rms": 0.30903354203679284,
+          "centralSpan": 36
+        },
+        "vertical": {
+          "runs": [15, 19, 35, 19, 15],
+          "complete": true,
+          "rms": 0.33361913157148776,
+          "centralSpan": 35
+        },
+        "diagonalDown": {
+          "runs": [14, 18, 35, 19, 15],
+          "complete": true,
+          "rms": 0.3142843138596665,
+          "centralSpan": 35
+        },
+        "diagonalUp": {
+          "runs": [15, 19, 34, 20, 14],
+          "complete": true,
+          "rms": 0.3682413497382592,
+          "centralSpan": 34
+        }
+      },
+      "balancedCentralSpans": 0.9444444444444444,
+      "completeAxes": 4,
+      "wideRowFraction": 0.813953488372093
+    }
+  ]
+}
