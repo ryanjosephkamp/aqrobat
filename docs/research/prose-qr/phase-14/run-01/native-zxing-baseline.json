@@ -1,0 +1,31 @@
+{
+  "ms": 488,
+  "options": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1
+  },
+  "results": [
+    {
+      "isValid": true,
+      "error": "",
+      "text": "https://example.com/",
+      "bytes": [
+        104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108, 101,
+        46, 99, 111, 109, 47
+      ],
+      "position": {
+        "topLeft": { "x": 729, "y": 702 },
+        "topRight": { "x": 4374, "y": 702 },
+        "bottomRight": { "x": 4401, "y": 4347 },
+        "bottomLeft": { "x": 756, "y": 4293 }
+      },
+      "width": 25,
+      "height": 25,
+      "symbolPath": "native-zxing-baseline-0-symbol.bin",
+      "symbolSha256": "b63fab4427582267755b104d7349101a05e9c66c96c2fce447398cc47ce98d41"
+    }
+  ],
+  "exact": true,
+  "classification": "Ordinary payload profile"
+}

@@ -1,0 +1,5483 @@
+{
+  "phase": 11,
+  "id": "monaco-justified",
+  "batch": "run-01",
+  "key": "p11-monaco-justified",
+  "pngSha256": "a7e4a5745febd122bd749589f3420615876f50029738daeba63ed95bc340ba36",
+  "rgbaSha256": "261bddae96d4ec632182ead9b14bd619ca0633effa68bea1e5e118e0821aec06",
+  "profiles": {
+    "default": { "ms": 177, "results": [] },
+    "baseline": { "ms": 172, "results": [] },
+    "errorsDiagnostic": {
+      "ms": 173,
+      "results": [
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 104, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 133, 224, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 1193 },
+            "topRight": { "x": 839, "y": 1192 },
+            "bottomRight": { "x": 820, "y": 1012 },
+            "bottomLeft": { "x": 1059, "y": 1026 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "b330cb00faf37dbf72f763ec80b020cdc50d28af8fef4775d344d5c4c7244f69",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-0-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 1062, "y": 1195 },
+            "topRight": { "x": 835, "y": 1195 },
+            "bottomRight": { "x": 835, "y": 1023 },
+            "bottomLeft": { "x": 1062, "y": 1023 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "061241a3661402e52fe1114dd51feb73c635de30d0e97933ac843fbed6ac913b",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-1-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 1231 },
+            "topRight": { "x": 839, "y": 1230 },
+            "bottomRight": { "x": 820, "y": 1050 },
+            "bottomLeft": { "x": 1059, "y": 1064 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "6b0d496e0d915cd063585ebd2654acbe99fc154dc6d568b7be1b4ad16416f3ce",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-2-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 3652, "y": 1231 },
+            "topRight": { "x": 3431, "y": 1230 },
+            "bottomRight": { "x": 3412, "y": 1050 },
+            "bottomLeft": { "x": 3651, "y": 1064 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "6b0d496e0d915cd063585ebd2654acbe99fc154dc6d568b7be1b4ad16416f3ce",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-3-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 3654, "y": 1233 },
+            "topRight": { "x": 3427, "y": 1233 },
+            "bottomRight": { "x": 3427, "y": 1061 },
+            "bottomLeft": { "x": 3654, "y": 1061 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "37840e0cf8542ff68c1c3a891d6f9ac01d28259d6d59c4a379f7915e15289b03",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-4-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 109, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 1269 },
+            "topRight": { "x": 839, "y": 1268 },
+            "bottomRight": { "x": 820, "y": 1088 },
+            "bottomLeft": { "x": 1059, "y": 1102 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "968ce93691d4482787b8b8bb96944f9ec54e8324172d206f2f928c4b7f6f34bf",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-5-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 109, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 3652, "y": 1269 },
+            "topRight": { "x": 3431, "y": 1268 },
+            "bottomRight": { "x": 3412, "y": 1088 },
+            "bottomLeft": { "x": 3651, "y": 1102 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "968ce93691d4482787b8b8bb96944f9ec54e8324172d206f2f928c4b7f6f34bf",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-6-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 1062, "y": 1309 },
+            "topRight": { "x": 835, "y": 1309 },
+            "bottomRight": { "x": 835, "y": 1137 },
+            "bottomLeft": { "x": 1062, "y": 1137 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "20974d8a9f8c8d4e3e2a7f89d3a953eca82947c940a7a647368c86d59d2de326",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-7-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 104, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 133, 224, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 1345 },
+            "topRight": { "x": 839, "y": 1344 },
+            "bottomRight": { "x": 820, "y": 1164 },
+            "bottomLeft": { "x": 1059, "y": 1178 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "b330cb00faf37dbf72f763ec80b020cdc50d28af8fef4775d344d5c4c7244f69",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-8-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 104, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 133, 224, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 3652, "y": 1345 },
+            "topRight": { "x": 3431, "y": 1344 },
+            "bottomRight": { "x": 3412, "y": 1164 },
+            "bottomLeft": { "x": 3651, "y": 1178 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "b330cb00faf37dbf72f763ec80b020cdc50d28af8fef4775d344d5c4c7244f69",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-9-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 3654, "y": 1347 },
+            "topRight": { "x": 3427, "y": 1347 },
+            "bottomRight": { "x": 3427, "y": 1175 },
+            "bottomLeft": { "x": 3654, "y": 1175 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "061241a3661402e52fe1114dd51feb73c635de30d0e97933ac843fbed6ac913b",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-10-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 1383 },
+            "topRight": { "x": 839, "y": 1382 },
+            "bottomRight": { "x": 820, "y": 1202 },
+            "bottomLeft": { "x": 1059, "y": 1216 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "6b0d496e0d915cd063585ebd2654acbe99fc154dc6d568b7be1b4ad16416f3ce",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-11-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 3652, "y": 1383 },
+            "topRight": { "x": 3431, "y": 1382 },
+            "bottomRight": { "x": 3412, "y": 1202 },
+            "bottomLeft": { "x": 3651, "y": 1216 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "6b0d496e0d915cd063585ebd2654acbe99fc154dc6d568b7be1b4ad16416f3ce",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-12-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 109, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 1421 },
+            "topRight": { "x": 839, "y": 1420 },
+            "bottomRight": { "x": 820, "y": 1240 },
+            "bottomLeft": { "x": 1059, "y": 1254 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "968ce93691d4482787b8b8bb96944f9ec54e8324172d206f2f928c4b7f6f34bf",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-13-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 109, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 3652, "y": 1421 },
+            "topRight": { "x": 3431, "y": 1420 },
+            "bottomRight": { "x": 3412, "y": 1240 },
+            "bottomLeft": { "x": 3651, "y": 1254 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "968ce93691d4482787b8b8bb96944f9ec54e8324172d206f2f928c4b7f6f34bf",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-14-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 1062, "y": 1423 },
+            "topRight": { "x": 835, "y": 1423 },
+            "bottomRight": { "x": 835, "y": 1251 },
+            "bottomLeft": { "x": 1062, "y": 1251 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "f01789e045976272a107bd0b3304c7d87952454349217142069c99283846790a",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-15-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 104, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 133, 224, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 3785 },
+            "topRight": { "x": 839, "y": 3784 },
+            "bottomRight": { "x": 820, "y": 3604 },
+            "bottomLeft": { "x": 1059, "y": 3618 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "b330cb00faf37dbf72f763ec80b020cdc50d28af8fef4775d344d5c4c7244f69",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-16-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 1062, "y": 3787 },
+            "topRight": { "x": 835, "y": 3787 },
+            "bottomRight": { "x": 835, "y": 3615 },
+            "bottomLeft": { "x": 1062, "y": 3615 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "061241a3661402e52fe1114dd51feb73c635de30d0e97933ac843fbed6ac913b",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-17-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 3823 },
+            "topRight": { "x": 839, "y": 3822 },
+            "bottomRight": { "x": 820, "y": 3642 },
+            "bottomLeft": { "x": 1059, "y": 3656 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "6b0d496e0d915cd063585ebd2654acbe99fc154dc6d568b7be1b4ad16416f3ce",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-18-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 109, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 3861 },
+            "topRight": { "x": 839, "y": 3860 },
+            "bottomRight": { "x": 820, "y": 3680 },
+            "bottomLeft": { "x": 1059, "y": 3694 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "968ce93691d4482787b8b8bb96944f9ec54e8324172d206f2f928c4b7f6f34bf",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-19-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 1062, "y": 3901 },
+            "topRight": { "x": 835, "y": 3901 },
+            "bottomRight": { "x": 835, "y": 3729 },
+            "bottomLeft": { "x": 1062, "y": 3729 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "20974d8a9f8c8d4e3e2a7f89d3a953eca82947c940a7a647368c86d59d2de326",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-20-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 104, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 133, 224, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 3937 },
+            "topRight": { "x": 839, "y": 3936 },
+            "bottomRight": { "x": 820, "y": 3756 },
+            "bottomLeft": { "x": 1059, "y": 3770 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "b330cb00faf37dbf72f763ec80b020cdc50d28af8fef4775d344d5c4c7244f69",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-21-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 77, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 3975 },
+            "topRight": { "x": 839, "y": 3974 },
+            "bottomRight": { "x": 820, "y": 3794 },
+            "bottomLeft": { "x": 1059, "y": 3808 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "6b0d496e0d915cd063585ebd2654acbe99fc154dc6d568b7be1b4ad16416f3ce",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-22-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [
+            131, 117, 130, 124, 138, 172, 234, 79, 139, 121, 142, 225, 147, 120,
+            150, 77, 145, 215, 150, 138, 145, 220, 138, 176, 153, 234, 141, 243,
+            225, 96, 231, 79, 139, 163, 141, 162, 225, 185, 152, 165, 157, 142,
+            133, 163, 146, 88, 145, 127, 131, 139, 133, 211, 147, 71, 136, 150,
+            154, 212, 133, 172, 134, 83, 133, 129, 140, 77, 132, 129, 149, 65,
+            136, 143, 133, 110, 150, 112, 138, 79, 129, 143, 134, 75, 134, 76,
+            232, 175, 137, 207, 132, 78, 155, 164, 154, 71, 133, 71, 138, 203,
+            134, 85, 233, 217, 141, 205, 133, 142, 134, 96, 132, 171, 140, 131,
+            147, 106, 155, 140, 137, 83, 136, 143, 138, 206, 134, 114, 224, 126,
+            143, 205, 154, 235, 134, 73, 138, 109, 137, 199, 133, 142, 134, 127,
+            144, 78, 149, 109, 228, 206, 154, 76, 138, 195, 136, 175, 133, 142,
+            133, 64, 144, 65, 235, 142, 146, 237, 133, 140, 149, 181, 228, 141
+          ],
+          "position": {
+            "topLeft": { "x": 1060, "y": 4013 },
+            "topRight": { "x": 839, "y": 4012 },
+            "bottomRight": { "x": 820, "y": 3832 },
+            "bottomLeft": { "x": 1059, "y": 3846 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "968ce93691d4482787b8b8bb96944f9ec54e8324172d206f2f928c4b7f6f34bf",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-23-symbol.bin",
+          "finders": [
+            {
+              "exact": 30,
+              "total": 49,
+              "mask": [
+                [1, 1, 0, 0, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 0, 0, 1],
+                [1, 1, 0, 1, 0, 0, 1],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 1, 1, 0, 0, 1],
+                [1, 1, 1, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 5 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 1, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 31,
+              "total": 49,
+              "mask": [
+                [0, 1, 0, 0, 1, 0, 0],
+                [0, 1, 1, 0, 1, 0, 0],
+                [0, 1, 1, 1, 1, 0, 1],
+                [1, 1, 1, 1, 1, 1, 0],
+                [1, 0, 1, 1, 1, 1, 0],
+                [1, 0, 1, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [0, 0, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [0, 1, 1, 1, 1, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 4 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 1, 1, 1, 0, 0],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 33,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [1, 1, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 1],
+                [0, 1, 0, 1, 1, 0, 1],
+                [0, 1, 0, 0, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [1, 1, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 2 },
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 0],
+                  "runs": [
+                    { "value": 1, "length": 6 },
+                    { "value": 0, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [0, 1, 1, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 0, "length": 1 },
+                    { "value": 1, "length": 3 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        },
+        {
+          "isValid": false,
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "text": "",
+          "bytes": [],
+          "position": {
+            "topLeft": { "x": 1062, "y": 4015 },
+            "topRight": { "x": 835, "y": 4015 },
+            "bottomRight": { "x": 835, "y": 3843 },
+            "bottomLeft": { "x": 1062, "y": 3843 }
+          },
+          "format": "QRCode",
+          "width": 61,
+          "height": 61,
+          "symbolSha256": "f01789e045976272a107bd0b3304c7d87952454349217142069c99283846790a",
+          "symbolPath": "p11-monaco-justified-errorsDiagnostic-24-symbol.bin",
+          "finders": [
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            },
+            {
+              "exact": 37,
+              "total": 49,
+              "mask": [
+                [1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 0, 1, 0, 0, 1],
+                [1, 0, 0, 1, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1]
+              ],
+              "rays": [
+                {
+                  "dx": 1,
+                  "dy": 0,
+                  "values": [0, 0, 0, 1, 0, 0, 0],
+                  "runs": [
+                    { "value": 0, "length": 3 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 3 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 0,
+                  "dy": 1,
+                  "values": [1, 1, 1, 1, 1, 1, 1],
+                  "runs": [{ "value": 1, "length": 7 }],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": 1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                },
+                {
+                  "dx": 1,
+                  "dy": -1,
+                  "values": [1, 0, 0, 1, 0, 0, 1],
+                  "runs": [
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 },
+                    { "value": 0, "length": 2 },
+                    { "value": 1, "length": 1 }
+                  ],
+                  "exact": false
+                }
+              ],
+              "pass": false
+            }
+          ],
+          "completeFinders": false,
+          "intendedQuad": false,
+          "intendedDimension": false,
+          "nativeFinderDiagnosticPass": false
+        }
+      ]
+    }
+  }
+}
