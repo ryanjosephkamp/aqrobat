@@ -1,0 +1,121 @@
+{
+  "ms": 231,
+  "options": { "formats": ["QRCode"], "returnErrors": true },
+  "results": [
+    {
+      "isValid": false,
+      "error": "ChecksumError @ QRDecoder.cpp:337",
+      "text": "",
+      "bytes": [],
+      "position": {
+        "topLeft": { "x": 810, "y": 837 },
+        "topRight": { "x": 5076, "y": 837 },
+        "bottomRight": { "x": 5076, "y": 5049 },
+        "bottomLeft": { "x": 810, "y": 5049 }
+      },
+      "width": 25,
+      "height": 25,
+      "symbolPath": "native-zxing-errors-diagnostic-0-symbol.bin",
+      "symbolSha256": "62cc7c56a73260197485426483edb573288c62bccd7f53cabe13f6dde2a34fad",
+      "finderAudit": {
+        "finders": [
+          {
+            "wrong": 0,
+            "rays": [
+              {
+                "dx": 1,
+                "dy": 0,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 0,
+                "dy": 1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 1,
+                "dy": 1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 1,
+                "dy": -1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              }
+            ],
+            "complete": true
+          },
+          {
+            "wrong": 0,
+            "rays": [
+              {
+                "dx": 1,
+                "dy": 0,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 0,
+                "dy": 1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 1,
+                "dy": 1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 1,
+                "dy": -1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              }
+            ],
+            "complete": true
+          },
+          {
+            "wrong": 3,
+            "rays": [
+              {
+                "dx": 1,
+                "dy": 0,
+                "values": [1, 0, 0, 1, 1, 0, 1],
+                "exact": false
+              },
+              {
+                "dx": 0,
+                "dy": 1,
+                "values": [1, 0, 1, 1, 1, 0, 1],
+                "exact": true
+              },
+              {
+                "dx": 1,
+                "dy": 1,
+                "values": [1, 0, 0, 1, 1, 0, 1],
+                "exact": false
+              },
+              {
+                "dx": 1,
+                "dy": -1,
+                "values": [1, 0, 0, 1, 1, 0, 1],
+                "exact": false
+              }
+            ],
+            "complete": false
+          }
+        ],
+        "intendedQuad": true,
+        "intendedDimension": true,
+        "complete": false
+      }
+    }
+  ],
+  "exact": false,
+  "classification": "Error-reporting diagnostic, never acceptance"
+}
