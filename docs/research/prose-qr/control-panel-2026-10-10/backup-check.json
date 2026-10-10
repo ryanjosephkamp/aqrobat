@@ -1,0 +1,22 @@
+{
+  "schema": "aqrobat.control-panel-backup-check.v1",
+  "atUtc": "2026-10-10T19:15:54.183825+00:00",
+  "artifactCommit": "4d3da835873f1305e9bb7f792485c08a55492a7a",
+  "baselineCommit": "84a79659d40b25cdbcf6663540dbaafdd5741828",
+  "wholeDiffWhitespaceCheckExitCode": 2,
+  "intentionalWhitespaceException": {
+    "path": "docs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt",
+    "reason": "Byte-identical pinned encoder source snapshot retains original trailing whitespace; changing it would violate source custody.",
+    "lines": [134, 728, 732, 795, 821],
+    "snapshotExactlyEqualsPinnedOriginal": true,
+    "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+    "rawCheckOutput": "docs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt:134: trailing whitespace.\n+        version, \ndocs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt:728: trailing whitespace.\n+        mode, \ndocs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt:732: trailing whitespace.\n+        numChars, \ndocs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt:795: trailing whitespace.\n+            ordinal, \ndocs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt:821: trailing whitespace.\n+            modeBits, \n"
+  },
+  "allOtherArtifactWhitespaceCheckExitCode": 0,
+  "sourceSnapshotAltered": false,
+  "finalInventoryScope": "Both fresh control-panel trees including this receipt",
+  "finalArtifactBytes": 811194,
+  "finalArtifactFiles": 77,
+  "capBytes": 4000000,
+  "withinOriginal25MinuteWindow": true
+}
