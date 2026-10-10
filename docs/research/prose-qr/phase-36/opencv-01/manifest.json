@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-10T04:48:49.182645+00:00",
+  "opencv": "4.13.0",
+  "ordinaryPlanned": 2,
+  "nativeInputs": 1,
+  "unattemptedNative": [],
+  "options": "default QRCodeDetector.detectAndDecode; no setters, transforms or extraction",
+  "diagnosticReplica": {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/modules/objdetect/src/qrcode.cpp",
+    "resize": "512 square, INTER_AREA",
+    "threshold": "ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 83, 2",
+    "acceptanceInput": false
+  },
+  "sources": {
+    "/Users/noir/Documents/aqrobat/experiments/prose-qr/context-proportional/independent.py": "28e2b836cfcdf20a81c5d28cc20a40a8a961cad41d3bd65cf120048cefb14066",
+    "docs/research/prose-qr/phase-36/PLAN.md": "9462ae91f1444e0b1c6d632bc88b083a86c9dc061f259c52ea0f3354ac712c16",
+    "docs/research/prose-qr/phase-32/REPLICA-PLAN.md": "685ffcf152d06a070a3ea07060922a2a32565eba82fabb1c0a984ad4ff8a540a",
+    "docs/research/prose-qr/phase-32/opencv-source-01/receipt.json": "63813dc7ce42060335d73893c1837318c077c92bb81524c2a26265c18c25657a"
+  },
+  "inputs": [
+    {
+      "id": "control",
+      "receipt": "docs/research/prose-qr/phase-36/run-01/control-pixels.json",
+      "sha256": "24fe8673fe462ae5f34bbcb818c6ff520350a67136e08c4f7c2a3087b173acaa"
+    },
+    {
+      "id": "run-01",
+      "receipt": "docs/research/prose-qr/phase-36/run-01/native-pixels.json",
+      "sha256": "63150cbfa25319701b8b397475f0577bb834cfa19d939923d2268372ed0d262d"
+    }
+  ]
+}

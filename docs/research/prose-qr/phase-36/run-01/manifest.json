@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-10T04:43:38.897Z",
+  "baseline": "caab31aa02e20dfebeadc67580ed55e01994f699",
+  "plannedNative": 1,
+  "plannedRepeat": 1,
+  "plannedFullControl": 1,
+  "plannedSolidControl": 1,
+  "cap": 8000000,
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "passiveHash": "862a1480ba68eea50de3f03431db18087d238f94bb682c0171d85d43398ddd9d",
+  "sources": {
+    "experiments/prose-qr/context-proportional/capture.mjs": "65ac28b22e7f36cd55243146bcaee4a0b82c5dd8b31dedee62e949bb53e09b08",
+    "experiments/prose-qr/context-proportional/proposal.mjs": "46654082663f8bbc00c38f41d14704e77028ade085f951fc49cecf5210846e73",
+    "experiments/prose-qr/context-proportional/metrics.mjs": "9e178946d8fc8aec7bf20789721b0aa183f4f0b29488f9269e8efedd440f721c",
+    "docs/research/prose-qr/phase-36/metrics-01/metrics.json": "8ea4d4a9037e21eb10908e16af95bb24c079d065dc7dfaf6c82b03f242a8783d",
+    "experiments/prose-qr/context-stagger/capture.mjs": "8792e827df57bfb500071afae9f69ce8e7fcfad7e5d41919a2faff0bdf89c08b",
+    "docs/research/prose-qr/phase-36/run-01.json": "4ae2b0c1eb5e821a25ea292335aa9ee91149c19d2e879e212e9b8cf43a3ab795",
+    "docs/research/prose-qr/phase-36/PLAN.md": "9462ae91f1444e0b1c6d632bc88b083a86c9dc061f259c52ea0f3354ac712c16",
+    "docs/research/prose-qr/phase-36/STORAGE-ADDENDUM.md": "85eaf1314554a3bc1203be93d047a582894f0ac18e92b78ca2f85306c50453e3",
+    "experiments/prose-qr/context-probe-pack/probe-pack.mjs": "b0e05e5641723d3dfd3f161054c933a1df1f46f751bdb36421834d0c9ff5fdbb",
+    "docs/research/prose-qr/phase-37/fixtures-01/done.json": "f864bc7e539b5706911cc03ed2021608899c63197c42c85666a3cd4d7ed0de8b",
+    "experiments/prose-qr/finder-runs/probe.mjs": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+    "experiments/prose-qr/finder-region/probe.mjs": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/finder-page/symbol-audit.mjs": "dc3a81e0d16069247cf2bfd15a09470b90e0b1b31f7f60e44965521d29988043",
+    "experiments/prose-qr/layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd"
+  }
+}
