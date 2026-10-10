@@ -1,0 +1,36 @@
+{
+  "observedAtUtc": "2026-10-10T20:59:59.939894+00:00",
+  "workerFinalInventoryEntriesVerified": 23,
+  "frozenLedgerDistinctSourceHashesVerified": 55,
+  "workerStaticAssertionsReported": 383,
+  "rows": 7,
+  "counts": {
+    "families": 7,
+    "filledReceipts": 7,
+    "outlineReceipts": 7,
+    "outlineEnvelopeArithmeticComplete": 7,
+    "savedOutlineNominalEnvelopeFits": 0,
+    "savedL2EnvelopeFits": 0,
+    "standaloneFourAxisMetricPasses": 1,
+    "nativeGatePassesEstablished": 0,
+    "nativePayloadProposalsEstablished": 0
+  },
+  "workerFilesEditedByParent": false,
+  "parentCheckFailure": "An initial inventory assertion failed in the parent packaging command. A corrected direct per-filename check verified every worker final inventory entry and every frozen-ledger source hash without altering files. The failed assertion did not identify a file; its specific cause is unresolved.",
+  "newExperiments": 0,
+  "newRenders": 0,
+  "newReaderCalls": 0,
+  "browserQa": "not run; this was a saved-resource-only audit",
+  "broaderRun": "prepared only; no goal created or later phase started",
+  "orchestration": {
+    "modelRequested": "gpt-6.1-sol",
+    "effortRequested": "high",
+    "freshContext": true,
+    "workers": 1,
+    "blockingWaitCalls": 6,
+    "timeouts": 5,
+    "automaticHandback": true,
+    "fastMode": "unverified",
+    "costSavings": "not measured"
+  }
+}
