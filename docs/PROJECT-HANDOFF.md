@@ -1,72 +1,96 @@
-> **Current review:** Aqrobat 0.4.0 adds saved-recipe browser insertion.
-> Ryan has explicitly deferred moving to a new Codex project. Continue in this
-> chat/repository; refresh the full handoff only when he requests the move.
-> Read [browser insertion](browser-insertion.md) before the older review prompt below.
+# Aqrobat project handoff — October 10, 2026
 
-# Continue Aqrobat in its own Codex project
+Ryan has now explicitly chosen a **new local Codex project and fresh chat** for
+Aqrobat, using the existing folder `/Users/noir/Documents/aqrobat`. This
+supersedes older notes that deferred the project move or required staying in
+the previous chat. No files, repository, branch, or Git history need to move.
+The user will create the project/chat; this handoff has not launched one.
 
-Add the existing folder **`/Users/noir/Documents/aqrobat`** as a Codex project,
-then open a new chat there if desired. This is already an independent Git
-repository; nothing needs to be moved out of Splashery. No new chat has been
-created by this handoff.
+The active next task is a maximum-three-hour **prose QR research run with
+GPT-6 Astra at Xhigh effort**. Start with
+[the current bootstrap](bootstrap/astra-2026-10-10/README.md),
+[the execution prompt](bootstrap/astra-2026-10-10/RUN-PROMPT.md), or
+[the phone-friendly setup guide](bootstrap/astra-2026-10-10/index.html).
+The timer begins when that new chat executes the run, not during this handoff.
 
+## Exact workspace and Git boundaries
+
+- Directory: `/Users/noir/Documents/aqrobat` — already an independent Git repository.
 - Remote: <https://github.com/ryanjosephkamp/aqrobat>
 - Branch: `codex/aqrobat-foundation`
-- Existing PR: <https://github.com/ryanjosephkamp/aqrobat/pull/1> — keep draft
-- Preview: <https://ryanjosephkamp.github.io/aqrobat/>
-- Package/build: 0.4.0, npm `private: true`, unpublished
-- Pages currently follows the draft branch. A push there updates the preview.
-- Read `AGENTS.md`, `docs/text-portability.md`, `docs/validation.md`, and
-  `docs/distribution.md` before changing anything.
+- Existing PR: <https://github.com/ryanjosephkamp/aqrobat/pull/1> — OPEN, keep draft.
+- Research baseline: `227eaff4da4bdd1c631d796048f076faffa4d249`.
+- Planning baseline: `bacae8e51a34daadee79e7a1e7a1067e0b97f69d`.
+  This bootstrap follows it; verify the live HEAD and remote instead of resetting.
+- Package: 0.4.2, npm `private: true`, unpublished.
+- Preserve the product, extension, downloads, all research/prototypes, owner
+  profiles, other repositories/tasks/jobs. No merge, npm publication, release,
+  store submission, new host, deployment configuration change, or messages.
+- The user-created project/chat is authorized. Additional chats/agents and
+  physical repository migration remain outside this run.
 
-## Next chat prompt
+Use the local checkout for this task. Do not clone into another folder, create
+an empty replacement repository, switch to main, or create a worktree as part
+of setup. Do not inherit Splashery instructions. Only the new chat should run
+this research; the previous chat is handing off and has no research job running.
 
-> Work only in /Users/noir/Documents/aqrobat. Read AGENTS.md and
-> docs/PROJECT-HANDOFF.md, verify the current branch, remote, HEAD, and dirty
-> state, then review Aqrobat 0.3.0 with my pasted-text, TextEdit, website/blog,
-> email, and extension results. Continue existing draft PR #1 on
-> codex/aqrobat-foundation. Keep it a draft and npm unpublished/private:true.
-> Copyable text is the primary acceptance gate; do not mark it complete until
-> I accept its destination formatting. Preserve image exports, both comparison
-> grids, original prototypes, Splashery, the private PDF archive, browser
-> profiles, and other sessions. Distinguish matrix decoding, raw text/image
-> decoding, native formatting, phone scans, and physical print. Resolve concrete
-> Aqrobat defects. Do not merge, create another PR, publish npm, submit to the
-> Chrome Web Store, message anyone, or launch other chats/agents. Emoji atlas
-> remains deferred until we choose it explicitly.
+## Current scientific state
 
-## Work that remains
+The prose goal remains **unsolved**. The latest completed work is
+[session D](research/prose-qr/session-2026-10-10-d/CHECKPOINT.md), covering
+phases 70–74. It retains 15 native captures and 15 exact immediate-repeat
+receipts; 75/87 planned primary reader slots completed, while 12 were
+unattempted after a preserved setup abort. All strict selected structure gates
+fail. There is no new payload source or phone candidate.
 
-1. Owner review of plain TXT and styled text pasted into actual destination
-   editors and the saved/sent result. Check the exact decoded payload, not just
-   whether a scanner recognizes a code.
-2. Update/reload the existing unpacked extension folder to 0.3.0 and confirm
-   toolbar color and appearance persistence on Ryan's installed ID.
-3. Physical-print observations when printer access is available.
-4. Then select the next phase: targeted text compatibility or the bounded
-   pinned-Unicode emoji atlas proposal in `docs/emoji-atlas-plan.md`.
-5. Merge/Pages main selection and any npm release remain owner decisions after
-   acceptance. Name lookup alone does not reserve an npm package.
+PILL retains stable central rows and more balanced spans, but the true diagonal
+still fails (0.5563 versus 0.35) and ordinary dimension 113 differs from source 125. These are outlined Latin structural controls, not natural prose or an
+unstyled-text result. No new phone results exist.
 
-## Reproduce checks
+The [40-idea bank](research/prose-qr/sol-three-hour-plan-2026-10-10/IDEAS.md)
+remains useful. Its older Sol/stay-in-chat recommendation is superseded by the
+current owner choice; the idea bank and sealed receipts stay unchanged. The
+new Astra prompt retains its scientific gates, exact-payload requirement,
+three-hour ceiling, 40-MB overall file cap, and preservation rules.
 
-```sh
-npm ci --ignore-scripts
-npm test
-npm run build
-npm run test:browser
-npm run test:text-browser
-npm run format:check
-```
+Read and verify the session D plans, results, executed source, historical source
+snapshots, custody, and download hashes before new experiments. Do not rerun
+sealed scripts in old output directories. Start fresh exclusive directories,
+record all outcomes, and back up milestones on the existing branch. A successful
+structure metric is not payload recovery; automated recovery is not phone
+acceptance. Keep styled, bold, intrinsic-heavy, logographic, regular Latin,
+and uniform-black ASCII results separate.
 
-Set `CHROME_PATH` to an installed compatible browser if needed. For an actual
-unpacked MV3 test, use Chrome for Testing with
-`EXTENSION_CHROME_PATH=/path/to/chrome npm run test:extension`. It creates and
-removes only its own temporary profile. On macOS with Swift/AppKit installed,
-`npm run test:native-text` checks the RTF fixtures created by the text-browser
-suite. These platform checks are not device/print acceptance.
+## Product work is preserved and separate
 
-Original owner bug-example folders under Downloads were inspected read-only.
-New review files are in `/Users/noir/Documents/aqrobat-text-layout-2026-10-07/`.
-Private PDF experiments stay in `/Users/noir/Documents/pdf-motion`; no PDF motion
-work belongs in this repository.
+The product already includes deterministic character/emoji QR generation,
+image exports and comparison grids, text/RTF/HTML outputs, recipes, and saved
+recipe browser insertion. Read [browser insertion](browser-insertion.md),
+[text portability](text-portability.md), [validation](validation.md), and
+[distribution](distribution.md) when returning to product work.
+
+Open acceptance items include Gmail insertion and saved/received layout,
+portable plain-text copying, installed-extension observations, physical print,
+and broader phone testing. Ryan's earlier successful RTF and character-QR
+observations are historical and scenario-specific. They do not establish prose
+QR recovery or universal paste/scan reliability. The emoji atlas remains a
+proposal; do not fold it into the three-hour prose run.
+
+Do not rebuild product downloads for research-only changes. For later product
+changes, use the applicable tests listed in AGENTS.md and the validation docs.
+Reusing this existing checkout preserves installed dependencies; no setup
+installation is necessary just to create the project.
+
+## Recovery and historical records
+
+The former version of this handoff is preserved byte-for-byte at
+[PROJECT-HANDOFF.previous.md](bootstrap/astra-2026-10-10/PROJECT-HANDOFF.previous.md).
+Older review prompts are historical and do not override this owner-approved
+project switch. Original external prototypes and the private PDF archive remain
+in their existing locations; this bootstrap does not copy or modify them.
+
+The bootstrap verification checks saved evidence/source bytes and Git tracking,
+not new decoding or device behavior. See
+[the fresh backup receipt](bootstrap/astra-2026-10-10/backup-verification-02.json).
+For a future interrupted run, first read that run's newest checkpoint and
+original deadline; do not automatically restart a three-hour allowance.
