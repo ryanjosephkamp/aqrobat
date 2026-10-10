@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-10T17:08:05.593Z",
+  "plannedPrimarySlots": 6,
+  "completedPrimarySlots": 6,
+  "errorSlots": 0,
+  "timeoutSlots": 0,
+  "unattemptedSlots": 0,
+  "passiveProfiles": 2,
+  "stockBranches": 2,
+  "slots": [
+    {
+      "id": "square",
+      "control": true,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "square",
+      "control": true,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "square",
+      "control": true,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "circle",
+      "control": true,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "circle",
+      "control": true,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "circle",
+      "control": true,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    }
+  ]
+}

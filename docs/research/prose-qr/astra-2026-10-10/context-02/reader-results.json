@@ -1,0 +1,93 @@
+{
+  "at": "2026-10-10T17:15:52.159Z",
+  "plannedPrimarySlots": 9,
+  "completedPrimarySlots": 9,
+  "errorSlots": 0,
+  "timeoutSlots": 0,
+  "unattemptedSlots": 0,
+  "passiveProfiles": 3,
+  "stockBranches": 5,
+  "slots": [
+    {
+      "id": "hebrew-article",
+      "control": false,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "hebrew-article",
+      "control": false,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "hebrew-article",
+      "control": false,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-normal",
+      "control": true,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-normal",
+      "control": true,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-normal",
+      "control": true,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-inverted",
+      "control": true,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-inverted",
+      "control": true,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-inverted",
+      "control": true,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    }
+  ]
+}
