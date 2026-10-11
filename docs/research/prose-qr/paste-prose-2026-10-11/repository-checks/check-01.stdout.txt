@@ -1,0 +1,30 @@
+
+> aqrobat@0.4.2 test
+> node --test tests/*.test.mjs
+
+✔ CLI preserves exact stdin including newline and returns structured metadata (90.043917ms)
+✔ output is exclusive and recipe reload is deterministic (299.6325ms)
+✔ CLI rejects overflow, malformed UTF-8, and unknown flags (288.080042ms)
+✔ independent decoder recovers exact ASCII/Unicode payloads at every ECC (74.337ms)
+✔ boost is explicit and exact requested ECC is honored when disabled (2.106333ms)
+✔ recipes round trip matrix, complete emoji sequences, and exact text (26.644375ms)
+✔ palettes preserve whole emoji, ignore duplicates/whitespace, and cycle per dark module (8.906917ms)
+✔ legacy v1 recipes retain schema, key, rows, and single-glyph validation (1.146917ms)
+✔ invalid Unicode, invisible glyphs, typos, bounds, and byte overflow reject (9.1635ms)
+✔ four-module quiet border remains clear, including repeated emoji rows (1.029166ms)
+✔ untrusted payload/glyph cannot inject markup into SVG or HTML (3ms)
+✔ canvas dark content uses font glyphs, never module rectangles (4.495875ms)
+✔ extension handlers isolate selection/link/page and keep payload out of URLs (21.327709ms)
+✔ saved recipe library validates payloads, IDs, names and limits without changing input (33.55925ms)
+✔ field packing keeps square modules and aligns mixed emoji with measured blanks (164.983667ms)
+✔ plain text balances ASCII and keeps whole emoji with wide light modules (13.993459ms)
+✔ formatted HTML and RTF contain text, safe escapes and fixed layout, without images (5.483792ms)
+✔ download base names cannot introduce paths or reserved device names (2.037666ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 757.024583

@@ -1,0 +1,91 @@
+{
+  "id": "corpus-05",
+  "hypothesis": "A source-specific geometric choice within 8\u201310pt and the default 6.5in Letter text measure may give denser glyph coverage than a fixed 9pt recipe. Scanner results are not used to select type size.",
+  "controls": [],
+  "specs": [
+    {
+      "id": "fit-dialogue",
+      "corpusId": "dialogue",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-numbers",
+      "corpusId": "numbers",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-narrow",
+      "corpusId": "narrow",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-wide",
+      "corpusId": "wide",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-long-words",
+      "corpusId": "long-words",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-paragraphs",
+      "corpusId": "paragraphs",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-punctuation",
+      "corpusId": "punctuation",
+      "recipe": {
+        "field": 624,
+        "fontSize": 12.666666666666666
+      }
+    },
+    {
+      "id": "fit-ordinary",
+      "corpusId": "ordinary",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    },
+    {
+      "id": "fit-technical",
+      "corpusId": "technical",
+      "recipe": {
+        "field": 624,
+        "fontSize": 13.333333333333334
+      }
+    }
+  ],
+  "reuse": [
+    {
+      "corpusId": "accents",
+      "evidence": "corpus-04/accents-9pt-65in",
+      "reason": "Identical already captured/read recipe; do not retry an unchanged failed image."
+    },
+    {
+      "corpusId": "long-single-copy",
+      "evidence": "corpus-04/long-single-65in",
+      "reason": "Identical already captured/read recipe."
+    }
+  ]
+}

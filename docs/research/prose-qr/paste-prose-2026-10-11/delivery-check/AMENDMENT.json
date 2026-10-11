@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-11T20:29:02.239256+00:00",
+  "failure": "Python template escaping inserted literal newlines into JavaScript single-quoted display labels, so the guide case table did not render.",
+  "correction": "Make the guide HTML template a Python raw string, preserving JavaScript newline escapes; rebuild and format the local guide.",
+  "next": "delivery-check-02 repeats only delivery controls. The prior attempt stopped before its one reserved resource capture. No QR candidate generation/capture/readers added.",
+  "candidateCaptures": 0,
+  "readerCalls": 0,
+  "resourceCapturesBeforeCorrection": 0
+}

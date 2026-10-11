@@ -1,0 +1,135 @@
+{
+  "id": "corpus-06",
+  "hypothesis": "The geometry fill proxy failed all nine new reader tests. Test two previously phone-accepted Avenir contrast modes on different prose, and an explicitly lighter Impact gray200 variant on three failing prose inputs. Each changes the native input; none repeats an unchanged failure.",
+  "controls": [],
+  "specs": [
+    {
+      "id": "avenir-dialogue-black",
+      "corpusId": "dialogue",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "gray": 0
+      }
+    },
+    {
+      "id": "avenir-dialogue-regular-gray",
+      "corpusId": "dialogue",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 400,
+        "gray": 96
+      }
+    },
+    {
+      "id": "avenir-ordinary-black",
+      "corpusId": "ordinary",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "gray": 0
+      }
+    },
+    {
+      "id": "avenir-ordinary-regular-gray",
+      "corpusId": "ordinary",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 400,
+        "gray": 96
+      }
+    },
+    {
+      "id": "avenir-accents-black",
+      "corpusId": "accents",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "gray": 0
+      }
+    },
+    {
+      "id": "avenir-accents-regular-gray",
+      "corpusId": "accents",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 400,
+        "gray": 96
+      }
+    },
+    {
+      "id": "avenir-long-single-copy-black",
+      "corpusId": "long-single-copy",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "gray": 0
+      }
+    },
+    {
+      "id": "avenir-long-single-copy-regular-gray",
+      "corpusId": "long-single-copy",
+      "recipe": {
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "quiet": 4,
+        "darkWeight": 900,
+        "lightWeight": 400,
+        "gray": 96
+      }
+    },
+    {
+      "id": "impact-dialogue-gray200",
+      "corpusId": "dialogue",
+      "recipe": {
+        "gray": 200,
+        "quiet": 4
+      }
+    },
+    {
+      "id": "impact-ordinary-gray200",
+      "corpusId": "ordinary",
+      "recipe": {
+        "gray": 200,
+        "quiet": 4
+      }
+    },
+    {
+      "id": "impact-long-words-gray200",
+      "corpusId": "long-words",
+      "recipe": {
+        "gray": 200,
+        "quiet": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-11T19:20:53.175Z",
+  "rows": [
+    {
+      "id": "paragraph",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-01/pdf-96/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "2f627818ebde0383b4093c7be8e91d4aa7512935ee0ee5196eae70085f633ec0",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "vision",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        }
+      ]
+    }
+  ]
+}

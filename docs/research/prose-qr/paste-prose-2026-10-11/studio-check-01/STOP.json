@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-11T20:00:06.184852+00:00",
+  "reason": "Harness read the asynchronous mocked clipboard before both Blob.text() promises finished. Empty mocked object observed; default DOCX/TXT/recipe downloads and exact native-input DOCX match completed before this assertion. No candidate or resource PNG captured.",
+  "candidateCaptures": 0,
+  "readerCalls": 0,
+  "resourceCaptures": 0,
+  "completedChecks": [
+    "default1114words1copy8pt",
+    "DOCXbyteExactWord08",
+    "sourceTXTExact",
+    "wrappedTXTExact"
+  ],
+  "amendment": "Await the real UI copied status before reading the mock, in new studio-check-02."
+}

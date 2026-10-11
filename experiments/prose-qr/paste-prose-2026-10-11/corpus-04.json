@@ -1,0 +1,29 @@
+{
+  "id": "corpus-04",
+  "hypothesis": "The complete long source overflows at 8.5pt and 6.25in; explicit 8pt at 6.25in or 8.5pt at the 6.5in default Letter text measure may fit without deleting words. These are distinct prospective recipes.",
+  "controls": [],
+  "specs": [
+    {
+      "id": "long-single-8pt",
+      "corpusId": "long-single-copy",
+      "recipe": {
+        "fontSize": 10.666666666666666
+      }
+    },
+    {
+      "id": "long-single-65in",
+      "corpusId": "long-single-copy",
+      "recipe": {
+        "fontSize": 11.333333333333334,
+        "field": 624
+      }
+    },
+    {
+      "id": "accents-9pt-65in",
+      "corpusId": "accents",
+      "recipe": {
+        "field": 624
+      }
+    }
+  ]
+}
