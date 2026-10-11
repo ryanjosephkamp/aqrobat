@@ -1,0 +1,91 @@
+{
+  "id": "workbench-test-04",
+  "hypothesis": "Whole-copy reflow changed Vision success for two Impact word streams. Prospectively allocate four remaining captures to black Avenir with three complete varying word streams and to real Heavy versus Regular with closer gray96 ink. No source rewording, truncation or failed-input retry. Existing ordinary controls remain retained.",
+  "cases": [
+    {
+      "id": "black-new-prose-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Morning light crossed the quiet room, and Mara opened the notebook she had carried for years. She wrote about the river, the neighbors, and the small habits that made an ordinary day feel worth remembering. Outside, a bicycle bell rang twice. Someone laughed near the corner shop. She paused, listened, and decided that the next sentence should leave enough space for another person to enter the story with their own memories.",
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 0,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "repeat": true
+      }
+    },
+    {
+      "id": "black-narrow-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "It is still a little late. I sit in a quiet room, listening to rain. A thin line of light slips in. We will write it all, in plain little words, until it is time to leave.",
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 0,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "repeat": true
+      }
+    },
+    {
+      "id": "black-broad-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Warm summer mornings bring wonderful moments. A wooden window frames a meadow where bees wander among blooms. People share bread, welcome neighbors, and remember why small everyday pleasures matter.",
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 0,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "repeat": true
+      }
+    },
+    {
+      "id": "avenir-regular-gray96",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.",
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 96,
+        "darkWeight": 900,
+        "lightWeight": 400,
+        "repeat": true
+      }
+    }
+  ],
+  "plannedNativeCaptures": 4,
+  "plannedImmediateRepeats": 4,
+  "maximumPrimaryReaderCalls": 12,
+  "plannedUniquePrimaryReaderCalls": 12,
+  "errorChecks": [
+    "source overflow even with repeat",
+    "insufficient source without repeat",
+    "unsupported script",
+    "vertical overlap",
+    "stale download disabled"
+  ],
+  "clipboard": "Stub navigator.clipboard inside a fresh test-owned browser; no OS clipboard writes. Native CUA transfer is separate.",
+  "setupCorrection": "No setup repair; earned typography allocation after complete Test03 results. New full-text button and explicit TextEdit warning are UI-only; generator source unchanged."
+}

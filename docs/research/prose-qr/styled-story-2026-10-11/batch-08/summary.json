@@ -1,0 +1,394 @@
+{
+  "finishedAt": "2026-10-11T05:20:02.790Z",
+  "planned": 6,
+  "completed": 6,
+  "rows": [
+    {
+      "id": "control-1",
+      "spec": {
+        "id": "control-1",
+        "payload": "AQROBAT-TEST",
+        "control": true
+      },
+      "pngSha256": "91de55323f81e442f0ddb8df8c456f873e16cb4e8b6ed38419917ead4f96f3f8",
+      "repeatSha256": "91de55323f81e442f0ddb8df8c456f873e16cb4e8b6ed38419917ead4f96f3f8",
+      "repeatExact": true,
+      "selectionSha256": null,
+      "fonts": null,
+      "width": 656,
+      "height": 656,
+      "nativeFontSize": null,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "control-2",
+      "spec": {
+        "id": "control-2",
+        "payload": "https://example.com/",
+        "control": true
+      },
+      "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+      "repeatSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+      "repeatExact": true,
+      "selectionSha256": null,
+      "fonts": null,
+      "width": 656,
+      "height": 656,
+      "nativeFontSize": null,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "joint-1",
+      "spec": {
+        "id": "joint-1",
+        "payload": "AQROBAT-TEST",
+        "font": "Courier New",
+        "fontSize": 40,
+        "quiet": 5,
+        "ecc": "M",
+        "gray": 120,
+        "patch": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "darkMax": 100,
+        "lightMin": 248,
+        "cornerStroke": 11.5,
+        "pitch": 72,
+        "centerX": -1,
+        "centerY": -2,
+        "sampleMin": 10,
+        "sampleMax": 34,
+        "alignment": false
+      },
+      "pngSha256": "72613c90d041ab225b7281345c51c10bf29b713995d0b6bcc52a4f15c6d08706",
+      "repeatSha256": "72613c90d041ab225b7281345c51c10bf29b713995d0b6bcc52a4f15c6d08706",
+      "repeatExact": true,
+      "selectionSha256": "fca99bea561ade6a5173a086486771dfc0d126d328725f17e56c9fdfc2aeb8b4",
+      "fonts": [],
+      "width": 2232,
+      "height": 2232,
+      "nativeFontSize": 40,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "joint-2",
+      "spec": {
+        "id": "joint-2",
+        "payload": "AQROBAT-TEST",
+        "font": "Courier New",
+        "fontSize": 40,
+        "quiet": 5,
+        "ecc": "Q",
+        "gray": 120,
+        "patch": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "darkMax": 100,
+        "lightMin": 248,
+        "cornerStroke": 11.5,
+        "pitch": 72,
+        "centerX": -1,
+        "centerY": -2,
+        "sampleMin": 10,
+        "sampleMax": 34,
+        "alignment": false
+      },
+      "pngSha256": "91b065ae99e495d2b4ea41413d8a4d2a11cb828787e16f118047250935c0b315",
+      "repeatSha256": "91b065ae99e495d2b4ea41413d8a4d2a11cb828787e16f118047250935c0b315",
+      "repeatExact": true,
+      "selectionSha256": "cdf44b61158be1106fe70e6b77a0a77299cdc162707f8269061214dcc972f645",
+      "fonts": [],
+      "width": 2232,
+      "height": 2232,
+      "nativeFontSize": 40,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "joint-3",
+      "spec": {
+        "id": "joint-3",
+        "payload": "https://example.com/",
+        "font": "Courier New",
+        "fontSize": 40,
+        "quiet": 5,
+        "ecc": "M",
+        "gray": 120,
+        "patch": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "darkMax": 100,
+        "lightMin": 248,
+        "cornerStroke": 11.5,
+        "pitch": 72,
+        "centerX": -1,
+        "centerY": -2,
+        "sampleMin": 10,
+        "sampleMax": 34,
+        "alignment": true
+      },
+      "pngSha256": "cd58dd2344a469c701001869f2372cbbc09bf9cd3cfdfa0598f4c211c8aae0b8",
+      "repeatSha256": "cd58dd2344a469c701001869f2372cbbc09bf9cd3cfdfa0598f4c211c8aae0b8",
+      "repeatExact": true,
+      "selectionSha256": "4faf6d148edac1e6dfa8cbe309e8d5ea2875a1be1b239a9bafc2a02c3cb8431d",
+      "fonts": [],
+      "width": 2520,
+      "height": 2520,
+      "nativeFontSize": 40,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "joint-4",
+      "spec": {
+        "id": "joint-4",
+        "payload": "https://example.com/",
+        "font": "Courier New",
+        "fontSize": 40,
+        "quiet": 5,
+        "ecc": "Q",
+        "gray": 120,
+        "patch": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "darkMax": 100,
+        "lightMin": 248,
+        "cornerStroke": 11.5,
+        "pitch": 72,
+        "centerX": -1,
+        "centerY": -2,
+        "sampleMin": 10,
+        "sampleMax": 34,
+        "alignment": true
+      },
+      "pngSha256": "b8d76a5cd59ec5d78f594c69b4a61b0a58a9b8ba8ecd9526387a2fce477c1bb2",
+      "repeatSha256": "b8d76a5cd59ec5d78f594c69b4a61b0a58a9b8ba8ecd9526387a2fce477c1bb2",
+      "repeatExact": true,
+      "selectionSha256": "e9e823ed98b124ef91b4630f7dbe6bb6f0bc51f5cbd4b4b6e891af62ab8b5dc2",
+      "fonts": [],
+      "width": 2520,
+      "height": 2520,
+      "nativeFontSize": 40,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        }
+      ]
+    }
+  ],
+  "network": [],
+  "errors": [],
+  "bytes": 48227777
+}

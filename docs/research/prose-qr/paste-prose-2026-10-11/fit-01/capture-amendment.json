@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-11T19:43:26.520709+00:00",
+  "originalGeneratedConfigSha256": "19aa60785efba40e75c90c0a005cf1039e290cd800dcaadb41916d9f870166fa",
+  "captureConfigSha256": "2217ed61acc392a6c45221942b8031b8a792e53918850db66b87963bc60d78b2",
+  "reason": "Before any corpus-05 capture, remove the accented input because auto-fit selected exactly the previously read corpus-04 recipe. Reuse that existing failure without recapture or reread. Long input was already excluded for reuse.",
+  "reuse": [
+    {
+      "corpusId": "accents",
+      "evidence": "corpus-04/accents-9pt-65in",
+      "reason": "Identical already captured/read recipe; do not retry an unchanged failed image."
+    },
+    {
+      "corpusId": "long-single-copy",
+      "evidence": "corpus-04/long-single-65in",
+      "reason": "Identical already captured/read recipe."
+    }
+  ]
+}

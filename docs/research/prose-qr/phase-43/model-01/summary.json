@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-10T05:14:01.665Z",
+  "plannedGlyphResources": 60,
+  "completedGlyphResources": 60,
+  "conditionalWordValidationResources": 2,
+  "sourceModels": 8000,
+  "eligible": 665,
+  "rejectedBounds": 0,
+  "rejectedFlatness": 7335,
+  "modelCSVBytes": 700143,
+  "modelCSVHash": "ac58320cfb3a6ca751242b151d0d318ea456d463370dde464d69de785cbc9fd2",
+  "modelArchiveSha256": "ef7751700fbd6e20be2dba96abf1675f49efdddfe2ce1104ec948470463cad96",
+  "bestDark": {
+    "word": "OMW",
+    "index": 7071,
+    "densities": [0.22402941176470587, 0.2144215686274509],
+    "spread": 0.009607843137254962,
+    "minGap": 1.0546875,
+    "clearance": 7.1484375,
+    "minDensity": 0.2144215686274509,
+    "maxDensity": 0.22402941176470587
+  },
+  "bestLight": {
+    "word": "iuI",
+    "index": 361,
+    "densities": [0.11810784313725489, 0.11531372549019604],
+    "spread": 0.0027941176470588497,
+    "minGap": 2.953125,
+    "clearance": 6.90625,
+    "minDensity": 0.11531372549019604,
+    "maxDensity": 0.11810784313725489
+  },
+  "bestMargin": 0.09631372549019601,
+  "selected": {
+    "dark": "OMW",
+    "light": "iuI",
+    "score": 0.09631372549019601,
+    "darkModel": {
+      "word": "OMW",
+      "index": 7071,
+      "densities": [0.22402941176470587, 0.2144215686274509],
+      "spread": 0.009607843137254962,
+      "minGap": 1.0546875,
+      "clearance": 7.1484375,
+      "minDensity": 0.2144215686274509,
+      "maxDensity": 0.22402941176470587
+    },
+    "lightModel": {
+      "word": "iuI",
+      "index": 361,
+      "densities": [0.11810784313725489, 0.11531372549019604],
+      "spread": 0.0027941176470588497,
+      "minGap": 2.953125,
+      "clearance": 6.90625,
+      "minDensity": 0.11531372549019604,
+      "maxDensity": 0.11810784313725489
+    }
+  },
+  "validation": [
+    {
+      "role": "dark",
+      "word": "OMW",
+      "predicted": [0.22402941176470587, 0.2144215686274509],
+      "measured": [0.22402941176470578, 0.214421568627451],
+      "errors": [8.326672684688674e-17, 8.326672684688674e-17],
+      "pass": true
+    },
+    {
+      "role": "light",
+      "word": "iuI",
+      "predicted": [0.11810784313725489, 0.11531372549019604],
+      "measured": [0.11810784313725488, 0.11531372549019607],
+      "errors": [1.3877787807814457e-17, 2.7755575615628914e-17],
+      "pass": true
+    }
+  ],
+  "nativeSlotEligible": true,
+  "classification": "Source-only native glyph additivity model, no QR/acceptance reader calls"
+}

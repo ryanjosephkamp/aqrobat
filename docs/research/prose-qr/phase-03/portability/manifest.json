@@ -1,0 +1,161 @@
+{
+  "startedAt": "2026-10-09T14:58:44.228Z",
+  "parameters": [
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Menlo",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Monaco",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Monaco",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "plain-003",
+      "path": "txt-proof/plain-003.txt",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Monaco",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Monaco",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Courier New",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Courier New",
+      "size": 24,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Courier",
+      "size": 20,
+      "leading": 1.2
+    },
+    {
+      "id": "refine-005",
+      "path": "txt-url-proof/refine-005.txt",
+      "payload": "https://example.com/",
+      "font": "Courier",
+      "size": 24,
+      "leading": 1.2
+    }
+  ],
+  "readerConfigs": [
+    {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1,
+      "binarizer": "GlobalHistogram",
+      "downscaleThreshold": 50,
+      "downscaleFactor": 2
+    },
+    {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1,
+      "binarizer": "GlobalHistogram",
+      "downscaleThreshold": 25,
+      "downscaleFactor": 3
+    },
+    {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1,
+      "binarizer": "LocalAverage",
+      "downscaleThreshold": 50,
+      "downscaleFactor": 2
+    }
+  ],
+  "sourceScriptSha256": "bb659575afe43da768ccd66adb3d12a9e935dbe269025d19c178db0630a16586",
+  "method": "Same saved ASCII TXT, four requested regular fonts, two native type sizes, ordinary 1.2em line spacing. One pre element; no per-glyph/line styles or external input processing. Specified font/geometry test, not arbitrary paste or native app acceptance."
+}

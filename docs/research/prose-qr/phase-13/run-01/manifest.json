@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-09T23:55:17.331Z",
+  "plannedInputs": 6,
+  "profiles": {
+    "default": { "formats": ["QRCode"] },
+    "baseline": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "errorsDiagnostic": { "formats": ["QRCode"], "returnErrors": true }
+  },
+  "defaults": {
+    "formats": [],
+    "tryHarder": true,
+    "tryRotate": true,
+    "tryInvert": true,
+    "tryDownscale": true,
+    "tryDenoise": false,
+    "binarizer": "LocalAverage",
+    "isPure": false,
+    "downscaleFactor": 3,
+    "downscaleThreshold": 500,
+    "minLineCount": 2,
+    "maxNumberOfSymbols": 255,
+    "validateOptionalChecksum": false,
+    "returnErrors": false,
+    "eanAddOnSymbol": "Ignore",
+    "textMode": "HRI",
+    "characterSet": "Unknown",
+    "tryCode39ExtendedMode": true
+  },
+  "provenance": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "sources": {
+    "experiments/prose-qr/finder-reader-symbol/run.mjs": "f097412ba2a1143f4536f7152fa3276747b9565bd1467256b22d82333e7039bb",
+    "docs/research/prose-qr/phase-13/PLAN.md": "eeda11042cd14d9a3af2fabe810762488a1c78bf8c21a1ef8c4b34620d9c1f13"
+  },
+  "classification": "Native PNG unchanged. Error profile is diagnostic only, never acceptance."
+}

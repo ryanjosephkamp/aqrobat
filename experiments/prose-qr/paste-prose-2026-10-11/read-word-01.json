@@ -1,0 +1,17 @@
+{
+  "id": "read-word-01",
+  "hypothesis": "Four independent ordinary readers see the untransformed actual Word PDF native raster at the fixed prospective 96 dpi; compare the raw payload after reading.",
+  "engines": [
+    "zxing",
+    "jsqr",
+    "opencv",
+    "vision"
+  ],
+  "inputs": [
+    {
+      "id": "paragraph",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-01/pdf-96/native.png",
+      "payload": "https://example.com/"
+    }
+  ]
+}

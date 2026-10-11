@@ -1,0 +1,38 @@
+[
+  {
+    "payload": "AQROBAT-TEST",
+    "path": "raw/control-1.png",
+    "pngSha256": "02c0e89e8d63e891d6dd69c7cee950832e8d3d8efe2990a6537d9f19fd7a80b0",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "af4f4e811ea0651ff49a026be72d2e723dfcea64c0871612e8ea640271eac144",
+    "baseline": {
+      "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["AQROBAT-TEST"],
+      "exact": true
+    }
+  }
+]

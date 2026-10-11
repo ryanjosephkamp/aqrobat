@@ -1,0 +1,67 @@
+{
+  "startedAt": "2026-10-09T20:29:14.226Z",
+  "baseline": "52fa086b970d585e8087db25503114ab55c65c8f",
+  "specs": [
+    {
+      "id": "seam-01",
+      "font": "Impact",
+      "leading": "seam-boundary",
+      "inkGap": 0.234375,
+      "phaseAdjustment": 0,
+      "objective": "Frozen text; native row-seam diagnostic"
+    },
+    {
+      "id": "seam-02",
+      "font": "Impact",
+      "leading": "seam-boundary",
+      "inkGap": 0.234375,
+      "phaseAdjustment": 0.25,
+      "objective": "Frozen text; native row-seam diagnostic"
+    },
+    {
+      "id": "seam-03",
+      "font": "Impact",
+      "leading": "seam-boundary",
+      "inkGap": 0.375,
+      "phaseAdjustment": 0,
+      "objective": "Frozen text; native row-seam diagnostic"
+    },
+    {
+      "id": "seam-04",
+      "font": "Impact",
+      "leading": "seam-boundary",
+      "inkGap": 0.375,
+      "phaseAdjustment": 0.25,
+      "objective": "Frozen text; native row-seam diagnostic"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/finder-native/seams.mjs": "ffcf900b09d7292ad5daff21a7c0319a34bc591082e2dcdd588eeb1c4d3b20cc",
+    "experiments/prose-qr/finder-native/layout.mjs": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+    "docs/research/prose-qr/phase-06/SEAM-PLAN.md": "36b9db7ef8f9d0d29c1f1fe0d6796b9c72a6d52d44116ecd79708c2d687c83b3",
+    "docs/research/prose-qr/phase-06/SEAM-REPAIR.md": "596361e1326a58cfb8989b0ffb5475ce577fc6abfd6cb9edbaddb53fdfc5fc0d",
+    "docs/research/prose-qr/phase-06/font-metrics.json": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+    "docs/research/prose-qr/phase-06/feedback-02/feedback-11-layout.json": "078c5c3c95b08a1fec076a24043099fc6b9f3d8b0424d47fc2852d0cdd7f38d5",
+    "docs/research/prose-qr/phase-06/feedback-02/feedback-11.html.gz": "e11fa9962e16f7ce71479f9c7fec3ae5232e184b7835a860a8ed2a39c000a742",
+    "docs/research/prose-qr/phase-06/feedback-02/raw/feedback-11.png": "5d439f2de4d6551e21e0ec7fb909694e623e5cf21e7db9bd967247be1adef93a",
+    "docs/research/prose-qr/phase-06/feedback-02/results.jsonl": "583471f3811c51fae25099969da3c2c22a6bc8b1e82803279d164264b2f08ebd"
+  },
+  "diagnosticBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "controlsDecoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "Finder-only ordinary locator diagnostic on unchanged native pixels. No payload in candidate layouts; no phone candidates."
+}

@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-11T20:08:38.815913+00:00",
+  "reason": "Harness checked status immediately after asynchronous JSON file restore; import handler had not finished file.text(). Native preview capture and exact repeat, default DOCX match and prior controls passed. No source/style mismatch or reader attempt.",
+  "candidateCaptures": 1,
+  "resourceCaptures": 1,
+  "readerCalls": 0,
+  "amendment": "Await recipe import completion; reuse existing captured output and no further image capture in check05."
+}

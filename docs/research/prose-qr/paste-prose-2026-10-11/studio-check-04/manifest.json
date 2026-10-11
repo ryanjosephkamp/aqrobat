@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-11T20:07:20.362Z",
+  "config": {
+    "id": "studio-check-04",
+    "purpose": "Exercise the delivered offline page studio through its real form and download controls, preserving exact source, rejecting invalid input and matching the native-tested DOCX bytes.",
+    "candidateCaptureSlots": 1,
+    "immediateRepeats": 1,
+    "resourceCaptures": 1,
+    "readerCalls": 0,
+    "checks": [
+      "Default long source once and generated DOCX byte match to native-opened word-08/input.docx",
+      "Word file, source TXT, wrapped TXT and recipe downloads",
+      "Clipboard HTML/plain data with an explicit mocked clipboard; no OS-paste claim",
+      "Stale export disabled after an input change",
+      "Empty source, unsupported emoji, decomposed accents and oversized payload rejection",
+      "Short source without repetition rejection, explicit full-source repetition acceptance",
+      "CRLF/leading/trailing source whitespace recipe roundtrip",
+      "A4 Word-file export and A4 with 6.5in incompatible measure rejection",
+      "No external network requests or page script errors"
+    ],
+    "amendment": "Preview quiet margin5 instead of4; unchanged DOCX body and source. Same9form checks at2600px-tall viewport."
+  },
+  "configSha256": "135a6224c12d69c2f961200237d4e2c1a090ba9285f7961521546702ab5c7915",
+  "sources": [
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/studio-test-04.mjs",
+      "sha256": "9e8821f6be52b2d0b392f6eafdb2d6ea10f8e9347d2554337b74306c2e155c68"
+    },
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/page-fit.mjs",
+      "sha256": "3e09d45c0a33c775aeb19db5dd843fb647c7e61a78029996a94cabf5e4bc97f2"
+    },
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/page-app.mjs",
+      "sha256": "74447db714d27bcc2da7a70a52d2bcafa624c857f172bb0984377473fbad9db7"
+    },
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/docx.mjs",
+      "sha256": "09019732feb6ad8766c1cc78d55c32c7b368058764aecc68005bc63d8c17ca88"
+    },
+    {
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/page-studio.html",
+      "sha256": "6faa991e23feabc01494b134d99b208defa2f90cd0401e75187d329c51c4ffdc"
+    }
+  ],
+  "clipboardLane": "Mocked browser ClipboardItem payload capture; no native clipboard claim",
+  "inputTransforms": "none"
+}

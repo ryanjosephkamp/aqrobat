@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-11T17:44:14.888Z",
+  "configPath": "experiments/prose-qr/portable-story-2026-10-11/read-native-exports-01.json",
+  "configSha256": "5b3652b73483e7c10444a3dbaa64b689d3b5e391f394271b7343894a44d9998c",
+  "ordinaryReaderCalls": 9,
+  "inputs": [
+    {
+      "id": "new-prose-complete",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-exports-01/new-prose-complete/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "ba4a50a6db16c2076c9f4aabf10bfaa41dbd2f69e6eaf07425ab1365f5d0b148"
+    },
+    {
+      "id": "black-complete",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-exports-01/black-complete/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "846bc88bb6102872c7b6668196a8cc409f78ae5341d33138077b4d8d4aeb4aee"
+    },
+    {
+      "id": "accented-complete",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-exports-01/accented-complete/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "12d1673b14d4bdf511dd05235fa9fc9be11178e6c5567907790ebbdf6aeacfb6"
+    }
+  ],
+  "sources": [
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/read-saved.mjs",
+      "sha256": "74b2b52a81c797a574cdd1f3a8ceb99cfafffaa19bc513a374d99b49c3eecd3e"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053"
+    }
+  ],
+  "inputTransforms": "none",
+  "expectedPayloadNotSuppliedToReader": true
+}

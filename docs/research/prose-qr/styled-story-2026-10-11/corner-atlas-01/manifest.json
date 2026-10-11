@@ -1,0 +1,82 @@
+{
+  "at": "2026-10-11T05:14:09.998Z",
+  "specs": [
+    {
+      "id": "outline-0",
+      "symbol": "□",
+      "stroke": 0,
+      "index": 0,
+      "font": "Arial Unicode MS",
+      "size": 400,
+      "origin": [
+        50,
+        50
+      ]
+    },
+    {
+      "id": "outline-10",
+      "symbol": "□",
+      "stroke": 10,
+      "index": 1,
+      "font": "Arial Unicode MS",
+      "size": 400,
+      "origin": [
+        550,
+        50
+      ]
+    },
+    {
+      "id": "outline-11",
+      "symbol": "□",
+      "stroke": 11,
+      "index": 2,
+      "font": "Arial Unicode MS",
+      "size": 400,
+      "origin": [
+        50,
+        550
+      ]
+    },
+    {
+      "id": "outline-12",
+      "symbol": "□",
+      "stroke": 12,
+      "index": 3,
+      "font": "Arial Unicode MS",
+      "size": 400,
+      "origin": [
+        550,
+        550
+      ]
+    },
+    {
+      "id": "filled",
+      "symbol": "■",
+      "stroke": 0,
+      "index": 4,
+      "font": "Arial Unicode MS",
+      "size": 400,
+      "origin": [
+        50,
+        1050
+      ]
+    },
+    {
+      "id": "box",
+      "symbol": "☐",
+      "stroke": 0,
+      "index": 5,
+      "font": "Arial Unicode MS",
+      "size": 400,
+      "origin": [
+        550,
+        1050
+      ]
+    }
+  ],
+  "sourceSha256": "402de2cd502679d93c5b87bf962f60da5ef2e205371215e08ca458d22438817c",
+  "captures": 1,
+  "repeatSlots": 1,
+  "readerCalls": 0,
+  "rule": "Measure visible foreground Unicode outline and filled squares independently; compose nonoverlapping characters as explicit ornaments, never hidden modules behind letters"
+}

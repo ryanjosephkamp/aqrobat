@@ -1,0 +1,742 @@
+{
+  "schema": "aqrobat-prose-pilot-results-v1",
+  "startedAt": "2026-10-09T00:12:20.000Z",
+  "finishedAt": "2026-10-09T00:24:51.686Z",
+  "elapsedSeconds": 752,
+  "counts": {
+    "strict": {
+      "attempted": 45,
+      "complete": 44,
+      "rawRasters": 134,
+      "rawCasesRecoveredByJsQR": 0,
+      "rawCasesRecoveredByZXing": 0
+    },
+    "styled": {
+      "attempted": 44,
+      "complete": 44,
+      "rawRasters": 132,
+      "rawCasesRecoveredByJsQR": 0,
+      "rawCasesRecoveredByZXing": 0
+    }
+  },
+  "plannedInitial": { "strict": 48, "styled": 108 },
+  "stop": {
+    "reason": "large replay HTML triggered conservative storage reserve; incomplete case and all preceding receipts retained",
+    "case": "strict-046",
+    "reportingRepair": "Runner final summary incorrectly reused its conservative evidence reserve. This report was assembled from the flushed receipts without rerunning any case."
+  },
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "selectedForDiagnostic": [
+    {
+      "id": "strict-021",
+      "opticalInkHeightToLineHeight": 1.0050283860502838,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "strict-022",
+      "opticalInkHeightToLineHeight": 1.0050283860502838,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "strict-039",
+      "opticalInkHeightToLineHeight": 1.0358014646053704,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "strict-040",
+      "opticalInkHeightToLineHeight": 1.0358014646053704,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "styled-022",
+      "opticalInkHeightToLineHeight": 0.9039097451857615,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "styled-020",
+      "opticalInkHeightToLineHeight": 0.7537712895377129,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "styled-055",
+      "opticalInkHeightToLineHeight": 0.8882831570382425,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    },
+    {
+      "id": "styled-056",
+      "opticalInkHeightToLineHeight": 0.8882831570382425,
+      "selection": "highest contrast within font/track/light policy, preferring no optical vertical overlap"
+    }
+  ],
+  "diagnostics": [
+    {
+      "candidateId": "strict-021",
+      "sourcePath": "raw/strict-021-640.png",
+      "sourcePngSha256": "34d2cc7a0e219d3f2002286c99d1fc36ea2c178cb309ca9ee26b5c931c392555",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/strict-021-blur-downsample.png",
+      "pngSha256": "b2e66ca3251d7339ba5db2dadc6ff296131aa257a164d40ac9138fd4b1ba4444",
+      "rgbaSha256": "64ff311871d97db46c9e18313215c4e096a9963d9175eebc21f63e2d2ce7954f",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-021",
+      "sourcePath": "raw/strict-021-640.png",
+      "sourcePngSha256": "34d2cc7a0e219d3f2002286c99d1fc36ea2c178cb309ca9ee26b5c931c392555",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/strict-021-blur-threshold.png",
+      "pngSha256": "46b9f1a12a44bc122aa10dbe95c22fbc0f838de5fce99eaeca43a211e399bef6",
+      "rgbaSha256": "96c098852663d440e0a38eac3aa1c134fd6621c6ea0eac1f2012f0ddac17c11a",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-022",
+      "sourcePath": "raw/strict-022-640.png",
+      "sourcePngSha256": "2a49d5174d3bcc67d510d89455f2443567040619bcfcd326425846abd9c30bf4",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/strict-022-blur-downsample.png",
+      "pngSha256": "8ff90218a6629ab434daff022f3b41b3bc5d3a935888667a331796202ae579eb",
+      "rgbaSha256": "aebb1c6597d7119b201c6d6e750de252e45aa8d33aa15a3e914cbb8e5bb4ad83",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-022",
+      "sourcePath": "raw/strict-022-640.png",
+      "sourcePngSha256": "2a49d5174d3bcc67d510d89455f2443567040619bcfcd326425846abd9c30bf4",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/strict-022-blur-threshold.png",
+      "pngSha256": "a5264ed0a6765e542c17b36645281e9f5d2cf68b644679c3349db2b80f24fedf",
+      "rgbaSha256": "65b3ee084e612a55914057b852933ae0a7be644f01cf68d0ab1e347ea78e2b39",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-039",
+      "sourcePath": "raw/strict-039-640.png",
+      "sourcePngSha256": "8ae733a7418a496d1a28ec43b89662eda6f5802199b20451115ba6d8c43694a4",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/strict-039-blur-downsample.png",
+      "pngSha256": "af2e88afd6c190ec0277a1b9dfbd1fb07194bf2010e54d83789c636987fa2094",
+      "rgbaSha256": "a936f09629aa31665f08471b0de126f47a7d3bf956a8c90391593badb0d99e23",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-039",
+      "sourcePath": "raw/strict-039-640.png",
+      "sourcePngSha256": "8ae733a7418a496d1a28ec43b89662eda6f5802199b20451115ba6d8c43694a4",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/strict-039-blur-threshold.png",
+      "pngSha256": "9633085ca37508fc8c80a38186aece83c363a6cd16c4e4108440b2635a7aea95",
+      "rgbaSha256": "a59bf513a27f90548b67795d69cb35eac2e43e117e24c78e8010f321795a6e39",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-040",
+      "sourcePath": "raw/strict-040-640.png",
+      "sourcePngSha256": "421023661a244fed97825e86b97065c657fc1a47b4f2713482b42e5e1069bcc0",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/strict-040-blur-downsample.png",
+      "pngSha256": "f2da603b5c002e89ebbf0bf636c7ea76b64087b538aa932a0f01a18be27debe0",
+      "rgbaSha256": "22b6f9a72aad0adad3bf000e04c5df75eb9d567bb2ec75c2f4fd0724a3ce7f22",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "strict-040",
+      "sourcePath": "raw/strict-040-640.png",
+      "sourcePngSha256": "421023661a244fed97825e86b97065c657fc1a47b4f2713482b42e5e1069bcc0",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/strict-040-blur-threshold.png",
+      "pngSha256": "a8d70bbd35933fe6d4033213de9702799f0682d85752b311dde10898c2be7fed",
+      "rgbaSha256": "38786d3ec49ae6c0a0ac16c004936303553eef277518ab227ee6e02db5a040ce",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-022",
+      "sourcePath": "raw/styled-022-640.png",
+      "sourcePngSha256": "ae8064a7be3d2108f5f532d8045e4e20772f7ce6abd21d700290ac0787901ae1",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/styled-022-blur-downsample.png",
+      "pngSha256": "4124c57b147c82ba3c4169bd31637f62711bb0599c64ac43455d9e8a87d4083d",
+      "rgbaSha256": "2d9ee6eefd49ec541159ee1865259702123ae5a6d005eb19bea6d1412308de1e",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-022",
+      "sourcePath": "raw/styled-022-640.png",
+      "sourcePngSha256": "ae8064a7be3d2108f5f532d8045e4e20772f7ce6abd21d700290ac0787901ae1",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/styled-022-blur-threshold.png",
+      "pngSha256": "e03cdac57d3fc2af6d894cfee4223e3c27ebae5474e2f49031c5ab9288a94a6e",
+      "rgbaSha256": "32654566992834220589dac6e0ca6409825c472a13621c43a5214d2efb974074",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-020",
+      "sourcePath": "raw/styled-020-640.png",
+      "sourcePngSha256": "4c28a3066a91ef1687e6ba668f72034b1d7b629c5338256e9eb0f0b1285179b0",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/styled-020-blur-downsample.png",
+      "pngSha256": "451fcd9ce13bfc3ed4a8f6a346062464bc9494783600e9735d2fe840e3ae2ae9",
+      "rgbaSha256": "9cb64eb17d797658c351ac284c0c3941fe286fc5e367b35fd5937e0a9f238d0b",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-020",
+      "sourcePath": "raw/styled-020-640.png",
+      "sourcePngSha256": "4c28a3066a91ef1687e6ba668f72034b1d7b629c5338256e9eb0f0b1285179b0",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/styled-020-blur-threshold.png",
+      "pngSha256": "10aca46ed5b8311e75ca387096daa0ade3f2aa41e15fde9fc49289f3806de654",
+      "rgbaSha256": "649dca411c23430c9a2ce9c9b582067ea297d8a1f7187b672ed600ef055a8813",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-055",
+      "sourcePath": "raw/styled-055-640.png",
+      "sourcePngSha256": "7731a4b018b1399fbe365a668798038b7632798edf4d097892ec9554a7d88844",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/styled-055-blur-downsample.png",
+      "pngSha256": "fddbd5fb6fa5c4a161ffe63d5bc87ab189493b4213b9bace2737ed3e12cbf97a",
+      "rgbaSha256": "969e5c3b1e031adabad3c0adbeb01075cfebc4ab0fb2e049eae9971e59653ad8",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-055",
+      "sourcePath": "raw/styled-055-640.png",
+      "sourcePngSha256": "7731a4b018b1399fbe365a668798038b7632798edf4d097892ec9554a7d88844",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/styled-055-blur-threshold.png",
+      "pngSha256": "2d7a892da28de9a14f4f035f2117929e392a856ba3e701c65bdc816e49f722cc",
+      "rgbaSha256": "464c2055666357b9f5203c5240cefd1b6d3c0a515440401d012facdebb14720d",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-056",
+      "sourcePath": "raw/styled-056-640.png",
+      "sourcePngSha256": "bcdbb7643d32ae06aa54a42c32e29618d31d6a34a3dee72e1fd5631332782502",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 4,
+        "threshold": null
+      },
+      "path": "diagnostics/styled-056-blur-downsample.png",
+      "pngSha256": "7d0fd7398f2e4620ff52293d58117dce47031589beae2be204be83a009dbafe2",
+      "rgbaSha256": "8d9a5bcb36edd114e520c8638576adc80eaaa680657f80f19e15e0873791d8ed",
+      "width": 160,
+      "height": 160,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    },
+    {
+      "candidateId": "styled-056",
+      "sourcePath": "raw/styled-056-640.png",
+      "sourcePngSha256": "bcdbb7643d32ae06aa54a42c32e29618d31d6a34a3dee72e1fd5631332782502",
+      "processing": {
+        "blur": 4.855172413793103,
+        "downsample": 1,
+        "threshold": 225
+      },
+      "path": "diagnostics/styled-056-blur-threshold.png",
+      "pngSha256": "24b0b5ab8a059b6f65ca94ce9cd5bfa4b713635c49b6cb0961a7b0f7464c06c6",
+      "rgbaSha256": "62fbaebb1e70d8726b433c8485a62f7aa094ca65c714073d3727e8066f104f12",
+      "width": 640,
+      "height": 640,
+      "decoders": {
+        "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+        "zxing": {
+          "found": true,
+          "payload": "AQROBAT-TEST",
+          "exact": true,
+          "results": [
+            {
+              "payload": "AQROBAT-TEST",
+              "format": "QRCode",
+              "isValid": true,
+              "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+            }
+          ]
+        }
+      },
+      "input": "Whole raw screenshot transformed by image operations only; no matrix-based reconstruction",
+      "classification": "processed diagnostic only, not a raw-output pass"
+    }
+  ],
+  "followupIds": ["strict-url-1", "styled-url-1"],
+  "controls": [
+    {
+      "kind": "conventional QR positive",
+      "size": 320,
+      "path": "raw/control-positive-320.png",
+      "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      },
+      "rgbaSha256": "c506429d319c06cccd953ad299170c44eb3437c1f103d011366ca5e7357299ff"
+    },
+    {
+      "kind": "conventional QR positive",
+      "size": 640,
+      "path": "raw/control-positive-640.png",
+      "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      },
+      "rgbaSha256": "af4f4e811ea0651ff49a026be72d2e723dfcea64c0871612e8ea640271eac144"
+    },
+    {
+      "kind": "conventional QR positive",
+      "size": 960,
+      "path": "raw/control-positive-960.png",
+      "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      },
+      "rgbaSha256": "7b629019495c35307861b96b9753ce4bece3b801768869c73825caabd23b59e7"
+    },
+    {
+      "kind": "ordinary text negative",
+      "font": "Menlo",
+      "size": 320,
+      "path": "raw/control-negative-Menlo-320.png",
+      "jsQR": { "found": false, "payload": null, "exact": false },
+      "zxing": {
+        "found": false,
+        "payload": null,
+        "exact": false,
+        "results": []
+      },
+      "rgbaSha256": "2a04ce55fc1fd6550ce1b454d0d6f917a1d1ce91035c87efc2da30b675de2ed6"
+    },
+    {
+      "kind": "ordinary text negative",
+      "font": "Menlo",
+      "size": 640,
+      "path": "raw/control-negative-Menlo-640.png",
+      "jsQR": { "found": false, "payload": null, "exact": false },
+      "zxing": {
+        "found": false,
+        "payload": null,
+        "exact": false,
+        "results": []
+      },
+      "rgbaSha256": "1a675f7a71d1d9640454a71851e21e5948131de2f546d1dd2d1deea00fb5039f"
+    },
+    {
+      "kind": "ordinary text negative",
+      "font": "Menlo",
+      "size": 960,
+      "path": "raw/control-negative-Menlo-960.png",
+      "jsQR": { "found": false, "payload": null, "exact": false },
+      "zxing": {
+        "found": false,
+        "payload": null,
+        "exact": false,
+        "results": []
+      },
+      "rgbaSha256": "72ea1dbb20e0dc0096bfe7ac3124414b8cce31fb683dbc5442995cb595f5af6d"
+    },
+    {
+      "kind": "ordinary text negative",
+      "font": "Courier New",
+      "size": 320,
+      "path": "raw/control-negative-Courier-New-320.png",
+      "jsQR": { "found": false, "payload": null, "exact": false },
+      "zxing": {
+        "found": false,
+        "payload": null,
+        "exact": false,
+        "results": []
+      },
+      "rgbaSha256": "ff3cc033686bc908e5d24d9f683fb3deedd41b4400b8280b130c0248f5b8479e"
+    },
+    {
+      "kind": "ordinary text negative",
+      "font": "Courier New",
+      "size": 640,
+      "path": "raw/control-negative-Courier-New-640.png",
+      "jsQR": { "found": false, "payload": null, "exact": false },
+      "zxing": {
+        "found": false,
+        "payload": null,
+        "exact": false,
+        "results": []
+      },
+      "rgbaSha256": "e1b58ebc82ea4a37b161847379af29852852fef37346ea1dc7e842ba9fbfc58c"
+    },
+    {
+      "kind": "ordinary text negative",
+      "font": "Courier New",
+      "size": 960,
+      "path": "raw/control-negative-Courier-New-960.png",
+      "jsQR": { "found": false, "payload": null, "exact": false },
+      "zxing": {
+        "found": false,
+        "payload": null,
+        "exact": false,
+        "results": []
+      },
+      "rgbaSha256": "f6e0e2ddab6174796f8d69b37f5d7103e88b948821adb791dcf256ed782a5960"
+    }
+  ],
+  "candidateReceipts": "results.jsonl",
+  "rawRastersRecoveredByJsQR": 0,
+  "rawRastersRecoveredByZXing": 0,
+  "diagnosticRastersRecoveredByJsQR": 11,
+  "diagnosticRastersRecoveredByZXing": 12,
+  "errors": [],
+  "phone": "not tested",
+  "print": "not tested",
+  "semanticProse": "not attempted; only real-word structure",
+  "generatedEvidenceBytesBeforeFinal": 48990213,
+  "nextGate": "Owner review before another research phase or coherent paragraphs"
+}

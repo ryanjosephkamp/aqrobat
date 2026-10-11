@@ -1,0 +1,74 @@
+{
+  "slots": [
+    {
+      "id": "control-normal",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "control-normal",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "control-normal",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "reverse-regular",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "reverse-regular",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "reverse-regular",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "reverse-bold",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "reverse-bold",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    },
+    {
+      "id": "reverse-bold",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Immediate repeat mismatch"
+    }
+  ],
+  "stop": {
+    "atUtc": "2026-10-10T21:32:59.720Z",
+    "current": "control-normal",
+    "message": "Immediate repeat mismatch",
+    "stack": "AssertionError [ERR_ASSERTION]: Immediate repeat mismatch\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs:10:973"
+  },
+  "updatedAtUtc": "2026-10-10T21:33:00.025Z"
+}

@@ -1,0 +1,386 @@
+import { chromium } from "playwright";
+import {
+  readFile,
+  writeFile,
+  appendFile,
+  mkdir,
+  readdir,
+  stat,
+} from "node:fs/promises";
+import { resolve } from "node:path";
+import { createHash } from "node:crypto";
+import { gzipSync, gunzipSync } from "node:zlib";
+import { format } from "prettier";
+import assert from "node:assert/strict";
+import { readBarcodes } from "zxing-wasm/reader";
+import { decode, DECODER_PROVENANCE } from "../decoders.mjs";
+import { diagnose, bundleHash } from "../glyph-geometry/diagnostic.mjs";
+import { documentHtml, positiveControl, escapeHtml } from "../layout.mjs";
+import { finderMatrix, solidTriplet } from "./layout.mjs";
+const root = resolve("docs/research/prose-qr/phase-06"),
+  out = resolve(root, "feedback-01"),
+  hash = (b) => createHash("sha256").update(b).digest("hex");
+await mkdir(out);
+await mkdir(resolve(out, "raw"));
+async function bytes(p) {
+  let sum = 0;
+  for (const e of await readdir(p, { withFileTypes: true })) {
+    const q = resolve(p, e.name);
+    sum += e.isDirectory() ? await bytes(q) : (await stat(q)).size;
+  }
+  return sum;
+}
+async function save(p, b) {
+  assert(
+    (await bytes(root)) +
+      (await bytes(resolve("experiments/prose-qr/finder-native"))) +
+      Buffer.byteLength(b) <
+      5_250_000,
+    "Evidence reserve",
+  );
+  await writeFile(resolve(out, p), b, { flag: "wx" });
+  return hash(b);
+}
+const json = async (p, v) =>
+  save(p, await format(JSON.stringify(v), { parser: "json" }));
+const seedPath = resolve(root, "cap-01"),
+  seed = JSON.parse(
+    await readFile(resolve(seedPath, "cap-02-layout.json"), "utf8"),
+  ),
+  seedRecord = (await readFile(resolve(seedPath, "results.jsonl"), "utf8"))
+    .trim()
+    .split("\n")
+    .map(JSON.parse)
+    .find((r) => r.id === "cap-02"),
+  seedHtml = gunzipSync(
+    await readFile(resolve(seedPath, "cap-02.html.gz")),
+  ).toString(),
+  metrics = JSON.parse(
+    await readFile(resolve(root, "font-metrics.json"), "utf8"),
+  ),
+  glyphs = metrics.fonts["Impact|400"].glyphs;
+const specs = [
+  ...[
+    "TTTT me TTTTTTTTTTT me TTT",
+    "TTTT we TTTTTTTTTTT we TTTT",
+    "TTTT me TTTTTTTTTTTT me TTT",
+    "TTTT we TTTTTTTTTTTT we TTT",
+  ].map((centerLine) => ({ stage: "horizontal", centerLine })),
+  ..."WEB WELL WILL BEE HEM EAR HERE BE"
+    .split(" ")
+    .map((firstWord) => ({ stage: "vertical", firstWord })),
+].map((s, i) => ({
+  ...seed.spec,
+  ...s,
+  id: `feedback-${String(i + 1).padStart(2, "0")}`,
+}));
+const sourceHashes = {};
+for (const p of [
+  "experiments/prose-qr/finder-native/feedback.mjs",
+  "experiments/prose-qr/finder-native/layout.mjs",
+  "experiments/prose-qr/glyph-geometry/diagnostic.mjs",
+  "experiments/prose-qr/layout.mjs",
+  "experiments/prose-qr/decoders.mjs",
+  "docs/research/prose-qr/phase-06/FEEDBACK-PLAN.md",
+  "docs/research/prose-qr/phase-06/font-metrics.json",
+  "docs/research/prose-qr/phase-06/cap-01/cap-02-layout.json",
+  "docs/research/prose-qr/phase-06/cap-01/cap-02.html.gz",
+  "docs/research/prose-qr/phase-06/cap-01/raw/cap-02.png",
+  "docs/research/prose-qr/phase-06/cap-01/results.jsonl",
+])
+  sourceHashes[p] = hash(await readFile(p));
+await json("manifest.json", {
+  startedAt: new Date().toISOString(),
+  baseline: "52fa086b970d585e8087db25503114ab55c65c8f",
+  specs,
+  sourceHashes,
+  diagnosticBundleSha256: bundleHash,
+  controlsDecoder: DECODER_PROVENANCE,
+  ordinaryZXing: { formats: ["QRCode"] },
+  gate: "Finder-only actual native-pixel source selection; no candidate payload or phone candidate",
+});
+function score(d) {
+  return Object.values(d.corridors)
+    .flatMap((x) => Object.values(x))
+    .reduce(
+      (sum, a) =>
+        sum +
+        Math.round((1 - a.agreement) * a.pixels) +
+        2 * Math.max(0, a.runs.length - 5),
+      0,
+    );
+}
+function nativeLayout(spec, lines) {
+  const plainText = lines.join("\n"),
+    tracking = seed.structural.tracking,
+    actualAdvances = lines.map((s) =>
+      [...s].reduce((n, c) => n + glyphs[c].advance + tracking, 0),
+    );
+  assert(
+    actualAdvances.every((w) => w <= seed.field),
+    "Native advance overflow",
+  );
+  const pad = seed.unit * 5,
+    pre = (i, x, y) =>
+      `<pre id="corner-${i}" style="position:absolute;left:${pad + x * seed.unit}px;top:${pad + y * seed.unit + seed.offset}px;width:${seed.field}px;height:${15 * seed.lineHeight}px;margin:0;padding:0;font:400 20px/${seed.lineHeight}px 'Impact',monospace;letter-spacing:${tracking}px;font-kerning:none;font-variant-ligatures:none;color:black;overflow:visible">${escapeHtml(plainText)}</pre>`;
+  return {
+    ...seed,
+    spec,
+    plainText,
+    lines,
+    actualAdvances,
+    unusedWidths: actualAdvances.map((w) => seed.field - w),
+    modelScores: [],
+    matrix: finderMatrix(),
+    markup: `<article id="artifact" style="position:relative;width:${seed.unit * 35}px;height:${seed.unit * 35}px;background:white;color:black;overflow:visible">${pre(0, 0, 0)}${pre(1, 18, 0)}${pre(2, 0, 18)}</article>`,
+    structural: {
+      ...seed.structural,
+      quarterPixelRendererModel: false,
+      actualNativePixelFeedback: true,
+      wordBank: [...new Set(plainText.replaceAll(".", "").split(/\s+/))],
+      semantic:
+        "Complete and explicitly synthetic letter-words; sentence meaning not claimed",
+    },
+  };
+}
+const browser = await chromium.launch({
+    headless: true,
+    executablePath:
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  }),
+  records = [],
+  errors = [];
+let attempted = null;
+try {
+  const page = await browser.newPage({
+    viewport: { width: 1800, height: 1800 },
+    deviceScaleFactor: 1,
+  });
+  page.on("pageerror", (e) => errors.push(e.message));
+  const pixels = async (png) => {
+    const p = await page.evaluate(async (b) => {
+      const img = new Image();
+      img.src = "data:image/png;base64," + b;
+      await img.decode();
+      const c = document.createElement("canvas");
+      c.width = img.width;
+      c.height = img.height;
+      const ctx = c.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      const d = ctx.getImageData(0, 0, c.width, c.height).data;
+      let s = "";
+      for (let i = 0; i < d.length; i += 32768)
+        s += String.fromCharCode(...d.subarray(i, i + 32768));
+      return { width: c.width, height: c.height, data: btoa(s) };
+    }, png.toString("base64"));
+    return {
+      width: p.width,
+      height: p.height,
+      data: new Uint8ClampedArray(Buffer.from(p.data, "base64")),
+    };
+  };
+  await page.setContent(
+    documentHtml(positiveControl("https://example.com/", 656)),
+  );
+  const fullPng = await page.locator("#artifact").screenshot(),
+    fullPx = await pixels(fullPng),
+    fullResult = await decode(fullPx, "https://example.com/"),
+    ordinary = await readBarcodes(fullPx, { formats: ["QRCode"] });
+  assert(
+    fullResult.jsQR.exact &&
+      fullResult.zxing.exact &&
+      ordinary.some((r) => r.text === "https://example.com/"),
+  );
+  const solid = solidTriplet();
+  await page.setContent(documentHtml(solid.markup));
+  const solidPng = await page.locator("#artifact").screenshot(),
+    solidPx = await pixels(solidPng),
+    solidDiagnostic = diagnose(solidPx, solid);
+  assert(solidDiagnostic.correctFinder, "Solid triplet locator control failed");
+  await json("controls.json", {
+    fullQR: {
+      path: "raw/full-qr-control.png",
+      pngSha256: await save("raw/full-qr-control.png", fullPng),
+      rgbaSha256: hash(fullPx.data),
+      width: fullPx.width,
+      height: fullPx.height,
+      baseline: fullResult,
+      ordinaryZXing: {
+        payloads: ordinary.map((x) => x.text),
+        exact: ordinary.some((x) => x.text === "https://example.com/"),
+      },
+    },
+    solidFinder: {
+      path: "raw/solid-finder-control.png",
+      pngSha256: await save("raw/solid-finder-control.png", solidPng),
+      rgbaSha256: hash(solidPx.data),
+      width: solidPx.width,
+      height: solidPx.height,
+      diagnostic: solidDiagnostic,
+      encodedPayload: null,
+    },
+  });
+
+  await page.setContent(seedHtml);
+  await page.evaluate(() => document.fonts.ready);
+  const seedReplay = await page.locator("#artifact").screenshot();
+  await json("seed-replay.json", {
+    seed: "cap-02",
+    expectedPNGHash: seedRecord.pngSha256,
+    replayedPNGHash: hash(seedReplay),
+    matches: hash(seedReplay) === seedRecord.pngSha256,
+  });
+  if (hash(seedReplay) !== seedRecord.pngSha256) {
+    await save("raw/seed-replay-difference.png", seedReplay);
+    throw Error("Seed native replay mismatch");
+  }
+  const seedCandidate = {
+    id: "cap-02",
+    plainText: seed.plainText,
+    score: score(seedRecord.diagnostic),
+    pngSha256: seedRecord.pngSha256,
+  };
+  let parent = seedCandidate;
+  for (let index = 0; index < specs.length; index++) {
+    const s = specs[index];
+    attempted = s.id;
+    if (index === 4) {
+      parent = [seedCandidate, ...records.slice(0, 4)].reduce((a, b) =>
+        b.score < a.score ? b : a,
+      );
+      await json("horizontal-selection.json", {
+        parentId: parent.id,
+        score: parent.score,
+        pngSha256: parent.pngSha256,
+        rule: "Lowest actual axis loss; seed/earliest on ties",
+      });
+    }
+    const from = s.stage === "horizontal" ? seedCandidate : parent,
+      lines = from.plainText.split("\n");
+    if (s.stage === "horizontal") lines[7] = s.centerLine + ".";
+    else
+      for (const row of [2, 3, 10, 11])
+        lines[row] = lines[row].replace(/^\S+/, s.firstWord);
+    const started = Date.now(),
+      l = nativeLayout(s, lines),
+      html = await format(documentHtml(l.markup), { parser: "html" }),
+      gzipSha256 = await save(s.id + ".html.gz", gzipSync(html)),
+      txtSha256 = await save(s.id + ".txt", l.plainText);
+    await json(s.id + "-layout.json", {
+      spec: s,
+      plainText: l.plainText,
+      structural: l.structural,
+      unit: l.unit,
+      lineHeight: l.lineHeight,
+      baseline: l.baseline,
+      field: l.field,
+      offset: l.offset,
+      actualAdvances: l.actualAdvances,
+      unusedWidths: l.unusedWidths,
+      modelScores: [],
+      side: l.side,
+      modules: l.modules,
+      quiet: l.quiet,
+      parentId: from.id,
+      parentTextSha256: hash(from.plainText),
+    });
+    await page.setContent(html);
+    await page.evaluate(() => document.fonts.ready);
+    const nodes = page.locator("pre");
+    assert.equal(await nodes.count(), 3);
+    for (let i = 0; i < 3; i++) {
+      assert.equal(await nodes.nth(i).textContent(), l.plainText);
+      assert.equal(await nodes.nth(i).locator("*").count(), 0);
+    }
+    const fit = await page.locator("#corner-0").evaluate((e) => {
+      const cs = getComputedStyle(e);
+      return {
+        font: cs.fontFamily,
+        weight: cs.fontWeight,
+        fontSize: cs.fontSize,
+        lineHeight: cs.lineHeight,
+        tracking: cs.letterSpacing,
+        width: e.clientWidth,
+        scrollWidth: e.scrollWidth,
+        childElements: e.children.length,
+      };
+    });
+    assert(fit.scrollWidth <= Math.ceil(l.field) + 1, "Native field overflow");
+    const png = await page.locator("#artifact").screenshot(),
+      path = "raw/" + s.id + ".png",
+      pngSha256 = await save(path, png),
+      p = await pixels(png),
+      diagnostic = diagnose(p, l);
+    diagnostic.classification =
+      "Finder-only ordinary binarizer/locator on unchanged native pixels; no candidate payload or phone candidate";
+    await page.setContent(html);
+    await page.evaluate(() => document.fonts.ready);
+    const repeated = await page.locator("#artifact").screenshot(),
+      repeatedPNGHash = hash(repeated),
+      repeatMatches = repeatedPNGHash === pngSha256;
+    if (!repeatMatches) await save("raw/" + s.id + "-repeat.png", repeated);
+    const r = {
+      id: s.id,
+      spec: s,
+      plainText: l.plainText,
+      parentId: from.id,
+      parentTextSha256: hash(from.plainText),
+      score: score(diagnostic),
+      path,
+      pngSha256,
+      rgbaSha256: hash(p.data),
+      gzipSha256,
+      txtSha256,
+      width: p.width,
+      height: p.height,
+      structural: l.structural,
+      fit,
+      diagnostic,
+      replay: { repeatedPNGHash, repeatMatches },
+      elapsedMs: Date.now() - started,
+      encodedPayload: null,
+      phone: "not a phone candidate",
+      readability:
+        "Native words and synthetic T words; visual legibility not accepted",
+    };
+    records.push(r);
+    await appendFile(resolve(out, "results.jsonl"), JSON.stringify(r) + "\n");
+    console.log(
+      JSON.stringify({
+        id: r.id,
+        score: r.score,
+        parent: r.parentId,
+        finder: diagnostic.correctFinder,
+        runs: Object.values(diagnostic.corridors)
+          .flatMap((x) => Object.values(x))
+          .map((x) => x.runs.length),
+        repeatMatches,
+      }),
+    );
+  }
+  assert.deepEqual(errors, []);
+  const best = [seedCandidate, ...records].reduce((a, b) =>
+    b.score < a.score ? b : a,
+  );
+  await json("summary.json", {
+    completed: records.length,
+    correctFinderGeometry: records
+      .filter((r) => r.diagnostic.correctFinder)
+      .map((r) => r.id),
+    seedScore: seedCandidate.score,
+    best: { id: best.id, score: best.score, pngSha256: best.pngSha256 },
+    exactNativeRepeats: records.filter((r) => r.replay.repeatMatches).length,
+    encodedPayloads: 0,
+    phoneCandidates: 0,
+  });
+} catch (e) {
+  await json("aborted.json", {
+    at: new Date().toISOString(),
+    attempted,
+    completed: records.length,
+    message: e.message,
+  });
+  throw e;
+} finally {
+  await browser.close();
+}

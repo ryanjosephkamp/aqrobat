@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-11T19:33:05.809Z",
+  "configPath": "experiments/prose-qr/paste-prose-2026-10-11/read-word-02-controls.json",
+  "configSha256": "34c9345a6195950d70aa1892575109073860a7f74bc8e3f80d9713160205d39b",
+  "sources": [
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/readers.mjs",
+      "sha256": "2b5af4943b734ea95708b93ef06af0c757b9fc1d0f7f73eefaf069d6e3703eb0"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/vision.swift",
+      "sha256": "ca1dace759ddbcb18547152224609a4f8de1f40d1f4d2c2770a02f249ab6ffbc"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "word-02",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-02/pdf-96/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "0db5cd5eb5afeec35a1cab3847353894c422963e317fb9150aa20301ec0d486d"
+    },
+    {
+      "id": "control-1",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-01/control-1.png",
+      "payload": "https://example.com/",
+      "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "id": "control-2",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-01/control-2.png",
+      "payload": "https://example.org/",
+      "pngSha256": "b27f2ee3766efa319717cc74af67e925469fcf427d26a1b49698f36df634a9d0"
+    }
+  ],
+  "engines": [
+    "zxing",
+    "jsqr",
+    "opencv",
+    "vision"
+  ],
+  "plannedCalls": 12,
+  "inputTransforms": "none",
+  "expectedPayloadNotSuppliedToReader": true
+}

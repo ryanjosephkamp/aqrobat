@@ -1,0 +1,244 @@
+{
+  "schema": "aqrobat.integrated.parent-packaging-verification.v1",
+  "atUtc": "2026-10-10T22:38:39.283983+00:00",
+  "scope": "Parent packaging, prior-file preservation and report reconciliation; independent science/custody review is separate. No new captures, readers, source renders or experiments.",
+  "checks": [
+    {
+      "name": "cwd",
+      "passed": true,
+      "detail": "/Users/noir/Documents/aqrobat"
+    },
+    {
+      "name": "branch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "remote",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "precommit-head",
+      "passed": true,
+      "detail": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222"
+    },
+    {
+      "name": "no-prior-tracked-file-changes",
+      "passed": true,
+      "detail": {
+        "newRunPathsInDiff": 0,
+        "unexpected": []
+      }
+    },
+    {
+      "name": "all-untracked-in-owned-run-trees",
+      "passed": true,
+      "detail": 1539
+    },
+    {
+      "name": "npm-private",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "intake-preserved:AGENTS.md",
+      "passed": true,
+      "detail": "f6137c5e3d8593d6cfc0d272ef6a939bf1044d147129900418622a9bd13da9d8"
+    },
+    {
+      "name": "intake-preserved:docs/PROJECT-HANDOFF.md",
+      "passed": true,
+      "detail": "31f9b05100f7298d46f850efdd32057e4e58abc04db31b8b84a064dc6a5d534d"
+    },
+    {
+      "name": "intake-preserved:package.json",
+      "passed": true,
+      "detail": "aa01b4783b2df46ebc0794f76756b3bd6183ec1975be84ef87b3b4b4fd74d161"
+    },
+    {
+      "name": "intake-preserved:package-lock.json",
+      "passed": true,
+      "detail": "c965918835df6b4562db31a9738c3f9a82a2470bd77997370184901b93178606"
+    },
+    {
+      "name": "intake-preserved:docs/research/prose-qr/resource-audit-2026-10-10/handback.html",
+      "passed": true,
+      "detail": "d7a498117e77dfe1f99aaa91e045a30b76acf914507a6378570cc5091a886c0b"
+    },
+    {
+      "name": "intake-preserved:docs/research/prose-qr/resource-audit-2026-10-10/results.json",
+      "passed": true,
+      "detail": "21c98f175fc5d2b978370a38b563f9cb194a8030168073a60168cd2f36e82f29"
+    },
+    {
+      "name": "intake-preserved:docs/research/prose-qr/layout-design-2026-10-10/RECONSIDERATION.md",
+      "passed": true,
+      "detail": "f4c42f962d72dcf747f54f91680ece6eab0e107cfdc7a3aebc54c57d8966f0ca"
+    },
+    {
+      "name": "intake-preserved:docs/research/prose-qr/layout-design-2026-10-10/reconsideration.json",
+      "passed": true,
+      "detail": "8ed2af55a0066fe24c8610c7ffca12e9666b135b5a0945cfe0c04551e673580e"
+    },
+    {
+      "name": "intake-preserved:experiments/prose-qr/astra-2026-10-10/common.mjs",
+      "passed": true,
+      "detail": "172d9e84f8ad24fedc6f5f7c8eed95ee042e20ef617c86fdf645111eb9602646"
+    },
+    {
+      "name": "pinned-license-preserved:vendor/qrcodegen.mjs",
+      "passed": true,
+      "detail": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+    },
+    {
+      "name": "pinned-license-preserved:LICENSE",
+      "passed": true,
+      "detail": "c090cc9b6b3155d41ce3872f9df4bdc1532988241b7f2bca709fa90e115d8219"
+    },
+    {
+      "name": "pinned-license-preserved:NOTICE.md",
+      "passed": true,
+      "detail": "62f9b9ef5424656839c12ea664b696aad5c24eba985d150ce1521a965559219b"
+    },
+    {
+      "name": "parent-python-syntax:experiments/prose-qr/integrated-2026-10-10/render-progress.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "parent-python-syntax:experiments/prose-qr/integrated-2026-10-10/render-handback.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "parent-python-syntax:experiments/prose-qr/integrated-2026-10-10/verify-handback.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all-report-links-resolve",
+      "passed": true,
+      "detail": {
+        "links": 91,
+        "missing": []
+      }
+    },
+    {
+      "name": "self-contained-report-no-external-assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "report-does-not-execute-scripts",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "all-four-evidence-images-embedded",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "name": "embedded-png-identical:empirical/payload-01/native-projection/input.png",
+      "passed": true,
+      "detail": "3b36925fd80dfd5b9b36f90a952575469fc976e936c1367f74f481cabeb38e14"
+    },
+    {
+      "name": "embedded-png-identical:empirical/payload-02/native-projection/input.png",
+      "passed": true,
+      "detail": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2"
+    },
+    {
+      "name": "embedded-png-identical:empirical/payload-04/continuous-native/input.png",
+      "passed": true,
+      "detail": "49b9230b76508e3a7a9393cdda6876ecc03a44928c0a77760adb9ee54cb29cf5"
+    },
+    {
+      "name": "embedded-png-identical:empirical/resources-06/cutoff-gray-228-stroke-0p75/input.png",
+      "passed": true,
+      "detail": "4e3b834092b468c14e4133ae0391fe73d87274154d75fa2d715c1d9a8381eb60"
+    },
+    {
+      "name": "final-worker-count:glyphResources",
+      "passed": true,
+      "detail": 87
+    },
+    {
+      "name": "final-worker-count:nativeCaptures",
+      "passed": true,
+      "detail": 9
+    },
+    {
+      "name": "final-worker-count:controlCaptures",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "name": "final-worker-count:ordinaryCalls",
+      "passed": true,
+      "detail": 37
+    },
+    {
+      "name": "final-worker-count:profiles",
+      "passed": true,
+      "detail": 11
+    },
+    {
+      "name": "final-worker-count:repeats",
+      "passed": true,
+      "detail": 17
+    },
+    {
+      "name": "final-worker-count:payloadTrials",
+      "passed": true,
+      "detail": 3
+    },
+    {
+      "name": "final-worker-count:exactRepeats",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "name": "final-worker-count:nativeExactRecoveries",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "final-worker-count:nativeStrictPasses",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "no-owner-candidate-claimed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all-preserved-format-warning-bytes-exact",
+      "passed": true,
+      "detail": 207
+    },
+    {
+      "name": "all-empirical-batches-embedded",
+      "passed": true,
+      "detail": 24
+    },
+    {
+      "name": "independent-review-present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "artifact-byte-cap",
+      "passed": true,
+      "detail": 39591339
+    }
+  ],
+  "passed": true,
+  "count": 45,
+  "precommitBaseline": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222",
+  "artifactSnapshotBytes": 39591339,
+  "artifactSnapshotFiles": 1539,
+  "snapshotExcludesFutureEditsToMutableClosingReports": true
+}

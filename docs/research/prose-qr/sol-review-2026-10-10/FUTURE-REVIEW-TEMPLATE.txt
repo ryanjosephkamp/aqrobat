@@ -1,0 +1,11 @@
+Use this pattern only within the user's currently authorized task scope and remaining time budget. It does not authorize a new experiment, another research phase, or an extra worker by itself.
+
+Keep the parent chat's current model. For a bounded review or critique that does not require the parent to do the substantive work, dispatch one fresh-context GPT-6.1 Sol subagent, normally at High. Use Xhigh when the actual task warrants the additional depth. Prefer Fast when a real control is available; otherwise disclose that Fast is unverified. Do not silently substitute a model.
+
+Before dispatch, save a self-contained worker request with exact workspace and branch, current baseline, source paths, review questions, allowed output directory, time/size limits, evidence and acceptance boundaries, and prohibited mutations. Pass fork_turns=none with the explicit model and effort. The worker must not spawn more agents, message other chats or people, expand scope, or start experiments unless the user's current instruction authorizes those actions.
+
+After dispatch, enter blocking waits. Do not perform a duplicate parent audit or poll account usage while the worker is doing the assigned review. Bounded wait timeouts may require minimal orchestration; do not claim that this proves zero billing. Receive the final handback automatically in the active parent turn, then reconcile only material findings against their cited evidence and verify artifact scope.
+
+Record requested versus verified settings, observed timing, the handback mechanism, parent work performed, remaining uncertainties, and any failure. Do not claim comparative savings, confirmed desktop Fast, or persistent wake after closing the parent without evidence. Preserve all worker outputs, including failures. No automatic retry outside the user's scope or remaining budget.
+
+Return the substantive findings and a concise workflow receipt to the user. Proceed beyond review only when that next action is already authorized by the user and fits all remaining bounds. Keep owner-selection proposals distinct from execution.

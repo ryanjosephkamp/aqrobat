@@ -1,0 +1,96 @@
+{
+  "at": "2026-10-11T05:34:19.188Z",
+  "configPath": "experiments/prose-qr/styled-story-2026-10-11/batch-14.json",
+  "configSha256": "8f2d18c3b7fdeb186beebfc596b86aa5e14a0eb27b26c968347a746a8a0ef3ec",
+  "config": {
+    "id": "batch-14",
+    "layout": "heavy",
+    "viewport": {
+      "width": 6000,
+      "height": 6000
+    },
+    "largeFieldBound": 14000000,
+    "resourcePath": "docs/research/prose-qr/styled-story-2026-10-11/heavy-atlas-01/results.json",
+    "controlReplayReceipt": "docs/research/prose-qr/styled-story-2026-10-11/control-replay-01/results.json",
+    "hypothesis": "Combine measured native heavy20px faces,20px nonoverlapping leading, gray180 and160px module pitch/eight lines. Full ordered uppercase story field. Ordinary default readers receive only the unchanged4960px native capture. No ornaments or background modules. Source/input bounds preregistered, exact repeats retained; no new conventional captures.",
+    "specs": [
+      {
+        "id": "large-1",
+        "payload": "AQROBAT-TEST",
+        "font": "Impact",
+        "fontSize": 20,
+        "quiet": 5,
+        "ecc": "M",
+        "pitch": 160,
+        "linesPerModule": 8,
+        "gray": 180
+      },
+      {
+        "id": "large-2",
+        "payload": "AQROBAT-TEST",
+        "font": "Arial Black",
+        "fontSize": 20,
+        "quiet": 5,
+        "ecc": "M",
+        "pitch": 160,
+        "linesPerModule": 8,
+        "gray": 180
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "id": "large-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Impact",
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "pitch": 160,
+      "linesPerModule": 8,
+      "gray": 180
+    },
+    {
+      "id": "large-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Arial Black",
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "pitch": 160,
+      "linesPerModule": 8,
+      "gray": 180
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/styled-story-2026-10-11/batch.mjs": "486105fa09d255b6a0abf86428f785249745dbf3f8cad8144d57e31d59b207f5",
+    "experiments/prose-qr/styled-story-2026-10-11/batch.mjs:uncompressed": "90f06d4c876739a9778e06198007a5f854694cb65147f646c0230103160299f4",
+    "experiments/prose-qr/styled-story-2026-10-11/reader.mjs": "86d8ed6a488c6a8b3a101bb5263cec426b2c6c3ab3992177ba5987bb4aa3dfd8",
+    "experiments/prose-qr/styled-story-2026-10-11/reader.mjs:uncompressed": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050",
+    "experiments/prose-qr/styled-story-2026-10-11/opencv.py": "e2c6e982dcbe3d9a9282a4cacb03ac396a5061d4cad8155f0f466212210ab7bb",
+    "experiments/prose-qr/styled-story-2026-10-11/opencv.py:uncompressed": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053",
+    "experiments/prose-qr/flow/layout.mjs": "5622b0fadf402fa816d82d54d0887a59f5fb5595b76d69f0647f924545a94041",
+    "experiments/prose-qr/flow/layout.mjs:uncompressed": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+    "experiments/prose-qr/layout.mjs": "3066cf8ef5de82b9df6498e0b42f6c850ec621ef02c8c8598e8db2f8563d899d",
+    "experiments/prose-qr/layout.mjs:uncompressed": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "src/core.mjs": "0defcfe4259af5f11830e1eb1c4b1258da8d42ae57e4e6e8328c8f1afb39af2e",
+    "src/core.mjs:uncompressed": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+    "vendor/qrcodegen.mjs": "f91e5fe4f302f26a1699e0bf827a27d97356192bddd4769ee5bec50929f53cc2",
+    "vendor/qrcodegen.mjs:uncompressed": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+    "docs/research/prose-qr/pilot-02/metrics.json": "1b5ef6470e44df20959b65a3921d43f4a035e00cefad7437bfc9746606be731c",
+    "docs/research/prose-qr/pilot-02/metrics.json:uncompressed": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+    "experiments/prose-qr/styled-story-2026-10-11/heavy.mjs": "be9ffd51b747bedcb4fdde65c38acbbda6eb164ef07de336ed40b628e1493545",
+    "experiments/prose-qr/styled-story-2026-10-11/heavy.mjs:uncompressed": "898aae09f718cb662059af2ef066b3ef4b94c770d290c99c272da4f6061f44db",
+    "docs/research/prose-qr/styled-story-2026-10-11/heavy-atlas-01/results.json": "adc05772dbaf28c21c0c38e50c8adc8d496d73ec5a68c03311856fafa3c6c6f6",
+    "docs/research/prose-qr/styled-story-2026-10-11/heavy-atlas-01/results.json:uncompressed": "5753364a316cbf97f38ec6233fbcf9b108ee2f5e171c635a27e08de9cd1b9872",
+    "docs/research/prose-qr/styled-story-2026-10-11/control-replay-01/results.json": "74ea342ff2c0277e2db6891ed0a1fe1d85a30d76945aabb24e7aefd807ee6656",
+    "docs/research/prose-qr/styled-story-2026-10-11/control-replay-01/results.json:uncompressed": "82ace302f211eb507c951c5d848a4253375493f9f54e3194d96c4c085ecd1fb7"
+  },
+  "candidateSlots": 2,
+  "repeatSlots": 2,
+  "readerSlots": 6,
+  "deadline": "2026-10-11T07:23:00Z",
+  "inputTransforms": "none",
+  "conventionalCaptureSlots": 0,
+  "controlReplayReceipt": "docs/research/prose-qr/styled-story-2026-10-11/control-replay-01/results.json"
+}

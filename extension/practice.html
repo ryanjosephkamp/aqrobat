@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Aqrobat · insertion practice</title
+  ><style>
+    body {
+      font: 16px/1.6 system-ui;
+      color: #241839;
+      background: #f8f4ff;
+      margin: 24px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 34px;
+    }
+    button,
+    input {
+      font: inherit;
+      padding: 10px;
+      border: 1px solid #ac8ace;
+      border-radius: 8px;
+    }
+    button {
+      cursor: pointer;
+      background: #e9dfff;
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+    }
+    textarea,
+    [contenteditable] {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 140px;
+      max-width: none;
+      background: white;
+      color: black;
+      padding: 14px;
+      border: 1px solid #ad9ccc;
+      border-radius: 12px;
+      overflow: auto;
+    }
+    textarea {
+      height: 700px;
+      font:
+        12px/18px Menlo,
+        monospace;
+      white-space: pre-wrap;
+    }
+    [contenteditable] {
+      font:
+        16px/1.5 Arial,
+        sans-serif;
+      min-height: 500px;
+    }
+    code {
+      font-family: Menlo, monospace;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 14px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+  <main>
+    <h1>Insert real text · practice</h1>
+    <p>
+      The QR is built directly in these editors. Its blanks and glyphs are
+      measured here; your clipboard is not used. Saved or sent email may still
+      change typography. Scan the final destination.
+    </p>
+    <div class="controls">
+      <button id="start">Choose recipe and field</button
+      ><label
+        >Load Recipe JSON
+        <input id="import" type="file" accept=".json,application/json"
+      /></label>
+      <label
+        >Plain editor font size
+        <input
+          id="practice-font-size"
+          type="number"
+          value="12"
+          min="6"
+          max="32"
+          step="1"
+          style="width: 90px"
+        />
+        px</label
+      >
+    </div>
+    <p id="status" role="status">
+      Demo recipes: hash, rocket, black circle, and mixed symbols. In the
+      extension, your saved recipes are also available.
+    </p>
+    <label for="plain">Plain multiline editor · Menlo</label
+    ><textarea id="plain" aria-label="Plain practice editor" spellcheck="false">
+Your draft starts here.&#10;</textarea
+    ><label for="rich">Rich editor · email / document practice</label>
+    <div id="rich" contenteditable="true" aria-label="Rich practice editor">
+      <p>
+        Your email draft starts here. Place your cursor below this paragraph.
+      </p>
+      <p><br /></p>
+    </div>
+    <p>
+      Try Undo after inserting. Existing draft content should remain.
+      Single-line fields, insufficient width, selected text, read-only fields,
+      and character limits are rejected before insertion.
+    </p>
+    <p>
+      No email is sent and no form is submitted by this page. These are local
+      practice editors; they do not establish Gmail, Outlook, Substack, native
+      Mail, or TextEdit compatibility.
+    </p>
+  </main>
+  <script type="module" src="practice.mjs"></script>
+</html>

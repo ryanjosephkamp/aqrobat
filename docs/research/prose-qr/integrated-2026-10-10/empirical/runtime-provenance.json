@@ -1,0 +1,799 @@
+{
+  "schema": "aqrobat.integrated.runtime-font-provenance.v1",
+  "atUtc": "2026-10-10T22:25:58.967868+00:00",
+  "python": {
+    "version": "3.12.1",
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3"
+  },
+  "host": {
+    "system": "Darwin",
+    "release": "25.3.0",
+    "machine": "arm64"
+  },
+  "chrome": {
+    "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "versionStdout": "Google Chrome 155.0.8059.39 \n",
+    "versionStderr": "",
+    "status": 0,
+    "boundary": "Executable version inspection, not a new browser capture."
+  },
+  "node": "v26.10.0",
+  "readers": {
+    "opencv": "4.13.0",
+    "jsqr": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "zxingCppCommit": "2ecec3f5be0ee803f6e14a5a2c7028c0cfe525b4",
+    "zxingWasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931"
+  },
+  "playwright": "1.56.1",
+  "prettier": "3.8.1",
+  "fonts": [
+    {
+      "path": "/System/Library/Fonts/Apple Symbols.ttf",
+      "fileSha256": "99b1a177669c568bcb157c107ea4ba0f1f60c77021df990cc5c1d7afa3863b92",
+      "bytes": 897936,
+      "faces": [
+        {
+          "postScriptNames": ["AppleSymbols"],
+          "familyNames": ["Apple Symbols"],
+          "fullNames": ["Apple Symbols"],
+          "versions": ["17.0d1e2"],
+          "uniqueIDs": ["Apple Symbols; 17.0d1e2; 2021-05-16"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Avenir Next.ttc",
+      "fileSha256": "98dec241f3ee712a37fad61aafdb83e225ed54c3e5b6e9f0abeb24eba13743ba",
+      "bytes": 4994280,
+      "faces": [
+        {
+          "postScriptNames": ["AvenirNext-Bold"],
+          "familyNames": ["Avenir Next"],
+          "fullNames": ["Avenir Next Bold"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Bold; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-BoldItalic"],
+          "familyNames": ["Avenir Next"],
+          "fullNames": ["Avenir Next Bold Italic"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Bold Italic; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-DemiBold"],
+          "familyNames": ["Avenir Next Demi Bold"],
+          "fullNames": ["Avenir Next Demi Bold"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Demi Bold; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-DemiBoldItalic"],
+          "familyNames": ["Avenir Next Demi Bold"],
+          "fullNames": ["Avenir Next Demi Bold Italic"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Demi Bold Italic; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-Italic"],
+          "familyNames": ["Avenir Next"],
+          "fullNames": ["Avenir Next Italic"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Italic; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-Medium"],
+          "familyNames": ["Avenir Next Medium"],
+          "fullNames": ["Avenir Next Medium"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Medium; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-MediumItalic"],
+          "familyNames": ["Avenir Next Medium"],
+          "fullNames": ["Avenir Next Medium Italic"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Medium Italic; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-Regular"],
+          "familyNames": ["Avenir Next"],
+          "fullNames": ["Avenir Next Regular"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Regular; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-Heavy"],
+          "familyNames": ["Avenir Next Heavy"],
+          "fullNames": ["Avenir Next Heavy"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Heavy; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-HeavyItalic"],
+          "familyNames": ["Avenir Next Heavy"],
+          "fullNames": ["Avenir Next Heavy Italic"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Heavy Italic; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-UltraLight"],
+          "familyNames": ["Avenir Next Ultra Light"],
+          "fullNames": ["Avenir Next Ultra Light", "AvenirNext-UltraLight"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Ultra Light; 13.0d1e10; 2017-06-30"]
+        },
+        {
+          "postScriptNames": ["AvenirNext-UltraLightItalic"],
+          "familyNames": ["Avenir Next Ultra Light"],
+          "fullNames": ["Avenir Next Ultra Light Italic"],
+          "versions": ["13.0d1e10"],
+          "uniqueIDs": ["Avenir Next Ultra Light Italic; 13.0d1e10; 2017-06-30"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Avenir.ttc",
+      "fileSha256": "8a91c65df9df9f597bf9e5460e6c6d2a1c9d7d10c5e1d2af310318df23739490",
+      "bytes": 1644004,
+      "faces": [
+        {
+          "postScriptNames": ["Avenir-Book"],
+          "familyNames": ["Avenir Book"],
+          "fullNames": ["Avenir Book"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Book; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-BookOblique"],
+          "familyNames": ["Avenir Book"],
+          "fullNames": ["Avenir Book Oblique"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Book Oblique; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-Black"],
+          "familyNames": ["Avenir Black"],
+          "fullNames": ["Avenir Black"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Black; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-BlackOblique"],
+          "familyNames": ["Avenir Black Oblique"],
+          "fullNames": ["Avenir Black Oblique"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Black Oblique; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-Heavy"],
+          "familyNames": ["Avenir Heavy"],
+          "fullNames": ["Avenir Heavy"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Heavy; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-HeavyOblique"],
+          "familyNames": ["Avenir Heavy"],
+          "fullNames": ["Avenir Heavy Oblique"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Heavy Oblique; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-Light"],
+          "familyNames": ["Avenir Light"],
+          "fullNames": ["Avenir Light"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Light; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-LightOblique"],
+          "familyNames": ["Avenir Light"],
+          "fullNames": ["Avenir Light Oblique"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Light Oblique; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-Medium"],
+          "familyNames": ["Avenir Medium"],
+          "fullNames": ["Avenir Medium"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Medium; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-MediumOblique"],
+          "familyNames": ["Avenir Medium"],
+          "fullNames": ["Avenir Medium Oblique"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Medium Oblique; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-Oblique"],
+          "familyNames": ["Avenir"],
+          "fullNames": ["Avenir Oblique"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Oblique; 13.0d3e1; 2017-06-26"]
+        },
+        {
+          "postScriptNames": ["Avenir-Roman"],
+          "familyNames": ["Avenir"],
+          "fullNames": ["Avenir Roman"],
+          "versions": ["13.0d3e1"],
+          "uniqueIDs": ["Avenir Roman; 13.0d3e1; 2017-06-26"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Geneva.ttf",
+      "fileSha256": "b33d76749bbe41ebdffbdfc0330ace133f231d845539063bb2499d6681681a2a",
+      "bytes": 736764,
+      "faces": [
+        {
+          "postScriptNames": ["Geneva"],
+          "familyNames": ["Geneva"],
+          "fullNames": ["Geneva"],
+          "versions": ["17.0d2e1"],
+          "uniqueIDs": ["Geneva; 17.0d2e1; 2020-12-12"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/HelveticaNeue.ttc",
+      "fileSha256": "a43317500f5c8086ebbe479b32e86f53ce7c075c14283aa9894cc23be5bfd8e2",
+      "bytes": 4472716,
+      "faces": [
+        {
+          "postScriptNames": ["HelveticaNeue"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-Bold"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Bold"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Bold; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-Italic"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Italic"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Italic; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-BoldItalic"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Bold Italic"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Bold Italic; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-CondensedBold"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Condensed Bold"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Condensed Bold; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-UltraLight"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue UltraLight"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue UltraLight; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-UltraLightItalic"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue UltraLight Italic"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": [
+            "Helvetica Neue UltraLight Italic; 20.4d1e2; 2025-02-03"
+          ]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-Light"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Light"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Light; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-LightItalic"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Light Italic"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Light Italic; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-CondensedBlack"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Condensed Black"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Condensed Black; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-Medium"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Medium"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Medium; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-MediumItalic"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Medium Italic"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Medium Italic; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-Thin"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Thin"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Thin; 20.4d1e2; 2025-02-03"]
+        },
+        {
+          "postScriptNames": ["HelveticaNeue-ThinItalic"],
+          "familyNames": ["Helvetica Neue"],
+          "fullNames": ["Helvetica Neue Thin Italic"],
+          "versions": ["20.4d1e2"],
+          "uniqueIDs": ["Helvetica Neue Thin Italic; 20.4d1e2; 2025-02-03"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Menlo.ttc",
+      "fileSha256": "dc256e0b39c2a6fec947129d421fef41b8b429f58f9b6e5d1b148c87f775c1f6",
+      "bytes": 2156036,
+      "faces": [
+        {
+          "postScriptNames": ["Menlo-Regular"],
+          "familyNames": ["Menlo"],
+          "fullNames": ["Menlo Regular"],
+          "versions": ["17.0d1e1"],
+          "uniqueIDs": ["Menlo Regular; 17.0d1e1; 2021-02-10"]
+        },
+        {
+          "postScriptNames": ["Menlo-Bold"],
+          "familyNames": ["Menlo"],
+          "fullNames": ["Menlo Bold"],
+          "versions": ["17.0d1e1"],
+          "uniqueIDs": ["Menlo Bold; 17.0d1e1; 2021-02-10"]
+        },
+        {
+          "postScriptNames": ["Menlo-Italic"],
+          "familyNames": ["Menlo"],
+          "fullNames": ["Menlo Italic"],
+          "versions": ["17.0d1e1"],
+          "uniqueIDs": ["Menlo Italic; 17.0d1e1; 2021-02-10"]
+        },
+        {
+          "postScriptNames": ["Menlo-BoldItalic"],
+          "familyNames": ["Menlo"],
+          "fullNames": ["Menlo Bold Italic"],
+          "versions": ["17.0d1e1"],
+          "uniqueIDs": ["Menlo Bold Italic; 17.0d1e1; 2021-02-10"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/AmericanTypewriter.ttc",
+      "fileSha256": "a2e235b25ba5863306a8102077e923c9fb4971741e8416a939e7ae60f576ef3a",
+      "bytes": 2440576,
+      "faces": [
+        {
+          "postScriptNames": ["AmericanTypewriter"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": ["American Typewriter; 16.0d2e4; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["AmericanTypewriter-Light"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter Light"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": ["American Typewriter Light; 16.0d2e4; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["AmericanTypewriter-Bold"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter Bold"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": ["American Typewriter Bold; 16.0d2e4; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["AmericanTypewriter-Semibold"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter Semibold"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": ["American Typewriter Semibold; 16.0d2e4; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["AmericanTypewriter-Condensed"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter Condensed"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": ["American Typewriter Condensed; 16.0d2e4; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["AmericanTypewriter-CondensedBold"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter Condensed Bold"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": [
+            "American Typewriter Condensed Bold; 16.0d2e4; 2020-07-06"
+          ]
+        },
+        {
+          "postScriptNames": ["AmericanTypewriter-CondensedLight"],
+          "familyNames": ["American Typewriter"],
+          "fullNames": ["American Typewriter Condensed Light"],
+          "versions": ["16.0d2e4"],
+          "uniqueIDs": [
+            "American Typewriter Condensed Light; 16.0d2e4; 2020-07-06"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Arial Black.ttf",
+      "fileSha256": "7d7db3ad96a31373c1437c6ab14266f6605495544c8e663558b047521174c42e",
+      "bytes": 122556,
+      "faces": [
+        {
+          "postScriptNames": ["Arial-Black"],
+          "familyNames": ["Arial Black"],
+          "fullNames": [
+            "Arial Black",
+            "Arial Black Arrunta",
+            "Arial Black Navadno",
+            "Arial Black Normaali",
+            "Arial Black Normal",
+            "Arial Black Normale",
+            "Arial Black Normalny",
+            "Arial Black Normál",
+            "Arial Black Normálne",
+            "Arial Black Standaard",
+            "Arial Black Standard",
+            "Arial Black normal",
+            "Arial Black obyčejné",
+            "Arial Black Κανονικά",
+            "Arial Black Обычный"
+          ],
+          "versions": ["Version 5.00.1x"],
+          "uniqueIDs": ["Monotype - Arial Black Regular"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+      "fileSha256": "d72db21f9242aedd6b917d8549ad5921766b24d5f8d0becfda2ff4c620b3c2e0",
+      "bytes": 750984,
+      "faces": [
+        {
+          "postScriptNames": ["Arial-BoldMT"],
+          "familyNames": ["Arial"],
+          "fullNames": [
+            "Arial Bold",
+            "Arial Fet",
+            "Arial Fett",
+            "Arial Félkövér",
+            "Arial Gras",
+            "Arial Grassetto",
+            "Arial Halvfet",
+            "Arial Kalın",
+            "Arial Krepko",
+            "Arial Lihavoitu",
+            "Arial Lodia",
+            "Arial Negreta",
+            "Arial Negrita",
+            "Arial Negrito",
+            "Arial Pogrubiony",
+            "Arial Tučné",
+            "Arial Vet",
+            "Arial fed",
+            "Arial tučné",
+            "Arial đậm",
+            "Arial Έντονα",
+            "Arial Полужирный"
+          ],
+          "versions": ["Version 5.01.2x"],
+          "uniqueIDs": ["Monotype:Arial Bold:Version 5.01 (Microsoft)"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf",
+      "fileSha256": "a74ea71c366f15c81f9ce00a757cefb938cda21c0d32e51037d9a038e5ebc14b",
+      "bytes": 49296,
+      "faces": [
+        {
+          "postScriptNames": ["ArialRoundedMTBold"],
+          "familyNames": ["Arial Rounded MT Bold"],
+          "fullNames": ["Arial Rounded MT Bold"],
+          "versions": ["Version 1.51x"],
+          "uniqueIDs": ["Arial Rounded MT Bold"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+      "fileSha256": "876af2cd4854644e7f3e7feb2f688997fdb3343c6df6693611209c9dfb47ccec",
+      "bytes": 23278008,
+      "faces": [
+        {
+          "postScriptNames": ["ArialUnicodeMS"],
+          "familyNames": ["Arial Unicode MS"],
+          "fullNames": ["Arial Unicode MS"],
+          "versions": ["Version 1.01x"],
+          "uniqueIDs": ["Monotype - Arial Unicode MS"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Arial.ttf",
+      "fileSha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+      "bytes": 773236,
+      "faces": [
+        {
+          "postScriptNames": ["ArialMT"],
+          "familyNames": ["Arial"],
+          "fullNames": ["Arial"],
+          "versions": ["Version 5.01.2x"],
+          "uniqueIDs": ["Monotype:Arial Regular:Version 5.01 (Microsoft)"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/ChalkboardSE.ttc",
+      "fileSha256": "2f115e259dbd66e39a5891fe1fb49fa18b20b8d2db08a1e43b3b1360ca0e0bbe",
+      "bytes": 538448,
+      "faces": [
+        {
+          "postScriptNames": ["ChalkboardSE-Light"],
+          "familyNames": ["Chalkboard SE"],
+          "fullNames": ["Chalkboard SE Light"],
+          "versions": ["13.0d1e2"],
+          "uniqueIDs": ["Chalkboard SE Light; 13.0d1e2; 2017-06-16"]
+        },
+        {
+          "postScriptNames": ["ChalkboardSE-Regular"],
+          "familyNames": ["Chalkboard SE"],
+          "fullNames": ["Chalkboard SE Regular"],
+          "versions": ["13.0d1e2"],
+          "uniqueIDs": ["Chalkboard SE Regular; 13.0d1e2; 2017-06-16"]
+        },
+        {
+          "postScriptNames": ["ChalkboardSE-Bold"],
+          "familyNames": ["Chalkboard SE"],
+          "fullNames": ["Chalkboard SE Bold"],
+          "versions": ["13.0d1e2"],
+          "uniqueIDs": ["Chalkboard SE Bold; 13.0d1e2; 2017-06-16"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Futura.ttc",
+      "fileSha256": "c59c04e8e87f752e2e57b3f3d43a793eba907a9e2affcbfeac85e7c6779e878f",
+      "bytes": 487620,
+      "faces": [
+        {
+          "postScriptNames": ["Futura-Medium"],
+          "familyNames": ["Futura"],
+          "fullNames": ["Futura Medium"],
+          "versions": ["16.0d2e1"],
+          "uniqueIDs": ["Futura Medium; 16.0d2e1; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["Futura-MediumItalic"],
+          "familyNames": ["Futura"],
+          "fullNames": ["Futura Medium Italic"],
+          "versions": ["16.0d2e1"],
+          "uniqueIDs": ["Futura Medium Italic; 16.0d2e1; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["Futura-Bold"],
+          "familyNames": ["Futura"],
+          "fullNames": ["Futura Bold"],
+          "versions": ["16.0d2e1"],
+          "uniqueIDs": ["Futura Bold; 16.0d2e1; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["Futura-CondensedMedium"],
+          "familyNames": ["Futura"],
+          "fullNames": ["Futura Condensed Medium"],
+          "versions": ["16.0d2e1"],
+          "uniqueIDs": ["Futura Condensed Medium; 16.0d2e1; 2020-07-06"]
+        },
+        {
+          "postScriptNames": ["Futura-CondensedExtraBold"],
+          "familyNames": ["Futura"],
+          "fullNames": ["Futura Condensed ExtraBold"],
+          "versions": ["16.0d2e1"],
+          "uniqueIDs": ["Futura Condensed ExtraBold; 16.0d2e1; 2020-07-06"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Impact.ttf",
+      "fileSha256": "57e95627fd36fe2740e5ee8a91ff1ae74fb216df9580bd23e30d6772814727be",
+      "bytes": 138488,
+      "faces": [
+        {
+          "postScriptNames": ["Impact"],
+          "familyNames": ["Impact"],
+          "fullNames": ["Impact"],
+          "versions": ["Version 5.00x"],
+          "uniqueIDs": ["Impact - 1992"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Phosphate.ttc",
+      "fileSha256": "5a41e3fd2fe555722aac02ef921dbc88e1c24ad86edbba5078b6c22d9a18df8b",
+      "bytes": 232068,
+      "faces": [
+        {
+          "postScriptNames": ["Phosphate-Inline"],
+          "familyNames": ["Phosphate"],
+          "fullNames": ["Phosphate Inline"],
+          "versions": ["13.0d1e2"],
+          "uniqueIDs": ["Phosphate Inline; 13.0d1e2; 2017-06-15"]
+        },
+        {
+          "postScriptNames": ["Phosphate-Solid"],
+          "familyNames": ["Phosphate"],
+          "fullNames": ["Phosphate Solid"],
+          "versions": ["13.0d1e2"],
+          "uniqueIDs": ["Phosphate Solid; 13.0d1e2; 2017-06-15"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Skia.ttf",
+      "fileSha256": "c5662db30ec62800c67d6a854b1dc422c4fdec2a85833066badf88cd60771597",
+      "bytes": 489984,
+      "faces": [
+        {
+          "postScriptNames": ["Skia-Regular"],
+          "familyNames": ["Skia"],
+          "fullNames": ["Skia"],
+          "versions": ["13.0d1e54"],
+          "uniqueIDs": ["Skia; 13.0d1e54; 2017-06-21"]
+        }
+      ]
+    },
+    {
+      "path": "/System/Library/Fonts/Supplemental/Verdana Bold.ttf",
+      "fileSha256": "480f66b66430bdfa6e9a2199e4bf8f79d915221e60d58e7a32b4ff50645de2e0",
+      "bytes": 153260,
+      "faces": [
+        {
+          "postScriptNames": ["Verdana-Bold"],
+          "familyNames": ["Verdana"],
+          "fullNames": [
+            "Verdana Bold",
+            "Verdana Fet",
+            "Verdana Fett",
+            "Verdana Félkövér",
+            "Verdana Gras",
+            "Verdana Grassetto",
+            "Verdana Halvfet",
+            "Verdana Kalın",
+            "Verdana Krepko",
+            "Verdana Lihavoitu",
+            "Verdana Lodia",
+            "Verdana Negreta",
+            "Verdana Negrita",
+            "Verdana Negrito",
+            "Verdana Pogrubiony",
+            "Verdana Tučné",
+            "Verdana Vet",
+            "Verdana fed",
+            "Verdana tučné",
+            "Verdana Έντονα",
+            "Verdana Полужирный"
+          ],
+          "versions": ["Version 5.01x"],
+          "uniqueIDs": ["Microsoft:Verdana Bold:Version 5.01x (Microsoft)"]
+        }
+      ]
+    }
+  ],
+  "fontEvidenceBoundary": "Font files name-table metadata and hashes identify installed faces. Actual rendering provenance is the per-source ChromeCDP postScriptName/isCustomFont record; a file inventory alone does not prove which face rendered. Skia variable descriptor mismatch remains unresolved, not fallback proof.",
+  "pinnedSources": [
+    {
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "bytes": 45866
+    },
+    {
+      "path": "vendor/README.md",
+      "unavailable": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "aa01b4783b2df46ebc0794f76756b3bd6183ec1975be84ef87b3b4b4fd74d161",
+      "bytes": 1412
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "c965918835df6b4562db31a9738c3f9a82a2470bd77997370184901b93178606",
+      "bytes": 4528
+    },
+    {
+      "path": "node_modules/jsqr/dist/jsQR.js",
+      "sha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+      "bytes": 256885
+    },
+    {
+      "path": "node_modules/zxing-wasm/package.json",
+      "sha256": "ab0e462a1f87051d456afc4e3cdba286e00b089d53075e9c0f1d1dfbfd909078",
+      "bytes": 7387
+    },
+    {
+      "path": "node_modules/playwright/package.json",
+      "sha256": "388159d9169e9aa04bd24a92fb102321e7aca1af8c5ce9fc130f354af148587a",
+      "bytes": 2238
+    }
+  ],
+  "newCaptures": 0,
+  "newReaderCalls": 0,
+  "observedNativePostScriptNames": [
+    "AmericanTypewriter-Bold",
+    "AppleSymbols",
+    "Arial-Black",
+    "Arial-BoldMT",
+    "ArialMT",
+    "ArialRoundedMTBold",
+    "ArialUnicodeMS",
+    "Avenir-Black",
+    "AvenirNext-Heavy",
+    "ChalkboardSE-Bold",
+    "Futura-Bold",
+    "Futura-CondensedExtraBold",
+    "Geneva",
+    "HelveticaNeue",
+    "HelveticaNeue-CondensedBlack",
+    "Impact",
+    "Menlo-Bold",
+    "Menlo-Regular",
+    "Phosphate-Inline",
+    "Phosphate-Solid",
+    "Skia-Regular_wght30000_wdth14000",
+    "Verdana-Bold"
+  ],
+  "fontVersionCoverage": {
+    "exactNamedFaces": [
+      "AmericanTypewriter-Bold",
+      "AppleSymbols",
+      "Arial-Black",
+      "Arial-BoldMT",
+      "ArialMT",
+      "ArialRoundedMTBold",
+      "ArialUnicodeMS",
+      "Avenir-Black",
+      "AvenirNext-Heavy",
+      "ChalkboardSE-Bold",
+      "Futura-Bold",
+      "Futura-CondensedExtraBold",
+      "Geneva",
+      "HelveticaNeue",
+      "HelveticaNeue-CondensedBlack",
+      "Impact",
+      "Menlo-Bold",
+      "Menlo-Regular",
+      "Phosphate-Inline",
+      "Phosphate-Solid",
+      "Verdana-Bold"
+    ],
+    "variableDescriptorUnresolved": ["Skia-Regular_wght30000_wdth14000"],
+    "note": "All other actual captured PostScript names have exact installed name-table version/hash mapping. Skia maps only to installed variable-family file; descriptor mismatch remains unresolved."
+  },
+  "metadataBuilderSha256": "d3a0b7784eaa7485819a533b04d3efcc50cd35cd56e2501d4c74c9076cd7e186"
+}

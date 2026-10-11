@@ -1,0 +1,315 @@
+{
+  "at": "2026-10-10T05:03:35.857Z",
+  "phase": 35,
+  "goal": "unsolved",
+  "newPayloadSources": 0,
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "plannedNative": 1,
+  "completedNativeRenderings": 1,
+  "exactImmediateRepeats": 1,
+  "pipelineDone": 0,
+  "pipelineAborts": 1,
+  "nativePngSha256": "208afb13ef731e35096742ffee2fd424b1d241c1636003738701fbeba50041be",
+  "nativeRGBASha256": "e7d24e55eaf632063690b1b4cd0417a23f35129095a45933b06ab2c70426fe0c",
+  "mechanicalRejected": false,
+  "nativeFont": {
+    "family": "Monaco, monospace",
+    "size": "14px",
+    "leading": "14px",
+    "weight": "400",
+    "tracking": "normal",
+    "color": "rgb(0, 0, 0)",
+    "whiteSpace": "pre"
+  },
+  "clearance": 2.43359375,
+  "minGap": 0.73828125,
+  "ownerLegibility": "untested",
+  "agentLegibility": "Native excerpt only; see README. Not semantic prose, full document or portable acceptance",
+  "ordinaryOpenCVNativeCalls": 1,
+  "ordinaryOpenCVQuad": null,
+  "ordinaryOpenCVControlExact": true,
+  "errorReportingDiagnosticReturns": 0,
+  "completeSampledDiagnostics": 0,
+  "nativeFullTraceDuringOriginalRun": "unsaved at reserve abort",
+  "separateReadOnlyTrace": "docs/research/prose-qr/phase-37/replay-01/native-summary.json",
+  "originalUnattemptedCalls": [
+    "final solid control after native trace-save abort"
+  ],
+  "strictNativePass": false,
+  "intendedOrdinaryNativeGeometry": false,
+  "passiveReturnsMatch": true,
+  "actualSelectedNative": {
+    "topLeft": {
+      "point": { "x": 2522, "y": 4848.5 },
+      "scoring": { "x": 2522, "y": 4849 },
+      "quad": {
+        "q": {
+          "top": { "startX": 2521, "endX": 2523, "y": 4847 },
+          "bottom": { "startX": 2521, "endX": 2523, "y": 4849 }
+        },
+        "top": 2,
+        "bottom": 2,
+        "height": 3,
+        "x": 2522,
+        "y": 4848.5
+      },
+      "quadBalance": 0.6666666666666666,
+      "nominalSpanFraction": 0.0031746031746031746,
+      "stableWideRowFraction": 0,
+      "trueGeometricAxes": {
+        "horizontal": {
+          "runs": [3, 1, 2, 3, 2],
+          "complete": true,
+          "scale": 1.5714285714285714,
+          "normalizedRMS": 0.984172262016317
+        },
+        "vertical": {
+          "runs": [5, 8, 11, 4, 5],
+          "complete": true,
+          "scale": 4.714285714285714,
+          "normalizedRMS": 0.4382953874367162
+        },
+        "diagonalDown": {
+          "runs": [
+            2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+            4.242640687119286, 2.8284271247461903
+          ],
+          "complete": true,
+          "scale": 2.0203050891044216,
+          "normalizedRMS": 0.9143303560529968
+        },
+        "diagonalUp": {
+          "runs": [
+            2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+            4.242640687119286, 1.4142135623730951
+          ],
+          "complete": true,
+          "scale": 1.8182745801939795,
+          "normalizedRMS": 0.9242948596926855
+        }
+      },
+      "centralSpanBalance": 0.18181818181818182
+    },
+    "topRight": {
+      "point": { "x": 2522, "y": 4890.5 },
+      "scoring": { "x": 2522, "y": 4891 },
+      "quad": {
+        "q": {
+          "top": { "startX": 2521, "endX": 2523, "y": 4889 },
+          "bottom": { "startX": 2521, "endX": 2523, "y": 4891 }
+        },
+        "top": 2,
+        "bottom": 2,
+        "height": 3,
+        "x": 2522,
+        "y": 4890.5
+      },
+      "quadBalance": 0.6666666666666666,
+      "nominalSpanFraction": 0.0031746031746031746,
+      "stableWideRowFraction": 0,
+      "trueGeometricAxes": {
+        "horizontal": {
+          "runs": [3, 1, 2, 3, 2],
+          "complete": true,
+          "scale": 1.5714285714285714,
+          "normalizedRMS": 0.984172262016317
+        },
+        "vertical": {
+          "runs": [5, 8, 11, 4, 5],
+          "complete": true,
+          "scale": 4.714285714285714,
+          "normalizedRMS": 0.4382953874367162
+        },
+        "diagonalDown": {
+          "runs": [
+            2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+            4.242640687119286, 2.8284271247461903
+          ],
+          "complete": true,
+          "scale": 2.0203050891044216,
+          "normalizedRMS": 0.9143303560529968
+        },
+        "diagonalUp": {
+          "runs": [
+            2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+            4.242640687119286, 1.4142135623730951
+          ],
+          "complete": true,
+          "scale": 1.8182745801939795,
+          "normalizedRMS": 0.9242948596926855
+        }
+      },
+      "centralSpanBalance": 0.18181818181818182
+    },
+    "bottomLeft": {
+      "point": { "x": 2522, "y": 2216.5 },
+      "scoring": { "x": 2522, "y": 2217 },
+      "quad": {
+        "q": {
+          "top": { "startX": 2521, "endX": 2523, "y": 2215 },
+          "bottom": { "startX": 2521, "endX": 2523, "y": 2217 }
+        },
+        "top": 2,
+        "bottom": 2,
+        "height": 3,
+        "x": 2522,
+        "y": 2216.5
+      },
+      "quadBalance": 0.6666666666666666,
+      "nominalSpanFraction": 0.0031746031746031746,
+      "stableWideRowFraction": 0,
+      "trueGeometricAxes": {
+        "horizontal": {
+          "runs": [3, 1, 2, 3, 2],
+          "complete": true,
+          "scale": 1.5714285714285714,
+          "normalizedRMS": 0.984172262016317
+        },
+        "vertical": {
+          "runs": [5, 8, 11, 4, 5],
+          "complete": true,
+          "scale": 4.714285714285714,
+          "normalizedRMS": 0.4382953874367162
+        },
+        "diagonalDown": {
+          "runs": [
+            2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+            4.242640687119286, 1.4142135623730951
+          ],
+          "complete": true,
+          "scale": 1.8182745801939795,
+          "normalizedRMS": 0.9242948596926855
+        },
+        "diagonalUp": {
+          "runs": [
+            2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+            4.242640687119286, 1.4142135623730951
+          ],
+          "complete": true,
+          "scale": 1.8182745801939795,
+          "normalizedRMS": 0.9242948596926855
+        }
+      },
+      "centralSpanBalance": 0.18181818181818182
+    }
+  },
+  "replicaExpectedRegionRays": [
+    {
+      "point": [124.34285714285713, 124.34285714285713],
+      "classification": "Expected source-region replica diagnostic; not selected geometry",
+      "axes": {
+        "horizontal": {
+          "runs": [4, 1, 4, 1, 4],
+          "complete": true,
+          "rms": 0.8366600265340756,
+          "centralSpan": 4
+        },
+        "vertical": {
+          "runs": [16, 11, 48, 13, 1],
+          "complete": true,
+          "rms": 0.5541501954217594,
+          "centralSpan": 48
+        },
+        "diagonalDown": {
+          "runs": [9, 1, 9, 2, 3],
+          "complete": true,
+          "rms": 0.8333333333333334,
+          "centralSpan": 9
+        },
+        "diagonalUp": {
+          "runs": [3, 3, 3, 1, 10],
+          "complete": true,
+          "rms": 1.4477568856683087,
+          "centralSpan": 3
+        }
+      },
+      "balancedCentralSpans": 0.0625,
+      "completeAxes": 4,
+      "wideRowFraction": 0
+    },
+    {
+      "point": [387.65714285714284, 124.34285714285713],
+      "classification": "Expected source-region replica diagnostic; not selected geometry",
+      "axes": {
+        "horizontal": {
+          "runs": [5, 1, 4, 1, 4],
+          "complete": true,
+          "rms": 0.9361861163489045,
+          "centralSpan": 4
+        },
+        "vertical": {
+          "runs": [17, 10, 48, 11, 1],
+          "complete": true,
+          "rms": 0.5958858374711706,
+          "centralSpan": 48
+        },
+        "diagonalDown": {
+          "runs": [3, 1, 5, 1, 3],
+          "complete": true,
+          "rms": 0.5055900530816918,
+          "centralSpan": 5
+        },
+        "diagonalUp": {
+          "runs": [3, 1, 20, 2, 3],
+          "complete": true,
+          "rms": 0.9311621879211113,
+          "centralSpan": 20
+        }
+      },
+      "balancedCentralSpans": 0.08333333333333333,
+      "completeAxes": 4,
+      "wideRowFraction": 0
+    },
+    {
+      "point": [124.34285714285713, 387.65714285714284],
+      "classification": "Expected source-region replica diagnostic; not selected geometry",
+      "axes": {
+        "horizontal": {
+          "runs": [4, 1, 4, 1, 4],
+          "complete": true,
+          "rms": 0.8366600265340756,
+          "centralSpan": 4
+        },
+        "vertical": {
+          "runs": [1, 11, 47, 11, 17],
+          "complete": true,
+          "rms": 0.5688900449188941,
+          "centralSpan": 47
+        },
+        "diagonalDown": {
+          "runs": [9, 1, 3, 1, 5],
+          "complete": true,
+          "rms": 1.4463632873530667,
+          "centralSpan": 3
+        },
+        "diagonalUp": {
+          "runs": [3, 3, 3, 1, 10],
+          "complete": true,
+          "rms": 1.4477568856683087,
+          "centralSpan": 3
+        }
+      },
+      "balancedCentralSpans": 0.06382978723404255,
+      "completeAxes": 4,
+      "wideRowFraction": 0
+    }
+  ],
+  "replicaClassification": "Post-default-return init replica, never input to a reader",
+  "abort": {
+    "at": "2026-10-10T04:39:43.307Z",
+    "error": "AssertionError [ERR_ASSERTION]: Phase capture reserve reached\n    at save (file:///Users/noir/Documents/aqrobat/experiments/prose-qr/context-densewords/capture.mjs:34:3)\n    at async file:///Users/noir/Documents/aqrobat/experiments/prose-qr/context-densewords/capture.mjs:315:7"
+  },
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10/analyze.mjs": "2b49ae8af3d3bcf5341d9696047ee456ced6bbe1fc00cff14ed744795f5623e6",
+    "docs/research/prose-qr/phase-35/run-01/capture.json": "eb31d99051b4328cbbb5951906477cb31f7862b68df49fa55675e2f1dd78385f",
+    "docs/research/prose-qr/phase-35/run-01/native-pixels.json": "fc5397de777c2b87325c3e810a35e4ed29a2a3c9d196500e88a0b65e70a6c6e5",
+    "docs/research/prose-qr/phase-35/run-01/native-metrics.json": "44a29278d1ba5dcfc0b3e6e28cecadbd8fadc15577d791b0e132985e9ddbac24",
+    "docs/research/prose-qr/phase-35/opencv-01/run-01.json": "2941cc796e6f76bb3a17d3ab6141b0ee8823abf5c92fa93b339654150c547974",
+    "docs/research/prose-qr/phase-35/opencv-01/control.json": "b4263aa5354269f63dcccb304ec878d4ec8ecd8671fedb77fbf8c29df4ab2821",
+    "docs/research/prose-qr/phase-35/opencv-01/run-01-replica.json": "d4851eb1145fe7bc9990881641498cae5772efd2e6c1ccd70cd2a9cdcdd13c76",
+    "docs/research/prose-qr/phase-35/run-01/native-zxing-errors-diagnostic.json": "e318e02efe92f8a6aa6e0d68395fffaf1466ed6601bee20d90802837b6bb2d65",
+    "docs/research/prose-qr/phase-37/replay-01/native-summary.json": "84d001857c6c775af3f34154e096fbe10d26c6f6f43b6af834bdb2ef30120a72",
+    "docs/research/prose-qr/phase-35/run-01/aborted.json": "a953d8fc0e15e3de355983037065e995ff03faccda3a89c00479d1ec68746431"
+  }
+}

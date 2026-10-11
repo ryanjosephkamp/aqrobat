@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><title>Aqrobat</title
+  ><link rel="stylesheet" href="popup.css" />
+  <main>
+    <h1>Aqrobat</h1>
+    <p>Make → Save → Insert</p>
+    <h2>1. Make and save</h2>
+    <button id="open">Open QR workbench</button>
+    <h2>2. Insert on this page</h2>
+    <label for="recipe">Choose a saved QR</label
+    ><select id="recipe"></select>
+    <p id="payload"></p>
+    <button id="insert" disabled>Choose where to insert</button>
+    <p id="status" role="status">
+      Click the message body or another multiline field. Preview, then Insert
+      QR. Nothing is sent automatically.
+    </p>
+    <p>
+      <a href="practice.html" target="_blank"
+        >Open the insertion practice page</a
+      >
+    </p>
+  </main>
+  <script type="module" src="popup.mjs"></script>
+</html>

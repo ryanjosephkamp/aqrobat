@@ -1,0 +1,179 @@
+{
+  "schema": "aqrobat.design-measured-batch.v1",
+  "frozenAtUtc": "2026-10-10T21:38:43.219Z",
+  "input": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/native-input.json",
+    "sha256": "7c6f6ef13be741047d05d1212d402a5291f74c0d43f40406ec25a859feb4fb30",
+    "bytes": 412177
+  },
+  "adapter": {
+    "rejectedPriorBatch": "measured-01 retained with0attempted32unattempted; quietSamples namedbase rather than logical",
+    "transformation": "Copy declared geometry.polarity to top-level polarity and rename every quietSamples[].base to logical, preserving every value and coordinate. Native sample bytes otherwise unchanged.",
+    "adaptedInputSha256": "8dd85a744f71d4d7151d4c8ed0e2b87e86dde96e89e53fcfb5ee4515a5f00b60"
+  },
+  "sources": {
+    "experiments/prose-qr/integrated-2026-10-10/design/measured-batch02.mjs": "02c5290a3c64ce58c2ce9d9915c1bcf0848f4bc1c117bb0dbc6693d4cef6aa34",
+    "experiments/prose-qr/integrated-2026-10-10/design/padding-solver.mjs": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+    "package-lock.json": "c965918835df6b4562db31a9738c3f9a82a2470bd77997370184901b93178606"
+  },
+  "denominator": 32,
+  "cases": [
+    {
+      "ecc": "L",
+      "mask": 0
+    },
+    {
+      "ecc": "L",
+      "mask": 1
+    },
+    {
+      "ecc": "L",
+      "mask": 2
+    },
+    {
+      "ecc": "L",
+      "mask": 3
+    },
+    {
+      "ecc": "L",
+      "mask": 4
+    },
+    {
+      "ecc": "L",
+      "mask": 5
+    },
+    {
+      "ecc": "L",
+      "mask": 6
+    },
+    {
+      "ecc": "L",
+      "mask": 7
+    },
+    {
+      "ecc": "M",
+      "mask": 0
+    },
+    {
+      "ecc": "M",
+      "mask": 1
+    },
+    {
+      "ecc": "M",
+      "mask": 2
+    },
+    {
+      "ecc": "M",
+      "mask": 3
+    },
+    {
+      "ecc": "M",
+      "mask": 4
+    },
+    {
+      "ecc": "M",
+      "mask": 5
+    },
+    {
+      "ecc": "M",
+      "mask": 6
+    },
+    {
+      "ecc": "M",
+      "mask": 7
+    },
+    {
+      "ecc": "Q",
+      "mask": 0
+    },
+    {
+      "ecc": "Q",
+      "mask": 1
+    },
+    {
+      "ecc": "Q",
+      "mask": 2
+    },
+    {
+      "ecc": "Q",
+      "mask": 3
+    },
+    {
+      "ecc": "Q",
+      "mask": 4
+    },
+    {
+      "ecc": "Q",
+      "mask": 5
+    },
+    {
+      "ecc": "Q",
+      "mask": 6
+    },
+    {
+      "ecc": "Q",
+      "mask": 7
+    },
+    {
+      "ecc": "H",
+      "mask": 0
+    },
+    {
+      "ecc": "H",
+      "mask": 1
+    },
+    {
+      "ecc": "H",
+      "mask": 2
+    },
+    {
+      "ecc": "H",
+      "mask": 3
+    },
+    {
+      "ecc": "H",
+      "mask": 4
+    },
+    {
+      "ecc": "H",
+      "mask": 5
+    },
+    {
+      "ecc": "H",
+      "mask": 6
+    },
+    {
+      "ecc": "H",
+      "mask": 7
+    }
+  ],
+  "diagnosticsPerCase": [
+    "canonical-fit",
+    "exact-canonical",
+    "exact-post-terminator-affine",
+    "immutable-prefix-bound",
+    "bounded-post-terminator-radius"
+  ],
+  "rounds": "At most min(96, sum floor(ECCbytes/2)+1) for each case",
+  "maxXorsPerSolve": 2000000,
+  "ranking": [
+    "total codeword errors above per-block symbol radius",
+    "worst block excess",
+    "function mismatch count",
+    "total module mismatch count",
+    "ECC order L,M,Q,H",
+    "mask ascending"
+  ],
+  "sourceGeometry": "Unchanged empirical native module sample map; changing ECC/mask does not rerender or remeasure native pixels",
+  "captures": 0,
+  "readers": 0,
+  "profiles": 0,
+  "stop": [
+    "Changed input/source custody",
+    "Failed canonical parity",
+    "Unexpected solver exception",
+    "Design cutoff22:14:22Z"
+  ],
+  "claims": "Pure finite diagnostics. Padding noncanonical is separate. Function/quiet/remainder/source-model defects remain visible. No native or ordinary-reader acceptance follows. All unattempted rows retained on stop."
+}

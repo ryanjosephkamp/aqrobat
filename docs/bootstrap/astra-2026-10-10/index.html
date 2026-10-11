@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · New project bootstrap for Astra</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #202638;
+        --muted: #526074;
+        --paper: #f8f6f0;
+        --line: #d9d9d1;
+        --accent: #51458b;
+        --teal: #185f59;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          17px/1.65 system-ui,
+          -apple-system,
+          sans-serif;
+      }
+      main {
+        max-width: 960px;
+        margin: auto;
+        padding: 35px 20px 55px;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+      }
+      h1 {
+        font-size: clamp(38px, 6vw, 62px);
+        margin: 14px 0 22px;
+      }
+      h2 {
+        font-size: 30px;
+        margin: 0 0 16px;
+      }
+      p {
+        margin: 0 0 15px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 750;
+        color: var(--teal);
+      }
+      .lead {
+        font-size: 21px;
+        color: var(--muted);
+      }
+      .panel {
+        padding: 25px;
+        background: #fffdf8;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        margin: 23px 0;
+      }
+      .choice {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .choice div {
+        background: #eeebfa;
+        border-radius: 12px;
+        padding: 18px;
+      }
+      .choice b {
+        display: block;
+        font-size: 20px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 18px 0;
+      }
+      button,
+      .button {
+        font: 650 16px/1.4 system-ui;
+        cursor: pointer;
+        padding: 12px 17px;
+        border-radius: 10px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .secondary {
+        background: transparent;
+        color: var(--accent);
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 3px;
+      }
+      code {
+        font:
+          0.88em ui-monospace,
+          Menlo,
+          monospace;
+        background: #efeee9;
+        padding: 2px 4px;
+        border-radius: 4px;
+        overflow-wrap: anywhere;
+      }
+      .folder {
+        font-size: 18px;
+        display: block;
+        padding: 17px;
+        margin: 13px 0;
+        user-select: all;
+      }
+      ol {
+        padding-left: 24px;
+      }
+      li {
+        margin: 13px 0;
+        padding-left: 5px;
+      }
+      textarea {
+        display: block;
+        width: 100%;
+        height: 360px;
+        resize: vertical;
+        padding: 15px;
+        border: 1px solid #aab0ba;
+        border-radius: 10px;
+        background: white;
+        color: var(--ink);
+        font:
+          14px/1.6 ui-monospace,
+          Menlo,
+          monospace;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+      }
+      .small {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .notice {
+        color: var(--teal);
+        font-weight: 650;
+        min-height: 26px;
+      }
+      summary {
+        font-weight: 700;
+        cursor: pointer;
+      }
+      details > div {
+        padding-top: 18px;
+      }
+      .boundary {
+        border-left: 4px solid var(--teal);
+        padding: 14px 19px;
+        background: #edf4ef;
+        margin: 23px 0;
+      }
+      .links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      button:focus-visible,
+      a:focus-visible,
+      summary:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid #ab6d16;
+        outline-offset: 4px;
+      }
+      p,
+      li {
+        overflow-wrap: break-word;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding-top: 25px;
+        }
+        .choice {
+          grid-template-columns: 1fr;
+        }
+        .panel {
+          padding: 20px;
+        }
+        .lead {
+          font-size: 19px;
+        }
+        .folder {
+          font-size: 15px;
+        }
+        textarea {
+          height: 420px;
+        }
+      }
+      @media print {
+        button,
+        .actions {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+        main {
+          padding: 0;
+        }
+        .panel {
+          break-inside: avoid;
+        }
+        textarea {
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Aqrobat · October 10, 2026 · Setup only</p>
+      <h1>A fresh project.<br />The same preserved work.</h1>
+      <p class="lead">
+        Yes—this is a good point to move into a dedicated Aqrobat project and a
+        fresh chat. The repository is already in the right place.
+      </p>
+      <div class="choice">
+        <div><span>Use this model</span><b>GPT-6 Astra · Xhigh</b></div>
+        <div><span>Execution limit</span><b>Three hours maximum</b></div>
+      </div>
+      <section class="panel">
+        <h2>1. Open the existing folder</h2>
+        <p>
+          Add/open this local folder as a Codex project named
+          <strong>Aqrobat</strong>:
+        </p>
+        <code class="folder" id="folder">/Users/noir/Documents/aqrobat</code
+        ><button class="secondary" id="copy-folder">Copy folder path</button>
+        <p
+          class="notice"
+          id="folder-notice"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <p>
+          Select this folder itself. It already contains the Git repository,
+          research evidence, product files, and installed dependencies. Nothing
+          needs to be moved, duplicated, or cloned.
+        </p>
+      </section>
+      <section class="panel">
+        <h2>2. Start one fresh local chat</h2>
+        <ol>
+          <li>Create a new chat inside the Aqrobat project.</li>
+          <li>
+            Use the <strong>local checkout</strong>. Keep this run in the
+            existing folder rather than selecting a new worktree or cloud
+            environment.
+          </li>
+          <li>
+            Select <strong>GPT-6 Astra</strong> and
+            <strong>Xhigh</strong> effort.
+          </li>
+          <li>
+            Copy the prompt below and send it. That starts the bounded
+            execution.
+          </li>
+        </ol>
+        <p class="small">
+          I recommend Xhigh for the experimental reasoning in this phase. High
+          is reasonable, but I would keep your current preference. This is a
+          task-based recommendation, not a measured model benchmark.
+        </p>
+      </section>
+      <section class="panel" id="start">
+        <h2>3. Send this prompt</h2>
+        <p>
+          This short prompt points Astra to the complete execution instructions
+          saved in the repository.
+        </p>
+        <div class="actions">
+          <button id="copy-start">Copy start prompt</button
+          ><button class="secondary" id="select-start">Select text</button
+          ><a class="button secondary" href="START-PROMPT.txt" download
+            >Download TXT</a
+          >
+        </div>
+        <p id="notice" class="notice" role="status" aria-live="polite"></p>
+        <textarea
+          id="prompt"
+          readonly
+          spellcheck="false"
+          aria-label="New project start prompt"
+        >
+Start the Aqrobat research run in this new local project at /Users/noir/Documents/aqrobat, using GPT-6 Astra at Xhigh effort.
+
+Read AGENTS.md and docs/PROJECT-HANDOFF.md, then execute docs/bootstrap/astra-2026-10-10/RUN-PROMPT.md. I authorize its bounded autonomous research and backups for a maximum of three hours including intake, verification, and handback. Record the start and deadline immediately.
+
+This new project/chat is explicitly authorized. Preserve the existing checkout, all prior evidence and product files, and every scientific and resource limit in the run prompt. Keep existing PR #1 OPEN and draft and npm private/unpublished. No additional agents/chats, merge, release, store submission, or messages. Proceed with the work, not another proposal.
+</textarea
+        >
+      </section>
+      <div class="boundary">
+        <p>
+          <strong>The timer has not started.</strong> Astra will record its
+          start and deadline when it begins the new execution turn. The limit
+          includes intake, verification, and GitHub backup. New experiments stop
+          starting by minute 160.
+        </p>
+        <p>
+          Keep this old chat as history. It has no research job running. Let the
+          new chat own the run; no other task or session needs to be stopped.
+        </p>
+      </div>
+      <section class="panel">
+        <h2>What comes with the handoff</h2>
+        <p>
+          The current project handoff now authorizes your new project/chat and
+          supersedes the old Sol and “stay in this chat” recommendations. The
+          original planning package and all sealed research remain preserved.
+        </p>
+        <ul>
+          <li>
+            <strong>Verified saved evidence:</strong> 57 custody receipts, 6,473
+            inventory entries / 6,057 unique evidence paths, and 1,699 current
+            source references plus retained historical snapshots.
+          </li>
+          <li>
+            <strong>Preserved product:</strong> all three download hashes match;
+            npm remains private and unpublished.
+          </li>
+          <li>
+            <strong>GitHub:</strong> the same branch,
+            <code>codex/aqrobat-foundation</code>, and existing
+            <a href="https://github.com/ryanjosephkamp/aqrobat/pull/1"
+              >OPEN draft PR #1</a
+            >.
+          </li>
+          <li>
+            <strong>Research scope:</strong> readable native prose with exact
+            independent ordinary decoding. The goal remains unsolved; no new
+            phone result is claimed.
+          </li>
+        </ul>
+        <p class="small">
+          These checks verify saved bytes and tracking, not fresh scan results.
+          External original prototypes, other repositories, owner profiles, and
+          ignored runtimes remain untouched; this package does not claim to back
+          them up anew.
+        </p>
+        <div class="links">
+          <a href="README.md">Complete bootstrap</a
+          ><a href="../../PROJECT-HANDOFF.md">Current project handoff</a
+          ><a
+            href="../../research/prose-qr/sol-three-hour-plan-2026-10-10/index.html"
+            >40-idea research plan</a
+          ><a href="backup-verification-02.json">Backup receipt</a>
+        </div>
+      </section>
+      <section class="panel">
+        <details>
+          <summary>Full three-hour execution prompt</summary>
+          <div>
+            <p>
+              The new prompt is adapted for Astra in your new project. All
+              scientific gates, file limits, and preservation rules carry
+              forward.
+            </p>
+            <div class="actions">
+              <button id="copy-full">Copy full prompt</button
+              ><a class="button secondary" href="RUN-PROMPT.md" download
+                >Download Markdown</a
+              >
+            </div>
+            <p class="notice" id="full-notice" role="status"></p>
+            <textarea
+              id="full"
+              readonly
+              spellcheck="false"
+              aria-label="Full execution prompt"
+            >
+# Execute the bounded prose QR run in the new Aqrobat project
+
+I authorize GPT-6 Astra at Xhigh effort to execute a maximum three-hour autonomous
+research run, starting when you begin this turn. Record the start and deadline
+before intake. This is an execution request, not another planning request. Work only in `/Users/noir/Documents/aqrobat`, on
+`codex/aqrobat-foundation`, using the existing OPEN draft PR #1. Do not change
+models, start agents/chats, enter an ongoing goal, or schedule an automation.
+Keep working through small justified follow-up phases without asking me to
+approve each batch. Three hours is a ceiling, not a requirement to use it all.
+
+## New-project authorization
+
+Ryan has explicitly selected a fresh local Codex project and chat rooted at
+`/Users/noir/Documents/aqrobat`. This is the existing independent repository; no
+files or Git history need to be moved, cloned, reset, or recreated. Older notes
+saying to defer the project move or stay in the previous chat are superseded
+for this user-created project/chat. The old Sol model recommendation is also
+superseded. All scientific, preservation, publication, and additional-agent
+restrictions remain in force. Do not inherit Splashery instructions. Do not
+start any additional chat or agent. Use the actual local checkout, not a cloud
+copy or a fresh worktree. Only this new chat should perform the research run.
+
+## Intake and preservation
+
+Read `AGENTS.md`, `docs/PROJECT-HANDOFF.md`, and
+`docs/bootstrap/astra-2026-10-10/README.md`, this prompt, and
+`docs/research/prose-qr/sol-three-hour-plan-2026-10-10/IDEAS.md`. The forty ideas
+are a menu; their earlier Sol handoff remains a preserved historical package. Read session D's `CHECKPOINT.md`, `README.md`, `analysis.json`,
+`verification-final.json`, `custody.json`, `HARNESS-NOTES.md`, and the referenced
+phase 70–74 plans, results, and custody receipts. Inspect earlier mechanisms
+as needed to avoid repeating failed work under a new name.
+
+Verify the actual Git branch, remote, HEAD, dirty state, PR OPEN/draft status,
+saved executed sources, prior custody, and product download hashes before
+research edits. The research baseline before this planning package was
+`227eaff4da4bdd1c631d796048f076faffa4d249`; the Sol planning commit is `bacae8e51a34daadee79e7a1e7a1067e0b97f69d`; this
+new-project bootstrap commit follows it. Further planning-only commits may follow.
+Do not reset to that hash or overwrite unexpected work. Record the live anchor
+and check intervening changes. Preserve all earlier phases and prototypes,
+product/extension/downloads, Splashery, the PDF archive, owner profiles, other
+tasks and jobs. npm stays private and unpublished. No merge, release, store,
+new host, migration, new PR, messages to others, or changes to Pages settings.
+
+The goal remains unsolved. Session D has 15 native captures and 15 exact repeats,
+75/87 completed primary slots, and 12 setup-aborted unattempted slots. All strict
+structure gates fail. PILL improves central spans but still fails its true
+diagonal and intended dimension. None of these new sources encodes a payload.
+Preserve phase 72's original setup abort, executed source and initial plan,
+phase 65's ERRATA, and every older error or unknown. No new phone results exist.
+
+## Objective and priorities
+
+Aim for readable native prose whose unchanged full output recovers an exact
+preregistered payload in independent ordinary readers, then becomes a credible
+candidate for my later phone review. Do not stop merely because a locator score
+improves or one finder-only phase finishes. Prioritize:
+
+1. A short read-only audit of source scale, actual selected stroke runs, returned
+   dimension, and the spatial freedom available to readable body text. The
+   PILL resource-scale hypothesis in the plan is a diagnostic lead, not a
+   correction to old results. Inspect whether our surrogate gates agree with
+   existing conventional controls; do not silently relax their thresholds.
+2. A genuinely different native-letter topology mechanism addressing the actual
+   first-selected H/V/both diagonal runs, stable balanced spans, and dimension.
+   Select a small justified set by structure, not another size/weight/placement
+   sweep of the same glyph. Record why it differs from the earlier failures.
+3. A plausible paragraph construction, such as larger readable initials with
+   smaller body text, or several readable words forming a larger finder. Check
+   normal-page readability and finder/data scale compatibility early. A larger
+   initial alone does not solve data capacity; demonstrate the relevant native
+   measurements. Alternative ideas in the bank are hypotheses, not mandates.
+
+You may select and adapt ideas based on evidence. Preregister each batch's
+objective, cases, source rules, legibility rejection, denominators, readers,
+timeouts, and cap before rendering. Keep acceptance rules fixed within it.
+Save any corrected harness source as a new version, retain the original error,
+and validate the correction on controls. Do not modify acceptance readers.
+After one small failure, try a different justified route while useful budget
+remains; do not spend the run making slight variants of the same failure.
+
+## Evidence gates
+
+Use unchanged complete native outputs with ordinary reader settings, including
+an implementation outside ZXing. Count implementations separately from profiles,
+branches and repeats. Retain every success, failure, wrong payload, rejection,
+abort, checker error, timeout/unknown, and unattempted slot. Assert passive
+instrumentation returns the same result as stock code. Keep actual first-selected
+H/V/both true diagonals and balanced spans separate from source-aligned samples,
+threshold replicas, scored-only axes and second-return points.
+
+Keep the existing full-context structure gates and explicit native legibility
+rejection. No full-QR sweep based on coordinate, model, scored-only, or
+second-return passes. If a new native construction passes the existing intended
+geometry/structure gates in full text context and remains visibly readable,
+you may preregister up to four full native payload proposals within the total
+budget. Fix the exact decoded string before each payload phase; default to
+`https://example.com/`. No shortened URLs, added fragments, or altered payloads
+to obtain a favorable pattern. Standard source mask/version/ECC choices may
+be considered, but all rendered proposals count and must fit the small budget.
+
+Geometry may guide source rendering and post-return diagnosis only: no pixel
+repair, forced extraction/corners, hidden modules, invisible letters, acceptance
+reader tuning, or unreadable raster compression. Reader-internal ordinary
+processing is allowed; externally blurred/cropped/resized images do not replace
+the native acceptance input. Keep styled outline, bold, regular Latin,
+intrinsically heavy/decorative, logographic and uniform-black ASCII lanes
+separate. A styled success does not solve unstyled text or portable plain text.
+
+Reject visibly merged, clipped, overlapping, miniature or indistinguishable
+letters; a mechanical gate is not owner legibility acceptance. Judge the whole
+page as well as a 1:1 excerpt. Repetitive words, fabricated language, a giant
+page, or a conventional QR disguised as a font are intermediate controls or
+different products, not the requested readable paragraph.
+
+## Runtime and file budget
+
+Record the wall-clock start and a deadline 180 minutes later immediately. The
+clock includes intake, research, verification, commit/push, and handback. Start
+no new experiment after minute 160; reserve at least 20 minutes for closing.
+Check remaining time and disk budget between batches. Give child jobs bounded
+timeouts that fit before the deadline; close only your own jobs and profiles.
+Do not leave unattended background work after handback. If the session is
+interrupted, preserve the checkpoint; resumption must account for the original
+deadline rather than automatically starting another three-hour window.
+
+Use fresh exclusive phase/output directories; never rerun sealed scripts in
+their old directories. Overall ceilings: 24 new full native source proposals
+(including rejects and at most four conditional payload proposals), one
+immediate repeat per captured case, and 24 small glyph-resource renders of at
+most 512 × 512. Full captures must fit four megapixels / 16 MB uncompressed
+RGBA. Count resource renders, controls, repeats, and reader slots separately.
+
+Limit all new logical files to 40 MB, including source, evidence, failures,
+reports and receipts. Normally cap each new phase at 6 MB; a reason declared
+before execution may raise that phase to at most 8 MB without raising the
+overall cap. Reserve 5 MB overall for verification and handback. Do not delete
+outcomes to make space. Use one owned browser and one CPU-heavy job at a time;
+reuse installed tools/fonts. No new dependencies, font/model downloads, paid
+services, or large unbounded sweeps. These ceilings are not quotas to fill.
+
+## Stop and deliver
+
+Stop early for a genuinely review-ready automated candidate: the existing
+full-context gates pass; at least two independent ordinary implementations,
+including one outside ZXing, recover the exact payload from unchanged full
+native output; a fresh native repeat reproduces it; and a local visual review
+finds a readable paragraph at its declared normal-page display size. Save all
+reader results and the native HTML/text/recipe/PNG plus concise phone steps.
+Label it an automated candidate with phone acceptance pending. Do not send
+messages or perform phone tests on my behalf.
+
+Otherwise continue useful distinct work within the limits, then seal a truthful
+incomplete checkpoint. Stop earlier if continuing would violate preservation
+boundaries, if there is no defensible next experiment within the remaining
+budgets, or if I ask you to stop. Explain the specific reason; elapsed time or
+a spent cap does not make the scientific goal complete.
+
+Back up meaningful milestones to this same branch, checking staged scope and
+applicable checks before each push. Keep PR #1 draft and attach it to this chat
+if needed. Do not rebuild or rewrite product downloads for research-only work.
+At the end, provide a self-contained phone-friendly HTML report, exact counts,
+source/custody verification, changed-file scope, live Git/PR state, remaining
+scientific obstacle, and a safe continuation prompt. Failed grids belong in
+the evidence archive, not in a purported successful phone-test handoff.
+</textarea
+            >
+          </div>
+        </details>
+      </section>
+      <footer>
+        No experiment, new chat, agent, automation, or three-hour run was
+        started during this bootstrap. A connection interruption can still
+        interrupt the eventual run; the prompt requires milestone backups and
+        safe checkpoints.
+      </footer>
+    </main>
+    <script>
+      async function copyText(id, noticeId) {
+        const box = document.getElementById(id),
+          notice = document.getElementById(noticeId);
+        try {
+          if (!navigator.clipboard) throw new Error("Unavailable");
+          await navigator.clipboard.writeText(box.value);
+          notice.textContent = "Copied. Paste into the new Aqrobat chat.";
+        } catch {
+          box.focus();
+          box.select();
+          box.setSelectionRange(0, box.value.length);
+          notice.textContent =
+            "Full text selected. Use your device’s Copy command.";
+        }
+      }
+      document
+        .getElementById("copy-start")
+        .addEventListener("click", () => copyText("prompt", "notice"));
+      document.getElementById("select-start").addEventListener("click", () => {
+        const p = document.getElementById("prompt");
+        p.focus();
+        p.select();
+        p.setSelectionRange(0, p.value.length);
+        document.getElementById("notice").textContent =
+          "Full text selected. Use your device’s Copy command.";
+      });
+      document
+        .getElementById("copy-full")
+        .addEventListener("click", () => copyText("full", "full-notice"));
+      document
+        .getElementById("copy-folder")
+        .addEventListener("click", async () => {
+          const p = document.getElementById("folder"),
+            n = document.getElementById("folder-notice");
+          try {
+            await navigator.clipboard.writeText(p.textContent);
+            n.textContent = "Folder path copied.";
+          } catch {
+            const r = document.createRange();
+            r.selectNodeContents(p);
+            const s = window.getSelection();
+            s.removeAllRanges();
+            s.addRange(r);
+            n.textContent =
+              "Folder path selected. Use your device’s Copy command.";
+          }
+        });
+    </script>
+  </body>
+</html>

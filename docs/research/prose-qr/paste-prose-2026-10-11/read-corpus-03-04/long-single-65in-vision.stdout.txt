@@ -1,0 +1,56 @@
+{
+  "at" : "2026-10-11T19:36:15Z",
+  "inputTransforms" : "none",
+  "invocation" : "VNDetectBarcodesRequest(); VNImageRequestHandler(url:options:[:]); all defaults",
+  "os" : "Version 26.3.1 (a) (Build 25D771280a)",
+  "rows" : [
+    {
+      "defaultSymbologies" : [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations" : [
+        {
+          "boundingBox" : [
+            0.15022045633067255,
+            0.13426309755792334,
+            0.71673833641907714,
+            0.72499012019596054
+          ],
+          "confidence" : 1,
+          "payload" : "https:\/\/example.com\/",
+          "symbology" : "VNBarcodeSymbologyQR"
+        }
+      ],
+      "path" : "docs\/research\/prose-qr\/paste-prose-2026-10-11\/corpus-04\/long-single-65in.png",
+      "pngSha256" : "6e9592c01dc50645af03abb094ca90d6392c37c2da755d6e62165f79767cb7bd",
+      "revision" : 4,
+      "seconds" : 0.20448005199432373,
+      "texts" : [
+        "https:\/\/example.com\/"
+      ]
+    }
+  ]
+}

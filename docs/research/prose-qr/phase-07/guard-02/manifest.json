@@ -1,0 +1,53 @@
+{
+  "startedAt": "2026-10-09T20:44:43.057Z",
+  "baseline": "80f1b54a024cfb456f287078f2af7edb7e2579f8",
+  "specs": [
+    {
+      "id": "guard-03",
+      "font": "Impact",
+      "fontSize": 20,
+      "guard": 3,
+      "leading": "Frozen 20-pixel seed",
+      "objective": "Whole-line source guard for ordinary finder formation"
+    },
+    {
+      "id": "guard-04",
+      "font": "Impact",
+      "fontSize": 20,
+      "guard": 4,
+      "leading": "Frozen 20-pixel seed",
+      "objective": "Whole-line source guard for ordinary finder formation"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/finder-span/capture.mjs": "7210c15070c7c7ede423236e86e9f1c4ee98c4ac9c0aa297af316076276d6df7",
+    "experiments/prose-qr/finder-native/layout.mjs": "3ffbb51466ecc536fad441b10f73b7b4c88c3d3f12e13393dd00bca18833dec7",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+    "docs/research/prose-qr/phase-07/PLAN.md": "6449b4dfd2c5b7dd6177e6ca23454fdbb4877814e72154cc3b95b76beaadfc03",
+    "docs/research/prose-qr/phase-06/font-metrics.json": "60b24cb5e453f6ae046912838daedbf487f41bab586b3e0096ac756099a8fc4d",
+    "docs/research/prose-qr/phase-07/GUARD-CONTINUATION.md": "3249dbf7d592b0546bd0b111b2f5328e002b0e9ea5a6212dd92c62fdc7f80774",
+    "docs/research/prose-qr/phase-07/GUARD-PLAN.md": "55c88038fef630f5ef40f106dfeeea3e0256e6a86a61be334c4f848267cb6cb7",
+    "docs/research/prose-qr/phase-06/custody.json": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+    "docs/research/prose-qr/phase-06/seam-02/seam-01-layout.json": "98e88504599e931ada22fc94df2e362d8d8b462ccfddda074b93758a2c296b1f",
+    "docs/research/prose-qr/phase-06/seam-02/seam-01.html.gz": "cfb49c5bcf320b24e65df4660b0970c5d7e0444c5c76e7ab586094cc0d2f151a",
+    "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png": "0c36d200f67049da04ba0daed2f43c761b2dc2be6df36657b59391ddab9a96e2",
+    "docs/research/prose-qr/phase-06/seam-02/results.jsonl": "c750216ea2542ab6581c5d884612661a06f17fd3b57efbe97a216d90a119d5ee"
+  },
+  "diagnosticBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "controlsDecoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "Finder-only ordinary locator diagnostic on unchanged native pixels. No payload in candidate layouts; no phone candidates."
+}

@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-10T17:25:37.801185+00:00",
+  "passed": true,
+  "classification": "Independent saved-pixel and retained computed-style verification. Regions are post-capture visual diagnostics, never reader inputs. No new render/reader.",
+  "rows": [
+    {
+      "phase": "context-03",
+      "expectedVisible": false,
+      "pngSha256": "82be30176c8e94f2a3f67ee4e9913197fae1d589aea15e14e7a0c6e80a3b63ec",
+      "probes": [
+        {
+          "nativeRect": [48, 115, 94, 180],
+          "grayBelow128Pixels": 0,
+          "declaredComputedStroke": 0,
+          "visibleInkPresent": false
+        },
+        {
+          "nativeRect": [415, 115, 461, 180],
+          "grayBelow128Pixels": 0,
+          "declaredComputedStroke": 0,
+          "visibleInkPresent": false
+        },
+        {
+          "nativeRect": [48, 482, 94, 547],
+          "grayBelow128Pixels": 0,
+          "declaredComputedStroke": 0,
+          "visibleInkPresent": false
+        }
+      ]
+    },
+    {
+      "phase": "context-04",
+      "expectedVisible": true,
+      "pngSha256": "8f233610d28d206de5f8a3dd6a451a00f759550ef90e162aedf2be7a1a660b0b",
+      "probes": [
+        {
+          "nativeRect": [48, 115, 94, 180],
+          "grayBelow128Pixels": 632,
+          "declaredComputedStroke": 4,
+          "visibleInkPresent": true
+        },
+        {
+          "nativeRect": [415, 115, 461, 180],
+          "grayBelow128Pixels": 631,
+          "declaredComputedStroke": 4,
+          "visibleInkPresent": true
+        },
+        {
+          "nativeRect": [48, 482, 94, 547],
+          "grayBelow128Pixels": 632,
+          "declaredComputedStroke": 4,
+          "visibleInkPresent": true
+        }
+      ]
+    }
+  ]
+}

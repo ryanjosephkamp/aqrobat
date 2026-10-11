@@ -1,0 +1,65 @@
+// Small original selection of ordinary English words; no external corpus.
+export const WORDS = Object.freeze({
+  2: {
+    dark: ["AM", "MY", "ME", "WE", "NO", "ON", "OX", "UP"],
+    light: ["it", "if", "is", "to", "at", "as", "in", "of"],
+  },
+  3: {
+    dark: [
+      "MUM",
+      "MOM",
+      "WOW",
+      "MOW",
+      "NOW",
+      "OWN",
+      "WON",
+      "MAN",
+      "HAM",
+      "HUM",
+      "ROW",
+      "RAM",
+    ],
+    light: [
+      "ill",
+      "lit",
+      "fit",
+      "let",
+      "lie",
+      "sit",
+      "its",
+      "tie",
+      "all",
+      "bit",
+    ],
+  },
+  4: {
+    dark: [
+      "WORM",
+      "WARM",
+      "MOON",
+      "MOWN",
+      "ROOM",
+      "WOOD",
+      "WOOL",
+      "WOMB",
+      "WORN",
+      "WALL",
+      "HOME",
+      "MOMS",
+    ],
+    light: [
+      "tilt",
+      "list",
+      "till",
+      "lift",
+      "lite",
+      "life",
+      "file",
+      "tell",
+      "tale",
+      "tile",
+    ],
+  },
+});
+export const NEGATIVE_TEXT =
+  "Rain moved past the window. We made warm tea and watched the garden. A small bird rested on the fence before flying into the evening sky. The room grew quiet as we talked about tomorrow.";

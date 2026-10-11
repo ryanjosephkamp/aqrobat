@@ -1,0 +1,73 @@
+{
+  "id": "corpus-02",
+  "hypothesis": "The accepted mixed-case Impact recipe preserves and scans varied original Latin prose, including a single complete long text, rather than only its first repeated story.",
+  "controls": [],
+  "specs": [
+    {
+      "id": "dialogue",
+      "corpusId": "dialogue"
+    },
+    {
+      "id": "accents",
+      "corpusId": "accents"
+    },
+    {
+      "id": "numbers",
+      "corpusId": "numbers"
+    },
+    {
+      "id": "narrow",
+      "corpusId": "narrow"
+    },
+    {
+      "id": "wide",
+      "corpusId": "wide"
+    },
+    {
+      "id": "long-words",
+      "corpusId": "long-words"
+    },
+    {
+      "id": "paragraphs",
+      "corpusId": "paragraphs"
+    },
+    {
+      "id": "punctuation",
+      "corpusId": "punctuation"
+    },
+    {
+      "id": "ordinary",
+      "corpusId": "ordinary"
+    },
+    {
+      "id": "technical",
+      "corpusId": "technical"
+    },
+    {
+      "id": "long-single-copy",
+      "corpusId": "long-single-copy"
+    },
+    {
+      "id": "different-url",
+      "corpusId": "dialogue",
+      "recipe": {
+        "payload": "https://example.org/"
+      }
+    },
+    {
+      "id": "dialogue-gray160",
+      "corpusId": "dialogue",
+      "recipe": {
+        "gray": 160
+      }
+    },
+    {
+      "id": "ordinary-gray160",
+      "corpusId": "ordinary",
+      "recipe": {
+        "gray": 160
+      }
+    }
+  ],
+  "harnessAmendment": "Probe one actual glyph node for every distinct source character and weight. Root text-body has no direct text and reports an empty font list. Previous batch stopped before all candidate captures."
+}

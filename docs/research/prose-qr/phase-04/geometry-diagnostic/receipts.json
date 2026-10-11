@@ -1,0 +1,98 @@
+{
+  "testedAt": "2026-10-09T16:18:16.338Z",
+  "sourceScriptSha256": "3528d93d908821e106b10b71a815fe52e81e206def6d28fe44952023e27f2ffd",
+  "installedJsQRBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "classification": "Diagnostic only. The source QR matrix is used after binarization to measure where ink landed, never as an input to independent decoding or as a pixel repair. Locator hypotheses are not payload recoveries. Samsung internals unknown.",
+  "records": [
+    {
+      "batch": "quiet-ink-01",
+      "id": "quiet-3",
+      "inputPNGSha256": "6bb9a0c767f60a5a7c16f8b7605d41b25ee90686cea3b4a73a0709b67b467f69",
+      "locations": [
+        {
+          "alignmentPattern": { "x": 417.5, "y": 477.5 },
+          "bottomLeft": { "x": 418, "y": 430 },
+          "dimension": 29,
+          "topLeft": { "x": 475, "y": 371.5 },
+          "topRight": { "x": 519, "y": 451.5 }
+        },
+        {
+          "alignmentPattern": { "x": 417.5, "y": 477.5 },
+          "bottomLeft": { "x": 417.5, "y": 431 },
+          "topLeft": { "x": 474.5, "y": 371 },
+          "topRight": { "x": 516.5, "y": 451 },
+          "dimension": 29
+        }
+      ],
+      "expectedFinderCenters": {
+        "topLeft": { "x": 170, "y": 170 },
+        "topRight": { "x": 530, "y": 170 },
+        "bottomLeft": { "x": 170, "y": 530 }
+      },
+      "matchesExpectedFinder": false,
+      "intendedModuleDiagnostic": {
+        "dark": {
+          "black": 58614,
+          "total": 132800,
+          "centerBlack": 213,
+          "modules": 332,
+          "blackFraction": 0.44137048192771083,
+          "centerBlackFraction": 0.641566265060241
+        },
+        "light": {
+          "black": 2726,
+          "total": 117200,
+          "centerBlack": 0,
+          "modules": 293,
+          "blackFraction": 0.02325938566552901,
+          "centerBlackFraction": 0
+        }
+      }
+    },
+    {
+      "batch": "stroke-01",
+      "id": "stroke-2",
+      "inputPNGSha256": "ac80b1abc11320bfe7d953ed3bdfba92fa17571892a07d0ca08b8e4483d76dff",
+      "locations": [
+        {
+          "alignmentPattern": { "x": 521, "y": 436.5 },
+          "bottomLeft": { "x": 465.25, "y": 594 },
+          "dimension": 37,
+          "topLeft": { "x": 368, "y": 584.5 },
+          "topRight": { "x": 413.5, "y": 415 }
+        },
+        {
+          "alignmentPattern": { "x": 521, "y": 436.5 },
+          "bottomLeft": { "x": 468, "y": 591.5 },
+          "topLeft": { "x": 370, "y": 590 },
+          "topRight": { "x": 413.5, "y": 414.5 },
+          "dimension": 33
+        }
+      ],
+      "expectedFinderCenters": {
+        "topLeft": { "x": 170, "y": 170 },
+        "topRight": { "x": 530, "y": 170 },
+        "bottomLeft": { "x": 170, "y": 530 }
+      },
+      "matchesExpectedFinder": false,
+      "intendedModuleDiagnostic": {
+        "dark": {
+          "black": 79113,
+          "total": 132800,
+          "centerBlack": 274,
+          "modules": 332,
+          "blackFraction": 0.595730421686747,
+          "centerBlackFraction": 0.8253012048192772
+        },
+        "light": {
+          "black": 3911,
+          "total": 117200,
+          "centerBlack": 0,
+          "modules": 293,
+          "blackFraction": 0.0333703071672355,
+          "centerBlackFraction": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-11T20:27:23.477570+00:00",
+  "phase": "Pre-backup closure; subsequent commits are restricted to the same two new directories.",
+  "cwd": "/Users/noir/Documents/aqrobat",
+  "branch": "codex/aqrobat-foundation",
+  "preBackupHead": "4472c93886255e8ce259ca64c4492136124949c5",
+  "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+  "main": "e41943aff7780107a33a60a21494a41276b92c58",
+  "remoteMain": "e41943aff7780107a33a60a21494a41276b92c58",
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "codex/aqrobat-foundation",
+    "headRefOid": "4472c93886255e8ce259ca64c4492136124949c5",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/ryanjosephkamp/aqrobat/pull/1"
+  },
+  "protectedFilesExact": 14618,
+  "protectedBytesExact": 657278083,
+  "baselineSha256": "830e0808e92d0fda84da950402e2f5c933f309ff7e356cfbb54713d0a2ae87c6",
+  "acceptedFilesExact": 9,
+  "acceptedArchiveEntriesExact": 9,
+  "acceptedArchiveSha256": "03edf4cd7a8256387c4ce9ab29d97609882e86411fb11a463e6539ee0fe2f5db",
+  "readerInputImagesExact": 53,
+  "immediateRepeatsExact": 53,
+  "candidateInputs": 51,
+  "controls": 2,
+  "researchReaderCalls": 212,
+  "wrongReturnedPayloads": 0,
+  "inputTransforms": "none",
+  "npmPrivate": true,
+  "npmPublished": false,
+  "ownerContextUntrackedAndUnchanged": true,
+  "existingTrackedFilesChanged": [],
+  "backupScope": [
+    "docs/research/prose-qr/paste-prose-2026-10-11/",
+    "experiments/prose-qr/paste-prose-2026-10-11/"
+  ],
+  "incrementalFilesBeforeFinalClosure": 1721,
+  "incrementalBytesBeforeFinalClosure": 192438387,
+  "incrementalByteCap": 256000000,
+  "closingReserveBytesRemainingAtThisCheck": 63561613,
+  "wordProcessCheck": {
+    "command": "pgrep -fl /Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word",
+    "status": 1,
+    "stdout": "",
+    "taskAppExited": true
+  },
+  "nativeCleanupReceipts": [
+    "native-word-cleanup.json",
+    "native-cleanup-complete.json"
+  ],
+  "cleanupClarification": "The immediate UI inventory after Quit was stale; this later process check confirms Word has exited. No accepted document bytes changed.",
+  "agents": 0,
+  "newChats": 0,
+  "messages": 0,
+  "automations": 0,
+  "deployments": 0,
+  "SiteCalls": 0,
+  "audienceChanges": 0,
+  "sitePrivacy": "Private audience was left untouched. No Site API access or live audience recheck was performed in this run.",
+  "optionalUntested": [
+    "Google Docs actual paste",
+    "Browser Copy button through native browser clipboard into Word",
+    "Physical print",
+    "Other phone hardware",
+    "Uniform unformatted plaintext scanning",
+    "Missing-font recipient behavior beyond local generation rejection"
+  ]
+}

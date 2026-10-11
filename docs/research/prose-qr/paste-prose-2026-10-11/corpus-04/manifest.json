@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-11T19:35:41.751Z",
+  "config": {
+    "id": "corpus-04",
+    "hypothesis": "The complete long source overflows at 8.5pt and 6.25in; explicit 8pt at 6.25in or 8.5pt at the 6.5in default Letter text measure may fit without deleting words. These are distinct prospective recipes.",
+    "controls": [],
+    "specs": [
+      {
+        "id": "long-single-8pt",
+        "corpusId": "long-single-copy",
+        "recipe": {
+          "fontSize": 10.666666666666666
+        }
+      },
+      {
+        "id": "long-single-65in",
+        "corpusId": "long-single-copy",
+        "recipe": {
+          "fontSize": 11.333333333333334,
+          "field": 624
+        }
+      },
+      {
+        "id": "accents-9pt-65in",
+        "corpusId": "accents",
+        "recipe": {
+          "field": 624
+        }
+      }
+    ]
+  },
+  "configPath": "experiments/prose-qr/paste-prose-2026-10-11/corpus-04.json",
+  "configSha256": "facc808830e4b338314dc30085cf1fcd882398f4b3ebe5ea1cbef40cf2dfe560",
+  "sources": [
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/capture-corpus-02.mjs",
+      "sha256": "c90dc45fcfd2530b7978e8c13086a20157a2a5bbfab9485d35ed5d02637ee45c"
+    },
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/corpus.mjs",
+      "sha256": "afab554904689c1af5f47c1029ff6b6481c805c072b9e7f901336793b72ca797"
+    },
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/compact.mjs",
+      "sha256": "06adea4e625992e1c1ec831d890f702712281ddc9b1972106279bba50dac97ff"
+    },
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/generator.mjs",
+      "sha256": "339dd1cdbe145b934b5795e2dea7806a2322aef2993d42bfbdb6730fa80d7592"
+    },
+    {
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f"
+    },
+    {
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+    },
+    {
+      "path": "experiments/prose-qr/layout.mjs",
+      "sha256": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d"
+    }
+  ],
+  "plannedCaptureSlots": 3,
+  "plannedControls": 0,
+  "repeats": "one exact immediate repeat for every captured input",
+  "postCaptureTransforms": "none",
+  "readerCalls": 0
+}

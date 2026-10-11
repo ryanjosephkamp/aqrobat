@@ -1,0 +1,353 @@
+{
+  "classification": "Post-return full-resolution ordinary jsQR binarization; separate from sampled-symbol diagnostics",
+  "structurePass": false,
+  "correctFinder": false,
+  "locations": [
+    {
+      "alignmentPattern": { "x": 2017, "y": 2401.5 },
+      "bottomLeft": { "x": 2017, "y": 2359.5 },
+      "dimension": 17,
+      "topLeft": { "x": 2017, "y": 2401.5 },
+      "topRight": { "x": 2017, "y": 2443.5 }
+    },
+    {
+      "alignmentPattern": { "x": 2016.5, "y": 2402 },
+      "bottomLeft": { "x": 2016.5, "y": 2360 },
+      "topLeft": { "x": 2016.5, "y": 2402 },
+      "topRight": { "x": 2016.5, "y": 2444 },
+      "dimension": 17
+    }
+  ],
+  "selected": {
+    "topLeft": {
+      "point": { "x": 2017, "y": 2401.5 },
+      "scoring": { "x": 2017, "y": 2402 },
+      "records": [
+        {
+          "point": { "x": 2017, "y": 2402 },
+          "horizontal": [3, 2, 2, 1, 3],
+          "vertical": [3, 4, 11, 8, 5],
+          "diagonalDown": [
+            4.242640687119285, 1.4142135623730951, 3.2426406871192857,
+            1.4142135623730951, 2.8284271247461903
+          ],
+          "diagonalUp": [
+            1.4142135623730951, 2.23606797749979, 3.2426406871192857,
+            3.605551275463989, 2.8284271247461903
+          ],
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [3, 2, 2, 1, 3],
+                "complete": true,
+                "scale": 1.5714285714285714,
+                "normalizedRMS": 0.9841722620163169
+              },
+              "vertical": {
+                "runs": [3, 4, 11, 8, 5],
+                "complete": true,
+                "scale": 4.428571428571429,
+                "normalizedRMS": 0.4575644703612166
+              },
+              "diagonalDown": {
+                "runs": [
+                  4.242640687119285, 1.4142135623730951, 3.2426406871192857,
+                  1.4142135623730951, 2.8284271247461903
+                ],
+                "complete": true,
+                "scale": 1.8774479462472786,
+                "normalizedRMS": 0.8468223409039327
+              },
+              "diagonalUp": {
+                "runs": [
+                  1.4142135623730951, 2.23606797749979, 3.2426406871192857,
+                  3.605551275463989, 2.8284271247461903
+                ],
+                "complete": true,
+                "scale": 1.9038429467431928,
+                "normalizedRMS": 0.7500716630505802
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.9841722620163169,
+            "centralSpanBalance": 0.18181818181818182
+          }
+        }
+      ],
+      "quad": {
+        "q": {
+          "top": { "startX": 2016, "endX": 2018, "y": 2400 },
+          "bottom": { "startX": 2016, "endX": 2018, "y": 2402 }
+        },
+        "top": 2,
+        "bottom": 2,
+        "height": 3,
+        "x": 2017,
+        "y": 2401.5
+      },
+      "quadBalance": 0.6666666666666666,
+      "nominalSpanFraction": 0.003255208333333333,
+      "stableWideRowFraction": 0,
+      "geometric": {
+        "axes": {
+          "horizontal": {
+            "runs": [3, 1, 2, 3, 2],
+            "complete": true,
+            "scale": 1.5714285714285714,
+            "normalizedRMS": 0.984172262016317
+          },
+          "vertical": {
+            "runs": [5, 8, 11, 3, 4],
+            "complete": true,
+            "scale": 4.428571428571429,
+            "normalizedRMS": 0.4575644703612166
+          },
+          "diagonalDown": {
+            "runs": [
+              2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+              4.242640687119286, 1.4142135623730951
+            ],
+            "complete": true,
+            "scale": 1.8182745801939795,
+            "normalizedRMS": 0.9242948596926855
+          },
+          "diagonalUp": {
+            "runs": [
+              1.4142135623730951, 1.4142135623730951, 2.8284271247461903,
+              4.242640687119286, 2.8284271247461903
+            ],
+            "complete": true,
+            "scale": 1.8182745801939795,
+            "normalizedRMS": 0.9242948596926854
+          }
+        },
+        "completeAxes": 4,
+        "worstRMS": 0.984172262016317,
+        "centralSpanBalance": 0.18181818181818182
+      }
+    },
+    "topRight": {
+      "point": { "x": 2017, "y": 2443.5 },
+      "scoring": { "x": 2017, "y": 2444 },
+      "records": [
+        {
+          "point": { "x": 2017, "y": 2444 },
+          "horizontal": [3, 2, 2, 1, 3],
+          "vertical": [3, 4, 11, 8, 5],
+          "diagonalDown": [
+            4.242640687119285, 1.4142135623730951, 3.2426406871192857,
+            1.4142135623730951, 2.8284271247461903
+          ],
+          "diagonalUp": [
+            1, 2.8284271247461903, 3.2426406871192857, 3.605551275463989,
+            2.8284271247461903
+          ],
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [3, 2, 2, 1, 3],
+                "complete": true,
+                "scale": 1.5714285714285714,
+                "normalizedRMS": 0.9841722620163169
+              },
+              "vertical": {
+                "runs": [3, 4, 11, 8, 5],
+                "complete": true,
+                "scale": 4.428571428571429,
+                "normalizedRMS": 0.4575644703612166
+              },
+              "diagonalDown": {
+                "runs": [
+                  4.242640687119285, 1.4142135623730951, 3.2426406871192857,
+                  1.4142135623730951, 2.8284271247461903
+                ],
+                "complete": true,
+                "scale": 1.8774479462472786,
+                "normalizedRMS": 0.8468223409039327
+              },
+              "diagonalUp": {
+                "runs": [
+                  1, 2.8284271247461903, 3.2426406871192857, 3.605551275463989,
+                  2.8284271247461903
+                ],
+                "complete": true,
+                "scale": 1.9292923160108078,
+                "normalizedRMS": 0.7952035454136229
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.9841722620163169,
+            "centralSpanBalance": 0.18181818181818182
+          }
+        }
+      ],
+      "quad": {
+        "q": {
+          "top": { "startX": 2016, "endX": 2018, "y": 2442 },
+          "bottom": { "startX": 2016, "endX": 2018, "y": 2444 }
+        },
+        "top": 2,
+        "bottom": 2,
+        "height": 3,
+        "x": 2017,
+        "y": 2443.5
+      },
+      "quadBalance": 0.6666666666666666,
+      "nominalSpanFraction": 0.003255208333333333,
+      "stableWideRowFraction": 0,
+      "geometric": {
+        "axes": {
+          "horizontal": {
+            "runs": [3, 1, 2, 3, 2],
+            "complete": true,
+            "scale": 1.5714285714285714,
+            "normalizedRMS": 0.984172262016317
+          },
+          "vertical": {
+            "runs": [5, 8, 11, 3, 4],
+            "complete": true,
+            "scale": 4.428571428571429,
+            "normalizedRMS": 0.4575644703612166
+          },
+          "diagonalDown": {
+            "runs": [
+              2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+              4.242640687119286, 1.4142135623730951
+            ],
+            "complete": true,
+            "scale": 1.8182745801939795,
+            "normalizedRMS": 0.9242948596926855
+          },
+          "diagonalUp": {
+            "runs": [
+              1.4142135623730951, 1.4142135623730951, 2.8284271247461903,
+              4.242640687119286, 2.8284271247461903
+            ],
+            "complete": true,
+            "scale": 1.8182745801939795,
+            "normalizedRMS": 0.9242948596926854
+          }
+        },
+        "completeAxes": 4,
+        "worstRMS": 0.984172262016317,
+        "centralSpanBalance": 0.18181818181818182
+      }
+    },
+    "bottomLeft": {
+      "point": { "x": 2017, "y": 2359.5 },
+      "scoring": { "x": 2017, "y": 2360 },
+      "records": [
+        {
+          "point": { "x": 2017, "y": 2360 },
+          "horizontal": [3, 2, 2, 1, 3],
+          "vertical": [3, 4, 11, 8, 5],
+          "diagonalDown": [
+            4.242640687119285, 1.4142135623730951, 3.2426406871192857,
+            1.4142135623730951, 2.8284271247461903
+          ],
+          "diagonalUp": [
+            1.4142135623730951, 2.23606797749979, 3.2426406871192857,
+            3.605551275463989, 2.8284271247461903
+          ],
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [3, 2, 2, 1, 3],
+                "complete": true,
+                "scale": 1.5714285714285714,
+                "normalizedRMS": 0.9841722620163169
+              },
+              "vertical": {
+                "runs": [3, 4, 11, 8, 5],
+                "complete": true,
+                "scale": 4.428571428571429,
+                "normalizedRMS": 0.4575644703612166
+              },
+              "diagonalDown": {
+                "runs": [
+                  4.242640687119285, 1.4142135623730951, 3.2426406871192857,
+                  1.4142135623730951, 2.8284271247461903
+                ],
+                "complete": true,
+                "scale": 1.8774479462472786,
+                "normalizedRMS": 0.8468223409039327
+              },
+              "diagonalUp": {
+                "runs": [
+                  1.4142135623730951, 2.23606797749979, 3.2426406871192857,
+                  3.605551275463989, 2.8284271247461903
+                ],
+                "complete": true,
+                "scale": 1.9038429467431928,
+                "normalizedRMS": 0.7500716630505802
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.9841722620163169,
+            "centralSpanBalance": 0.18181818181818182
+          }
+        }
+      ],
+      "quad": {
+        "q": {
+          "top": { "startX": 2016, "endX": 2018, "y": 2358 },
+          "bottom": { "startX": 2016, "endX": 2018, "y": 2360 }
+        },
+        "top": 2,
+        "bottom": 2,
+        "height": 3,
+        "x": 2017,
+        "y": 2359.5
+      },
+      "quadBalance": 0.6666666666666666,
+      "nominalSpanFraction": 0.003255208333333333,
+      "stableWideRowFraction": 0,
+      "geometric": {
+        "axes": {
+          "horizontal": {
+            "runs": [3, 1, 2, 3, 2],
+            "complete": true,
+            "scale": 1.5714285714285714,
+            "normalizedRMS": 0.984172262016317
+          },
+          "vertical": {
+            "runs": [5, 8, 11, 3, 4],
+            "complete": true,
+            "scale": 4.428571428571429,
+            "normalizedRMS": 0.4575644703612166
+          },
+          "diagonalDown": {
+            "runs": [
+              2.8284271247461903, 1.4142135623730951, 2.8284271247461903,
+              4.242640687119286, 1.4142135623730951
+            ],
+            "complete": true,
+            "scale": 1.8182745801939795,
+            "normalizedRMS": 0.9242948596926855
+          },
+          "diagonalUp": {
+            "runs": [
+              1.4142135623730951, 1.4142135623730951, 2.8284271247461903,
+              4.242640687119286, 2.8284271247461903
+            ],
+            "complete": true,
+            "scale": 1.8182745801939795,
+            "normalizedRMS": 0.9242948596926854
+          }
+        },
+        "completeAxes": 4,
+        "worstRMS": 0.984172262016317,
+        "centralSpanBalance": 0.18181818181818182
+      }
+    }
+  },
+  "regionComponents": {
+    "agreement": 0.5091023131850231,
+    "axisMean": 0.01061427280939476,
+    "stableFraction": 0,
+    "balancedFraction": 0.007595486111111109
+  },
+  "scoredRunCount": 28105,
+  "quadCount": 28661,
+  "passiveReturnsMatch": true
+}

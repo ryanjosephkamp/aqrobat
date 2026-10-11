@@ -1,0 +1,101 @@
+{
+  "startedAt": "2026-10-09T16:03:23.834Z",
+  "specs": [
+    {
+      "id": "decorated-1",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "fontSize": 20,
+      "charsPerModule": 5,
+      "linesPerModule": 3,
+      "content": "story",
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "blur": 0,
+      "outputSize": 656,
+      "decoration": "underline",
+      "track": "Visible text-decoration diagnostic; glyphs and their normal spaces only, no backgrounds or module rectangles"
+    },
+    {
+      "id": "decorated-2",
+      "payload": "https://example.com/",
+      "font": "Menlo",
+      "fontSize": 20,
+      "charsPerModule": 5,
+      "linesPerModule": 3,
+      "content": "story",
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "blur": 0,
+      "outputSize": 656,
+      "decoration": "underline overline line-through",
+      "track": "Visible text-decoration diagnostic; glyphs and their normal spaces only, no backgrounds or module rectangles"
+    },
+    {
+      "id": "decorated-3",
+      "payload": "https://example.com/",
+      "font": "Courier New",
+      "fontSize": 20,
+      "charsPerModule": 5,
+      "linesPerModule": 3,
+      "content": "story",
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "blur": 0,
+      "outputSize": 656,
+      "decoration": "underline",
+      "track": "Visible text-decoration diagnostic; glyphs and their normal spaces only, no backgrounds or module rectangles"
+    },
+    {
+      "id": "decorated-4",
+      "payload": "https://example.com/",
+      "font": "Courier New",
+      "fontSize": 20,
+      "charsPerModule": 5,
+      "linesPerModule": 3,
+      "content": "story",
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "blur": 0,
+      "outputSize": 656,
+      "decoration": "underline overline line-through",
+      "track": "Visible text-decoration diagnostic; glyphs and their normal spaces only, no backgrounds or module rectangles"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/phone-readability/capture.mjs": "8f8cfed78bb63758e5c65cbfd503cab77014933f752d74e64feb0f990fd8fbc3",
+    "experiments/prose-qr/phone-readability/decorated.mjs": "c0074667cffb7e9ac38041be4d03bb0ce11e1fd0a37a11995e3c0581c0e2696d",
+    "experiments/prose-qr/flow/layout.mjs": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "gate": "jsQR and ZXing using their ordinary binarizer/downscaling; no tuned reader settings, no expected payload/matrix input"
+}

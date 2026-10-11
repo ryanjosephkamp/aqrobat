@@ -1,0 +1,13 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {gzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {DEFAULT_RECIPE,composePortable,portableClipboardHtml} from './generator.mjs';
+const root='docs/research/prose-qr/portable-story-2026-10-11/';const out=root+'native-textedit-02/';await mkdir(out);
+const m=JSON.parse(await readFile(root+'batch-01/page-impact-preserve-metrics.json'));
+const layout=composePortable(DEFAULT_RECIPE,m),html=portableClipboardHtml(layout);
+await writeFile(out+'clipboard-input.html.txt',html,{flag:'wx'});
+const blank='{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil Impact;}}\\paperw12240\\paperh15840\\margl1620\\margr1620\\margt3420\\margb3240\\pard\\qj\\sl-180\\slmult0\\f0\\fs18\\par}';
+await writeFile(out+'paste-flow.rtf',blank,{flag:'wx'});await writeFile(out+'initial.rtf.txt',blank,{flag:'wx'});
+await writeFile(out+'generator-source.txt.gz',gzipSync(await readFile('experiments/prose-qr/portable-story-2026-10-11/generator.mjs')),{flag:'wx'});
+await writeFile(out+'PLAN.json',JSON.stringify({at:new Date().toISOString(),hypothesis:'The first native positioned-HTML paste made one word per paragraph and treated CSS px as points. Use linear per-letter styled HTML, explicit point sizes, justified soft line breaks, and one task-owned local RTF whose page measure is already 450pt. CUA actual paste restores the prior clipboard. This is one specific TextEdit transfer, not portable-paste acceptance.',htmlSha256:createHash('sha256').update(html).digest('hex'),plannedNativeCandidates:1,plannedImmediateRepeats:1,resourceScreenshots:1,expectedWords:layout.plainText.split(/\s+/).length,expectedLines:50,receivingApp:'TextEdit',otherAppsUntested:true,physicalPrint:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({htmlBytes:html.length,summary:layout.summary}));

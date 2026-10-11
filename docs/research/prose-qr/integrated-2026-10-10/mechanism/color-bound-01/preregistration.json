@@ -1,0 +1,149 @@
+{
+  "schema": "aqrobat.measured-fixed-alpha-color-bound.v1",
+  "atUtc": "2026-10-10T22:16:56.611Z",
+  "sourceSha256": "78b3f25bd76151935ee503751d0e8df5c34cd3a48785456ce2af076fca5d5c16",
+  "encoderSha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+  "solverSha256": "8eaaa74ed8b74d809a4cd459f59e835f9decce2588da31b75bb6beb0de8a59fa",
+  "ledgerPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/actual-ledger.json",
+  "ledgerSha256": "eb1682ead418c167abedcbf14601abbf9324b9e6ebc0803b787556d70d10799d",
+  "specPath": "docs/research/prose-qr/integrated-2026-10-10/mechanism/candidate-01/source-spec.json",
+  "specSha256": "879cbf0528116c5656fe210ff0aaff64d1716fd3b15d5d198f85e975b0c45136",
+  "pngSha256": "49b9230b76508e3a7a9393cdda6876ecc03a44928c0a77760adb9ee54cb29cf5",
+  "rgbaSha256": "927983be7183fd551e83acf95de1b3e87146ac8a79ee17467c9d5e387850b496",
+  "denominator": 32,
+  "cases": [
+    {
+      "ecc": "L",
+      "mask": 0
+    },
+    {
+      "ecc": "L",
+      "mask": 1
+    },
+    {
+      "ecc": "L",
+      "mask": 2
+    },
+    {
+      "ecc": "L",
+      "mask": 3
+    },
+    {
+      "ecc": "L",
+      "mask": 4
+    },
+    {
+      "ecc": "L",
+      "mask": 5
+    },
+    {
+      "ecc": "L",
+      "mask": 6
+    },
+    {
+      "ecc": "L",
+      "mask": 7
+    },
+    {
+      "ecc": "M",
+      "mask": 0
+    },
+    {
+      "ecc": "M",
+      "mask": 1
+    },
+    {
+      "ecc": "M",
+      "mask": 2
+    },
+    {
+      "ecc": "M",
+      "mask": 3
+    },
+    {
+      "ecc": "M",
+      "mask": 4
+    },
+    {
+      "ecc": "M",
+      "mask": 5
+    },
+    {
+      "ecc": "M",
+      "mask": 6
+    },
+    {
+      "ecc": "M",
+      "mask": 7
+    },
+    {
+      "ecc": "Q",
+      "mask": 0
+    },
+    {
+      "ecc": "Q",
+      "mask": 1
+    },
+    {
+      "ecc": "Q",
+      "mask": 2
+    },
+    {
+      "ecc": "Q",
+      "mask": 3
+    },
+    {
+      "ecc": "Q",
+      "mask": 4
+    },
+    {
+      "ecc": "Q",
+      "mask": 5
+    },
+    {
+      "ecc": "Q",
+      "mask": 6
+    },
+    {
+      "ecc": "Q",
+      "mask": 7
+    },
+    {
+      "ecc": "H",
+      "mask": 0
+    },
+    {
+      "ecc": "H",
+      "mask": 1
+    },
+    {
+      "ecc": "H",
+      "mask": 2
+    },
+    {
+      "ecc": "H",
+      "mask": 3
+    },
+    {
+      "ecc": "H",
+      "mask": 4
+    },
+    {
+      "ecc": "H",
+      "mask": 5
+    },
+    {
+      "ecc": "H",
+      "mask": 6
+    },
+    {
+      "ecc": "H",
+      "mask": 7
+    }
+  ],
+  "nativeCaptures": 0,
+  "readerCalls": 0,
+  "binarizerCalls": 0,
+  "hypothesis": "Unchanged source/font/placement/raster alpha and blur alpha; only genuine ink RGB colors may change. Native RGB source-over on uniform white is the declared model. Current foreground paints are0or180. A reported gray>=219 remains>=128 even if every paint becomesblack, allowing1grayunit uncertainty. Native color-dependent rasterization is not measured. Adaptive binarizer dependencies, different sampling geometry, font/style/size/spacing changes, erasures and ordinary-reader behavior are outside this bound.",
+  "claimLimit": "Exclude existence of an exact-URL matrix within each block's ordinary hard-decision symbol radius at these625fixed literal samples under the declared model. This is not general native-prose impossibility or an impossibility of ordinary-reader recovery."
+}

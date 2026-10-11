@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-10T00:00:16.548Z",
+  "type": "read-only milestone, not phase seal",
+  "prior": [
+    {
+      "path": "docs/research/prose-qr/phase-04/custody.json",
+      "sha256": "28287d7abbfdf1b8086783732b20c59684b88c167daa6c62f75789810e8776b9",
+      "entries": 460
+    },
+    {
+      "path": "docs/research/prose-qr/phase-05/custody.json",
+      "sha256": "270129badddaa2971355730b56a8728b3955ee6ced7f61b76b6dfa2358ea917d",
+      "entries": 241
+    },
+    {
+      "path": "docs/research/prose-qr/phase-06/custody.json",
+      "sha256": "94f023469c3391fd4353c574b4bd525452a9e157f76b448d3aa28e7a34e6aa19",
+      "entries": 284
+    },
+    {
+      "path": "docs/research/prose-qr/phase-07/custody.json",
+      "sha256": "1b55735e1f24b080688d61a94ebf6e0161eb0eca5499829970cf0c4917e9e25c",
+      "entries": 77
+    },
+    {
+      "path": "docs/research/prose-qr/phase-08/custody.json",
+      "sha256": "0ba13fd12d5d4ee4e83bcc8bbdcc1e7c359aed52a7e499b5ae24629c417f0dbe",
+      "entries": 206
+    }
+  ],
+  "priorEntries": 1268,
+  "downloads": [
+    {
+      "name": "aqrobat-extension.zip",
+      "sha256": "f9065de4248988f276a8dbdc6a28627dfaa1b4cdb24a384e8eb2d410aa960923",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-offline.html",
+      "sha256": "8e78026a9c0acb3e95d78fbe3ccafe787203e4277fad7a6b773eb8092abad651",
+      "unchanged": true
+    },
+    {
+      "name": "aqrobat-insertion-practice.html",
+      "sha256": "73b7fabad27e233994ef7ab17321ede52215c35c7ae5954885a9a538067683de",
+      "unchanged": true
+    }
+  ],
+  "npmPrivate": true,
+  "nativePostReturnSymbolComparison": [
+    {
+      "profile": "default",
+      "path": "docs/research/prose-qr/phase-14/run-01/native-zxing-default-0-symbol.bin",
+      "sha256": "b63fab4427582267755b104d7349101a05e9c66c96c2fce447398cc47ce98d41",
+      "wrong": 2,
+      "coordinates": [
+        [2, 14],
+        [1, 17]
+      ]
+    },
+    {
+      "profile": "baseline",
+      "path": "docs/research/prose-qr/phase-14/run-01/native-zxing-baseline-0-symbol.bin",
+      "sha256": "b63fab4427582267755b104d7349101a05e9c66c96c2fce447398cc47ce98d41",
+      "wrong": 2,
+      "coordinates": [
+        [2, 14],
+        [1, 17]
+      ]
+    },
+    {
+      "profile": "errors-diagnostic",
+      "path": "docs/research/prose-qr/phase-14/run-01/native-zxing-errors-diagnostic-0-symbol.bin",
+      "sha256": "b63fab4427582267755b104d7349101a05e9c66c96c2fce447398cc47ce98d41",
+      "wrong": 2,
+      "coordinates": [
+        [2, 14],
+        [1, 17]
+      ]
+    }
+  ],
+  "readerTuning": false,
+  "geometryPassedToReader": false
+}

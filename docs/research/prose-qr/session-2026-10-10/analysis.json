@@ -1,0 +1,185 @@
+{
+  "at": "2026-10-10T05:39:42.222Z",
+  "goal": "unsolved",
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "plannedNativeSlots": 12,
+  "completedNativeRenderings": 11,
+  "exactImmediateRepeats": 11,
+  "unattemptedNativeSlots": 1,
+  "nativePipelineAborts": 3,
+  "sourceProducerErrors": 1,
+  "newFullPayloadSources": 1,
+  "regularNativeRenderings": 10,
+  "intrinsicallyHeavyImpactRenderings": 1,
+  "sourceGlyphPositionResources": 60,
+  "selectedWordValidationResources": 2,
+  "sourceWordModels": 8000,
+  "stableOutsideOrdinaryFinderOutline": true,
+  "ordinaryFinderOnlyReplayCalls": 2,
+  "identicalReplayCornerDelta": 0,
+  "fullPayload": "https://example.com/",
+  "encoder": { "requestedEcc": "M", "actualEcc": "Q", "version": 2 },
+  "fullPayloadOrdinaryProfiles": [
+    {
+      "reader": "OpenCV default",
+      "exact": false,
+      "text": "",
+      "points": [
+        [
+          [1490, 1470],
+          [8749, 1470],
+          [8749, 8769],
+          [1490, 8769]
+        ]
+      ]
+    },
+    { "reader": "ZXing default", "exact": false, "results": [] },
+    { "reader": "jsQR unchanged baseline", "exact": false, "text": null },
+    {
+      "reader": "ZBar default retained wrapper",
+      "exact": false,
+      "results": [],
+      "error": null
+    },
+    {
+      "reader": "Apple Vision default — fresh per-input profile",
+      "exact": false,
+      "observations": [],
+      "error": null
+    }
+  ],
+  "exactOrdinaryNativeReturns": 0,
+  "ordinaryNativeImplementations": 5,
+  "ordinaryNativeProfilesWithKnownOutcome": 5,
+  "fullPayloadReaderSlotsAcrossAttempts": 12,
+  "fullPayloadRetainedRowsAcrossAttempts": 10,
+  "conventionalExactControls": 5,
+  "initialVisionUnknownSlots": 2,
+  "finalVisionUnknownSlots": 0,
+  "nativeStrictPasses": 0,
+  "scaleDiagnostic": {
+    "nativeFullCenterMismatches": 304,
+    "nativeInitCenterMismatches": 0,
+    "centerDenominator": 625,
+    "nativeFullOccupancy": {
+      "dark": {
+        "min": 0.235725205658958,
+        "max": 0.2830642060745867,
+        "mean": 0.27432951230834574,
+        "cells": 332
+      },
+      "light": {
+        "min": 0.17661476355247982,
+        "max": 0.1948529411764706,
+        "mean": 0.1837860790837722,
+        "cells": 293
+      }
+    },
+    "nativeInitOccupancy": {
+      "dark": {
+        "min": 0.6222222222222222,
+        "max": 1,
+        "mean": 0.9813074520303435,
+        "cells": 332
+      },
+      "light": { "min": 0, "max": 0, "mean": 0, "cells": 293 }
+    },
+    "controlFullCenterMismatches": 0,
+    "controlInitCenterMismatches": 0,
+    "description": "For the saved native payload, the full-resolution threshold replica disagrees with 304 of 625 nominal centers; the 512-pixel initialization replica disagrees with 0. The conventional control differs at 0 and 0 centers respectively. This suggests a scale-related gap, but neither grid is a decoder return or proof of the precise internal failure."
+  },
+  "productChanges": false,
+  "npmPrivate": true,
+  "priorPhoneFailuresPreserved": true,
+  "phases": [
+    {
+      "phase": 32,
+      "path": "docs/research/prose-qr/phase-32/analysis.json",
+      "sha256": "3f78c8f1f703913efece824677ea710350057e3fcd893e82b04ec3de1a28a733"
+    },
+    {
+      "phase": 33,
+      "path": "docs/research/prose-qr/phase-33/analysis.json",
+      "sha256": "8e12edd020b187cd2200fafe8f4ee862798ef4b9b29881fddabf00d931400ad9"
+    },
+    {
+      "phase": 34,
+      "path": "docs/research/prose-qr/phase-34/analysis.json",
+      "sha256": "592d42d46ff8201a11b2788a1186ef14f0904d62770da151a834841847b27507"
+    },
+    {
+      "phase": 35,
+      "path": "docs/research/prose-qr/phase-35/analysis.json",
+      "sha256": "f46c90ce173c4f43f54e52ad952578fd89a5f9f3aea915d5a372cb12444e9587"
+    },
+    {
+      "phase": 36,
+      "path": "docs/research/prose-qr/phase-36/analysis.json",
+      "sha256": "e2ae35179c96f16a455e63df74aaf7da6e82af68b3cd23d9b88ed98cc0b8c4e4"
+    },
+    {
+      "phase": 37,
+      "path": "docs/research/prose-qr/phase-37/analysis.json",
+      "sha256": "e46c0ce67327452c3c98f48013a1dbec3b5019553f753b5a460f392a1c14868f"
+    },
+    {
+      "phase": 38,
+      "path": "docs/research/prose-qr/phase-38/analysis.json",
+      "sha256": "339655d28db808db77e008345fbd1943c7aa3d1c98fcc449eaedfb195d74697b"
+    },
+    {
+      "phase": 39,
+      "path": "docs/research/prose-qr/phase-39/analysis.json",
+      "sha256": "1e13655745404b70a441a84daa2f62745e70349531cdd09b7ab6d11dcc5da7ef"
+    },
+    {
+      "phase": 40,
+      "path": "docs/research/prose-qr/phase-40/analysis.json",
+      "sha256": "d9166e7312279b9f4fdb6a438bcfbaf6eb86f53b61c3d154791edcba3d3a84b5"
+    },
+    {
+      "phase": 41,
+      "path": "docs/research/prose-qr/phase-41/analysis.json",
+      "sha256": "279216c0a3a5b831ff94e98553b049e2e34925fc3e875b24e8cc764b4251628f"
+    },
+    {
+      "phase": 42,
+      "path": "docs/research/prose-qr/phase-42/analysis.json",
+      "sha256": "c19fe66d2aad74631477b92c52e42222684f4455f789f216619ab5e16bfd014f"
+    },
+    {
+      "phase": 43,
+      "path": "docs/research/prose-qr/phase-43/analysis.json",
+      "sha256": "77d458b64d155b52b1f2829bdb099540789ee487120dd8c5c5105ebbbd63e1ae"
+    },
+    {
+      "phase": 44,
+      "path": "docs/research/prose-qr/phase-44/analysis.json",
+      "sha256": "a34b20b5b360a87643db0f27e477c8082245e62b873443f8ebfd8afde8025f16"
+    },
+    {
+      "phase": 45,
+      "path": "docs/research/prose-qr/phase-45/analysis.json",
+      "sha256": "8b650eae7b7912698118b251f1326e0288a7e9d62ffdea0fd2f0315284bc0a83"
+    },
+    {
+      "phase": 46,
+      "path": "docs/research/prose-qr/phase-46/analysis.json",
+      "sha256": "d50cda5a03e8e859b475d7c01f9f8680078ea14fdda4e7e1b7fd95d9c37be1d2"
+    },
+    {
+      "phase": 47,
+      "path": "docs/research/prose-qr/phase-47/analysis.json",
+      "sha256": "1da21b5186c426a57fb172d329b7105feef0e4e37ea22239f2ea70922afbac18"
+    },
+    {
+      "phase": 48,
+      "path": "docs/research/prose-qr/phase-48/analysis.json",
+      "sha256": "8ad68169da9f8039e9b574c05393c0ed695be092e3498541a1e3b61377b7a146"
+    }
+  ],
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10/aggregate.mjs": "d2e1b6c5ab4c1f6a2ab9f9f2184e1a5d5fbd0b821af1b1e5ae5543f37a181cff"
+  }
+}

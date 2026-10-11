@@ -1,0 +1,99 @@
+{
+  "startedAt": "2026-10-09T01:51:54.721Z",
+  "parameters": [
+    {
+      "id": "word-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 120,
+      "preserveFinders": false,
+      "track": "whole-word-grayscale"
+    },
+    {
+      "id": "word-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 120,
+      "preserveFinders": true,
+      "track": "whole-word-grayscale"
+    },
+    {
+      "id": "word-3",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "preserveFinders": false,
+      "track": "whole-word-grayscale"
+    },
+    {
+      "id": "word-4",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "Q",
+      "boost": false,
+      "darkWeight": 700,
+      "lightWeight": 400,
+      "gray": 180,
+      "preserveFinders": true,
+      "track": "whole-word-grayscale"
+    }
+  ],
+  "sourceHashes": {
+    "layout.mjs": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+    "word-style.mjs": "e6727bd15a40594cf0c8060207bbefe56e82d2647f186c4210b935430780f283",
+    "word-style-run.mjs": "bc443448ade86f638c0c7441f70743415c1bb47db7e84b4a7b2af97260168754"
+  },
+  "configuredReader": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "method": "Same ordinary word spacing and natural 20px letters. Whole-word majority ink; separate variant preserves per-letter corner finder/separator regions. Q error correction requested. No QR underlay."
+}

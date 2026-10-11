@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · finder joins</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #25302d;
+        --muted: #58655e;
+        --line: #d4d8cf;
+        --accent: #874532;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f6f3eb;
+        color: var(--ink);
+        font:
+          17px/1.65 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 920px;
+        margin: auto;
+        padding: 30px 20px 65px;
+      }
+      header {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 750;
+      }
+      h1 {
+        font:
+          500 clamp(34px, 6vw, 58px)/1.1 Georgia,
+          serif;
+        max-width: 740px;
+      }
+      h2 {
+        font:
+          500 29px/1.25 Georgia,
+          serif;
+      }
+      p {
+        max-width: 760px;
+      }
+      a {
+        color: var(--accent);
+        overflow-wrap: anywhere;
+      }
+      section {
+        padding: 16px 0 24px;
+        border-bottom: 1px solid var(--line);
+      }
+      .status {
+        background: #fff9ef;
+        padding: 15px 18px;
+        border-left: 4px solid var(--accent);
+      }
+      .cards,
+      .diagrams {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .cards {
+        margin: 24px 0;
+      }
+      .card,
+      .panel {
+        background: #fffdf9;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 17px;
+      }
+      .card b {
+        display: block;
+        font: 500 37px/1.2 Georgia;
+      }
+      .card span {
+        font-size: 14px;
+      }
+      .diagrams {
+        grid-template-columns: 1fr 1fr;
+      }
+      .panel h3 {
+        margin: 0;
+      }
+      .panel svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .caption {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      select,
+      button {
+        font: inherit;
+        padding: 10px 13px;
+        border: 1px solid #a5ada4;
+        border-radius: 8px;
+        background: #fffdf9;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      button:focus-visible,
+      select:focus-visible {
+        outline: 3px solid #d6a187;
+        outline-offset: 3px;
+      }
+      .controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 18px 0;
+      }
+      textarea {
+        width: 100%;
+        height: 350px;
+        resize: vertical;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        padding: 14px;
+        background: #fffdf9;
+        color: var(--ink);
+        font:
+          14px/1.5 ui-monospace,
+          monospace;
+      }
+      li {
+        margin: 8px 0;
+      }
+      footer {
+        font-size: 14px;
+        color: var(--muted);
+        padding-top: 24px;
+      }
+      @media (max-width: 530px) {
+        main {
+          padding: 18px 16px 45px;
+        }
+        .cards {
+          gap: 7px;
+        }
+        .card {
+          padding: 12px;
+        }
+        .card span {
+          font-size: 12px;
+        }
+        .diagrams {
+          grid-template-columns: 1fr;
+        }
+        .controls {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">Aqrobat research · October 9, 2026 · phase 07</div>
+        <h1>The wide band becomes a small candidate.</h1>
+        <p>
+          We traced a concrete failure inside the ordinary finder pipeline: a
+          wide letter band joins a narrow region from earlier rows, then
+          finishes narrow again. The resulting candidate is much smaller than
+          the intended finder.
+        </p>
+        <p class="status">
+          <strong>Prose QR remains unsolved.</strong> This checkpoint contains
+          incomplete finder diagnostics, with no encoded link or phone
+          candidate. No phone testing is requested.
+        </p>
+      </header>
+      <div class="cards">
+        <div class="card"><b>5</b><span>new native layouts retained</span></div>
+        <div class="card"><b>0</b><span>intended locator geometries</span></div>
+        <div class="card">
+          <b>5</b><span>exact immediate native repeats</span>
+        </div>
+      </div>
+      <section>
+        <h2>Follow the observed join</h2>
+        <p>
+          The seed's top-left region begins only 4 pixels wide. A 96-pixel
+          middle band attaches to it. Later, its last row is 5 pixels wide. The
+          locator summarizes the endpoint widths and height as a
+          <strong>6.33-pixel candidate</strong>. The solid control stays 72
+          pixels wide throughout.
+        </p>
+        <div class="controls">
+          <label for="stage">Highlight a recorded stage</label
+          ><select id="stage">
+            <option value="0">Earlier region</option>
+            <option value="1" selected>Wide middle row</option>
+            <option value="2">Final region</option>
+          </select>
+        </div>
+        <div class="diagrams">
+          <article class="panel">
+            <h3>Native letters · failed seed</h3>
+            <svg
+              id="native"
+              viewBox="0 0 350 235"
+              role="img"
+              aria-label="Native candidate observed widths"
+            ></svg>
+            <p class="caption">
+              Endpoint size: (4 + 5 + 10) / 3 = 6.33 px. The matching small
+              scored point is saved.
+            </p>
+          </article>
+          <article class="panel">
+            <h3>Solid finder control</h3>
+            <svg
+              id="control"
+              viewBox="0 0 350 235"
+              role="img"
+              aria-label="Solid control observed widths"
+            ></svg>
+            <p class="caption">
+              Endpoint size: (72 + 72 + 72) / 3 = 72 px. Correct corner
+              recovered.
+            </p>
+          </article>
+        </div>
+        <p id="stage-note" class="caption" aria-live="polite"></p>
+        <p class="caption">
+          These are measured-geometry diagrams, enlarged vertically for
+          explanation. They are not QR outputs or repaired pixels. This trace is
+          a local mechanism, not a proof that prose QR is impossible.
+        </p>
+      </section>
+      <section>
+        <h2>What the new tests ruled out</h2>
+        <ul>
+          <li>
+            <strong>Font size alone:</strong> fresh 24- and 32-pixel native
+            letters still fail intended location. No CSS transform or raster
+            resampling.
+          </li>
+          <li>
+            <strong>A short bar alone:</strong> the observed bands qualify
+            across three to five rows, but still do not form correctly sized
+            scored candidates near the intended centers.
+          </li>
+          <li>
+            <strong>These source-row guards:</strong> three eligible whole-line
+            replacements still fail. A fourth planned source is rejected for
+            width before native capture.
+          </li>
+        </ul>
+        <p>
+          Words remain heavy, crowded and repetitive. The synthetic I rows look
+          like stripes. These boundary probes are not accepted readable prose.
+        </p>
+        <p class="caption">
+          Three conventional full-QR controls pass three fixed reader profiles;
+          three solid finder controls locate correctly. The final read-only
+          replay checks all eleven saved PNG/RGBA pairs and their ordinary
+          diagnostics/control outcomes. No new owner phone or print result.
+        </p>
+      </section>
+      <section>
+        <h2>The next objective</h2>
+        <p>
+          Build stable two-dimensional finder spans from clear native letters:
+          width across rows, diagonal structure, and ordinary candidate
+          formation together. Keep an explicit legibility rejection. Require
+          intended ordinary finder geometry before another full-QR sweep, then
+          exact payload recovery with independent ordinary readers and phone
+          acceptance.
+        </p>
+        <p>
+          Phase 06's 39 native diagnostic layouts and its complete evidence
+          remain sealed. This separate phase uses a 1.5-MB file cap. Product
+          0.4.2, downloads, extension, other repositories and profiles remain
+          preserved. PR #1 stays draft and npm stays private.
+        </p>
+        <label for="prompt"><strong>Safe continuation prompt</strong></label
+        ><textarea id="prompt" readonly spellcheck="false"></textarea>
+        <div class="controls">
+          <button id="copy">Copy continuation</button
+          ><button id="download">Save checkpoint</button>
+        </div>
+        <p id="copy-status" class="caption" aria-live="polite"></p>
+      </section>
+      <section>
+        <h2>Evidence</h2>
+        <p>
+          <a href="README.md">Phase report</a> ·
+          <a href="CHECKPOINT.md">Checkpoint</a> ·
+          <a href="verification.json">Verification</a> ·
+          <a href="custody.json">Custody inventory</a> ·
+          <a href="analysis.json">Derived observations</a> ·
+          <a href="span-audit-01.json.gz">Full span audit</a> ·
+          <a href="join-audit-01.json.gz">Full join audit</a> ·
+          <a href="../phase-06/index.html">Phase 06 interactive traces</a>
+        </p>
+        <p class="caption">
+          Primary sources opened:
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/locator/index.ts"
+            >jsQR locator</a
+          >,
+          <a
+            href="https://github.com/cozmo/jsQR/blob/master/src/binarizer/index.ts"
+            >binarizer</a
+          >. Passive diagnostic VM returns exactly match ordinary location on
+          the fixed inputs; its observations are separate from acceptance-reader
+          evidence. Import, console and source-width error records are
+          preserved.
+        </p>
+      </section>
+      <footer>
+        No upload, AI call or external request is needed by this page. Copy and
+        download stay local. All task-owned jobs are closed at handback.
+        Research remains incomplete.
+      </footer>
+    </main>
+    <script>
+      const data = {
+          checkpoint:
+            "# Prose QR checkpoint — phase 07\n\nOctober 9, 2026. Work only in `/Users/noir/Documents/aqrobat`, branch\n`codex/aqrobat-foundation`, existing draft PR #1. No migration requested.\nClean phase baseline is `80f1b54a024cfb456f287078f2af7edb7e2579f8`.\nVerify the final current Git/remote/PR head before continuing.\n\nThis small phase tests two native font sizes and four fixed source-row guards.\nFive native layouts are retained, zero intended ordinary locator geometries,\nfive exact immediate repeats, one source-width rejection before capture.\nThree full-QR controls pass three fixed profiles and three solid finder controls\nlocate correctly. No encoded candidate payload, phone candidate or new phone test.\nThe final separate read-only replay checks eleven saved PNG/RGBA pairs and all\nordinary diagnostics/controls. Prior phase-06/05/04 inventories and product\n0.4.2 downloads are unchanged; npm remains private/unpublished.\n\nBoth enlarged native outputs fail. A passive join trace shows the 20-pixel\nseed's 96-pixel row joining an older 4-pixel top, later ending at 5 pixels;\nits scored size is 6.33 rather than the expected about 97.86. The solid control\nstays 72 throughout. Source needs stable two-dimensional spans, not only a good\ncenter cross. Native letters remain heavy, crowded and repetitive; synthetic\nI/E/T words are diagnostics, not accepted prose. The goal is unsolved.\n\nPreserve the guard abort/source rejection, import failure, console-only audit\nerror after saved receipts, source snapshots and all audit records. No fixed\noutput directory may be reused. Phase 07 has a 1.5-MB logical-file cap including\nsource/evidence/handback/custody; inspect its final receipt before adding files.\nStart a fresh modest phase if needed. All task-owned jobs are closed at handback.\n\n## Resume prompt\n\nContinue prose QR research only in /Users/noir/Documents/aqrobat. Read AGENTS.md,\ndocs/research/prose-qr/phase-07/CHECKPOINT.md, README.md, verification.json,\nanalysis.json, the span/join audit summaries and custody.json. Verify Git branch,\nremote, HEAD, dirty state, draft PR #1 and saved source/evidence before edits.\nPreserve all prior phases, original prototypes, product/download/extension,\nSplashery, PDF archive, owner profiles, other tasks and running jobs. Keep npm\nprivate/unpublished and PR #1 draft. No merge, migration, new host, chat/agent,\nrelease, store submission or messages. The prose goal remains unsolved. Phase 06\nhas 39 failed finder-only layouts; phase 07 adds five with no intended ordinary\nlocator geometry, plus one source-width rejection. None contains a payload or\nis a phone candidate. Larger native text and fixed row guards do not solve it.\nThe passive join audit shows a 96-pixel middle band joining an older 4-pixel\nstroke region and ending at 5 pixels, producing a 6.33-pixel scored point; the\nsolid control maintains width/height 72. This is a local observed mechanism,\nnot a universal impossibility proof. Explore a small preregistered native-letter\nobjective for stable two-dimensional finder spans, diagonal continuity and\ncandidate formation, with an explicit legibility rejection. No full-QR sweep\nbefore intended ordinary finder geometry. Use geometry only for source rendering\nand post-probe diagnostics, never pixel repair, forced extraction/corners or\nacceptance-reader tuning. No hidden blocks/invisible letters or unreadable\nraster compression as a solution. Keep styled prose and uniform-black ASCII\nseparate. Use fresh exclusive directories and preserve all outcomes, sources,\nrejections, aborts and checker errors. Respect phase 07's 1.5-MB logical-file cap;\nstart a fresh modest phase for further native generation if necessary. Back up\nmilestones on the existing branch. Continue toward readable unchanged native\ntext that independent ordinary readers decode, then phone acceptance. No new\nphone results. Do not hand failed grids over as successful candidates or claim\ncompletion because a time block ends.\n",
+          prompt:
+            "Continue prose QR research only in /Users/noir/Documents/aqrobat. Read AGENTS.md,\ndocs/research/prose-qr/phase-07/CHECKPOINT.md, README.md, verification.json,\nanalysis.json, the span/join audit summaries and custody.json. Verify Git branch,\nremote, HEAD, dirty state, draft PR #1 and saved source/evidence before edits.\nPreserve all prior phases, original prototypes, product/download/extension,\nSplashery, PDF archive, owner profiles, other tasks and running jobs. Keep npm\nprivate/unpublished and PR #1 draft. No merge, migration, new host, chat/agent,\nrelease, store submission or messages. The prose goal remains unsolved. Phase 06\nhas 39 failed finder-only layouts; phase 07 adds five with no intended ordinary\nlocator geometry, plus one source-width rejection. None contains a payload or\nis a phone candidate. Larger native text and fixed row guards do not solve it.\nThe passive join audit shows a 96-pixel middle band joining an older 4-pixel\nstroke region and ending at 5 pixels, producing a 6.33-pixel scored point; the\nsolid control maintains width/height 72. This is a local observed mechanism,\nnot a universal impossibility proof. Explore a small preregistered native-letter\nobjective for stable two-dimensional finder spans, diagonal continuity and\ncandidate formation, with an explicit legibility rejection. No full-QR sweep\nbefore intended ordinary finder geometry. Use geometry only for source rendering\nand post-probe diagnostics, never pixel repair, forced extraction/corners or\nacceptance-reader tuning. No hidden blocks/invisible letters or unreadable\nraster compression as a solution. Keep styled prose and uniform-black ASCII\nseparate. Use fresh exclusive directories and preserve all outcomes, sources,\nrejections, aborts and checker errors. Respect phase 07's 1.5-MB logical-file cap;\nstart a fresh modest phase for further native generation if necessary. Back up\nmilestones on the existing branch. Continue toward readable unchanged native\ntext that independent ordinary readers decode, then phone acceptance. No new\nphone results. Do not hand failed grids over as successful candidates or claim\ncompletion because a time block ends.",
+          entries: [
+            {
+              id: "seam-01",
+              expectedCenter: { x: 277.279296875, y: 277.279296875 },
+              selectedJoin: {
+                line: { startX: 229, endX: 325, y: 277 },
+                matchingCount: 1,
+                chosenActiveIndex: 0,
+                chosenBefore: {
+                  top: { startX: 298, endX: 302, y: 270 },
+                  bottom: { startX: 229, endX: 325, y: 276 },
+                },
+              },
+              inheritedTopWidth: 4,
+              middleRowWidth: 96,
+              finalQuads: [
+                {
+                  quad: {
+                    top: { startX: 298, endX: 302, y: 270 },
+                    bottom: { startX: 231, endX: 236, y: 279 },
+                  },
+                  topWidth: 4,
+                  bottomWidth: 5,
+                  height: 10,
+                  computedSize: 6.333333333333333,
+                  computedCenter: { x: 266.75, y: 275 },
+                  matchingScoredPoints: [
+                    {
+                      score: 118.2012351066956,
+                      x: 266.75,
+                      y: 275,
+                      size: 6.333333333333333,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              id: "solid-finder-control",
+              expectedCenter: { x: 204, y: 204 },
+              selectedJoin: {
+                line: { startX: 168, endX: 240, y: 204 },
+                matchingCount: 1,
+                chosenActiveIndex: 0,
+                chosenBefore: {
+                  top: { startX: 168, endX: 240, y: 168 },
+                  bottom: { startX: 168, endX: 240, y: 203 },
+                },
+              },
+              inheritedTopWidth: 72,
+              middleRowWidth: 72,
+              finalQuads: [
+                {
+                  quad: {
+                    top: { startX: 168, endX: 240, y: 168 },
+                    bottom: { startX: 168, endX: 240, y: 239 },
+                  },
+                  topWidth: 72,
+                  bottomWidth: 72,
+                  height: 72,
+                  computedSize: 72,
+                  computedCenter: { x: 204, y: 204 },
+                  matchingScoredPoints: [
+                    { score: 3.5475012234361922, x: 204, y: 204, size: 72 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        byId = (id) => document.getElementById(id),
+        ns = "http://www.w3.org/2000/svg";
+      byId("prompt").value = data.prompt;
+      function draw(id, entry) {
+        const svg = byId(id);
+        svg.replaceChildren();
+        const q = entry.finalQuads[0].quad,
+          rows = [q.top, entry.selectedJoin.line, q.bottom],
+          origin = Math.min(...rows.map((r) => r.startX)),
+          stage = Number(byId("stage").value);
+        rows.forEach((r, i) => {
+          const g = document.createElementNS(ns, "g");
+          g.setAttribute("opacity", i === stage ? "1" : ".35");
+          const line = document.createElementNS(ns, "line");
+          line.setAttribute("x1", 45 + (r.startX - origin) * 2.3);
+          line.setAttribute("x2", 45 + (r.endX - origin) * 2.3);
+          line.setAttribute("y1", 50 + i * 64);
+          line.setAttribute("y2", 50 + i * 64);
+          line.setAttribute("stroke", "#182823");
+          line.setAttribute("stroke-width", 6);
+          g.append(line);
+          const text = document.createElementNS(ns, "text");
+          text.setAttribute("x", 25);
+          text.setAttribute("y", 32 + i * 64);
+          text.setAttribute("font-size", 14);
+          text.textContent = r.endX - r.startX + " px · y=" + r.y;
+          g.append(text);
+          svg.append(g);
+        });
+      }
+      function update() {
+        draw("native", data.entries[0]);
+        draw("control", data.entries[1]);
+        byId("stage-note").textContent = [
+          "Earlier: the native region starts at width 4 px; the control starts at 72 px.",
+          "Middle: a 96-pixel native row joins the older narrow region; the control remains 72 px.",
+          "End: the native region contracts to 5 px; the control remains 72 px.",
+        ][Number(byId("stage").value)];
+      }
+      byId("stage").addEventListener("change", update);
+      update();
+      byId("copy").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(data.prompt);
+          byId("copy-status").textContent = "Continuation copied.";
+        } catch {
+          byId("prompt").focus();
+          byId("prompt").select();
+          byId("copy-status").textContent =
+            "Prompt selected. Use your device’s Copy command.";
+        }
+      });
+      byId("download").addEventListener("click", () => {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(
+          new Blob([data.checkpoint], { type: "text/plain;charset=utf-8" }),
+        );
+        a.download = "aqrobat-prose-qr-phase-07-checkpoint.md";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      });
+    </script>
+  </body>
+</html>

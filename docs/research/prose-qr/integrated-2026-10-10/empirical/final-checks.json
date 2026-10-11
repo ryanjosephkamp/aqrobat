@@ -1,0 +1,3101 @@
+{
+  "schema": "aqrobat.integrated.empirical-final-checks.v1",
+  "atUtc": "2026-10-10T22:30:11.796258+00:00",
+  "checkerSha256": "4458d5b84596bff22463c0900737b6ba3a6f495d7c3f1f2e6d172d6ab3c78b3b",
+  "passed": true,
+  "checkCount": 459,
+  "checks": [
+    {
+      "name": "Exact cwd/remote/branch/HEAD and no tracked mutation",
+      "passed": true,
+      "evidence": [
+        {
+          "args": ["git", "rev-parse", "--show-toplevel"],
+          "returncode": 0,
+          "stdout": "/Users/noir/Documents/aqrobat\n",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "remote", "-v"],
+          "returncode": 0,
+          "stdout": "origin\thttps://github.com/ryanjosephkamp/aqrobat.git (fetch)\norigin\thttps://github.com/ryanjosephkamp/aqrobat.git (push)\n",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+          "returncode": 0,
+          "stdout": "codex/aqrobat-foundation\n",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "rev-parse", "HEAD"],
+          "returncode": 0,
+          "stdout": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222\n",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "diff", "--name-only"],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "diff", "--cached", "--name-only"],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "status", "--short"],
+          "returncode": 0,
+          "stdout": "?? docs/research/prose-qr/integrated-2026-10-10/\n?? experiments/prose-qr/integrated-2026-10-10/\n",
+          "stderr": ""
+        },
+        {
+          "args": ["git", "diff", "--check"],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "name": "Pinned encoder and inline MIT license exact baseline",
+      "passed": true,
+      "evidence": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+    },
+    {
+      "name": "Package remains private",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: analyze-continuous-profile.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: closing-checks-v2.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: closing-checks.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: common.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: custody.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: diagnostic.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: finalize-metadata.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: holes.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: measure-continuous.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: metrics.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: ordinary.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: passive.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-continuous-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-continuous.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-layout.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-layout02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-layout03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-payload-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-payload.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: prepare-resource02.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-resources03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-resources04.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-resources05.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-resources06.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-stroke.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: prepare-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: reader.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v6.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v7.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report-v8.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: report.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: resources-02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: resources.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch-v6.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch-v7.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-batch.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-resources-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-resources-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: run-resources-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: sample-layout.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: sample-layout02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: sample-layout03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: sample-v5-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: sample-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: selection-preflight.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Python syntax: setup.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: summarize-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: summarize-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: summarize-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: summarize.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: verify-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: verify-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: verify-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "JavaScript syntax: verify.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Only16 preserved locked source formatting exceptions",
+      "passed": true,
+      "evidence": [
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs"
+      ]
+    },
+    {
+      "name": "All document formatting warnings are preserved evidence, no closing report warning",
+      "passed": true,
+      "evidence": 163
+    },
+    {
+      "name": "Fresh closing documents format clean",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Source snapshots and original strict exact-byte check generated",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/analyze-continuous-profile.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/closing-checks-v2.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/closing-checks.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/common.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/custody.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/finalize-metadata.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/holes.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/measure-continuous.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/metrics.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/ordinary.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/passive.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resource02.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources04.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources05.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources06.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v6.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v7.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report-v8.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/report.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v7.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/setup.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/summarize.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/verify-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/verify-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/verify-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Exact live source and lossless snapshot: experiments/prose-qr/integrated-2026-10-10/empirical/verify.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Strict gate original exact bytes retained",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "688 retained evidence checks pass",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Final actual counts exact",
+      "passed": true,
+      "evidence": {
+        "glyphResources": 87,
+        "nativeCaptures": 9,
+        "controlCaptures": 8,
+        "ordinaryCalls": 37,
+        "profiles": 11,
+        "repeats": 17,
+        "payloadTrials": 3,
+        "exactRepeats": 16,
+        "unattemptedReaderSlots": 23,
+        "unattemptedFullCaptures": 6,
+        "unattemptedResources": 19,
+        "nativeExactRecoveries": 0,
+        "nativeStrictPasses": 0,
+        "failedResourceSetupBeforeCapture": 1
+      }
+    },
+    {
+      "name": "No native strict or payload acceptance",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Actor-inclusive conservative reader accounting75",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "107resource slots:87captured19unattempted1failedsetup",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "23fullcapture and60ordinary-slot denominators preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: construction-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: construction-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: construction-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: construction-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: construction-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: construction-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: construction-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: construction-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: construction-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: construction-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: layout-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: layout-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: layout-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: layout-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: layout-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: payload-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: payload-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: payload-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: payload-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: payload-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: payload-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: payload-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: payload-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: resources-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: resources-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: resources-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: resources-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: resources-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: resources-03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: resources-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: resources-04",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: resources-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: resources-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: resources-06",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch preregistration custody: resources-06",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-01-prepare-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-01-prepare-02",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: layout-01-invocation-01",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Batch result custody: selection-preflight",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "All24batches/setup failures present in JSON and CSV",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Summary builder exact source hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Final failed readable source and3unattempted remain",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Readability rejected rather than hidden",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Apple Symbols.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Avenir Next.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Avenir.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Geneva.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/HelveticaNeue.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Menlo.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/AmericanTypewriter.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Arial Black.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Arial Bold.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Arial.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/ChalkboardSE.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Futura.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Impact.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Phosphate.ttc",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Skia.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Installed font file hash: /System/Library/Fonts/Supplemental/Verdana Bold.ttf",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "All21static native font names covered, Skia unresolved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Metadata builder exact source hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report has matching illustrated originals",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: payload-01/native-projection/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: payload-02/native-projection/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: payload-04/continuous-native/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: resources-04/continuous-gray-153-shadow-1p5/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: resources-04/continuous-gray-204-shadow-1p5/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: resources-06/calibrated-ArialUnicodeMS-25a3-624/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report embeds exact PNG: resources-06/cutoff-gray-228-stroke-0p75/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-01/native-projection/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-02/native-projection/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-04/continuous-native/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-04/continuous-native/actual-ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-04/continuous-native/visual-review.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: ../design/RESULTS.md",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-04/continuous-gray-153-shadow-1p5/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-04/continuous-gray-204-shadow-1p5/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-03-04-analysis.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-06/calibrated-ArialUnicodeMS-25a3-624/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-06/cutoff-gray-228-stroke-0p75/input.png",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: final-resource-analysis.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-06/cutoff-gray-228-stroke-0p75/visual-review.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: final-stop.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: batch-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: batch-summary.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-01/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-01/ownership-failure.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-02/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-02/sampling-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-03/sampling-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-04/ownership-failure.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-05/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: construction-05/sampling-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-01/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-01/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-02/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-02/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-03/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-04/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-05/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-05/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-01/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-01/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-02/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-02/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-03/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: payload-04/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-01/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-01/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-02/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-02/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-03/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-04/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-05/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-05/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-06/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: resources-06/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-01.prepare.stderr.txt",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-01.prepare-fixed.stderr.txt",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: layout-01.stderr.txt",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: selection-preflight.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: runtime-provenance.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: reader-accounting.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: verification-04.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: verification-04.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Report local link exists: source-custody/manifest.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked source bytes unchanged after checks: experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-01/ownership-failure.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/adaptive-diagnostic.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/native-input.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-03/adaptive-diagnostic.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-03/native-input.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-04/ownership-failure.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/adaptive-diagnostic.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/native-input.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/canonical-matrix.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-inverted/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-normal/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-02/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/control-normal/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/canonical-control/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/native-projection/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/target-and-residual.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/canonical-control/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/target-and-residual.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/canonical-control/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/actual-ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/passive-summary.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/retained-profile-analysis.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/ledger.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/run-results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-0-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-1-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-1-14/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g14-0-10/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/avenir-o-100/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/avenir-o-126/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/avenir-o-150/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-0/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-1/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-2/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-3/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/futura-O-64/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/futura-O-80/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/futura-O-96/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-0/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-0/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-1p5/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-1p5/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-0/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-0/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-1p5/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-1p5/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-0/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-0/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-1p5/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-1p5/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-0p75/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-0p75/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-1/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-1/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-0p75/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-0p75/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-1/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-1/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a3/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a3/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a9/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a9/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a3/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a3/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a9/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a9/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/calibrated-ArialUnicodeMS-25a3-624/dom.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/calibrated-ArialUnicodeMS-25a3-624/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-0p75/result.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-0p75/support.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/preregistration.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/results.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/verification-02.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/verification-03.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Locked document bytes unchanged after checks: docs/research/prose-qr/integrated-2026-10-10/empirical/verification-04.json",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "All fresh owned browser contexts closed in evidence",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "retainedMainEvidenceChecks": 688,
+  "sourceFiles": 62,
+  "lockedSourceFormattingExceptions": 16,
+  "lockedEvidenceFormattingExceptions": 163,
+  "newCaptures": 0,
+  "newOrdinaryReaders": 0,
+  "newPassiveProfiles": 0,
+  "newAdaptiveBinarizerCalls": 0,
+  "processes": [
+    {
+      "args": ["git", "rev-parse", "--show-toplevel"],
+      "returncode": 0,
+      "stdout": "/Users/noir/Documents/aqrobat\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "remote", "-v"],
+      "returncode": 0,
+      "stdout": "origin\thttps://github.com/ryanjosephkamp/aqrobat.git (fetch)\norigin\thttps://github.com/ryanjosephkamp/aqrobat.git (push)\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+      "returncode": 0,
+      "stdout": "codex/aqrobat-foundation\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "rev-parse", "HEAD"],
+      "returncode": 0,
+      "stdout": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--name-only"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--cached", "--name-only"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "status", "--short"],
+      "returncode": 0,
+      "stdout": "?? docs/research/prose-qr/integrated-2026-10-10/\n?? experiments/prose-qr/integrated-2026-10-10/\n",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--check"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/analyze-continuous-profile.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/common.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/custody.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/measure-continuous.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/metrics.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/passive.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-continuous.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources03.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources04.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources05.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources06.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v6.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v7.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report-v8.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/report.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v7.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/sample-v5.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/summarize.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v2.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v3.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v4.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "--check",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/verify.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--write",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/static-checks-03.json"
+      ],
+      "returncode": 0,
+      "stdout": "docs/research/prose-qr/integrated-2026-10-10/empirical/static-checks-03.json 17ms\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--list-different",
+        "experiments/prose-qr/integrated-2026-10-10/empirical"
+      ],
+      "returncode": 1,
+      "stdout": "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout02.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout03.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/prepare-payload.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/prepare-stroke.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/reader.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/resources-02.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/resources.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v2.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v3.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v4.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/sample-layout.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/sample-layout02.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs\nexperiments/prose-qr/integrated-2026-10-10/empirical/selection-preflight.mjs\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--write",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/REPORT.html",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/RUNNING.md",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/progress.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/progress.html",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/runtime-provenance.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/reader-accounting.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/final-resource-analysis.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/final-stop.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/batch-summary.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/static-checks-03.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/format-locked-final.json"
+      ],
+      "returncode": 0,
+      "stdout": "docs/research/prose-qr/integrated-2026-10-10/empirical/REPORT.html 104ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/RUNNING.md 11ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json 14ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/progress.json 1ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/progress.html 2ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/runtime-provenance.json 11ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/reader-accounting.json 1ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/final-resource-analysis.json 25ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/final-stop.json 0ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/batch-summary.json 12ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/static-checks-03.json 3ms (unchanged)\ndocs/research/prose-qr/integrated-2026-10-10/empirical/format-locked-final.json 1ms (unchanged)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--list-different",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical"
+      ],
+      "returncode": 1,
+      "stdout": "docs/research/prose-qr/integrated-2026-10-10/empirical/construction-01/ownership-failure.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/adaptive-diagnostic.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-02/native-input.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-03/adaptive-diagnostic.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-03/native-input.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-04/ownership-failure.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/adaptive-diagnostic.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/construction-05/native-input.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/canonical-matrix.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-inverted/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-normal/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/ledger.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/run-results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-02/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/control-normal/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/ledger.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/run-results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/layout-05/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/canonical-control/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/ledger.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/native-projection/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/run-results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/target-and-residual.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/canonical-control/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/ledger.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/run-results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/target-and-residual.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-03/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/canonical-control/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/actual-ledger.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/passive-summary.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native/retained-profile-analysis.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/ledger.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/run-results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g00-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g01-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g02-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g03-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g04-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g05-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g06-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g07-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g08-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g09-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g10-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g11-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g12-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-0-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-1-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g13-1-14/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/g14-0-10/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-01/results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/avenir-o-100/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/avenir-o-126/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/avenir-o-150/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-0/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-1/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-2/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/body-3/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/futura-O-64/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/futura-O-80/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/futura-O-96/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-02/results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-0/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-0/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-1p5/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-1p5/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-0/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-0/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-1p5/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-1p5/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-0/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-0/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-1p5/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-1p5/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-0p75/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-0p75/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-1/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-180-1/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-0p75/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-0p75/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-1/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/phase-stroke-204-1/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a3/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a3/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a9/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-AppleSymbols-25a9/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a3/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a3/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a9/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-05/square-ArialUnicodeMS-25a9/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/calibrated-ArialUnicodeMS-25a3-624/dom.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/calibrated-ArialUnicodeMS-25a3-624/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-0p75/result.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-0p75/support.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/preregistration.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/results.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/verification-02.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/verification-03.json\ndocs/research/prose-qr/integrated-2026-10-10/empirical/verification-04.json\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--write",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/format-docs-final.json"
+      ],
+      "returncode": 0,
+      "stdout": "docs/research/prose-qr/integrated-2026-10-10/empirical/format-docs-final.json 20ms (unchanged)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--check",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/REPORT.html",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/RUNNING.md",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/progress.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/progress.html",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/runtime-provenance.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/reader-accounting.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/final-resource-analysis.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/final-stop.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/batch-summary.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/static-checks-03.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/format-locked-final.json",
+        "docs/research/prose-qr/integrated-2026-10-10/empirical/format-docs-final.json"
+      ],
+      "returncode": 0,
+      "stdout": "Checking formatting...\nAll matched files use Prettier code style!\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "node",
+        "experiments/prose-qr/integrated-2026-10-10/empirical/custody.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "{\"sourceFiles\":62,\"strictGateExactBytes\":true,\"manifest\":\"docs/research/prose-qr/integrated-2026-10-10/empirical/source-custody/manifest.json\"}\n",
+      "stderr": ""
+    }
+  ],
+  "artifactBytesAfterClosing": 31482256,
+  "closingHashes": {
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/REPORT.html": "b1cc3e4465e33bbeacde89547e11a411ef48e54cc1a80acc3066764e4704fd0a",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/handoff.json": "6f803585c98614912bac63b4893968b392eff689fe22f5dd728a019a90ed03c9",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/batch-summary.json": "6cd5c96d01468ddc216d43efb03021edcb6946f6d92e23b3c3db60d86078a73d",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/runtime-provenance.json": "eece575d10f82533f1ada5416f16379963a62aeabfb2e9461c6128b772ba851a",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/reader-accounting.json": "ec2bccddbc75e75462e5f91596ae281658f560c163b2167426d6f178f92d99e7",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/verification-04.json": "48fa25cb9aad563f61285c23aa7dbca9e3d02ec64e9fd32a90ed249b6321261a",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/source-custody/manifest.json": "a9fce654685d6065a53ffcb065d517b2adb159f1e4df91b7ce67e652cc5e3e93"
+  }
+}

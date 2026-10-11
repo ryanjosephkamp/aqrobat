@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-10T05:26:33.781Z",
+  "baseline": "5ba6b536a47997163f2256c8b8608d5e5d0e5837",
+  "plannedNative": 1,
+  "exactPayload": "https://example.com/",
+  "nativeOrdinaryOrder": "OpenCV first, then ZXing default/error diagnostic, jsQR and native passive trace",
+  "plannedRepeat": 1,
+  "plannedFullControl": 1,
+  "plannedSolidControl": 1,
+  "cap": 12000000,
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "passiveHash": "862a1480ba68eea50de3f03431db18087d238f94bb682c0171d85d43398ddd9d",
+  "sources": {
+    "experiments/prose-qr/context-full-payload/capture.mjs": "c42a0ee17da7dcaf0d0237913dd0270917c1bcce3c44d30bbeacc03afd80e016",
+    "experiments/prose-qr/context-full-payload/proposal.mjs": "d55a45281c5584da9f8641ee69dbf4b3a79febf868f30184a46d8c6b6d9a1890",
+    "experiments/prose-qr/context-glyph-period/metrics.mjs": "3e42b33f365146fb2867dfdf8a7761171409275672795a31e46c23569aee1d4e",
+    "docs/research/prose-qr/phase-43/metrics-01/metrics.json": "57f8bf92e8c9fad1d81928d34449f30489b7417a7856c5add113da24288267bb",
+    "docs/research/prose-qr/phase-43/model-01/summary.json": "b053381145271d07e0e10a2402c561165a470b681e39baabfceeed783c664e64",
+    "docs/research/prose-qr/phase-43/model-01/all-models.csv.gz": "ef7751700fbd6e20be2dba96abf1675f49efdddfe2ce1104ec948470463cad96",
+    "experiments/prose-qr/context-stagger/capture.mjs": "8792e827df57bfb500071afae9f69ce8e7fcfad7e5d41919a2faff0bdf89c08b",
+    "docs/research/prose-qr/phase-45/run-01.json": "8a0c56fa75eaea892c2d472b1bfd34041151590504595bace161f360d14092fa",
+    "docs/research/prose-qr/phase-45/PLAN.md": "750a7abfcb62754299059719e0aaeeb78553a1d73c8e42e5e3f00a19b0976f97",
+    "docs/research/prose-qr/phase-43/FULL-CONTEXT-ADDENDUM.md": "8dd300398db6e617ed3f8857144d386bb6892b1f3b878b825050030eb5f2a7a1",
+    "docs/research/prose-qr/phase-44/PLAN.md": "6385d02b6db0c824d33feaa48f3ce399de7963fc4eb4fab1bac2179758d90d4b",
+    "experiments/prose-qr/context-full-payload/independent.py": "37cd18fd43342c81b7474f1fa4b6c9021a9a41edbbb1eb059657bf235dd854ec",
+    "experiments/prose-qr/context-probe-pack/probe-pack.mjs": "b0e05e5641723d3dfd3f161054c933a1df1f46f751bdb36421834d0c9ff5fdbb",
+    "docs/research/prose-qr/phase-37/fixtures-01/done.json": "f864bc7e539b5706911cc03ed2021608899c63197c42c85666a3cd4d7ed0de8b",
+    "experiments/prose-qr/finder-runs/probe.mjs": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+    "experiments/prose-qr/finder-region/probe.mjs": "b6d480210d9da14bf0e381c97a2c7cf7cc1a80b72813295cf07b875080c52884",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/finder-page/symbol-audit.mjs": "dc3a81e0d16069247cf2bfd15a09470b90e0b1b31f7f60e44965521d29988043",
+    "experiments/prose-qr/layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd"
+  }
+}

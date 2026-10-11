@@ -1,0 +1,71 @@
+{
+  "at": "2026-10-11T05:28:12.257Z",
+  "rows": [
+    {
+      "id": "short",
+      "payload": "AQROBAT-TEST",
+      "path": "docs/research/prose-qr/styled-story-2026-10-11/batch-08/control-1.png",
+      "pngSha256": "91de55323f81e442f0ddb8df8c456f873e16cb4e8b6ed38419917ead4f96f3f8",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "texts": [
+            "AQROBAT-TEST"
+          ],
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "url",
+      "payload": "https://example.com/",
+      "path": "docs/research/prose-qr/styled-story-2026-10-11/batch-08/control-2.png",
+      "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        }
+      ]
+    }
+  ],
+  "captures": 0,
+  "readerCalls": 6
+}

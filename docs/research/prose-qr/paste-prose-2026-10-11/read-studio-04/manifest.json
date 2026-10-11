@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-11T20:08:38.945Z",
+  "configPath": "experiments/prose-qr/paste-prose-2026-10-11/read-studio-04.json",
+  "configSha256": "4b322cbe7ecf3facc0a5c666427faf273d0b053857de960402cfaffeba82f379",
+  "sources": [
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/readers.mjs",
+      "sha256": "2b5af4943b734ea95708b93ef06af0c757b9fc1d0f7f73eefaf069d6e3703eb0"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/vision.swift",
+      "sha256": "ca1dace759ddbcb18547152224609a4f8de1f40d1f4d2c2770a02f249ab6ffbc"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "studio-quiet5",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/studio-check-04/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "79fbe479d0249220caa3eee272e4953ef8765dd446b9b096aa601263e97a338c"
+    }
+  ],
+  "engines": [
+    "zxing",
+    "jsqr",
+    "opencv",
+    "vision"
+  ],
+  "plannedCalls": 4,
+  "inputTransforms": "none",
+  "expectedPayloadNotSuppliedToReader": true
+}

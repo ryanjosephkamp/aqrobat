@@ -1,0 +1,29 @@
+{
+  "schema": "aqrobat.resource-audit-start.v1",
+  "authorization": "Ryan selected R1, then clarified: complete R1 and prepare the broader run; do not execute subsequent phases this turn.",
+  "startedAtUtc": "2026-10-10T20:49:17Z",
+  "absoluteDeadlineUtc": "2026-10-10T21:01:17Z",
+  "workerHandbackDeadlineUtc": "2026-10-10T20:58:17Z",
+  "baselineHead": "a4f865d916275daf14785deeab4ebff5864b4805",
+  "branch": "codex/aqrobat-foundation",
+  "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+  "pr": { "number": 1, "state": "OPEN", "isDraft": true },
+  "limits": {
+    "wallClockMinutesIncludingReconciliationAndHandback": 12,
+    "newDocumentBytes": 1000000,
+    "workers": 1,
+    "savedGlyphFamilies": 7,
+    "savedResourceReceipts": 14,
+    "newNativeSourcesCapturesReaders": 0
+  },
+  "requestedWorker": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "forkTurns": "none",
+    "fastPreferred": true,
+    "desktopFastVerified": false
+  },
+  "goalModeActivated": false,
+  "goalModePlan": "Prepare a later Goal-mode run prompt; no ongoing goal or later phase started in R1.",
+  "oldClocksReopened": false
+}

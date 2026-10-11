@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-11T20:27:45.905572+00:00",
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": 0,
+      "started": "2026-10-11T20:24:02.904413+00:00",
+      "seconds": 0.97582,
+      "stdout": "check-01.stdout.txt",
+      "stderr": "check-01.stderr.txt",
+      "stdoutSha256": "e5462c93bf09e0d36036e0e20393144adac9b13a166d1cbea149018f623960e6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "status": 0,
+      "started": "2026-10-11T20:24:03.880482+00:00",
+      "seconds": 1.902167,
+      "stdout": "check-02.stdout.txt",
+      "stderr": "check-02.stderr.txt",
+      "stdoutSha256": "6839686e4d22a52e643b128cac4e742c0a6be1051f8f8c1d80c53ac93f0cc74b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:browser"
+      ],
+      "status": 0,
+      "started": "2026-10-11T20:24:05.782916+00:00",
+      "seconds": 5.55625,
+      "stdout": "check-03.stdout.txt",
+      "stderr": "check-03.stderr.txt",
+      "stdoutSha256": "a2a9b6148edbaa221f9bc8751f9d1c37f3168f804987281e0c25173194858c13",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:text-browser"
+      ],
+      "status": 0,
+      "started": "2026-10-11T20:24:11.339439+00:00",
+      "seconds": 65.368244,
+      "stdout": "check-04.stdout.txt",
+      "stderr": "check-04.stderr.txt",
+      "stdoutSha256": "356889a0176d663a645c5b8219287a1528314c5f1c7e0e0e17ecf9de852795ce",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "format:check"
+      ],
+      "status": 1,
+      "started": "2026-10-11T20:25:16.708128+00:00",
+      "seconds": 148.892341,
+      "stdout": "check-05.stdout.txt",
+      "stderr": "check-05.stderr.txt",
+      "stdoutSha256": "15cbed35de22f346fd90109c0b0c22604851cdd56746fb9940388a5a150e5729",
+      "stderrSha256": "0311c7fc059c040a5d6535770f0fd1df8b43db2bd87e3909e34a75c7f0d4cd59"
+    },
+    {
+      "command": [
+        "node_modules/.bin/prettier",
+        "--check",
+        "experiments/prose-qr/paste-prose-2026-10-11/docx.mjs",
+        "experiments/prose-qr/paste-prose-2026-10-11/page-fit.mjs",
+        "experiments/prose-qr/paste-prose-2026-10-11/page-app.mjs",
+        "experiments/prose-qr/paste-prose-2026-10-11/page-template.html",
+        "experiments/prose-qr/paste-prose-2026-10-11/build-page-studio.mjs",
+        "experiments/prose-qr/paste-prose-2026-10-11/studio-test-06.mjs"
+      ],
+      "status": 0,
+      "started": "2026-10-11T20:27:45.600923+00:00",
+      "seconds": 0.304572,
+      "stdout": "check-06.stdout.txt",
+      "stderr": "check-06.stderr.txt",
+      "stdoutSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "nativeInstalledExtension": "not run, optional",
+  "nativeProductText": "not run, optional",
+  "physicalPrint": "not run",
+  "maximumProductDecoderCalls": 39
+}

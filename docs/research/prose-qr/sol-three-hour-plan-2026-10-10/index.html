@@ -1,0 +1,1808 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · Sol's three-hour research plan</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #202638;
+        --muted: #525d71;
+        --paper: #f8f6f0;
+        --card: #fffdf8;
+        --line: #d9d9d1;
+        --accent: #51458b;
+        --wash: #eeebfa;
+        --teal: #185f59;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          17px/1.6 system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 3px;
+      }
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+      button,
+      .button {
+        display: inline-block;
+        border: 1px solid var(--accent);
+        border-radius: 10px;
+        padding: 11px 17px;
+        cursor: pointer;
+        background: var(--accent);
+        color: white;
+        font-weight: 650;
+        text-decoration: none;
+      }
+      button.secondary,
+      .button.secondary {
+        background: transparent;
+        color: var(--accent);
+      }
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      summary:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid #ab6d16;
+        outline-offset: 4px;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        padding: 16px max(20px, calc((100vw - 1080px) / 2));
+        display: flex;
+        gap: 14px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+      .status {
+        color: var(--teal);
+        font-weight: 650;
+      }
+      main {
+        max-width: 1120px;
+        padding: 38px 20px 65px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: -0.035em;
+        line-height: 1.08;
+      }
+      h1 {
+        font-size: clamp(38px, 6vw, 66px);
+        max-width: 850px;
+        margin: 12px 0 22px;
+      }
+      h2 {
+        font-size: clamp(30px, 4vw, 42px);
+        margin: 0 0 18px;
+      }
+      h3 {
+        font-size: 21px;
+        line-height: 1.3;
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 750;
+        color: var(--teal);
+      }
+      .lead {
+        font-size: 21px;
+        max-width: 810px;
+        color: var(--muted);
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 22px 0 10px;
+      }
+      .small {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .hero {
+        padding-bottom: 30px;
+      }
+      .band {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 25px 0;
+      }
+      .band article {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+      }
+      .band h3 {
+        margin: 5px 0 12px;
+      }
+      .band p {
+        font-size: 16px;
+      }
+      .band .num {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--card);
+        padding: 26px;
+        margin: 26px 0;
+      }
+      .callout {
+        background: var(--wash);
+        border-left: 4px solid var(--accent);
+        padding: 19px 21px;
+        border-radius: 0 12px 12px 0;
+        margin: 20px 0;
+      }
+      .callout p:last-child {
+        margin: 0;
+      }
+      .chain {
+        display: flex;
+        gap: 10px;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+      .chain span {
+        background: #f1f3ee;
+        border-radius: 9px;
+        padding: 12px 14px;
+        flex: 1;
+        min-width: 175px;
+        font-size: 15px;
+      }
+      .chain b {
+        display: block;
+        color: var(--teal);
+      }
+      .timeline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      .timeline p {
+        margin: 0;
+      }
+      .toolbar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      .toolbar label {
+        font-size: 15px;
+      }
+      .toolbar input[type="search"] {
+        padding: 11px 14px;
+        border: 1px solid #aab0ba;
+        border-radius: 10px;
+        flex: 1;
+        min-width: 170px;
+        background: white;
+        color: var(--ink);
+        width: 100%;
+      }
+      .toolbar input[type="checkbox"] {
+        accent-color: var(--accent);
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        align-items: start;
+      }
+      .idea-group {
+        margin: 28px 0;
+      }
+      .idea {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--card);
+        overflow: hidden;
+      }
+      .idea summary {
+        display: flex;
+        gap: 12px;
+        padding: 17px;
+        cursor: pointer;
+        line-height: 1.45;
+        font-size: 16px;
+        font-weight: 650;
+        list-style: none;
+      }
+      .idea summary:after {
+        content: "+";
+        margin-left: auto;
+        color: var(--accent);
+      }
+      .idea[open] summary:after {
+        content: "−";
+      }
+      .number {
+        color: var(--teal);
+        font:
+          700 14px/1.7 ui-monospace,
+          monospace;
+      }
+      .idea-body {
+        padding: 0 18px 5px;
+        font-size: 16px;
+      }
+      .note {
+        border-top: 1px solid var(--line);
+        padding: 17px 0;
+      }
+      .note summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .note > div {
+        padding-top: 17px;
+      }
+      .note p,
+      .note li {
+        font-size: 16px;
+      }
+      code {
+        font:
+          0.88em ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          monospace;
+        background: #ecebe7;
+        padding: 1px 4px;
+        border-radius: 4px;
+        overflow-wrap: anywhere;
+      }
+      textarea {
+        display: block;
+        width: 100%;
+        min-height: 390px;
+        resize: vertical;
+        background: #fff;
+        color: var(--ink);
+        border: 1px solid #aab0ba;
+        border-radius: 10px;
+        padding: 16px;
+        font:
+          14px/1.6 ui-monospace,
+          Menlo,
+          monospace;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+      }
+      #notice {
+        min-height: 24px;
+        color: var(--teal);
+        font-weight: 600;
+      }
+      #prompt-region {
+        scroll-margin-top: 20px;
+      }
+      ul,
+      ol {
+        padding-left: 23px;
+      }
+      li {
+        margin: 7px 0;
+      }
+      footer {
+        padding: 22px 0;
+        border-top: 1px solid var(--line);
+        margin-top: 35px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      [hidden] {
+        display: none !important;
+      }
+      a,
+      p,
+      li,
+      summary {
+        overflow-wrap: break-word;
+      }
+      @media (max-width: 650px) {
+        main {
+          padding-top: 26px;
+        }
+        .band,
+        .cards,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+        .panel {
+          padding: 20px;
+        }
+        .lead {
+          font-size: 19px;
+        }
+        header {
+          align-items: flex-start;
+        }
+        .status {
+          max-width: 135px;
+          text-align: right;
+        }
+        h1 {
+          margin-top: 9px;
+        }
+        .band {
+          gap: 10px;
+        }
+        .band article {
+          padding: 19px;
+        }
+        .toolbar {
+          align-items: flex-start;
+        }
+        .toolbar input[type="search"] {
+          flex-basis: 100%;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+          font-size: 11pt;
+        }
+        .actions,
+        .toolbar,
+        #notice,
+        textarea {
+          display: none;
+        }
+        main {
+          max-width: none;
+          padding: 0;
+        }
+        .band,
+        .cards {
+          display: block;
+        }
+        .idea,
+        .panel {
+          break-inside: avoid;
+          margin-bottom: 10px;
+        }
+        details:not([open]) > .idea-body {
+          display: block;
+        }
+        header {
+          padding: 10px 0;
+        }
+        .small {
+          font-size: 10pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="brand">AQROBAT / RESEARCH</span
+      ><span class="status">Planning only · goal unsolved</span>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">October 10, 2026 · A handoff for GPT-6.1 Sol</p>
+        <h1>Three hours.<br />Several better questions.</h1>
+        <p class="lead">
+          Forty ideas and checks, organized around a practical shift: connect
+          the finder research to the readable paragraph that must carry the
+          actual message.
+        </p>
+        <div class="actions">
+          <button id="copy-top">Copy Sol's run prompt</button
+          ><a class="button secondary" href="#idea-bank"
+            >Explore the 40 ideas</a
+          >
+        </div>
+        <p class="small">
+          Switch to GPT-6.1 Sol in this chat, keep extra-high effort, then send
+          the prompt. No experiment or timer has started. No new chat, project,
+          or goal mode is needed.
+        </p>
+      </section>
+      <section aria-labelledby="routes">
+        <h2 id="routes">The three priority routes</h2>
+        <div class="band">
+          <article>
+            <span class="num">01 / DIAGNOSE</span>
+            <h3>Check the scale</h3>
+            <p>
+              Why does the reader return 113 where the source expects 125? Can
+              readable body text carry enough detail at that same scale?
+            </p>
+          </article>
+          <article>
+            <span class="num">02 / CHANGE THE STRUCTURE</span>
+            <h3>Try a different native shape</h3>
+            <p>
+              Select a few genuinely different letter contours or letter
+              combinations that address the failing diagonal. Avoid another
+              broad font sweep.
+            </p>
+          </article>
+          <article>
+            <span class="num">03 / MAKE IT PROSE</span>
+            <h3>Build an article layout</h3>
+            <p>
+              Try larger initials with smaller readable body text, or a finder
+              formed from several words. Check the whole paragraph early.
+            </p>
+          </article>
+        </div>
+      </section>
+      <div class="callout">
+        <p>
+          <strong>A concrete lead, not a solved problem.</strong> Saved PILL
+          stroke measurements predict a dimension near 113. That may explain the
+          source-model mismatch. Its actual diagonal still fails. Sol should
+          investigate both, then keep going toward real payload recovery.
+        </p>
+      </div>
+      <section class="panel">
+        <h2>What counts as ready?</h2>
+        <div class="chain">
+          <span
+            ><b>1 · Structure</b>Intended first-selected geometry and complete
+            native runs pass.</span
+          ><span
+            ><b>2 · Readable prose</b>Visible words form a readable paragraph at
+            its declared page size.</span
+          ><span
+            ><b>3 · Exact decoding</b>At least two independent ordinary readers
+            recover the fixed payload.</span
+          ><span
+            ><b>4 · Your phone</b>Only then ask for your later Samsung
+            review.</span
+          >
+        </div>
+        <p class="small" style="margin-top: 17px">
+          A finder-only pass is progress, not a phone candidate. Styled success
+          stays separate from unstyled prose. Automated evidence never becomes a
+          claimed phone result.
+        </p>
+      </section>
+      <section class="panel">
+        <h2>Autonomy with a real end time</h2>
+        <div class="timeline">
+          <p>
+            <strong>Keep moving.</strong> Sol can preregister and run several
+            small phases without asking after each failure. The ideas are
+            options, not a checklist to exhaust.
+          </p>
+          <p>
+            <strong>Finish by three hours.</strong> Stop starting experiments at
+            minute 160. Reserve the final 20 minutes for evidence, backup, and a
+            clean handback.
+          </p>
+          <p>
+            <strong>Keep the run modest.</strong> At most 24 full native
+            proposals, four conditional payload proposals, and 40 MB of new
+            files; one owned browser and one heavy job.
+          </p>
+          <p>
+            <strong>Stop earlier for a credible result.</strong> Deliver a
+            readable, reproducible automated candidate. Otherwise report the
+            remaining obstacle honestly.
+          </p>
+        </div>
+      </section>
+      <section id="idea-bank">
+        <p class="eyebrow">A menu, not a sweep</p>
+        <h2>40 ideas and checks</h2>
+        <p>
+          Start with the recommended routes. Conditional payload ideas remain
+          behind the existing structure gate. Lower-priority ideas are
+          fallbacks, not reasons to expand the run.
+        </p>
+        <div class="toolbar">
+          <input
+            id="search"
+            type="search"
+            aria-label="Search ideas"
+            placeholder="Search: paragraph, diagonal, mask…"
+          /><label
+            ><input id="priority" type="checkbox" /> Priority ideas only</label
+          ><button class="secondary" id="expand">Expand visible ideas</button>
+        </div>
+        <p id="count" class="small" role="status">40 ideas visible</p>
+        <section class="idea-group">
+          <h3>A. Challenge the assumptions before rendering more letters</h3>
+          <div class="cards">
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">01</span
+                ><span
+                  >Count the spatial freedom in a paragraph — start here</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  For each proposed layout, tabulate finder pitch, body
+                  x-height, line leading, character advances, and the number of
+                  independently adjustable text regions across the data field.
+                  Draw a diagnostic overlay only after the native capture. The
+                  current tiny pitch relative to large letters may leave very
+                  few independent choices per QR module. First test: calculate
+                  this from saved PILL and one proposed article layout. Reject a
+                  claimed capacity argument that merely counts pixels or assumes
+                  every part of a glyph can be independently changed. This is a
+                  design diagnostic, not a mathematical impossibility proof.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">02</span
+                ><span
+                  >Audit counter-only versus complete-run pitch — start
+                  here</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Compare the source counter-width model with full five-run H/V
+                  spans and ordinary dimension returns. The saved PILL
+                  arithmetic points near dimension 113 without changing the
+                  image. First test: a read-only comparison across the existing
+                  P, R, and B resources. If it suggests a new construction rule,
+                  preregister that rule before a fresh render. Do not rename the
+                  old expected dimension or use returned corners to guide a
+                  decoder. Diagonal failure remains independent.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">03</span
+                ><span
+                  >Identify the first failing reader stage — start here</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Distinguish candidate formation, candidate ranking, triplet
+                  geometry, dimension, extraction, format information, and
+                  payload correction. Inspect existing stock returns and
+                  parity-checked passive traces first. A locator-only source
+                  naturally has no data to decode; do not call that a failed
+                  payload experiment. First test: a short stage ledger for PILL
+                  and a conventional control. A better late-stage score is not
+                  useful if an earlier stage already fails.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">04</span
+                ><span
+                  >Check whether our diagnostic gates are well calibrated —
+                  start here</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Replay the gate calculations read-only on saved conventional
+                  controls and previously decoded outputs, including ordinary
+                  returned coordinates. Determine whether a metric is sensitive
+                  to diagonal distance convention, rounding, or a source-defined
+                  span. First test: two existing controls, no new payload
+                  render. If a checker bug exists, preserve its executed version
+                  and fix it in a fresh audited version. If a threshold appears
+                  overconservative, report that limitation; do not quietly relax
+                  it to pass a native example.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">05</span
+                ><span>Audit competing counters in real words</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  DARE showed why the intended letter is not necessarily the
+                  selected letter. Record all naturally returned candidates and
+                  their correspondence to source letters after the reader
+                  returns. First test: inspect existing PAVE/DARE/PILL traces.
+                  Later compare a fixed finder surrounded by a short readable
+                  sentence with many counters versus one with fewer. Never
+                  substitute a better candidate for the reader&#x27;s actual
+                  first selection.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">06</span
+                ><span>Use a tradeoff ledger instead of one best score</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Track actual diagonal error, H/V balance, stable span,
+                  ordinary dimension, readability, page size, and available
+                  body-text freedom together. First test: plot the existing
+                  small set; retain every case. A candidate improving one metric
+                  while losing visible letters should not displace a more useful
+                  design. This helps choose experiments; it neither changes the
+                  gates nor supplies new decoding evidence.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section class="idea-group">
+          <h3>B. Try genuinely different native finder structures</h3>
+          <div class="cards">
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">07</span
+                ><span
+                  >Choose counter topology, not a font-name sweep — high
+                  priority</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Inspect at most six installed glyph resources selected for
+                  explicit structural differences: flatter counter corners, more
+                  equal H/V spans, or less surrounding ink crossing the failing
+                  diagonal. Start with visible native Latin letters. First test:
+                  small resources, then at most two justified full-context
+                  proposals. Record actual font identities. Arial round O, P/R/B
+                  appendages, Phosphate O, and logographic weight variants
+                  already have negative evidence; renaming those searches is not
+                  a new mechanism.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">08</span
+                ><span>Test an actual optical-size alternate — fallback</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  If an installed font genuinely exposes an optical-size axis or
+                  native alternate with different counter proportions, compare
+                  two declared designs at one fixed body size. This could change
+                  the topology without simply enlarging the raster. Inspect the
+                  font first; do not infer axis support or simulate it by
+                  stretching. Reject missing alternates or changes that make the
+                  letter indistinct. Keep this separate from the
+                  already-exhausted size/weight sweeps.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">09</span
+                ><span
+                  >Separate bowl shape from the outline treatment —
+                  fallback</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  A native outline can change a bowl and its exterior
+                  differently. Compare one specific native contour treatment
+                  against a matched source whose font, text, advance, and origin
+                  stay fixed. First test: two cases only, with a hypothesis
+                  about the offending diagonal segment. A generic stroke-width
+                  sweep repeats session D and is not justified. Reject
+                  overlapping letters or outlines that close the letter&#x27;s
+                  distinguishing aperture.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">10</span
+                ><span
+                  >Let a pair of readable letters share the finder job —
+                  exploratory</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Instead of asking a single counter to provide every run, test
+                  whether two ordinary adjacent letters at nonnegative spacing
+                  naturally supply complementary strokes. First test: two
+                  visible letter pairs selected from measured contours, then one
+                  real word containing a promising pair. No overprinting,
+                  clipping, per-pixel erasure, or custom QR-shaped glyph. Reject
+                  a construction that only looks correct after the letters merge
+                  into a symbol.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">11</span
+                ><span>Examine one specific native ligature — exploratory</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  A genuine OpenType ligature might join strokes while
+                  preserving a recognizable word. Inventory only installed,
+                  documented features; compare one word with its native feature
+                  enabled and disabled. The earlier Snell Roundhand work already
+                  failed, so “try cursive” alone is not new. This needs a
+                  specific measured join that addresses the actual failed axis.
+                  Reject if it requires a made-up glyph, illegible swash, or
+                  custom decoder.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">12</span
+                ><span
+                  >Build a finder from several words — alternative
+                  architecture</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Make the target finder larger than one character, using the
+                  collective ink of readable words and normal spaces. This could
+                  bring its module scale closer to body-text control. First
+                  test: one small paragraph-sized nonpayload finder layout with
+                  a preregistered vocabulary and source layout, inspected
+                  through ordinary native binarization. Earlier bold-density
+                  prose failed phone tests; the new mechanism must address
+                  broken runs and line gaps, not repeat the old bitmap-to-bold
+                  map. Reject merged baselines or unreadably tiny words.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">13</span
+                ><span
+                  >Use existing page structure for a separator —
+                  exploratory</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Try a paragraph indent, column gutter, or ordinary margin to
+                  provide the clear space around a native finder. First test:
+                  two full-context layouts with equal text and one changed
+                  source layout rule. These spaces must look like plausible
+                  typesetting and survive the entire page, not a crop. Reject
+                  large blank QR-shaped holes that reproduce the owner&#x27;s
+                  original complaint.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">14</span
+                ><span
+                  >Rotate the source matrix while keeping prose upright —
+                  conditional</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Once a viable native finder family exists, rotate the QR
+                  source layout to place its three finder locations at more
+                  natural paragraph openings. Keep the prose upright and
+                  regenerate source positions; do not rotate a screenshot to
+                  repair it. First test: at most two source orientations
+                  selected for the article layout. This changes where the
+                  construction is needed, not the local diagonal problem. It is
+                  not an excuse to bypass structure gates.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section class="idea-group">
+          <h3>C. Make the geometry belong to an actual paragraph</h3>
+          <div class="cards">
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">15</span
+                ><span
+                  >Large initials with readable smaller body text — high
+                  priority</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Try native drop caps or larger paragraph-opening letters for
+                  the finder role, with ordinary body text carrying the data
+                  role. First test: one or two finder-only article mockups, body
+                  around 14–20 CSS pixels and an explicitly declared page width,
+                  rather than a giant repeated-word sheet. Keep the whole page
+                  native/selectable. Reject a body too small to read, and
+                  measure the scale compatibility: smaller body text is a
+                  hypothesis, not an automatic solution.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">16</span
+                ><span
+                  >Use three paragraph openings in a natural article layout —
+                  high priority</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  A two-column article can place larger initials at two upper
+                  paragraph openings and one lower opening. This supplies a
+                  plausible spatial arrangement for three finders. First test: a
+                  short complete article with real punctuation and no payload,
+                  using fixed native source positions within a readable reading
+                  order. Reject if the result requires arbitrary disconnected
+                  text islands, excessive gaps, or a normal-page view in which
+                  no words can be read.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">17</span
+                ><span
+                  >Give finder letters and body letters different roles — high
+                  priority</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Use one already-installed native display face for initials and
+                  a readable body face for density variation. Record both actual
+                  font identities and the styling boundary. First test: compare
+                  the same article under one-font and two-font source rules.
+                  This may avoid asking a single font to solve contradictory
+                  tasks. It belongs to styled prose, not the
+                  uniform-font/plain-ASCII claim.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="true">
+              <summary>
+                <span class="number">18</span
+                ><span
+                  >Make normal-page readability a starting constraint — high
+                  priority</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Declare the intended CSS page width, body size, line height,
+                  device scale, and viewing size before rendering. Aim first at
+                  a roughly 640–960 CSS-pixel article with readable body text;
+                  keep physical PNG pixels distinct from CSS pixels. First test:
+                  inspect both the whole page and a native 1:1 excerpt. Reject a
+                  success that only exists on a 10,240-square sheet or after
+                  unreadable shrinking. These suggested sizes are a working
+                  design target, not a universal readability standard or a phone
+                  result.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">19</span
+                ><span
+                  >Prefer a small fixed prose template over repeated control
+                  words</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Use a brief coherent paragraph about printing, reading, or the
+                  experiment. Allow a finite set of sentence variants, retaining
+                  the exact visible text in the recipe. First test: two
+                  templates with similar lengths and different glyph densities.
+                  Fabricated words can remain labeled structural controls, but
+                  should not become the final phone candidate. This adds meaning
+                  without needing a language model every time the eventual tool
+                  generates an output.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">20</span
+                ><span>Separate fixed structure from editable prose</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Identify which source positions correspond to
+                  finder/separator, timing, format, alignment, and data
+                  requirements. Give each a typography objective while all
+                  visible content remains native letters. First test: a source
+                  feasibility map before a native payload render. The map is for
+                  construction and diagnosis only; it must not become hidden
+                  modules behind text or an extraction hint. Reject a design
+                  that has no readable way to realize its mandatory regions.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section class="idea-group">
+          <h3>D. Give the body text meaningful degrees of freedom</h3>
+          <div class="cards">
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">21</span
+                ><span>Measure glyphs as small two-dimensional patterns</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Do not reduce M, W, i, and punctuation to a single dark/light
+                  average. Record their native spatial occupancy, holes, joins,
+                  and baseline gaps at the chosen body size. First test: a tiny
+                  preregistered alphabet resource sheet and one word. Use these
+                  measurements to propose source text, then validate the
+                  complete native output. Source-aligned accuracy alone must not
+                  count as recovery.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">22</span
+                ><span>Use line-breaking dynamic programming</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Choose among normal spaces and legal word breaks to move
+                  useful strokes while keeping punctuation and reading order
+                  intact. First test: a fixed 40–80-word paragraph with a small
+                  bounded set of line widths; save all source proposals. Reject
+                  clipped words, artificial internal spaces, negative tracking,
+                  or grossly ragged layouts. A solver should minimize the
+                  typography cost as well as the source target mismatch; its
+                  objective is not an acceptance reader.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">23</span
+                ><span
+                  >Search whole words, not arbitrary pixel replacements</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Make a small vocabulary with measured native word shapes, then
+                  use a bounded beam search to fit a few local constraints in a
+                  sentence template. First test: at most a few dozen vocabulary
+                  entries and a fixed small search budget, not an unbounded
+                  dictionary search. Every candidate rendered as a full native
+                  source counts toward the run cap. Reject word substitutions
+                  that destroy readability or rely on a favorable source sampler
+                  instead of ordinary returns.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">24</span
+                ><span>Use controlled semantic alternatives</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Let a sentence choose between a small set of grammatically
+                  valid alternatives with different ink distributions. For
+                  example, a supplied template can vary a short phrase without
+                  changing the topic. First test: one sentence and two or three
+                  alternatives, not automatic essay generation. Keep the
+                  scanner&#x27;s payload fixed regardless of the visible prose.
+                  This is a later layer after structural feasibility, not a
+                  substitute for solving it.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">25</span
+                ><span
+                  >Try genuine font grade, if installed — styled fallback</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  A real grade axis is worth inspecting because it may vary ink
+                  without the same advance changes as ordinary weight. Confirm
+                  the actual installed axis before proposing a test. First test:
+                  two declared grades in an otherwise identical native sentence,
+                  with measured advances and full-context results. Do not call
+                  CSS font-weight “grade,” install a new font, or assume width
+                  preservation. Earlier bold successes and phone failures remain
+                  separate evidence.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">26</span
+                ><span
+                  >Use native width variants sparingly — styled fallback</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  An installed width axis or genuine condensed face may move
+                  strokes into a more useful arrangement while preserving words.
+                  First test: one word under two predeclared native variants,
+                  followed by a full-context proposal only if the mechanism
+                  looks plausible. No screenshot stretching or per-letter
+                  distortion. Reject strained, overlapping, or unrecognizable
+                  type; size changes alone are not a new hypothesis.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">27</span
+                ><span
+                  >Use ordinary punctuation and spacing as limited
+                  controls</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Commas, periods, colons, paragraph breaks, and legitimate
+                  sentence alternatives can alter local density without turning
+                  the page into random punctuation. First test: one
+                  syntactically valid paragraph with two source variants. Do not
+                  insert arbitrary punctuation just to paint black modules or
+                  add spaces inside words. This offers modest freedom; it is
+                  unlikely to repair a badly broken finder by itself.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">28</span
+                ><span
+                  >Test visible typographic contrast as its own lane — lower
+                  priority</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Different readable ink colors or emphasis styles may affect
+                  ordinary grayscale processing while preserving recognizable
+                  text. First test only after black/white mechanisms have a
+                  clear diagnosis: two visible, high-contrast source styles,
+                  without changing readers. Reject faint letters, transparent
+                  text, or a colored background pattern that secretly carries
+                  the QR. This is styled color text, not success for
+                  uniform-black prose, and camera color behavior remains
+                  untested.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section class="idea-group">
+          <h3>E. Source-encoding choices, only after the finder gate</h3>
+          <div class="cards">
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">29</span
+                ><span
+                  >Choose a mask compatible with the text — conditional</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  The standard encoder exposes eight mask choices. Score their
+                  source patterns against the measured text constraints, retain
+                  the matrix-level scores for all eight, and render at most the
+                  few preregistered finalists allowed by the total payload cap.
+                  Use ordinary readers on complete native outputs; no mask
+                  hints. Do not claim all eight were experimentally tested if
+                  only their matrices were compared. See the
+                  <a
+                    href="https://www.nayuki.io/res/qr-code-generator-library/javadoc/io/nayuki/qrcodegen/QrCode.html"
+                    >Nayuki API</a
+                  >.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">30</span
+                ><span
+                  >Co-design version and error correction with page scale —
+                  conditional</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Compare a small fixed pair of standard version/ECC choices for
+                  the exact same payload. A higher ECC setting can demand more
+                  spatial detail; a larger symbol can demand a less readable
+                  page. First test: source feasibility calculations, then at
+                  most two native proposals if the gates and cap permit. Do not
+                  assume maximum ECC is automatically best or that it repairs
+                  locator failure. Keep actual requested/encoded settings in the
+                  recipe.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">31</span
+                ><span
+                  >Vary legal segment choices without changing decoded text —
+                  conditional</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Different standards-valid segment choices can produce
+                  different matrices while representing the same string. First
+                  test: a small pair supported by the pinned encoder and
+                  ordinary conventional controls. Compare exact decoded
+                  bytes/text, not merely equivalent URLs. Do not use arbitrary
+                  padding or undocumented decoder tolerance to gain design
+                  freedom. This is optional source flexibility, not permission
+                  to rewrite the encoder or the payload.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">32</span
+                ><span
+                  >Solve timing and format regions explicitly —
+                  conditional</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  A source with recognizable finder centers may still fail
+                  before reading data. Construct readable native strokes for the
+                  mandatory timing/format regions and diagnose their ordinary
+                  returned behavior separately. First test: one gated
+                  full-payload proposal with a post-return region error ledger.
+                  No forced extraction or repairing the raster. A pretty data
+                  field does not compensate for a missing way to locate or
+                  interpret it.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">33</span
+                ><span
+                  >Diagnose damage at the codeword level — conditional</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  After an ordinary reader attempts the unchanged source, use
+                  known source geometry only for a clearly labeled post-return
+                  error analysis. Determine whether a typography change
+                  concentrates or spreads errors across codewords. First test:
+                  one failed gated payload and its conventional control. Do not
+                  feed a repaired matrix back into an acceptance reader, count
+                  diagnostic decoding as success, or assume a percentage of bad
+                  modules equals an ECC budget.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">34</span
+                ><span
+                  >Learn from QArt, but keep its payload tradeoff explicit —
+                  later</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  <a href="https://research.swtch.com/qart">QArt</a>
+                  demonstrates that encoding choices can be designed around
+                  imagery. Its illustrated numeric URL fragment changes the
+                  decoded string, so that method is outside this run&#x27;s
+                  exact-payload rule. First step here is theoretical: inventory
+                  only standards-valid freedom that leaves the payload
+                  unchanged. Do not promise arbitrary artistic freedom or start
+                  a Reed–Solomon optimizer during this bounded run. This could
+                  become a separate research proposal if the native-text route
+                  merits it.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section class="idea-group">
+          <h3>F. Make a success useful and credible</h3>
+          <div class="cards">
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">35</span
+                ><span
+                  >Freeze a candidate before an additional ordinary reader</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  After the normal gates pass, retain a frozen source/PNG/recipe
+                  and test an already-installed implementation not used to
+                  choose that candidate, if one is available within budget.
+                  OpenCV, ZXing, jsQR, ZBar, and Apple Vision are implementation
+                  families; multiple profiles of one are not independent
+                  engines. Record unknowns/timeouts separately. At least one
+                  exact acceptance result must come from outside ZXing; do not
+                  install a new stack simply to collect badges.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">36</span
+                ><span
+                  >Recreate from source, not from a repaired screenshot</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Save the actual text, styling, font identity, layout recipe,
+                  payload, and native capture settings. First test after a
+                  promising result: a fresh native render and the same ordinary
+                  readers. Retain its hash even if it differs, and explain the
+                  difference. If a result depends on one accidental raster
+                  alignment, report it as fragile rather than reproducible. Do
+                  not replace the old outcome.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">37</span
+                ><span>Test one realistic native display variation</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  If a candidate survives recreation, preregister one modest
+                  native CSS-size or device-scale variation as a separate
+                  capture, subject to the same readability and file limits. Feed
+                  that complete native output to ordinary readers. This tests a
+                  display condition, not phone optics. Do not blur, crop, or
+                  resample the failed original and call the altered image the
+                  unchanged candidate.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">38</span
+                ><span
+                  >Test the saved text document&#x27;s layout contract</span
+                >
+              </summary>
+              <div class="idea-body">
+                <p>
+                  For a successful styled candidate, verify selection/copy text
+                  identity and reopening its self-contained native HTML. Record
+                  whether fixed line breaks, fonts, and styles are essential.
+                  First test: one reopen in an owned browser profile, without
+                  touching the product or extension. This does not establish
+                  plain-text paste fidelity in Gmail, TextEdit, or another
+                  device. Preserve that distinction in the report.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">39</span
+                ><span>Review the paragraph without a decoder overlay</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Inspect the unannotated whole page at its stated reading size
+                  before looking at diagnostic grids. Can the words be read in
+                  order? Does it look like an article rather than three
+                  decorative initials beside noise? First test: a local visual
+                  review with concrete rejection notes and a few quoted words
+                  that are actually visible. Do not simulate owner approval or
+                  replace it with a mechanical overlap metric. A scanner pass
+                  and a prose pass are separate tests.
+                </p>
+              </div>
+            </details>
+            <details class="idea" data-priority="false">
+              <summary>
+                <span class="number">40</span
+                ><span>Prepare one honest phone-review package</span>
+              </summary>
+              <div class="idea-body">
+                <p>
+                  Only after exact independent recovery and readability review,
+                  provide one or two best candidates with the expected full URL,
+                  declared viewing size, original native output, and brief steps
+                  for Samsung Camera and the dedicated scanner. No preprocessed
+                  scan helper should be presented as the actual artifact. Keep
+                  failed cases available in evidence, but do not ask Ryan to
+                  repeat a large failed grid. No phone result exists until he
+                  reports one.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+      </section>
+      <section class="panel">
+        <h2>Evidence, limits, and references</h2>
+        <details class="note">
+          <summary>What is known, and what is only a hypothesis</summary>
+          <div>
+            <p>
+              Session D retained 15 native captures and 15 exact
+              immediate-repeat receipts. All strict structure gates failed; no
+              new source encoded a payload. PILL had stable central rows and
+              improved balanced spans, but its worst true-diagonal error was
+              0.5563, above the unchanged 0.35 gate. Its ordinary dimension was
+              113 versus the source model&#x27;s 125. Nothing new is a phone
+              candidate.
+            </p>
+            <p>
+              There is a concrete scale hypothesis to audit. PILL&#x27;s saved
+              glyph resource has horizontal runs <code>[6,4,12,4,6]</code> and
+              vertical runs <code>[4,4,9,4,4]</code>. Averaging their total
+              spans divided by seven gives 4.0714 pixels. With the saved
+              horizontal finder-center separation of 430.59375 pixels,
+              <code>distance / pitch + 7</code> is about 112.76, near the
+              ordinary dimension 113. This may explain part of the dimension
+              mismatch. It does <strong>not</strong> fix the diagonal, prove
+              correct finder selection, or justify retroactively relabeling a
+              failed source. Any new source model must be declared before
+              rendering a fresh case. Earlier phases already used related
+              run-based models; this is a targeted audit, not a claim of
+              invention.
+            </p>
+            <p>
+              The body-text question is equally important: the current 64-pixel
+              letters and roughly 108-pixel leading are much larger than a
+              roughly four-pixel module. That mismatch is a reason to measure
+              spatial freedom before building another payload. It is not a
+              general impossibility proof.
+            </p>
+          </div>
+        </details>
+        <details class="note">
+          <summary>Run limits</summary>
+          <div>
+            <ul>
+              <li>
+                At most 180 minutes including intake, verification, commit/push,
+                and handback. Start no new experiment after minute 160; finish
+                cleanup by minute 180.
+              </li>
+              <li>
+                At most 24 new full native source proposals across the run,
+                including rejected proposals and any payload cases; at most four
+                payload proposals, conditional on the existing gates. At most
+                one immediate repeat per captured case.
+              </li>
+              <li>
+                At most 40 MB of new logical files in total, including source,
+                reports, captures, diagnostics, and failures; normally at most 6
+                MB per fresh phase, never more than 8 MB when preregistered with
+                a reason. Reserve 5 MB overall and at least 20 minutes for
+                closing work. No evicting outcomes to make room.
+              </li>
+              <li>
+                At most 24 small native glyph-resource renders, each at most 512
+                × 512. Full native captures at most four megapixels / 16 MB
+                uncompressed RGBA. All resource renders, controls, profiles, and
+                repeats have separate counts.
+              </li>
+              <li>
+                One owned browser and one CPU-heavy job at a time; reuse
+                installed tools and fonts. No downloads of fonts/models, new
+                dependencies, paid services, or long-running background work.
+                Use small bounded search spaces and timeouts.
+              </li>
+              <li>
+                These are ceilings, not a target denominator. Preregister each
+                small batch before execution, including its conditional and
+                unattempted slots. If a budget cannot fit a useful next case,
+                seal the work rather than bypass it.
+              </li>
+            </ul>
+          </div>
+        </details>
+        <details class="note">
+          <summary>Planning verification and custody</summary>
+          <div>
+            <p>
+              Before writing this package, the checkout was clean on
+              <code>codex/aqrobat-foundation</code>, HEAD
+              <code>227eaff4da4bdd1c631d796048f076faffa4d249</code>, with origin
+              <code>https://github.com/ryanjosephkamp/aqrobat.git</code>. PR #1
+              was OPEN and draft at that same head. npm was
+              <code>private: true</code>.
+            </p>
+            <p>
+              All 89 direct references from the session D custody receipt
+              matched, including prior and phase receipt hashes, its report
+              inventory, direct source references, and all three product
+              downloads. This planning check was <strong>not</strong> a fresh
+              recursive replay of every earlier source and pixel receipt. Sol
+              must perform the full required research intake before new
+              experiments.
+            </p>
+            <p>
+              The session D custody receipt SHA-256 is
+              <code
+                >aca329c7c021d217718bddc19fdd9951037629a61b3a9c8eda0dc789a16d07b7</code
+              >. All changes in this package are planning documents and their
+              static presentation; the sealed research, product, extension, and
+              downloads remain unchanged.
+            </p>
+          </div>
+        </details>
+        <details class="note">
+          <summary>Primary sources consulted</summary>
+          <div>
+            <ul>
+              <li>
+                <a href="https://research.swtch.com/qart"
+                  >Russ Cox, QArt Codes</a
+                >: useful background on choosing encodings to fit an image. His
+                illustrated URL technique appends a numeric fragment, changing
+                the decoded string. It cannot be imported as an exact-payload
+                solution here.
+              </li>
+              <li>
+                <a
+                  href="https://www.nayuki.io/res/qr-code-generator-library/javadoc/io/nayuki/qrcodegen/QrCode.html"
+                  >Nayuki QR generator API</a
+                >: exposes version, mask, segment, and error-correction choices.
+                Use the pinned local encoder; these are source choices, not
+                permission to alter readers.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/cozmo/jsQR/blob/master/src/locator/index.ts"
+                  >jsQR locator source</a
+                >: a reference for the locator stages. For actual work, inspect
+                the pinned local 1.4.0 implementation rather than assume
+                upstream master is identical.
+              </li>
+              <li>
+                <a href="https://qr.jim.sh/">Jim&#x27;s TrueType QR Code Font</a
+                >: converts bracketed text into a QR-shaped rendering using font
+                shaping. Interesting adjacent work, but the encoded letters do
+                not remain a readable paragraph in the QR region.
+              </li>
+              <li>
+                <a
+                  href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/09/ARTcode.pdf"
+                  >ARTcode paper</a
+                >: a different visual coding system with its own receiver. Its
+                reported results do not establish ordinary QR-camera
+                compatibility for native prose.
+              </li>
+            </ul>
+            <p>
+              All five links were opened during planning. One additional
+              Eurographics PDF could not be retrieved (HTTP 403); no conclusion
+              in this package relies on it.
+            </p>
+          </div>
+        </details>
+        <p class="small">
+          The full <a href="README.md">planning notes</a> and
+          <a href="IDEAS.md">idea bank</a> are saved beside this HTML. Prior
+          sealed research remains unchanged.
+        </p>
+      </section>
+      <section class="panel" id="prompt-region">
+        <p class="eyebrow">Send after switching models</p>
+        <h2>The execution prompt</h2>
+        <p>
+          The prompt authorizes the bounded run and carries forward the
+          preservation rules. You can copy it directly or download the Markdown
+          file.
+        </p>
+        <div class="actions">
+          <button id="copy">Copy full prompt</button
+          ><button class="secondary" id="select">Select prompt</button
+          ><button class="secondary" id="download">Download prompt</button>
+        </div>
+        <p id="notice" role="status" aria-live="polite"></p>
+        <textarea
+          id="prompt"
+          readonly
+          aria-label="Full Sol execution prompt"
+          spellcheck="false"
+        >
+# Execute the bounded prose QR run
+
+I authorize a maximum three-hour autonomous research run, starting when you begin
+this turn. Work only in `/Users/noir/Documents/aqrobat`, on
+`codex/aqrobat-foundation`, using the existing OPEN draft PR #1. Do not change
+models, start agents/chats, enter an ongoing goal, or schedule an automation.
+Keep working through small justified follow-up phases without asking me to
+approve each batch. Three hours is a ceiling, not a requirement to use it all.
+
+## Intake and preservation
+
+Read `AGENTS.md`, `docs/PROJECT-HANDOFF.md`, and
+`docs/research/prose-qr/sol-three-hour-plan-2026-10-10/README.md`, `IDEAS.md`,
+and this prompt. Read session D&#x27;s `CHECKPOINT.md`, `README.md`, `analysis.json`,
+`verification-final.json`, `custody.json`, `HARNESS-NOTES.md`, and the referenced
+phase 70–74 plans, results, and custody receipts. Inspect earlier mechanisms
+as needed to avoid repeating failed work under a new name.
+
+Verify the actual Git branch, remote, HEAD, dirty state, PR OPEN/draft status,
+saved executed sources, prior custody, and product download hashes before
+research edits. The research baseline before this planning package was
+`227eaff4da4bdd1c631d796048f076faffa4d249`; planning-only commits may follow it.
+Do not reset to that hash or overwrite unexpected work. Record the live anchor
+and check intervening changes. Preserve all earlier phases and prototypes,
+product/extension/downloads, Splashery, the PDF archive, owner profiles, other
+tasks and jobs. npm stays private and unpublished. No merge, release, store,
+new host, migration, new PR, messages to others, or changes to Pages settings.
+
+The goal remains unsolved. Session D has 15 native captures and 15 exact repeats,
+75/87 completed primary slots, and 12 setup-aborted unattempted slots. All strict
+structure gates fail. PILL improves central spans but still fails its true
+diagonal and intended dimension. None of these new sources encodes a payload.
+Preserve phase 72&#x27;s original setup abort, executed source and initial plan,
+phase 65&#x27;s ERRATA, and every older error or unknown. No new phone results exist.
+
+## Objective and priorities
+
+Aim for readable native prose whose unchanged full output recovers an exact
+preregistered payload in independent ordinary readers, then becomes a credible
+candidate for my later phone review. Do not stop merely because a locator score
+improves or one finder-only phase finishes. Prioritize:
+
+1. A short read-only audit of source scale, actual selected stroke runs, returned
+   dimension, and the spatial freedom available to readable body text. The
+   PILL resource-scale hypothesis in the plan is a diagnostic lead, not a
+   correction to old results. Inspect whether our surrogate gates agree with
+   existing conventional controls; do not silently relax their thresholds.
+2. A genuinely different native-letter topology mechanism addressing the actual
+   first-selected H/V/both diagonal runs, stable balanced spans, and dimension.
+   Select a small justified set by structure, not another size/weight/placement
+   sweep of the same glyph. Record why it differs from the earlier failures.
+3. A plausible paragraph construction, such as larger readable initials with
+   smaller body text, or several readable words forming a larger finder. Check
+   normal-page readability and finder/data scale compatibility early. A larger
+   initial alone does not solve data capacity; demonstrate the relevant native
+   measurements. Alternative ideas in the bank are hypotheses, not mandates.
+
+You may select and adapt ideas based on evidence. Preregister each batch&#x27;s
+objective, cases, source rules, legibility rejection, denominators, readers,
+timeouts, and cap before rendering. Keep acceptance rules fixed within it.
+Save any corrected harness source as a new version, retain the original error,
+and validate the correction on controls. Do not modify acceptance readers.
+After one small failure, try a different justified route while useful budget
+remains; do not spend the run making slight variants of the same failure.
+
+## Evidence gates
+
+Use unchanged complete native outputs with ordinary reader settings, including
+an implementation outside ZXing. Count implementations separately from profiles,
+branches and repeats. Retain every success, failure, wrong payload, rejection,
+abort, checker error, timeout/unknown, and unattempted slot. Assert passive
+instrumentation returns the same result as stock code. Keep actual first-selected
+H/V/both true diagonals and balanced spans separate from source-aligned samples,
+threshold replicas, scored-only axes and second-return points.
+
+Keep the existing full-context structure gates and explicit native legibility
+rejection. No full-QR sweep based on coordinate, model, scored-only, or
+second-return passes. If a new native construction passes the existing intended
+geometry/structure gates in full text context and remains visibly readable,
+you may preregister up to four full native payload proposals within the total
+budget. Fix the exact decoded string before each payload phase; default to
+`https://example.com/`. No shortened URLs, added fragments, or altered payloads
+to obtain a favorable pattern. Standard source mask/version/ECC choices may
+be considered, but all rendered proposals count and must fit the small budget.
+
+Geometry may guide source rendering and post-return diagnosis only: no pixel
+repair, forced extraction/corners, hidden modules, invisible letters, acceptance
+reader tuning, or unreadable raster compression. Reader-internal ordinary
+processing is allowed; externally blurred/cropped/resized images do not replace
+the native acceptance input. Keep styled outline, bold, regular Latin,
+intrinsically heavy/decorative, logographic and uniform-black ASCII lanes
+separate. A styled success does not solve unstyled text or portable plain text.
+
+Reject visibly merged, clipped, overlapping, miniature or indistinguishable
+letters; a mechanical gate is not owner legibility acceptance. Judge the whole
+page as well as a 1:1 excerpt. Repetitive words, fabricated language, a giant
+page, or a conventional QR disguised as a font are intermediate controls or
+different products, not the requested readable paragraph.
+
+## Runtime and file budget
+
+Record the wall-clock start and a deadline 180 minutes later immediately. The
+clock includes intake, research, verification, commit/push, and handback. Start
+no new experiment after minute 160; reserve at least 20 minutes for closing.
+Check remaining time and disk budget between batches. Give child jobs bounded
+timeouts that fit before the deadline; close only your own jobs and profiles.
+Do not leave unattended background work after handback. If the session is
+interrupted, preserve the checkpoint; resumption must account for the original
+deadline rather than automatically starting another three-hour window.
+
+Use fresh exclusive phase/output directories; never rerun sealed scripts in
+their old directories. Overall ceilings: 24 new full native source proposals
+(including rejects and at most four conditional payload proposals), one
+immediate repeat per captured case, and 24 small glyph-resource renders of at
+most 512 × 512. Full captures must fit four megapixels / 16 MB uncompressed
+RGBA. Count resource renders, controls, repeats, and reader slots separately.
+
+Limit all new logical files to 40 MB, including source, evidence, failures,
+reports and receipts. Normally cap each new phase at 6 MB; a reason declared
+before execution may raise that phase to at most 8 MB without raising the
+overall cap. Reserve 5 MB overall for verification and handback. Do not delete
+outcomes to make space. Use one owned browser and one CPU-heavy job at a time;
+reuse installed tools/fonts. No new dependencies, font/model downloads, paid
+services, or large unbounded sweeps. These ceilings are not quotas to fill.
+
+## Stop and deliver
+
+Stop early for a genuinely review-ready automated candidate: the existing
+full-context gates pass; at least two independent ordinary implementations,
+including one outside ZXing, recover the exact payload from unchanged full
+native output; a fresh native repeat reproduces it; and a local visual review
+finds a readable paragraph at its declared normal-page display size. Save all
+reader results and the native HTML/text/recipe/PNG plus concise phone steps.
+Label it an automated candidate with phone acceptance pending. Do not send
+messages or perform phone tests on my behalf.
+
+Otherwise continue useful distinct work within the limits, then seal a truthful
+incomplete checkpoint. Stop earlier if continuing would violate preservation
+boundaries, if there is no defensible next experiment within the remaining
+budgets, or if I ask you to stop. Explain the specific reason; elapsed time or
+a spent cap does not make the scientific goal complete.
+
+Back up meaningful milestones to this same branch, checking staged scope and
+applicable checks before each push. Keep PR #1 draft and attach it to this chat
+if needed. Do not rebuild or rewrite product downloads for research-only work.
+At the end, provide a self-contained phone-friendly HTML report, exact counts,
+source/custody verification, changed-file scope, live Git/PR state, remaining
+scientific obstacle, and a safe continuation prompt. Failed grids belong in
+the evidence archive, not in a purported successful phone-test handoff.
+</textarea
+        >
+        <p class="small" style="margin-top: 12px">
+          Clipboard unavailable? Select prompt highlights the full text for
+          manual copying. The three-hour clock begins when Sol starts executing,
+          not when you open this file.
+        </p>
+      </section>
+      <footer>
+        Prepared from session D at research baseline <code>227eaff</code>.
+        Research remains unsolved. No new native QR captures or phone results
+        were produced by this planning handoff.
+      </footer>
+    </main>
+    <script>
+      const promptBox = document.getElementById("prompt"),
+        notice = document.getElementById("notice");
+      function selectPrompt() {
+        document.getElementById("prompt-region").scrollIntoView();
+        promptBox.focus();
+        promptBox.select();
+        promptBox.setSelectionRange(0, promptBox.value.length);
+        notice.textContent =
+          "Full prompt selected. Use your device’s Copy command.";
+      }
+      async function copyPrompt() {
+        try {
+          if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+          await navigator.clipboard.writeText(promptBox.value);
+          notice.textContent =
+            "Full prompt copied. Switch to Sol and paste it into this chat.";
+        } catch {
+          selectPrompt();
+        }
+      }
+      document.getElementById("copy").addEventListener("click", copyPrompt);
+      document
+        .getElementById("copy-top")
+        .addEventListener("click", async () => {
+          await copyPrompt();
+          document.getElementById("notice").scrollIntoView({ block: "center" });
+        });
+      document.getElementById("select").addEventListener("click", selectPrompt);
+      document.getElementById("download").addEventListener("click", () => {
+        const url = URL.createObjectURL(
+          new Blob([promptBox.value], { type: "text/markdown;charset=utf-8" }),
+        );
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "aqrobat-sol-three-hour-run.md";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+      const cards = [...document.querySelectorAll(".idea")],
+        search = document.getElementById("search"),
+        priority = document.getElementById("priority");
+      function filterIdeas() {
+        const q = search.value.trim().toLowerCase();
+        let n = 0;
+        for (const c of cards) {
+          c.hidden = !(
+            c.textContent.toLowerCase().includes(q) &&
+            (!priority.checked || c.dataset.priority === "true")
+          );
+          if (!c.hidden) n++;
+        }
+        for (const g of document.querySelectorAll(".idea-group"))
+          g.hidden = ![...g.querySelectorAll(".idea")].some((c) => !c.hidden);
+        document.getElementById("count").textContent =
+          n + " of 40 ideas visible";
+      }
+      search.addEventListener("input", filterIdeas);
+      priority.addEventListener("change", filterIdeas);
+      document.getElementById("expand").addEventListener("click", () => {
+        const visible = cards.filter((c) => !c.hidden),
+          open = visible.some((c) => !c.open);
+        for (const c of visible) c.open = open;
+        document.getElementById("expand").textContent = open
+          ? "Collapse visible ideas"
+          : "Expand visible ideas";
+      });
+    </script>
+  </body>
+</html>

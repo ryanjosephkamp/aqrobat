@@ -1,0 +1,10 @@
+file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/prepare-layout.mjs:2
+import {QrCode,QrSegment} from '../../../../vendor/qrcodegen.mjs';
+        ^^^^^^
+SyntaxError: The requested module '../../../../vendor/qrcodegen.mjs' does not provide an export named 'QrCode'
+    at #asyncInstantiate (node:internal/modules/esm/module_job:463:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:561:5)
+    at async node:internal/modules/esm/loader:650:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5)
+
+Node.js v26.10.0

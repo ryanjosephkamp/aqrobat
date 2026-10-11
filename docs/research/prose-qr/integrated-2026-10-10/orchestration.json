@@ -1,0 +1,52 @@
+{
+  "startedAtUtc": "2026-10-10T21:24:22Z",
+  "absoluteDeadlineUtc": "2026-10-11T00:24:22Z",
+  "observedAtUtc": "2026-10-10T22:37:39.936776+00:00",
+  "dispatchesUsed": 4,
+  "dispatchLimit": 4,
+  "activeWorkers": [],
+  "maxConcurrentWorkers": 2,
+  "parentRole": "coordination, meaningful progress reporting, final reconciliation and backup; no duplicated experimental work",
+  "fastMode": "not verified; spawn API has no speed parameter",
+  "billing": "not measured; no savings claim",
+  "continuationPolicy": "No new phase or automation after deadline; pause unfinished goal as requested.",
+  "completedWorkers": [
+    {
+      "name": "integrated_design",
+      "modelRequested": "gpt-6.1-sol",
+      "reasoningRequested": "xhigh",
+      "context": "fresh",
+      "outputOwner": "design/",
+      "handbackDeadlineUtc": "2026-10-10T22:14:22Z",
+      "capturesAndReadersAllocated": 0
+    },
+    {
+      "name": "integrated_mechanism",
+      "modelRequested": "gpt-6.1-sol",
+      "reasoningRequested": "xhigh",
+      "context": "fresh",
+      "outputOwner": "mechanism/",
+      "handbackDeadlineUtc": "2026-10-10T22:44:22Z",
+      "capturesAndReadersAllocated": 0
+    },
+    {
+      "name": "integrated_empirical",
+      "modelRequested": "gpt-6.1-sol",
+      "reasoningRequested": "high",
+      "context": "fresh",
+      "outputOwner": "empirical/",
+      "experimentalCutoffUtc": "2026-10-10T23:29:22Z",
+      "handbackDeadlineUtc": "2026-10-10T23:44:22Z"
+    },
+    {
+      "name": "integrated_review",
+      "modelRequested": "gpt-6.1-sol",
+      "reasoningRequested": "xhigh",
+      "context": "fresh",
+      "outputOwner": "review/",
+      "handbackDeadlineUtc": "2026-10-10T23:10:22Z",
+      "capturesAndReadersAllocated": 0
+    }
+  ],
+  "allocationAmendment": "allocation-02.json"
+}

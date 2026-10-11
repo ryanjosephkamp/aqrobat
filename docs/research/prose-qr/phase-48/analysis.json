@@ -1,0 +1,81 @@
+{
+  "at": "2026-10-10T05:39:41.398Z",
+  "phase": 48,
+  "goal": "unsolved",
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "newNativeSources": 0,
+  "plannedCalls": 2,
+  "attemptedProcesses": 2,
+  "retainedResultRows": 2,
+  "unknownSlots": 0,
+  "ordinary": [
+    {
+      "reader": "Apple Vision default — fresh per-input profile",
+      "exact": false,
+      "observations": [],
+      "error": null
+    }
+  ],
+  "exactOrdinaryNativeReturns": 0,
+  "exactOrdinaryControls": 1,
+  "controlResult": {
+    "defaultSymbologies": [
+      "VNBarcodeSymbologyAztec",
+      "VNBarcodeSymbologyCodabar",
+      "VNBarcodeSymbologyCode128",
+      "VNBarcodeSymbologyCode39",
+      "VNBarcodeSymbologyCode39Checksum",
+      "VNBarcodeSymbologyCode39FullASCII",
+      "VNBarcodeSymbologyCode39FullASCIIChecksum",
+      "VNBarcodeSymbologyCode93",
+      "VNBarcodeSymbologyCode93i",
+      "VNBarcodeSymbologyDataMatrix",
+      "VNBarcodeSymbologyEAN13",
+      "VNBarcodeSymbologyEAN8",
+      "VNBarcodeSymbologyGS1DataBar",
+      "VNBarcodeSymbologyGS1DataBarExpanded",
+      "VNBarcodeSymbologyGS1DataBarLimited",
+      "VNBarcodeSymbologyI2of5",
+      "VNBarcodeSymbologyI2of5Checksum",
+      "VNBarcodeSymbologyITF14",
+      "VNBarcodeSymbologyMSIPlessey",
+      "VNBarcodeSymbologyMicroPDF417",
+      "VNBarcodeSymbologyMicroQR",
+      "VNBarcodeSymbologyPDF417",
+      "VNBarcodeSymbologyQR",
+      "VNBarcodeSymbologyUPCE"
+    ],
+    "exact": true,
+    "input": "docs/research/prose-qr/phase-12/run-01/raw/full.png",
+    "observations": [
+      {
+        "bottomLeft": [0.11890243902439024, 0.11890243902439024],
+        "bottomRight": [0.8810975609756098, 0.11890243902439024],
+        "boundingBox": [
+          0.11890243902439024, 0.11890243902439024, 0.7621951219512195,
+          0.7621951219512195
+        ],
+        "confidence": 1,
+        "payload": "https://example.com/",
+        "symbology": "VNBarcodeSymbologyQR",
+        "topLeft": [0.11890243902439024, 0.8810975609756098],
+        "topRight": [0.8810975609756098, 0.8810975609756098]
+      }
+    ],
+    "os": "Version 26.3.1 (a) (Build 25D771280a)",
+    "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+    "revision": 4,
+    "seconds": 0.10769891738891602,
+    "sourceSha256": "d6f3d6aeb697b106a1b86436c76e1f3e883c656100e6382bb25887754f094f4e"
+  },
+  "priorVisionUnknownSlotsPreserved": 2,
+  "sources": {
+    "experiments/prose-qr/context-vision-replay/analyze.mjs": "beac7acf050fccf40a2971dedf4c1e88779714f98249f2415762d70af2d25075",
+    "docs/research/prose-qr/phase-48/run-01/manifest.json": "3f2025363a0d862d82b132ba2b22ed1f7583579d959fcab91aa8584abd4bd29e",
+    "docs/research/prose-qr/phase-48/run-01/control/result.json": "5968a72a6e97f1c405eef9e13a0754147f73d6162fc4c5d472296ce5a99857d8",
+    "docs/research/prose-qr/phase-48/run-01/control/attempt.json": "3ef0dd89667f011bf1181297d2dde7e9b091620b73352205066530146ae54266",
+    "docs/research/prose-qr/phase-48/run-01/native/result.json": "cb48e1a3fdc49ff92a5240d5644f5a7782a1a6b111bf44513f57026f3f30a819",
+    "docs/research/prose-qr/phase-48/run-01/native/attempt.json": "96af95ca3d1816bd5d6196d75166c717f5dd1777358a0ccb27456c4e564f6cc8"
+  }
+}

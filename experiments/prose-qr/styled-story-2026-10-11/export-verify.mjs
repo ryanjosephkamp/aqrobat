@@ -1,0 +1,186 @@
+import { chromium } from "playwright";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
+import { gunzipSync } from "node:zlib";
+import { createHash } from "node:crypto";
+import { spawnSync } from "node:child_process";
+import assert from "node:assert/strict";
+const root = resolve("docs/research/prose-qr/styled-story-2026-10-11");
+const out = resolve(root, "export-verification");
+await mkdir(out);
+const sha = (b) => createHash("sha256").update(b).digest("hex");
+const save = (n, b) =>
+  writeFile(
+    resolve(out, n),
+    typeof b === "string" || Buffer.isBuffer(b)
+      ? b
+      : JSON.stringify(b, null, 2) + "\n",
+    { flag: "wx" },
+  );
+const html = gunzipSync(
+  await readFile(resolve(root, "batch-15/story-url.html.gz")),
+);
+const target = resolve(root, "story.html");
+await writeFile(target, html, { flag: "wx" });
+const fallback = gunzipSync(
+  await readFile(resolve(root, "batch-13/final-2.html.gz")),
+);
+await writeFile(resolve(root, "ornamented-story.html"), fallback, {
+  flag: "wx",
+});
+const original = await readFile(resolve(root, "batch-15/story-url.png"));
+const text = await readFile(resolve(root, "batch-15/story-url.txt"), "utf8");
+await save(
+  "source.mjs.txt",
+  await readFile(new URL("export-verify.mjs", import.meta.url)),
+);
+await save("manifest.json", {
+  at: new Date().toISOString(),
+  htmlSha256: sha(html),
+  nativePngSha256: sha(original),
+  textSha256: sha(text),
+  verificationReplayCaptures: 1,
+  immediateRepeatSlots: 1,
+  inspectionCaptures: 1,
+  decoderCalls: 0,
+  viewport: { width: 6000, height: 6000 },
+  detail: { x: 800, y: 800, width: 1040, height: 220 },
+  rule: "Full native replay and exact Selection; visual crop is not a scanning input",
+});
+const browser = await chromium.launch({
+  headless: true,
+  executablePath:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+});
+try {
+  const page = await browser.newPage({
+    viewport: { width: 6000, height: 6000 },
+    deviceScaleFactor: 1,
+  });
+  const network = [],
+    errors = [];
+  page.on("request", (r) => {
+    if (/^https?:/.test(r.url())) network.push(r.url());
+  });
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto(pathToFileURL(target).href);
+  await page.evaluate(() => document.fonts.ready);
+  const selection = await page.locator("#text-body").evaluate((e) => {
+    const s = getSelection(),
+      r = document.createRange();
+    r.selectNodeContents(e);
+    s.removeAllRanges();
+    s.addRange(r);
+    const t = s.toString();
+    s.removeAllRanges();
+    return t;
+  });
+  await save("selection.json", {
+    expectedSha256: sha(text),
+    actualSha256: sha(selection),
+    exact: selection === text,
+    characters: selection.length,
+  });
+  assert.equal(selection, text);
+  const paint = await page.evaluate(() => {
+    const root = document.getElementById("artifact");
+    const all = [root, ...root.querySelectorAll("*")];
+    const bad = [];
+    const colors = new Set();
+    for (const e of all) {
+      const s = getComputedStyle(e);
+      if (
+        ["IMG", "SVG", "CANVAS"].includes(e.tagName) ||
+        s.opacity !== "1" ||
+        s.visibility !== "visible" ||
+        s.display === "none" ||
+        s.filter !== "none" ||
+        s.textShadow !== "none" ||
+        (s.backgroundColor !== "rgba(0, 0, 0, 0)" &&
+          s.backgroundColor !== "rgb(255, 255, 255)")
+      )
+        bad.push({ tag: e.tagName, style: e.getAttribute("style") });
+      if (e.childNodes.length === 1 && e.firstChild.nodeType === Node.TEXT_NODE)
+        colors.add(s.color);
+    }
+    return {
+      elements: all.length,
+      bad,
+      leafColors: [...colors],
+      images: root.querySelectorAll("img,svg,canvas").length,
+      bodyRect: document
+        .getElementById("text-body")
+        .getBoundingClientRect()
+        .toJSON(),
+    };
+  });
+  await save("paint.json", paint);
+  assert.deepEqual(paint.bad, []);
+  assert.equal(paint.images, 0);
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send("DOM.enable");
+  await cdp.send("CSS.enable");
+  const doc = await cdp.send("DOM.getDocument");
+  const node = await cdp.send("DOM.querySelector", {
+    nodeId: doc.root.nodeId,
+    selector: ".word span",
+  });
+  const fonts = (
+    await cdp.send("CSS.getPlatformFontsForNode", { nodeId: node.nodeId })
+  ).fonts;
+  assert(fonts.some((f) => f.familyName === "Impact"));
+  const png = await page.locator("#artifact").screenshot();
+  await save("replay.png", png);
+  const repeat = await page.locator("#artifact").screenshot();
+  await save("repeat.png", repeat);
+  assert(
+    png.equals(original),
+    "Standalone replay differs from primary native PNG",
+  );
+  assert(png.equals(repeat), "Replay repeat differs");
+  const detail = await page.screenshot({
+    clip: { x: 800, y: 800, width: 1040, height: 220 },
+  });
+  await save("text-detail.png", detail);
+  const code =
+    "import cv2,sys,json,numpy as np\na=cv2.imread(sys.argv[1]);b=cv2.imread(sys.argv[2]);print(json.dumps({'equal':bool(np.array_equal(a[800:1020,800:1840],b)),'shape':list(b.shape)}))";
+  const raw = spawnSync(
+    "python3",
+    [
+      "-B",
+      "-c",
+      code,
+      resolve(root, "batch-15/story-url.png"),
+      resolve(out, "text-detail.png"),
+    ],
+    { encoding: "utf8" },
+  );
+  await save("detail-compare.stdout.txt", raw.stdout || "");
+  await save("detail-compare.stderr.txt", raw.stderr || "");
+  assert.equal(raw.status, 0);
+  assert(JSON.parse(raw.stdout).equal);
+  assert.deepEqual(network, []);
+  assert.deepEqual(errors, []);
+  await save("results.json", {
+    at: new Date().toISOString(),
+    browser: browser.version(),
+    htmlSha256: sha(html),
+    nativePngSha256: sha(original),
+    replaySha256: sha(png),
+    repeatSha256: sha(repeat),
+    replayExact: true,
+    repeatExact: true,
+    selectionExact: true,
+    fonts,
+    network,
+    errors,
+    inspectionCropExact: true,
+    decoderCalls: 0,
+  });
+  console.log(
+    "Exact standalone HTML replay, repeat, native face, source Selection and inspection crop verified",
+  );
+} finally {
+  await browser.close();
+}

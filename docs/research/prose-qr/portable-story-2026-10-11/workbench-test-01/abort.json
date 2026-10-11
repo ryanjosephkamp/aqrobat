@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-11T17:36:34.350Z",
+  "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"quiet\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input min=\"4\" max=\"5\" step=\"1\" name=\"quiet\" type=\"number\"/>\u001b[22m\n\u001b[2m    - fill(\"5\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    60 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at apply (/Users/noir/Documents/aqrobat/experiments/prose-qr/portable-story-2026-10-11/workbench-test.mjs:97:20)\n    at async file:///Users/noir/Documents/aqrobat/experiments/prose-qr/portable-story-2026-10-11/workbench-test.mjs:111:5",
+  "completed": [],
+  "uncompleted": [
+    "accepted-replay",
+    "new-prose-complete",
+    "narrow-complete",
+    "broad-complete",
+    "black-complete",
+    "single-copy",
+    "accented-complete",
+    "longer-url-complete"
+  ],
+  "network": [],
+  "errors": []
+}

@@ -1,0 +1,81 @@
+[
+  {
+    "payload": "AQROBAT-TEST",
+    "path": "raw/control-1.png",
+    "pngSha256": "02c0e89e8d63e891d6dd69c7cee950832e8d3d8efe2990a6537d9f19fd7a80b0",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "af4f4e811ea0651ff49a026be72d2e723dfcea64c0871612e8ea640271eac144",
+    "baseline": {
+      "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["AQROBAT-TEST"],
+      "exact": true
+    }
+  },
+  {
+    "payload": "https://example.com/",
+    "path": "raw/control-2.png",
+    "pngSha256": "f9a0da7b664adce2456bd04cbd12af40f4994a230ef57bbe314d52e54746dbaf",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "989387d2119facd3da15cccf200fef9d65ece769ace29a9847c8ef12e46fea3a",
+    "baseline": {
+      "jsQR": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true
+      },
+      "zxing": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true,
+        "results": [
+          {
+            "payload": "https://example.com/",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [
+              104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108,
+              101, 46, 99, 111, 109, 47
+            ]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["https://example.com/"],
+      "exact": true
+    }
+  }
+]

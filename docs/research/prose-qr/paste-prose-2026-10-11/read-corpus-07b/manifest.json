@@ -1,0 +1,100 @@
+{
+  "at": "2026-10-11T20:00:21.721Z",
+  "configPath": "experiments/prose-qr/paste-prose-2026-10-11/read-corpus-07b.json",
+  "configSha256": "f918c8d2b0678f3af05ed649cede5d3484475c9d8e094089ecabc224b607ca0f",
+  "sources": [
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/readers.mjs",
+      "sha256": "2b5af4943b734ea95708b93ef06af0c757b9fc1d0f7f73eefaf069d6e3703eb0"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/vision.swift",
+      "sha256": "ca1dace759ddbcb18547152224609a4f8de1f40d1f4d2c2770a02f249ab6ffbc"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "avenir-dialogue-black",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-dialogue-black.png",
+      "payload": "https://example.com/",
+      "pngSha256": "5f05de54cb82cea6fb40c38212087215987b8c451b2d658049c9b905e419e58c"
+    },
+    {
+      "id": "avenir-dialogue-regular-gray",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-dialogue-regular-gray.png",
+      "payload": "https://example.com/",
+      "pngSha256": "bf18938be6ced7880dc78ef729eccb94ac0d770ef142042e81c8fe93c1fba196"
+    },
+    {
+      "id": "avenir-ordinary-black",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-ordinary-black.png",
+      "payload": "https://example.com/",
+      "pngSha256": "1ef2b3c7d83954f64a745000ecd51f4ef3daeb6868441eceedf9d4e62066c4d2"
+    },
+    {
+      "id": "avenir-ordinary-regular-gray",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-ordinary-regular-gray.png",
+      "payload": "https://example.com/",
+      "pngSha256": "e16a077ce29291fab433f48c20316a3dd5c38e698ac171763c841560eccbf1a4"
+    },
+    {
+      "id": "avenir-accents-black",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-accents-black.png",
+      "payload": "https://example.com/",
+      "pngSha256": "cc56669d752ab45f37a16fe0a6094f73b57e3e99138de92859e9f364aca36b37"
+    },
+    {
+      "id": "avenir-accents-regular-gray",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-accents-regular-gray.png",
+      "payload": "https://example.com/",
+      "pngSha256": "ab7cf1884291485b14e02476e66accb4de631fe3298c8a0e68f23e1064bebbce"
+    },
+    {
+      "id": "avenir-long-single-copy-black",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-long-single-copy-black.png",
+      "payload": "https://example.com/",
+      "pngSha256": "4020e146a62264a2759856a9d3a1cbeaf096dc902c69d616bce6e62ab94738f1"
+    },
+    {
+      "id": "avenir-long-single-copy-regular-gray",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/avenir-long-single-copy-regular-gray.png",
+      "payload": "https://example.com/",
+      "pngSha256": "e404a19426620e54fb962751d151b26e2d1c3068018793ae9f6f5b52e13188cf"
+    },
+    {
+      "id": "impact-dialogue-gray200",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/impact-dialogue-gray200.png",
+      "payload": "https://example.com/",
+      "pngSha256": "37b430017d8070a6ad1ed25bf37c539f6afc965611e8bd194e2cfe4b08f35df5"
+    },
+    {
+      "id": "impact-ordinary-gray200",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/impact-ordinary-gray200.png",
+      "payload": "https://example.com/",
+      "pngSha256": "2cba264e78a139b9049a0bc63115eee58da286dc8df6c9c722537891d5751732"
+    },
+    {
+      "id": "impact-long-words-gray200",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-07/impact-long-words-gray200.png",
+      "payload": "https://example.com/",
+      "pngSha256": "74caad3cdda9f4caa19de014ebbc7e327c1255902d0eab139704d850f76abbe4"
+    }
+  ],
+  "engines": [
+    "zxing",
+    "jsqr",
+    "opencv",
+    "vision"
+  ],
+  "plannedCalls": 44,
+  "inputTransforms": "none",
+  "expectedPayloadNotSuppliedToReader": true
+}

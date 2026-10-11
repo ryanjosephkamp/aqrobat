@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat R1 · saved resource audit</title>
+    <style>
+      body {
+        font:
+          17px/1.6 system-ui,
+          sans-serif;
+        margin: 0;
+        background: #f5f6f2;
+        color: #183137;
+      }
+      main {
+        max-width: 1250px;
+        margin: auto;
+        padding: 32px 20px 70px;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.12;
+      }
+      section {
+        background: white;
+        border: 1px solid #c9d4ce;
+        border-radius: 10px;
+        padding: 22px;
+        margin: 22px 0;
+      }
+      a {
+        color: #006d7a;
+      }
+      .scroll {
+        overflow-x: auto;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 13px;
+      }
+      td,
+      th {
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid #ccd6d0;
+      }
+      code {
+        overflow-wrap: anywhere;
+        font-size: 10px;
+      }
+      .notice {
+        border-left: 5px solid #ae7528;
+      }
+      p {
+        max-width: 100ch;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section aria-labelledby="parent-summary">
+        <h1 id="parent-summary">R1 handback and the next integrated run</h1>
+        <p>
+          <strong
+            >R1 complete. The broader run is prepared, not started.</strong
+          >
+          Seven saved native glyph families and fourteen existing receipts were
+          audited. No new source was rendered and no QR reader was called.
+        </p>
+        <p>
+          None of the seven outline glyphs fits both its inferred seven-module
+          finder envelope and the proposed 33 × 33 pixel layout slot. Hebrew
+          final mem passes the standalone RMS metric but fails the envelope
+          requirements and cannot replace Latin O/o. Lowercase o has no saved
+          receipt. Filled-glyph geometry is unavailable, not a zero measurement.
+        </p>
+        <h2>Where the project stands</h2>
+        <ol>
+          <li>
+            <strong>Finder calibration:</strong> conventional curved controls
+            can decode while failing the existing strict gate; this is limited
+            control evidence.
+          </li>
+          <li>
+            <strong>Native glyph route:</strong> blocked among these seven saved
+            families. New measured native O/o evidence is needed.
+          </li>
+          <li>
+            <strong>Readable exact-text layout:</strong> L2 is a conditional
+            geometric design; its glyph and readability assumptions remain
+            unmeasured.
+          </li>
+          <li>
+            <strong>Full native payload and independent recovery:</strong> not
+            demonstrated.
+          </li>
+          <li>
+            <strong>Portable text transfer, phone and print:</strong> not
+            accepted.
+          </li>
+        </ol>
+        <p>
+          We are still testing feasibility. There is no defensible completion
+          percentage or time-to-success estimate. The audit prevents repeating
+          unsuitable resources; it does not prove impossibility or novelty.
+        </p>
+        <h2>Prepared next run: up to three hours in Goal mode</h2>
+        <p>
+          The launch prompt authorizes actual glyph measurements, layout
+          construction, payload attempts and bounded transfer checks in one
+          integrated run, with routine pivots and shared budget limits. Goal
+          mode records the objective; it does not itself guarantee success or a
+          scanning result. No goal or later phase has started here.
+        </p>
+        <p>
+          <a href="LAUNCH.txt" download
+            >Download the complete Goal-mode launch prompt</a
+          >. The full text is also visible below. Submit it when you want that
+          run to begin.
+        </p>
+        <label for="launch-prompt">Complete launch prompt</label
+        ><!-- prettier-ignore --><textarea id="launch-prompt" readonly rows="26" style="width:100%;box-sizing:border-box;font:14px/1.5 monospace">I authorize a new integrated Aqrobat Goal-mode run, up to THREE HOURS TOTAL from its recorded start, including research, implementation, delegated work, verification and handback. Start only when I submit this prompt. Create one goal: pursue and deliver an honestly sourced, readable, copyable native-prose QR candidate recovering the exact payload https://example.com/ in at least two independent ordinary readers, together with reproducible evidence and an owner scan handoff. If that objective is not achieved by the deadline, I explicitly request that you pause the goal at the deadline and hand back the complete evidence and remaining blockers; do not restart the clock or continue automatically. Complete the goal only if its stated objective is actually achieved. A negative bounded investigation can be valuable while the native-prose goal remains unfinished.
+
+Read AGENTS.md, docs/PROJECT-HANDOFF.md, and the latest resource-audit-2026-10-10/handback.html, results.json, plus the current layout-design RECONSIDERATION.md and reconsideration.json. Verify cwd /Users/noir/Documents/aqrobat, remote, codex/aqrobat-foundation, HEAD, clean/owned dirty state and PR #1 draft. Record the new absolute deadline and preserve all prior clocks, sources, receipts, failures, product/download files, licenses, owner profiles and running jobs. Use fresh run trees. No publication, hosting/sharing changes, package/store submission, merge, unrelated changes, messages to people or separate sidebar chats.
+
+This authorizes an integrated empirical run, not another audit-only turn. Make routine font, native-text style, layout, implementation and phase-transition decisions without asking me again, within this contract. New coherent prose may be authored and frozen as a separate candidate; do not silently change a frozen candidate&#x27;s text or shorten/alter the exact URL. Preserve plain text, styled text, image/matrix decoding, native apps, phone and print evidence separately. No hidden solid modules, duplicate hidden text, QR images behind glyphs, misleading custom glyph substitution, AI/server-dependent generation, or claiming a character mosaic is readable prose. Use installed fonts and existing pinned dependencies; no new downloads or custom fonts in this run.
+
+Keep Astra as coordinator and reconciler. Prefer fresh-context GPT-6.1 Sol High for implementation and experiments; use Xhigh for a difficult design or independent review when justified. Luna may handle mechanical bookkeeping only. Maximum two workers concurrently, and four worker dispatches total; no worker may spawn further agents. Do not duplicate delegated work in the parent. Use blocking waits and automatic handbacks. Prefer Fast only when a real control exists, otherwise report it unverified. No parent-model switching, invented billing savings or token-budget claims. All workers share the same absolute deadline and disjoint output ownership.
+
+Suggested allocation, adjustable within the total: 0-35 minutes establish a native glyph route and actual envelope/pitch evidence; 35-70 minutes implement and measure readable text layout and exact selection; 70-125 minutes attempt honest payload construction and default-reader recovery; 125-155 minutes verify repeatability and bounded text transfer; 155-180 minutes independent evidence review, self-contained report, scan handoff if earned, and Git backup. These are internal checkpoints, not separate permission gates. If a route fails, document it and pivot within the remaining caps. Do not spend time repeating known audits or pretending unused budget requires more work.
+
+Overall caps: 128 small glyph-resource captures, 24 full native candidate captures, 8 conventional-control captures, at most one immediate repeat each; 96 ordinary reader calls across OpenCV, ZXing and jsQR; at most one passive profile per full native/control capture and one declared source diagnostic per small resource; 64 MB new artifacts with lossless compression and complete custody. These are ceilings, not targets. Preregister each finite batch and its full denominator, source hashes, controls, reader order and stop conditions before capture. Do not selectively retry or tune an input within a frozen batch. Stop a batch on wrong payload, source/repeat/parity failure or invalid control; retain incomplete rows. A fresh revised batch is allowed only after documenting the failure, hypothesis change and remaining budget. Never silently repair sealed evidence.
+
+Preserve and report the existing every-record strict native gate and all thresholds unchanged. Do not substitute later locations or source-aligned diagnostics for an ordinary first-selected result. This future approval includes up to FOUR explicitly labeled exploratory payload trials among the 24 native captures even if the strict surrogate gate fails, provided visible-source integrity, exact text selection and input custody pass. This tests whether the conventional-control gate limitation extends to honest native text; a decoder recovery does not retroactively make the strict gate pass. Report strict eligibility and exact ordinary decoding as separate outcomes. No standards-conformance or portable-scanning claim follows from either alone.
+
+Before calling anything an owner scan candidate, require the exact URL from at least two independent ordinary implementations on unchanged input, exact repeat/source custody, honest visible native text, and exact local paragraph/full-document text checks with a preregistered separator policy. Provide the actual source and PNG plus explicit strict-gate status. Phone/physical-print acceptance remains owner evidence until observed. Test transfer only in fresh task-owned surfaces with reversible custody; preserve user clipboard content and documents, or leave that lane untested. Close only task-created processes and documents.
+
+Report meaningful milestone changes in chat and a local HTML progress record: current best evidence, what changed, what failed, remaining blockers, budget used and next action. During long worker runs request occasional substantive milestone handbacks rather than busy polling or duplicate parent work. Do not invent a completion percentage, success probability, ETA or novelty claim. Use the ladder: native glyph/finder evidence; readable exact-text layout; full payload construction; independent exact recovery; repeat/transfer evidence; owner phone/print acceptance. Stop early for an adequately evidenced scan candidate or when the authorized finite routes are exhausted with no justified next experiment.
+
+Deliver one complete self-contained HTML handback with the roadmap status, every attempted/rejected/unattempted batch, artifacts, exact source/reader versions, checks, elapsed time and honest limits. Preserve all failures. Run relevant product checks only if product code changed; run research-harness, custody and formatting checks as appropriate. Commit/push only this authorized work on the existing branch, leave PR #1 draft and npm private. Any work outside these bounds remains a proposal. No further phase, automation or new allowance starts automatically after this run.
+</textarea>
+        <h2>Review and preservation</h2>
+        <p>
+          One fresh GPT-6.1 Sol High worker performed the audit; the parent
+          waited for its automatic handback, then checked the final inventory
+          and frozen source hashes. The worker reports 383 static assertions.
+          Fast mode and billing savings were not measured. A first parent
+          inventory assertion failed without naming a file; the direct
+          verification subsequently matched all entries without file changes.
+          Its specific cause remains unresolved.
+        </p>
+        <p>
+          <a href="parent-verification.json">Parent verification</a> ·
+          <a href="final-stat.json">Worker final receipt</a> ·
+          <a href="index.html">Preserved worker report</a>
+        </p>
+        <p>The preserved detailed R1 report follows.</p>
+      </section>
+      <p>Approved R1 · saved evidence only · 10 October 2026</p>
+      <h1>Seven families audited.<br />No qualifying O/o supplied.</h1>
+      <section class="notice">
+        <h2>Where we are</h2>
+        <p>
+          This audit resolves the provenance and saved envelope fit of seven
+          glyph families and fourteen filled/outline receipts. Every saved
+          outline exceeds its own nominal seven-module box and the fixed 33 × 33
+          L2 box. It cannot establish a replacement O/o, render L2, or prove
+          native finder eligibility. Known native finder gate passes and native
+          payload proposals remain zero. L2 is a conditional layout, not a
+          rendered candidate. Exact payload construction and portable
+          copying/scanning remain substantial unproven milestones. These
+          arithmetic results are not scanner-ready progress or a general
+          impossibility proof.
+        </p>
+      </section>
+      <section>
+        <h2>Frozen denominator and provenance</h2>
+        <p>
+          Exactly seven saved glyph families, seven filled and seven outline
+          receipts. All fourteen PNG hashes match. The table reports
+          centroid-based excess; exact rounded-center alternatives, separate
+          filled/outline raw records, hashes and JSON keys are retained in the
+          linked ledger and results.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Family / glyph</th>
+                <th>Filled provenance</th>
+                <th>Outline provenance</th>
+                <th>Pitch; horizontal / vertical</th>
+                <th>Outward excess L/T/R/B px</th>
+                <th>Worst RMS</th>
+                <th>Disposition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>din-o<br />DINAlternate-Bold · O</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/din-o/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/din-o/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >f0ecbccdfada42b9b3be22bc8ee0b08a8cdfa131891ec6e38c895d6fc13095fd</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/din-o/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/din-o/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >83ef019d3866ad992a3d17019febbc428dde641028ff8a7011b7d5f55175bc50</code
+                  >
+                </td>
+                <td>5.142857; 4.142857 / 6.142857</td>
+                <td>-1.000000, 6.855297, -1.000000, 6.144703</td>
+                <td>0.863539448</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+              <tr>
+                <td>copperplate-o<br />Copperplate-Bold · O</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/copperplate-o/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a
+                    href="../astra-2026-10-10/resources-01/copperplate-o/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >32445fb2a1b0fed46a24ec97ef6e6634058754e69bf56cea96a81ce73f9445c6</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/copperplate-o/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a
+                    href="../astra-2026-10-10/resources-01/copperplate-o/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >760fd2d922bdb3000d3292b968d391693d8559429e5723f434d05b42b5563de5</code
+                  >
+                </td>
+                <td>4.714286; 5.142857 / 4.285714</td>
+                <td>5.082160, 2.274648, 4.917840, 1.725352</td>
+                <td>0.361324723</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+              <tr>
+                <td>gill-o<br />GillSans-UltraBold · O</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/gill-o/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/gill-o/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >74a54e4c3c37c9155d50794b91bb85a4fe70ba1bd285d6574a7b17db01eb9df0</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/gill-o/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/gill-o/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >f83d4a9dabbb309f74d850de90cbffad7716d0af853fa83275805e80bb1e49b6</code
+                  >
+                </td>
+                <td>6.500000; 6.428571 / 6.571429</td>
+                <td>2.974138, 1.663793, 2.525862, 3.836207</td>
+                <td>1.389768610</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+              <tr>
+                <td>arial-a<br />Arial-BoldMT · a</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/arial-a/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/arial-a/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >02204e4082885ee9aafcfb3333144cd09c9fb84d0f80c269d5bdbe02b9a426d0</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/arial-a/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/arial-a/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >0cfe4da1ccf26ebffbcf26728e3169c4092f4e4422f17750b36ad8fb75f80f0c</code
+                  >
+                </td>
+                <td>3.000000; 3.714286 / 2.285714</td>
+                <td>5.067568, 14.851351, 7.932432, 1.148649</td>
+                <td>0.730296743</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+              <tr>
+                <td>arial-g<br />Arial-BoldMT · g</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/arial-g/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/arial-g/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >35fdd6145990af24b70b32abf0cba523e6a2c4b8d0004a61c7349bcad5fd4868</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-01/arial-g/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-01/arial-g/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >f6163d19ee17ef3aae0d94a42eb7e8f2ea9a343b6b9b5d911248bc6f35a186d9</code
+                  >
+                </td>
+                <td>4.214286; 4.142857 / 4.285714</td>
+                <td>2.683121, 3.625796, 2.816879, 16.874204</td>
+                <td>0.381226092</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+              <tr>
+                <td>silom-p<br />Silom · P</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-02/silom-p/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-02/silom-p/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >d2b9871b0cc85dadb94d2ec17fe23c4fc6ff64677f005517bacb8ac5ae4ab538</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-02/silom-p/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a href="../astra-2026-10-10/resources-02/silom-p/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >e032679c2fb02db3edd30caf261cba9fd45779fc64a3803a7ee7abbba4cda5b2</code
+                  >
+                </td>
+                <td>3.642857; 4.000000 / 3.285714</td>
+                <td>5.057692, 1.891026, 4.442308, 23.608974</td>
+                <td>0.689202438</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+              <tr>
+                <td>hebrew-mem<br />ArialHebrew-Bold · ם</td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-02/hebrew-mem/result.json#/renders/0"
+                    >filled receipt</a
+                  >
+                  ·
+                  <a
+                    href="../astra-2026-10-10/resources-02/hebrew-mem/filled.png"
+                    >PNG</a
+                  ><br /><code
+                    >9a6a24f1d0ededf4bed833e33b6db0dbe0d435c4974dd606152f46c55deeac64</code
+                  >
+                </td>
+                <td>
+                  <a
+                    href="../astra-2026-10-10/resources-02/hebrew-mem/result.json#/renders/1"
+                    >outline receipt</a
+                  >
+                  ·
+                  <a
+                    href="../astra-2026-10-10/resources-02/hebrew-mem/outline.png"
+                    >PNG</a
+                  ><br /><code
+                    >3e7c587f360ca7610f85f3b22fddafc8bc4625072d54b8d423c90c6660af10fe</code
+                  >
+                </td>
+                <td>4.071429; 3.857143 / 4.285714</td>
+                <td>3.043233, 3.539474, 2.456767, 3.960526</td>
+                <td>0.298261630</td>
+                <td>BLOCKED as saved; variants UNKNOWN</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>What the arithmetic means</h2>
+        <p>
+          Pitch is the recorded mean of horizontal and vertical five-run scales;
+          each axis scale is its run sum divided by seven. Separate axis scales
+          preserve anisotropy. Primary offsets use the unrounded selected
+          contour centroid; alternate results use the rounded model sample
+          point. inkBounds contains inclusive min/max grayscale&lt;128 sample
+          coordinates, not a counter box, Range advance box, TextMetrics
+          estimate or scanline extent. Signed outward excess is positive outside
+          the nominal boundary: left=cx−3.5p−xmin, top=cy−3.5p−ymin,
+          right=xmax−cx−3.5p, bottom=ymax−cy−3.5p. Half-pixel support adds 0.5
+          to every excess under integer sample-center convention; gray&gt;=128
+          antialias fringe remains UNKNOWN. No pixel was recounted. Envelope
+          containment is necessary for the proposed honest placement, never
+          sufficient for native finder or payload acceptance.
+        </p>
+        <p>
+          Intended first-selected geometry; exactly three selected points; each
+          balance/span/stability &gt;=0.8; nonempty matching scored records with
+          EVERY record having four complete axes and worst RMS &lt;=0.35; four
+          complete true axes with worst RMS &lt;=0.35.
+        </p>
+        <p>
+          All saved outline envelopes fail their own nominal box and the fixed
+          33 × 33 L2 box under both center definitions. Filled models are null,
+          so their pitch/native status is UNKNOWN. Six outline models fail
+          standalone RMS 0.35. Arial Hebrew ם alone passes the isolated
+          four-axis metric, but fails envelope fit and cannot replace the exact
+          Latin prose. Copperplate O remains a context calibration reference;
+          unchanged saved glyphs are blocked, and new variants are unknown.
+          Nothing here lowers thresholds or licenses clipping, hidden modules or
+          changed text.
+        </p>
+        <p>
+          All glyphs are 64px. Results retain actual font/style provenance:
+          stroke 4 for resources-01, Silom 4.5 and Arial Hebrew 4.25 after saved
+          stem adjustment. Horizontal and vertical scanline pitches differ;
+          their mean must not be called a measured isotropic grid.
+        </p>
+      </section>
+      <section>
+        <h2>Text and native milestones</h2>
+        <p>
+          Context-04 has exact local selections for Once/Our/Often and recorded
+          initial-next gaps of 2.333274841, 2.298118591 and 1.313743591px. These
+          belong to Copperplate uppercase O with Arial body. No other family
+          gains first-word metrics from them. All seven resources lack lowercase
+          o; isolated glyphs have no paragraph/copy-order evidence. dom.text is
+          not a whole-document Selection or clipboard round trip.
+        </p>
+        <p>
+          Both retained context-04 branches fail the unchanged gate. The
+          inverted branch selects intended geometry, but balances 0.266667 and
+          spans 0.282828 fail, as does upper-right true RMS 0.361324723. Every
+          scored record is required; passing scored records do not remove these
+          independent failures. Conventional control recovery remains separate.
+          Plain text, styled text, images, matrix decoding, native apps, phone
+          and physical print remain distinct evidence lanes.
+        </p>
+        <p>
+          L1 remains rejected. L2 remains conditional: no rendered candidate,
+          honest native O/o pair, exact payload, portable copying or scanning
+          acceptance has been established. No unrelated font advances or
+          body-only coupling counts are transferred.
+        </p>
+      </section>
+      <section>
+        <h2>Highest-value remaining evidence</h2>
+        <p>
+          Within a future separately authorized integrated run, establish an
+          actual exact-text native O/o pair with honest whole-glyph ink
+          envelopes, pitch/center calibration and the unchanged every-record
+          native gate, then same-font first-word/paragraph selection and reading
+          order. Existing receipts cannot supply missing lowercase o.
+          Advance/baseline/reflow, exact payload construction, portable copying
+          and ordinary/phone/print scanning remain substantial unproven
+          milestones.
+        </p>
+        <p>
+          The parent prepares one integrated future Goal-mode run prompt.
+          Preparation does not activate it. This audit creates no ongoing goal
+          and executes no later phase.
+        </p>
+      </section>
+      <section>
+        <h2>Audit custody and checks</h2>
+        <p>
+          Saved receipts were preregistered and hashed before arithmetic.
+          Sources, parent REQUEST/START, baseline branch, draft PR, product and
+          running jobs remain preserved. No experimental or Git/PR mutation
+          occurred. JSON, local links, source hashes, deterministic arithmetic
+          and byte cap receive static checks. Only document formatting and npm
+          run format:check run; product/build/browser/extension/native-text
+          suites are unrun by scope, not unavailable. No live report rendering
+          occurred.
+        </p>
+        <p>
+          <a href="README.md">README</a> ·
+          <a href="frozen-ledger.json">Frozen ledger</a> ·
+          <a href="results.json">Exact results and raw records</a> ·
+          <a href="verification.json">Verification</a> ·
+          <a href="worker-receipt.json">Worker receipt</a> ·
+          <a href="../layout-design-2026-10-10/reconsideration.json"
+            >Conditional L2 source</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

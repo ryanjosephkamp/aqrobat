@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · October 10 research checkpoint</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f4f2ec;
+        --paper: #fffefa;
+        --ink: #242e38;
+        --muted: #5b6470;
+        --line: #d7d9d7;
+        --accent: #215f69;
+        --soft: #e5efec;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 28px 18px 60px;
+      }
+      h1 {
+        font-size: clamp(30px, 5vw, 50px);
+        line-height: 1.14;
+        letter-spacing: -0.025em;
+      }
+      h2 {
+        font-size: 23px;
+        line-height: 1.3;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      a {
+        color: var(--accent);
+        overflow-wrap: anywhere;
+      }
+      p {
+        margin: 1em 0;
+      }
+      .eyebrow {
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 750;
+      }
+      .card {
+        padding: 24px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        margin: 20px 0;
+      }
+      .status {
+        display: inline-block;
+        padding: 5px 11px;
+        background: var(--soft);
+        border-radius: 7px;
+        font-weight: 700;
+      }
+      .muted,
+      figcaption {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .stat {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+      }
+      .stat b {
+        display: block;
+        font-size: 28px;
+      }
+      .scroll {
+        max-width: 100%;
+        overflow: auto;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        background: white;
+      }
+      figure {
+        margin: 20px 0;
+      }
+      figure.native img {
+        max-width: none;
+        width: 720px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 15px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        font-weight: 650;
+      }
+      textarea {
+        display: block;
+        resize: vertical;
+        width: 100%;
+        min-height: 340px;
+        padding: 14px;
+        font:
+          14px/1.5 ui-monospace,
+          monospace;
+        background: var(--bg);
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+      button {
+        padding: 11px 16px;
+        font: inherit;
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        background: var(--soft);
+        color: var(--ink);
+        cursor: pointer;
+        margin-top: 12px;
+      }
+      code {
+        font-size: 0.92em;
+        overflow-wrap: anywhere;
+      }
+      li {
+        margin: 8px 0;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .pair img {
+        max-width: 100%;
+      }
+      @media (max-width: 600px) {
+        .stats,
+        .pair {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 18px;
+        }
+        main {
+          padding: 18px 14px 50px;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121c23;
+          --paper: #1a2730;
+          --ink: #e7efef;
+          --muted: #b2c2c8;
+          --line: #3b4a51;
+          --accent: #9dd9df;
+          --soft: #263d41;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">Aqrobat research · October 10, 2026</div>
+      <h1>Clear letters. A stable outline.<br />No decoded link yet.</h1>
+      <p class="status">Prose QR remains unsolved</p>
+      <p>
+        The useful new result is that an ordinary reader outside ZXing finds the
+        intended QR outline in the full native text page. Two separate reruns of
+        that same implementation return identical corners. The full URL
+        confirmation has no exact recovery in the completed ordinary reader
+        checks; any unknown profile outcomes are listed below. This is a
+        research checkpoint, with no new phone or print acceptance.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>11 / 11</b>Native renderings repeat exactly</div>
+        <div class="stat"><b>0 / 5</b>Exact completed native URL returns</div>
+        <div class="stat"><b>0</b>New phone tests</div>
+      </div>
+      <section class="card">
+        <h2>What changed</h2>
+        <p>
+          The source model chooses regular black letters whose ink density stays
+          more consistent across the native word period. The selected carriers
+          are <code>OMW</code> and <code>iuI</code>. Every letter is visible.
+          Both words use the same Monaco font, 16-pixel size, 20-pixel leading
+          and regular weight, with normal spaces and one fixed positive letter
+          spacing.
+        </p>
+        <p>
+          Sixty native glyph-position measurements support 8,000 preserved
+          three-letter source models. Those are small mathematical source
+          proposals, not 8,000 rendered QR experiments. Two selected native word
+          measurements validate the model. The eventual finder-only page uses
+          full text context and slightly smaller finder centers. Because those
+          factors changed together, the result does not identify one causal
+          winner.
+        </p>
+        <figure class="native">
+          <div class="scroll">
+            <img
+              src="data:image/png;base64,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"
+              width="720"
+              height="168"
+              alt="Actual native-size excerpt with clearly visible regular OMW letters and normal word spaces"
+            />
+          </div>
+          <figcaption>
+            Actual saved native excerpt at 1:1. Scroll sideways on a phone. This
+            excerpt is not a complete QR code or scan candidate.
+          </figcaption>
+        </figure>
+        <p>
+          The letters are distinguishable locally, but the carriers are
+          fabricated words. This is still a 10,240 × 10,240-pixel text page with
+          511 rows. It does not yet read like natural prose or fit a normal
+          printed page at a useful letter size. Shrinking it until the text is
+          unreadable would not satisfy the goal.
+        </p>
+      </section>
+      <section class="card">
+        <h2>What the ordinary readers returned</h2>
+        <p>
+          The single encoded payload is exactly
+          <code>https://example.com/</code>. The unchanged encoder requests ECC
+          M and ordinarily boosts it to Q, version 2. No link was shortened or
+          substituted.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Full unchanged native image</th>
+                <th>Returned result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>OpenCV default</th>
+                <td>No exact URL</td>
+              </tr>
+              <tr>
+                <th>ZXing default</th>
+                <td>No exact URL</td>
+              </tr>
+              <tr>
+                <th>jsQR unchanged baseline</th>
+                <td>No exact URL</td>
+              </tr>
+              <tr>
+                <th>ZBar default retained wrapper</th>
+                <td>No exact URL</td>
+              </tr>
+              <tr>
+                <th>Apple Vision default — fresh per-input profile</th>
+                <td>No exact URL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          5 of five planned conventional control checks recover the exact URL.
+          Missing or errored profiles remain unknown, not failures. OpenCV
+          returns the intended outline for the full native payload but no
+          decoded string. The first whole-profile Vision attempt timed out with
+          both slots unknown; the fresh per-input profile is shown here. Both
+          attempts are retained. Repeated OpenCV calls are one implementation;
+          ZXing's error-reporting profile is a separate diagnostic, not another
+          ordinary reader.
+        </p>
+        <p>
+          Full-resolution jsQR selected horizontal, vertical and both diagonal
+          finder runs still fail the strict native gate. Their numerical traces
+          remain preserved losslessly. The ordinary outline result does not turn
+          those failed native gates into passes.
+        </p>
+      </section>
+      <section class="card">
+        <h2>Why a clean diagnostic picture is insufficient</h2>
+        <p>
+          For the saved native payload, the full-resolution threshold replica
+          disagrees with 304 of 625 nominal centers; the 512-pixel
+          initialization replica disagrees with 0. The conventional control
+          differs at 0 and 0 centers respectively. This suggests a scale-related
+          gap, but neither grid is a decoder return or proof of the precise
+          internal failure.
+        </p>
+        <p>
+          A post-return initialization replica is useful for seeing aggregate
+          density, but it is never passed to a decoder. Likewise,
+          expected-center samples and source-aligned cell counts cannot
+          establish recovery. The actual native input, native stroke traces,
+          ordinary returned outline, sampled error-reporting symbols and
+          replicas remain distinct evidence.
+        </p>
+        <p class="muted">
+          Implementation reference:
+          <a
+            href="https://raw.githubusercontent.com/opencv/opencv/4.13.0/modules/objdetect/src/qrcode.cpp"
+            >Pinned OpenCV 4.13 QR source</a
+          >, saved with its hash in phase 32. The replicas model code paths;
+          they are not captured internal OpenCV traces or proof of the precise
+          failing stage.
+        </p>
+      </section>
+      <section class="card">
+        <h2>Preservation and limits</h2>
+        <p>
+          All prior phases, original prototypes and product downloads are
+          preserved. This session changes research files only. npm remains
+          private and unpublished;
+          <a href="https://github.com/ryanjosephkamp/aqrobat/pull/1">PR #1</a>
+          remains open and draft. Existing Pages automation follows that branch,
+          so backup pushes use its existing rebuild. No settings change or
+          manual deployment was made.
+        </p>
+        <p>
+          The record includes one original source-producer error, three
+          trace-save reserve aborts, one unattempted native slot and every
+          negative result. Later read-only traces do not erase the original
+          aborted runs. The Impact experiment stays separate from regular
+          body-font text, and earlier styled, bold and uniform-black ASCII
+          techniques remain separate deliverables.
+        </p>
+        <p>
+          <code>npm test</code> passes all 18 tests. Product browser,
+          installed-extension, Gmail, native clipboard, owner phone and
+          physical-print checks were not rerun for this unchanged product. See
+          the verification and custody receipts for exact file counts, hashes
+          and caps.
+        </p>
+      </section>
+      <section class="card">
+        <h2>What remains</h2>
+        <p>
+          Exact payload recovery from readable unchanged native output by
+          independent ordinary readers remains the next acceptance gate,
+          followed by phone testing. Natural sentences, normal page size and
+          portable copy/paste fidelity are still separate unresolved
+          requirements.
+        </p>
+        <p>
+          Continue with one small preregistered native-letter objective at the
+          decoding scale while retaining the stable full-context outline as a
+          baseline. Do not start another payload sweep from the clean replica or
+          isolated finder samples. There is no useful manual scanning request
+          for this failed native payload.
+        </p>
+      </section>
+      <section class="card">
+        <h2>Resume safely</h2>
+        <p>
+          All experiments are stopped at handback. The checkpoint includes the
+          exact next constraints. Copy this prompt, or select it manually if
+          browser clipboard access is unavailable.
+        </p>
+        <textarea id="prompt" readonly aria-label="Continuation prompt">
+Continue prose QR research only in /Users/noir/Documents/aqrobat, branch
+codex/aqrobat-foundation and existing OPEN draft PR #1. Read AGENTS.md and
+docs/research/prose-qr/session-2026-10-10/CHECKPOINT.md, README.md, analysis.json,
+verification-final.json, custody.json, HARNESS-NOTES.md and the phase 43–48 plans,
+results and custody receipts. Verify branch/remote/HEAD/dirty state, draft PR,
+exact executed source, prior custody and product download hashes before edits.
+Preserve every prior phase/prototype, product/extension, Splashery, PDF archive,
+owner profile, other task and running job. npm stays private/unpublished. No
+agents/chats/new host/migration/merge/release/store or messages.
+
+The prose goal remains unsolved. The new full native URL fails all five completed
+ordinary implementations while five conventional controls pass. Preserve the
+first Vision timeout's two unknown slots separately from its fresh complete
+profile. Stable ordinary OpenCV full-context outlines and perfect small-init
+center samples do not establish payload recovery. Native selected jsQR H/V/both
+diagonal structure still fails, and the full-resolution threshold replica misses
+304/625 centers. Fabricated words and a 10,240-square page do not establish
+natural prose, normal-page usability or owner/portable acceptance. No new phone
+results; do not present this failed native image as a successful phone candidate.
+
+Start a fresh modest phase with exclusive directories and an explicit file cap.
+Preregister one small native-letter objective that addresses actual decoding-scale
+structure while retaining stable intended geometry in full text context and a
+clear legibility rejection. Keep actual selected H/V/both diagonal runs and
+balanced spans separate from source-aligned samples and threshold replicas.
+Use an ordinary reader outside ZXing; do not count profiles/repeats as independent
+engines. No full-QR sweep based merely on isolated/diagnostic finder passes.
+Geometry is only for source rendering and post-return diagnosis, never repaired
+pixels, forced corners/extraction or acceptance-reader tuning. No hidden modules,
+invisible letters or unreadable raster compression as a solution. Keep styled,
+bold, intrinsically heavy-font and uniform-black ASCII lanes separate. Preserve
+all results/rejections/aborts/errors, source versions and exact denominators.
+Never reuse sealed output directories. Back up milestones on the same branch.
+Continue toward readable unchanged native output with independent ordinary exact
+payload recovery, then phone acceptance. Do not claim completion at a time boundary.</textarea
+        ><button id="copy" type="button">Copy continuation prompt</button>
+        <p id="copy-status" role="status" class="muted">
+          The selectable text works without clipboard permission.
+        </p>
+      </section>
+      <details class="card">
+        <summary>Phase record and evidence links</summary>
+        <div class="scroll">
+          <table>
+            <tbody>
+              <tr>
+                <th><a href="../phase-32/README.md">32</a></th>
+                <td>Continuous context and source guards</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-33/README.md">33</a></th>
+                <td>Staggered word spaces</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-34/README.md">34</a></th>
+                <td>Saved trace replay</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-35/README.md">35</a></th>
+                <td>Denser Monaco words</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-36/README.md">36</a></th>
+                <td>Intrinsically heavy Impact — separate lane</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-37/README.md">37</a></th>
+                <td>Lossless numerical trace storage</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-38/README.md">38</a></th>
+                <td>Page / row-period alignment</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-39/README.md">39</a></th>
+                <td>Saved Impact trace replay</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-40/README.md">40</a></th>
+                <td>Ordinary reader controls</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-41/README.md">41</a></th>
+                <td>Native word-period model</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-42/README.md">42</a></th>
+                <td>Flat cell-density words</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-43/README.md">43</a></th>
+                <td>Glyph-position source model and full context</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-44/README.md">44</a></th>
+                <td>Ordinary outline repeat</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-45/README.md">45</a></th>
+                <td>One full URL confirmation</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-46/README.md">46</a></th>
+                <td>Two more ordinary reader implementations</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-47/README.md">47</a></th>
+                <td>Read-only scale diagnosis</td>
+              </tr>
+              <tr>
+                <th><a href="../phase-48/README.md">48</a></th>
+                <td>Fresh complete Vision profile after harness timeout</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <a href="analysis.json">Session analysis</a> ·
+          <a href="verification-final.json">Verification</a> ·
+          <a href="custody.json">Custody</a> ·
+          <a href="HARNESS-NOTES.md">Harness notes</a> ·
+          <a href="CHECKPOINT.md">Checkpoint</a>
+        </p>
+        <p>
+          <a href="../phase-45/run-01/native.png"
+            >Failed full native input, preserved for research</a
+          >
+          · <a href="../phase-45/run-01/native.txt">Exact source text</a> ·
+          <a href="../phase-45/run-01/native.html.gz"
+            >Saved source HTML, gzip</a
+          >
+        </p>
+      </details>
+    </main>
+    <script>
+      document.querySelector("#copy").addEventListener("click", async () => {
+        const p = document.querySelector("#prompt"),
+          s = document.querySelector("#copy-status");
+        try {
+          await navigator.clipboard.writeText(p.value);
+          s.textContent = "Copied.";
+        } catch {
+          p.focus();
+          p.select();
+          s.textContent = "Prompt selected. Use your browser’s Copy command.";
+        }
+      });
+    </script>
+  </body>
+</html>

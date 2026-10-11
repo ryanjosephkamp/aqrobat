@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-11T04:55:58.047Z",
+  "inputs": [
+    {
+      "id": "band-023",
+      "path": "docs/research/prose-qr/phase-02/batch-02/raw/band-023-2233.png",
+      "expected": "AQROBAT-TEST",
+      "engines": [
+        "zxing",
+        "jsqr",
+        "opencv",
+        "configured-baseline"
+      ]
+    },
+    {
+      "id": "phase-14",
+      "path": "docs/research/prose-qr/phase-14/run-01/native.png",
+      "expected": "https://example.com/",
+      "engines": [
+        "zxing",
+        "jsqr",
+        "opencv"
+      ]
+    },
+    {
+      "id": "conventional",
+      "path": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/canonical-control/input.png",
+      "expected": "https://example.com/",
+      "engines": [
+        "zxing",
+        "jsqr",
+        "opencv"
+      ]
+    }
+  ],
+  "sources": {
+    "reader.mjs": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050",
+    "opencv.py": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053",
+    "replay.mjs": "be65237528ecd949209d0f9a1ef9599463f791da1a3da65dcdf52d923a4374bd"
+  },
+  "calls": 10,
+  "freshCaptures": 0,
+  "head": "a7ceea7345cbac6d1dec05a9042510508a3dc07a"
+}

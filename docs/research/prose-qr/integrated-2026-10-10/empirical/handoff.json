@@ -1,0 +1,474 @@
+{
+  "schema": "aqrobat.integrated.empirical-handoff.v1",
+  "stage": "final-empirical-handback-experiments-stopped",
+  "updatedAtUtc": "2026-10-10T22:27:51.782639+00:00",
+  "goalAchieved": false,
+  "nativeCandidateToOwner": null,
+  "payload": "https://example.com/",
+  "checkout": {
+    "cwd": "/Users/noir/Documents/aqrobat",
+    "branch": "codex/aqrobat-foundation",
+    "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+    "head": "a5cd4c2cbc6a285b7922e7d4c031eef750eb4222",
+    "gitMutations": 0,
+    "productChanges": 0
+  },
+  "paths": {
+    "report": "docs/research/prose-qr/integrated-2026-10-10/empirical/REPORT.html",
+    "verification": "docs/research/prose-qr/integrated-2026-10-10/empirical/verification-04.json",
+    "sourceCustody": "docs/research/prose-qr/integrated-2026-10-10/empirical/source-custody/manifest.json",
+    "budget": "docs/research/prose-qr/integrated-2026-10-10/empirical/budget.json",
+    "latestRunner": "experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v7.mjs",
+    "designHandback": "docs/research/prose-qr/integrated-2026-10-10/design/RESULTS.md",
+    "nativeV10": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/native-projection",
+    "nativeV5": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection",
+    "latestVerifier": "experiments/prose-qr/integrated-2026-10-10/empirical/verify-v4.mjs",
+    "resourceAnalysis": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03-04-analysis.json",
+    "nativeUnicode": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native",
+    "readerAccounting": "docs/research/prose-qr/integrated-2026-10-10/empirical/reader-accounting.json",
+    "staticChecks": "docs/research/prose-qr/integrated-2026-10-10/empirical/static-checks-03.json",
+    "batchSummary": "docs/research/prose-qr/integrated-2026-10-10/empirical/batch-summary.json",
+    "batchCSV": "docs/research/prose-qr/integrated-2026-10-10/empirical/batch-summary.csv",
+    "runtimeProvenance": "docs/research/prose-qr/integrated-2026-10-10/empirical/runtime-provenance.json",
+    "finalResourceAnalysis": "docs/research/prose-qr/integrated-2026-10-10/empirical/final-resource-analysis.json",
+    "finalStop": "docs/research/prose-qr/integrated-2026-10-10/empirical/final-stop.json",
+    "finalChecks": "docs/research/prose-qr/integrated-2026-10-10/empirical/final-checks.json",
+    "mechanismHandback": "docs/research/prose-qr/integrated-2026-10-10/mechanism/RESULTS.md",
+    "running": "docs/research/prose-qr/integrated-2026-10-10/empirical/RUNNING.md",
+    "formatSourceExceptions": "docs/research/prose-qr/integrated-2026-10-10/empirical/format-locked-final.json",
+    "formatEvidenceExceptions": "docs/research/prose-qr/integrated-2026-10-10/empirical/format-docs-final.json"
+  },
+  "actual": {
+    "glyphResources": 87,
+    "nativeCaptures": 9,
+    "controlCaptures": 8,
+    "ordinaryCalls": 37,
+    "profiles": 11,
+    "repeats": 17,
+    "payloadTrials": 3,
+    "exactRepeats": 16,
+    "unattemptedReaderSlots": 23,
+    "unattemptedFullCaptures": 6,
+    "unattemptedResources": 19,
+    "nativeExactRecoveries": 0,
+    "nativeStrictPasses": 0,
+    "failedResourceSetupBeforeCapture": 1
+  },
+  "frozenUnattempted": {
+    "resources": 19,
+    "fullCaptures": 6,
+    "ordinarySlots": 23,
+    "passiveProfiles": 9,
+    "failedResourceSetupBeforeCapture": 1,
+    "exploratoryTrials": 1
+  },
+  "allocation": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/allocation-02.json",
+    "sha256": "9955bf0b3ed27faaf46b2204867aeaead471644eb8c38a1b05c1a25cfb05c513",
+    "ceilings": {
+      "glyphResources": 128,
+      "nativeCaptures": 24,
+      "controlCaptures": 8,
+      "ordinaryReaderCalls": 96,
+      "exploratoryGateFailedPayloadTrials": 4,
+      "bytes": 48000000
+    },
+    "remaining": {
+      "glyphResources": 41,
+      "nativeCaptures": 15,
+      "controlCaptures": 0,
+      "ordinaryCalls": 59,
+      "exploratoryTrials": 1,
+      "conservativeInclusiveCalls": 21,
+      "artifactBytes": 16517744
+    }
+  },
+  "bestRoute": "Three honest native canonical projections were actually rendered/read with exact source/paragraph/full-documentSelection/native-font/repeat custody; no projection recoveredURL and no native passedstrict. V2continuous Unicodeprose had0/464darkquiet samples but severe actual function/data defects and first-selected distractors. Final fullsize square failedsourceRMS and gray228body was visibly too faint; worker and parent rejected. No candidate-to-owner; no generic impossibility claim.",
+  "measurements": {
+    "V10": {
+      "groups": 56,
+      "toggleCells": 57,
+      "quietDark": 340,
+      "quietTotal": 976,
+      "literalPredictionExact": 3249,
+      "readersExact": 0,
+      "controlExactReaders": 3,
+      "strictPass": false
+    },
+    "V5": {
+      "groups": 23,
+      "toggleCells": 30,
+      "quietDark": 203,
+      "quietTotal": 656,
+      "literalPredictionExact": 1369,
+      "readersExact": 0,
+      "controlExactReaders": 3,
+      "strictPass": false,
+      "alignmentSelected": [241, 261],
+      "alignmentIntended": [262.25, 262.25]
+    },
+    "UnicodeOrnament": {
+      "codePoint": "U+25C9",
+      "installedFont": "ArialUnicodeMS",
+      "cssFontSize": 192,
+      "deviceScaleFactor": 1,
+      "inkPixels": [83, 83],
+      "sourcePitch": 11.857142857142858,
+      "sourceAxesComplete": 4,
+      "sourceWorstRMS": 0.303365742,
+      "strictEligibility": "untested; source diagnostic only",
+      "readersAttempted": 0
+    },
+    "ContinuousContrast": {
+      "font": "Menlo-Bold",
+      "cssFontSize": 16,
+      "cssLineHeight": 1,
+      "charAdvance": 9.6328125,
+      "rowTopStep": 19.265625,
+      "outputPixels": [640, 128],
+      "deviceScaleFactor": 1,
+      "adaptiveGrayLeakageAtSelectedPhase": {
+        "gray153": 14,
+        "gray180": 9,
+        "gray204": 3,
+        "denominator": 26
+      },
+      "readability": "gray153 source visibly readable in worker inspection; gray204 fainter and requires scrutiny; no owner acceptance",
+      "candidateToOwner": false
+    },
+    "V2Unicode": {
+      "version": 2,
+      "ecc": "Q",
+      "mask": 1,
+      "outputPixels": [1272, 1272],
+      "deviceScaleFactor": 1,
+      "cssBodyFontSize": 16,
+      "cssBodyFont": "Menlo-Bold",
+      "cssBodyGray": 180,
+      "cssNativeShadowBlur": 1.5,
+      "nativeCodepoints": 2497,
+      "fullSelectedCodepoints": 2501,
+      "literalModuleDefects": 203,
+      "literalFunctionDefects": 65,
+      "literalWrongSymbols": 41,
+      "adaptiveModuleDefects": 240,
+      "adaptiveFunctionDefects": 68,
+      "adaptiveWrongSymbols": 44,
+      "dataAndEccWords": 44,
+      "radius": 11,
+      "quietDark": 0,
+      "quietTotal": 464,
+      "controlExactReaders": 3,
+      "nativeExactReaders": 0,
+      "strictPass": false,
+      "normalFirstSelectedDimension": 165,
+      "invertedFirstSelectedDimension": 37,
+      "intendedDimension": 25,
+      "sourceNearOrnamentQuadBalances": [
+        0.4690265486725664, 0.5089285714285714, 0.4690265486725664
+      ],
+      "workerReadability": "Direct originalsizePNG inspection passed before readers; owneracceptance untested"
+    }
+  },
+  "checks": {
+    "custody": 688,
+    "passed": true,
+    "artifactBytesAtVerification": 30687218,
+    "strictFunctionExactBytes": true,
+    "scopedFreshSourcePrettier": true,
+    "productTests": "Not run: no product files changed. Research checks only.",
+    "formatLimitation": "Frozen executed/preregistered minified sources preserved byte-for-byte; global formatting may flag them.",
+    "syntax": 62,
+    "globalFormat": "Expected nonzero because sealed executed source/evidence formatting exceptions were preserved; fresh files and closing reports checked separately",
+    "finalClosingChecks": 459,
+    "finalClosingPassed": true,
+    "sourceFormattingExceptions": 16,
+    "documentFormattingExceptions": 163,
+    "finalArtifactBytes": 31482256
+  },
+  "limitations": [
+    "resources-01 canvas metrics invalid/rejected; PNG/CDP/Range/source diagnostics retained",
+    "Skia exact descriptor mismatch is not proven fallback",
+    "successful resource contour stderr unavailable; no unpreregistered regeneration",
+    "one mismatching control repeat preserved; initial tile/compositor cause remains hypothesis",
+    "light native jsQR empty-string decode object stopped batch; later null results remain distinct",
+    "strict gate unchanged and no native candidate passes",
+    "nominal quiet-ring ink and selected alignment defects retained",
+    "portable plain/styled paste, native apps, phone, print and owner acceptance untested",
+    "Fast-mode status and model billing unverified",
+    "resources-03 nested article font inspection returned no fonts; first body setup failed before capture, five later slots unattempted; fresh paragraph-root amendment passed six body resources",
+    "native Unicode ornament source RMS passes are not alphabetic O/o, strict gate or reader acceptance",
+    "gray204 words are faint; source contrast and adaptive threshold leakage remain explicit",
+    "payload-03 conventional fractionalSVG control OpenCVdetectedbutempty; stoppedbeforenative/5readers; payload-04singlecrisp-path amendment recoveredexactURL3/3withoutnativechange",
+    "V2native Unicodeprose ordinaryfirstselectedtextfeaturesdim165/37insteadintended25; source-near ornaments considered separately never substituted",
+    "resources05fixed38.53125grid includes only row0/13centers before applyingoffset; no alternate-row coverage inference",
+    "resources06stopped2/5after actualgray228bodyreadabilityrejection;3unattempted; parent independentlyagreed",
+    "624pxnative▣sourceaxesRMS.383047 fails.35 despite192pxsourcepass; scalingnottransferred",
+    "One remainingexploratoryslot deliberatelyunused; parentstoppedexperimentalwork"
+  ],
+  "stops": [
+    {
+      "batch": "layout-01",
+      "message": "Wrong payload"
+    },
+    {
+      "batch": "layout-02",
+      "message": "Immediate repeat mismatch"
+    },
+    {
+      "batch": "payload-03",
+      "message": "Invalid control: canonical-control/opencv"
+    },
+    {
+      "batch": "resources-06",
+      "message": "Unacceptable source readability/fullink/overlap",
+      "parentAgreement": true
+    }
+  ],
+  "pending": [],
+  "deadlines": {
+    "experimentCutoffUtc": "2026-10-10T23:29:22Z",
+    "handbackDueUtc": "2026-10-10T23:44:22Z"
+  },
+  "ownership": "Only empirical source/docs trees written; fresh task-owned browser contexts closed. Owner clipboard/profiles/processes/documents preserved.",
+  "diagnosticCounts": {
+    "resourceCombinedSourcePipelines": 87,
+    "constructionSourceAdaptiveBinarizations": 10,
+    "fullNativeSourceAdaptiveBinarizations": 1,
+    "sourceAdaptiveBinarizationsTotal": 98,
+    "passiveInstrumentedCalls": 11,
+    "ordinaryReaderCalls": 37,
+    "note": "87combinedresourcepipelines each invoke literalcontour/RGBA/nativeaxis/adaptive source diagnostics once;10pureconstruction plus1fullnative actualledger adaptive calls; none is an ordinary payload decoder. Passive11calls contain27decoder invocations counted separately below. Closing verification decodesPNG bytes only, never QR payloads."
+  },
+  "callAccounting": {
+    "primaryOrdinaryApiCalls": 37,
+    "instrumentedPassiveApiCalls": 11,
+    "additionalStockParityApiCalls": 0,
+    "nestedMatrixDecoderInvocationsInsidePassive": 27,
+    "profiles": [
+      {
+        "batch": "layout-01",
+        "id": "control-normal",
+        "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 1,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "layout-01",
+        "id": "control-inverted",
+        "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 2
+          },
+          {
+            "branch": "inverted-stock-second-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 3,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "layout-03",
+        "id": "control-normal",
+        "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 1,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "layout-03",
+        "id": "reverse-regular",
+        "pngSha256": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 2
+          },
+          {
+            "branch": "inverted-stock-second-scan",
+            "matrixDecoderInvocations": 2
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 4,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "layout-03",
+        "id": "reverse-bold",
+        "pngSha256": "5cfb42352b6fc90e9b7a00ac7755aa6d44019f43b33631361dd5d16d332ccebc",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 2
+          },
+          {
+            "branch": "inverted-stock-second-scan",
+            "matrixDecoderInvocations": 2
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 4,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "payload-01",
+        "id": "canonical-control",
+        "pngSha256": "21f608c8127ad743d92069c8604ceda6f6f14f8a8b56b560a1178fc419b50158",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 1,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "payload-01",
+        "id": "native-projection",
+        "pngSha256": "3b36925fd80dfd5b9b36f90a952575469fc976e936c1367f74f481cabeb38e14",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 2
+          },
+          {
+            "branch": "inverted-stock-second-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 3,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "payload-02",
+        "id": "canonical-control",
+        "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 1,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "payload-02",
+        "id": "native-projection",
+        "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 2
+          },
+          {
+            "branch": "inverted-stock-second-scan",
+            "matrixDecoderInvocations": 2
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 4,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "payload-04",
+        "id": "canonical-control",
+        "pngSha256": "35ebf4530d4499e33f59b3741b7be6266bea572b5ee17c60be23baef480e28e7",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 1
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 1,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      },
+      {
+        "batch": "payload-04",
+        "id": "continuous-native",
+        "pngSha256": "49b9230b76508e3a7a9393cdda6876ecc03a44928c0a77760adb9ee54cb29cf5",
+        "instrumentedApiCalls": 1,
+        "additionalStockParityCalls": 0,
+        "branches": [
+          {
+            "branch": "normal-stock-first-scan",
+            "matrixDecoderInvocations": 2
+          },
+          {
+            "branch": "inverted-stock-second-scan",
+            "matrixDecoderInvocations": 2
+          }
+        ],
+        "nestedMatrixDecoderInvocations": 4,
+        "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+      }
+    ],
+    "conservativeInclusiveSum": 75
+  },
+  "final": true,
+  "frozenDenominators": {
+    "resourceSlots": 107,
+    "resourceCaptures": 87,
+    "resourceDiagnosticPipelines": 87,
+    "resourceSlotsUnattempted": 19,
+    "resourceFailedSetupBeforeCapture": 1,
+    "fullPrimaryCaptures": 23,
+    "fullPrimaryCapturesAttempted": 17,
+    "fullPrimaryCapturesUnattempted": 6,
+    "primaryOrdinarySlots": 60,
+    "primaryOrdinarySlotsAttempted": 37,
+    "primaryOrdinarySlotsUnattempted": 23,
+    "passiveProfiles": 20,
+    "passiveProfilesAttempted": 11,
+    "passiveProfilesUnattempted": 9,
+    "exploratoryTrials": 4,
+    "exploratoryTrialsAttempted": 3,
+    "exploratoryTrialsUnattempted": 1,
+    "repeatAttempts": 17,
+    "repeatExactMatches": 16,
+    "repeatMismatches": 1,
+    "empiricalBatchSummaryRows": 24
+  },
+  "unresolvedItems": [
+    "No qualifying exactURL native prose candidate",
+    "Portable plain/styled paste, native apps, phone, physical print and owner acceptance untested",
+    "resources01canvasmetrics rejected; resource01/02successful contourstderr unavailable",
+    "Skia exact variablefont descriptor unresolved",
+    "Finalv7historical-control/inclusive-guard branch syntax checked but unexercised; no final fulltrial selected",
+    "Independent parent review remains separate from worker verification"
+  ],
+  "runtimeBoundary": "Executable and font-file versions inspected after captures; actual rendering provenance is saved per-sourceCDP. No unavailable information treated as zero."
+}

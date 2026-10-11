@@ -1,0 +1,47 @@
+{
+  "schema": "aqrobat.independent-review-final-checks.v1",
+  "atUtc": "2026-10-10T22:36:25.603739+00:00",
+  "passed": true,
+  "allReviewedInputFilesStillExact": 1493,
+  "inputChanges": [],
+  "structuredCheckHashesExact": true,
+  "pythonSourcesASTParsed": 5,
+  "scopedFormattingPassed": true,
+  "processes": [
+    {
+      "args": [
+        "node",
+        "--check",
+        "/Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/review/check-arithmetic.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": ["git", "diff", "--quiet", "HEAD", "--"],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/noir/Documents/aqrobat/node_modules/.bin/prettier",
+        "--check",
+        "/Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/review/check-arithmetic.mjs",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/arithmetic-checks.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/pure-checks.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/report-checks.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/review-scope-hashes-01.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/review-scope-hashes.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/review.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/supplementary-checks.json",
+        "/Users/noir/Documents/aqrobat/docs/research/prose-qr/integrated-2026-10-10/review/REVIEW.md"
+      ],
+      "returncode": 0,
+      "stdout": "Checking formatting...\nAll matched files use Prettier code style!\n",
+      "stderr": ""
+    }
+  ],
+  "newCaptureReaderLocatorBinarizerCalls": 0
+}

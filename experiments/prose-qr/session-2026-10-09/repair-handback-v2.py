@@ -1,0 +1,5 @@
+from pathlib import Path
+import gzip,re,json,html,hashlib
+r=Path('docs/research/prose-qr/session-2026-10-09');p=r/'index.html';before=p.read_bytes();(r/'report-drafts/index-before-checkpoint-wording-v2.html.gz').write_bytes(gzip.compress(before));checkpoint=(r/'CHECKPOINT.md').read_text();prompt=checkpoint.split('## Continuation prompt\n\n',1)[1];s=before.decode();s,n=re.subn(r'checkpoint\s*=\s*"(?:[^"\\]|\\.)*"',lambda m:'checkpoint = '+json.dumps(checkpoint),s);assert n==1;s,n=re.subn(r'(<textarea\b[^>]*id="prompt"[^>]*>)[\s\S]*?(</textarea[^>]*>)',lambda m:m[1]+html.escape(prompt)+m[2],s);assert n==1;p.write_text(s)
+sha=lambda b:hashlib.sha256(b).hexdigest()
+with (r/'handback-repair-02.json').open('x') as f:json.dump({'beforeSha256':sha(before),'afterSha256':sha(s.encode()),'checkpointSha256':sha(checkpoint.encode()),'sourceSha256':sha(Path(__file__).read_bytes()),'change':'Exact embedded prompt/checkpoint updated to corrected diagnostic/RGBA wording; native evidence unchanged'},f,indent=2);f.write('\n')

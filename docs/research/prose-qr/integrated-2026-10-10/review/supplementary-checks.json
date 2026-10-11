@@ -1,0 +1,201 @@
+{
+  "schema": "aqrobat.independent-supplement-review.v1",
+  "atUtc": "2026-10-10T22:33:28.099878+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "strict source predicate byte-identical to prior preserved run",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular normal-stock-first-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular inverted-stock-second-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold normal-stock-first-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-bold inverted-stock-second-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/native-projection normal-stock-first-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-01/native-projection inverted-stock-second-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection normal-stock-first-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection inverted-stock-second-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native normal-stock-first-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-04/continuous-native inverted-stock-second-scan saved strict predicate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "native gate observation denominator",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "earlier closure source formats exactly to current bytes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Apple Symbols.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Avenir Next.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Avenir.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Geneva.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/HelveticaNeue.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Menlo.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/AmericanTypewriter.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Arial Black.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Arial Bold.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Arial.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/ChalkboardSE.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Futura.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Impact.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Phosphate.ttc",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Skia.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "installed font byte provenance /System/Library/Fonts/Supplemental/Verdana Bold.ttf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "font inventory denominator",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Skia variable descriptor remains explicitly unresolved",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "nativeGate": {
+    "profiledCaptures": 5,
+    "executedBranches": 10,
+    "allProfiledBranchesFail": true,
+    "unprofiledCaptures": [
+      {
+        "batch": "layout-01",
+        "id": "light-regular",
+        "reason": "Wrong payload"
+      },
+      {
+        "batch": "layout-04",
+        "id": "reverse-stroke1",
+        "reason": "preregistered capture-only"
+      },
+      {
+        "batch": "layout-05",
+        "id": "v5-reverse-regular",
+        "reason": "preregistered capture-only"
+      },
+      {
+        "batch": "layout-05",
+        "id": "v5-reverse-bold",
+        "reason": "preregistered capture-only"
+      }
+    ]
+  },
+  "fontFilesHashed": 18,
+  "newCaptureReaderLocatorBinarizerCalls": 0
+}

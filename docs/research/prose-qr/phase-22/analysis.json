@@ -1,0 +1,172 @@
+{
+  "phase": 22,
+  "nativeRenderings": 2,
+  "exactImmediateRepeats": 2,
+  "mechanicalLegibilityRejections": 0,
+  "completeFinderGates": 0,
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "goal": "unsolved",
+  "note": "Two Impact 20/19 tight native-row layouts. Mechanical gates pass. Isolated-i source gives one wrong cell per finder; whole-word source gives no diagnostic symbol. No payload.",
+  "results": [
+    {
+      "run": "run-01",
+      "payload": null,
+      "font": "Impact",
+      "size": 20,
+      "leading": 19,
+      "unit": 144,
+      "nativePngSha256": "d327b9b7a72a496fcbf79fd1ffb17f52d0789e7cad552e92c6d8fc6bb45d8139",
+      "repeatExact": true,
+      "nativeLegibilityRejected": false,
+      "legibilityReasons": [],
+      "nativeClearance": 2.525390625,
+      "sampledDiagnostics": [
+        {
+          "width": 25,
+          "height": 25,
+          "position": {
+            "topLeft": {
+              "x": 756,
+              "y": 729
+            },
+            "topRight": {
+              "x": 4374,
+              "y": 729
+            },
+            "bottomRight": {
+              "x": 4293,
+              "y": 4320
+            },
+            "bottomLeft": {
+              "x": 756,
+              "y": 4320
+            }
+          },
+          "error": "ChecksumError @ QRDecoder.cpp:337",
+          "finderAudit": {
+            "finders": [
+              {
+                "wrong": 1,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 0],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": false
+              },
+              {
+                "wrong": 1,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 0],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": false
+              },
+              {
+                "wrong": 1,
+                "rays": [
+                  {
+                    "dx": 1,
+                    "dy": 0,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 0,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  },
+                  {
+                    "dx": 1,
+                    "dy": 1,
+                    "values": [1, 0, 1, 1, 1, 0, 0],
+                    "exact": false
+                  },
+                  {
+                    "dx": 1,
+                    "dy": -1,
+                    "values": [1, 0, 1, 1, 1, 0, 1],
+                    "exact": true
+                  }
+                ],
+                "complete": false
+              }
+            ],
+            "intendedQuad": true,
+            "intendedDimension": true,
+            "complete": false
+          }
+        }
+      ],
+      "sources": {
+        "docs/research/prose-qr/phase-22/run-01/capture.json": "c4fe7c33ba1e41dc1299f7cf98357a36cb4dd0398624339710c0847b047162de",
+        "docs/research/prose-qr/phase-22/run-01/native-metrics.json": "638825609621a2da223690b91a7994f918ad95de7bc1399cba2f2bfcc4f5c738",
+        "docs/research/prose-qr/phase-22/run-01/native-zxing-errors-diagnostic.json": "5c1367d07250be808ddd36797fac1e0282140640db47d784cb0abeecd1895c61"
+      }
+    },
+    {
+      "run": "run-02",
+      "payload": null,
+      "font": "Impact",
+      "size": 20,
+      "leading": 19,
+      "unit": 144,
+      "nativePngSha256": "538465b8eee31bcce21fadda6ed1c49dc76a2c81ad66273b9b6360194c9c0db9",
+      "repeatExact": true,
+      "nativeLegibilityRejected": false,
+      "legibilityReasons": [],
+      "nativeClearance": 2.525390625,
+      "sampledDiagnostics": [],
+      "sources": {
+        "docs/research/prose-qr/phase-22/run-02/capture.json": "712d5f493bc32dafd1ffd64e4d4b0f349e2966d5408222a2b718162edfb6b2d5",
+        "docs/research/prose-qr/phase-22/run-02/native-metrics.json": "9b76a779271cb473a6d51bca7c88bebc835ac464d15506ece6ed01a1c6e49c98",
+        "docs/research/prose-qr/phase-22/run-02/native-zxing-errors-diagnostic.json": "c5520bf26c8a81d04f9618aacb1db7beb8c9634a39ac6aa9296abfc74b91811d"
+      }
+    }
+  ]
+}

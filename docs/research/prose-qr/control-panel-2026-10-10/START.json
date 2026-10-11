@@ -1,0 +1,32 @@
+{
+  "schema": "aqrobat.control-panel-start.v1",
+  "decision": "D1 explicitly selected by Ryan",
+  "startedAtUtc": "2026-10-10T19:04:44Z",
+  "absoluteDeadlineUtc": "2026-10-10T19:29:44Z",
+  "workerHandbackDeadlineUtc": "2026-10-10T19:26:44Z",
+  "newExperimentalWorkCutoffUtc": "2026-10-10T19:24:44Z",
+  "oldAstraClockReopened": false,
+  "baselineHead": "84a79659d40b25cdbcf6663540dbaafdd5741828",
+  "branch": "codex/aqrobat-foundation",
+  "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+  "pr": { "number": 1, "state": "OPEN", "isDraft": true },
+  "limits": {
+    "wallClockMinutesIncludingParentReconciliation": 25,
+    "conventionalCaptures": 4,
+    "immediateRepeatsPerCapture": 1,
+    "ordinaryReaderSlots": 12,
+    "newArtifactBytesAcrossBothTrees": 4000000,
+    "workers": 1
+  },
+  "requestedWorker": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "forkTurns": "none",
+    "fastPreferred": true,
+    "desktopFastVerified": false
+  },
+  "allowedTrees": [
+    "docs/research/prose-qr/control-panel-2026-10-10",
+    "experiments/prose-qr/control-panel-2026-10-10"
+  ]
+}

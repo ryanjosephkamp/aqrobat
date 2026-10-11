@@ -1,0 +1,3748 @@
+{
+  "atUtc": "2026-10-10T22:00:15.798137+00:00",
+  "classification": "Source diagnostics only; separate Unicode ornament lane, no strict/native payload acceptance.",
+  "resources03": {
+    "captures": 4,
+    "diagnostics": 4,
+    "uncaptured": 6,
+    "unattemptedSlots": 5,
+    "failedSetup": 1,
+    "stop": {
+      "current": "continuous-gray-153-shadow-0",
+      "atUtc": "2026-10-10T21:58:05.999Z",
+      "message": "Native font descriptor mismatch",
+      "stack": "AssertionError [ERR_ASSERTION]: Native font descriptor mismatch\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs:196:5"
+    },
+    "interpretation": "CDP inspection of article root returned emptyfonts for nested p/spans; sourceSelection exact. Not proven native font substitution. Fresh actualparagraph query in resources04 passed."
+  },
+  "ornaments": [
+    {
+      "id": "ornament-AppleSymbols-25c9",
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/input.png",
+      "font": [
+        {
+          "familyName": "Apple Symbols",
+          "postScriptName": "AppleSymbols",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "ink": [82, 66, 203, 186],
+      "model": {
+        "label": "complete-literal-gray128-ink-midpoint",
+        "point": {
+          "x": 143,
+          "y": 126
+        },
+        "runs": {
+          "horizontal": [9, 12, 79, 13, 9],
+          "vertical": [8, 13, 79, 12, 9],
+          "diagonalDown": [
+            8.485281374238571, 12.727922061357857, 79.19595949289332,
+            12.727922061357857, 8.485281374238571
+          ],
+          "diagonalUp": [
+            9.899494936611665, 11.313708498984761, 80.61017305526643,
+            11.313708498984761, 8.485281374238571
+          ]
+        },
+        "metric": {
+          "axes": {
+            "horizontal": {
+              "runs": [9, 12, 79, 13, 9],
+              "complete": true,
+              "scale": 17.428571428571427,
+              "normalizedRMS": 0.7718509115209329
+            },
+            "vertical": {
+              "runs": [8, 13, 79, 12, 9],
+              "complete": true,
+              "scale": 17.285714285714285,
+              "normalizedRMS": 0.7923374581788739
+            },
+            "diagonalDown": {
+              "runs": [
+                8.485281374238571, 12.727922061357857, 79.19595949289332,
+                12.727922061357857, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 17.374623766298026,
+              "normalizedRMS": 0.7866861302985519
+            },
+            "diagonalUp": {
+              "runs": [
+                9.899494936611665, 11.313708498984761, 80.61017305526643,
+                11.313708498984761, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 17.374623766298026,
+              "normalizedRMS": 0.8219869343737972
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 0.8219869343737972,
+          "centralSpanBalance": 0.7088607594936708
+        },
+        "literalRuns": {
+          "horizontal": [9, 12, 79, 13, 9],
+          "vertical": [8, 13, 79, 12, 9],
+          "diagonalDown": [
+            8.485281374238571, 12.727922061357857, 79.19595949289332,
+            12.727922061357857, 8.485281374238571
+          ],
+          "diagonalUp": [
+            9.899494936611665, 11.313708498984761, 80.61017305526643,
+            11.313708498984761, 8.485281374238571
+          ]
+        },
+        "literalMetric": {
+          "axes": {
+            "horizontal": {
+              "runs": [9, 12, 79, 13, 9],
+              "complete": true,
+              "scale": 17.428571428571427,
+              "normalizedRMS": 0.7718509115209329
+            },
+            "vertical": {
+              "runs": [8, 13, 79, 12, 9],
+              "complete": true,
+              "scale": 17.285714285714285,
+              "normalizedRMS": 0.7923374581788739
+            },
+            "diagonalDown": {
+              "runs": [
+                8.485281374238571, 12.727922061357857, 79.19595949289332,
+                12.727922061357857, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 17.374623766298026,
+              "normalizedRMS": 0.7866861302985519
+            },
+            "diagonalUp": {
+              "runs": [
+                9.899494936611665, 11.313708498984761, 80.61017305526643,
+                11.313708498984761, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 17.374623766298026,
+              "normalizedRMS": 0.8219869343737972
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 0.8219869343737972,
+          "centralSpanBalance": 0.7088607594936708
+        },
+        "pitch": 17.357142857142854,
+        "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+      }
+    },
+    {
+      "id": "ornament-AppleSymbols-2299",
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/input.png",
+      "font": [
+        {
+          "familyName": "Apple Symbols",
+          "postScriptName": "AppleSymbols",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "ink": [81, 76, 191, 186],
+      "model": {
+        "label": "complete-literal-gray128-ink-midpoint",
+        "point": {
+          "x": 136,
+          "y": 131
+        },
+        "runs": {
+          "horizontal": [11, 35, 20, 35, 10],
+          "vertical": [10, 36, 20, 35, 10],
+          "diagonalDown": [
+            9.899494936611665, 35.35533905932738, 19.79898987322333,
+            35.35533905932738, 9.899494936611665
+          ],
+          "diagonalUp": [
+            11.313708498984761, 33.941125496954285, 21.213203435596427,
+            33.941125496954285, 11.313708498984761
+          ]
+        },
+        "metric": {
+          "axes": {
+            "horizontal": {
+              "runs": [11, 35, 20, 35, 10],
+              "complete": true,
+              "scale": 15.857142857142858,
+              "normalizedRMS": 1.1106906111215822
+            },
+            "vertical": {
+              "runs": [10, 36, 20, 35, 10],
+              "complete": true,
+              "scale": 15.857142857142858,
+              "normalizedRMS": 1.1284516528689177
+            },
+            "diagonalDown": {
+              "runs": [
+                9.899494936611665, 35.35533905932738, 19.79898987322333,
+                35.35533905932738, 9.899494936611665
+              ],
+              "complete": true,
+              "scale": 15.758379695014487,
+              "normalizedRMS": 1.1322189671667302
+            },
+            "diagonalUp": {
+              "runs": [
+                11.313708498984761, 33.941125496954285, 21.213203435596427,
+                33.941125496954285, 11.313708498984761
+              ],
+              "complete": true,
+              "scale": 15.960410203924932,
+              "normalizedRMS": 1.048785931818464
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 1.1322189671667302,
+          "centralSpanBalance": 0.7
+        },
+        "literalRuns": {
+          "horizontal": [11, 35, 20, 35, 10],
+          "vertical": [10, 36, 20, 35, 10],
+          "diagonalDown": [
+            9.899494936611665, 35.35533905932738, 19.79898987322333,
+            35.35533905932738, 9.899494936611665
+          ],
+          "diagonalUp": [
+            11.313708498984761, 33.941125496954285, 21.213203435596427,
+            33.941125496954285, 11.313708498984761
+          ]
+        },
+        "literalMetric": {
+          "axes": {
+            "horizontal": {
+              "runs": [11, 35, 20, 35, 10],
+              "complete": true,
+              "scale": 15.857142857142858,
+              "normalizedRMS": 1.1106906111215822
+            },
+            "vertical": {
+              "runs": [10, 36, 20, 35, 10],
+              "complete": true,
+              "scale": 15.857142857142858,
+              "normalizedRMS": 1.1284516528689177
+            },
+            "diagonalDown": {
+              "runs": [
+                9.899494936611665, 35.35533905932738, 19.79898987322333,
+                35.35533905932738, 9.899494936611665
+              ],
+              "complete": true,
+              "scale": 15.758379695014487,
+              "normalizedRMS": 1.1322189671667302
+            },
+            "diagonalUp": {
+              "runs": [
+                11.313708498984761, 33.941125496954285, 21.213203435596427,
+                33.941125496954285, 11.313708498984761
+              ],
+              "complete": true,
+              "scale": 15.960410203924932,
+              "normalizedRMS": 1.048785931818464
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 1.1322189671667302,
+          "centralSpanBalance": 0.7
+        },
+        "pitch": 15.857142857142858,
+        "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+      }
+    },
+    {
+      "id": "ornament-ArialUnicodeMS-25c9",
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/input.png",
+      "font": [
+        {
+          "familyName": "Arial Unicode MS",
+          "postScriptName": "ArialUnicodeMS",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "ink": [80, 109, 162, 191],
+      "model": {
+        "label": "complete-literal-gray128-ink-midpoint",
+        "point": {
+          "x": 121,
+          "y": 150
+        },
+        "runs": {
+          "horizontal": [8, 14, 39, 14, 8],
+          "vertical": [8, 14, 39, 15, 7],
+          "diagonalDown": [
+            8.485281374238571, 14.142135623730951, 39.59797974644666,
+            12.727922061357857, 8.485281374238571
+          ],
+          "diagonalUp": [
+            8.485281374238571, 14.142135623730951, 38.18376618407357,
+            14.142135623730951, 8.485281374238571
+          ]
+        },
+        "metric": {
+          "axes": {
+            "horizontal": {
+              "runs": [8, 14, 39, 14, 8],
+              "complete": true,
+              "scale": 11.857142857142858,
+              "normalizedRMS": 0.26854229813503677
+            },
+            "vertical": {
+              "runs": [8, 14, 39, 15, 7],
+              "complete": true,
+              "scale": 11.857142857142858,
+              "normalizedRMS": 0.3033657424581728
+            },
+            "diagonalDown": {
+              "runs": [
+                8.485281374238571, 14.142135623730951, 39.59797974644666,
+                12.727922061357857, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 11.919800025716087,
+              "normalizedRMS": 0.24863892638497959
+            },
+            "diagonalUp": {
+              "runs": [
+                8.485281374238571, 14.142135623730951, 38.18376618407357,
+                14.142135623730951, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 11.919800025716087,
+              "normalizedRMS": 0.235343118070641
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 0.3033657424581728,
+          "centralSpanBalance": 0.6923076923076923
+        },
+        "literalRuns": {
+          "horizontal": [8, 14, 39, 15, 7],
+          "vertical": [8, 14, 39, 15, 7],
+          "diagonalDown": [
+            8.485281374238571, 14.142135623730951, 39.59797974644666,
+            12.727922061357857, 8.485281374238571
+          ],
+          "diagonalUp": [
+            8.485281374238571, 14.142135623730951, 38.18376618407357,
+            14.142135623730951, 8.485281374238571
+          ]
+        },
+        "literalMetric": {
+          "axes": {
+            "horizontal": {
+              "runs": [8, 14, 39, 15, 7],
+              "complete": true,
+              "scale": 11.857142857142858,
+              "normalizedRMS": 0.3033657424581728
+            },
+            "vertical": {
+              "runs": [8, 14, 39, 15, 7],
+              "complete": true,
+              "scale": 11.857142857142858,
+              "normalizedRMS": 0.3033657424581728
+            },
+            "diagonalDown": {
+              "runs": [
+                8.485281374238571, 14.142135623730951, 39.59797974644666,
+                12.727922061357857, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 11.919800025716087,
+              "normalizedRMS": 0.24863892638497959
+            },
+            "diagonalUp": {
+              "runs": [
+                8.485281374238571, 14.142135623730951, 38.18376618407357,
+                14.142135623730951, 8.485281374238571
+              ],
+              "complete": true,
+              "scale": 11.919800025716087,
+              "normalizedRMS": 0.235343118070641
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 0.3033657424581728,
+          "centralSpanBalance": 0.6923076923076923
+        },
+        "pitch": 11.857142857142858,
+        "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+      }
+    },
+    {
+      "id": "ornament-ArialUnicodeMS-2299",
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/input.png",
+      "font": [
+        {
+          "familyName": "Arial Unicode MS",
+          "postScriptName": "ArialUnicodeMS",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "ink": [75, 108, 206, 238],
+      "model": {
+        "label": "complete-literal-gray128-ink-midpoint",
+        "point": {
+          "x": 141,
+          "y": 173
+        },
+        "runs": {
+          "horizontal": [10, 42, 28, 42, 9],
+          "vertical": [10, 42, 27, 43, 9],
+          "diagonalDown": [
+            9.899494936611665, 42.42640687119285, 26.870057685088806,
+            42.42640687119285, 9.899494936611665
+          ],
+          "diagonalUp": [
+            11.313708498984761, 41.01219330881976, 28.284271247461902,
+            41.01219330881976, 11.313708498984761
+          ]
+        },
+        "metric": {
+          "axes": {
+            "horizontal": {
+              "runs": [10, 42, 28, 42, 9],
+              "complete": true,
+              "scale": 18.714285714285715,
+              "normalizedRMS": 1.0811273351923278
+            },
+            "vertical": {
+              "runs": [10, 42, 27, 43, 9],
+              "complete": true,
+              "scale": 18.714285714285715,
+              "normalizedRMS": 1.108474751753658
+            },
+            "diagonalDown": {
+              "runs": [
+                9.899494936611665, 42.42640687119285, 26.870057685088806,
+                42.42640687119285, 9.899494936611665
+              ],
+              "complete": true,
+              "scale": 18.78883732867112,
+              "normalizedRMS": 1.1025150197222466
+            },
+            "diagonalUp": {
+              "runs": [
+                11.313708498984761, 41.01219330881976, 28.284271247461902,
+                41.01219330881976, 11.313708498984761
+              ],
+              "complete": true,
+              "scale": 18.99086783758156,
+              "normalizedRMS": 1.0293783257081697
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 1.108474751753658,
+          "centralSpanBalance": 0.6785714285714286
+        },
+        "literalRuns": {
+          "horizontal": [10, 42, 28, 42, 10],
+          "vertical": [10, 42, 27, 43, 9],
+          "diagonalDown": [
+            9.899494936611665, 42.42640687119285, 26.870057685088806,
+            42.42640687119285, 9.899494936611665
+          ],
+          "diagonalUp": [
+            9.899494936611665, 41.01219330881976, 28.284271247461902,
+            41.01219330881976, 11.313708498984761
+          ]
+        },
+        "literalMetric": {
+          "axes": {
+            "horizontal": {
+              "runs": [10, 42, 28, 42, 10],
+              "complete": true,
+              "scale": 18.857142857142858,
+              "normalizedRMS": 1.0723163054589666
+            },
+            "vertical": {
+              "runs": [10, 42, 27, 43, 9],
+              "complete": true,
+              "scale": 18.714285714285715,
+              "normalizedRMS": 1.108474751753658
+            },
+            "diagonalDown": {
+              "runs": [
+                9.899494936611665, 42.42640687119285, 26.870057685088806,
+                42.42640687119285, 9.899494936611665
+              ],
+              "complete": true,
+              "scale": 18.78883732867112,
+              "normalizedRMS": 1.1025150197222466
+            },
+            "diagonalUp": {
+              "runs": [
+                9.899494936611665, 41.01219330881976, 28.284271247461902,
+                41.01219330881976, 11.313708498984761
+              ],
+              "complete": true,
+              "scale": 18.78883732867112,
+              "normalizedRMS": 1.0405802520493188
+            }
+          },
+          "completeAxes": 4,
+          "worstRMS": 1.108474751753658,
+          "centralSpanBalance": 0.6785714285714286
+        },
+        "pitch": 18.785714285714285,
+        "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+      }
+    }
+  ],
+  "continuous": [
+    {
+      "id": "continuous-gray-153-shadow-0",
+      "gray": 153,
+      "shadowBlur": 0,
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-0/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-0/input.png",
+      "supportSummary": [
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 87,
+              "maximum": 255,
+              "adaptiveBlack": 3,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 1,
+                "128": 1,
+                "160": 2,
+                "192": 4,
+                "224": 7
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 243,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 255,
+              "adaptiveBlack": 26,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 25,
+                "160": 26,
+                "192": 26,
+                "224": 26
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 153,
+              "maximum": 255,
+              "adaptiveBlack": 13,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 11,
+                "192": 14,
+                "224": 14
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 87,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 204,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 255,
+              "adaptiveBlack": 24,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 24,
+                "160": 24,
+                "192": 24,
+                "224": 24
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 153,
+              "maximum": 255,
+              "adaptiveBlack": 21,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 19,
+                "192": 22,
+                "224": 22
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 7,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        }
+      ]
+    },
+    {
+      "id": "continuous-gray-153-shadow-1p5",
+      "gray": 153,
+      "shadowBlur": 1.5,
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-1p5/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-153-shadow-1p5/input.png",
+      "supportSummary": [
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 57,
+              "maximum": 255,
+              "adaptiveBlack": 7,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 3,
+                "160": 6,
+                "192": 12,
+                "224": 23
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 225,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 222,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 249,
+              "adaptiveBlack": 26,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 25,
+                "128": 26,
+                "160": 26,
+                "192": 26,
+                "224": 27
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 153,
+              "maximum": 254,
+              "adaptiveBlack": 14,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 11,
+                "192": 14,
+                "224": 15
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 59,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 3,
+                "224": 21
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 195,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 240,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 225,
+              "adaptiveBlack": 24,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 24,
+                "160": 24,
+                "192": 26,
+                "224": 29
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 153,
+              "maximum": 250,
+              "adaptiveBlack": 22,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 19,
+                "192": 22,
+                "224": 22
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 237,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 246,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 254,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 12,
+              "maximum": 254,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 253,
+              "maximum": 254,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        }
+      ]
+    },
+    {
+      "id": "continuous-gray-180-shadow-0",
+      "gray": 180,
+      "shadowBlur": 0,
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-0/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-0/input.png",
+      "supportSummary": [
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 87,
+              "maximum": 255,
+              "adaptiveBlack": 3,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 1,
+                "128": 1,
+                "160": 2,
+                "192": 4,
+                "224": 7
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 247,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 255,
+              "adaptiveBlack": 26,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 25,
+                "160": 26,
+                "192": 26,
+                "224": 26
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 180,
+              "maximum": 255,
+              "adaptiveBlack": 11,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 14,
+                "224": 14
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 87,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 217,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 255,
+              "adaptiveBlack": 24,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 24,
+                "160": 24,
+                "192": 24,
+                "224": 24
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 180,
+              "maximum": 255,
+              "adaptiveBlack": 18,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 22,
+                "224": 22
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 7,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        }
+      ]
+    },
+    {
+      "id": "continuous-gray-180-shadow-1p5",
+      "gray": 180,
+      "shadowBlur": 1.5,
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-1p5/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-180-shadow-1p5/input.png",
+      "supportSummary": [
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 57,
+              "maximum": 255,
+              "adaptiveBlack": 7,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 3,
+                "160": 6,
+                "192": 12,
+                "224": 23
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 233,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 222,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 249,
+              "adaptiveBlack": 26,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 25,
+                "128": 26,
+                "160": 26,
+                "192": 26,
+                "224": 27
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 180,
+              "maximum": 254,
+              "adaptiveBlack": 9,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 14,
+                "224": 15
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 59,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 3,
+                "224": 21
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 211,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 244,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 225,
+              "adaptiveBlack": 24,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 24,
+                "160": 24,
+                "192": 26,
+                "224": 29
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 180,
+              "maximum": 251,
+              "adaptiveBlack": 15,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 22,
+                "224": 22
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 237,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 246,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 254,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 12,
+              "maximum": 254,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 254,
+              "maximum": 254,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        }
+      ]
+    },
+    {
+      "id": "continuous-gray-204-shadow-0",
+      "gray": 204,
+      "shadowBlur": 0,
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-0/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-0/input.png",
+      "supportSummary": [
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 87,
+              "maximum": 255,
+              "adaptiveBlack": 3,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 1,
+                "128": 1,
+                "160": 2,
+                "192": 4,
+                "224": 7
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 247,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 255,
+              "adaptiveBlack": 26,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 25,
+                "160": 26,
+                "192": 26,
+                "224": 26
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 204,
+              "maximum": 255,
+              "adaptiveBlack": 3,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 14
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 87,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 224,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 255,
+              "adaptiveBlack": 24,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 24,
+                "160": 24,
+                "192": 24,
+                "224": 24
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 204,
+              "maximum": 255,
+              "adaptiveBlack": 7,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 22
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 7,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        }
+      ]
+    },
+    {
+      "id": "continuous-gray-204-shadow-1p5",
+      "gray": 204,
+      "shadowBlur": 1.5,
+      "source": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-1p5/source.html.txt",
+      "png": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-04/continuous-gray-204-shadow-1p5/input.png",
+      "supportSummary": [
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 57,
+              "maximum": 255,
+              "adaptiveBlack": 8,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 3,
+                "160": 6,
+                "192": 12,
+                "224": 23
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 240,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 222,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 249,
+              "adaptiveBlack": 26,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 25,
+                "128": 26,
+                "160": 26,
+                "192": 26,
+                "224": 27
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 204,
+              "maximum": 254,
+              "adaptiveBlack": 3,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 14
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 59,
+              "maximum": 255,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 3,
+                "224": 21
+              }
+            },
+            "gray": {
+              "samples": 25,
+              "minimum": 223,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 1
+              }
+            },
+            "space": {
+              "samples": 9,
+              "minimum": 244,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 19.265625,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 30,
+              "minimum": 0,
+              "maximum": 225,
+              "adaptiveBlack": 24,
+              "thresholdBlack": {
+                "64": 24,
+                "96": 24,
+                "128": 24,
+                "160": 24,
+                "192": 26,
+                "224": 29
+              }
+            },
+            "gray": {
+              "samples": 26,
+              "minimum": 204,
+              "maximum": 253,
+              "adaptiveBlack": 7,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 22
+              }
+            },
+            "space": {
+              "samples": 8,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 14,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 78
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 0
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 237,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 246,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        },
+        {
+          "pitch": 38.53125,
+          "offset": {
+            "x": 2.408203125,
+            "y": 2
+          },
+          "classes": {
+            "black": {
+              "samples": 6,
+              "minimum": 12,
+              "maximum": 254,
+              "adaptiveBlack": 1,
+              "thresholdBlack": {
+                "64": 1,
+                "96": 1,
+                "128": 1,
+                "160": 1,
+                "192": 1,
+                "224": 1
+              }
+            },
+            "gray": {
+              "samples": 4,
+              "minimum": 254,
+              "maximum": 254,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "space": {
+              "samples": 3,
+              "minimum": 255,
+              "maximum": 255,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            },
+            "unowned-gap": {
+              "samples": 0,
+              "minimum": null,
+              "maximum": null,
+              "adaptiveBlack": 0,
+              "thresholdBlack": {
+                "64": 0,
+                "96": 0,
+                "128": 0,
+                "160": 0,
+                "192": 0,
+                "224": 0
+              }
+            }
+          },
+          "totalCells": 13
+        }
+      ]
+    }
+  ],
+  "visualAssessment": {
+    "method": "Direct model inspection of retained native PNGs at displayed resolution, not owner/device acceptance.",
+    "gray153Shadow1p5": "Coherent words visibly readable. Foreground styles vary everyfourcharacters in payload-independent calibration; source characters intact.",
+    "gray204Shadow1p5": "Substantially fainter words. A full native candidate using this shade needs explicit readability assessment; not silently treated as equally readable.",
+    "ornament": "Actual visible U+25C9; does not establish alphabetic O/o success or emoji atlas implementation."
+  },
+  "ordinaryCalls": 0,
+  "fullNativeCaptures": 0,
+  "profiles": 0,
+  "exploratoryTrials": 0,
+  "budgets": {
+    "glyphResources": 77,
+    "nativeCaptures": 8,
+    "controlCaptures": 6,
+    "ordinaryCalls": 30,
+    "profiles": 9,
+    "repeats": 14,
+    "payloadTrials": 2
+  },
+  "next": "Mechanism owner may freeze new fullcontinuous source using measured diagnostics; empirical must preregister exact native payload trial counts and control before capture."
+}

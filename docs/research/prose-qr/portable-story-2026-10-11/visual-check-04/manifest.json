@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-11T18:06:38.659Z",
+  "sourceSha256": "98ff48d8d08cfda07c7ce37f30ec33ec18757213af33c2e15f0c84c746b3bbb1",
+  "sources": [
+    {
+      "path": "index.html",
+      "sha256": "96cee3aaaaa2cd90f2c170310be6c4b3917208d26db87b7d55ca4add9c310037"
+    },
+    {
+      "path": "workbench.html",
+      "sha256": "4e5e62b62acdf8b8b01f804ef593f28bfb15b044d5649d0639b3cf6472bd54c7"
+    }
+  ],
+  "cases": [
+    {
+      "id": "guide-desktop",
+      "file": "index.html",
+      "width": 1280,
+      "height": 1000
+    },
+    {
+      "id": "guide-mobile",
+      "file": "index.html",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "tool-desktop",
+      "file": "workbench.html",
+      "width": 1280,
+      "height": 1000
+    },
+    {
+      "id": "tool-mobile",
+      "file": "workbench.html",
+      "width": 390,
+      "height": 844,
+      "capture": false
+    }
+  ],
+  "purpose": "Delivery UI/resource screenshots only. No QR candidates or reader calls.",
+  "newResourceCaptureSlots": 3,
+  "immediateRepeats": 3,
+  "ordinaryReaderCalls": 0,
+  "resourceCapturesBeforeThisCheck": 6,
+  "totalResourceCaptureSlots": 9,
+  "plannedResourceSlotsAcrossRun": 12,
+  "priorLinkGate": "Visual02 stopped before captures because the companion final-workbench receipt had not finished writing. It now exists. The same three unexecuted resource allocations carry forward; no decoder calls or candidate captures.",
+  "priorUiFailure": "First guide resource repeat differed before files were saved; no QR reader calls. Its abort and exact source archive are retained. Three later planned resources were unused. This prospective UI-only check settles scroll and retains screenshots before asserting repeats.",
+  "pendingReceiptLinks": [
+    "delivery-seal.json",
+    "backup-final.json"
+  ]
+}

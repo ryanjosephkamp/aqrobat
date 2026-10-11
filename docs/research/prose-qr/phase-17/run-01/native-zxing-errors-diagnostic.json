@@ -1,0 +1,26 @@
+{
+  "ms": 144,
+  "options": { "formats": ["QRCode"], "returnErrors": true },
+  "results": [
+    {
+      "isValid": false,
+      "error": "FormatError (Invalid symbol size) @ QRDecoder.cpp:299",
+      "text": "",
+      "bytes": [],
+      "position": {
+        "topLeft": { "x": 0, "y": 0 },
+        "topRight": { "x": 0, "y": 0 },
+        "bottomRight": { "x": 0, "y": 0 },
+        "bottomLeft": { "x": 0, "y": 0 }
+      },
+      "width": 0,
+      "height": 0,
+      "finderAudit": {
+        "complete": false,
+        "reason": "Missing square sampled symbol"
+      }
+    }
+  ],
+  "exact": false,
+  "classification": "Error-reporting diagnostic, never acceptance"
+}

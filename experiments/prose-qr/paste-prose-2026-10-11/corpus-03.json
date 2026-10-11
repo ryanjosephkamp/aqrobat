@@ -1,0 +1,21 @@
+{
+  "id": "corpus-03",
+  "hypothesis": "Accented glyph envelope exceeds the original 9pt row by 0.12 CSS pixels. An explicit 8.5pt font leaves room for accents in the same 9pt leading, without deleting or recasing any words. The long source is a single complete copy.",
+  "controls": [],
+  "specs": [
+    {
+      "id": "accents-85pt",
+      "corpusId": "accents",
+      "recipe": {
+        "fontSize": 11.333333333333334
+      }
+    },
+    {
+      "id": "long-single-85pt",
+      "corpusId": "long-single-copy",
+      "recipe": {
+        "fontSize": 11.333333333333334
+      }
+    }
+  ]
+}

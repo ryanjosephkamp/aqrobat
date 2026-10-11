@@ -1,0 +1,42 @@
+{
+  "id": "read-high-dpi-01",
+  "hypothesis": "Ordinary exact-payload reads of all unchanged new native high-DPI captures, including the conventional control. Compare device-pixel resolution while CSS and PDF physical dimensions remain fixed.",
+  "inputs": [
+    {
+      "id": "impact-2x",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/high-dpi-01/impact-2x.png",
+      "payload": "https://example.com/",
+      "control": false
+    },
+    {
+      "id": "impact-3x",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/high-dpi-01/impact-3x.png",
+      "payload": "https://example.com/",
+      "control": false
+    },
+    {
+      "id": "black-2x",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/high-dpi-01/black-2x.png",
+      "payload": "https://example.com/",
+      "control": false
+    },
+    {
+      "id": "control-2x",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/high-dpi-01/control-2x.png",
+      "payload": "https://example.com/",
+      "control": true
+    },
+    {
+      "id": "pdf-192dpi",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/high-dpi-01/pdf-192dpi.png",
+      "payload": "https://example.com/",
+      "control": false
+    },
+    {
+      "id": "pdf-300dpi",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/high-dpi-01/pdf-300dpi.png",
+      "payload": "https://example.com/",
+      "control": false
+    }
+  ]
+}

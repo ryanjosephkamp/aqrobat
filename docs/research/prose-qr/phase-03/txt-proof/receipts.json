@@ -1,0 +1,98 @@
+{
+  "testedAt": "2026-10-09T14:42:36.558Z",
+  "sourceTXTBytes": 3560,
+  "sourceTXTSha256": "896c83f0062dcd4ebada99af44b11af8f78e5c456cc9aab88795076d38769ff0",
+  "sourceHTMLSha256": "c9874854c664a15afb9713bc465a9d710e536e32011395804682ccd7066eec37",
+  "font": "Menlo",
+  "fontSize": 20,
+  "fontWeight": 400,
+  "ink": "black",
+  "lineHeight": 24.08203125,
+  "advance": 12.041015625,
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "configuredReader": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "originalNativePNG": "880329c0ffd882d1930400d2e438122fcb8e6cf09c552fb4865776aa0533eb54",
+  "receipts": [
+    {
+      "kind": "original-replay",
+      "pngSha256": "880329c0ffd882d1930400d2e438122fcb8e6cf09c552fb4865776aa0533eb54",
+      "baseline": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "configuredPayloads": ["AQROBAT-TEST"],
+      "configuredExact": true
+    },
+    {
+      "kind": "ordinary-pre-from-txt",
+      "pngSha256": "880329c0ffd882d1930400d2e438122fcb8e6cf09c552fb4865776aa0533eb54",
+      "baseline": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "configuredPayloads": ["AQROBAT-TEST"],
+      "configuredExact": true
+    },
+    {
+      "kind": "all-lowercase-negative",
+      "pngSha256": "abed7ad5d42275014be2d817ce8f203493bbf57aaf14379ff83f73d521f7814a",
+      "baseline": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "configuredPayloads": [],
+      "configuredExact": false
+    },
+    {
+      "kind": "sorted-words-negative",
+      "pngSha256": "69b5b8b5c167277ff1f9460831a7ee4618c42194143c2c34df334ceb0a6fa726",
+      "baseline": {
+        "jsQR": { "found": false, "payload": null, "exact": false },
+        "zxing": {
+          "found": false,
+          "payload": null,
+          "exact": false,
+          "results": []
+        }
+      },
+      "configuredPayloads": [],
+      "configuredExact": false
+    }
+  ],
+  "phone": "not tested",
+  "nativeTextEditOrClipboard": "not tested",
+  "classification": "TXT re-rendered as one ordinary pre element with one uniform font/weight/color, no per-letter styling. Negatives remove case or QR-dependent word ordering. No external image preprocessing."
+}

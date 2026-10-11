@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-11T20:08:42.265Z",
+  "rows": [
+    {
+      "id": "studio-quiet5",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/studio-check-04/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "79fbe479d0249220caa3eee272e4953ef8765dd446b9b096aa601263e97a338c",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "vision",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        }
+      ]
+    }
+  ]
+}

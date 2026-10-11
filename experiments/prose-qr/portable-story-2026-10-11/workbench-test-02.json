@@ -1,0 +1,165 @@
+{
+  "id": "workbench-test-02",
+  "hypothesis": "Exercise the offline UI and real exports. Preserve whole copies rather than the earlier fixture\u2019s partial final repetitions; verify new wording, difficult streams, black weights, one exact nonrepeated 1136-word source, raw whitespace/accents, and an exact longer URL. Two explicitly planned baseline replays receive no duplicate reader calls if native bytes match.",
+  "cases": [
+    {
+      "id": "accepted-replay",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.",
+        "font": "Impact",
+        "fontSize": 12,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 5,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 180,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": true
+      },
+      "replay": "batch-01/page-impact-preserve.png"
+    },
+    {
+      "id": "new-prose-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Morning light crossed the quiet room, and Mara opened the notebook she had carried for years. She wrote about the river, the neighbors, and the small habits that made an ordinary day feel worth remembering. Outside, a bicycle bell rang twice. Someone laughed near the corner shop. She paused, listened, and decided that the next sentence should leave enough space for another person to enter the story with their own memories.",
+        "font": "Impact",
+        "fontSize": 12,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 200,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": true
+      }
+    },
+    {
+      "id": "narrow-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "It is still a little late. I sit in a quiet room, listening to rain. A thin line of light slips in. We will write it all, in plain little words, until it is time to leave.",
+        "font": "Impact",
+        "fontSize": 12,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 200,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": true
+      }
+    },
+    {
+      "id": "broad-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Warm summer mornings bring wonderful moments. A wooden window frames a meadow where bees wander among blooms. People share bread, welcome neighbors, and remember why small everyday pleasures matter.",
+        "font": "Impact",
+        "fontSize": 12,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 200,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": true
+      }
+    },
+    {
+      "id": "black-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.",
+        "font": "Avenir Next Condensed",
+        "fontSize": 10,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 0,
+        "darkWeight": 900,
+        "lightWeight": 100,
+        "repeat": true
+      }
+    },
+    {
+      "id": "single-copy",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden\nwhile we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later.\nEvery small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary\nthings around us. Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested\nnear the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we\nwould take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely\nat the ordinary things around us. Morning light crossed the quiet room, and the open window carried the scent of rain. A\nlittle bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about\nthe walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to\nlook closely at the ordinary things around us. Morning light crossed the quiet room, and the open window carried the scent\nof rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and\ntalked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and\nthere was time to look closely at the ordinary things around us. Morning light crossed the quiet room, and the open window\ncarried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond\nthe trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only\nbegun, and there was time to look closely at the ordinary things around us. Morning light crossed the quiet room, and the\nopen window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds\nmove beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The\nday had only begun, and there was time to look closely at the ordinary things around us. Morning light crossed the quiet\nroom, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We\nwatched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear\nin the still air. The day had only begun, and there was time to look closely at the ordinary things around us. Morning light\ncrossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made\nwarm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound\nseemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.\nMorning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden\nwhile we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later.\nEvery small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary\nthings around us. Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested\nnear the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we\nwould take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely\nat the ordinary things around us. Morning light crossed the quiet room, and the open window carried the scent of rain. A\nlittle bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about\nthe walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to\nlook closely at the ordinary things around us. Morning light crossed the quiet room, and the open window carried the scent\nof rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and\ntalked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and\nthere was time to look closely at the ordinary things around us. Morning light crossed the quiet room, and the open window\ncarried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond\nthe trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only\nbegun, and there was time to look closely at the ordinary things around us. Morning light crossed the quiet room, and the\nopen window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds\nmove beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The\nday had only begun, and there was time to look closely at the ordinary things around us. Morning light crossed the quiet\nroom, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We\nwatched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear\nin the still air. The day had only begun, and there was time to look closely at the ordinary things around us. Morning light\ncrossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made\nwarm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound\nseemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.",
+        "font": "Impact",
+        "fontSize": 12,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 5,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 180,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": false
+      },
+      "replay": "batch-01/page-impact-preserve.png"
+    },
+    {
+      "id": "accented-complete",
+      "spec": {
+        "payload": "https://example.com/",
+        "text": "At the caf\u00e9, Ana reads a r\u00e9sum\u00e9 and orders tea.\nHer na\u00efve first sketch becomes a useful design.\tThe words stay in order, with accents intact; no one needs to type in capitals. A small printed page should leave enough room to read, share, and test the exact link.",
+        "font": "Impact",
+        "fontSize": 12,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 200,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": true
+      }
+    },
+    {
+      "id": "longer-url-complete",
+      "spec": {
+        "payload": "https://example.com/aqrobat?size=small",
+        "text": "Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.",
+        "font": "Impact",
+        "fontSize": 10,
+        "field": 600,
+        "linesPerModule": 2,
+        "quiet": 4,
+        "ecc": "Q",
+        "dark": 0,
+        "gray": 200,
+        "darkWeight": 400,
+        "lightWeight": 400,
+        "repeat": true
+      }
+    }
+  ],
+  "plannedNativeCaptures": 8,
+  "plannedImmediateRepeats": 8,
+  "maximumPrimaryReaderCalls": 24,
+  "plannedUniquePrimaryReaderCalls": 18,
+  "errorChecks": [
+    "source overflow even with repeat",
+    "insufficient source without repeat",
+    "unsupported script",
+    "vertical overlap",
+    "stale download disabled"
+  ],
+  "clipboard": "Stub navigator.clipboard inside a fresh test-owned browser; no OS clipboard writes. Native CUA transfer is separate.",
+  "setupCorrection": "Test01 aborted before any capture or reader call because the runner tried to fill a control inside a closed details element. Test02 opens that disclosure before interacting; all Test01 unused slots and exact source retained."
+}

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat · prose QR workbench</title>
+    <style>
+      :root {
+        font-family: system-ui, sans-serif;
+        color: #292822;
+        background: #f4f2eb;
+        font-synthesis: none;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 1220px;
+        margin: auto;
+        padding: 32px 28px 80px;
+      }
+      h1 {
+        font:
+          600 clamp(2rem, 4vw, 3.3rem)/1.1 Georgia,
+          serif;
+        letter-spacing: -0.04em;
+        margin: 12px 0 18px;
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin: 0 0 16px;
+      }
+      .eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #665d48;
+      }
+      p {
+        max-width: 80ch;
+        line-height: 1.55;
+      }
+      a {
+        color: #24583f;
+        text-underline-offset: 3px;
+      }
+      .saved {
+        background: #e2eddf;
+        border-left: 4px solid #38664b;
+        padding: 14px 18px;
+        margin: 24px 0;
+      }
+      .saved p {
+        margin: 4px 0;
+      }
+      .controls {
+        background: white;
+        border: 1px solid #dedbd1;
+        border-radius: 12px;
+        padding: 24px;
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 28px;
+      }
+      .fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+      }
+      label {
+        display: block;
+        font-size: 0.86rem;
+        font-weight: 600;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        font: inherit;
+      }
+      input:not([type="checkbox"]),
+      select,
+      textarea {
+        width: 100%;
+        padding: 9px;
+        border: 1px solid #bcbcaf;
+        border-radius: 5px;
+        background: #fff;
+        color: #272923;
+        margin-top: 5px;
+      }
+      textarea {
+        resize: vertical;
+        line-height: 1.4;
+      }
+      button,
+      .file-label {
+        border: 1px solid #2b5740;
+        background: #fff;
+        border-radius: 6px;
+        padding: 10px 14px;
+        cursor: pointer;
+        color: #244a37;
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+      button.primary {
+        background: #28533d;
+        color: white;
+        margin-top: 16px;
+      }
+      button:disabled {
+        opacity: 0.4;
+        cursor: default;
+      }
+      .check {
+        margin-top: 14px;
+        display: flex;
+        align-items: start;
+        gap: 8px;
+        line-height: 1.4;
+      }
+      .check input {
+        margin-top: 3px;
+      }
+      .small {
+        font-size: 0.83rem;
+        color: #5e6056;
+        line-height: 1.5;
+      }
+      details {
+        margin-top: 16px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        margin-bottom: 14px;
+      }
+      .notice {
+        padding: 13px 16px;
+        border: 1px solid #c2cfbc;
+        border-radius: 6px;
+        background: #edf3e9;
+        line-height: 1.45;
+        margin: 20px 0;
+      }
+      .error {
+        background: #fff0e7;
+        border-color: #bf7c59;
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+        gap: 8px 18px;
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+      .facts dt {
+        font-weight: 600;
+      }
+      .facts dd {
+        margin: 0;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 20px 0 10px;
+      }
+      .preview-shell {
+        border: 1px solid #cbc9be;
+        background: #e9e7de;
+        border-radius: 10px;
+        padding: 20px;
+        overflow: auto;
+        margin-top: 20px;
+      }
+      iframe {
+        border: 0;
+        display: block;
+        background: #fff;
+        margin: auto;
+        max-width: none;
+      }
+      .file-label {
+        display: inline-block;
+      }
+      .file-label input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+      footer {
+        font-size: 0.8rem;
+        margin-top: 28px;
+        color: #66665a;
+        line-height: 1.5;
+      }
+      :focus-visible {
+        outline: 3px solid #c68534;
+        outline-offset: 3px;
+      }
+      @media (max-width: 760px) {
+        main {
+          padding: 24px 16px;
+        }
+        .controls {
+          grid-template-columns: 1fr;
+          padding: 18px;
+        }
+        .facts {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+        .facts dd {
+          margin-bottom: 10px;
+        }
+        .preview-shell {
+          padding: 8px;
+        }
+      }
+      @media print {
+        body > main > *:not(.preview-shell) {
+          display: none;
+        }
+        .preview-shell {
+          border: 0;
+          padding: 0;
+          overflow: visible;
+        }
+        main {
+          padding: 0;
+        }
+        .preview-shell iframe {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">
+        Aqrobat research · October 11, 2026 · runs offline
+      </div>
+      <h1>Real prose. A smaller QR.</h1>
+      <p>
+        Keep your words and capitalization, then arrange the visible letter ink
+        into a QR pattern. The working small example uses a 600px text field and
+        9pt Impact type. New words, links, fonts or styling can change whether a
+        scanner reads it.
+      </p>
+      <div class="saved">
+        <p>
+          <strong>Owner accepted:</strong> both Samsung Camera and “Scan QR
+          code” read the small mixed-case
+          <a href="examples/page-impact-mixed.html">selectable HTML</a> and its
+          <a href="batch-01/page-impact-preserve.png">native PNG</a>.
+        </p>
+        <p class="small">
+          Try the saved
+          <a href="examples/page-impact-letter.pdf">Letter-size PDF</a> or
+          <a href="examples/page-impact.rtf">RTF</a>. The owner also reports
+          both Samsung apps reading the Letter PDF and the black-only Avenir
+          example on screen, after finding a suitable distance. Apple Vision
+          reads their native renderings. Physical print remains untested.
+          <a href="index.html">Read the complete evidence handback.</a>
+        </p>
+      </div>
+      <form id="recipe">
+        <div class="controls">
+          <section>
+            <h2>1. Your source</h2>
+            <label
+              >Exact payload<textarea
+                name="payload"
+                rows="2"
+                spellcheck="false"
+              ></textarea>
+            </label>
+            <p class="small">
+              Payloads are kept exactly. Longer payloads create more QR regions
+              and may need a larger field or smaller type.
+            </p>
+            <label>Prose<textarea name="text" rows="9"></textarea></label
+            ><label class="check"
+              ><input name="repeat" type="checkbox" /><span
+                >Repeat complete source copies to fill the square. Every
+                original word appears, in order; no partial final copy.</span
+              ></label
+            >
+            <p class="small">
+              Display wrapping normalizes spaces and line breaks. Original
+              source TXT and the recipe retain the raw input. Latin letters,
+              digits and punctuation are supported; other scripts need a
+              different text renderer.
+            </p>
+            <label class="file-label"
+              >Import saved recipe<input
+                id="import"
+                type="file"
+                accept=".json,application/json"
+            /></label>
+          </section>
+          <section>
+            <h2>2. Layout and ink</h2>
+            <label
+              >Starting recipe<select id="preset">
+                <option value="accepted">
+                  Impact · owner-accepted starting settings
+                </option>
+                <option value="black">Avenir · black heavy / ultralight</option>
+                <option value="regular">
+                  Avenir · black heavy / gray regular
+                </option>
+                <option value="separation">
+                  Impact · more gray separation
+                </option>
+              </select></label
+            >
+            <p class="small">
+              A starting recipe is not scan acceptance for your new content. The
+              named font must be installed on this computer and any receiving
+              computer.
+            </p>
+            <div class="fields">
+              <label
+                >Font<select name="font">
+                  <option>Impact</option>
+                  <option>Avenir Next Condensed</option>
+                  <option>Arial Black</option>
+                  <option>PT Sans Narrow</option>
+                  <option>Georgia</option>
+                  <option>Arial</option>
+                  <option>Courier New</option>
+                </select></label
+              ><label
+                >Type size in CSS px<input
+                  name="fontSize"
+                  type="number"
+                  min="10"
+                  max="20"
+                  step="2" /></label
+              ><label
+                >Text field width in px<input
+                  name="field"
+                  type="number"
+                  min="400"
+                  max="1000"
+                  step="1" /></label
+              ><label
+                >Lines per QR region<input
+                  name="linesPerModule"
+                  type="number"
+                  min="1"
+                  max="4"
+                  step="1" /></label
+              ><label
+                >Dark gray · 0 is black<input
+                  name="dark"
+                  type="number"
+                  min="0"
+                  max="200" /></label
+              ><label
+                >Light gray · 200 is lighter<input
+                  name="gray"
+                  type="number"
+                  min="0"
+                  max="200"
+              /></label>
+            </div>
+            <details>
+              <summary>Weights, quiet margin and QR redundancy</summary>
+              <div class="fields">
+                <label
+                  >Dark weight<input
+                    name="darkWeight"
+                    type="number"
+                    min="100"
+                    max="900"
+                    step="100" /></label
+                ><label
+                  >Light weight<input
+                    name="lightWeight"
+                    type="number"
+                    min="100"
+                    max="900"
+                    step="100" /></label
+                ><label
+                  >Blank margin in regions<input
+                    name="quiet"
+                    type="number"
+                    min="4"
+                    max="5"
+                    step="1" /></label
+                ><label
+                  >Error correction<select name="ecc">
+                    <option>L</option>
+                    <option>M</option>
+                    <option>Q</option>
+                    <option>H</option>
+                  </select></label
+                >
+              </div>
+            </details>
+            <button class="primary" type="submit">Generate visible text</button>
+          </section>
+        </div>
+      </form>
+      <div id="status" class="notice" role="status" aria-live="polite"></div>
+      <dl id="details" class="facts"></dl>
+      <div class="actions">
+        <button id="open-text" type="button">Open full text</button>
+        <button id="copy" type="button">Copy styled text</button
+        ><button type="button" data-export="html">Save selectable HTML</button
+        ><button type="button" data-export="rtf">Save Letter RTF</button
+        ><button type="button" data-export="recipe">Save recipe</button
+        ><button type="button" data-export="source">Save original TXT</button
+        ><button type="button" data-export="text">Save wrapped TXT</button>
+      </div>
+      <p id="rtf-note" class="small"></p>
+      <p class="small">
+        <strong>Plain TXT loses the QR styling.</strong> The tested TextEdit
+        HTML transfers changed type size and line spacing. Use the RTF file for
+        the native document route. RTF or styled HTML must preserve the font,
+        line spacing and per-letter ink. The black-only recipe also needs
+        different font weights; it is styled text. Selectable text does not
+        establish paste fidelity in Word, Google Docs or another receiving app.
+      </p>
+      <div class="preview-shell">
+        <iframe id="preview" title="Selectable generated prose QR"></iframe>
+      </div>
+      <footer>
+        No external requests, AI or server are needed. Only visible text carries
+        the QR ink; no hidden solid QR is painted. Encoder: Project Nayuki, MIT
+        license preserved in this file. Research tool only; the existing Aqrobat
+        product and private Site are unchanged.
+      </footer>
+    </main>
+    <script type="module">
+      /* BUNDLE */
+    </script>
+  </body>
+</html>
