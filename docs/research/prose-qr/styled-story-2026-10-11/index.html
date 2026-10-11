@@ -1,0 +1,1638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aqrobat — all-letter story recovery</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #19212a;
+        --muted: #596571;
+        --line: #d9e0e3;
+        --accent: #146750;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f3f5f3;
+        color: var(--ink);
+        font:
+          16px/1.6 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: auto;
+        padding: 36px 24px 70px;
+      }
+      header {
+        padding: 25px 0;
+      }
+      .eyebrow {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 58px);
+        line-height: 1.08;
+        max-width: 900px;
+        letter-spacing: -0.035em;
+        margin: 16px 0;
+      }
+      h2 {
+        font-size: 26px;
+        line-height: 1.25;
+        margin: 0 0 15px;
+      }
+      h3 {
+        font-size: 19px;
+        margin: 0 0 10px;
+      }
+      .lead {
+        font-size: 20px;
+        max-width: 870px;
+        color: #35434b;
+      }
+      .badge {
+        display: inline-block;
+        background: #d9eee3;
+        color: #164d3b;
+        border-radius: 30px;
+        padding: 5px 13px;
+        font-weight: 650;
+        font-size: 13px;
+      }
+      .card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 26px;
+        margin: 22px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 24px;
+      }
+      .meta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 18px 0;
+      }
+      .meta span {
+        background: #f0f4f3;
+        padding: 8px 12px;
+        border-radius: 9px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 22px 0;
+      }
+      a {
+        color: #0b654d;
+        text-underline-offset: 3px;
+      }
+      .button,
+      button {
+        display: inline-block;
+        background: #146750;
+        color: white;
+        border: 1px solid #146750;
+        border-radius: 9px;
+        padding: 10px 15px;
+        text-decoration: none;
+        font: inherit;
+        cursor: pointer;
+      }
+      .secondary {
+        background: white;
+        color: #146750;
+      }
+      .preview {
+        overflow: auto;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        max-height: 700px;
+      }
+      .preview img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .preview.native img {
+        width: 5600px;
+        max-width: none;
+      }
+      .caption {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 10px 0;
+      }
+      .detail {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid var(--line);
+        margin: 15px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+      }
+      th,
+      td {
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        padding: 12px;
+        vertical-align: top;
+      }
+      th {
+        color: #42515a;
+        background: #f5f7f6;
+      }
+      .table-wrap {
+        overflow: auto;
+      }
+      .yes {
+        color: #146750;
+      }
+      .no {
+        color: #65717b;
+        font-weight: 400;
+      }
+      details > summary {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 18px 0;
+      }
+      select {
+        font: inherit;
+        padding: 8px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 28px;
+      }
+      code {
+        font-size: 0.92em;
+        overflow-wrap: anywhere;
+      }
+      p {
+        margin: 10px 0 16px;
+      }
+      @media (max-width: 760px) {
+        main {
+          padding: 20px 14px 45px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 18px;
+        }
+        th,
+        td {
+          padding: 9px;
+        }
+        h1 {
+          font-size: 37px;
+        }
+        .lead {
+          font-size: 18px;
+        }
+        .actions .button {
+          flex: 1 1 150px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">
+          Aqrobat · October 11, 2026 · local research handback
+        </div>
+        <h1>An all-letter story that ordinary software readers decode</h1>
+        <p class="lead">
+          ZXing and Apple Vision recover
+          <strong>https://example.com/</strong> from the unchanged native image.
+          The page is made of real selectable story characters, with no corner
+          ornaments or hidden QR layer.
+        </p>
+        <span class="badge">Exact URL recovered by two reader systems</span>
+        <div class="actions">
+          <a class="button" href="story.html">Open selectable HTML</a
+          ><a class="button secondary" href="batch-15/story-url.png"
+            >Open native PNG</a
+          ><a class="button secondary" href="batch-15/story-url.txt"
+            >Open source text</a
+          ><a class="button secondary" href="README.md">Detailed evidence</a>
+        </div>
+      </header>
+      <section class="card">
+        <div class="grid">
+          <div>
+            <h2>The result and the cost</h2>
+            <p>
+              The size and font comparisons suggest that heavier letters and
+              more text per QR cell preserve the overall pattern under ordinary
+              reader settings. The successful version uses
+              <strong>uppercase Impact at 20px</strong> with light gray (RGB
+              180) letters.
+            </p>
+            <p>
+              It is a <strong>5,600 × 5,600px</strong> page. Its 200 lines
+              repeat the original 71-word paragraph 240 times. The letter detail
+              is readable at native size; a whole-page preview makes the text
+              tiny.
+            </p>
+            <p>
+              The original mixed-case Courier appearance remains unqualified
+              with ordinary settings. Phone cameras, physical print and portable
+              styled paste still need their own evidence.
+            </p>
+          </div>
+          <div>
+            <h3>Unchanged native URL input</h3>
+            <div class="table-wrap">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>ZXing 3.1.5</td>
+                    <td class="yes">Exact URL</td>
+                  </tr>
+                  <tr>
+                    <td>macOS Vision, revision 4</td>
+                    <td class="yes">Exact URL</td>
+                  </tr>
+                  <tr>
+                    <td>jsQR 1.4.0</td>
+                    <td>No payload</td>
+                  </tr>
+                  <tr>
+                    <td>OpenCV 4.13.0</td>
+                    <td>No payload</td>
+                  </tr>
+                  <tr>
+                    <td>Browser Selection</td>
+                    <td class="yes">Exact 90,959 characters</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>The complete native field</h2>
+        <div class="actions">
+          <button id="fit" class="secondary" type="button">Fit preview</button
+          ><button id="native" class="secondary" type="button">
+            Show native pixels
+          </button>
+        </div>
+        <div id="preview" class="preview">
+          <img
+            src="batch-15/story-url.png"
+            width="5600"
+            height="5600"
+            alt="A QR pattern formed entirely from black and gray uppercase story letters"
+          />
+        </div>
+        <p id="preview-note" class="caption">
+          This preview fits the page. Recorded decoders received the untouched
+          5,600px PNG.
+        </p>
+        <h3>Native 20px letter detail</h3>
+        <img
+          class="detail"
+          src="export-verification/text-detail.png"
+          width="1040"
+          height="220"
+          alt="Native-size Impact story words, including readable black and gray text"
+        />
+        <p class="caption">
+          Inspection-only crop. Its pixels match the original region exactly;
+          this crop was never supplied to a decoder.
+          <a href="export-verification/text-detail.png"
+            >Open the detail at native size.</a
+          >
+        </p>
+      </section>
+      <section class="card">
+        <h2>How it compares</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Reader evidence</th>
+                <th>Tradeoff</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="../phase-02/batch-02/raw/band-023-2233.png"
+                    >Original band-023</a
+                  >
+                </td>
+                <td>
+                  Historical configured ZXing recovers AQROBAT-TEST; three
+                  ordinary primary readers remain negative in the replay.
+                </td>
+                <td>
+                  Mixed-case Courier 20px, 2,233px, roughly 1,490 words; the
+                  more balanced appearance.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="../phase-14/run-01/native.png">Earlier phase 14</a>
+                </td>
+                <td>Ordinary ZXing URL success reproduced.</td>
+                <td>
+                  Native Monaco 14px and repetitive BOB/i material; not a
+                  natural story.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="batch-15/story-url.png">New all-letter story</a>
+                </td>
+                <td>Ordinary ZXing and Vision return the exact URL.</td>
+                <td>
+                  Impact 20px, all capitals, 5,600px, 240 paragraph repetitions.
+                </td>
+              </tr>
+              <tr>
+                <td><a href="batch-13/final-2.png">Ornamented fallback</a></td>
+                <td>Ordinary ZXing and jsQR return the exact URL.</td>
+                <td>
+                  Fewer/larger words, but visible square glyph ornaments.
+                  <a href="ornamented-story.html">Selectable HTML.</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card">
+        <h2>What the standalone file proves</h2>
+        <p>
+          The HTML export has the exact captured source bytes and exact text
+          Selection. Its file-origin image repeats exactly, but 24 left-edge
+          antialiased pixels differ from the original capture. The initial
+          byte-equality check stopped and is retained. The unchanged replay then
+          separately recovered the URL in both ZXing and Vision.
+          <a href="export-verification/ERRATA.md">Read the mismatch record.</a>
+        </p>
+        <p>
+          Native lettering is verified on this Mac with Impact installed.
+          Reflow, other fonts, native applications, fit-to-screen scanning and
+          physical print have not been accepted. Earlier unspecified Samsung
+          failures remain part of the project history.
+        </p>
+      </section>
+      <section class="card" id="ledger">
+        <details>
+          <summary>Every completed native candidate · 75 rows</summary>
+          <p>
+            33 all-letter cases and 42 ornamented cases; failures are retained.
+            One earlier source-selection failure stopped before any candidate
+            PNG and left 11 further slots unused. Controls, resource captures
+            and the standalone replay are separate.
+          </p>
+          <div class="filters">
+            <label
+              >Layout
+              <select id="kind">
+                <option value="all">All layouts</option>
+                <option value="letters">All letters</option>
+                <option value="ornaments">Ornaments</option>
+              </select></label
+            ><label
+              >Result
+              <select id="result">
+                <option value="all">All results</option>
+                <option value="true">Any primary-reader recovery</option>
+                <option value="false">No primary-reader recovery</option>
+              </select></label
+            ><span id="row-count">75 rows</span>
+          </div>
+          <div class="table-wrap">
+            <table id="cases">
+              <thead>
+                <tr>
+                  <th>Native input</th>
+                  <th>Layout</th>
+                  <th>Pixels</th>
+                  <th>Primary ordinary readers</th>
+                  <th>Evidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-01.png">batch-01/story-01</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-01.txt">text</a> ·
+                    <a href="batch-01/story-01-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-02.png">batch-01/story-02</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-02.txt">text</a> ·
+                    <a href="batch-01/story-02-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-03.png">batch-01/story-03</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-03.txt">text</a> ·
+                    <a href="batch-01/story-03-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-04.png">batch-01/story-04</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-04.txt">text</a> ·
+                    <a href="batch-01/story-04-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-05.png">batch-01/story-05</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-05.txt">text</a> ·
+                    <a href="batch-01/story-05-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-06.png">batch-01/story-06</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-06.txt">text</a> ·
+                    <a href="batch-01/story-06-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-07.png">batch-01/story-07</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-07.txt">text</a> ·
+                    <a href="batch-01/story-07-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-08.png">batch-01/story-08</a></td>
+                  <td>All letters</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-08.txt">text</a> ·
+                    <a href="batch-01/story-08-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-09.png">batch-01/story-09</a></td>
+                  <td>All letters</td>
+                  <td>2605</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-09.txt">text</a> ·
+                    <a href="batch-01/story-09-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-10.png">batch-01/story-10</a></td>
+                  <td>All letters</td>
+                  <td>2605</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-10.txt">text</a> ·
+                    <a href="batch-01/story-10-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-11.png">batch-01/story-11</a></td>
+                  <td>All letters</td>
+                  <td>2605</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-11.txt">text</a> ·
+                    <a href="batch-01/story-11-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-01/story-12.png">batch-01/story-12</a></td>
+                  <td>All letters</td>
+                  <td>2605</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-01/story-12.txt">text</a> ·
+                    <a href="batch-01/story-12-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-01.png">batch-03/ornament-01</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1489</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-01.txt">text</a> ·
+                    <a href="batch-03/ornament-01-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-02.png">batch-03/ornament-02</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1489</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-02.txt">text</a> ·
+                    <a href="batch-03/ornament-02-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-03.png">batch-03/ornament-03</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1489</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-03.txt">text</a> ·
+                    <a href="batch-03/ornament-03-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-04.png">batch-03/ornament-04</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1489</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-04.txt">text</a> ·
+                    <a href="batch-03/ornament-04-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-05.png">batch-03/ornament-05</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-05.txt">text</a> ·
+                    <a href="batch-03/ornament-05-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-06.png">batch-03/ornament-06</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-06.txt">text</a> ·
+                    <a href="batch-03/ornament-06-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-07.png">batch-03/ornament-07</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-07.txt">text</a> ·
+                    <a href="batch-03/ornament-07-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-08.png">batch-03/ornament-08</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1861</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-08.txt">text</a> ·
+                    <a href="batch-03/ornament-08-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-09.png">batch-03/ornament-09</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-09.txt">text</a> ·
+                    <a href="batch-03/ornament-09-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-10.png">batch-03/ornament-10</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-10.txt">text</a> ·
+                    <a href="batch-03/ornament-10-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-11.png">batch-03/ornament-11</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-11.txt">text</a> ·
+                    <a href="batch-03/ornament-11-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-03/ornament-12.png">batch-03/ornament-12</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-03/ornament-12.txt">text</a> ·
+                    <a href="batch-03/ornament-12-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-01.png">batch-04/composed-01</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-01.txt">text</a> ·
+                    <a href="batch-04/composed-01-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-02.png">batch-04/composed-02</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-02.txt">text</a> ·
+                    <a href="batch-04/composed-02-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-03.png">batch-04/composed-03</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-03.txt">text</a> ·
+                    <a href="batch-04/composed-03-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-04.png">batch-04/composed-04</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-04.txt">text</a> ·
+                    <a href="batch-04/composed-04-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-05.png">batch-04/composed-05</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-05.txt">text</a> ·
+                    <a href="batch-04/composed-05-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-06.png">batch-04/composed-06</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-06.txt">text</a> ·
+                    <a href="batch-04/composed-06-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-07.png">batch-04/composed-07</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-07.txt">text</a> ·
+                    <a href="batch-04/composed-07-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-04/composed-08.png">batch-04/composed-08</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-04/composed-08.txt">text</a> ·
+                    <a href="batch-04/composed-08-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-05/corner-01.png">batch-05/corner-01</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-05/corner-01.txt">text</a> ·
+                    <a href="batch-05/corner-01-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-05/corner-02.png">batch-05/corner-02</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-05/corner-02.txt">text</a> ·
+                    <a href="batch-05/corner-02-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-05/corner-03.png">batch-05/corner-03</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-05/corner-03.txt">text</a> ·
+                    <a href="batch-05/corner-03-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td>
+                    <a href="batch-05/corner-04.png">batch-05/corner-04</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-05/corner-04.txt">text</a> ·
+                    <a href="batch-05/corner-04-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td><a href="batch-06/wide-01.png">batch-06/wide-01</a></td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-01.txt">text</a> ·
+                    <a href="batch-06/wide-01-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td><a href="batch-06/wide-02.png">batch-06/wide-02</a></td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-02.txt">text</a> ·
+                    <a href="batch-06/wide-02-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-06/wide-03.png">batch-06/wide-03</a></td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-03.txt">text</a> ·
+                    <a href="batch-06/wide-03-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td><a href="batch-06/wide-04.png">batch-06/wide-04</a></td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-04.txt">text</a> ·
+                    <a href="batch-06/wide-04-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td><a href="batch-06/wide-05.png">batch-06/wide-05</a></td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-05.txt">text</a> ·
+                    <a href="batch-06/wide-05-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td><a href="batch-06/wide-06.png">batch-06/wide-06</a></td>
+                  <td>Ornaments</td>
+                  <td>1488</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-06.txt">text</a> ·
+                    <a href="batch-06/wide-06-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-06/wide-07.png">batch-06/wide-07</a></td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-07.txt">text</a> ·
+                    <a href="batch-06/wide-07-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="false">
+                  <td><a href="batch-06/wide-08.png">batch-06/wide-08</a></td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-06/wide-08.txt">text</a> ·
+                    <a href="batch-06/wide-08-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td>
+                    <a href="batch-07/aligned-1.png">batch-07/aligned-1</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-07/aligned-1.txt">text</a> ·
+                    <a href="batch-07/aligned-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td>
+                    <a href="batch-07/aligned-2.png">batch-07/aligned-2</a>
+                  </td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-07/aligned-2.txt">text</a> ·
+                    <a href="batch-07/aligned-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-08/joint-1.png">batch-08/joint-1</a></td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-08/joint-1.txt">text</a> ·
+                    <a href="batch-08/joint-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-08/joint-2.png">batch-08/joint-2</a></td>
+                  <td>Ornaments</td>
+                  <td>2232</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-08/joint-2.txt">text</a> ·
+                    <a href="batch-08/joint-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-08/joint-3.png">batch-08/joint-3</a></td>
+                  <td>Ornaments</td>
+                  <td>2520</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-08/joint-3.txt">text</a> ·
+                    <a href="batch-08/joint-3-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-08/joint-4.png">batch-08/joint-4</a></td>
+                  <td>Ornaments</td>
+                  <td>2520</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-08/joint-4.txt">text</a> ·
+                    <a href="batch-08/joint-4-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-09/dense-1.png">batch-09/dense-1</a></td>
+                  <td>All letters</td>
+                  <td>4837</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-09/dense-1.txt">text</a> ·
+                    <a href="batch-09/dense-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-09/dense-2.png">batch-09/dense-2</a></td>
+                  <td>All letters</td>
+                  <td>4837</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-09/dense-2.txt">text</a> ·
+                    <a href="batch-09/dense-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-09/dense-3.png">batch-09/dense-3</a></td>
+                  <td>All letters</td>
+                  <td>5209</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-09/dense-3.txt">text</a> ·
+                    <a href="batch-09/dense-3-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-09/dense-4.png">batch-09/dense-4</a></td>
+                  <td>All letters</td>
+                  <td>5209</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-09/dense-4.txt">text</a> ·
+                    <a href="batch-09/dense-4-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-10/weight-1.png">batch-10/weight-1</a></td>
+                  <td>All letters</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-10/weight-1.txt">text</a> ·
+                    <a href="batch-10/weight-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-10/weight-2.png">batch-10/weight-2</a></td>
+                  <td>All letters</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-10/weight-2.txt">text</a> ·
+                    <a href="batch-10/weight-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-10/weight-3.png">batch-10/weight-3</a></td>
+                  <td>All letters</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-10/weight-3.txt">text</a> ·
+                    <a href="batch-10/weight-3-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-10/weight-4.png">batch-10/weight-4</a></td>
+                  <td>All letters</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-10/weight-4.txt">text</a> ·
+                    <a href="batch-10/weight-4-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-10/weight-5.png">batch-10/weight-5</a></td>
+                  <td>All letters</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-10/weight-5.txt">text</a> ·
+                    <a href="batch-10/weight-5-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-10/weight-6.png">batch-10/weight-6</a></td>
+                  <td>All letters</td>
+                  <td>2233</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-10/weight-6.txt">text</a> ·
+                    <a href="batch-10/weight-6-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td>
+                    <a href="batch-11/leading-1.png">batch-11/leading-1</a>
+                  </td>
+                  <td>All letters</td>
+                  <td>2605</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-11/leading-1.txt">text</a> ·
+                    <a href="batch-11/leading-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td>
+                    <a href="batch-11/leading-2.png">batch-11/leading-2</a>
+                  </td>
+                  <td>All letters</td>
+                  <td>2605</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-11/leading-2.txt">text</a> ·
+                    <a href="batch-11/leading-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td>
+                    <a href="batch-11/leading-3.png">batch-11/leading-3</a>
+                  </td>
+                  <td>All letters</td>
+                  <td>2977</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-11/leading-3.txt">text</a> ·
+                    <a href="batch-11/leading-3-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td>
+                    <a href="batch-11/leading-4.png">batch-11/leading-4</a>
+                  </td>
+                  <td>All letters</td>
+                  <td>2977</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-11/leading-4.txt">text</a> ·
+                    <a href="batch-11/leading-4-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-12/heavy-1.png">batch-12/heavy-1</a></td>
+                  <td>All letters</td>
+                  <td>2480</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-12/heavy-1.txt">text</a> ·
+                    <a href="batch-12/heavy-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-12/heavy-2.png">batch-12/heavy-2</a></td>
+                  <td>All letters</td>
+                  <td>2480</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-12/heavy-2.txt">text</a> ·
+                    <a href="batch-12/heavy-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-12/heavy-3.png">batch-12/heavy-3</a></td>
+                  <td>All letters</td>
+                  <td>2480</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-12/heavy-3.txt">text</a> ·
+                    <a href="batch-12/heavy-3-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-12/heavy-4.png">batch-12/heavy-4</a></td>
+                  <td>All letters</td>
+                  <td>2480</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-12/heavy-4.txt">text</a> ·
+                    <a href="batch-12/heavy-4-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-13/final-1.png">batch-13/final-1</a></td>
+                  <td>Ornaments</td>
+                  <td>2520</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-13/final-1.txt">text</a> ·
+                    <a href="batch-13/final-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-13/final-2.png">batch-13/final-2</a></td>
+                  <td>Ornaments</td>
+                  <td>2520</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-13/final-2.txt">text</a> ·
+                    <a href="batch-13/final-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-13/final-3.png">batch-13/final-3</a></td>
+                  <td>Ornaments</td>
+                  <td>2520</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-13/final-3.txt">text</a> ·
+                    <a href="batch-13/final-3-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="ornaments" data-success="true">
+                  <td><a href="batch-13/final-4.png">batch-13/final-4</a></td>
+                  <td>Ornaments</td>
+                  <td>1680</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="yes">exact</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-13/final-4.txt">text</a> ·
+                    <a href="batch-13/final-4-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="true">
+                  <td><a href="batch-14/large-1.png">batch-14/large-1</a></td>
+                  <td>All letters</td>
+                  <td>4960</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-14/large-1.txt">text</a> ·
+                    <a href="batch-14/large-1-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="false">
+                  <td><a href="batch-14/large-2.png">batch-14/large-2</a></td>
+                  <td>All letters</td>
+                  <td>4960</td>
+                  <td>
+                    zxing: <b class="no">no payload</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-14/large-2.txt">text</a> ·
+                    <a href="batch-14/large-2-capture.json">receipt</a>
+                  </td>
+                </tr>
+                <tr data-kind="letters" data-success="true">
+                  <td>
+                    <a href="batch-15/story-url.png">batch-15/story-url</a>
+                  </td>
+                  <td>All letters</td>
+                  <td>5600</td>
+                  <td>
+                    zxing: <b class="yes">exact</b><br />jsqr:
+                    <b class="no">no payload</b><br />opencv:
+                    <b class="no">no payload</b>
+                  </td>
+                  <td>
+                    <a href="batch-15/story-url.txt">text</a> ·
+                    <a href="batch-15/story-url-capture.json">receipt</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="caption">
+            Vision was run on a preregistered subset. The all-letter large-1 and
+            story-url cases recover in Vision; its raw receipts are linked in
+            the detailed report.
+          </p>
+        </details>
+      </section>
+      <section class="card">
+        <h2>Verification and preservation</h2>
+        <p>
+          Unit tests, build, browser checks, text-browser checks and research
+          layout invariants passed in a disposable copy. Current new JavaScript
+          formatting passed. Full formatting reported 207 existing warnings and
+          313 at the verification snapshot; frozen evidence bytes were retained.
+        </p>
+        <p>
+          All 11,013 protected files retain their hashes. Branch and HEAD are
+          unchanged; PR #1 is still draft and open. npm remains private. No
+          commit, push, deployment, Site/audience change, agent, new chat or
+          message occurred.
+        </p>
+        <p>
+          <a href="audit.json">Audit receipt</a> ·
+          <a href="verification/results.json">Check receipts</a> ·
+          <a href="verification/cleanup.json">Temporary-copy cleanup</a> ·
+          <a href="delivery-seal.json">Final file hashes</a> ·
+          <a href="PLAN.md">Original plan</a> ·
+          <a href="LARGE-FACE-PLAN.md">Final bounded amendment</a>
+        </p>
+      </section>
+      <footer>
+        Software recovery and native text selection are established for the
+        named files. Phone, print, portable paste and owner aesthetic acceptance
+        remain separate. The original three-hour allowance was not renewed.
+      </footer>
+    </main>
+    <script>
+      const preview = document.getElementById("preview"),
+        note = document.getElementById("preview-note");
+      document.getElementById("fit").onclick = () => {
+        preview.classList.remove("native");
+        note.textContent =
+          "This preview fits the page. Recorded decoders received the untouched 5,600px PNG.";
+      };
+      document.getElementById("native").onclick = () => {
+        preview.classList.add("native");
+        note.textContent =
+          "Native pixels: scroll to inspect. This viewing control does not change the saved image.";
+      };
+      const kind = document.getElementById("kind"),
+        result = document.getElementById("result");
+      function filter() {
+        let n = 0;
+        for (const r of document.querySelectorAll("#cases tbody tr")) {
+          const show =
+            (kind.value === "all" || r.dataset.kind === kind.value) &&
+            (result.value === "all" || r.dataset.success === result.value);
+          r.hidden = !show;
+          if (show) n++;
+        }
+        document.getElementById("row-count").textContent = n + " rows";
+      }
+      kind.onchange = result.onchange = filter;
+    </script>
+  </body>
+</html>

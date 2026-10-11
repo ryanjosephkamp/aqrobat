@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-11T05:42:49.131Z",
+  "originalCwd": "/Users/noir/Documents/aqrobat",
+  "temporaryCwd": "/var/folders/pv/m1k13gmn189d64ndtxdbzrjc0000gn/T/aqrobat-styled-story-verify-qdHrtP",
+  "head": "a7ceea7345cbac6d1dec05a9042510508a3dc07a",
+  "sourceSha256": "4ac23cb2badd9fd144937fe1fbe546e361fee4b59e214f2f5fce8749beffbf11",
+  "copyRule": "all tracked working files plus the two new source/evidence directories; exclude this active verification output; installed node_modules read by symlink; no owner context copy",
+  "trackedFiles": 10092,
+  "deadline": "2026-10-11T07:53:00Z",
+  "commands": [
+    "npm run format:check (tracked baseline)",
+    "npm test",
+    "npm run build",
+    "npm run test:browser",
+    "npm run test:text-browser",
+    "node --test research layout.test.mjs",
+    "npm run format:check (full new scope)",
+    "pinned prettier --check current new mjs"
+  ]
+}

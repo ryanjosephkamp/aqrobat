@@ -1,0 +1,57 @@
+{
+  "finishedAt": "2026-10-11T05:36:05.779Z",
+  "planned": 1,
+  "completed": 1,
+  "rows": [
+    {
+      "id": "story-url",
+      "spec": {
+        "id": "story-url",
+        "payload": "https://example.com/",
+        "font": "Impact",
+        "fontSize": 20,
+        "quiet": 5,
+        "ecc": "Q",
+        "pitch": 160,
+        "linesPerModule": 8,
+        "gray": 180
+      },
+      "pngSha256": "1680ba4f74aa072a15ea552db1a855207f8abe53ad8d55dbd18cd0fe7bbbe6b0",
+      "repeatSha256": "1680ba4f74aa072a15ea552db1a855207f8abe53ad8d55dbd18cd0fe7bbbe6b0",
+      "repeatExact": true,
+      "selectionSha256": "8e1bbae98bd2f0aee4e8bb623c87fa38765626c2c7784c47c550e7187ccd41c4",
+      "fonts": [],
+      "width": 5600,
+      "height": 5600,
+      "nativeFontSize": 20,
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        }
+      ]
+    }
+  ],
+  "network": [],
+  "errors": [],
+  "bytes": 136467873
+}
