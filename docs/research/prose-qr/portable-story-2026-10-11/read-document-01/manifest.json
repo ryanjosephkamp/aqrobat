@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-11T17:16:14.706Z",
+  "configPath": "experiments/prose-qr/portable-story-2026-10-11/read-document-01.json",
+  "configSha256": "7f170769cbdbf3b851d65794ec482a9a6c2eb8adb8584c6ef7c8d7b3b4119f63",
+  "ordinaryReaderCalls": 6,
+  "inputs": [
+    {
+      "id": "rtf-native",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-document-01/rtf-native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "fd468f2ab25bd91804d38d05e3520eb9736dab25655a6d647a943c8a102b02c1"
+    },
+    {
+      "id": "pdf-native",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-document-01/pdf-native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "5668c32ed0145a6d571daf3663c8603fc339d05a1cfc11635148d80f16f1eff5"
+    }
+  ],
+  "sources": [
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/read-saved.mjs",
+      "sha256": "74b2b52a81c797a574cdd1f3a8ceb99cfafffaa19bc513a374d99b49c3eecd3e"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053"
+    }
+  ],
+  "inputTransforms": "none",
+  "expectedPayloadNotSuppliedToReader": true
+}

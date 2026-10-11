@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-11T17:34:04.759Z",
+  "configPath": "experiments/prose-qr/portable-story-2026-10-11/read-textedit-01.json",
+  "configSha256": "40406f1f4cb168fbc46029ef76c1cae549869f84a2297a533981afa6adc0744b",
+  "ordinaryReaderCalls": 3,
+  "inputs": [
+    {
+      "id": "textedit-paste-profile",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-textedit-03/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "e684678820f04d83cc888c550051a16231589db6a7d8087f307ce0551f36e900"
+    }
+  ],
+  "sources": [
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/read-saved.mjs",
+      "sha256": "74b2b52a81c797a574cdd1f3a8ceb99cfafffaa19bc513a374d99b49c3eecd3e"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053"
+    }
+  ],
+  "inputTransforms": "none",
+  "expectedPayloadNotSuppliedToReader": true
+}

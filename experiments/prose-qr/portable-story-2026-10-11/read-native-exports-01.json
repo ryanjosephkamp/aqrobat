@@ -1,0 +1,29 @@
+{
+  "id": "read-native-exports-01",
+  "hypothesis": "Ordinary exact-payload reads of every successfully gated native RTF export, no image transforms. Failed native sources receive no substitute image or read.",
+  "inputs": [
+    {
+      "id": "new-prose-complete",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-exports-01/new-prose-complete/native.png",
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "black-complete",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-exports-01/black-complete/native.png",
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "accented-complete",
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/native-exports-01/accented-complete/native.png",
+      "payload": "https://example.com/"
+    }
+  ],
+  "excludedByteReplays": [
+    {
+      "readerBatch": "read-native-exports-01",
+      "id": "accepted-replay",
+      "sha256": "fd468f2ab25bd91804d38d05e3520eb9736dab25655a6d647a943c8a102b02c1",
+      "previouslyReadInput": "docs/research/prose-qr/portable-story-2026-10-11/native-document-01/rtf-native.png"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {gzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+const root='docs/research/prose-qr/portable-story-2026-10-11/';const out=root+'native-textedit-03/';await mkdir(out);
+const previous=await readFile(root+'native-textedit-02/clipboard-input.html.txt','utf8');
+const html=previous.replaceAll('font-size:9pt','font-size:9px').replaceAll('line-height:9pt','line-height:9px');
+await writeFile(out+'clipboard-input.html.txt',html,{flag:'wx'});
+const blank='{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil Impact;}}\\paperw12240\\paperh15840\\margl1620\\margr1620\\margt2000\\margb2000\\viewkind4\\pard\\qj\\sl-180\\slmult0\\f0\\fs18\\par}';
+await writeFile(out+'paste-textedit-profile.rtf',blank,{flag:'wx'});await writeFile(out+'initial.rtf.txt',blank,{flag:'wx'});
+await writeFile(out+'PLAN.json',JSON.stringify({at:new Date().toISOString(),hypothesis:'Actual TextEdit HTML import mapped 9pt CSS to 12pt NSFont and kept a minimum rather than exact line height. Use CSS9px in this explicitly receiver-specific profile to request native9pt; allow the font’s ordinary native leading in a 450x592pt Letter text container. A rectangular QR perspective is a new native layout, not a resized input. Preserve exact 50 word rows or stop before reading.',htmlSha256:createHash('sha256').update(html).digest('hex'),plannedNativeCandidates:1,plannedImmediateRepeats:1,resourceScreenshots:0,bodyPoints:[450,592],drawOriginPoints:[81,100],expectedLines:50,receivingApp:'TextEdit',otherAppsUntested:true,physicalPrint:false,clipboard:'CUA actual HTML paste with automatic prior clipboard restoration'},null,2)+'\n',{flag:'wx'});
+let swift=await readFile('experiments/prose-qr/portable-story-2026-10-11/inspect-rtf.swift','utf8');swift=swift.replace('width:450,height:459','width:450,height:592').replace('NSPoint(x:81,y:171)','NSPoint(x:81,y:100)');
+await writeFile('experiments/prose-qr/portable-story-2026-10-11/inspect-flex-rtf.swift',swift,{flag:'wx'});await writeFile(out+'native-source.swift.txt.gz',gzipSync(swift),{flag:'wx'});

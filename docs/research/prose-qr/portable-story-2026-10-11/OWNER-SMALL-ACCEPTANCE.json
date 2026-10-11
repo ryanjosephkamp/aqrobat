@@ -1,0 +1,64 @@
+{
+  "recordedAt": "2026-10-11T17:05:29.835909+00:00",
+  "question": "Can your Samsung apps scan the smaller mixed-case example, both selectable HTML and native PNG?",
+  "ownerStatement": "Yes. Both apps scanned both successfully.",
+  "device": "Samsung Galaxy S25 Ultra, established in immediately preceding owner report",
+  "candidate": {
+    "html": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/portable-story-2026-10-11/examples/page-impact-mixed.html",
+    "htmlSha256": "b0619421a0688d685df7bb5def05ffa97e54a005c163ebe4185511eb80f0db77",
+    "png": "/Users/noir/Documents/aqrobat/docs/research/prose-qr/portable-story-2026-10-11/batch-01/page-impact-preserve.png",
+    "pngSha256": "c6415e252ddf3953d38e550d32bccd04d10ccca72c8bea05992bebd11a70926b",
+    "font": "Impact 12px, original mixed case, RGB0/RGB180",
+    "fieldCssPixels": 600,
+    "pagePixels": 840,
+    "structural": {
+      "field": 600,
+      "leading": 12,
+      "envelope": 10.828125,
+      "fontSize": 12,
+      "lines": 50,
+      "words": 1136,
+      "maxLineCharacters": 125,
+      "sourceWords": 71,
+      "repetition": true,
+      "repetitions": 16,
+      "case": "preserve",
+      "whitespace": "Whole-word line wrapping; source whitespace normalized for these research fixtures",
+      "gaps": [
+        2.144252232142857,
+        3.5015092329545454
+      ],
+      "ornaments": 0,
+      "hiddenModules": false
+    }
+  },
+  "observations": [
+    {
+      "app": "native Samsung Camera",
+      "surface": "selectable HTML",
+      "result": "owner reports successful scan"
+    },
+    {
+      "app": "native Samsung Camera",
+      "surface": "native PNG",
+      "result": "owner reports successful scan"
+    },
+    {
+      "app": "Samsung Scan QR code",
+      "surface": "selectable HTML",
+      "result": "owner reports successful scan"
+    },
+    {
+      "app": "Samsung Scan QR code",
+      "surface": "native PNG",
+      "result": "owner reports successful scan"
+    }
+  ],
+  "unknown": [
+    "decoded payload displayed by phone",
+    "viewing scale and distance for this smaller test",
+    "native application paste",
+    "physical print"
+  ],
+  "separation": "Four app/surface cells from owner testimony; not four independent software algorithms, repeated-attempt counts, or direct agent observation. Ordinary Vision exact URL receipt is separate; ZXing/jsQR/OpenCV/ZBar negatives retained."
+}
