@@ -1,0 +1,124 @@
+{
+  "at": "2026-10-11T18:18:09.460140+00:00",
+  "authorization": "Owner requested acceptance recording and backup during the bounded typography investigation. Same branch and existing draft PR only.",
+  "checkpointCommit": "a0f441c8bc94c0c9569b992989cc09b669267517",
+  "researchEvidenceCommit": "23fcd77522c1d71032b2545cf2f9b726873e8b0e",
+  "acceptanceSupplementCommit": "bc143d609230a0ce3ee53864bcfc21021a538cb6",
+  "verifiedRemoteHeadBeforeReceipt": "bc143d609230a0ce3ee53864bcfc21021a538cb6",
+  "verifiedTree": "affec83f7b531617bd648c8ef6e94f12dfd3bcb8",
+  "remote": "bc143d609230a0ce3ee53864bcfc21021a538cb6\trefs/heads/codex/aqrobat-foundation\ne41943aff7780107a33a60a21494a41276b92c58\trefs/heads/main\n",
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "codex/aqrobat-foundation",
+    "headRefOid": "bc143d609230a0ce3ee53864bcfc21021a538cb6",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/ryanjosephkamp/aqrobat/pull/1"
+  },
+  "repository": {
+    "isPrivate": false,
+    "nameWithOwner": "ryanjosephkamp/aqrobat",
+    "url": "https://github.com/ryanjosephkamp/aqrobat",
+    "visibility": "PUBLIC"
+  },
+  "mainUnchanged": "e41943aff7780107a33a60a21494a41276b92c58",
+  "seals": [
+    {
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/preservation-baseline.json",
+      "sha256": "3184da36cbebe42539202d5922179127a94f7b37bd41f96b5c70d3b5acacd0a4",
+      "verifiedFiles": 12609,
+      "verifiedBytes": 541363058
+    },
+    {
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/delivery-seal.json",
+      "sha256": "dcf3e3136d09a2925cab4fa70950e14f0436e24d3048bac944581610310d6546",
+      "verifiedFiles": 1997,
+      "verifiedBytes": 113285140
+    },
+    {
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/acceptance-update-seal.json",
+      "sha256": "9d0748b35dae3f53d693c1a1b801d7a3d07ec67f736da032c2eb6b75eb6b07bf",
+      "verifiedFiles": 7,
+      "verifiedBytes": 1176322
+    }
+  ],
+  "gitBlobCustody": {
+    "method": "Recompute SHA-1 of each exact working-file Git blob header and bytes; compare every portable-research object with the pushed commit tree.",
+    "filesVerified": 2008,
+    "bytesVerified": 115910433,
+    "treeListingSha256": "b7918d52f64355b0b08fd998bbfe17887710fc6754c230491f93a48f2c915fd0",
+    "normalizationDrift": []
+  },
+  "secretFindings": [],
+  "scope": [
+    "docs/research/prose-qr/portable-story-2026-10-11/",
+    "experiments/prose-qr/portable-story-2026-10-11/"
+  ],
+  "untrackedOwnerContext": "AQROBAT-CONTEXT/ remains excluded, protected and untouched.",
+  "functionalChecks": [
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "status": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:browser"
+      ],
+      "status": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:text-browser"
+      ],
+      "status": 0
+    }
+  ],
+  "formatting": {
+    "repositoryFormatCheckStatus": 1,
+    "warningPathsAtCommandSnapshot": 641,
+    "historicalWarningPaths": 321,
+    "currentResearchAndEvidenceWarningPathsAtSnapshot": 320,
+    "maintainedSourceStatus": 0,
+    "policy": "Keep exact raw evidence bytes; no normalization of protected files. Supplement source formatted separately.",
+    "whitespaceExceptionsReceipt": "backup-final-diff-check.json",
+    "supplementCachedDiffCheckStatus": 0
+  },
+  "latestOwnerAcceptance": {
+    "positiveAppSurfaceCells": 14,
+    "negativeAppSurfaceCells": 1,
+    "surfaces": 8,
+    "deviceCount": 1,
+    "exactPhonePayload": "not reported",
+    "physicalPrint": "not tested"
+  },
+  "softwareLimit": "No small/page-sized candidate meets the fixed two-software-reader rule; no arbitrary-prose or portable-paste guarantee.",
+  "readerCallsAfterResearchClosure": 0,
+  "imageCapturesAfterResearchClosure": 0,
+  "SiteCalls": 0,
+  "deployments": 0,
+  "audienceChanges": 0,
+  "agents": 0,
+  "newChats": 0,
+  "messages": 0,
+  "merge": false,
+  "npmPrivate": true,
+  "publicSourceVsPrivateSite": "Existing public Git repository visibility is unchanged. No Site API, deployment, sharing or audience call was made; its private audience was not altered.",
+  "deadline": "2026-10-11T19:55:49Z",
+  "researchStoppedAt": "2026-10-11T18:07:50.587992Z",
+  "receiptCommitSemantics": "This post-push receipt is committed as a child of the verified acceptance supplement; the final tool verification checks that child on the remote. The receipt cannot contain its own commit hash."
+}
