@@ -1,0 +1,534 @@
+{
+  "at": "2026-10-10T15:59:00.765Z",
+  "phase": 65,
+  "anchorHead": "867f1ea0b2ec37a9e659a17bdc5798e0f1ef4de0",
+  "goal": "unsolved",
+  "cap": 4000000,
+  "prior": [
+    {
+      "path": "docs/research/prose-qr/session-2026-10-10-b/custody.json",
+      "sha256": "370ee03a1d8f3568174505624f73dec959ea8f86803139406f8eeaec583a4f98"
+    }
+  ],
+  "sources": {
+    "experiments/prose-qr/session-2026-10-10-c/seal-phases.mjs": "0e9c19635bc18bd3eb2c9cb6aa7995dd2277cd6b559f9494cae3202a35bc45a3",
+    "docs/research/prose-qr/phase-65/analysis.json": "f884c0bb41fc7a418e81704ef3f06a869da979c4c1241b948098b9602ed647c9"
+  },
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/phase-65/PLAN.md",
+      "bytes": 2367,
+      "sha256": "861b886f85f43af563c32f5c2aeab92a5e4884a30f22c10de51f7835ae9c0b58"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/README.md",
+      "bytes": 654,
+      "sha256": "fce820ca5309abdd22b16a726a5d0e3d35782bb80e381cf6dfae39dff6220ae1"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/analysis.json",
+      "bytes": 256097,
+      "sha256": "f884c0bb41fc7a418e81704ef3f06a869da979c4c1241b948098b9602ed647c9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/installed-fonts.txt",
+      "bytes": 262,
+      "sha256": "63d1f0695088465298eda3cf88d1b56e474d33f5e4564bb687a8411e525b8eee"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/captures.json",
+      "bytes": 8948,
+      "sha256": "8b87ffbc902a7702637ca2448b674eae80ec1a0e48b3f93d2cfaa5e7e35cfdea"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/jsqr.json",
+      "bytes": 962,
+      "sha256": "942e592d6a6f214e1c948af5e38c9df4d8c3fd844eaa4809b86627b4d67d57da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/opencv.json",
+      "bytes": 356,
+      "sha256": "6664b7eb4d685f137d25d6aace8dcb8691fd296e8b07fcaa1a071c8c0836d6bb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/opencv.raw.json.gz",
+      "bytes": 268,
+      "sha256": "a7b895f98e5e093070ca11a9e0c87ac17c6bd12dcf4999aeec605dbd70e54fe9"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/passive-full.json.gz",
+      "bytes": 4664,
+      "sha256": "590921888d4dc6646ef044572f093f1c9fbcbfd52eec9b2da16f3e3dc82d9163"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/passive-summary.json",
+      "bytes": 25812,
+      "sha256": "bb41f268ac97661e45f707ce2dab83393812a85c4021b72d89242b816233bdd7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/pixels.json",
+      "bytes": 284,
+      "sha256": "2a1d899bc2b967d0df80e0f9b5f3a6e0809c2847a9d773f053c164ae64665261"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-inverted/zxing.json",
+      "bytes": 378,
+      "sha256": "8e650798cc2bc4dbf9d9fa606227ea6af77fff79c630d7b3d66e14ad2a19a3c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/jsqr.json",
+      "bytes": 962,
+      "sha256": "942e592d6a6f214e1c948af5e38c9df4d8c3fd844eaa4809b86627b4d67d57da"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/opencv.json",
+      "bytes": 452,
+      "sha256": "481e6111a8ce8870814695b5e769af3b80739c447289b4fab9715723176dd31c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/opencv.raw.json.gz",
+      "bytes": 304,
+      "sha256": "4daa0e66de01276ef31486bce81141acd0b9987303f4217daa5df8fbc4c0a224"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/passive-full.json.gz",
+      "bytes": 2231,
+      "sha256": "16ff6f0794c62db183a2b15de244a89f4866eeef5711bc394422082f4eced811"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/passive-summary.json",
+      "bytes": 12762,
+      "sha256": "e2948c939ae8d6ef6055a9aaca722f30865b8c78334c27c90edb58ffecc5f95f"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/pixels.json",
+      "bytes": 282,
+      "sha256": "0a39d23a6a0d437e8dc51cc02483e6f5bd284e858b1258c7e3b0998a12c0bcb8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/control-normal/zxing.json",
+      "bytes": 378,
+      "sha256": "8e650798cc2bc4dbf9d9fa606227ea6af77fff79c630d7b3d66e14ad2a19a3c6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/done.json",
+      "bytes": 297,
+      "sha256": "047616d3164390ad7ed5bc8ae6aa8d597cc414513197d0a381115d9392c75780"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/capture.json",
+      "bytes": 1819,
+      "sha256": "18ca66a5c1633a188488becc388394bcbe8798da206883077bf6d36d4b9274c8"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/glyph.html.gz",
+      "bytes": 394,
+      "sha256": "7fb027c5daf7a4159d14362a15b6524f84c03e1859b46c97e2d4d3aaaee27efb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/glyph.png",
+      "bytes": 1327,
+      "sha256": "d61db1a8c5bdb6b0ba96d82a67c73ca228575662b894f9fac99e8ec88bb75608"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/holes.json",
+      "bytes": 750,
+      "sha256": "b5f4c79d715d815915690b9dc92664379282841d5d9fb4f1c8e3704e4a5801ab"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/holes.raw.json.gz",
+      "bytes": 365,
+      "sha256": "3e7a1c5b92d99083586fd8885919288d923ff6ddab8d03f1c3d41a43c92e6175"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/letters.png",
+      "bytes": 8432,
+      "sha256": "adab676a66bb68de6259c497891f3105eba74456c572b644be7eb07d06f5571e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/native.html.gz",
+      "bytes": 450,
+      "sha256": "da653017506108bb5a0410fc34ee0659498cc412802bfa724fd4b9b2e111c4f2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/native.png",
+      "bytes": 94859,
+      "sha256": "8ab4a61d0c01b4d1d2ec5529451245436fcdf5da2567692bead8e8fa019f5886"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/opencv.json",
+      "bytes": 445,
+      "sha256": "9ef10db35244d9dae77392a39dcee9e8080e15db9a5d9f37577cdd4cff5928f7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/opencv.raw.json.gz",
+      "bytes": 307,
+      "sha256": "8f970794e53432ec24ba71ed57b9234b781d50d2611489c683b50df14d9e7ccb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/passive-full.json.gz",
+      "bytes": 27966,
+      "sha256": "c9453db3247adece95dfe0d3a26d4a15fcbf290fb6541af19ba27150907edfb7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/passive-summary.json",
+      "bytes": 30202,
+      "sha256": "449a757e72a3babbc0fc248e46b3a375baa65250fb92ade9164e41fefa5ac34b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/pixels.json",
+      "bytes": 277,
+      "sha256": "25ed4e28df122fc005c525c5ec8cd6a50ba4dca291c1dd2d93fcd88357c4b288"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/recipe.json",
+      "bytes": 4552,
+      "sha256": "9dba4b8c55be40c3725ee5f4b10e242ad81277adeddf257863ae1ba221dd59ac"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/resource-fonts.json",
+      "bytes": 210,
+      "sha256": "ed51692bd5ac944ad11bba5aa6caaa306a90c50a3d2fa8761a41cc5ba3fcc875"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/resource-profile.json",
+      "bytes": 1814,
+      "sha256": "c1091fadeeabaa8dd0e807530a57229e9c40a984fd8042013ebcc7cc27bbff52"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-sc/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/capture.json",
+      "bytes": 1819,
+      "sha256": "a25ff618f27c59346c93fe7cbc7c3b2c9bd7dca58069a81b051c7e082c552863"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/glyph.html.gz",
+      "bytes": 394,
+      "sha256": "ad67b5bbc2ba0a054655a487c8eb171dad84d4cb10e8e282397d4d4ce2bb14e4"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/glyph.png",
+      "bytes": 1327,
+      "sha256": "d61db1a8c5bdb6b0ba96d82a67c73ca228575662b894f9fac99e8ec88bb75608"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/holes.json",
+      "bytes": 750,
+      "sha256": "b5f4c79d715d815915690b9dc92664379282841d5d9fb4f1c8e3704e4a5801ab"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/holes.raw.json.gz",
+      "bytes": 365,
+      "sha256": "3e7a1c5b92d99083586fd8885919288d923ff6ddab8d03f1c3d41a43c92e6175"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/letters.png",
+      "bytes": 8432,
+      "sha256": "adab676a66bb68de6259c497891f3105eba74456c572b644be7eb07d06f5571e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/native.html.gz",
+      "bytes": 450,
+      "sha256": "f837f1ea189d1b49596667da24e452c9a8c1068ac5efe11f703832621aafad54"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/native.png",
+      "bytes": 94859,
+      "sha256": "8ab4a61d0c01b4d1d2ec5529451245436fcdf5da2567692bead8e8fa019f5886"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/opencv.json",
+      "bytes": 447,
+      "sha256": "a8ca628702f1128b95cca2feb48e9889c33c99f66394591d1426285113ff30cd"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/opencv.raw.json.gz",
+      "bytes": 307,
+      "sha256": "beac30b15d8e8ae6675a4a9faa6a0cb0e2715c3135bcb5928d2d9543ccc211bc"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/passive-full.json.gz",
+      "bytes": 27966,
+      "sha256": "c9453db3247adece95dfe0d3a26d4a15fcbf290fb6541af19ba27150907edfb7"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/passive-summary.json",
+      "bytes": 30202,
+      "sha256": "449a757e72a3babbc0fc248e46b3a375baa65250fb92ade9164e41fefa5ac34b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/pixels.json",
+      "bytes": 277,
+      "sha256": "224d0b48d552045f5bb7e87e2a3ef73e69b06a5a0795db221072730959f7b0fb"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/recipe.json",
+      "bytes": 4552,
+      "sha256": "54435ad4c93c26822f22421ccc93c0c990f701e18e33ca6361a97d1583506371"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/resource-fonts.json",
+      "bytes": 210,
+      "sha256": "bceeadc60de53b0a88009e9725c7eb983cc9eb4083e105a507171faaa62da351"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/resource-profile.json",
+      "bytes": 1814,
+      "sha256": "c1091fadeeabaa8dd0e807530a57229e9c40a984fd8042013ebcc7cc27bbff52"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/heiti-tc/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/capture.json",
+      "bytes": 1842,
+      "sha256": "7a4ad2911b0b99604a2a2498ac1972127e638a8048fe89e1647a304bb3f94c41"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/glyph.html.gz",
+      "bytes": 404,
+      "sha256": "3c7174d087d4d44b0dfba9e5890037c47f2ee646a70fe7a827e791a706bba413"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/glyph.png",
+      "bytes": 1211,
+      "sha256": "56e2e1ffd19b074bce39e7c151d252bde35a6fed5478ae94b1e0eda2b6caf8f0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/holes.json",
+      "bytes": 784,
+      "sha256": "badf92d7b1f7301066b483f392a071a2cef8e021e57ecff29fca3aa442f59e20"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/holes.raw.json.gz",
+      "bytes": 369,
+      "sha256": "34bb88275a61d8a0bd30b049911cec8acabeda097c482c00562923e404c16892"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/letters.png",
+      "bytes": 10226,
+      "sha256": "cbebc08722f4cf0e8760e17528d87925329955509f24fbd1bf933a392aa4b50c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/native.html.gz",
+      "bytes": 466,
+      "sha256": "a1aa438607cb0e299f04adeedb433d3dad7be3f89eea25abdc4042a48d67d49b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/native.png",
+      "bytes": 108874,
+      "sha256": "7f69a5c55fc5002b1f58cac9200c7654a4596f8f1e2df517bd87438103382c64"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/opencv.json",
+      "bytes": 437,
+      "sha256": "ece0d5d39e2463aa1c88cce7820635aad19fa5319265ba7fa69cae2c15efec85"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/opencv.raw.json.gz",
+      "bytes": 300,
+      "sha256": "76662beb321cbe345dd3dd2f9733f86dc65d9c0aaa9b0819817fed9dc050ab09"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/passive-full.json.gz",
+      "bytes": 28914,
+      "sha256": "0befd98c20923d153a2d9c1613120df52feb8c0618eb5bd867e64502151b1b6c"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/passive-summary.json",
+      "bytes": 30242,
+      "sha256": "4947f4b465f99d272137a18b8feaa6fdfbc9d19bbcd7300abe0316a469e631ad"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/pixels.json",
+      "bytes": 280,
+      "sha256": "9d6dad38c4cef52cd08c12bba78bf80993b892f56c61529d77483c03b2456a08"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/recipe.json",
+      "bytes": 4616,
+      "sha256": "4c1b9973c5e7488a850930fe593095fc46fa9e7e88406957e50dcc2ceeebc2ed"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/resource-fonts.json",
+      "bytes": 222,
+      "sha256": "7ef7c9cc339aedcd31e89066031b97b8c5a2d5cfcaa7f7eb5c9f6171af57f176"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/resource-profile.json",
+      "bytes": 1796,
+      "sha256": "28514bcdd791c766e78ba9f52444ade90f856a98d5ee6e566966be4bb4c0fbf6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino-gb/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/capture.json",
+      "bytes": 1826,
+      "sha256": "915c8b56ff9fff75d7991f1cdcb173d627bae40be056b0e2c38751985488977e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/glyph.html.gz",
+      "bytes": 401,
+      "sha256": "239d910dfe066af066c7382306993ffc6ebcd2111c1991a2f81ce12a56fb390e"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/glyph.png",
+      "bytes": 1211,
+      "sha256": "56e2e1ffd19b074bce39e7c151d252bde35a6fed5478ae94b1e0eda2b6caf8f0"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/holes.json",
+      "bytes": 784,
+      "sha256": "badf92d7b1f7301066b483f392a071a2cef8e021e57ecff29fca3aa442f59e20"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/holes.raw.json.gz",
+      "bytes": 369,
+      "sha256": "34bb88275a61d8a0bd30b049911cec8acabeda097c482c00562923e404c16892"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/jsqr.json",
+      "bytes": 95,
+      "sha256": "de1defe1b10a3ed2ef59d1682512f28f2e33cb02a1415c3206961605e10190df"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/letters.png",
+      "bytes": 10226,
+      "sha256": "09bb742925b3b34183cd4cddd4f7d1e8dd023dc41e920c2fbdf0bfd13d46f588"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/native.html.gz",
+      "bytes": 464,
+      "sha256": "2d01af4efc5e26bc66919ac26a666895bc4125544ba52039a4b3a407a1b3d92d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/native.png",
+      "bytes": 109501,
+      "sha256": "a6b2d1c47fab4cfd4468cb1e0aa9f3feda83f848c1a4ddd8dc44f9cbaa858812"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/native.txt",
+      "bytes": 1154,
+      "sha256": "1e21f5269f3daff619e05afb5ab794b81c1c6278ce5490b13619be875b593341"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/opencv.json",
+      "bytes": 434,
+      "sha256": "6200d296fb552f790ae80892df485b63b568f1b54d2c64ca48e37068413ca71b"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/opencv.raw.json.gz",
+      "bytes": 297,
+      "sha256": "de27bba90c06b176759da22eb0f79644029c35b27439ddd551a7dca837124956"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/passive-full.json.gz",
+      "bytes": 28940,
+      "sha256": "af62e8b3446075cec61ce6091006bb4084983bf70069b435c418032803eb4c41"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/passive-summary.json",
+      "bytes": 30242,
+      "sha256": "4947f4b465f99d272137a18b8feaa6fdfbc9d19bbcd7300abe0316a469e631ad"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/pixels.json",
+      "bytes": 277,
+      "sha256": "66f7f3adbd2f0987cdfce26568013d7d9363c6b4361dbad9ea9149c182c4fd1d"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/recipe.json",
+      "bytes": 4611,
+      "sha256": "12c37b4184eb3dddb8cb3c5ff88ed8270a2109e160dfd48391f9827f8ac29041"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/resource-fonts.json",
+      "bytes": 215,
+      "sha256": "a13d183509978fd559bae19375ac3553e91aebeedaae76e3368379da998dd442"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/resource-profile.json",
+      "bytes": 1796,
+      "sha256": "28514bcdd791c766e78ba9f52444ade90f856a98d5ee6e566966be4bb4c0fbf6"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/hiragino/zxing.json",
+      "bytes": 75,
+      "sha256": "1ffb3cefdefe14ff587d44201e6c6934d158a39fceefb9294ac23706ba3184d2"
+    },
+    {
+      "path": "docs/research/prose-qr/phase-65/run-01/manifest.json",
+      "bytes": 3560,
+      "sha256": "111e51a24010d081e4793bcc95f69f3cffdc4f9e7f826e8d1ee8380fe5335983"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-design/common.mjs",
+      "bytes": 1093,
+      "sha256": "8fd9a6828e748798447b3fb1ac2e80149f5cadc6b2ac4a43dc3b4416a4840ddf"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-design/fonts.swift",
+      "bytes": 243,
+      "sha256": "a1e33bdbedb678ceaec21d50978787c77d51823864324f6bbe85b66848c6e89b"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-design/holes.py",
+      "bytes": 1131,
+      "sha256": "1248f536613bd0ed99e881b779294e0f86a7bd82fe58c170e124953d619d1d49"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-design/passive.mjs",
+      "bytes": 6249,
+      "sha256": "46e8e84e8817e2f9bade90c90a8e75d096f8f5661d342899b56974d9c568b61d"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-design/profile.mjs",
+      "bytes": 1332,
+      "sha256": "46d3ca9375ab38d2903b8492a0cceace8c0d4617064aee028a572a99963eb53b"
+    },
+    {
+      "path": "experiments/prose-qr/context-counter-design/run.mjs",
+      "bytes": 18575,
+      "sha256": "cb6213c430d6974b7f4bb50291cc8c93011c186c039740ce86fa6160fef61210"
+    }
+  ]
+}

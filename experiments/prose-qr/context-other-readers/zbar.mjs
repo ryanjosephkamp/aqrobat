@@ -1,0 +1,107 @@
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import Module from "node:module";
+import { resolve, dirname } from "node:path";
+import { execFileSync } from "node:child_process";
+import assert from "node:assert/strict";
+import { format } from "prettier";
+const root = "docs/research/prose-qr/phase-46/",
+  out = root + "zbar-01/";
+const sha = (b) => createHash("sha256").update(b).digest("hex");
+await mkdir(out);
+const save = async (name, value) =>
+  writeFile(
+    out + name,
+    await format(JSON.stringify(value), { parser: "json" }),
+    { flag: "wx" },
+  );
+const inputs = [
+  {
+    id: "native",
+    path: "docs/research/prose-qr/phase-45/run-01/native.png",
+    pixels: "docs/research/prose-qr/phase-45/run-01/native-pixels.json",
+  },
+  {
+    id: "control",
+    path: "docs/research/prose-qr/phase-12/run-01/raw/full.png",
+    pixels: "docs/research/prose-qr/phase-45/run-01/control-pixels.json",
+  },
+];
+await save("manifest.json", {
+  at: new Date().toISOString(),
+  plannedInputs: 2,
+  inputs,
+  options: "Default scanImageData(imageData), no options or geometry",
+  sources: Object.fromEntries(
+    await Promise.all(
+      [
+        "experiments/prose-qr/context-other-readers/zbar.mjs",
+        root + "PLAN.md",
+        "docs/research/prose-qr/phase-26/package-01/main.cjs.txt",
+        "docs/research/prose-qr/phase-26/package-01/zbar.wasm",
+        "docs/research/prose-qr/phase-26/package-01/original.tgz",
+        "docs/research/prose-qr/phase-26/package-01/wrapper-source.tar.gz",
+        "docs/research/prose-qr/phase-26/package-01/zbar-0.23.90.tar.gz",
+      ].map(async (p) => [p, sha(await readFile(p))]),
+    ),
+  ),
+});
+const file = resolve("docs/research/prose-qr/phase-26/package-01/main.cjs.txt"),
+  mod = new Module(file);
+mod.filename = file;
+mod.paths = Module._nodeModulePaths(dirname(file));
+mod._compile(await readFile(file, "utf8"), file);
+const { scanImageData } = mod.exports;
+try {
+  for (const input of [...inputs].reverse()) {
+    const png = await readFile(input.path),
+      expected = JSON.parse(await readFile(input.pixels));
+    assert.equal(sha(png), expected.pngSha256);
+    const buf = execFileSync(
+      "python3",
+      [
+        "-c",
+        `import cv2,sys,struct\na=cv2.imread(sys.argv[1],cv2.IMREAD_UNCHANGED)\nassert a is not None\na=cv2.cvtColor(a,cv2.COLOR_BGRA2RGBA if a.shape[2]==4 else cv2.COLOR_BGR2RGBA)\nsys.stdout.buffer.write(struct.pack('>II',a.shape[1],a.shape[0])+a.tobytes())`,
+        input.path,
+      ],
+      { maxBuffer: 500_000_000 },
+    );
+    const width = buf.readUInt32BE(0),
+      height = buf.readUInt32BE(4),
+      rgba = buf.subarray(8);
+    assert.equal(rgba.length, width * height * 4);
+    assert.equal(sha(rgba), expected.rgbaSha256);
+    const start = Date.now(),
+      found = await scanImageData({
+        data: new Uint8ClampedArray(rgba),
+        width,
+        height,
+      });
+    const results = found.map((r) => ({
+      type: r.type,
+      typeName: r.typeName,
+      text: r.decode(),
+      rawData: Array.from(r.data ?? []),
+      points: r.points,
+      quality: r.quality,
+      orientation: r.orientation,
+    }));
+    const receipt = {
+      id: input.id,
+      path: input.path,
+      at: new Date().toISOString(),
+      width,
+      height,
+      pngSha256: sha(png),
+      rgbaSha256: sha(rgba),
+      ms: Date.now() - start,
+      results,
+      exact: results.some((r) => r.text === "https://example.com/"),
+    };
+    await save(input.id + ".json", receipt);
+    console.log(JSON.stringify(receipt));
+  }
+} catch (e) {
+  await save("error.json", { at: new Date().toISOString(), error: e.stack });
+  throw e;
+}

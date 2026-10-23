@@ -1,0 +1,152 @@
+{
+  "fullQR": {
+    "path": "raw/full-qr-control.png",
+    "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+    "rgbaSha256": "a5a54e758f50df5fcc243be0d601847878088af0bffe5ccc8309073312cdd4ec",
+    "width": 656,
+    "height": 656,
+    "baseline": {
+      "jsQR": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true
+      },
+      "zxing": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true,
+        "results": [
+          {
+            "payload": "https://example.com/",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [
+              104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108,
+              101, 46, 99, 111, 109, 47
+            ]
+          }
+        ]
+      }
+    },
+    "ordinaryZXing": { "payloads": ["https://example.com/"], "exact": true }
+  },
+  "solidFinder": {
+    "path": "raw/solid-finder-control.png",
+    "pngSha256": "b257dc776e8141cec6290589a09a45ac57596395cdda5f8334311c7061eaa0ee",
+    "rgbaSha256": "a34f74f212a5f35be8facc3f4b8fe28b92e5c8ed1d478a826729a758ccdaf0a1",
+    "width": 840,
+    "height": 840,
+    "diagnostic": {
+      "classification": "Renderer diagnostic after independent decoding, not payload recovery. Expected finder/matrix never given to acceptance readers.",
+      "correctFinder": true,
+      "locations": [
+        {
+          "alignmentPattern": { "x": 636, "y": 204 },
+          "bottomLeft": { "x": 204, "y": 636 },
+          "dimension": 25,
+          "topLeft": { "x": 204, "y": 204 },
+          "topRight": { "x": 636, "y": 204 }
+        },
+        {
+          "alignmentPattern": { "x": 636, "y": 204 },
+          "bottomLeft": { "x": 203.5, "y": 635.5 },
+          "topLeft": { "x": 203.5, "y": 203.5 },
+          "topRight": { "x": 635.5, "y": 203.5 },
+          "dimension": 25
+        }
+      ],
+      "expected": {
+        "topLeft": { "x": 204, "y": 204 },
+        "topRight": { "x": 636, "y": 204 },
+        "bottomLeft": { "x": 204, "y": 636 }
+      },
+      "corridors": {
+        "topLeft": {
+          "horizontal": {
+            "pixels": 168,
+            "agreement": 1,
+            "runs": [
+              { "black": true, "pixels": 24 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 72 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 24 }
+            ],
+            "longestCentralBlackFraction": 1
+          },
+          "vertical": {
+            "pixels": 168,
+            "agreement": 1,
+            "runs": [
+              { "black": true, "pixels": 24 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 72 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 24 }
+            ],
+            "longestCentralBlackFraction": 1
+          }
+        },
+        "topRight": {
+          "horizontal": {
+            "pixels": 168,
+            "agreement": 1,
+            "runs": [
+              { "black": true, "pixels": 24 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 72 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 24 }
+            ],
+            "longestCentralBlackFraction": 1
+          },
+          "vertical": {
+            "pixels": 168,
+            "agreement": 1,
+            "runs": [
+              { "black": true, "pixels": 24 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 72 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 24 }
+            ],
+            "longestCentralBlackFraction": 1
+          }
+        },
+        "bottomLeft": {
+          "horizontal": {
+            "pixels": 168,
+            "agreement": 1,
+            "runs": [
+              { "black": true, "pixels": 24 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 72 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 24 }
+            ],
+            "longestCentralBlackFraction": 1
+          },
+          "vertical": {
+            "pixels": 168,
+            "agreement": 1,
+            "runs": [
+              { "black": true, "pixels": 24 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 72 },
+              { "black": false, "pixels": 24 },
+              { "black": true, "pixels": 24 }
+            ],
+            "longestCentralBlackFraction": 1
+          }
+        }
+      },
+      "centerCoverage": {
+        "dark": 99,
+        "darkCentersBlack": 99,
+        "light": 526,
+        "lightCentersBlack": 0
+      }
+    },
+    "encodedPayload": null
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "slots": [
+    {
+      "id": "canonical-control",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T22:11:03.494Z",
+      "exactExpected": false,
+      "pngSha256": "8bca3f8b05e63b764d44b98c6f4dfb4ca664b1c55f7b94243c0ac8184798ec54",
+      "rawSha256": "b8065a9f6f1d10495c19cd815615e755feb3521b5d317f66e5de4772103241be",
+      "completedAtUtc": "2026-10-10T22:11:03.736Z"
+    },
+    {
+      "id": "canonical-control",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "canonical-control",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "continuous-native",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "continuous-native",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    },
+    {
+      "id": "continuous-native",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Invalid control: canonical-control/opencv"
+    }
+  ],
+  "stop": {
+    "atUtc": "2026-10-10T22:11:03.739Z",
+    "current": "canonical-control",
+    "message": "Invalid control: canonical-control/opencv",
+    "stack": "AssertionError [ERR_ASSERTION]: Invalid control: canonical-control/opencv\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch-v6.mjs:466:9"
+  },
+  "updatedAtUtc": "2026-10-10T22:11:04.036Z"
+}

@@ -1,0 +1,97 @@
+{
+  "startedAt": "2026-10-09T14:45:47.281Z",
+  "parameters": [
+    {
+      "id": "font-color-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Monaco",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 400,
+      "lightWeight": 400,
+      "gray": 120,
+      "track": "color-only"
+    },
+    {
+      "id": "font-color-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Monaco",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 400,
+      "lightWeight": 400,
+      "gray": 180,
+      "track": "color-only"
+    },
+    {
+      "id": "font-color-3",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 400,
+      "lightWeight": 400,
+      "gray": 120,
+      "track": "color-only"
+    },
+    {
+      "id": "font-color-4",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier",
+      "content": "story",
+      "charsPerModule": 4,
+      "linesPerModule": 2,
+      "fontSize": 20,
+      "quiet": 5,
+      "ecc": "M",
+      "boost": false,
+      "darkWeight": 400,
+      "lightWeight": 400,
+      "gray": 180,
+      "track": "color-only"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/unweighted/font-color.mjs": "16ad22c93c721b5cb941702bb5cd7507c99ea39b6dd030d9fe2d3822e58bc32a",
+    "experiments/prose-qr/unweighted/capture.mjs": "23382aceca70f25f4f5dabcebad9aa188eb1bf9d716d5ec1fbd0a512009f9ba8",
+    "experiments/prose-qr/flow/layout.mjs": "393f240ef5470e8b7d1ba8221f166b3de56a8bf89c5fe8065c96e5f261ced6b3",
+    "docs/research/prose-qr/phase-03/font-metrics.json": "d89e988e15cbfa12e512111aec589d672c4198e782e0a000dd616b8bcb8dbd20"
+  },
+  "metricsSha256": "fd8fe2de746552545dc4c6e19f44fbe79b569410d0beb1307fae6cbefa167ad7",
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "configuredReader": {
+    "formats": ["QRCode"],
+    "tryHarder": true,
+    "maxNumberOfSymbols": 1,
+    "binarizer": "GlobalHistogram",
+    "downscaleThreshold": 50,
+    "downscaleFactor": 2
+  },
+  "classification": "Unchanged native paragraph screenshots. Uniform 400 weight. Color-only and uniform-black letter-choice tracks kept separate. No external preprocessing, repair, crop, or expected-payload/matrix input to decoders."
+}

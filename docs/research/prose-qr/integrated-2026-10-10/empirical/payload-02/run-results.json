@@ -1,0 +1,259 @@
+{
+  "startedAtUtc": "2026-10-10T21:47:51.430Z",
+  "finishedAtUtc": "2026-10-10T21:47:55.748Z",
+  "stop": null,
+  "captures": [
+    {
+      "id": "canonical-control",
+      "kind": "control",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/canonical-control",
+      "sourceHtmlSha256": "87e175fdaaa8eca53340e399fb44659484a0f1f75fd850143116ee45c30e04d8",
+      "payload": "https://example.com/",
+      "geometry": {
+        "unit": 6.5,
+        "dimension": 37,
+        "origin": 64,
+        "version": 5,
+        "counters": [
+          {
+            "x": 86.75,
+            "y": 86.75
+          },
+          {
+            "x": 281.75,
+            "y": 86.75
+          },
+          {
+            "x": 86.75,
+            "y": 281.75
+          }
+        ],
+        "alignment": {
+          "x": 262.25,
+          "y": 262.25
+        }
+      },
+      "startedAtUtc": "2026-10-10T21:47:52.205Z",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/canonical-control/input.png",
+      "width": 512,
+      "height": 512,
+      "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+      "repeatSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+      "repeatExact": true,
+      "rgbaSha256": "e0622e6eab1988451fe7e85c8c9f68e7f83808e3261eead2127b10bb78920748",
+      "repeatRgbaSha256": "e0622e6eab1988451fe7e85c8c9f68e7f83808e3261eead2127b10bb78920748",
+      "sourceVerifiedAfterCapture": true,
+      "completedAtUtc": "2026-10-10T21:47:52.657Z"
+    },
+    {
+      "id": "native-projection",
+      "kind": "native",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection",
+      "sourceHtmlSha256": "ee7e0d9325edac4e61aee1c6f382718ace2d49c0dfd4d628007030f57096b6f0",
+      "payload": "https://example.com/",
+      "geometry": {
+        "unit": 6.5,
+        "dimension": 37,
+        "origin": 64,
+        "version": 5,
+        "counters": [
+          {
+            "x": 86.75,
+            "y": 86.75
+          },
+          {
+            "x": 281.75,
+            "y": 86.75
+          },
+          {
+            "x": 86.75,
+            "y": 281.75
+          }
+        ],
+        "alignment": {
+          "x": 262.25,
+          "y": 262.25
+        }
+      },
+      "startedAtUtc": "2026-10-10T21:47:53.969Z",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/payload-02/native-projection/input.png",
+      "width": 512,
+      "height": 512,
+      "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+      "repeatSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+      "repeatExact": true,
+      "rgbaSha256": "2917fa52fa9f0db3986ce5fea3473575926d40911b0b126cdb9a5a4988520582",
+      "repeatRgbaSha256": "2917fa52fa9f0db3986ce5fea3473575926d40911b0b126cdb9a5a4988520582",
+      "sourceVerifiedAfterCapture": true,
+      "completedAtUtc": "2026-10-10T21:47:54.293Z"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "canonical-control",
+      "parity": true,
+      "strictBranches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "strictPass": false,
+          "first": {
+            "alignmentPattern": {
+              "x": 262,
+              "y": 262
+            },
+            "bottomLeft": {
+              "x": 89.75,
+              "y": 282
+            },
+            "dimension": 37,
+            "topLeft": {
+              "x": 89.5,
+              "y": 87
+            },
+            "topRight": {
+              "x": 281.75,
+              "y": 86.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "native-projection",
+      "parity": true,
+      "strictBranches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "strictPass": false,
+          "first": {
+            "alignmentPattern": {
+              "x": 241,
+              "y": 261
+            },
+            "bottomLeft": {
+              "x": 87.25,
+              "y": 281.5
+            },
+            "dimension": 37,
+            "topLeft": {
+              "x": 87.25,
+              "y": 87
+            },
+            "topRight": {
+              "x": 282.25,
+              "y": 87.5
+            }
+          }
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "strictPass": false,
+          "first": {
+            "alignmentPattern": {
+              "x": 172,
+              "y": 190
+            },
+            "bottomLeft": {
+              "x": 92.25,
+              "y": 294.5
+            },
+            "dimension": 37,
+            "topLeft": {
+              "x": 100,
+              "y": 205
+            },
+            "topRight": {
+              "x": 291.25,
+              "y": 80.5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "canonical-control",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:47:52.663Z",
+      "exactExpected": true,
+      "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+      "rawSha256": "4bb445a77fe29f39318696f6703e46f487568107b1766ad5d8639008c2ffe044",
+      "completedAtUtc": "2026-10-10T21:47:52.807Z"
+    },
+    {
+      "id": "canonical-control",
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:47:52.813Z",
+      "exactExpected": true,
+      "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+      "rawSha256": "aeacd77d7d28528c6d168a15c7a846044af2c8ddc173f625967bf7eabd629cb3",
+      "completedAtUtc": "2026-10-10T21:47:53.358Z"
+    },
+    {
+      "id": "canonical-control",
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:47:53.362Z",
+      "exactExpected": true,
+      "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+      "rawSha256": "de36b5b99d65b6bd8de7e3fe8ad027b65beb24eeab473e842bd90f95065e4e22",
+      "completedAtUtc": "2026-10-10T21:47:53.582Z"
+    },
+    {
+      "id": "native-projection",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T21:47:54.404Z",
+      "exactExpected": false,
+      "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+      "rawSha256": "0bf3318b7161e935beb0b46b75d6a59269b28fd2e52ca9f0a4ab537fd62c65be",
+      "completedAtUtc": "2026-10-10T21:47:54.555Z"
+    },
+    {
+      "id": "native-projection",
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T21:47:54.569Z",
+      "exactExpected": false,
+      "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+      "rawSha256": "7cc1ac95de6d114cd8e843111c587d1100cd4f4d7fd040da73c7f41d5fe61038",
+      "completedAtUtc": "2026-10-10T21:47:54.995Z"
+    },
+    {
+      "id": "native-projection",
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T21:47:55.002Z",
+      "exactExpected": false,
+      "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+      "rawSha256": "0af66500ec62471f581ad7c8a04c1616905e20a4d1aad1cda4228b5ac1b0a8e6",
+      "completedAtUtc": "2026-10-10T21:47:55.217Z"
+    }
+  ],
+  "budget": {
+    "glyphResources": 67,
+    "nativeCaptures": 8,
+    "controlCaptures": 6,
+    "ordinaryCalls": 30,
+    "profiles": 9,
+    "repeats": 14,
+    "payloadTrials": 2
+  },
+  "bytesAtEnd": 14489070,
+  "browserClosed": true
+}

@@ -1,0 +1,10 @@
+import {mkdir,readFile,writeFile} from "node:fs/promises";
+import {resolve} from "node:path";
+import {createHash} from "node:crypto";
+import {spawnSync} from "node:child_process";
+const configBytes=await readFile(process.argv[2]);const config=JSON.parse(configBytes);const root=resolve("docs/research/prose-qr/styled-story-2026-10-11/"+config.id);await mkdir(root);
+const sha=b=>createHash("sha256").update(b).digest("hex");const save=(n,b)=>writeFile(resolve(root,n),typeof b==="string"||Buffer.isBuffer(b)?b:JSON.stringify(b,null,2)+"\n",{flag:"wx"});
+const source=await readFile(new URL("vision.swift",import.meta.url));await save("source.swift.txt",source);await save("runner.mjs.txt",await readFile(new URL("vision-replay.mjs",import.meta.url)));
+await save("manifest.json",{at:new Date().toISOString(),config,configSha256:sha(configBytes),sourceSha256:sha(source),readerCalls:config.inputs.length,nativeCaptures:0,inputTransforms:"none"});
+const raw=spawnSync("swift",["experiments/prose-qr/styled-story-2026-10-11/vision.swift",...config.inputs.map(s=>resolve(s.path))],{encoding:"utf8",timeout:60000,maxBuffer:2000000});await save("stdout.txt",raw.stdout||"");await save("stderr.txt",raw.stderr||"");await save("process.json",{status:raw.status,error:raw.error?.message||null});if(raw.status!==0)throw Error("Vision process failed");
+const result=JSON.parse(raw.stdout);const rows=result.rows.map((r,i)=>({...r,id:config.inputs[i].id,expected:config.inputs[i].payload,exact:r.texts?.includes(config.inputs[i].payload)||false}));if(rows.some(r=>r.texts?.some(s=>s!==r.expected)))throw Error("Wrong Vision payload");await save("results.json",{...result,rows});console.log(JSON.stringify(rows.map(r=>({id:r.id,exact:r.exact,texts:r.texts,error:r.error||null}))));

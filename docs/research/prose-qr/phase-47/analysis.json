@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-10T05:38:34.961Z",
+  "phase": 47,
+  "goal": "unsolved",
+  "phoneTests": 0,
+  "phoneCandidates": 0,
+  "plannedSavedInputs": 2,
+  "completedSavedInputs": 2,
+  "decoderCalls": 0,
+  "newNativeSources": 0,
+  "summary": {
+    "nativeFullCenterMismatches": 304,
+    "nativeInitCenterMismatches": 0,
+    "centerDenominator": 625,
+    "nativeFullOccupancy": {
+      "dark": {
+        "min": 0.235725205658958,
+        "max": 0.2830642060745867,
+        "mean": 0.27432951230834574,
+        "cells": 332
+      },
+      "light": {
+        "min": 0.17661476355247982,
+        "max": 0.1948529411764706,
+        "mean": 0.1837860790837722,
+        "cells": 293
+      }
+    },
+    "nativeInitOccupancy": {
+      "dark": {
+        "min": 0.6222222222222222,
+        "max": 1,
+        "mean": 0.9813074520303435,
+        "cells": 332
+      },
+      "light": { "min": 0, "max": 0, "mean": 0, "cells": 293 }
+    },
+    "controlFullCenterMismatches": 0,
+    "controlInitCenterMismatches": 0,
+    "description": "For the saved native payload, the full-resolution threshold replica disagrees with 304 of 625 nominal centers; the 512-pixel initialization replica disagrees with 0. The conventional control differs at 0 and 0 centers respectively. This suggests a scale-related gap, but neither grid is a decoder return or proof of the precise internal failure."
+  },
+  "expectedRegionNativeReplicaRuns": [
+    {
+      "point": [2487, 2487],
+      "runs": {
+        "H": [2, 13, 5, 3, 2],
+        "V": [2, 6, 2, 10, 2],
+        "D+": [2, 14, 2, 1, 3],
+        "D-": [2, 15, 6, 11, 2]
+      }
+    },
+    {
+      "point": [7753, 2487],
+      "runs": {
+        "H": [0, 0, 0, 0, 0],
+        "V": [0, 0, 0, 0, 0],
+        "D+": [0, 0, 0, 0, 0],
+        "D-": [0, 0, 0, 0, 0]
+      }
+    },
+    {
+      "point": [2487, 7753],
+      "runs": {
+        "H": [0, 0, 0, 0, 0],
+        "V": [0, 0, 0, 0, 0],
+        "D+": [0, 0, 0, 0, 0],
+        "D-": [0, 0, 0, 0, 0]
+      }
+    }
+  ],
+  "classification": "Post-return source-geometry replica diagnosis only; no repaired pixels, extraction or reader input",
+  "sources": {
+    "experiments/prose-qr/context-scale-diagnostic/analyze.mjs": "8cf04852838b265695c76f8d5f3819ac977eb1aedc087bd34187aa8468c56136",
+    "docs/research/prose-qr/phase-47/run-01/native.json": "0ddb25fdba761f013c2a962ebd68c376321c3f74b4d5021467f9fe445de0cc2f",
+    "docs/research/prose-qr/phase-47/run-01/control.json": "9e5cd925bf509dfd8c738ba415095ead1221b8cd9a40f7b339ac8e19b9c64262",
+    "docs/research/prose-qr/phase-47/run-01/manifest.json": "f5545451a46a249c8fefdc5492f2ed444235ec0920d0fcec10739b75ecb04e7f",
+    "docs/research/prose-qr/phase-47/reference-01/control.json": "95372670e226a91f622543eb9793cf6d8ce76f08b4c0545a0268ffe14bd4428b"
+  }
+}

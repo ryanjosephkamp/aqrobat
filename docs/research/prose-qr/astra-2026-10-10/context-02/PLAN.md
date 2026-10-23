@@ -1,0 +1,11 @@
+# Context 02: stem-free square letter in an actual Hebrew word
+
+Preregistered before rendering. One new full native styled Hebrew article and one immediate reload/repeat. Select final mem (ם), whose new source-resource four true-axis worst RMS0.2983 passes0.35, but whose counter aspect0.714 remains a risk. Silom P is not advanced: worst0.6892 and unequal vertical/horizontal stem widths do not support a full-context test. This is a different alphabetic topology with no projecting stem, not a Latin/ASCII or logographic claim.
+
+Three readable Hebrew paragraphs each begin with שלום (hello/peace) in installed ArialHebrew-Bold64px, native outline width4.25 from the source rule, tracking6px; remaining Hebrew prose uses ArialHebrew18px/27px. A repeated greeting is a deliberate three-part letter structure, not fabricated language. All words remain actual selectable text. Record exact platform fonts and DOM ordering; Hebrew body/initial must not fall back to another face. Whole initial word stays together, native RTL. Owner language/readability acceptance is pending; task-agent visual review is local only.
+
+Native page900x900, two330px columns and the third paragraph below the first. Source nominal dimension101, pitch57/14=4.0714286; source separation382.7142857 in both axes. Source placement is computed from the saved counter offset and current native DOM word geometry before capture, not from any decoder. Save exact HTML/text/recipe and actual counter centers. No encoded payload exists.
+
+Unchanged strict gates and legibility bounds from context01. Reject clipped/overlapping/indistinguishable text, missing fonts, triangle drift>0.2px, insufficient row/adjacent ink clearance, invalid dimension or repeat mismatch. Full article and1:1 text inspection mandatory. One source+two reused conventional controls=9 ordinary primary slots;3 passive parity profiles. OpenCV default outside ZXing, ZXing default QR options, stock jsQR attemptBoth; child45s and browser30s; job240s. All outcomes preserved. Native Hebrew cannot authorize a Latin claim, and no payload phase is allowed unless the article passes every original gate.
+
+Cap3MB, one owned browser/job, no installs or reader changes. Full native proposals5/24, resources14/24, conditional payloads0/4 after completion. No phone tests.

@@ -1,0 +1,174 @@
+{
+  "at": "2026-10-10T17:03:38.834Z",
+  "plannedPrimarySlots": 18,
+  "completedPrimarySlots": 18,
+  "errorSlots": 0,
+  "timeoutSlots": 0,
+  "unattemptedSlots": 0,
+  "passiveProfiles": 6,
+  "stockBranches": 11,
+  "slots": [
+    {
+      "id": "copperplate-sparse",
+      "control": false,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "copperplate-sparse",
+      "control": false,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "copperplate-sparse",
+      "control": false,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "copperplate-article",
+      "control": false,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "copperplate-article",
+      "control": false,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "copperplate-article",
+      "control": false,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "arial-g-sparse",
+      "control": false,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "arial-g-sparse",
+      "control": false,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "arial-g-sparse",
+      "control": false,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "arial-g-article",
+      "control": false,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "arial-g-article",
+      "control": false,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "arial-g-article",
+      "control": false,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-normal",
+      "control": true,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-normal",
+      "control": true,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-normal",
+      "control": true,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-inverted",
+      "control": true,
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "exactExpected": false,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-inverted",
+      "control": true,
+      "engine": "zxing",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    },
+    {
+      "id": "control-inverted",
+      "control": true,
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": ["https://example.com/"],
+      "exactExpected": true,
+      "unexpectedText": []
+    }
+  ]
+}

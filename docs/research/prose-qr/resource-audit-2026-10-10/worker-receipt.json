@@ -1,0 +1,77 @@
+{
+  "schema": "aqrobat.resource-audit-worker-receipt.v1",
+  "requestedSettings": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "freshContext": true,
+    "fastPreferred": true
+  },
+  "verifiedSettings": {
+    "freshContext": "No memory read/search; REQUEST.txt was first tool read.",
+    "model": "Requested by parent; independent backend identity not exposed/verified in this worker.",
+    "effort": "Requested High; independent runtime effort not exposed/verified.",
+    "desktopFast": false,
+    "billingSavings": "UNKNOWN"
+  },
+  "timing": {
+    "parentStartUtc": "2026-10-10T20:49:17Z",
+    "firstObservedClockUtc": "2026-10-10T20:51:24Z",
+    "ledgerFrozenUtc": "2026-10-10T20:52:28.559293Z",
+    "arithmeticAndReportWrittenUtc": "2026-10-10T20:54:19.625900Z",
+    "receiptCreatedUtc": "2026-10-10T20:54:48.038822+00:00",
+    "workerDeadlineUtc": "2026-10-10T20:58:17Z",
+    "fullR1DeadlineUtc": "2026-10-10T21:01:17Z",
+    "clockRestarted": false
+  },
+  "scope": {
+    "families": 7,
+    "filledReceipts": 7,
+    "outlineReceipts": 7,
+    "newNativeSources": 0,
+    "captures": 0,
+    "readerLocatorBinarizerCalls": 0,
+    "renderBrowserAppLaunches": 0,
+    "payloadConstruction": 0,
+    "clipboardPhonePrintTests": 0,
+    "agentsChatsMessages": 0,
+    "gitPrMutations": 0,
+    "memoryReadsSearches": 0,
+    "ongoingGoals": 0
+  },
+  "preservation": {
+    "baselineHead": "a4f865d916275daf14785deeab4ebff5864b4805",
+    "branch": "codex/aqrobat-foundation",
+    "origin": "https://github.com/ryanjosephkamp/aqrobat.git",
+    "initialDirty": "Only authorized resource-audit-2026-10-10 directory",
+    "parentRequestStart": "Hashed in frozen-ledger.json and unchanged",
+    "sealedSources": "Hashed in frozen ledger, no writes",
+    "otherFilesProcesses": "No modifications or closures"
+  },
+  "commandsRun": {
+    "repositorySuite": "npm run format:check",
+    "documentFormatter": "Installed Prettier scoped to new audit documents; frozen ledger was checked unchanged before arithmetic.",
+    "deterministicScripts": ["audit.py", "verify.py"]
+  },
+  "unrunByScope": [
+    "npm test",
+    "npm run build",
+    "npm run test:browser",
+    "npm run test:text-browser",
+    "npm run test:extension",
+    "npm run test:native-text",
+    "report rendering"
+  ],
+  "unrunMeaning": "Intentionally unrun; no claim of platform unavailability.",
+  "failuresAndLimits": [
+    "An exploratory rg used a nonexistent scripts directory and an unmatched zsh scripts/research* glob; no experimental or scientific call occurred. Correct source paths were read from saved manifests.",
+    "Some long inspection output was tool-truncated; full JSON inputs were parsed locally and only authorized relevant fields used.",
+    "Filled models are null; native resource eligibility and lowercase-o/first-word/copy-order evidence remain UNKNOWN.",
+    "Historical manifest common.mjs hash differs from current explicit every-record gate source; historical identity is retained separately, never claimed current. No sealed script was rerun.",
+    "First static verifier stopped at link to not-yet-created verification.json; generation-order check corrected, exact failure preserved in verification-first-error.log.txt. No scientific measurement rerun.",
+    "Second verifier falsely treated CSS width:100% as a scientific progress percentage; corrected visible-text scope. Missing-verification formatter error retained in verification-second-error.log.txt."
+  ],
+  "newOutputByteCeiling": 650000,
+  "entireDirectoryByteCeiling": 1000000,
+  "parentReserveBytes": 350000,
+  "laterPhase": "Parent prepares integrated future Goal-mode prompt; worker neither starts it nor proposes another isolated mini-audit."
+}

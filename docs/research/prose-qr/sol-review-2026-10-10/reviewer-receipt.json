@@ -1,0 +1,187 @@
+{
+  "schema": "aqrobat.sol-reviewer-receipt.v1",
+  "status": "complete",
+  "requestedSettings": {
+    "model": "GPT-6.1 Sol",
+    "reasoningEffort": "High",
+    "context": "fresh",
+    "independentlyVerifiedByReviewerToolMetadata": false,
+    "desktopFastVerified": false
+  },
+  "observedStart": {
+    "firstClockObservationUtc": "2026-10-10T18:41:32Z",
+    "limitation": "Initial required instruction reads and Git verification preceded the first clock observation; do not interpret it as an exact dispatch timestamp."
+  },
+  "scientificReviewCompleteObservedUtc": "2026-10-10T18:46:24.371581+00:00",
+  "reviewDeadlineUtc": "2026-10-10T19:01:00Z",
+  "oldRunClockRestarted": false,
+  "oldRunDeadlineUtc": "2026-10-10T19:56:57Z",
+  "workspace": {
+    "cwd": "/Users/noir/Documents/aqrobat",
+    "branchBeforeAndAfter": "codex/aqrobat-foundation",
+    "headBeforeAndAfter": "eede84866744d49d38e69d88210058d3af20c9ba",
+    "originBeforeAndAfter": "https://github.com/ryanjosephkamp/aqrobat.git",
+    "initialStatus": "Only docs/research/prose-qr/sol-review-2026-10-10/ untracked",
+    "trackedDiffBeforeAndAfter": [],
+    "stagedDiffBeforeAndAfter": [],
+    "liveRemoteHeadQueried": false,
+    "livePrStateQueried": false,
+    "gitMutations": 0,
+    "prMutations": 0,
+    "npmPrivateObserved": true,
+    "finalUntrackedPaths": [
+      "docs/research/prose-qr/sol-review-2026-10-10/REQUEST.txt",
+      "docs/research/prose-qr/sol-review-2026-10-10/REVIEW.md",
+      "docs/research/prose-qr/sol-review-2026-10-10/claims.json",
+      "docs/research/prose-qr/sol-review-2026-10-10/orchestration.json",
+      "docs/research/prose-qr/sol-review-2026-10-10/review.html",
+      "docs/research/prose-qr/sol-review-2026-10-10/reviewer-receipt.json"
+    ]
+  },
+  "actions": [
+    "Read AGENTS.md, PROJECT-HANDOFF.md, REQUEST.txt, README.md, index.html, START.json, checkpoint, final scientific/custody/backup receipts and targeted saved source/raw receipts.",
+    "Inspected exact archived executed source bytes using gzip decompression; did not rerun saved scripts.",
+    "Viewed the existing circular-control and context-04 native PNGs without capture or modification.",
+    "Matched custody, source archive, alias and download hashes; compared initial/final sealed-tree digests.",
+    "Recomputed saved JSON RMS, gate conjunction, scale/fraction arithmetic and DOM rectangle classifications.",
+    "Created only the four named review artifacts; applied installed Prettier only to those review artifacts.",
+    "Validated HTML dependencies, embedded original image bytes, evidence links, JSON and continuation prompt statically."
+  ],
+  "scientificChecks": {
+    "custodyInventoryEntriesMatched": 535,
+    "custodyMismatches": 0,
+    "archivedEntriesMatched": 231,
+    "distinctArchivedSnapshots": 214,
+    "sourceAliasesMatched": 28,
+    "downloadHashesMatched": 3,
+    "primaryPassiveFullSummaryProfilesMatched": 13,
+    "selectedMetricSetsRecomputed": 186,
+    "axisRmsValuesRecomputed": 744,
+    "primaryAndAuditBranchesInspected": 31,
+    "axisRmsTolerance": 1e-12,
+    "axisRmsMismatches": 0,
+    "primaryStrictConjunctionsMatched": 22,
+    "selectedRecordSetsAllSingletons": true,
+    "anyVersusEveryScoredRecordVerdictDifferences": 0,
+    "savedDomRecountByParagraphTotalIntersectsInsideQuiet": [
+      [174, 174, 168, 6],
+      [177, 26, 20, 19],
+      [176, 26, 0, 26]
+    ],
+    "primaryReaderDenominator": 39,
+    "primaryConventionalExact": 15,
+    "primaryConventionalSlots": 18,
+    "primaryNativeStructureSlots": 21,
+    "unsuitableInvisibleInitialSlotsRetained": 3,
+    "separateStockAuditSlots": 5,
+    "grayPixelCountsIndependentlyRecounted": false
+  },
+  "artifactChecks": {
+    "jsonParsed": true,
+    "embeddedPngCount": 2,
+    "embeddedPngBytesEqualOriginal": true,
+    "remoteRenderingAssets": 0,
+    "javascriptRequired": false,
+    "missingEvidenceLinks": 0,
+    "htmlPromptEqualsClaimsPrompt": true,
+    "substantiveClaims": 8,
+    "proposedOwnerDecisions": 1,
+    "proposedDecisionExecuted": false,
+    "browserVisualQaRun": false,
+    "formatCheck": {
+      "command": "npm run format:check",
+      "exitCode": 0,
+      "result": "All matched files use Prettier code style!",
+      "scope": "Whole repository; only reviewer-owned artifacts were formatted."
+    },
+    "below3MB": true
+  },
+  "preservation": {
+    "sealedTrees": [
+      {
+        "path": "docs/research/prose-qr/astra-2026-10-10",
+        "files": 509,
+        "bytes": 6677253,
+        "beforeAndAfterDigest": "7fc97addc666915fbe01fcfe6bb0c3c7ccd73628e7549dca26def6344f03d74f"
+      },
+      {
+        "path": "experiments/prose-qr/astra-2026-10-10",
+        "files": 27,
+        "bytes": 188747,
+        "beforeAndAfterDigest": "1c0102b2d276c7d41376507062abb7ae7511a9b2ef009a9a23f1f7cbebe609d2"
+      }
+    ],
+    "treeDigestAlgorithm": "SHA-256 of compact JSON sorted path/SHA-256/byte-size tuples; default Python json serialization",
+    "parentOwnedFiles": [
+      {
+        "path": "REQUEST.txt",
+        "sha256BeforeAndAfter": "f298ac52a806c5c0ce17a400b05265ea1c366d09367a0cc3959d09b51d77b596"
+      },
+      {
+        "path": "orchestration.json",
+        "sha256BeforeAndAfter": "db42fb4e896f4df04588a5541c5dc35ef834be18a1260f0d41d0ea5e10a2460a"
+      }
+    ]
+  },
+  "newArtifacts": [
+    {
+      "path": "docs/research/prose-qr/sol-review-2026-10-10/REVIEW.md",
+      "bytes": 21167,
+      "sha256": "fd50a0de7d93f20077832562d8cb5e17d818f2b221cd0c2167932e40e6620e4b"
+    },
+    {
+      "path": "docs/research/prose-qr/sol-review-2026-10-10/review.html",
+      "bytes": 149933,
+      "sha256": "3cc970d57712f9137167696866d872d42abcf3cbc2de50fd2fe461b859c05d73"
+    },
+    {
+      "path": "docs/research/prose-qr/sol-review-2026-10-10/claims.json",
+      "bytes": 21160,
+      "sha256": "5150bd0653f995ea342d36d895a28af10e59a63d015a8d930e5322fc12729cea"
+    },
+    {
+      "path": "docs/research/prose-qr/sol-review-2026-10-10/reviewer-receipt.json",
+      "selfHashExcluded": true
+    }
+  ],
+  "newReviewArtifactByteCap": 3000000,
+  "forbiddenActionCounts": {
+    "newAgents": 0,
+    "newChats": 0,
+    "messagesToPeopleOrOtherChats": 0,
+    "browserLaunchesOrCaptures": 0,
+    "nativeAppCaptures": 0,
+    "decoderCalls": 0,
+    "locatorCalls": 0,
+    "binarizerCalls": 0,
+    "newQrExperiments": 0,
+    "payloadExperiments": 0,
+    "phoneTests": 0,
+    "sealedArtifactEdits": 0,
+    "dependencyInstalls": 0,
+    "gitMutations": 0,
+    "modelSessions": 0,
+    "memoryAccesses": 0,
+    "externalWebQueries": 0
+  },
+  "notRun": [
+    "npm test",
+    "npm run build",
+    "npm run test:browser",
+    "npm run test:text-browser",
+    "installed-extension tests",
+    "native text-app tests",
+    "review browser visual QA",
+    "independent PNG threshold recount",
+    "live PR/remote-head verification"
+  ],
+  "limitations": [
+    "All scientific results are reviewed saved observations, not fresh runtime replication.",
+    "Two existing PNGs were visually inspected; portable paste, owner readability, phone and physical print were not tested.",
+    "No model/effort/Fast or account usage/pricing/speed claim is independently verified.",
+    "The parent records dispatch, wait and reconciliation workflow evidence.",
+    "The next research panel is a proposal only; no new research execution is authorized by this receipt."
+  ],
+  "observedFinishUtc": "2026-10-10T18:46:56.452128+00:00",
+  "newReviewArtifactBytesExcludingReceipt": 192260
+}

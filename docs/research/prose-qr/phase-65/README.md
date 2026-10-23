@@ -1,0 +1,3 @@
+# Phase 65 — balanced native structure, diagonal gate still fails
+
+Four exact resource and full-native font identities are recorded, with four immediate exact repeats. All18 primary slots and six passive parity profiles complete. All four inverted first selections return intended geometry, but none passes the strict structure gate. Heiti SC/TC have balanced spans0.933, nominal span0.875, stable wide-row fraction1 and scored ratio errors below0.272; true-diagonal worst error0.3803 exceeds0.35. Hiragino variants fail at0.5183. The SC/TC and Hiragino/GB image pairs are duplicates, not four independent visual inputs. No payload or phone candidate.

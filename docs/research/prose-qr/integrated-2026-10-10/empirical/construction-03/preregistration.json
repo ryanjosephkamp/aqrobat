@@ -1,0 +1,40 @@
+{
+  "schema": "aqrobat.integrated.native-sampling.v1",
+  "frozenAtUtc": "2026-10-10T21:37:39.119Z",
+  "amendment": "construction-02 measured regular/bold changes only57samples. New captured nativebody white stroke1state gives larger real visible ink changes. Source glyph bounds include both actual stroke widths; pixel-support ownership and conservative ambiguity locks retained. No new captures/readers in this analysis.",
+  "capturedInputs": {
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/input.png": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/repeat.png": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/source.html.txt": "436f9df8a7f49d6003dfe5aea0b27f7e4e89bba63574486a6b121ce581cda8bd",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/dom.json": "20a8b8eedb0bbbc8819e36bd907485f244fc93c70ebc167dd53022d965af897e",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-03/reverse-regular/capture.json": "3f30bc99f1824e359cea29b3389a065f2151f34c52e55c187f3fcca8f89fcd4d",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/reverse-stroke1/input.png": "0618e3ffd06eb77b6e08e22aee135844ad80c5a5eac177e89c6cdb74a517c3bd",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/reverse-stroke1/repeat.png": "0618e3ffd06eb77b6e08e22aee135844ad80c5a5eac177e89c6cdb74a517c3bd",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/reverse-stroke1/source.html.txt": "74d5d8ea1f69056e07d8f0fef3a01d612c5659caf1287f68c8c77f865b5e92b6",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/reverse-stroke1/dom.json": "91f9fcebaedf11f39a2b8418e87a700ca15a14f117d06733be427d2d10a7ac62",
+    "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-04/reverse-stroke1/capture.json": "2ef6520a1ec7161f400c70c52df01785d675a8a725bfc012e604942335e35026"
+  },
+  "sourceHashes": {
+    "experiments/prose-qr/integrated-2026-10-10/empirical/sample-layout03.mjs": "34d787bfc45b4552ea999c03aa0670b48cc8f38dcf69ddbde6d190d56c6c60e1",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0"
+  },
+  "denominator": {
+    "moduleSamplesPerMap": 3249,
+    "quietSamplesPerMap": 976,
+    "maps": 2,
+    "sourceCaptures": 0,
+    "ordinaryCalls": 0,
+    "passiveProfiles": 0
+  },
+  "polarity": "Normal: native raw black is logical QR1, raw white QR0. No image transformation.",
+  "primary": "Frozen rawgray128 per-cell samples plus unique real glyph union ink bounds of measured regular/bold states. Lock all groups implicated by overlapping ownership. Complete all3249 cells. Exact native mixed style needs own capture/sample verification before decode.",
+  "diagnostic": "Pinned ordinary-jsQR adaptive binarizer sampled separately on unchanged regular and bold PNGs. Neighborhood coupling makes affine mixed prediction unsupported; diagnostic only, not solver input.",
+  "samplePolicy": "floor(origin+(index+.5)*pitch), origin64 pitch6.5 dimension57. Four-module external ring sampled identically including every976 cells; no quiet omission.",
+  "stops": [
+    "input/source mismatch",
+    "RGBA read failure",
+    "source identity/position drift",
+    "changed pixel with no unique glyph attribution after conservative group locks",
+    "out-of-bounds sample"
+  ]
+}

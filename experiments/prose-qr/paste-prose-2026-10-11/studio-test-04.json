@@ -1,0 +1,20 @@
+{
+  "id": "studio-check-04",
+  "purpose": "Exercise the delivered offline page studio through its real form and download controls, preserving exact source, rejecting invalid input and matching the native-tested DOCX bytes.",
+  "candidateCaptureSlots": 1,
+  "immediateRepeats": 1,
+  "resourceCaptures": 1,
+  "readerCalls": 0,
+  "checks": [
+    "Default long source once and generated DOCX byte match to native-opened word-08/input.docx",
+    "Word file, source TXT, wrapped TXT and recipe downloads",
+    "Clipboard HTML/plain data with an explicit mocked clipboard; no OS-paste claim",
+    "Stale export disabled after an input change",
+    "Empty source, unsupported emoji, decomposed accents and oversized payload rejection",
+    "Short source without repetition rejection, explicit full-source repetition acceptance",
+    "CRLF/leading/trailing source whitespace recipe roundtrip",
+    "A4 Word-file export and A4 with 6.5in incompatible measure rejection",
+    "No external network requests or page script errors"
+  ],
+  "amendment": "Preview quiet margin5 instead of4; unchanged DOCX body and source. Same9form checks at2600px-tall viewport."
+}

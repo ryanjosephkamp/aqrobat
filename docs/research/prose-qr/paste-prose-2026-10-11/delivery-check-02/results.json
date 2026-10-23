@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-11T20:29:04.090Z",
+  "browser": "155.0.8059.39",
+  "checks": [
+    {
+      "check": "Current studio acceptance copy and unchanged default native-tested DOCX download",
+      "pass": true,
+      "docxSha256": "61070d77d13bd7f39545e1ccf987c25f32db6817287862762758871c1cd581e8",
+      "newProseGenerated": false
+    },
+    {
+      "check": "Guide shows all frozen cases, both failure and recovery filters, and all three owner-accepted cases",
+      "pass": true,
+      "all": 51,
+      "recovery": 21,
+      "noRecovery": 30,
+      "ownerAcceptedCases": 3
+    },
+    {
+      "check": "All guide/studio local links and guide images resolve; expected closure metadata can be pending",
+      "pass": true,
+      "localReferencesChecked": 110,
+      "images": [
+        {
+          "path": "word-08/pdf-96/native.png",
+          "complete": true,
+          "width": 816,
+          "height": 1056
+        },
+        {
+          "path": "word-09/pdf-96/native.png",
+          "complete": true,
+          "width": 816,
+          "height": 1056
+        }
+      ],
+      "closureReceiptStatus": "Backup receipt is pending; MANIFEST is provisional until this delivery check closes. Final static verification follows closure."
+    },
+    {
+      "check": "Guide and studio contain mobile horizontal overflow within their intended containers",
+      "pass": true,
+      "studioWidth": {
+        "client": 390,
+        "scroll": 390
+      },
+      "guideWidth": {
+        "client": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "check": "No external network requests or page script errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "missing": [],
+  "candidateCaptures": 0,
+  "readerCalls": 0,
+  "resourceCaptures": 1,
+  "capturePurpose": "One 1440x1100 guide viewport, presentation only; never used as a scanner input."
+}

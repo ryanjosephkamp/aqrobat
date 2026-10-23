@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-10T17:38:01.574Z",
+  "reportSha256": "a648c4399984942cb2fa17759647e616237a9509bb060d5e5ef82f09a8a78c6b",
+  "viewports": [],
+  "scope": "Report-only QA. No experiment native rendering or QR reader calls; fresh task-owned Chromium profile; clipboard failure simulated without changing host clipboard.",
+  "clipboardSuccessPath": "not exercised",
+  "externalAssetsRequested": [],
+  "passed": false,
+  "error": {
+    "message": "page.evaluate: Target page, context or browser has been closed",
+    "stack": "page.evaluate: Target page, context or browser has been closed\n    at /Users/noir/Documents/aqrobat/experiments/prose-qr/astra-2026-10-10/report-qa.mjs:62:16"
+  }
+}

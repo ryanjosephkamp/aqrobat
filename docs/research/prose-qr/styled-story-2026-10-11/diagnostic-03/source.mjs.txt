@@ -1,0 +1,126 @@
+import { createRequire } from "node:module";
+import { runInNewContext } from "node:vm";
+import { readFile, mkdir, writeFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
+import { resolve } from "node:path";
+const supplied = process.argv[2]
+  ? JSON.parse(await readFile(process.argv[2], "utf8"))
+  : null;
+const root = resolve(
+  "docs/research/prose-qr/styled-story-2026-10-11/" +
+    (supplied?.id || "diagnostic-01"),
+);
+await mkdir(root);
+const specs = supplied?.inputs || ["ornament-02", "ornament-08", "ornament-12"];
+const bundle = await readFile(
+  createRequire(import.meta.url).resolve("jsqr"),
+  "utf8",
+);
+const sha = (b) => createHash("sha256").update(b).digest("hex");
+const source = await readFile(new URL("diagnose.mjs", import.meta.url));
+await writeFile(resolve(root, "source.mjs.txt"), source, { flag: "wx" });
+await writeFile(
+  resolve(root, "manifest.json"),
+  JSON.stringify(
+    {
+      at: new Date().toISOString(),
+      specs,
+      binarizerCalls: specs.length,
+      locatorCalls: specs.length,
+      decoderCalls: 0,
+      bundleSha256: sha(bundle),
+      sourceSha256: sha(source),
+      classification:
+        "Source-aligned diagnostic after ordinary failures; no transformed reader input or supplied locator geometry",
+    },
+    null,
+    2,
+  ),
+  { flag: "wx" },
+);
+const context = {
+  module: { exports: {} },
+  exports: {},
+  Uint8ClampedArray,
+  Uint8Array,
+  Int32Array,
+  Float64Array,
+};
+const needle = "return __webpack_require__(__webpack_require__.s = 3);";
+if (!bundle.includes(needle)) throw Error("Bundle entry changed");
+runInNewContext(
+  bundle.replace(needle, "globalThis.internals=__webpack_require__; " + needle),
+  context,
+);
+const binarize = context.internals(4).binarize;
+const locate = context.internals(12).locate;
+const results = [];
+for (const id of specs) {
+  const base = resolve(root, "../" + (supplied?.batch || "batch-03"), id);
+  const png = await readFile(base + ".png");
+  const layout = JSON.parse(await readFile(base + "-layout.json", "utf8"));
+  const width = png.readUInt32BE(16),
+    height = png.readUInt32BE(20);
+  const rgba = execFileSync(
+    "python3",
+    [
+      "-B",
+      "-c",
+      "import cv2,sys;a=cv2.imread(sys.argv[1]);sys.stdout.buffer.write(cv2.cvtColor(a,cv2.COLOR_BGR2RGBA).tobytes())",
+      base + ".png",
+    ],
+    { maxBuffer: 80000000 },
+  );
+  const { binarized } = binarize(
+    new Uint8ClampedArray(rgba),
+    width,
+    height,
+    false,
+  );
+  const locations = locate(binarized);
+  const cells = [];
+  for (let y = 0; y < layout.modules; y++)
+    for (let x = 0; x < layout.modules; x++) {
+      const px = Math.floor(
+          (layout.spec.quiet + x + 0.5) * layout.unit + (supplied?.offset || 0),
+        ),
+        py = Math.floor(
+          (layout.spec.quiet + y + 0.5) * layout.unit + (supplied?.offset || 0),
+        );
+      cells.push({
+        x,
+        y,
+        px,
+        py,
+        expected: layout.matrix[y][x],
+        observed: !!binarized.get(px, py),
+        rgb: rgba[4 * (py * width + px)],
+      });
+    }
+  const row = {
+    id,
+    pngSha256: sha(png),
+    locations,
+    cells,
+    wrong: cells.filter((c) => c.expected !== c.observed).length,
+    expectedDark: cells.filter((c) => c.expected).length,
+    wrongDark: cells.filter((c) => c.expected && !c.observed).length,
+    wrongLight: cells.filter((c) => !c.expected && c.observed).length,
+  };
+  results.push(row);
+  console.log(
+    JSON.stringify({
+      id,
+      locations,
+      wrong: row.wrong,
+      wrongDark: row.wrongDark,
+      wrongLight: row.wrongLight,
+    }),
+  );
+}
+await writeFile(
+  resolve(root, "results.json"),
+  JSON.stringify(results, null, 2),
+  { flag: "wx" },
+);

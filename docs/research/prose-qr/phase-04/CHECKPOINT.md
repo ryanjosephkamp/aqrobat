@@ -1,0 +1,48 @@
+# Prose QR checkpoint — October 9, 2026
+
+Work only in `/Users/noir/Documents/aqrobat`, branch
+`codex/aqrobat-foundation`, existing draft PR #1. The phase began at clean
+`c02509e26c0f0822313a9c0aa740f3498e453abb`. Read `AGENTS.md`, the current phase
+report, owner review, verification, and custody receipt; verify Git HEAD/remote/
+dirty state before continuing. No project migration has been requested.
+
+Ryan confirms both Samsung scanners failed the prior full PNG examples; exact
+case denominator and viewing conditions remain unspecified. The current phase
+retains 101 new text renderings plus eight PNG display views. All 109 fail jsQR,
+default ZXing, and the retained baseline. Fourteen conventional controls pass
+all three. No new phone tests. The two earlier techniques and configured-reader
+TXT/HTML proofs remain separate, preserved results; they do not establish phone
+reliability. The goal remains unsolved.
+
+No experiment/browser job remains running at handback. Aborts and unattempted
+cases are recorded, not erased. Source changes preserve executed hashes in
+snapshot files. Do not rerun a script in its existing output directory; it uses
+exclusive creation. Start fresh directories and a new manifest if authorized.
+The 40-MB file safeguard for this phase is almost used up. Start a fresh bounded
+phase with its own modest budget rather than appending large PNG sweeps here.
+
+## Continuation prompt
+
+Also read `replay-checks.json`: only six of eight small PNG-display replays match
+their original captured PNG hashes. Raw HTML/setContent equivalence remains an
+open harness issue; preserve original snapshots and PNGs. Do not claim full
+replay stability or count these checks as new decoding trials.
+
+> Continue prose QR research in /Users/noir/Documents/aqrobat. Read AGENTS.md
+> and docs/research/prose-qr/phase-04/CHECKPOINT.md, README.md, OWNER-REVIEW.md,
+> verification-final.json and custody.json. Verify branch, remote, HEAD, dirty state,
+> draft PR #1, and saved evidence before edits. Preserve existing results and
+> every original prototype, product/download/extension, Splashery, PDF archive,
+> browser profile, other task and running job. Keep npm private/unpublished and
+> PR #1 draft; no merge, migration, new host, chat/agent, release, store submission
+> or messages to others. The prose outputs still do not scan normally on Ryan's
+> phone. Work toward readable unchanged native output that independent ordinary
+> readers decode, then phone acceptance. Keep styled prose and uniform-black
+> ASCII separate. Explore a small, preregistered glyph/finder-geometry objective
+> through the ordinary binarizer, using installed fonts and clear native letters.
+> Use source geometry only for renderer diagnostics, never to repair pixels or
+> force a decoder. No hidden blocks, invisible text, decoder tuning or unreadable
+> raster compression as a claimed solution. Start a fresh phase and bounded file
+> budget, preserve all outcomes, back up milestone work on the existing branch,
+> and do not hand over failed grids as successful phone candidates. Research is
+> still incomplete; do not claim completion merely because a time block ends.

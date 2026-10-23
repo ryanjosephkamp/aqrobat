@@ -1,0 +1,160 @@
+[
+  {
+    "payload": "AQROBAT-TEST",
+    "path": "raw/control-1.png",
+    "pngSha256": "02c0e89e8d63e891d6dd69c7cee950832e8d3d8efe2990a6537d9f19fd7a80b0",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "af4f4e811ea0651ff49a026be72d2e723dfcea64c0871612e8ea640271eac144",
+    "baseline": {
+      "jsQR": { "found": true, "payload": "AQROBAT-TEST", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "AQROBAT-TEST",
+        "exact": true,
+        "results": [
+          {
+            "payload": "AQROBAT-TEST",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [65, 81, 82, 79, 66, 65, 84, 45, 84, 69, 83, 84]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["AQROBAT-TEST"],
+      "exact": true
+    }
+  },
+  {
+    "payload": "https://example.com/",
+    "path": "raw/control-2.png",
+    "pngSha256": "f9a0da7b664adce2456bd04cbd12af40f4994a230ef57bbe314d52e54746dbaf",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "989387d2119facd3da15cccf200fef9d65ece769ace29a9847c8ef12e46fea3a",
+    "baseline": {
+      "jsQR": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true
+      },
+      "zxing": {
+        "found": true,
+        "payload": "https://example.com/",
+        "exact": true,
+        "results": [
+          {
+            "payload": "https://example.com/",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [
+              104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108,
+              101, 46, 99, 111, 109, 47
+            ]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["https://example.com/"],
+      "exact": true
+    }
+  },
+  {
+    "payload": "HELLO WORLD",
+    "path": "raw/control-3.png",
+    "pngSha256": "58cb92dcc97a369389f07fa3302ee8f7a4ed4550c832548c275a9a31e8c176e8",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "48e2a4708eb76c1b1278f8a3458f6c0b6dbe2115f276ac1779600cc27eb0782a",
+    "baseline": {
+      "jsQR": { "found": true, "payload": "HELLO WORLD", "exact": true },
+      "zxing": {
+        "found": true,
+        "payload": "HELLO WORLD",
+        "exact": true,
+        "results": [
+          {
+            "payload": "HELLO WORLD",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [72, 69, 76, 76, 79, 32, 87, 79, 82, 76, 68]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["HELLO WORLD"],
+      "exact": true
+    }
+  },
+  {
+    "payload": "https://example.org/a",
+    "path": "raw/control-4.png",
+    "pngSha256": "28bc71084397887663c73f7d755cf597b691da8494c623dc8c8448be583b1ce2",
+    "width": 640,
+    "height": 640,
+    "rgbaSha256": "1bfd3e1b2f9deb6ad61864bd4493329787fb092282a68c3816ac43f456177958",
+    "baseline": {
+      "jsQR": {
+        "found": true,
+        "payload": "https://example.org/a",
+        "exact": true
+      },
+      "zxing": {
+        "found": true,
+        "payload": "https://example.org/a",
+        "exact": true,
+        "results": [
+          {
+            "payload": "https://example.org/a",
+            "format": "QRCode",
+            "isValid": true,
+            "bytes": [
+              104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108,
+              101, 46, 111, 114, 103, 47, 97
+            ]
+          }
+        ]
+      }
+    },
+    "configured": {
+      "options": {
+        "formats": ["QRCode"],
+        "tryHarder": true,
+        "maxNumberOfSymbols": 1,
+        "binarizer": "GlobalHistogram",
+        "downscaleThreshold": 50,
+        "downscaleFactor": 2
+      },
+      "payloads": ["https://example.org/a"],
+      "exact": true
+    }
+  }
+]

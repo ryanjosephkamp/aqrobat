@@ -1,0 +1,2866 @@
+{
+  "schema": "aqrobat.saved-resource-audit.v1",
+  "computedAtUtc": "2026-10-10T20:54:19.622741+00:00",
+  "frozenLedgerSha256": "94f03b79e9ca6871270406ff18b070699ddb2a9f8d696629e0e43df726d392ec",
+  "fixedGate": "Intended first-selected geometry; exactly three selected points; each balance/span/stability >=0.8; nonempty matching scored records with EVERY record having four complete axes and worst RMS <=0.35; four complete true axes with worst RMS <=0.35.",
+  "counts": {
+    "families": 7,
+    "filledReceipts": 7,
+    "outlineReceipts": 7,
+    "outlineEnvelopeArithmeticComplete": 7,
+    "savedOutlineNominalEnvelopeFits": 0,
+    "savedL2EnvelopeFits": 0,
+    "standaloneFourAxisMetricPasses": 1,
+    "nativeGatePassesEstablished": 0,
+    "nativePayloadProposalsEstablished": 0
+  },
+  "rows": [
+    {
+      "id": "din-o",
+      "font": "DINAlternate-Bold",
+      "symbol": "O",
+      "size": 64,
+      "stroke": 4,
+      "provenance": {
+        "id": "din-o",
+        "font": "DINAlternate-Bold",
+        "symbol": "O",
+        "size": 64,
+        "stroke": 4,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/results.json",
+          "sha256": "8a683a51775a7e754071aae0363ed7e5a0498b33cb6842970ce4fbdc488d521e",
+          "bytes": 28524
+        },
+        "aggregateRowKey": "/rows/0",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/din-o/result.json",
+          "sha256": "a9816cdc28d4e94a0a6e78d64d91ef03745216844b5c4d77dd19099070a5e800",
+          "bytes": 4843
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/0/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/din-o/filled.png",
+              "sha256": "f0ecbccdfada42b9b3be22bc8ee0b08a8cdfa131891ec6e38c895d6fc13095fd",
+              "bytes": 1880
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/din-o/filled.html.txt",
+              "sha256": "adc4bb46dcfb010cd4eec43c7fb2453c21c5596805f354ae22e73e283e14008d",
+              "bytes": 424
+            },
+            "recordedPngSha256": "f0ecbccdfada42b9b3be22bc8ee0b08a8cdfa131891ec6e38c895d6fc13095fd"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/0/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/din-o/outline.png",
+              "sha256": "83ef019d3866ad992a3d17019febbc428dde641028ff8a7011b7d5f55175bc50",
+              "bytes": 3212
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/din-o/outline.html.txt",
+              "sha256": "53703699065a5c6ada809daf2b8fec8dbec189b9e292e11db9656dba8ad43913",
+              "bytes": 424
+            },
+            "recordedPngSha256": "83ef019d3866ad992a3d17019febbc428dde641028ff8a7011b7d5f55175bc50"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "f0ecbccdfada42b9b3be22bc8ee0b08a8cdfa131891ec6e38c895d6fc13095fd",
+        "fonts": [
+          {
+            "familyName": "DIN Alternate",
+            "postScriptName": "DINAlternate-Bold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 43,
+            "width": 39.03125,
+            "height": 74
+          },
+          "advance": 39.03125,
+          "ascent": 45.9375,
+          "descent": 0.375,
+          "left": -3.25,
+          "right": 35.78125
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [58, 64, 19, 32],
+              "pixels": 494,
+              "center": [67.10728744939271, 79.47975708502024]
+            }
+          ],
+          "inkBounds": [51, 57, 83, 102],
+          "centerSample": [67.10728744939271, 79.47975708502024],
+          "selected": {
+            "id": 2,
+            "bounds": [58, 64, 19, 32],
+            "pixels": 494,
+            "center": [67.10728744939271, 79.47975708502024]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "83ef019d3866ad992a3d17019febbc428dde641028ff8a7011b7d5f55175bc50",
+        "fonts": [
+          {
+            "familyName": "DIN Alternate",
+            "postScriptName": "DINAlternate-Bold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 43,
+            "width": 39.03125,
+            "height": 74
+          },
+          "advance": 39.03125,
+          "ascent": 45.9375,
+          "descent": 0.375,
+          "left": -3.25,
+          "right": 35.78125
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [53, 59, 29, 43],
+              "pixels": 399,
+              "center": [66.84962406015038, 79.61152882205513]
+            },
+            {
+              "id": 3,
+              "bounds": [60, 66, 15, 29],
+              "pixels": 387,
+              "center": [67, 79.85529715762274]
+            }
+          ],
+          "inkBounds": [50, 55, 84, 104],
+          "centerSample": [67.10728744939271, 79.47975708502024],
+          "selected": {
+            "id": 3,
+            "bounds": [60, 66, 15, 29],
+            "pixels": 387,
+            "center": [67, 79.85529715762274]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 67,
+            "y": 80
+          },
+          "runs": {
+            "horizontal": [3, 4, 15, 4, 3],
+            "vertical": [3, 4, 29, 3, 4],
+            "diagonalDown": [
+              4.242640687119286, 4.242640687119286, 21.213203435596427,
+              4.242640687119286, 4.242640687119286
+            ],
+            "diagonalUp": [
+              4.242640687119286, 4.242640687119286, 21.213203435596427,
+              4.242640687119286, 4.242640687119286
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [3, 4, 15, 4, 3],
+                "complete": true,
+                "scale": 4.142857142857143,
+                "normalizedRMS": 0.32858287585025076
+              },
+              "vertical": {
+                "runs": [3, 4, 29, 3, 4],
+                "complete": true,
+                "scale": 6.142857142857143,
+                "normalizedRMS": 0.8635394481915795
+              },
+              "diagonalDown": {
+                "runs": [
+                  4.242640687119286, 4.242640687119286, 21.213203435596427,
+                  4.242640687119286, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 5.454823740581938,
+                "normalizedRMS": 0.44444444444444436
+              },
+              "diagonalUp": {
+                "runs": [
+                  4.242640687119286, 4.242640687119286, 21.213203435596427,
+                  4.242640687119286, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 5.454823740581938,
+                "normalizedRMS": 0.44444444444444436
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.8635394481915795,
+            "centralSpanBalance": 0.5172413793103449
+          },
+          "completeRunPitch": 5.142857142857143,
+          "counterOnlyPitch": 7.333333333333333,
+          "boundBalance": 0.5172413793103449,
+          "offset": {
+            "x": 19,
+            "y": 36.85529715762274
+          },
+          "rgbaSha256": "32a386100587011009beb412f5f856efd6480815682d22cb475eca22f8d9d5a4"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 5.142857142857143,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 7.333333333333333,
+        "horizontalPitch": 4.142857142857143,
+        "verticalPitch": 6.142857142857143,
+        "horizontalOverVertical": 0.6744186046511628,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [34, 49],
+        "inclusiveSampleCounts": [35, 50],
+        "unroundedContourCenter": {
+          "center": [67, 79.85529715762274],
+          "halfSide": 18.0,
+          "nominalBox": [49.0, 61.85529715762274, 85.0, 97.85529715762274],
+          "savedSampleOffsets": {
+            "left": -17,
+            "top": -24.855297157622743,
+            "right": 17,
+            "bottom": 24.144702842377257
+          },
+          "signedOutwardExcess": {
+            "left": -1.0,
+            "top": 6.8552971576227435,
+            "right": -1.0,
+            "bottom": 6.1447028423772565
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": -0.5,
+            "top": 7.3552971576227435,
+            "right": -0.5,
+            "bottom": 6.6447028423772565
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [67, 80],
+          "halfSide": 18.0,
+          "nominalBox": [49.0, 62.0, 85.0, 98.0],
+          "savedSampleOffsets": {
+            "left": -17,
+            "top": -25,
+            "right": 17,
+            "bottom": 24
+          },
+          "signedOutwardExcess": {
+            "left": -1.0,
+            "top": 7.0,
+            "right": -1.0,
+            "bottom": 6.0
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": -0.5,
+            "top": 7.5,
+            "right": -0.5,
+            "bottom": 6.5
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [67, 79.85529715762274],
+          "halfSide": 16.5,
+          "nominalBox": [50.5, 63.35529715762274, 83.5, 96.35529715762274],
+          "savedSampleOffsets": {
+            "left": -17,
+            "top": -24.855297157622743,
+            "right": 17,
+            "bottom": 24.144702842377257
+          },
+          "signedOutwardExcess": {
+            "left": 0.5,
+            "top": 8.355297157622743,
+            "right": 0.5,
+            "bottom": 7.6447028423772565
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 1.0,
+            "top": 8.855297157622743,
+            "right": 1.0,
+            "bottom": 8.144702842377257
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": false,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Diagnostic reference only; blocked unchanged. No supplied glyph qualifies for L2."
+    },
+    {
+      "id": "copperplate-o",
+      "font": "Copperplate-Bold",
+      "symbol": "O",
+      "size": 64,
+      "stroke": 4,
+      "provenance": {
+        "id": "copperplate-o",
+        "font": "Copperplate-Bold",
+        "symbol": "O",
+        "size": 64,
+        "stroke": 4,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/results.json",
+          "sha256": "8a683a51775a7e754071aae0363ed7e5a0498b33cb6842970ce4fbdc488d521e",
+          "bytes": 28524
+        },
+        "aggregateRowKey": "/rows/1",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/result.json",
+          "sha256": "92ee6c84141397adc8169e7a8e8cceaf2d72f53166200655225dcf58b50546b0",
+          "bytes": 4990
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/1/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/filled.png",
+              "sha256": "32445fb2a1b0fed46a24ec97ef6e6634058754e69bf56cea96a81ce73f9445c6",
+              "bytes": 1724
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/filled.html.txt",
+              "sha256": "500e57222c6d2f6697b471727a9c03a5b9f9cd0c8a114c78338a058426f5b3a5",
+              "bytes": 423
+            },
+            "recordedPngSha256": "32445fb2a1b0fed46a24ec97ef6e6634058754e69bf56cea96a81ce73f9445c6"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/1/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/outline.png",
+              "sha256": "760fd2d922bdb3000d3292b968d391693d8559429e5723f434d05b42b5563de5",
+              "bytes": 3012
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/copperplate-o/outline.html.txt",
+              "sha256": "15e41c08c76f9cde7c9e322de124ce5242b96f0264dd14dff3057dce304d58fb",
+              "bytes": 423
+            },
+            "recordedPngSha256": "760fd2d922bdb3000d3292b968d391693d8559429e5723f434d05b42b5563de5"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "32445fb2a1b0fed46a24ec97ef6e6634058754e69bf56cea96a81ce73f9445c6",
+        "fonts": [
+          {
+            "familyName": "Copperplate",
+            "postScriptName": "Copperplate-Bold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 47,
+            "width": 46.21875,
+            "height": 65
+          },
+          "advance": 46.20799255371094,
+          "ascent": 34.04800033569336,
+          "descent": 0.19200515747070312,
+          "left": -3.135999917984009,
+          "right": 43.071998596191406
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [61, 70, 20, 18],
+              "pixels": 289,
+              "center": [70.53287197231833, 78.37716262975779]
+            }
+          ],
+          "inkBounds": [51, 61, 90, 95],
+          "centerSample": [70.53287197231833, 78.37716262975779],
+          "selected": {
+            "id": 2,
+            "bounds": [61, 70, 20, 18],
+            "pixels": 289,
+            "center": [70.53287197231833, 78.37716262975779]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "760fd2d922bdb3000d3292b968d391693d8559429e5723f434d05b42b5563de5",
+        "fonts": [
+          {
+            "familyName": "Copperplate",
+            "postScriptName": "Copperplate-Bold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 47,
+            "width": 46.21875,
+            "height": 65
+          },
+          "advance": 46.20799255371094,
+          "ascent": 34.04800033569336,
+          "descent": 0.19200515747070312,
+          "left": -3.135999917984009,
+          "right": 43.071998596191406
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [53, 64, 36, 30],
+              "pixels": 471,
+              "center": [70.61146496815287, 78.63694267515923]
+            },
+            {
+              "id": 3,
+              "bounds": [62, 72, 18, 15],
+              "pixels": 213,
+              "center": [70.58215962441315, 78.77464788732394]
+            }
+          ],
+          "inkBounds": [49, 60, 92, 97],
+          "centerSample": [70.53287197231833, 78.37716262975779],
+          "selected": {
+            "id": 3,
+            "bounds": [62, 72, 18, 15],
+            "pixels": 213,
+            "center": [70.58215962441315, 78.77464788732394]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 71,
+            "y": 79
+          },
+          "runs": {
+            "horizontal": [6, 3, 18, 3, 6],
+            "vertical": [4, 4, 15, 3, 4],
+            "diagonalDown": [
+              5.656854249492381, 2.8284271247461903, 16.970562748477143,
+              4.242640687119286, 4.242640687119286
+            ],
+            "diagonalUp": [
+              5.656854249492381, 4.242640687119286, 15.556349186104047,
+              4.242640687119286, 4.242640687119286
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [6, 3, 18, 3, 6],
+                "complete": true,
+                "scale": 5.142857142857143,
+                "normalizedRMS": 0.36132472314464653
+              },
+              "vertical": {
+                "runs": [4, 4, 15, 3, 4],
+                "complete": true,
+                "scale": 4.285714285714286,
+                "normalizedRMS": 0.26583202716502513
+              },
+              "diagonalDown": {
+                "runs": [
+                  5.656854249492381, 2.8284271247461903, 16.970562748477143,
+                  4.242640687119286, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 4.848732213850612,
+                "normalizedRMS": 0.31068919803845413
+              },
+              "diagonalUp": {
+                "runs": [
+                  5.656854249492381, 4.242640687119286, 15.556349186104047,
+                  4.242640687119286, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 4.848732213850612,
+                "normalizedRMS": 0.15365907428821485
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.36132472314464653,
+            "centralSpanBalance": 0.6111111111111112
+          },
+          "completeRunPitch": 4.714285714285714,
+          "counterOnlyPitch": 5.5,
+          "boundBalance": 0.8333333333333334,
+          "offset": {
+            "x": 22.58215962441315,
+            "y": 31.774647887323937
+          },
+          "rgbaSha256": "0b4ad070c42bd8b5aa641af2c7c2f9caf429dbbc1d0d2a6d542941cacd92fafa"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 4.714285714285714,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 5.5,
+        "horizontalPitch": 5.142857142857143,
+        "verticalPitch": 4.285714285714286,
+        "horizontalOverVertical": 1.2000000000000002,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [43, 37],
+        "inclusiveSampleCounts": [44, 38],
+        "unroundedContourCenter": {
+          "center": [70.58215962441315, 78.77464788732394],
+          "halfSide": 16.5,
+          "nominalBox": [
+            54.08215962441315, 62.27464788732394, 87.08215962441315,
+            95.27464788732394
+          ],
+          "savedSampleOffsets": {
+            "left": -21.58215962441315,
+            "top": -18.774647887323937,
+            "right": 21.41784037558685,
+            "bottom": 18.225352112676063
+          },
+          "signedOutwardExcess": {
+            "left": 5.082159624413151,
+            "top": 2.274647887323937,
+            "right": 4.917840375586849,
+            "bottom": 1.7253521126760631
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 5.582159624413151,
+            "top": 2.774647887323937,
+            "right": 5.417840375586849,
+            "bottom": 2.225352112676063
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [71, 79],
+          "halfSide": 16.5,
+          "nominalBox": [54.5, 62.5, 87.5, 95.5],
+          "savedSampleOffsets": {
+            "left": -22,
+            "top": -19,
+            "right": 21,
+            "bottom": 18
+          },
+          "signedOutwardExcess": {
+            "left": 5.5,
+            "top": 2.5,
+            "right": 4.5,
+            "bottom": 1.5
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 6.0,
+            "top": 3.0,
+            "right": 5.0,
+            "bottom": 2.0
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [70.58215962441315, 78.77464788732394],
+          "halfSide": 16.5,
+          "nominalBox": [
+            54.08215962441315, 62.27464788732394, 87.08215962441315,
+            95.27464788732394
+          ],
+          "savedSampleOffsets": {
+            "left": -21.58215962441315,
+            "top": -18.774647887323937,
+            "right": 21.41784037558685,
+            "bottom": 18.225352112676063
+          },
+          "signedOutwardExcess": {
+            "left": 5.082159624413151,
+            "top": 2.274647887323937,
+            "right": 4.917840375586849,
+            "bottom": 1.7253521126760631
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 5.582159624413151,
+            "top": 2.774647887323937,
+            "right": 5.417840375586849,
+            "bottom": 2.225352112676063
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": false,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Keep as context-04 calibration reference; unchanged uppercase O fails envelope and standalone RMS, while lowercase o remains absent."
+    },
+    {
+      "id": "gill-o",
+      "font": "GillSans-UltraBold",
+      "symbol": "O",
+      "size": 64,
+      "stroke": 4,
+      "provenance": {
+        "id": "gill-o",
+        "font": "GillSans-UltraBold",
+        "symbol": "O",
+        "size": 64,
+        "stroke": 4,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/results.json",
+          "sha256": "8a683a51775a7e754071aae0363ed7e5a0498b33cb6842970ce4fbdc488d521e",
+          "bytes": 28524
+        },
+        "aggregateRowKey": "/rows/2",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/gill-o/result.json",
+          "sha256": "fe377ccdf87bba3767625f1791b208f040b90d131527257f537cd3c722664b4b",
+          "bytes": 4835
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/2/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/gill-o/filled.png",
+              "sha256": "74a54e4c3c37c9155d50794b91bb85a4fe70ba1bd285d6574a7b17db01eb9df0",
+              "bytes": 1821
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/gill-o/filled.html.txt",
+              "sha256": "8fade897d9dc3c342350f5350de8f5b3f994706bdc5cab49eeb36d88a63ea349",
+              "bytes": 425
+            },
+            "recordedPngSha256": "74a54e4c3c37c9155d50794b91bb85a4fe70ba1bd285d6574a7b17db01eb9df0"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/2/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/gill-o/outline.png",
+              "sha256": "f83d4a9dabbb309f74d850de90cbffad7716d0af853fa83275805e80bb1e49b6",
+              "bytes": 3298
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/gill-o/outline.html.txt",
+              "sha256": "baed933349dbe2e00d5af74bf09ca20bfc8f6e119246580d0afc46558d1a5815",
+              "bytes": 425
+            },
+            "recordedPngSha256": "f83d4a9dabbb309f74d850de90cbffad7716d0af853fa83275805e80bb1e49b6"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "74a54e4c3c37c9155d50794b91bb85a4fe70ba1bd285d6574a7b17db01eb9df0",
+        "fonts": [
+          {
+            "familyName": "Gill Sans",
+            "postScriptName": "GillSans-UltraBold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 40,
+            "width": 54.65625,
+            "height": 80
+          },
+          "advance": 54.65625,
+          "ascent": 48.4375,
+          "descent": 0.78125,
+          "left": -2.875,
+          "right": 51.78125
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [71, 74, 9, 9],
+              "pixels": 66,
+              "center": [74.84848484848484, 78.06060606060606]
+            }
+          ],
+          "inkBounds": [51, 55, 99, 104],
+          "centerSample": [74.84848484848484, 78.06060606060606],
+          "selected": {
+            "id": 2,
+            "bounds": [71, 74, 9, 9],
+            "pixels": 66,
+            "center": [74.84848484848484, 78.06060606060606]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "f83d4a9dabbb309f74d850de90cbffad7716d0af853fa83275805e80bb1e49b6",
+        "fonts": [
+          {
+            "familyName": "Gill Sans",
+            "postScriptName": "GillSans-UltraBold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 40,
+            "width": 54.65625,
+            "height": 80
+          },
+          "advance": 54.65625,
+          "ascent": 48.4375,
+          "descent": 0.78125,
+          "left": -2.875,
+          "right": 51.78125
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [53, 57, 45, 46],
+              "pixels": 1501,
+              "center": [74.88207861425717, 79.782145236509]
+            },
+            {
+              "id": 3,
+              "bounds": [72, 76, 6, 6],
+              "pixels": 29,
+              "center": [74.72413793103448, 78.41379310344827]
+            }
+          ],
+          "inkBounds": [49, 54, 100, 105],
+          "centerSample": [74.84848484848484, 78.06060606060606],
+          "selected": {
+            "id": 3,
+            "bounds": [72, 76, 6, 6],
+            "pixels": 29,
+            "center": [74.72413793103448, 78.41379310344827]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 75,
+            "y": 78
+          },
+          "runs": {
+            "horizontal": [16, 4, 5, 4, 16],
+            "vertical": [15, 4, 6, 4, 17],
+            "diagonalDown": [
+              15.556349186104047, 4.242640687119286, 5.656854249492381,
+              2.8284271247461903, 16.970562748477143
+            ],
+            "diagonalUp": [
+              15.556349186104047, 4.242640687119286, 5.656854249492381,
+              4.242640687119286, 15.556349186104047
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [16, 4, 5, 4, 16],
+                "complete": true,
+                "scale": 6.428571428571429,
+                "normalizedRMS": 1.3897686102813867
+              },
+              "vertical": {
+                "runs": [15, 4, 6, 4, 17],
+                "complete": true,
+                "scale": 6.571428571428571,
+                "normalizedRMS": 1.328543697206653
+              },
+              "diagonalDown": {
+                "runs": [
+                  15.556349186104047, 4.242640687119286, 5.656854249492381,
+                  2.8284271247461903, 16.970562748477143
+                ],
+                "complete": true,
+                "scale": 6.46497628513415,
+                "normalizedRMS": 1.383355296010392
+              },
+              "diagonalUp": {
+                "runs": [
+                  15.556349186104047, 4.242640687119286, 5.656854249492381,
+                  4.242640687119286, 15.556349186104047
+                ],
+                "complete": true,
+                "scale": 6.46497628513415,
+                "normalizedRMS": 1.3196235258587956
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 1.3897686102813867,
+            "centralSpanBalance": 0.6666666666666666
+          },
+          "completeRunPitch": 6.5,
+          "counterOnlyPitch": 2,
+          "boundBalance": 1,
+          "offset": {
+            "x": 26.724137931034477,
+            "y": 38.41379310344827
+          },
+          "rgbaSha256": "854453773c1a80b39303777986b4e9b05e5fce344b773351b51133b159f2105d"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 6.5,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 2,
+        "horizontalPitch": 6.428571428571429,
+        "verticalPitch": 6.571428571428571,
+        "horizontalOverVertical": 0.9782608695652175,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [51, 51],
+        "inclusiveSampleCounts": [52, 52],
+        "unroundedContourCenter": {
+          "center": [74.72413793103448, 78.41379310344827],
+          "halfSide": 22.75,
+          "nominalBox": [
+            51.97413793103448, 55.66379310344827, 97.47413793103448,
+            101.16379310344827
+          ],
+          "savedSampleOffsets": {
+            "left": -25.724137931034477,
+            "top": -24.41379310344827,
+            "right": 25.275862068965523,
+            "bottom": 26.58620689655173
+          },
+          "signedOutwardExcess": {
+            "left": 2.974137931034477,
+            "top": 1.6637931034482705,
+            "right": 2.525862068965523,
+            "bottom": 3.8362068965517295
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 3.474137931034477,
+            "top": 2.1637931034482705,
+            "right": 3.025862068965523,
+            "bottom": 4.3362068965517295
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [75, 78],
+          "halfSide": 22.75,
+          "nominalBox": [52.25, 55.25, 97.75, 100.75],
+          "savedSampleOffsets": {
+            "left": -26,
+            "top": -24,
+            "right": 25,
+            "bottom": 27
+          },
+          "signedOutwardExcess": {
+            "left": 3.25,
+            "top": 1.25,
+            "right": 2.25,
+            "bottom": 4.25
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 3.75,
+            "top": 1.75,
+            "right": 2.75,
+            "bottom": 4.75
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [74.72413793103448, 78.41379310344827],
+          "halfSide": 16.5,
+          "nominalBox": [
+            58.22413793103448, 61.91379310344827, 91.22413793103448,
+            94.91379310344827
+          ],
+          "savedSampleOffsets": {
+            "left": -25.724137931034477,
+            "top": -24.41379310344827,
+            "right": 25.275862068965523,
+            "bottom": 26.58620689655173
+          },
+          "signedOutwardExcess": {
+            "left": 9.224137931034477,
+            "top": 7.9137931034482705,
+            "right": 8.775862068965523,
+            "bottom": 10.08620689655173
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 9.724137931034477,
+            "top": 8.41379310344827,
+            "right": 9.275862068965523,
+            "bottom": 10.58620689655173
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": false,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Diagnostic reference only; blocked unchanged. No supplied glyph qualifies for L2."
+    },
+    {
+      "id": "arial-a",
+      "font": "Arial-BoldMT",
+      "symbol": "a",
+      "size": 64,
+      "stroke": 4,
+      "provenance": {
+        "id": "arial-a",
+        "font": "Arial-BoldMT",
+        "symbol": "a",
+        "size": 64,
+        "stroke": 4,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/results.json",
+          "sha256": "8a683a51775a7e754071aae0363ed7e5a0498b33cb6842970ce4fbdc488d521e",
+          "bytes": 28524
+        },
+        "aggregateRowKey": "/rows/3",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-a/result.json",
+          "sha256": "b6a71aac64b42e0dd73c6279921e9c6080bf0c4648c145c7cb25f4f8fb2b7d52",
+          "bytes": 4973
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/3/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-a/filled.png",
+              "sha256": "02204e4082885ee9aafcfb3333144cd09c9fb84d0f80c269d5bdbe02b9a426d0",
+              "bytes": 1690
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-a/filled.html.txt",
+              "sha256": "ef39f765a7b2b88107acbdb86d3c19e1c265f34f8a441d2e200072475cdee324",
+              "bytes": 419
+            },
+            "recordedPngSha256": "02204e4082885ee9aafcfb3333144cd09c9fb84d0f80c269d5bdbe02b9a426d0"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/3/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-a/outline.png",
+              "sha256": "0cfe4da1ccf26ebffbcf26728e3169c4092f4e4422f17750b36ad8fb75f80f0c",
+              "bytes": 2812
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-a/outline.html.txt",
+              "sha256": "0840a41ffaafdf63342f86b803fc2ab5e19e988e1fa5085e8414788a953b2cb6",
+              "bytes": 419
+            },
+            "recordedPngSha256": "0cfe4da1ccf26ebffbcf26728e3169c4092f4e4422f17750b36ad8fb75f80f0c"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "02204e4082885ee9aafcfb3333144cd09c9fb84d0f80c269d5bdbe02b9a426d0",
+        "fonts": [
+          {
+            "familyName": "Arial",
+            "postScriptName": "Arial-BoldMT",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 44,
+            "width": 35.59375,
+            "height": 72
+          },
+          "advance": 35.59375,
+          "ascent": 33.9375,
+          "descent": 0.75,
+          "left": -2.28125,
+          "right": 33.4375
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [59, 86, 12, 10],
+              "pixels": 77,
+              "center": [64.87012987012987, 90.72727272727273]
+            }
+          ],
+          "inkBounds": [50, 68, 81, 102],
+          "centerSample": [64.87012987012987, 90.72727272727273],
+          "selected": {
+            "id": 2,
+            "bounds": [59, 86, 12, 10],
+            "pixels": 77,
+            "center": [64.87012987012987, 90.72727272727273]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "0cfe4da1ccf26ebffbcf26728e3169c4092f4e4422f17750b36ad8fb75f80f0c",
+        "fonts": [
+          {
+            "familyName": "Arial",
+            "postScriptName": "Arial-BoldMT",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 44,
+            "width": 35.59375,
+            "height": 72
+          },
+          "advance": 35.59375,
+          "ascent": 33.9375,
+          "descent": 0.75,
+          "left": -2.28125,
+          "right": 33.4375
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [52, 70, 27, 31],
+              "pixels": 359,
+              "center": [66.42618384401115, 85.4874651810585]
+            },
+            {
+              "id": 3,
+              "bounds": [61, 77, 8, 4],
+              "pixels": 24,
+              "center": [64.25, 78.16666666666667]
+            },
+            {
+              "id": 4,
+              "bounds": [61, 89, 8, 6],
+              "pixels": 37,
+              "center": [64.56756756756756, 91.35135135135135]
+            }
+          ],
+          "inkBounds": [49, 66, 83, 103],
+          "centerSample": [64.87012987012987, 90.72727272727273],
+          "selected": {
+            "id": 4,
+            "bounds": [61, 89, 8, 6],
+            "pixels": 37,
+            "center": [64.56756756756756, 91.35135135135135]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 65,
+            "y": 91
+          },
+          "runs": {
+            "horizontal": [5, 4, 8, 3, 6],
+            "vertical": [2, 3, 6, 3, 2],
+            "diagonalDown": [
+              2.8284271247461903, 4.242640687119286, 5.656854249492381,
+              2.8284271247461903, 1.4142135623730951
+            ],
+            "diagonalUp": [
+              4.242640687119286, 4.242640687119286, 7.0710678118654755,
+              7.0710678118654755, 7.0710678118654755
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [5, 4, 8, 3, 6],
+                "complete": true,
+                "scale": 3.7142857142857144,
+                "normalizedRMS": 0.5014771080925114
+              },
+              "vertical": {
+                "runs": [2, 3, 6, 3, 2],
+                "complete": true,
+                "scale": 2.2857142857142856,
+                "normalizedRMS": 0.270993542358485
+              },
+              "diagonalDown": {
+                "runs": [
+                  2.8284271247461903, 4.242640687119286, 5.656854249492381,
+                  2.8284271247461903, 1.4142135623730951
+                ],
+                "complete": true,
+                "scale": 2.4243661069253055,
+                "normalizedRMS": 0.49721446300587663
+              },
+              "diagonalUp": {
+                "runs": [
+                  4.242640687119286, 4.242640687119286, 7.0710678118654755,
+                  7.0710678118654755, 7.0710678118654755
+                ],
+                "complete": true,
+                "scale": 4.242640687119286,
+                "normalizedRMS": 0.7302967433402214
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.7302967433402214,
+            "centralSpanBalance": 0.5
+          },
+          "completeRunPitch": 3,
+          "counterOnlyPitch": 2.3333333333333335,
+          "boundBalance": 0.75,
+          "offset": {
+            "x": 16.567567567567565,
+            "y": 47.351351351351354
+          },
+          "rgbaSha256": "52a716a494d0c7c0c27495ee7730073ab3b50bed50c219babb8689eb3b9fcd58"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 3,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 2.3333333333333335,
+        "horizontalPitch": 3.7142857142857144,
+        "verticalPitch": 2.2857142857142856,
+        "horizontalOverVertical": 1.6250000000000002,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [34, 37],
+        "inclusiveSampleCounts": [35, 38],
+        "unroundedContourCenter": {
+          "center": [64.56756756756756, 91.35135135135135],
+          "halfSide": 10.5,
+          "nominalBox": [
+            54.067567567567565, 80.85135135135135, 75.06756756756756,
+            101.85135135135135
+          ],
+          "savedSampleOffsets": {
+            "left": -15.567567567567565,
+            "top": -25.351351351351354,
+            "right": 18.432432432432435,
+            "bottom": 11.648648648648646
+          },
+          "signedOutwardExcess": {
+            "left": 5.067567567567565,
+            "top": 14.851351351351354,
+            "right": 7.932432432432435,
+            "bottom": 1.1486486486486456
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 5.567567567567565,
+            "top": 15.351351351351354,
+            "right": 8.432432432432435,
+            "bottom": 1.6486486486486456
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [65, 91],
+          "halfSide": 10.5,
+          "nominalBox": [54.5, 80.5, 75.5, 101.5],
+          "savedSampleOffsets": {
+            "left": -16,
+            "top": -25,
+            "right": 18,
+            "bottom": 12
+          },
+          "signedOutwardExcess": {
+            "left": 5.5,
+            "top": 14.5,
+            "right": 7.5,
+            "bottom": 1.5
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 6.0,
+            "top": 15.0,
+            "right": 8.0,
+            "bottom": 2.0
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [64.56756756756756, 91.35135135135135],
+          "halfSide": 16.5,
+          "nominalBox": [
+            48.067567567567565, 74.85135135135135, 81.06756756756756,
+            107.85135135135135
+          ],
+          "savedSampleOffsets": {
+            "left": -15.567567567567565,
+            "top": -25.351351351351354,
+            "right": 18.432432432432435,
+            "bottom": 11.648648648648646
+          },
+          "signedOutwardExcess": {
+            "left": -0.9324324324324351,
+            "top": 8.851351351351354,
+            "right": 1.9324324324324351,
+            "bottom": -4.851351351351354
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": -0.4324324324324351,
+            "top": 9.351351351351354,
+            "right": 2.432432432432435,
+            "bottom": -4.351351351351354
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": false,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Diagnostic reference only; blocked unchanged. No supplied glyph qualifies for L2."
+    },
+    {
+      "id": "arial-g",
+      "font": "Arial-BoldMT",
+      "symbol": "g",
+      "size": 64,
+      "stroke": 4,
+      "provenance": {
+        "id": "arial-g",
+        "font": "Arial-BoldMT",
+        "symbol": "g",
+        "size": 64,
+        "stroke": 4,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/results.json",
+          "sha256": "8a683a51775a7e754071aae0363ed7e5a0498b33cb6842970ce4fbdc488d521e",
+          "bytes": 28524
+        },
+        "aggregateRowKey": "/rows/4",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-g/result.json",
+          "sha256": "8078d9166cc4b1a78ae7a912ae78fe77740b9d2541b7e6baa1906905cb237c46",
+          "bytes": 5298
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/4/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-g/filled.png",
+              "sha256": "35fdd6145990af24b70b32abf0cba523e6a2c4b8d0004a61c7349bcad5fd4868",
+              "bytes": 1932
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-g/filled.html.txt",
+              "sha256": "9b793e376753cb59f629983c8a3ff16781b7493d7806151f10e43729748c87f9",
+              "bytes": 419
+            },
+            "recordedPngSha256": "35fdd6145990af24b70b32abf0cba523e6a2c4b8d0004a61c7349bcad5fd4868"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/4/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-g/outline.png",
+              "sha256": "f6163d19ee17ef3aae0d94a42eb7e8f2ea9a343b6b9b5d911248bc6f35a186d9",
+              "bytes": 3294
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-01/arial-g/outline.html.txt",
+              "sha256": "10f963b71bee818980523e3c09e8fed38167e46118bd940082a4bdd553dfcdea",
+              "bytes": 419
+            },
+            "recordedPngSha256": "f6163d19ee17ef3aae0d94a42eb7e8f2ea9a343b6b9b5d911248bc6f35a186d9"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "35fdd6145990af24b70b32abf0cba523e6a2c4b8d0004a61c7349bcad5fd4868",
+        "fonts": [
+          {
+            "familyName": "Arial",
+            "postScriptName": "Arial-BoldMT",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 44,
+            "width": 39.09375,
+            "height": 72
+          },
+          "advance": 39.09375,
+          "ascent": 33.9375,
+          "descent": 13.46875,
+          "left": -2.625,
+          "right": 35
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [60, 75, 14, 19],
+              "pixels": 222,
+              "center": [66.5, 84]
+            }
+          ],
+          "inkBounds": [50, 68, 82, 114],
+          "centerSample": [66.5, 84],
+          "selected": {
+            "id": 2,
+            "bounds": [60, 75, 14, 19],
+            "pixels": 222,
+            "center": [66.5, 84]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "f6163d19ee17ef3aae0d94a42eb7e8f2ea9a343b6b9b5d911248bc6f35a186d9",
+        "fonts": [
+          {
+            "familyName": "Arial",
+            "postScriptName": "Arial-BoldMT",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 44,
+            "width": 39.09375,
+            "height": 72
+          },
+          "advance": 39.09375,
+          "ascent": 33.9375,
+          "descent": 13.46875,
+          "left": -2.625,
+          "right": 35
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [52, 70, 21, 30],
+              "pixels": 224,
+              "center": [59.08482142857143, 84.60714285714286]
+            },
+            {
+              "id": 3,
+              "bounds": [54, 71, 27, 43],
+              "pixels": 290,
+              "center": [73.8, 96.2]
+            },
+            {
+              "id": 4,
+              "bounds": [73, 75, 1, 1],
+              "pixels": 1,
+              "center": [73, 75]
+            },
+            {
+              "id": 5,
+              "bounds": [74, 76, 1, 1],
+              "pixels": 1,
+              "center": [74, 76]
+            },
+            {
+              "id": 6,
+              "bounds": [61, 77, 12, 16],
+              "pixels": 157,
+              "center": [66.43312101910828, 84.37579617834395]
+            },
+            {
+              "id": 7,
+              "bounds": [63, 102, 10, 5],
+              "pixels": 32,
+              "center": [67.6875, 104.25]
+            }
+          ],
+          "inkBounds": [49, 66, 84, 116],
+          "centerSample": [66.5, 84],
+          "selected": {
+            "id": 6,
+            "bounds": [61, 77, 12, 16],
+            "pixels": 157,
+            "center": [66.43312101910828, 84.37579617834395]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 66,
+            "y": 84
+          },
+          "runs": {
+            "horizontal": [6, 3, 12, 3, 5],
+            "vertical": [3, 4, 16, 4, 3],
+            "diagonalDown": [
+              4.242640687119286, 4.242640687119286, 14.142135623730951,
+              5.656854249492381, 7.0710678118654755
+            ],
+            "diagonalUp": [
+              5.656854249492381, 4.242640687119286, 14.142135623730951,
+              7.0710678118654755, 4.242640687119286
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [6, 3, 12, 3, 5],
+                "complete": true,
+                "scale": 4.142857142857143,
+                "normalizedRMS": 0.2851872155604873
+              },
+              "vertical": {
+                "runs": [3, 4, 16, 4, 3],
+                "complete": true,
+                "scale": 4.285714285714286,
+                "normalizedRMS": 0.3812260921465546
+              },
+              "diagonalDown": {
+                "runs": [
+                  4.242640687119286, 4.242640687119286, 14.142135623730951,
+                  5.656854249492381, 7.0710678118654755
+                ],
+                "complete": true,
+                "scale": 5.050762722761054,
+                "normalizedRMS": 0.2304777646542069
+              },
+              "diagonalUp": {
+                "runs": [
+                  5.656854249492381, 4.242640687119286, 14.142135623730951,
+                  7.0710678118654755, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 5.050762722761054,
+                "normalizedRMS": 0.2304777646542069
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.3812260921465546,
+            "centralSpanBalance": 0.625
+          },
+          "completeRunPitch": 4.214285714285714,
+          "counterOnlyPitch": 4.666666666666667,
+          "boundBalance": 0.75,
+          "offset": {
+            "x": 18.433121019108285,
+            "y": 40.37579617834395
+          },
+          "rgbaSha256": "c1fc3cd286abb00b7ad461872127eddaf50df2b19b43d5fc819da673cae54be6"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 4.214285714285714,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 4.666666666666667,
+        "horizontalPitch": 4.142857142857143,
+        "verticalPitch": 4.285714285714286,
+        "horizontalOverVertical": 0.9666666666666668,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [35, 50],
+        "inclusiveSampleCounts": [36, 51],
+        "unroundedContourCenter": {
+          "center": [66.43312101910828, 84.37579617834395],
+          "halfSide": 14.75,
+          "nominalBox": [
+            51.683121019108285, 69.62579617834395, 81.18312101910828,
+            99.12579617834395
+          ],
+          "savedSampleOffsets": {
+            "left": -17.433121019108285,
+            "top": -18.375796178343947,
+            "right": 17.566878980891715,
+            "bottom": 31.624203821656053
+          },
+          "signedOutwardExcess": {
+            "left": 2.6831210191082846,
+            "top": 3.625796178343947,
+            "right": 2.8168789808917154,
+            "bottom": 16.874203821656053
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 3.1831210191082846,
+            "top": 4.125796178343947,
+            "right": 3.3168789808917154,
+            "bottom": 17.374203821656053
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [66, 84],
+          "halfSide": 14.75,
+          "nominalBox": [51.25, 69.25, 80.75, 98.75],
+          "savedSampleOffsets": {
+            "left": -17,
+            "top": -18,
+            "right": 18,
+            "bottom": 32
+          },
+          "signedOutwardExcess": {
+            "left": 2.25,
+            "top": 3.25,
+            "right": 3.25,
+            "bottom": 17.25
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 2.75,
+            "top": 3.75,
+            "right": 3.75,
+            "bottom": 17.75
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [66.43312101910828, 84.37579617834395],
+          "halfSide": 16.5,
+          "nominalBox": [
+            49.933121019108285, 67.87579617834395, 82.93312101910828,
+            100.87579617834395
+          ],
+          "savedSampleOffsets": {
+            "left": -17.433121019108285,
+            "top": -18.375796178343947,
+            "right": 17.566878980891715,
+            "bottom": 31.624203821656053
+          },
+          "signedOutwardExcess": {
+            "left": 0.9331210191082846,
+            "top": 1.875796178343947,
+            "right": 1.0668789808917154,
+            "bottom": 15.124203821656053
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 1.4331210191082846,
+            "top": 2.375796178343947,
+            "right": 1.5668789808917154,
+            "bottom": 15.624203821656053
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": false,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Diagnostic reference only; blocked unchanged. No supplied glyph qualifies for L2."
+    },
+    {
+      "id": "silom-p",
+      "font": "Silom",
+      "symbol": "P",
+      "size": 64,
+      "stroke": 4.5,
+      "provenance": {
+        "id": "silom-p",
+        "font": "Silom",
+        "symbol": "P",
+        "size": 64,
+        "stroke": 4.5,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/results.json",
+          "sha256": "90795d0259ca742ee749779526d3ce3aae1d0886ae3cd20abf20fb073b5a6e42",
+          "bytes": 11514
+        },
+        "aggregateRowKey": "/rows/0",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/silom-p/result.json",
+          "sha256": "f1b50088c9fcefa0a8e47b3d537e417d8f584069e1a3d66a4c79684550276e51",
+          "bytes": 4943
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/0/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/silom-p/filled.png",
+              "sha256": "d2b9871b0cc85dadb94d2ec17fe23c4fc6ff64677f005517bacb8ac5ae4ab538",
+              "bytes": 1063
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/silom-p/filled.html.txt",
+              "sha256": "1528ff4d9ee5246402de26340e43b78d0210ef6c3f68e60fbd10dc11a35d9d71",
+              "bytes": 412
+            },
+            "recordedPngSha256": "d2b9871b0cc85dadb94d2ec17fe23c4fc6ff64677f005517bacb8ac5ae4ab538"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/0/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/silom-p/outline.png",
+              "sha256": "e032679c2fb02db3edd30caf261cba9fd45779fc64a3803a7ee7abbba4cda5b2",
+              "bytes": 1720
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/silom-p/outline.html.txt",
+              "sha256": "51fb4c364b7bad960b59565e43a6dd6356ebff610af7d004e086756758aafcbc",
+              "bytes": 414
+            },
+            "recordedPngSha256": "e032679c2fb02db3edd30caf261cba9fd45779fc64a3803a7ee7abbba4cda5b2"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "d2b9871b0cc85dadb94d2ec17fe23c4fc6ff64677f005517bacb8ac5ae4ab538",
+        "fonts": [
+          {
+            "familyName": "Silom",
+            "postScriptName": "Silom",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 39,
+            "width": 42.703125,
+            "height": 81
+          },
+          "advance": 42.68798828125,
+          "ascent": 48,
+          "descent": 0,
+          "left": -5.311999797821045,
+          "right": 37.3120002746582
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [64, 57, 10, 16],
+              "pixels": 146,
+              "center": [68.16438356164383, 64.5]
+            }
+          ],
+          "inkBounds": [53, 51, 85, 99],
+          "centerSample": [68.16438356164383, 64.5],
+          "selected": {
+            "id": 2,
+            "bounds": [64, 57, 10, 16],
+            "pixels": 146,
+            "center": [68.16438356164383, 64.5]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "e032679c2fb02db3edd30caf261cba9fd45779fc64a3803a7ee7abbba4cda5b2",
+        "fonts": [
+          {
+            "familyName": "Silom",
+            "postScriptName": "Silom",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 39,
+            "width": 42.703125,
+            "height": 81
+          },
+          "advance": 42.68798828125,
+          "ascent": 48,
+          "descent": 0,
+          "left": -5.311999797821045,
+          "right": 37.3120002746582
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [55, 54, 28, 44],
+              "pixels": 489,
+              "center": [64.66666666666667, 71.75664621676891]
+            },
+            {
+              "id": 3,
+              "bounds": [66, 59, 7, 12],
+              "pixels": 78,
+              "center": [68.8076923076923, 64.64102564102564]
+            }
+          ],
+          "inkBounds": [51, 50, 86, 101],
+          "centerSample": [68.16438356164383, 64.5],
+          "selected": {
+            "id": 3,
+            "bounds": [66, 59, 7, 12],
+            "pixels": 78,
+            "center": [68.8076923076923, 64.64102564102564]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 69,
+            "y": 65
+          },
+          "runs": {
+            "horizontal": [7, 4, 7, 4, 6],
+            "vertical": [1, 4, 12, 4, 2],
+            "diagonalDown": [
+              5.656854249492381, 5.656854249492381, 9.899494936611665,
+              4.242640687119286, 4.242640687119286
+            ],
+            "diagonalUp": [
+              9.899494936611665, 5.656854249492381, 9.899494936611665,
+              4.242640687119286, 4.242640687119286
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [7, 4, 7, 4, 6],
+                "complete": true,
+                "scale": 4,
+                "normalizedRMS": 0.689202437604511
+              },
+              "vertical": {
+                "runs": [1, 4, 12, 4, 2],
+                "complete": true,
+                "scale": 3.2857142857142856,
+                "normalizedRMS": 0.4810197108152811
+              },
+              "diagonalDown": {
+                "runs": [
+                  5.656854249492381, 5.656854249492381, 9.899494936611665,
+                  4.242640687119286, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 4.242640687119285,
+                "normalizedRMS": 0.36514837167011077
+              },
+              "diagonalUp": {
+                "runs": [
+                  9.899494936611665, 5.656854249492381, 9.899494936611665,
+                  4.242640687119286, 4.242640687119286
+                ],
+                "complete": true,
+                "scale": 4.848732213850611,
+                "normalizedRMS": 0.6422616289332564
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.689202437604511,
+            "centralSpanBalance": 0.5833333333333333
+          },
+          "completeRunPitch": 3.642857142857143,
+          "counterOnlyPitch": 3.1666666666666665,
+          "boundBalance": 0.5833333333333334,
+          "offset": {
+            "x": 20.807692307692307,
+            "y": 25.641025641025635
+          },
+          "rgbaSha256": "1b91e465710bad066658b0023eab50d8e73a7379deb9fc87e4c83a5dbf45ecb1"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 3.642857142857143,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 3.1666666666666665,
+        "horizontalPitch": 4,
+        "verticalPitch": 3.2857142857142856,
+        "horizontalOverVertical": 1.2173913043478262,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [35, 51],
+        "inclusiveSampleCounts": [36, 52],
+        "unroundedContourCenter": {
+          "center": [68.8076923076923, 64.64102564102564],
+          "halfSide": 12.75,
+          "nominalBox": [
+            56.05769230769231, 51.891025641025635, 81.5576923076923,
+            77.39102564102564
+          ],
+          "savedSampleOffsets": {
+            "left": -17.807692307692307,
+            "top": -14.641025641025635,
+            "right": 17.192307692307693,
+            "bottom": 36.358974358974365
+          },
+          "signedOutwardExcess": {
+            "left": 5.057692307692307,
+            "top": 1.8910256410256352,
+            "right": 4.442307692307693,
+            "bottom": 23.608974358974365
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 5.557692307692307,
+            "top": 2.391025641025635,
+            "right": 4.942307692307693,
+            "bottom": 24.108974358974365
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [69, 65],
+          "halfSide": 12.75,
+          "nominalBox": [56.25, 52.25, 81.75, 77.75],
+          "savedSampleOffsets": {
+            "left": -18,
+            "top": -15,
+            "right": 17,
+            "bottom": 36
+          },
+          "signedOutwardExcess": {
+            "left": 5.25,
+            "top": 2.25,
+            "right": 4.25,
+            "bottom": 23.25
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 5.75,
+            "top": 2.75,
+            "right": 4.75,
+            "bottom": 23.75
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [68.8076923076923, 64.64102564102564],
+          "halfSide": 16.5,
+          "nominalBox": [
+            52.30769230769231, 48.141025641025635, 85.3076923076923,
+            81.14102564102564
+          ],
+          "savedSampleOffsets": {
+            "left": -17.807692307692307,
+            "top": -14.641025641025635,
+            "right": 17.192307692307693,
+            "bottom": 36.358974358974365
+          },
+          "signedOutwardExcess": {
+            "left": 1.3076923076923066,
+            "top": -1.8589743589743648,
+            "right": 0.6923076923076934,
+            "bottom": 19.858974358974365
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 1.8076923076923066,
+            "top": -1.3589743589743648,
+            "right": 1.1923076923076934,
+            "bottom": 20.358974358974365
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": false,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Diagnostic reference only; blocked unchanged. No supplied glyph qualifies for L2."
+    },
+    {
+      "id": "hebrew-mem",
+      "font": "ArialHebrew-Bold",
+      "symbol": "ם",
+      "size": 64,
+      "stroke": 4.25,
+      "provenance": {
+        "id": "hebrew-mem",
+        "font": "ArialHebrew-Bold",
+        "symbol": "ם",
+        "size": 64,
+        "stroke": 4.25,
+        "aggregate": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/results.json",
+          "sha256": "90795d0259ca742ee749779526d3ce3aae1d0886ae3cd20abf20fb073b5a6e42",
+          "bytes": 11514
+        },
+        "aggregateRowKey": "/rows/1",
+        "receipt": {
+          "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/hebrew-mem/result.json",
+          "sha256": "964071b83a7116e210c46ca306cd956cb86b41cc7de444cd05431f2229b95f9a",
+          "bytes": 5098
+        },
+        "renders": [
+          {
+            "name": "filled",
+            "aggregateKey": "/rows/1/renders/0",
+            "receiptKey": "/renders/0",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/hebrew-mem/filled.png",
+              "sha256": "9a6a24f1d0ededf4bed833e33b6db0dbe0d435c4974dd606152f46c55deeac64",
+              "bytes": 1065
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/hebrew-mem/filled.html.txt",
+              "sha256": "598507cbaef0d9631c91a71bf6ed6cf86310ec60bbc4cde381ac813fd307f606",
+              "bytes": 424
+            },
+            "recordedPngSha256": "9a6a24f1d0ededf4bed833e33b6db0dbe0d435c4974dd606152f46c55deeac64"
+          },
+          {
+            "name": "outline",
+            "aggregateKey": "/rows/1/renders/1",
+            "receiptKey": "/renders/1",
+            "png": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/hebrew-mem/outline.png",
+              "sha256": "3e7c587f360ca7610f85f3b22fddafc8bc4625072d54b8d423c90c6660af10fe",
+              "bytes": 1651
+            },
+            "source": {
+              "path": "docs/research/prose-qr/astra-2026-10-10/resources-02/hebrew-mem/outline.html.txt",
+              "sha256": "2be72ef34f4979dfa2d94d06dab61478d26a5bbbf25b873df9e1540276a5375b",
+              "bytes": 427
+            },
+            "recordedPngSha256": "3e7c587f360ca7610f85f3b22fddafc8bc4625072d54b8d423c90c6660af10fe"
+          }
+        ]
+      },
+      "filled": {
+        "name": "filled",
+        "pngSha256": "9a6a24f1d0ededf4bed833e33b6db0dbe0d435c4974dd606152f46c55deeac64",
+        "fonts": [
+          {
+            "familyName": "Arial Hebrew",
+            "postScriptName": "ArialHebrew-Bold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 46,
+            "width": 39.109375,
+            "height": 68
+          },
+          "advance": 39.10398864746094,
+          "ascent": 33.5359992980957,
+          "descent": 0,
+          "left": -4.223999977111816,
+          "right": 35.20000076293945
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [61, 67, 13, 18],
+              "pixels": 226,
+              "center": [66.81858407079646, 75.76991150442478]
+            }
+          ],
+          "inkBounds": [52, 59, 82, 92],
+          "centerSample": [66.81858407079646, 75.76991150442478],
+          "selected": {
+            "id": 2,
+            "bounds": [61, 67, 13, 18],
+            "pixels": 226,
+            "center": [66.81858407079646, 75.76991150442478]
+          }
+        },
+        "reasons": [],
+        "model": null
+      },
+      "outline": {
+        "name": "outline",
+        "pngSha256": "3e7c587f360ca7610f85f3b22fddafc8bc4625072d54b8d423c90c6660af10fe",
+        "fonts": [
+          {
+            "familyName": "Arial Hebrew",
+            "postScriptName": "ArialHebrew-Bold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ],
+        "native": {
+          "rect": {
+            "left": 48,
+            "top": 46,
+            "width": 39.109375,
+            "height": 68
+          },
+          "advance": 39.10398864746094,
+          "ascent": 33.5359992980957,
+          "descent": 0,
+          "left": -4.223999977111816,
+          "right": 35.20000076293945
+        },
+        "holes": {
+          "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+          "holes": [
+            {
+              "id": 2,
+              "bounds": [54, 61, 27, 30],
+              "pixels": 414,
+              "center": [66.59661835748793, 76.34299516908213]
+            },
+            {
+              "id": 3,
+              "bounds": [63, 69, 10, 14],
+              "pixels": 133,
+              "center": [67.29323308270676, 75.78947368421052]
+            }
+          ],
+          "inkBounds": [50, 58, 84, 94],
+          "centerSample": [66.81858407079646, 75.76991150442478],
+          "selected": {
+            "id": 3,
+            "bounds": [63, 69, 10, 14],
+            "pixels": 133,
+            "center": [67.29323308270676, 75.78947368421052]
+          }
+        },
+        "reasons": [],
+        "model": {
+          "point": {
+            "x": 67,
+            "y": 76
+          },
+          "runs": {
+            "horizontal": [5, 4, 10, 3, 5],
+            "vertical": [4, 4, 14, 4, 4],
+            "diagonalDown": [
+              7.0710678118654755, 5.656854249492381, 14.142135623730951,
+              4.242640687119286, 7.0710678118654755
+            ],
+            "diagonalUp": [
+              7.0710678118654755, 5.656854249492381, 12.727922061357857,
+              4.242640687119286, 5.656854249492381
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [5, 4, 10, 3, 5],
+                "complete": true,
+                "scale": 3.857142857142857,
+                "normalizedRMS": 0.2801136355731709
+              },
+              "vertical": {
+                "runs": [4, 4, 14, 4, 4],
+                "complete": true,
+                "scale": 4.285714285714286,
+                "normalizedRMS": 0.13333333333333333
+              },
+              "diagonalDown": {
+                "runs": [
+                  7.0710678118654755, 5.656854249492381, 14.142135623730951,
+                  4.242640687119286, 7.0710678118654755
+                ],
+                "complete": true,
+                "scale": 5.454823740581938,
+                "normalizedRMS": 0.2801136355731709
+              },
+              "diagonalUp": {
+                "runs": [
+                  7.0710678118654755, 5.656854249492381, 12.727922061357857,
+                  4.242640687119286, 5.656854249492381
+                ],
+                "complete": true,
+                "scale": 5.050762722761054,
+                "normalizedRMS": 0.2982616301169159
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.2982616301169159,
+            "centralSpanBalance": 0.6428571428571429
+          },
+          "completeRunPitch": 4.071428571428571,
+          "counterOnlyPitch": 4,
+          "boundBalance": 0.7142857142857143,
+          "offset": {
+            "x": 19.293233082706763,
+            "y": 29.78947368421052
+          },
+          "rgbaSha256": "bb0c977eb37a90da1af3a432d59c570615aedda6a18b1502901b00467748b6bb"
+        }
+      },
+      "status": "BLOCKED as saved for L2; future font/style variants UNKNOWN",
+      "nativeGate": "UNKNOWN for this standalone resource, never a native pass",
+      "firstWordAndCopyOrder": "UNKNOWN: isolated glyph resources contain no words, paragraph flow or copied-order tests",
+      "lowercaseO": "ABSENT from all seven resource rows",
+      "arithmetic": {
+        "pitch": 4.071428571428571,
+        "pitchDefinition": "mean horizontal/vertical five-run scales = (horizontal sum + vertical sum)/14; not a measured isotropic cell",
+        "counterOnlyPitchNotUsed": 4,
+        "horizontalPitch": 3.857142857142857,
+        "verticalPitch": 4.285714285714286,
+        "horizontalOverVertical": 0.9,
+        "inkBoundsMeaning": "inclusive gray<128 pixel-sample extrema [xmin,ymin,xmax,ymax], not counter bounds or TextMetrics",
+        "sampleSpan": [34, 36],
+        "inclusiveSampleCounts": [35, 37],
+        "unroundedContourCenter": {
+          "center": [67.29323308270676, 75.78947368421052],
+          "halfSide": 14.25,
+          "nominalBox": [
+            53.04323308270676, 61.53947368421052, 81.54323308270676,
+            90.03947368421052
+          ],
+          "savedSampleOffsets": {
+            "left": -17.293233082706763,
+            "top": -17.78947368421052,
+            "right": 16.706766917293237,
+            "bottom": 18.21052631578948
+          },
+          "signedOutwardExcess": {
+            "left": 3.043233082706763,
+            "top": 3.5394736842105203,
+            "right": 2.456766917293237,
+            "bottom": 3.9605263157894797
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 3.543233082706763,
+            "top": 4.03947368421052,
+            "right": 2.956766917293237,
+            "bottom": 4.46052631578948
+          },
+          "halfPixelSupportFit": false
+        },
+        "roundedModelPoint": {
+          "center": [67, 76],
+          "halfSide": 14.25,
+          "nominalBox": [52.75, 61.75, 81.25, 90.25],
+          "savedSampleOffsets": {
+            "left": -17,
+            "top": -18,
+            "right": 17,
+            "bottom": 18
+          },
+          "signedOutwardExcess": {
+            "left": 2.75,
+            "top": 3.75,
+            "right": 2.75,
+            "bottom": 3.75
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 3.25,
+            "top": 4.25,
+            "right": 3.25,
+            "bottom": 4.25
+          },
+          "halfPixelSupportFit": false
+        },
+        "L2AtFixed33PixelBox": {
+          "center": [67.29323308270676, 75.78947368421052],
+          "halfSide": 16.5,
+          "nominalBox": [
+            50.79323308270676, 59.28947368421052, 83.79323308270676,
+            92.28947368421052
+          ],
+          "savedSampleOffsets": {
+            "left": -17.293233082706763,
+            "top": -17.78947368421052,
+            "right": 16.706766917293237,
+            "bottom": 18.21052631578948
+          },
+          "signedOutwardExcess": {
+            "left": 0.7932330827067631,
+            "top": 1.2894736842105203,
+            "right": 0.20676691729323693,
+            "bottom": 1.7105263157894797
+          },
+          "sampleExtremaFit": false,
+          "halfPixelSupportOutwardExcess": {
+            "left": 1.293233082706763,
+            "top": 1.7894736842105203,
+            "right": 0.7067669172932369,
+            "bottom": 2.2105263157894797
+          },
+          "halfPixelSupportFit": false
+        },
+        "fullAntialiasEnvelope": "UNKNOWN: gray>=128 fringe not represented; no pixels recounted"
+      },
+      "standaloneFourAxisMetricPass": true,
+      "metricLimit": "Standalone four-axis resource metric only; not native selection/record/stability/span/geometry conjunction.",
+      "carryForward": "Keep as separate diagnostic reference: the standalone four-axis metric passes, but envelope fails; this Hebrew code point cannot replace exact Latin O/o prose."
+    }
+  ],
+  "context04": {
+    "source": "docs/research/prose-qr/astra-2026-10-10/context-04/continuous-article/capture.json",
+    "paragraphs": [
+      {
+        "text": "Once a page is printed, its letters become small shapes of ink. We read those shapes as words, while a camera measures their light and dark edges. This study asks whether both readers can use the same honest page.",
+        "selectionEqualsText": true,
+        "expectedTextStructure": true,
+        "initialNextGap": 2.3332748413085938,
+        "minimumGap": 1.2978515625,
+        "rowClearance": 10.107421875,
+        "firstGlyph": {
+          "ch": "O",
+          "rect": {
+            "x": 48,
+            "y": 115,
+            "width": 46.21875,
+            "height": 65
+          },
+          "font": "64px Target",
+          "stroke": 4,
+          "ink": {
+            "left": 49.13599991798401,
+            "right": 93.0719985961914
+          },
+          "ascent": 34.04800033569336,
+          "descent": 0.19200515747070312
+        }
+      },
+      {
+        "text": "Our first duty is to keep the writing clear. A larger opening letter can mark a new paragraph, but the smaller body still needs room to breathe. Spaces, punctuation, and the rhythm of a sentence belong to the design.",
+        "selectionEqualsText": true,
+        "expectedTextStructure": true,
+        "initialNextGap": 2.2981185913085938,
+        "minimumGap": 1.3134765625,
+        "rowClearance": 10.107421875,
+        "firstGlyph": {
+          "ch": "O",
+          "rect": {
+            "x": 415.703125,
+            "y": 115,
+            "width": 46.21875,
+            "height": 65
+          },
+          "font": "64px Target",
+          "stroke": 4,
+          "ink": {
+            "left": 416.839124917984,
+            "right": 460.7751235961914
+          },
+          "ascent": 34.04800033569336,
+          "descent": 0.19200515747070312
+        }
+      },
+      {
+        "text": "Often a promising pattern fails when the whole page is examined. We save that failure because it tells us which assumption to question next. A useful result must preserve the message and survive an ordinary scan.",
+        "selectionEqualsText": true,
+        "expectedTextStructure": true,
+        "initialNextGap": 1.3137435913085938,
+        "minimumGap": 0.69140625,
+        "rowClearance": 10.107421875,
+        "firstGlyph": {
+          "ch": "O",
+          "rect": {
+            "x": 48,
+            "y": 482.703125,
+            "width": 46.21875,
+            "height": 65
+          },
+          "font": "64px Target",
+          "stroke": 4,
+          "ink": {
+            "left": 49.13599991798401,
+            "right": 93.0719985961914
+          },
+          "ascent": 34.04800033569336,
+          "descent": 0.19200515747070312
+        }
+      }
+    ],
+    "limit": "Saved Copperplate-Bold uppercase O with ArialMT body; gaps and ink estimates do not transfer to another family or to L2 internal lowercase o. dom.text is a retained text property, not a whole-document Selection or clipboard receipt.",
+    "branches": [
+      {
+        "branch": "normal-stock-first-scan",
+        "strictPass": false,
+        "intendedFirstGeometry": false,
+        "selected": {
+          "topLeft": {
+            "balance": 0.2857142857142857,
+            "span": 0.1414141414141414,
+            "stability": 0,
+            "scoredRecords": [
+              {
+                "axes": {
+                  "horizontal": {
+                    "runs": [3, 2, 7, 4, 2],
+                    "complete": true,
+                    "scale": 2.5714285714285716,
+                    "normalizedRMS": 0.32010800646417625
+                  },
+                  "vertical": {
+                    "runs": [2, 2, 2, 6, 2],
+                    "complete": true,
+                    "scale": 2,
+                    "normalizedRMS": 1.2649110640673518
+                  },
+                  "diagonalDown": {
+                    "runs": [
+                      1.4142135623730951, 2.8284271247461903, 7.485281374238571,
+                      2.8284271247461903, 2.8284271247461903
+                    ],
+                    "complete": true,
+                    "scale": 2.4835394729786056,
+                    "normalizedRMS": 0.22065149482822044
+                  },
+                  "diagonalUp": {
+                    "runs": [
+                      2.8284271247461903, 2.8284271247461903, 7.485281374238571,
+                      1.4142135623730951, 2.8284271247461903
+                    ],
+                    "complete": true,
+                    "scale": 2.4835394729786056,
+                    "normalizedRMS": 0.22065149482822044
+                  }
+                },
+                "completeAxes": 4,
+                "worstRMS": 1.2649110640673518,
+                "centralSpanBalance": 0.2857142857142857
+              }
+            ],
+            "trueAxes": {
+              "axes": {
+                "horizontal": {
+                  "runs": [2, 4, 7, 3, 2],
+                  "complete": true,
+                  "scale": 2.5714285714285716,
+                  "normalizedRMS": 0.32010800646417625
+                },
+                "vertical": {
+                  "runs": [2, 6, 2, 2, 2],
+                  "complete": true,
+                  "scale": 2,
+                  "normalizedRMS": 1.2649110640673518
+                },
+                "diagonalDown": {
+                  "runs": [
+                    2.8284271247461903, 2.8284271247461903, 7.0710678118654755,
+                    1.4142135623730951, 2.8284271247461903
+                  ],
+                  "complete": true,
+                  "scale": 2.424366106925306,
+                  "normalizedRMS": 0.2297341458681704
+                },
+                "diagonalUp": {
+                  "runs": [
+                    2.8284271247461903, 1.4142135623730951, 7.0710678118654755,
+                    4.242640687119286, 2.8284271247461903
+                  ],
+                  "complete": true,
+                  "scale": 2.6263966158357483,
+                  "normalizedRMS": 0.3736910092766499
+                }
+              },
+              "completeAxes": 4,
+              "worstRMS": 1.2649110640673518,
+              "centralSpanBalance": 0.2857142857142857
+            }
+          },
+          "topRight": {
+            "balance": 0.2857142857142857,
+            "span": 0.1414141414141414,
+            "stability": 0,
+            "scoredRecords": [
+              {
+                "axes": {
+                  "horizontal": {
+                    "runs": [2, 3, 7, 2, 2],
+                    "complete": true,
+                    "scale": 2.2857142857142856,
+                    "normalizedRMS": 0.17230060940112776
+                  },
+                  "vertical": {
+                    "runs": [1, 2, 2, 1, 2],
+                    "complete": true,
+                    "scale": 1.1428571428571428,
+                    "normalizedRMS": 0.7373940601876312
+                  },
+                  "diagonalDown": {
+                    "runs": [
+                      1.4142135623730951, 2.8284271247461903, 4.65685424949238,
+                      1.4142135623730951, 2.8284271247461903
+                    ],
+                    "complete": true,
+                    "scale": 1.8774479462472786,
+                    "normalizedRMS": 0.4254090151644083
+                  },
+                  "diagonalUp": {
+                    "runs": [2, 2, 7, 2, 3],
+                    "complete": true,
+                    "scale": 2.2857142857142856,
+                    "normalizedRMS": 0.17230060940112776
+                  }
+                },
+                "completeAxes": 4,
+                "worstRMS": 0.7373940601876312,
+                "centralSpanBalance": 0.2857142857142857
+              }
+            ],
+            "trueAxes": {
+              "axes": {
+                "horizontal": {
+                  "runs": [2, 2, 7, 2, 3],
+                  "complete": true,
+                  "scale": 2.2857142857142856,
+                  "normalizedRMS": 0.17230060940112776
+                },
+                "vertical": {
+                  "runs": [2, 1, 2, 1, 2],
+                  "complete": true,
+                  "scale": 1.1428571428571428,
+                  "normalizedRMS": 0.7373940601876312
+                },
+                "diagonalDown": {
+                  "runs": [
+                    2.8284271247461903, 1.4142135623730951, 4.242640687119286,
+                    1.4142135623730951, 2.8284271247461903
+                  ],
+                  "complete": true,
+                  "scale": 1.8182745801939795,
+                  "normalizedRMS": 0.4817662975261955
+                },
+                "diagonalUp": {
+                  "runs": [
+                    0, 43.84062043356595, 5.656854249492381, 1.4142135623730951,
+                    1.4142135623730951
+                  ],
+                  "complete": false,
+                  "scale": 7.47512882968636,
+                  "normalizedRMS": 2.490537240982695
+                }
+              },
+              "completeAxes": 3,
+              "worstRMS": 2.490537240982695,
+              "centralSpanBalance": 0.2857142857142857
+            }
+          },
+          "bottomLeft": {
+            "balance": 0.6666666666666666,
+            "span": 0.2828282828282828,
+            "stability": 0,
+            "scoredRecords": [
+              {
+                "axes": {
+                  "horizontal": {
+                    "runs": [2, 3, 5, 3, 2],
+                    "complete": true,
+                    "scale": 2.142857142857143,
+                    "normalizedRMS": 0.39327683210007003
+                  },
+                  "vertical": {
+                    "runs": [0, 0, 6, 0, 0],
+                    "complete": false,
+                    "scale": 0.8571428571428571,
+                    "normalizedRMS": 2
+                  },
+                  "diagonalDown": {
+                    "runs": [
+                      1.4142135623730951, 2.8284271247461903,
+                      7.4852813742385695, 0, 0
+                    ],
+                    "complete": false,
+                    "scale": 1.6754174373368365,
+                    "normalizedRMS": 0.9645819054515867
+                  },
+                  "diagonalUp": {
+                    "runs": [0, 0, 6.0990195135927845, 1.4142135623730951, 3],
+                    "complete": false,
+                    "scale": 1.501890439423697,
+                    "normalizedRMS": 0.9081715542414979
+                  }
+                },
+                "completeAxes": 1,
+                "worstRMS": 2,
+                "centralSpanBalance": 0.7187763427750894
+              }
+            ],
+            "trueAxes": {
+              "axes": {
+                "horizontal": {
+                  "runs": [2, 3, 5, 2, 3],
+                  "complete": true,
+                  "scale": 2.142857142857143,
+                  "normalizedRMS": 0.39327683210007003
+                },
+                "vertical": {
+                  "runs": [0, 35, 6, 164, 2],
+                  "complete": false,
+                  "scale": 29.571428571428573,
+                  "normalizedRMS": 2.4654384789545585
+                },
+                "diagonalDown": {
+                  "runs": [
+                    0, 52.32590180780452, 7.0710678118654755,
+                    1.4142135623730951, 2.8284271247461903
+                  ],
+                  "complete": false,
+                  "scale": 9.091372900969898,
+                  "normalizedRMS": 2.4389028093756107
+                },
+                "diagonalUp": {
+                  "runs": [
+                    2.8284271247461903, 1.4142135623730951, 7.0710678118654755,
+                    53.74011537017761, 0
+                  ],
+                  "complete": false,
+                  "scale": 9.293403409880339,
+                  "normalizedRMS": 2.453152749442704
+                }
+              },
+              "completeAxes": 1,
+              "worstRMS": 2.4654384789545585,
+              "centralSpanBalance": 0.8333333333333334
+            }
+          }
+        }
+      },
+      {
+        "branch": "inverted-stock-second-scan",
+        "strictPass": false,
+        "intendedFirstGeometry": true,
+        "selected": {
+          "topLeft": {
+            "balance": 0.26666666666666666,
+            "span": 0.2828282828282828,
+            "stability": 0.9230769230769231,
+            "scoredRecords": [
+              {
+                "axes": {
+                  "horizontal": {
+                    "runs": [3, 6, 17, 4, 6],
+                    "complete": true,
+                    "scale": 5.142857142857143,
+                    "normalizedRMS": 0.2727319490807461
+                  },
+                  "vertical": {
+                    "runs": [3, 4, 15, 4, 4],
+                    "complete": true,
+                    "scale": 4.285714285714286,
+                    "normalizedRMS": 0.2658320271650251
+                  },
+                  "diagonalDown": {
+                    "runs": [
+                      4.242640687119285, 5.656854249492381, 15.970562748477143,
+                      4.242640687119285, 4.242640687119285
+                    ],
+                    "complete": true,
+                    "scale": 4.907905579903911,
+                    "normalizedRMS": 0.16908498575738037
+                  },
+                  "diagonalUp": {
+                    "runs": [
+                      3.605551275463989, 6.708203932499369, 16.464630907660013,
+                      3.605551275463989, 6.708203932499369
+                    ],
+                    "complete": true,
+                    "scale": 5.298877331940962,
+                    "normalizedRMS": 0.26728574388294357
+                  }
+                },
+                "completeAxes": 4,
+                "worstRMS": 0.2727319490807461,
+                "centralSpanBalance": 0.6642878364007914
+              }
+            ],
+            "trueAxes": {
+              "axes": {
+                "horizontal": {
+                  "runs": [6, 4, 17, 3, 6],
+                  "complete": true,
+                  "scale": 5.142857142857143,
+                  "normalizedRMS": 0.2727319490807461
+                },
+                "vertical": {
+                  "runs": [4, 4, 15, 3, 4],
+                  "complete": true,
+                  "scale": 4.285714285714286,
+                  "normalizedRMS": 0.26583202716502513
+                },
+                "diagonalDown": {
+                  "runs": [
+                    4.242640687119286, 4.242640687119286, 15.556349186104047,
+                    4.242640687119286, 5.656854249492381
+                  ],
+                  "complete": true,
+                  "scale": 4.848732213850612,
+                  "normalizedRMS": 0.15365907428821485
+                },
+                "diagonalUp": {
+                  "runs": [
+                    5.656854249492381, 4.242640687119286, 15.556349186104047,
+                    2.8284271247461903, 5.656854249492381
+                  ],
+                  "complete": true,
+                  "scale": 4.848732213850612,
+                  "normalizedRMS": 0.24008100484813227
+                }
+              },
+              "completeAxes": 4,
+              "worstRMS": 0.2727319490807461,
+              "centralSpanBalance": 0.6470588235294118
+            }
+          },
+          "topRight": {
+            "balance": 0.26666666666666666,
+            "span": 0.2828282828282828,
+            "stability": 0.9230769230769231,
+            "scoredRecords": [
+              {
+                "axes": {
+                  "horizontal": {
+                    "runs": [4, 6, 17, 3, 6],
+                    "complete": true,
+                    "scale": 5.142857142857143,
+                    "normalizedRMS": 0.2727319490807461
+                  },
+                  "vertical": {
+                    "runs": [3, 4, 15, 4, 4],
+                    "complete": true,
+                    "scale": 4.285714285714286,
+                    "normalizedRMS": 0.2658320271650251
+                  },
+                  "diagonalDown": {
+                    "runs": [
+                      4.242640687119285, 5.656854249492381, 15.970562748477143,
+                      4.242640687119285, 5.656854249492381
+                    ],
+                    "complete": true,
+                    "scale": 5.1099360888143535,
+                    "normalizedRMS": 0.13874384825754302
+                  },
+                  "diagonalUp": {
+                    "runs": [
+                      4.123105625617661, 4.47213595499958, 14.811388300841898,
+                      4.123105625617661, 4.47213595499958
+                    ],
+                    "complete": true,
+                    "scale": 4.571695923153769,
+                    "normalizedRMS": 0.12466738042232367
+                  }
+                },
+                "completeAxes": 4,
+                "worstRMS": 0.2727319490807461,
+                "centralSpanBalance": 0.6160725356654354
+              }
+            ],
+            "trueAxes": {
+              "axes": {
+                "horizontal": {
+                  "runs": [6, 3, 17, 4, 6],
+                  "complete": true,
+                  "scale": 5.142857142857143,
+                  "normalizedRMS": 0.2727319490807461
+                },
+                "vertical": {
+                  "runs": [4, 4, 15, 3, 4],
+                  "complete": true,
+                  "scale": 4.285714285714286,
+                  "normalizedRMS": 0.26583202716502513
+                },
+                "diagonalDown": {
+                  "runs": [
+                    5.656854249492381, 4.242640687119286, 15.556349186104047,
+                    4.242640687119286, 5.656854249492381
+                  ],
+                  "complete": true,
+                  "scale": 5.050762722761055,
+                  "normalizedRMS": 0.13145341380123973
+                },
+                "diagonalUp": {
+                  "runs": [
+                    5.656854249492381, 2.8284271247461903, 16.970562748477143,
+                    2.8284271247461903, 5.656854249492381
+                  ],
+                  "complete": true,
+                  "scale": 4.848732213850612,
+                  "normalizedRMS": 0.36132472314464664
+                }
+              },
+              "completeAxes": 4,
+              "worstRMS": 0.36132472314464664,
+              "centralSpanBalance": 0.6470588235294118
+            }
+          },
+          "bottomLeft": {
+            "balance": 0.26666666666666666,
+            "span": 0.2828282828282828,
+            "stability": 0.9230769230769231,
+            "scoredRecords": [
+              {
+                "axes": {
+                  "horizontal": {
+                    "runs": [3, 6, 17, 4, 6],
+                    "complete": true,
+                    "scale": 5.142857142857143,
+                    "normalizedRMS": 0.2727319490807461
+                  },
+                  "vertical": {
+                    "runs": [3, 4, 15, 4, 4],
+                    "complete": true,
+                    "scale": 4.285714285714286,
+                    "normalizedRMS": 0.2658320271650251
+                  },
+                  "diagonalDown": {
+                    "runs": [
+                      4.242640687119285, 5.656854249492381, 15.970562748477143,
+                      4.242640687119285, 4.242640687119285
+                    ],
+                    "complete": true,
+                    "scale": 4.907905579903911,
+                    "normalizedRMS": 0.16908498575738037
+                  },
+                  "diagonalUp": {
+                    "runs": [
+                      3.1622776601683795, 6.082762530298219, 17.11213336941944,
+                      4.123105625617661, 6.082762530298219
+                    ],
+                    "complete": true,
+                    "scale": 5.223291673685988,
+                    "normalizedRMS": 0.25708095543251763
+                  }
+                },
+                "completeAxes": 4,
+                "worstRMS": 0.2727319490807461,
+                "centralSpanBalance": 0.6642878364007914
+              }
+            ],
+            "trueAxes": {
+              "axes": {
+                "horizontal": {
+                  "runs": [6, 4, 17, 3, 6],
+                  "complete": true,
+                  "scale": 5.142857142857143,
+                  "normalizedRMS": 0.2727319490807461
+                },
+                "vertical": {
+                  "runs": [4, 4, 15, 3, 4],
+                  "complete": true,
+                  "scale": 4.285714285714286,
+                  "normalizedRMS": 0.26583202716502513
+                },
+                "diagonalDown": {
+                  "runs": [
+                    4.242640687119286, 4.242640687119286, 15.556349186104047,
+                    4.242640687119286, 5.656854249492381
+                  ],
+                  "complete": true,
+                  "scale": 4.848732213850612,
+                  "normalizedRMS": 0.15365907428821485
+                },
+                "diagonalUp": {
+                  "runs": [
+                    5.656854249492381, 4.242640687119286, 15.556349186104047,
+                    2.8284271247461903, 5.656854249492381
+                  ],
+                  "complete": true,
+                  "scale": 4.848732213850612,
+                  "normalizedRMS": 0.24008100484813227
+                }
+              },
+              "completeAxes": 4,
+              "worstRMS": 0.2727319490807461,
+              "centralSpanBalance": 0.6470588235294118
+            }
+          }
+        }
+      }
+    ]
+  },
+  "layoutStatus": {
+    "L1": "Rejected retained construction; no universal impossibility conclusion.",
+    "L2": "Conditional source-region/text specification only; no rendered candidate or qualifying O/o."
+  },
+  "futureEvidencePriority": "Within a future separately authorized integrated run, establish an actual exact-text native O/o pair with honest whole-glyph ink envelopes, pitch/center calibration and the unchanged every-record native gate, then same-font first-word/paragraph selection and reading order. Existing receipts cannot supply missing lowercase o. Advance/baseline/reflow, exact payload construction, portable copying and ordinary/phone/print scanning remain substantial unproven milestones.",
+  "prohibitedShortcuts": [
+    "clipping",
+    "hidden modules",
+    "changed source text",
+    "invented metrics",
+    "threshold relaxation"
+  ],
+  "scope": "Deterministic saved arithmetic only. No new source, capture, renderer, reader, locator, binarizer, clipboard, app, phone, print, payload, dependency, Git/PR or goal action."
+}

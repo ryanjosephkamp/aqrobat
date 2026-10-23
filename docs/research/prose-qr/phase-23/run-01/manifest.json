@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-10T00:23:23.630Z",
+  "plannedNative": 1,
+  "plannedRepeat": 1,
+  "plannedControls": 1,
+  "baseline": "f396c1c36deb2eeda5d2fb3efbd9e064b96adc65",
+  "sources": {
+    "experiments/prose-qr/styled-gray-dense/capture.mjs": "e75e184c797308e4a620cf4f10539d3fcc23bcac7d5d7d7f90e0d19d2fddf45b",
+    "experiments/prose-qr/styled-gray-dense/proposal.mjs": "afb97626f35cda055aac2d4096ea55f366fbdaeeb9c9a753daca15b66b5a321c",
+    "experiments/prose-qr/finder-page/symbol-audit.mjs": "dc3a81e0d16069247cf2bfd15a09470b90e0b1b31f7f60e44965521d29988043",
+    "docs/research/prose-qr/phase-23/run-01.json": "8daa565eb550d4d6126be8ae1902ce5afaa4465fa9a33fbad7abe8a149ed2221",
+    "docs/research/prose-qr/phase-23/PLAN.md": "d0545524d5d2e8fae9b769a83ebcd512ca3977235ff730c7c82407c5ec5114be",
+    "docs/research/prose-qr/phase-21/SOURCE-COMPILATION.md": "fb03ff474b70f4a8ad29d99048db1fd648debf6682629e994b552e05c6ca99a1",
+    "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd"
+  },
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "cap": 6000000
+}

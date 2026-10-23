@@ -1,0 +1,31 @@
+{
+  "originals": {
+    "experiments/prose-qr/astra-2026-10-10/calibration.mjs": "e8d8789a4178436c30665c38282e669a034c7be18cd1f1f5df608c96c6848f85",
+    "experiments/prose-qr/astra-2026-10-10/common.mjs": "172d9e84f8ad24fedc6f5f7c8eed95ee042e20ef617c86fdf645111eb9602646",
+    "experiments/prose-qr/astra-2026-10-10/passive.mjs": "a208215716f046c99df2cf94c5ba5d3439c3fc9a2f9cd0db4967a0b3273f547f",
+    "experiments/prose-qr/finder-runs/probe.mjs": "0e6e86d0ae48f99877e0a0f201579017ab71cd7d5a4b0db4ab7c148d4cd98189",
+    "experiments/prose-qr/context-letter-counters/geometry.mjs": "74ff085a15773b435490461c138ccec77e5c4df49824b011a97f6297fe965763",
+    "experiments/prose-qr/context-letter-counters/ordinary.py": "a0a11b430ffcdf125642d0b893865d211386001439b7f1265f2fb83d554da07f",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+    "NOTICE.md": "62f9b9ef5424656839c12ea664b696aad5c24eba985d150ce1521a965559219b",
+    "LICENSE": "c090cc9b6b3155d41ce3872f9df4bdc1532988241b7f2bca709fa90e115d8219",
+    "package-lock.json": "c965918835df6b4562db31a9738c3f9a82a2470bd77997370184901b93178606",
+    "/Users/noir/Documents/aqrobat/node_modules/jsqr/dist/jsQR.js": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859"
+  },
+  "executedSources": {
+    "experiments/prose-qr/control-panel-2026-10-10/prepare.mjs": "ef5ad00e483bd3a4da2edeb6ccc7f5b7674b03f0381ab5b790d98910567c7d07",
+    "experiments/prose-qr/control-panel-2026-10-10/run.mjs": "2ac54c20b460d57c2fbfcc6aecdc118cb166dab1985b1fe99126c2aace78cda1",
+    "experiments/prose-qr/control-panel-2026-10-10/reader.mjs": "83b8baccf62043976d166d4d14e9306357814ad2a0cd6e4d11ac49f5ea0e167e",
+    "experiments/prose-qr/control-panel-2026-10-10/common.mjs": "f967356b584553ef8d05a02c195c64fca04e3e5838cb02db04047f9e8b6a43ea",
+    "experiments/prose-qr/control-panel-2026-10-10/passive.mjs": "53a916acf53184ee87c28d32f3378d314f91b3fee1a5fc72dad4dc45890089be",
+    "experiments/prose-qr/control-panel-2026-10-10/metrics.mjs": "1d711362d73623e4551c91c37b82ef2a6d28baba98aed5b3006a643dd881affe",
+    "experiments/prose-qr/control-panel-2026-10-10/ordinary.py": "a0a11b430ffcdf125642d0b893865d211386001439b7f1265f2fb83d554da07f"
+  },
+  "adaptations": [
+    "Source generation adapted from calibration.mjs; all treatments omit every finder module before drawing visible concentric replacement shapes.",
+    "strict is copied exactly from common.mjs; metric and true-geometry functions copied exactly from probe.mjs and geometry.mjs.",
+    "passive.mjs uses the same six instrumentation hooks and first-location recording. Imports resolve to local copied functions, the stock hash is pinned, and parity is recorded as a flag plus both returns so a mismatch is retained before stopping.",
+    "OpenCV ordinary.py is copied exactly. Ordinary ZXing and jsQR calls omit options, using installed stock defaults.",
+    "No sealed scripts are imported or executed; no old time/output side effects are inherited."
+  ]
+}

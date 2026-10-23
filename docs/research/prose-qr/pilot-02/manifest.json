@@ -1,0 +1,49 @@
+{
+  "schema": "aqrobat-prose-pilot-v1",
+  "startedAt": "2026-10-09T00:12:20Z",
+  "baselineCommit": "e32e4971b7d2eb50af0ddfa55939c2631b866ed9",
+  "limits": {
+    "minutes": 60,
+    "generatedEvidenceBytes": 52428800,
+    "perTrack": 128
+  },
+  "scales": [320, 640, 960],
+  "fonts": ["Menlo", "Courier New"],
+  "payload": "AQROBAT-TEST",
+  "vocabularySha256": "d58cef8cdf8d95432702ee5020cae41af5d270257d1dbc7aabf40e929438323a",
+  "sourceSha256": {
+    "layout.mjs": "225ca1d487b4798c4a9e908cc67b8abe77a3149bc70d46998f27e5bdd39ba17d",
+    "run.mjs": "5ffa1f20fd41e034c8b290ac2fbbefa1da72da45605d5629d3104af03453ab21",
+    "vocabulary.mjs": "33241ed8ba44fce12056824e49e87683413cdaf384ef9f4ba67399fc9ebd1b6b",
+    "decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd"
+  },
+  "earlierEvidenceBytes": 16998,
+  "decoders": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "sourceFacts": [
+    {
+      "url": "https://github.com/Sec-ant/zxing-wasm",
+      "note": "Reader API, local WASM loading, and license layers verified"
+    },
+    {
+      "url": "https://github.com/cozmo/jsQR",
+      "note": "Independent raw-image JS decoder"
+    },
+    {
+      "url": "https://www.qrcode.com/en/howto/code.html",
+      "note": "Four-module clear margin"
+    }
+  ],
+  "selection": "Fixed initial specification grid; URL follow-ups allowed only after a raw or diagnostic structural result",
+  "generatedAt": "2026-10-09T00:19:47.286Z"
+}

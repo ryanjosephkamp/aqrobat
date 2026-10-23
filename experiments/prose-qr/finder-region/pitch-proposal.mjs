@@ -1,0 +1,227 @@
+import { escapeHtml } from "../layout.mjs";
+import assert from "node:assert/strict";
+export const bank = [
+  ..."be bee bees beam bear bare mere meme member memory name manner mean me he her here hem home warm wave weave wee we were wear web wise will wool well mill ill lit tilt till it if fill file fine line life live rail air area ear era rue run ran roam room rum our ore one on or an at as to tea eat ate see sea seat seam mass team".split(
+    " ",
+  ),
+  "a",
+  "I",
+];
+export function finderMatrix(n = 25) {
+  const matrix = Array.from({ length: n }, () => Array(n).fill(false));
+  for (const [ox, oy] of [
+    [0, 0],
+    [n - 7, 0],
+    [0, n - 7],
+  ])
+    for (let y = 0; y < 7; y++)
+      for (let x = 0; x < 7; x++) matrix[oy + y][ox + x] = finder(x, y);
+  return matrix;
+}
+const finder = (x, y) =>
+  x >= 0 &&
+  y >= 0 &&
+  x < 7 &&
+  y < 7 &&
+  (x < 1 || x >= 6 || y < 1 || y >= 6 || (x >= 2 && x < 5 && y >= 2 && y < 5));
+export function proposal(spec, metrics) {
+  const fm = metrics.fonts[spec.font + "|400"],
+    g = fm.glyphs;
+  const capAscent = Math.max(...[..."HEMW"].map((c) => g[c].ascent)),
+    capDescent = Math.max(...[..."HEMW"].map((c) => g[c].descent));
+  const lineHeight =
+      spec.inkGap !== undefined
+        ? capAscent + capDescent + spec.inkGap
+        : spec.leading === "comfortable"
+          ? 24
+          : capAscent + capDescent + 1,
+    baseline = fm.baseline24 + (lineHeight - 24) / 2,
+    unit = spec.unit ?? lineHeight * 2,
+    field = unit * 7,
+    side = Math.ceil(unit * 35),
+    offset = -lineHeight / 2 + (spec.phase || 0);
+  const tracking = spec.tracking || 0;
+  const allowed = (c) =>
+    g[c] &&
+    (spec.inkGap !== undefined
+      ? g[c].ascent <= capAscent + 0.01 &&
+        g[c].descent <= capDescent + spec.inkGap + 0.01
+      : spec.leading === "comfortable"
+        ? g[c].ascent <= baseline + 0.1 &&
+          g[c].descent <= lineHeight - baseline + 0.1
+        : g[c].ascent <= capAscent + 0.25 && g[c].descent <= capDescent + 0.75);
+  const selectedBank =
+    spec.inkGap !== undefined
+      ? [
+          ...bank,
+          ..."remember remembered remembrance members membership beekeepers warmhearted everywhere".split(
+            " ",
+          ),
+        ]
+      : bank;
+  if (spec.synthetic)
+    selectedBank.push(
+      ..."eeee eeeeee eeeeeeee eeeeeeeeee eeheee eeheeeheee eefeef eefeefeef".split(
+        " ",
+      ),
+    );
+  if (spec.capWords)
+    selectedBank.push("TTTT", "TTTTTT", "TTTTTTTT", "TTTTTTTTTT");
+  const words = [
+    ...new Set(selectedBank.flatMap((w) => [w, w.toUpperCase()])),
+  ].filter((w) => w.length >= 2 && [...w].every(allowed));
+  assert(words.length > 10);
+  const alphabet = [...new Set(words.join(""))],
+    envelope =
+      Math.max(...alphabet.map((c) => g[c].ascent)) +
+      Math.max(...alphabet.map((c) => g[c].descent));
+  assert(envelope <= lineHeight);
+  const width = (word) =>
+      [...word].reduce((s, c) => s + g[c].advance + tracking, 0),
+    space = g[" "].advance + tracking;
+  const wordsWithWidths = words.map((word) => ({
+      word,
+      advance: width(word),
+      ticks: Math.ceil(width(word) * 4),
+    })),
+    W = Math.floor((field - 2 - width(".")) * 4),
+    endMargin =
+      spec.inkGap !== undefined
+        ? Math.ceil(
+            (Math.max(...alphabet.map((c) => g[c].advance + tracking)) + 2) * 4,
+          )
+        : 24,
+    lines = [],
+    modelScores = [],
+    actualAdvances = [];
+  for (let row = 0; row < Math.ceil(field / lineHeight) + 1; row++) {
+    const caches = Object.fromEntries(
+      alphabet.map((c) => [c, new Float64Array(W + 1).fill(NaN)]),
+    );
+    const glyphScore = (c, q) => {
+      if (q > W) return 0;
+      if (!Number.isNaN(caches[c][q])) return caches[c][q];
+      let value = 0;
+      for (const [gx, gy, a] of g[c].ink) {
+        const x = q / 4 + gx,
+          y = offset + row * lineHeight + baseline + gy,
+          target = finder(x / unit, y / unit) ? 1 : 0,
+          dx = Math.abs(x - 3.5 * unit),
+          dy = Math.abs(y - 3.5 * unit),
+          importance =
+            spec.objective === "region"
+              ? 1 +
+                18 * Number(Math.abs(dx - dy) < 2) +
+                8 *
+                  Number(
+                    (dx < 1.25 * unit && dy < 1.5 * unit) ||
+                      (dy < 1.25 * unit && dx < 1.5 * unit),
+                  )
+              : 1;
+        value += importance * (a * a - 2 * a * target);
+      }
+      return (caches[c][q] = value / 100);
+    };
+    const dp = new Float64Array(W + 1).fill(Infinity),
+      choices = [];
+    for (let q = W - endMargin; q <= W; q++) dp[q] = 0;
+    for (let pos = W - endMargin - 1; pos >= 0; pos--)
+      for (const w of wordsWithWidths) {
+        const end = pos + w.ticks;
+        if (end > W) continue;
+        const terminal = end >= W - endMargin,
+          next = terminal ? end : end + Math.ceil(space * 4);
+        if (
+          next > W ||
+          (!terminal && next >= W - endMargin) ||
+          !Number.isFinite(dp[next])
+        )
+          continue;
+        let cost = 0,
+          x = pos / 4;
+        for (const c of w.word) {
+          cost += glyphScore(c, Math.round(x * 4));
+          x += g[c].advance + tracking;
+        }
+        cost += dp[next] + 0.02;
+        if (cost < dp[pos]) {
+          dp[pos] = cost;
+          choices[pos] = { word: w.word, next, terminal };
+        }
+      }
+    assert(Number.isFinite(dp[0]), "Whole-word field packing failed");
+    let pos = 0,
+      line = "";
+    while (true) {
+      const c = choices[pos];
+      assert(c);
+      line += (line ? " " : "") + c.word;
+      if (c.terminal) break;
+      pos = c.next;
+    }
+    if (row % 4 === 3 || row === Math.ceil(field / lineHeight)) line += ".";
+    const actual = width(line);
+    assert(actual <= field, "Native advance overflow");
+    lines.push(line);
+    actualAdvances.push(actual);
+    modelScores.push(dp[0]);
+  }
+  const plainText = lines.join("\n"),
+    matrix = finderMatrix(),
+    pad = unit * 5;
+  const pre = (i, x, y) =>
+    `<pre id="corner-${i}" style="position:absolute;left:${pad + x * unit}px;top:${pad + y * unit + offset}px;width:${field}px;height:${(Math.ceil(field / lineHeight) + 1) * lineHeight}px;margin:0;padding:0;font:400 20px/${lineHeight}px '${spec.font}',monospace;letter-spacing:${tracking}px;font-kerning:none;font-variant-ligatures:none;color:black;overflow:visible">${escapeHtml(plainText)}</pre>`;
+  const markup = `<article id="artifact" style="position:relative;width:${unit * 35}px;height:${unit * 35}px;background:white;color:black;overflow:visible">${pre(0, 0, 0)}${pre(1, 18, 0)}${pre(2, 0, 18)}</article>`;
+  return {
+    spec,
+    plainText,
+    lines,
+    markup,
+    matrix,
+    unit,
+    modules: 25,
+    quiet: 5,
+    side,
+    lineHeight,
+    baseline,
+    field,
+    offset,
+    actualAdvances,
+    unusedWidths: actualAdvances.map((w) => field - w),
+    modelScores,
+    structural: {
+      fontSize: 20,
+      uniformWeight: 400,
+      uniformInk: "black",
+      tracking,
+      proportionalNativeAdvances: true,
+      quarterPixelRendererModel: true,
+      globalInkEnvelope: envelope,
+      allowedGlyphs: alphabet.join(""),
+      wordBank: words,
+      syntheticLetterWords: Boolean(spec.synthetic),
+      horizontalAxisBoost: spec.horizontalBoost || 1,
+      globalVerticalPhase: spec.phase || 0,
+      syntheticCapitalWords: Boolean(spec.capWords),
+      regionProposal: spec.objective === "region",
+      minimumWordLength: 2,
+      singleTextNodePerCorner: true,
+      encodedPayload: null,
+      semantic: "Complete words; sentence meaning not claimed",
+      classification:
+        "Finder-only diagnostic; no QR encoding or phone candidate",
+    },
+  };
+}
+export function solidTriplet(unit = 24) {
+  const matrix = finderMatrix(),
+    side = unit * 35;
+  return {
+    unit,
+    modules: 25,
+    quiet: 5,
+    matrix,
+    side,
+    markup: `<svg id="artifact" xmlns="http://www.w3.org/2000/svg" width="${side}" height="${side}"><rect width="100%" height="100%" fill="white"/>${matrix.flatMap((r, y) => r.flatMap((b, x) => (b ? [`<rect x="${(x + 5) * unit}" y="${(y + 5) * unit}" width="${unit}" height="${unit}" fill="black"/>`] : []))).join("")}</svg>`,
+  };
+}

@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-11T19:33:12.932Z",
+  "rows": [
+    {
+      "id": "word-02",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-02/pdf-96/native.png",
+      "payload": "https://example.com/",
+      "pngSha256": "0db5cd5eb5afeec35a1cab3847353894c422963e317fb9150aa20301ec0d486d",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [],
+          "exact": false
+        },
+        {
+          "engine": "vision",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "control-1",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-01/control-1.png",
+      "payload": "https://example.com/",
+      "pngSha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "vision",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.com/"
+          ],
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "control-2",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-01/control-2.png",
+      "payload": "https://example.org/",
+      "pngSha256": "b27f2ee3766efa319717cc74af67e925469fcf427d26a1b49698f36df634a9d0",
+      "readings": [
+        {
+          "engine": "zxing",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.org/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "jsqr",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.org/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "opencv",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.org/"
+          ],
+          "exact": true
+        },
+        {
+          "engine": "vision",
+          "status": 0,
+          "error": null,
+          "texts": [
+            "https://example.org/"
+          ],
+          "exact": true
+        }
+      ]
+    }
+  ]
+}

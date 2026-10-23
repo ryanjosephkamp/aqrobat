@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/closing-checks.py", line 212, in <module>
+    check('Report has matching illustrated originals', len(parser.images) == len(parser.originals) and len(parser.images) >= 8)
+  File "/Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/closing-checks.py", line 33, in check
+    assert passed, name
+AssertionError: Report has matching illustrated originals

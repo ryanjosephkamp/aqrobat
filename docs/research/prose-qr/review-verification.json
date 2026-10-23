@@ -1,0 +1,21 @@
+{
+  "schema": "aqrobat-prose-review-check-v1",
+  "checkedAt": "2026-10-09T00:47:50.557Z",
+  "boardSha256": "a2b469d80687a1b8eb186e0ea03485c768397f23cf4fc0451ce3312a0739ea83",
+  "browser": "155.0.8059.39",
+  "checks": [
+    "Offline file loads six cases and two controls; all manual outcomes start untested.",
+    "Downloaded original PNG is byte-identical to the retained raw screenshot.",
+    "Gzip replay expansion, HTML download, strict preformatted text and assisted selectable spans work without image/QR underlays.",
+    "Synthetic UTF-8 notes survive export/import and reload, remain separate by raw/live view, reject malformed keys atomically, and never become executable HTML.",
+    "Clipboard-denied plain-word download preserves every character; reply selection fallback works. Native clipboard destination fidelity is not tested.",
+    "390px layout has no document overflow in original-image or wide selectable-text modes; captions distinguish source/display size."
+  ],
+  "evidenceClass": "Synthetic software UI checks only, not phone/print/readability acceptance",
+  "phone": "not tested",
+  "physicalPrint": "not tested",
+  "originalPngSha256": "29be442a07f3c78e2d7d3a98177b318ccfc299a32d22847e46a45d624d5c65ea",
+  "errors": [],
+  "externalRequests": [],
+  "status": "passed"
+}

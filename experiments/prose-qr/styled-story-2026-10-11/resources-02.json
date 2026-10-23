@@ -1,0 +1,38 @@
+{
+  "id": "resources-02",
+  "hypothesis": "Measured Arial Unicode MS ▣ center runs 15/35/72/35/15 at 400px predict a 10px foreground stroke balances ring/gap thickness. This is visible foreground glyph styling, not a module background. Compare the corresponding circle and synthetic-bold square; retain one alignment glyph measurement for a URL extension.",
+  "specs": [
+    {
+      "id": "square-stroke",
+      "font": "Arial Unicode MS",
+      "symbol": "▣",
+      "size": 400,
+      "origin": [100, 100],
+      "stroke": 10
+    },
+    {
+      "id": "circle-stroke",
+      "font": "Arial Unicode MS",
+      "symbol": "◉",
+      "size": 400,
+      "origin": [100, 100],
+      "stroke": 10
+    },
+    {
+      "id": "square-bold",
+      "font": "Arial Unicode MS",
+      "symbol": "▣",
+      "size": 400,
+      "origin": [100, 100],
+      "weight": 700
+    },
+    {
+      "id": "alignment",
+      "font": "Arial Unicode MS",
+      "symbol": "⊙",
+      "size": 400,
+      "origin": [100, 100],
+      "stroke": 10
+    }
+  ]
+}

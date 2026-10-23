@@ -1,0 +1,390 @@
+{
+  "startedAtUtc": "2026-10-10T21:32:12.055Z",
+  "finishedAtUtc": "2026-10-10T21:32:17.512Z",
+  "stop": {
+    "atUtc": "2026-10-10T21:32:17.274Z",
+    "current": "light-regular",
+    "message": "Wrong payload",
+    "stack": "AssertionError [ERR_ASSERTION]: Wrong payload\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-batch.mjs:11:1303"
+  },
+  "captures": [
+    {
+      "id": "control-normal",
+      "kind": "control",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-normal",
+      "sourceHtmlSha256": "7ae691b60035510d76cf565dde6f52a229e51a2f0a95567050da06bc5a337606",
+      "payload": "https://example.com/",
+      "geometry": {
+        "unit": 6.5,
+        "dimension": 57,
+        "counters": [
+          {
+            "x": 86.75,
+            "y": 86.75
+          },
+          {
+            "x": 411.75,
+            "y": 86.75
+          },
+          {
+            "x": 86.75,
+            "y": 411.75
+          }
+        ]
+      },
+      "startedAtUtc": "2026-10-10T21:32:12.783Z",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-normal/input.png",
+      "width": 512,
+      "height": 512,
+      "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "repeatSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "repeatExact": true,
+      "rgbaSha256": "8ac7c695212c558ff6cb412a9c2a2e74757e3e49572d3ad3fb772c3217876906",
+      "repeatRgbaSha256": "8ac7c695212c558ff6cb412a9c2a2e74757e3e49572d3ad3fb772c3217876906",
+      "sourceVerifiedAfterCapture": true,
+      "completedAtUtc": "2026-10-10T21:32:13.225Z"
+    },
+    {
+      "id": "control-inverted",
+      "kind": "control",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-inverted",
+      "sourceHtmlSha256": "e027a6ddbce5600b56ccf5cd368bf0462606061122b5ac8de8249308f7b853e1",
+      "payload": "https://example.com/",
+      "geometry": {
+        "unit": 6.5,
+        "dimension": 57,
+        "counters": [
+          {
+            "x": 86.75,
+            "y": 86.75
+          },
+          {
+            "x": 411.75,
+            "y": 86.75
+          },
+          {
+            "x": 86.75,
+            "y": 411.75
+          }
+        ]
+      },
+      "startedAtUtc": "2026-10-10T21:32:14.453Z",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/control-inverted/input.png",
+      "width": 512,
+      "height": 512,
+      "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+      "repeatSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+      "repeatExact": true,
+      "rgbaSha256": "d56ed602a9fff04de7624e6a450880573beabe0b8cd84f28e3216a7fed61b069",
+      "repeatRgbaSha256": "d56ed602a9fff04de7624e6a450880573beabe0b8cd84f28e3216a7fed61b069",
+      "sourceVerifiedAfterCapture": true,
+      "completedAtUtc": "2026-10-10T21:32:14.739Z"
+    },
+    {
+      "id": "light-regular",
+      "kind": "native",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/light-regular",
+      "sourceHtmlSha256": "f9f9f81190c7eef63f419b1ba3dfa6c0f2e68283edc58c71e765429624f8fa7d",
+      "payload": "https://example.com/",
+      "geometry": {
+        "unit": 6.5,
+        "dimension": 57,
+        "counters": [
+          {
+            "x": 86.75,
+            "y": 86.75
+          },
+          {
+            "x": 411.75,
+            "y": 86.75
+          },
+          {
+            "x": 86.75,
+            "y": 411.75
+          }
+        ]
+      },
+      "startedAtUtc": "2026-10-10T21:32:16.179Z",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/layout-01/light-regular/input.png",
+      "width": 512,
+      "height": 512,
+      "pngSha256": "347ee60c9ea701fc05f55c769e59ad8478fbc74dd7cf1d7ab1e49a4b5e8c408b",
+      "repeatSha256": "347ee60c9ea701fc05f55c769e59ad8478fbc74dd7cf1d7ab1e49a4b5e8c408b",
+      "repeatExact": true,
+      "rgbaSha256": "033c8300af6c9926b39f748bf9fc2a7118d9068b0708779154ac2de5e8485137",
+      "repeatRgbaSha256": "033c8300af6c9926b39f748bf9fc2a7118d9068b0708779154ac2de5e8485137",
+      "sourceVerifiedAfterCapture": true,
+      "completedAtUtc": "2026-10-10T21:32:16.511Z"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "control-normal",
+      "parity": true,
+      "strictBranches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "strictPass": false,
+          "first": {
+            "alignmentPattern": {
+              "x": 392,
+              "y": 392
+            },
+            "bottomLeft": {
+              "x": 89.5,
+              "y": 412
+            },
+            "dimension": 57,
+            "topLeft": {
+              "x": 86.75,
+              "y": 86.5
+            },
+            "topRight": {
+              "x": 411.75,
+              "y": 86.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "control-inverted",
+      "parity": true,
+      "strictBranches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "strictPass": false,
+          "first": {
+            "alignmentPattern": {
+              "x": 249.25,
+              "y": 346.5
+            },
+            "bottomLeft": {
+              "x": 145.5,
+              "y": 308
+            },
+            "dimension": 25,
+            "topLeft": {
+              "x": 298.25,
+              "y": 321
+            },
+            "topRight": {
+              "x": 389.5,
+              "y": 373
+            }
+          }
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "strictPass": false,
+          "first": {
+            "alignmentPattern": {
+              "x": 392,
+              "y": 392
+            },
+            "bottomLeft": {
+              "x": 89.5,
+              "y": 412
+            },
+            "dimension": 57,
+            "topLeft": {
+              "x": 87,
+              "y": 86.5
+            },
+            "topRight": {
+              "x": 408.75,
+              "y": 87
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "control-normal",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:32:13.228Z",
+      "exactExpected": true,
+      "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "rawSha256": "e3c6fe6cda99eee5e6ea11cbf8ab511e0aaef8f2081f38f4b3e97ccfc20cd1e1",
+      "completedAtUtc": "2026-10-10T21:32:13.380Z"
+    },
+    {
+      "id": "control-normal",
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:32:13.383Z",
+      "exactExpected": true,
+      "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "rawSha256": "3105905395302d7fe7781d71f3bb269259cb6eb483ac3726bcc32c0e471020a1",
+      "completedAtUtc": "2026-10-10T21:32:13.908Z"
+    },
+    {
+      "id": "control-normal",
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:32:13.911Z",
+      "exactExpected": true,
+      "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "rawSha256": "0c086d87e395a202b5b156d67d11f044438e0a16d1887e012954b138d81f3bc6",
+      "completedAtUtc": "2026-10-10T21:32:14.130Z"
+    },
+    {
+      "id": "control-inverted",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T21:32:14.743Z",
+      "exactExpected": false,
+      "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+      "rawSha256": "894a0dde7a22c4b5cf7138107485520c58c0638da135b0db16e6a1d8c0d550db",
+      "completedAtUtc": "2026-10-10T21:32:14.903Z"
+    },
+    {
+      "id": "control-inverted",
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:32:14.906Z",
+      "exactExpected": true,
+      "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+      "rawSha256": "a6237eed6790bc61e63936b6edf7969b8eba3a2a5fcbb9f7e3c5fdcf70c6c418",
+      "completedAtUtc": "2026-10-10T21:32:15.422Z"
+    },
+    {
+      "id": "control-inverted",
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [
+        "https://example.com/"
+      ],
+      "startedAtUtc": "2026-10-10T21:32:15.426Z",
+      "exactExpected": true,
+      "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+      "rawSha256": "f8c64cf8ee2243f14be1f702a45c6ee647aea70391dc175b56a62cd9c42ceceb",
+      "completedAtUtc": "2026-10-10T21:32:15.766Z"
+    },
+    {
+      "id": "light-regular",
+      "engine": "opencv",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T21:32:16.517Z",
+      "exactExpected": false,
+      "pngSha256": "347ee60c9ea701fc05f55c769e59ad8478fbc74dd7cf1d7ab1e49a4b5e8c408b",
+      "rawSha256": "986af4bbe0ef64afd4639c1a70a4f3a8e8192ed49fecb3a6b03e801c6841251e",
+      "completedAtUtc": "2026-10-10T21:32:16.646Z"
+    },
+    {
+      "id": "light-regular",
+      "engine": "zxing",
+      "status": "completed",
+      "texts": [],
+      "startedAtUtc": "2026-10-10T21:32:16.650Z",
+      "exactExpected": false,
+      "pngSha256": "347ee60c9ea701fc05f55c769e59ad8478fbc74dd7cf1d7ab1e49a4b5e8c408b",
+      "rawSha256": "26030ef3d7f32ab60f72f6618e74055e0d32cf92fbe2e5ce6223dba3e220e3d1",
+      "completedAtUtc": "2026-10-10T21:32:17.048Z"
+    },
+    {
+      "id": "light-regular",
+      "engine": "jsqr",
+      "status": "completed",
+      "texts": [
+        ""
+      ],
+      "startedAtUtc": "2026-10-10T21:32:17.051Z",
+      "exactExpected": false,
+      "pngSha256": "347ee60c9ea701fc05f55c769e59ad8478fbc74dd7cf1d7ab1e49a4b5e8c408b",
+      "rawSha256": "be232b27a8d470ebc75ee306ee2d25e1975f9b1d7945d90587fe1c1b889e963c",
+      "completedAtUtc": "2026-10-10T21:32:17.272Z"
+    },
+    {
+      "id": "light-bold",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "light-bold",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "light-bold",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "reverse-regular",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "reverse-regular",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "reverse-regular",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "reverse-bold",
+      "engine": "opencv",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "reverse-bold",
+      "engine": "zxing",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    },
+    {
+      "id": "reverse-bold",
+      "engine": "jsqr",
+      "status": "unattempted",
+      "texts": [],
+      "reason": "Mandatory stop: Wrong payload"
+    }
+  ],
+  "budget": {
+    "glyphResources": 67,
+    "nativeCaptures": 1,
+    "controlCaptures": 2,
+    "ordinaryCalls": 9,
+    "profiles": 2,
+    "repeats": 3,
+    "payloadTrials": 0
+  },
+  "bytesAtEnd": 4671946,
+  "browserClosed": true
+}

@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-11T17:50:41.153Z",
+  "error": "page.waitForEvent: Timeout 30000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at download (/Users/noir/Documents/aqrobat/experiments/prose-qr/portable-story-2026-10-11/final-workbench-check.mjs:92:26)\n    at /Users/noir/Documents/aqrobat/experiments/prose-qr/portable-story-2026-10-11/final-workbench-check.mjs:107:25",
+  "comparisons": [
+    {
+      "batch": "workbench-test-03",
+      "id": "accepted-replay",
+      "htmlSha256": "b0619421a0688d685df7bb5def05ffa97e54a005c163ebe4185511eb80f0db77",
+      "byteExactPriorExport": true,
+      "rawSourceExact": true
+    },
+    {
+      "batch": "workbench-test-03",
+      "id": "new-prose-complete",
+      "htmlSha256": "ce69aba7e14939d7ddf2257091ddd8691e242c74c8862afbaa3890bba76c3440",
+      "byteExactPriorExport": true,
+      "rawSourceExact": true
+    },
+    {
+      "batch": "workbench-test-03",
+      "id": "narrow-complete",
+      "htmlSha256": "6ae982da8c1e55abb73efbf83a4096de2e82487537aadc83f374d6de3437aa19",
+      "byteExactPriorExport": true,
+      "rawSourceExact": true
+    }
+  ],
+  "network": [],
+  "errors": []
+}

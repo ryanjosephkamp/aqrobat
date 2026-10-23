@@ -1,0 +1,139 @@
+{
+  "finishedAt": "2026-10-11T05:45:02.964Z",
+  "rows": [
+    {
+      "id": "format-baseline",
+      "command": "npm",
+      "args": [
+        "run",
+        "format:check"
+      ],
+      "started": "2026-10-11T05:42:52.481Z",
+      "elapsedMs": 21071,
+      "status": 1,
+      "error": null,
+      "stdoutSha256": "15cbed35de22f346fd90109c0b0c22604851cdd56746fb9940388a5a150e5729",
+      "stderrSha256": "50f61afb18dc2ab6e3c94716acc32dc98e6486ccf9d5736625de02f316146d60"
+    },
+    {
+      "id": "unit",
+      "command": "npm",
+      "args": [
+        "test"
+      ],
+      "started": "2026-10-11T05:43:14.324Z",
+      "elapsedMs": 897,
+      "status": 0,
+      "error": null,
+      "stdoutSha256": "a61f237be0965039b193360942f2bc905c9590c1d448cc5458be8d8d409e553a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "build",
+      "command": "npm",
+      "args": [
+        "run",
+        "build"
+      ],
+      "started": "2026-10-11T05:43:15.221Z",
+      "elapsedMs": 1821,
+      "status": 0,
+      "error": null,
+      "stdoutSha256": "6839686e4d22a52e643b128cac4e742c0a6be1051f8f8c1d80c53ac93f0cc74b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "browser",
+      "command": "npm",
+      "args": [
+        "run",
+        "test:browser"
+      ],
+      "started": "2026-10-11T05:43:17.043Z",
+      "elapsedMs": 5011,
+      "status": 0,
+      "error": null,
+      "stdoutSha256": "a2a9b6148edbaa221f9bc8751f9d1c37f3168f804987281e0c25173194858c13",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "text-browser",
+      "command": "npm",
+      "args": [
+        "run",
+        "test:text-browser"
+      ],
+      "started": "2026-10-11T05:43:22.055Z",
+      "elapsedMs": 60951,
+      "status": 0,
+      "error": null,
+      "stdoutSha256": "356889a0176d663a645c5b8219287a1528314c5f1c7e0e0e17ecf9de852795ce",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "research-layout",
+      "command": "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+      "args": [
+        "--test",
+        "experiments/prose-qr/styled-story-2026-10-11/layout.test.mjs"
+      ],
+      "started": "2026-10-11T05:44:23.007Z",
+      "elapsedMs": 170,
+      "status": 0,
+      "error": null,
+      "stdoutSha256": "debfae02d51ab078f1330613fc35b2461862e2ad2195ddebe48be55e3bc69769",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "format-current",
+      "command": "npm",
+      "args": [
+        "run",
+        "format:check"
+      ],
+      "started": "2026-10-11T05:44:23.177Z",
+      "elapsedMs": 39560,
+      "status": 1,
+      "error": null,
+      "stdoutSha256": "15cbed35de22f346fd90109c0b0c22604851cdd56746fb9940388a5a150e5729",
+      "stderrSha256": "6f4875d9971364a828942610568c2ea73a1ebb9c0543732406eac08e4e2a5a4a"
+    },
+    {
+      "id": "format-new-source",
+      "command": "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+      "args": [
+        "/Users/noir/Documents/aqrobat/node_modules/prettier/bin/prettier.cjs",
+        "--check",
+        "experiments/prose-qr/styled-story-2026-10-11/atlas.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/batch.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/compositor.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/control-replay.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/corner-atlas.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/diagnose.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/export-verify.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/finish-export.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/heavy-atlas.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/heavy.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/layout.test.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/ornament.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/replay.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/resources.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/verify-repo.mjs",
+        "experiments/prose-qr/styled-story-2026-10-11/vision-replay.mjs"
+      ],
+      "started": "2026-10-11T05:45:02.737Z",
+      "elapsedMs": 226,
+      "status": 0,
+      "error": null,
+      "stdoutSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "originalGeneratedFilesTouched": false,
+  "temporaryCopyRemoved": "pending finally",
+  "nativePaste": "not run for research candidate",
+  "phone": "not run",
+  "physicalPrint": "not run",
+  "installedExtension": "not run; optional, product unchanged"
+}

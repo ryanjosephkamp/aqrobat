@@ -1,0 +1,77 @@
+{
+  "startedAt": "2026-10-09T17:42:06.963Z",
+  "specs": [
+    {
+      "id": "close-01",
+      "font": "Courier New",
+      "weight": 400,
+      "tracking": -3.3,
+      "objective": "geometry",
+      "shift": true,
+      "freeAlphabet": true,
+      "closeLeading": true,
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "close-02",
+      "font": "Courier New",
+      "weight": 400,
+      "tracking": -3.6,
+      "objective": "geometry",
+      "shift": true,
+      "freeAlphabet": true,
+      "closeLeading": true,
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "close-03",
+      "font": "Courier New",
+      "weight": 700,
+      "tracking": -3.3,
+      "objective": "geometry",
+      "shift": true,
+      "freeAlphabet": true,
+      "closeLeading": true,
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "close-04",
+      "font": "Courier New",
+      "weight": 700,
+      "tracking": -3.6,
+      "objective": "geometry",
+      "shift": true,
+      "freeAlphabet": true,
+      "closeLeading": true,
+      "payload": "https://example.com/"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/glyph-geometry/fonts.mjs": "e449348e0adc90e2c3f2baad61daa382e1842e7a4123029638d3a1feb4cbb796",
+    "experiments/prose-qr/glyph-geometry/layout.mjs": "809ce4262e133c97f29bf8472551dedd7a333a7aa694e754cc8ee7b2c69ef7c9",
+    "experiments/prose-qr/glyph-geometry/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/glyph-geometry/capture.mjs": "4a4ffadd75e578984972b93eab889edba201db24bdc69eae4097375f66ca43b1",
+    "docs/research/prose-qr/phase-05/font-metrics.json": "07a74b621f84586db47f39d9eb250a366b5a4adb2f637100aa1bda9589be02a0",
+    "docs/research/prose-qr/phase-05/PLAN.md": "7173811f1529da5a2b3caf6833c2d5a39126ed05c9158478fde33221aa27a436",
+    "docs/research/prose-qr/phase-05/SHIFT-PLAN.md": "268f23fde37db1805aa59411735a4de45207d9f9fc9fafddf5217d4351e3950d",
+    "docs/research/prose-qr/phase-05/CLOSE-PLAN.md": "d205c2417253e025487c969e6fef5208a1074114107464203c088b69be09eac2",
+    "experiments/prose-qr/decoders.mjs": "84f0951961977b2cf70e3ab00e1684ea64743bdd007323ba6f69885037d161fd",
+    "src/core.mjs": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+    "vendor/qrcodegen.mjs": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+  },
+  "decoder": {
+    "jsQR": "1.4.0",
+    "zxingWasm": "3.1.5",
+    "wasmBytes": 966895,
+    "wasmSha256": "aecc1876de036c62c8419f67a5e1a16b1698a325bcd190aa84810d516e263931",
+    "readerOptions": {
+      "formats": ["QRCode"],
+      "tryHarder": true,
+      "maxNumberOfSymbols": 1
+    },
+    "network": "WASM loaded from installed local package, not a CDN"
+  },
+  "ordinaryZXing": { "formats": ["QRCode"] },
+  "diagnosticBundleSha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+  "gate": "Unchanged native readable text pixels; expected content compared after independent decoding. Diagnostics are separate."
+}

@@ -1,0 +1,133 @@
+{
+  "at": "2026-10-23T14:01:18.917287+00:00",
+  "clientDate": "2026-10-23",
+  "cwd": "/Users/noir/Documents/aqrobat",
+  "branch": "codex/aqrobat-foundation",
+  "preparationParent": "ce1399bb3b21acec5cbb99c2ae1727c9e8d27d80",
+  "main": "e41943aff7780107a33a60a21494a41276b92c58",
+  "remote": "https://github.com/ryanjosephkamp/aqrobat.git",
+  "remoteRefsBeforePreparationCheckpoint": [
+    "e41943aff7780107a33a60a21494a41276b92c58\tHEAD",
+    "ce1399bb3b21acec5cbb99c2ae1727c9e8d27d80\trefs/heads/codex/aqrobat-foundation",
+    "e41943aff7780107a33a60a21494a41276b92c58\trefs/heads/main",
+    "ce1399bb3b21acec5cbb99c2ae1727c9e8d27d80\trefs/pull/1/head",
+    "9e63bc61269f86c97f8b96b0ef38da68f6f8cfb7\trefs/pull/1/merge"
+  ],
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "codex/aqrobat-foundation",
+    "headRefOid": "ce1399bb3b21acec5cbb99c2ae1727c9e8d27d80",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/ryanjosephkamp/aqrobat/pull/1"
+  },
+  "worktrees": "worktree /Users/noir/Documents/aqrobat\nHEAD ce1399bb3b21acec5cbb99c2ae1727c9e8d27d80\nbranch refs/heads/codex/aqrobat-foundation",
+  "npmPrivate": true,
+  "extensionVersion": "0.4.2",
+  "physicalMemoryBytes": 19327352832,
+  "diskFreeBytesForUser": 26881331200,
+  "swapUsage": "vm.swapusage: total = 5120.00M  used = 3795.56M  free = 1324.44M  (encrypted)",
+  "resourceNote": "Snapshot only; do not treat hardware RAM as available RAM or cumulative swap counters as current pressure.",
+  "existingCiAtSavedHead": {
+    "conclusion": "failure",
+    "event": "pull_request",
+    "headSha": "ce1399bb3b21acec5cbb99c2ae1727c9e8d27d80",
+    "jobs": [
+      {
+        "completedAt": "2026-10-11T20:38:17Z",
+        "conclusion": "failure",
+        "databaseId": 114568349283,
+        "name": "check",
+        "startedAt": "2026-10-11T20:32:47Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-11T20:32:48Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-11T20:32:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:33:03Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-11T20:32:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:33:08Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@v4",
+            "number": 3,
+            "startedAt": "2026-10-11T20:33:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:33:10Z",
+            "conclusion": "success",
+            "name": "Run npm ci --ignore-scripts",
+            "number": 4,
+            "startedAt": "2026-10-11T20:33:08Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:33:12Z",
+            "conclusion": "success",
+            "name": "Run npm test",
+            "number": 5,
+            "startedAt": "2026-10-11T20:33:10Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:38:15Z",
+            "conclusion": "failure",
+            "name": "Run npm run format:check",
+            "number": 6,
+            "startedAt": "2026-10-11T20:33:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:38:15Z",
+            "conclusion": "skipped",
+            "name": "Post Run actions/setup-node@v4",
+            "number": 11,
+            "startedAt": "2026-10-11T20:38:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:38:15Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 12,
+            "startedAt": "2026-10-11T20:38:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-11T20:38:16Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "startedAt": "2026-10-11T20:38:15Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/ryanjosephkamp/aqrobat/actions/runs/38172660060/job/114568349283"
+      }
+    ]
+  },
+  "ownerSelectedExtensionFinishLine": "Reliable styled-text insertion into Gmail and similar editors",
+  "nextResearchScope": "Recommended broader prose/payload reliability, bounded search and verified outputs; alignment pending",
+  "worktreeBranchPrSetup": "Recommended only, not created",
+  "newGoal": false,
+  "newExperiments": 0,
+  "readerCalls": 0,
+  "agents": 0,
+  "newChats": 0,
+  "SiteCalls": 0,
+  "audienceChanges": 0,
+  "runtimeTestsThisPreparation": "Not run; only handover/document checks",
+  "privateSite": "No API access or audience recheck; private audience left untouched by this task."
+}

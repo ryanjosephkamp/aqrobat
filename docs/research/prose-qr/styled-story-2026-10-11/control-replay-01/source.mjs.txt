@@ -1,0 +1,10 @@
+import {mkdir,readFile,writeFile} from "node:fs/promises";
+import {resolve} from "node:path";
+import {spawnSync} from "node:child_process";
+import {createHash} from "node:crypto";
+const root=resolve("docs/research/prose-qr/styled-story-2026-10-11/control-replay-01");await mkdir(root);
+const sha=b=>createHash("sha256").update(b).digest("hex");const save=(n,b)=>writeFile(resolve(root,n),typeof b==="string"||Buffer.isBuffer(b)?b:JSON.stringify(b,null,2)+"\n",{flag:"wx"});
+const inputs=[{id:"short",payload:"AQROBAT-TEST",path:"docs/research/prose-qr/styled-story-2026-10-11/batch-08/control-1.png"},{id:"url",payload:"https://example.com/",path:"docs/research/prose-qr/styled-story-2026-10-11/batch-08/control-2.png"}];
+const source=await readFile(new URL("control-replay.mjs",import.meta.url));await save("source.mjs.txt",source);await save("manifest.json",{at:new Date().toISOString(),inputs,captures:0,readerCalls:6,sourceSha256:sha(source)});
+const rows=[];
+for(const input of inputs){const row={...input,pngSha256:sha(await readFile(input.path)),readings:[]};for(const engine of["zxing","jsqr","opencv"]){const args=engine==="opencv"?["-B","experiments/prose-qr/styled-story-2026-10-11/opencv.py",resolve(input.path)]:["experiments/prose-qr/styled-story-2026-10-11/reader.mjs",engine,resolve(input.path)];const raw=spawnSync(engine==="opencv"?"python3":process.execPath,args,{encoding:"utf8",timeout:45000,maxBuffer:12000000});await save(`${input.id}-${engine}.stdout.txt`,raw.stdout||"");await save(`${input.id}-${engine}.stderr.txt`,raw.stderr||"");const value=JSON.parse(raw.stdout);row.readings.push({engine,status:raw.status,texts:value.texts,exact:value.texts.includes(input.payload)});if(raw.status!==0||!row.readings.at(-1).exact)throw Error("Control replay failed");}rows.push(row);}await save("results.json",{at:new Date().toISOString(),rows,captures:0,readerCalls:6});console.log(JSON.stringify(rows));

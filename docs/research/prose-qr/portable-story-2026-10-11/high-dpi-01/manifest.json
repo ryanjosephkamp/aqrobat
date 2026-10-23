@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-11T17:40:26.080Z",
+  "hypothesis": "The page-compatible9pt physical layout may behave differently when rendered natively on high-DPI devices. Capture unchanged selectable HTML at deviceScaleFactor2 and3, and the actual Letter PDF at native192dpi and300dpi. No external resampling, blur, cropping or geometry supplied to readers.",
+  "browserInputs": [
+    {
+      "id": "impact-2x",
+      "html": "examples/page-impact-mixed.html",
+      "scale": 2,
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "impact-3x",
+      "html": "examples/page-impact-mixed.html",
+      "scale": 3,
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "black-2x",
+      "html": "examples/black-weight-mixed.html",
+      "scale": 2,
+      "payload": "https://example.com/"
+    },
+    {
+      "id": "control-2x",
+      "htmlArchive": "batch-07/control-1.html.gz",
+      "scale": 2,
+      "payload": "https://example.com/",
+      "control": true
+    }
+  ],
+  "pdf": "examples/page-impact-letter.pdf",
+  "pdfSha256": "cc6015b3cc8d251b70528d9ddb67ba753d5eabea499306d1d521ae3f2a02e7ae",
+  "pdfDpi": [
+    192,
+    300
+  ],
+  "plannedNativeCandidates": 5,
+  "plannedControls": 1,
+  "plannedImmediateRepeats": 6,
+  "inputTransforms": "none; native device pixels and direct PDFKit page rendering at requested resolution"
+}

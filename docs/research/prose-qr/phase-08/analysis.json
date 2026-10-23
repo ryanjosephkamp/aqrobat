@@ -1,0 +1,451 @@
+{
+  "sourceScriptSha256": "11f0fe5bec5f6d1036a9e3349bdcaa8240ce9530711f0fb3f18181a024354913",
+  "plannedSourceProposals": 29,
+  "nativeLayouts": 27,
+  "sourcePackingRejections": 2,
+  "ordinaryCoordinateDimensionPasses": 3,
+  "layoutsWithAnyStableCentralRow": 0,
+  "automaticLegibilityRejections": 8,
+  "payloads": 0,
+  "phoneCandidates": 0,
+  "goal": "unsolved",
+  "placementMechanism": {
+    "sourceOffsets": [7, 8, 9],
+    "nativeFontSize": 20,
+    "nativeLineHeight": 24,
+    "tracking": 0,
+    "nominalModule": 6,
+    "expectedCentralSpan": 18,
+    "actualTopWidth": 5,
+    "actualBottomWidth": 5,
+    "actualHeight": 3,
+    "scoredSize": 4.333333333333333,
+    "stableRows": 0,
+    "ordinaryGeometry": "Dimension 25, all three points within one nominal unit; also returns dimension 23 alternative",
+    "qualification": "Coordinate/dimension gate only; not complete finder structure or payload recovery"
+  },
+  "visualReview": {
+    "representativeFiles": [
+      "run-01/raw/monaco-area.png",
+      "run-01/raw/impact-region.png",
+      "pitch-01/raw/impact-pitch-6.png",
+      "pitch-01/raw/monaco-pitch-8.png"
+    ],
+    "observations": "Letters/words distinguishable in representative displays. Text is repetitive, mixed-case and semantically unaccepted. Small fields contain only three/four short lines and separate clusters, not ordinary paragraph flow. Other layouts not individually visually accepted. Owner legibility untested. Eight Impact large-field layouts fail conservative -0.1171875 px ink-bounds overlap gate; this alone does not establish perceptual illegibility."
+  },
+  "rows": [
+    {
+      "batch": "run-01",
+      "id": "impact-area",
+      "unit": 48,
+      "objective": 0.6173617016250945,
+      "components": {
+        "agreement": 0.5241904053287982,
+        "axisMean": 0.05844907407407408,
+        "stableFraction": 0,
+        "balancedFraction": 0.034722222222222224
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-region",
+      "unit": 48,
+      "objective": 0.6501411328420258,
+      "components": {
+        "agreement": 0.5210902069160998,
+        "axisMean": 0.08043981481481484,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-area",
+      "unit": 48,
+      "objective": 0.5206177957294028,
+      "components": {
+        "agreement": 0.4534881660997732,
+        "axisMean": 0.03935185185185186,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-region",
+      "unit": 48,
+      "objective": 0.5135493433484505,
+      "components": {
+        "agreement": 0.4412113803854875,
+        "axisMean": 0.04456018518518518,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-r1-1",
+      "unit": 48,
+      "objective": 0.6511568168934241,
+      "components": {
+        "agreement": 0.5192123724489796,
+        "axisMean": 0.08333333333333333,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-r1-2",
+      "unit": 48,
+      "objective": 0.6484847411186698,
+      "components": {
+        "agreement": 0.5194338151927438,
+        "axisMean": 0.08043981481481484,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-r1-3",
+      "unit": 48,
+      "objective": 0.6481186224489797,
+      "components": {
+        "agreement": 0.5196464002267573,
+        "axisMean": 0.07986111111111113,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-r2-1",
+      "unit": 48,
+      "objective": 0.6502356150793651,
+      "components": {
+        "agreement": 0.5182911706349206,
+        "axisMean": 0.08333333333333333,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-r2-2",
+      "unit": 48,
+      "objective": 0.6496332908163266,
+      "components": {
+        "agreement": 0.5176888463718821,
+        "axisMean": 0.08333333333333333,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "impact-r2-3",
+      "unit": 48,
+      "objective": 0.6495712868480726,
+      "components": {
+        "agreement": 0.5176268424036281,
+        "axisMean": 0.08333333333333333,
+        "stableFraction": 0,
+        "balancedFraction": 0.04861111111111111
+      },
+      "coordinatePass": false,
+      "legibilityRejected": true
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-r1-1",
+      "unit": 48,
+      "objective": 0.5199711829176115,
+      "components": {
+        "agreement": 0.45284155328798187,
+        "axisMean": 0.03935185185185186,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-r1-2",
+      "unit": 48,
+      "objective": 0.5223627645502646,
+      "components": {
+        "agreement": 0.4534970238095239,
+        "axisMean": 0.04108796296296297,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-r1-3",
+      "unit": 48,
+      "objective": 0.5234493102796675,
+      "components": {
+        "agreement": 0.45342616213151926,
+        "axisMean": 0.04224537037037038,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-r2-1",
+      "unit": 48,
+      "objective": 0.5228026974678761,
+      "components": {
+        "agreement": 0.4527795493197279,
+        "axisMean": 0.04224537037037038,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-r2-2",
+      "unit": 48,
+      "objective": 0.5206945625472411,
+      "components": {
+        "agreement": 0.4506714143990929,
+        "axisMean": 0.04224537037037038,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "run-01",
+      "id": "monaco-r2-3",
+      "unit": 48,
+      "objective": 0.5223007605820106,
+      "components": {
+        "agreement": 0.4534350198412698,
+        "axisMean": 0.04108796296296297,
+        "stableFraction": 0,
+        "balancedFraction": 0.027777777777777776
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "pitch-01",
+      "id": "impact-pitch-6",
+      "unit": 6,
+      "objective": 0.9044154698916602,
+      "components": {
+        "agreement": 0.4954648526077097,
+        "axisMean": 0.40895061728395055,
+        "stableFraction": 0,
+        "balancedFraction": 0
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "pitch-01",
+      "id": "impact-pitch-8",
+      "unit": 8,
+      "objective": 0.9868197278911565,
+      "components": {
+        "agreement": 0.5389030612244898,
+        "axisMean": 0.28125,
+        "stableFraction": 0,
+        "balancedFraction": 0.16666666666666666
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "pitch-01",
+      "id": "impact-pitch-12",
+      "unit": 12,
+      "objective": 0.9476095993953136,
+      "components": {
+        "agreement": 0.5077947845804989,
+        "axisMean": 0.2731481481481482,
+        "stableFraction": 0,
+        "balancedFraction": 0.16666666666666666
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "pitch-01",
+      "id": "impact-pitch-24",
+      "unit": 24,
+      "objective": 0.7204034391534391,
+      "components": {
+        "agreement": 0.5143849206349206,
+        "axisMean": 0.1087962962962963,
+        "stableFraction": 0,
+        "balancedFraction": 0.09722222222222222
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "pitch-01",
+      "id": "monaco-pitch-6",
+      "unit": 6,
+      "objective": 0.6450302343159486,
+      "components": {
+        "agreement": 0.4459561602418745,
+        "axisMean": 0.1990740740740741,
+        "stableFraction": 0,
+        "balancedFraction": 0
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "pitch-01",
+      "id": "monaco-pitch-8",
+      "unit": 8,
+      "objective": 0.7676799886621315,
+      "components": {
+        "agreement": 0.4378188775510204,
+        "axisMean": 0.20486111111111113,
+        "stableFraction": 0,
+        "balancedFraction": 0.125
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "packing-01",
+      "id": "monaco-packing-12",
+      "unit": 12,
+      "objective": 0.5085978835978836,
+      "components": {
+        "agreement": 0.42063492063492064,
+        "axisMean": 0.08796296296296297,
+        "stableFraction": 0,
+        "balancedFraction": 0
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "packing-01",
+      "id": "monaco-packing-24",
+      "unit": 24,
+      "objective": 0.5402612433862434,
+      "components": {
+        "agreement": 0.419890873015873,
+        "axisMean": 0.0787037037037037,
+        "stableFraction": 0,
+        "balancedFraction": 0.041666666666666664
+      },
+      "coordinatePass": false,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "placement-01",
+      "id": "impact-placement-7",
+      "unit": 6,
+      "objective": 1.0530045351473925,
+      "components": {
+        "agreement": 0.4928193499622071,
+        "axisMean": 0.39351851851851855,
+        "stableFraction": 0,
+        "balancedFraction": 0.16666666666666666
+      },
+      "coordinatePass": true,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "placement-01",
+      "id": "impact-placement-8",
+      "unit": 6,
+      "objective": 0.9552154195011339,
+      "components": {
+        "agreement": 0.5015117157974301,
+        "axisMean": 0.28703703703703703,
+        "stableFraction": 0,
+        "balancedFraction": 0.16666666666666666
+      },
+      "coordinatePass": true,
+      "legibilityRejected": false
+    },
+    {
+      "batch": "placement-01",
+      "id": "impact-placement-9",
+      "unit": 6,
+      "objective": 1.0781368102796676,
+      "components": {
+        "agreement": 0.5272108843537415,
+        "axisMean": 0.38425925925925924,
+        "stableFraction": 0,
+        "balancedFraction": 0.16666666666666666
+      },
+      "coordinatePass": true,
+      "legibilityRejected": false
+    }
+  ],
+  "audit": {
+    "path": "score-audit-summary.json",
+    "ordinaryReturnsMatch": 4,
+    "nativeTopLeftRuns": {
+      "point": {
+        "x": 51,
+        "y": 51
+      },
+      "horizontal": [1, 4, 5, 1, 4],
+      "vertical": [0, 0, 16, 10, 9],
+      "diagonalDown": [
+        1.4142135623730951, 5.656854249492381, 7.485281374238571, 0, 0
+      ],
+      "diagonalUp": [
+        0, 0, 7.485281374238571, 1.4142135623730951, 5.656854249492381
+      ]
+    },
+    "solidTopLeftRuns": {
+      "point": {
+        "x": 204,
+        "y": 204
+      },
+      "horizontal": [24, 24, 72, 24, 24],
+      "vertical": [24, 24, 72, 24, 24],
+      "diagonalDown": [
+        33.94112549695428, 33.94112549695428, 102.23759005323595,
+        33.94112549695428, 33.94112549695428
+      ],
+      "diagonalUp": [
+        33.94112549695428, 33.94112549695428, 102.23759005323595,
+        33.94112549695428, 33.94112549695428
+      ]
+    }
+  },
+  "interpretation": "A word texture can yield correctly arranged ordinary finder points while its horizontal/vertical/diagonal run structure remains incomplete. Native region objective and coordinate check are separate proxies. This local result does not establish QR recovery, phone reliability, universal impossibility or a complete mechanism."
+}

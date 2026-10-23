@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-11T20:14:24.438Z",
+  "browser": "155.0.8059.39",
+  "checks": [
+    {
+      "check": "Default DOCX exactly matches native-opened input bytes; source/word order/case exact",
+      "pass": true,
+      "docxSha256": "61070d77d13bd7f39545e1ccf987c25f32db6817287862762758871c1cd581e8"
+    },
+    {
+      "check": "Mocked ClipboardItem carries compact styled HTML and exact wrapped text",
+      "pass": true,
+      "nativeClipboard": false
+    },
+    {
+      "check": "Stale export disabled and empty source rejected",
+      "pass": true
+    },
+    {
+      "check": "Unsupported emoji rejected",
+      "pass": true
+    },
+    {
+      "check": "Unsupported combining mark rejected",
+      "pass": true
+    },
+    {
+      "check": "Short source needs explicit complete-copy repetition",
+      "pass": true
+    },
+    {
+      "check": "Oversized payload rejected without shortening",
+      "pass": true,
+      "message": "Use at most 1024 UTF-8 bytes; input is never truncated."
+    },
+    {
+      "check": "CRLF and surrounding source whitespace preserved through recipe restore/export",
+      "pass": true
+    },
+    {
+      "check": "A4 export generated; incompatible 6.5in A4 body rejected",
+      "pass": true
+    },
+    {
+      "check": "Wider Letter profile exactly matches native-planned word14 DOCX bytes",
+      "pass": true
+    }
+  ],
+  "network": [],
+  "errors": [],
+  "clipboardLane": "mock only; native Word copy/paste evidence is separate",
+  "candidateCaptures": 0,
+  "immediateRepeats": 0,
+  "resourceCaptures": 0,
+  "readerCalls": 0
+}

@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-11T20:28:23.544Z",
+  "purpose": "Control-only delivery check after experiments stopped; no new prose or scanner input.",
+  "candidateCaptures": 0,
+  "readerCalls": 0,
+  "resourceCaptures": 1,
+  "screenshot": "One 1440x1100 guide viewport, presentation only; never used as a scanner input.",
+  "checks": [
+    "Current studio acceptance copy and unchanged default native-tested DOCX download",
+    "Guide shows all frozen cases, both failure and recovery filters, and all three owner-accepted cases",
+    "All guide/studio local links and guide images resolve; expected closure metadata can be pending",
+    "Guide and studio contain mobile horizontal overflow within their intended containers",
+    "No external network requests or page script errors"
+  ],
+  "sources": [
+    {
+      "path": "experiments/prose-qr/paste-prose-2026-10-11/delivery-check.mjs",
+      "bytes": 7564,
+      "sha256": "9dff37c6a43aabeb07dc001ad941f78ca09ae227856077f74d4fe2315e98a23d"
+    },
+    {
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/page-studio.html",
+      "bytes": 104551,
+      "sha256": "e6498d8f20e0701b73219057e21f79801b9ca7d44ad28d36f53895d81b02bbc0"
+    },
+    {
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/index.html",
+      "bytes": 102797,
+      "sha256": "b27ccf90f29185a8445b1b2885576b2821d56b74ef9cb4f9897782deed697adc"
+    },
+    {
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/LEDGER.json",
+      "bytes": 113940,
+      "sha256": "2e504eba60c08926bd3f25428648bf1407fc83ef97e88a535cec29a6d6a4b55e"
+    }
+  ]
+}

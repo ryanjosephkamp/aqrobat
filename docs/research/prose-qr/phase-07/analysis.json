@@ -1,0 +1,290 @@
+{
+  "at": "2026-10-09T20:46:19.297Z",
+  "sourceScriptSha256": "dc34e36cdcd91f7b63e53879c3311fc9deed285173efdf7fe2fedc589b5a3aa1",
+  "inputHashes": {
+    "join-audit-01.json.gz": "b1ff913665cb0085f29958aa2c6af45917c4ba189ef06928c71851685ca2c54a",
+    "span-audit-01.json.gz": "36883b4085715a35cc90b7f8cefa5d797350d0ea1a7156e9ac32e8465f68341a"
+  },
+  "spanSummary": [
+    {
+      "id": "seam-01",
+      "scoredPointCount": 1071,
+      "instrumentedReturnsMatch": true,
+      "qualifyingRowWindow": { "topLeft": 3, "topRight": 3, "bottomLeft": 3 },
+      "nearCenterMaximumScoredSize": {
+        "topLeft": 11.666666666666666,
+        "topRight": 11.666666666666666,
+        "bottomLeft": 11.666666666666666
+      },
+      "discardedLargeShortQuads": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 0
+      }
+    },
+    {
+      "id": "span-01",
+      "scoredPointCount": 1418,
+      "instrumentedReturnsMatch": true,
+      "qualifyingRowWindow": { "topLeft": 3, "topRight": 3, "bottomLeft": 3 },
+      "nearCenterMaximumScoredSize": {
+        "topLeft": 10.333333333333334,
+        "topRight": 8.333333333333334,
+        "bottomLeft": 13.333333333333334
+      },
+      "discardedLargeShortQuads": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 0
+      }
+    },
+    {
+      "id": "span-02",
+      "scoredPointCount": 1589,
+      "instrumentedReturnsMatch": true,
+      "qualifyingRowWindow": { "topLeft": 5, "topRight": 4, "bottomLeft": 5 },
+      "nearCenterMaximumScoredSize": {
+        "topLeft": 12.666666666666666,
+        "topRight": 18.333333333333332,
+        "bottomLeft": 12.666666666666666
+      },
+      "discardedLargeShortQuads": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 0
+      }
+    },
+    {
+      "id": "solid-finder-control",
+      "scoredPointCount": 3,
+      "instrumentedReturnsMatch": true,
+      "qualifyingRowWindow": {
+        "topLeft": 17,
+        "topRight": 17,
+        "bottomLeft": 17
+      },
+      "nearCenterMaximumScoredSize": {
+        "topLeft": 72,
+        "topRight": 72,
+        "bottomLeft": 72
+      },
+      "discardedLargeShortQuads": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 0
+      }
+    }
+  ],
+  "observations": [
+    {
+      "id": "seam-01",
+      "path": "docs/research/prose-qr/phase-06/seam-02/raw/seam-01.png",
+      "corners": {
+        "topLeft": {
+          "expectedCenter": { "x": 277.279296875, "y": 277.279296875 },
+          "selectedJoin": {
+            "line": { "startX": 229, "endX": 325, "y": 277 },
+            "matchingCount": 1,
+            "chosenActiveIndex": 0,
+            "chosenBefore": {
+              "top": { "startX": 298, "endX": 302, "y": 270 },
+              "bottom": { "startX": 229, "endX": 325, "y": 276 }
+            }
+          },
+          "inheritedTopWidth": 4,
+          "middleRowWidth": 96,
+          "finalQuads": [
+            {
+              "quad": {
+                "top": { "startX": 298, "endX": 302, "y": 270 },
+                "bottom": { "startX": 231, "endX": 236, "y": 279 }
+              },
+              "topWidth": 4,
+              "bottomWidth": 5,
+              "height": 10,
+              "computedSize": 6.333333333333333,
+              "computedCenter": { "x": 266.75, "y": 275 },
+              "matchingScoredPoints": [
+                {
+                  "score": 118.2012351066956,
+                  "x": 266.75,
+                  "y": 275,
+                  "size": 6.333333333333333
+                }
+              ]
+            }
+          ]
+        },
+        "topRight": {
+          "expectedCenter": { "x": 864.458984375, "y": 277.279296875 },
+          "selectedJoin": {
+            "line": { "startX": 816, "endX": 912, "y": 277 },
+            "matchingCount": 1,
+            "chosenActiveIndex": 1,
+            "chosenBefore": {
+              "top": { "startX": 815, "endX": 821, "y": 275 },
+              "bottom": { "startX": 816, "endX": 912, "y": 276 }
+            }
+          },
+          "inheritedTopWidth": 6,
+          "middleRowWidth": 96,
+          "finalQuads": [
+            {
+              "quad": {
+                "top": { "startX": 815, "endX": 821, "y": 275 },
+                "bottom": { "startX": 818, "endX": 823, "y": 279 }
+              },
+              "topWidth": 6,
+              "bottomWidth": 5,
+              "height": 5,
+              "computedSize": 5.333333333333333,
+              "computedCenter": { "x": 819.25, "y": 277.5 },
+              "matchingScoredPoints": [
+                {
+                  "score": 203.9655039148421,
+                  "x": 819.25,
+                  "y": 277.5,
+                  "size": 5.333333333333333
+                }
+              ]
+            }
+          ]
+        },
+        "bottomLeft": {
+          "expectedCenter": { "x": 277.279296875, "y": 864.458984375 },
+          "selectedJoin": {
+            "line": { "startX": 229, "endX": 325, "y": 864 },
+            "matchingCount": 1,
+            "chosenActiveIndex": 0,
+            "chosenBefore": {
+              "top": { "startX": 298, "endX": 302, "y": 857 },
+              "bottom": { "startX": 229, "endX": 325, "y": 863 }
+            }
+          },
+          "inheritedTopWidth": 4,
+          "middleRowWidth": 96,
+          "finalQuads": [
+            {
+              "quad": {
+                "top": { "startX": 298, "endX": 302, "y": 857 },
+                "bottom": { "startX": 231, "endX": 236, "y": 866 }
+              },
+              "topWidth": 4,
+              "bottomWidth": 5,
+              "height": 10,
+              "computedSize": 6.333333333333333,
+              "computedCenter": { "x": 266.75, "y": 862 },
+              "matchingScoredPoints": [
+                {
+                  "score": 116.75443922249623,
+                  "x": 266.75,
+                  "y": 862,
+                  "size": 6.333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "solid-finder-control",
+      "path": "docs/research/prose-qr/phase-07/native-01/raw/solid-finder-control.png",
+      "corners": {
+        "topLeft": {
+          "expectedCenter": { "x": 204, "y": 204 },
+          "selectedJoin": {
+            "line": { "startX": 168, "endX": 240, "y": 204 },
+            "matchingCount": 1,
+            "chosenActiveIndex": 0,
+            "chosenBefore": {
+              "top": { "startX": 168, "endX": 240, "y": 168 },
+              "bottom": { "startX": 168, "endX": 240, "y": 203 }
+            }
+          },
+          "inheritedTopWidth": 72,
+          "middleRowWidth": 72,
+          "finalQuads": [
+            {
+              "quad": {
+                "top": { "startX": 168, "endX": 240, "y": 168 },
+                "bottom": { "startX": 168, "endX": 240, "y": 239 }
+              },
+              "topWidth": 72,
+              "bottomWidth": 72,
+              "height": 72,
+              "computedSize": 72,
+              "computedCenter": { "x": 204, "y": 204 },
+              "matchingScoredPoints": [
+                { "score": 3.5475012234361922, "x": 204, "y": 204, "size": 72 }
+              ]
+            }
+          ]
+        },
+        "topRight": {
+          "expectedCenter": { "x": 636, "y": 204 },
+          "selectedJoin": {
+            "line": { "startX": 600, "endX": 672, "y": 204 },
+            "matchingCount": 1,
+            "chosenActiveIndex": 1,
+            "chosenBefore": {
+              "top": { "startX": 600, "endX": 672, "y": 168 },
+              "bottom": { "startX": 600, "endX": 672, "y": 203 }
+            }
+          },
+          "inheritedTopWidth": 72,
+          "middleRowWidth": 72,
+          "finalQuads": [
+            {
+              "quad": {
+                "top": { "startX": 600, "endX": 672, "y": 168 },
+                "bottom": { "startX": 600, "endX": 672, "y": 239 }
+              },
+              "topWidth": 72,
+              "bottomWidth": 72,
+              "height": 72,
+              "computedSize": 72,
+              "computedCenter": { "x": 636, "y": 204 },
+              "matchingScoredPoints": [
+                { "score": 2.7828317229362503, "x": 636, "y": 204, "size": 72 }
+              ]
+            }
+          ]
+        },
+        "bottomLeft": {
+          "expectedCenter": { "x": 204, "y": 636 },
+          "selectedJoin": {
+            "line": { "startX": 168, "endX": 240, "y": 636 },
+            "matchingCount": 1,
+            "chosenActiveIndex": 0,
+            "chosenBefore": {
+              "top": { "startX": 168, "endX": 240, "y": 600 },
+              "bottom": { "startX": 168, "endX": 240, "y": 635 }
+            }
+          },
+          "inheritedTopWidth": 72,
+          "middleRowWidth": 72,
+          "finalQuads": [
+            {
+              "quad": {
+                "top": { "startX": 168, "endX": 240, "y": 600 },
+                "bottom": { "startX": 168, "endX": 240, "y": 671 }
+              },
+              "topWidth": 72,
+              "bottomWidth": 72,
+              "height": 72,
+              "computedSize": 72,
+              "computedCenter": { "x": 204, "y": 636 },
+              "matchingScoredPoints": [
+                { "score": 2.7828317229362503, "x": 204, "y": 636, "size": 72 }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "interpretation": "The observed wide middle row is joined to an older narrow quad, which finishes narrow again. Its endpoint/height size remains small. Stable two-dimensional finder spans are unresolved; these local observations do not prove a universal cause or decoding.",
+  "newCaptures": 0,
+  "newPayloadProbes": 0
+}

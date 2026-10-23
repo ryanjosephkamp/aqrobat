@@ -1,0 +1,167 @@
+import { chromium } from "playwright";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { resolve } from "node:path";
+import { gunzipSync } from "node:zlib";
+import { format } from "prettier";
+import assert from "node:assert/strict";
+import { readBarcodes } from "zxing-wasm/reader";
+import { decode, DECODER_PROVENANCE } from "../decoders.mjs";
+import { escapeHtml } from "../layout.mjs";
+import { documentHtml } from "../flow/layout.mjs";
+import { sha, READER_OPTIONS } from "./capture.mjs";
+
+const root = resolve("docs/research/prose-qr/phase-03");
+const batch = process.argv[2] || "plain-02";
+const id = process.argv[3] || "plain-003";
+const out = resolve(root, process.argv[4] || "txt-proof");
+await mkdir(out);
+const l = JSON.parse(
+  await readFile(resolve(root, batch, `${id}-layout.json`), "utf8"),
+);
+const rows = (await readFile(resolve(root, batch, "results.jsonl"), "utf8"))
+  .trim()
+  .split("\n")
+  .map(JSON.parse);
+const original = rows.find((r) => r.id === id);
+assert.equal(l.spec.track, "plain-black");
+let proofOptions = READER_OPTIONS;
+if (process.argv[5] === "sweep") {
+  const r = JSON.parse(
+    await readFile(resolve(root, "reader-options.json"), "utf8"),
+  );
+  const success = r.records.find(
+    (x) => x.batch === batch && x.id === id && x.exact,
+  );
+  assert(success, "Retained successful reader configuration required");
+  assert.equal(success.inputPNGSha256, original.pngSha256);
+  proofOptions = success.options;
+}
+await writeFile(resolve(out, `${id}.txt`), l.plainText, { flag: "wx" });
+const text = await readFile(resolve(out, `${id}.txt`), "utf8");
+assert.equal(text, l.plainText);
+assert(
+  /^[A-Za-z .,\n]+$/.test(text),
+  "ASCII letters, ordinary spaces and punctuation only",
+);
+const advance = l.unit / l.spec.charsPerModule;
+const lineHeight = l.unit / l.spec.linesPerModule;
+const body = l.modules * l.unit,
+  pad = l.spec.quiet * l.unit;
+// One ordinary preformatted text node. No glyph-level or line-level styling.
+const makeHTML = (t) =>
+  documentHtml(
+    `<article id="artifact" style="box-sizing:content-box;width:${body}px;height:${body}px;padding:${pad}px;background:white;color:black"><pre id="text-body" style="margin:0;padding:0;font:400 ${l.spec.fontSize}px/${lineHeight}px '${l.spec.font}',monospace;letter-spacing:0;font-variant-ligatures:none;white-space:pre;color:black">${escapeHtml(t)}</pre></article>`,
+  );
+const html = await format(makeHTML(text), { parser: "html" });
+await writeFile(resolve(out, `${id}-from-txt.html`), html, { flag: "wx" });
+const browser = await chromium.launch({
+  headless: true,
+  executablePath:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+});
+const receipts = [];
+try {
+  const page = await browser.newPage({
+    viewport: { width: 1800, height: 1800 },
+  });
+  async function run(kind, source) {
+    await page.setContent(source);
+    await page.evaluate(() => document.fonts.ready);
+    const weight = await page
+      .locator("#text-body")
+      .evaluate((e) => getComputedStyle(e).fontWeight);
+    assert.equal(weight, "400");
+    const png = await page.locator("#artifact").screenshot();
+    await writeFile(resolve(out, kind + ".png"), png, { flag: "wx" });
+    const p = await page.evaluate(async (base64) => {
+      const img = new Image();
+      img.src = "data:image/png;base64," + base64;
+      await img.decode();
+      const c = document.createElement("canvas");
+      c.width = img.width;
+      c.height = img.height;
+      const ctx = c.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      const data = ctx.getImageData(0, 0, c.width, c.height).data;
+      let s = "";
+      for (let i = 0; i < data.length; i += 32768)
+        s += String.fromCharCode(...data.subarray(i, i + 32768));
+      return { data: btoa(s), width: c.width, height: c.height };
+    }, png.toString("base64"));
+    const data = new Uint8ClampedArray(Buffer.from(p.data, "base64"));
+    const baseline = await decode(
+      { data, width: p.width, height: p.height },
+      l.spec.payload,
+    );
+    const z = await readBarcodes(
+      { data, width: p.width, height: p.height },
+      proofOptions,
+    );
+    const r = {
+      kind,
+      pngSha256: sha(png),
+      baseline,
+      configuredPayloads: z.map((x) => x.text),
+      configuredExact: z.some((x) => x.text === l.spec.payload),
+    };
+    receipts.push(r);
+    return r;
+  }
+  const replay = gunzipSync(
+    await readFile(resolve(root, batch, `${id}.html.gz`)),
+  ).toString("utf8");
+  const r1 = await run("original-replay", replay);
+  assert.equal(r1.pngSha256, original.pngSha256);
+  assert(r1.configuredExact);
+  await page.setContent(html);
+  assert.equal(await page.locator("#text-body").textContent(), text);
+  assert.equal(await page.locator("#text-body span").count(), 0);
+  const r2 = await run("ordinary-pre-from-txt", html);
+  // Retain the result even if ordinary line-box rounding changes the reader outcome.
+  const allLower = await run(
+    "all-lowercase-negative",
+    makeHTML(text.toLowerCase()),
+  );
+  const sortedLines = text
+    .split("\n")
+    .map((line) => line.split(" ").sort().join(" "))
+    .join("\n");
+  const shuffled = await run("sorted-words-negative", makeHTML(sortedLines));
+  await writeFile(
+    resolve(out, "receipts.json"),
+    await format(
+      JSON.stringify({
+        testedAt: new Date().toISOString(),
+        sourceTXTBytes: Buffer.byteLength(text),
+        sourceTXTSha256: sha(text),
+        sourceHTMLSha256: sha(html),
+        font: l.spec.font,
+        fontSize: l.spec.fontSize,
+        fontWeight: 400,
+        ink: "black",
+        lineHeight,
+        advance,
+        decoder: DECODER_PROVENANCE,
+        configuredReader: proofOptions,
+        originalNativePNG: original.pngSha256,
+        receipts,
+        phone: "not tested",
+        nativeTextEditOrClipboard: "not tested",
+        classification:
+          "TXT re-rendered as one ordinary pre element with one uniform font/weight/color, no per-letter styling. Negatives remove case or QR-dependent word ordering. No external image preprocessing.",
+      }),
+      { parser: "json" },
+    ),
+    { flag: "wx" },
+  );
+  console.log(
+    JSON.stringify({
+      originalReplay: r1.configuredExact,
+      ordinaryTXT: r2.configuredExact,
+      allLowercaseNegative: allLower.configuredExact,
+      sortedWordsNegative: shuffled.configuredExact,
+    }),
+  );
+} finally {
+  await browser.close();
+}

@@ -1,0 +1,1297 @@
+{
+  "startedAtUtc": "2026-10-10T21:58:03.431Z",
+  "finishedAtUtc": "2026-10-10T21:58:06.303Z",
+  "stop": {
+    "current": "continuous-gray-153-shadow-0",
+    "atUtc": "2026-10-10T21:58:05.999Z",
+    "message": "Native font descriptor mismatch",
+    "stack": "AssertionError [ERR_ASSERTION]: Native font descriptor mismatch\n    at file:///Users/noir/Documents/aqrobat/experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v3.mjs:196:5"
+  },
+  "rows": [
+    {
+      "id": "ornament-AppleSymbols-25c9",
+      "kind": "ornament-resource",
+      "font": "AppleSymbols",
+      "size": 192,
+      "symbol": "◉",
+      "expectedSelection": "◉",
+      "expectedFonts": [
+        "AppleSymbols"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "Source-resource measurement only. Unicode ornament lane is separate from alphabetic O/o and emoji-atlas implementation. Native black/gray prose has no tiles, QR graphics/modules, hidden duplicates or matrix background.",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/source.html.txt",
+      "htmlSha256": "5bde1932b36940fedccde2844299b707cfcc0bb78942a1ae319d84de883d87d7",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-25c9/input.png",
+      "pngSha256": "332748aff6e8bb6bb1bf6a7c7a930fea82be7c2d2a9cacd1c5556652cff72019",
+      "rgbaSha256": "a0f22d39a28a5e8aabc517a59ea222c86da90803bd09465de97c3b0845aee648",
+      "native": {
+        "text": "◉",
+        "selected": "◉",
+        "glyphs": [
+          {
+            "character": "◉",
+            "rect": {
+              "x": 64,
+              "y": 59,
+              "width": 160.03125,
+              "height": 176
+            },
+            "canvasFont": "192px AppleSymbols",
+            "fill": "rgb(0, 0, 0)",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "stroke": "0px",
+            "advance": 160.03125,
+            "left": -18.75,
+            "right": 139.5,
+            "ascent": 120.75,
+            "descent": -0.28125
+          }
+        ],
+        "tags": [
+          "SPAN"
+        ],
+        "images": 0
+      },
+      "nativeFonts": [
+        {
+          "familyName": "Apple Symbols",
+          "postScriptName": "AppleSymbols",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "contours": {
+        "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+        "holes": [
+          {
+            "id": 2,
+            "bounds": [
+              91,
+              74,
+              104,
+              104
+            ],
+            "pixels": 3591,
+            "center": [
+              142.7883597883598,
+              125.54107490949596
+            ]
+          }
+        ],
+        "inkBounds": [
+          82,
+          66,
+          203,
+          186
+        ],
+        "centerSample": [
+          142.7883597883598,
+          125.54107490949596
+        ],
+        "selected": {
+          "id": 2,
+          "bounds": [
+            91,
+            74,
+            104,
+            104
+          ],
+          "pixels": 3591,
+          "center": [
+            142.7883597883598,
+            125.54107490949596
+          ]
+        }
+      },
+      "visibleInk": {
+        "threshold": 245,
+        "bounds": [
+          82,
+          65,
+          204,
+          186
+        ],
+        "pixels": 8554
+      },
+      "models": [
+        {
+          "label": "complete-literal-gray128-ink-midpoint",
+          "point": {
+            "x": 143,
+            "y": 126
+          },
+          "runs": {
+            "horizontal": [
+              9,
+              12,
+              79,
+              13,
+              9
+            ],
+            "vertical": [
+              8,
+              13,
+              79,
+              12,
+              9
+            ],
+            "diagonalDown": [
+              8.485281374238571,
+              12.727922061357857,
+              79.19595949289332,
+              12.727922061357857,
+              8.485281374238571
+            ],
+            "diagonalUp": [
+              9.899494936611665,
+              11.313708498984761,
+              80.61017305526643,
+              11.313708498984761,
+              8.485281374238571
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  9,
+                  12,
+                  79,
+                  13,
+                  9
+                ],
+                "complete": true,
+                "scale": 17.428571428571427,
+                "normalizedRMS": 0.7718509115209329
+              },
+              "vertical": {
+                "runs": [
+                  8,
+                  13,
+                  79,
+                  12,
+                  9
+                ],
+                "complete": true,
+                "scale": 17.285714285714285,
+                "normalizedRMS": 0.7923374581788739
+              },
+              "diagonalDown": {
+                "runs": [
+                  8.485281374238571,
+                  12.727922061357857,
+                  79.19595949289332,
+                  12.727922061357857,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 17.374623766298026,
+                "normalizedRMS": 0.7866861302985519
+              },
+              "diagonalUp": {
+                "runs": [
+                  9.899494936611665,
+                  11.313708498984761,
+                  80.61017305526643,
+                  11.313708498984761,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 17.374623766298026,
+                "normalizedRMS": 0.8219869343737972
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.8219869343737972,
+            "centralSpanBalance": 0.7088607594936708
+          },
+          "literalRuns": {
+            "horizontal": [
+              9,
+              12,
+              79,
+              13,
+              9
+            ],
+            "vertical": [
+              8,
+              13,
+              79,
+              12,
+              9
+            ],
+            "diagonalDown": [
+              8.485281374238571,
+              12.727922061357857,
+              79.19595949289332,
+              12.727922061357857,
+              8.485281374238571
+            ],
+            "diagonalUp": [
+              9.899494936611665,
+              11.313708498984761,
+              80.61017305526643,
+              11.313708498984761,
+              8.485281374238571
+            ]
+          },
+          "literalMetric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  9,
+                  12,
+                  79,
+                  13,
+                  9
+                ],
+                "complete": true,
+                "scale": 17.428571428571427,
+                "normalizedRMS": 0.7718509115209329
+              },
+              "vertical": {
+                "runs": [
+                  8,
+                  13,
+                  79,
+                  12,
+                  9
+                ],
+                "complete": true,
+                "scale": 17.285714285714285,
+                "normalizedRMS": 0.7923374581788739
+              },
+              "diagonalDown": {
+                "runs": [
+                  8.485281374238571,
+                  12.727922061357857,
+                  79.19595949289332,
+                  12.727922061357857,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 17.374623766298026,
+                "normalizedRMS": 0.7866861302985519
+              },
+              "diagonalUp": {
+                "runs": [
+                  9.899494936611665,
+                  11.313708498984761,
+                  80.61017305526643,
+                  11.313708498984761,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 17.374623766298026,
+                "normalizedRMS": 0.8219869343737972
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.8219869343737972,
+            "centralSpanBalance": 0.7088607594936708
+          },
+          "pitch": 17.357142857142854,
+          "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+        }
+      ],
+      "sourceVerified": true,
+      "diagnosticBundleHash": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+      "streamCustody": "All contour and RGBA stdout/stderr/process status saved, including successful stderr."
+    },
+    {
+      "id": "ornament-AppleSymbols-2299",
+      "kind": "ornament-resource",
+      "font": "AppleSymbols",
+      "size": 192,
+      "symbol": "⊙",
+      "expectedSelection": "⊙",
+      "expectedFonts": [
+        "AppleSymbols"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "Source-resource measurement only. Unicode ornament lane is separate from alphabetic O/o and emoji-atlas implementation. Native black/gray prose has no tiles, QR graphics/modules, hidden duplicates or matrix background.",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/source.html.txt",
+      "htmlSha256": "be2a8148a6c631d176b3ba29da44b19c5b0f529a1206a2a0cf198b3bc4ee0d5d",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-AppleSymbols-2299/input.png",
+      "pngSha256": "efe7e25f284cefc20196f234ec7c668f285b5a7fed55cd5a33c1d6842cf1ddad",
+      "rgbaSha256": "0a644160bf6bbaece83bedd61c3fb98e9ff5d56a2daaf53246ec6c7dbc7a4d6f",
+      "native": {
+        "text": "⊙",
+        "selected": "⊙",
+        "glyphs": [
+          {
+            "character": "⊙",
+            "rect": {
+              "x": 64,
+              "y": 59,
+              "width": 145.21875,
+              "height": 176
+            },
+            "canvasFont": "192px AppleSymbols",
+            "fill": "rgb(0, 0, 0)",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "stroke": "0px",
+            "advance": 145.21875,
+            "left": -17.8125,
+            "right": 128.15625,
+            "ascent": 110.34375,
+            "descent": 0
+          }
+        ],
+        "tags": [
+          "SPAN"
+        ],
+        "images": 0
+      },
+      "nativeFonts": [
+        {
+          "familyName": "Apple Symbols",
+          "postScriptName": "AppleSymbols",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "contours": {
+        "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+        "holes": [
+          {
+            "id": 2,
+            "bounds": [
+              92,
+              86,
+              90,
+              91
+            ],
+            "pixels": 6126,
+            "center": [
+              136.30003264773097,
+              131.24910218739797
+            ]
+          }
+        ],
+        "inkBounds": [
+          81,
+          76,
+          191,
+          186
+        ],
+        "centerSample": [
+          136.30003264773097,
+          131.24910218739797
+        ],
+        "selected": {
+          "id": 2,
+          "bounds": [
+            92,
+            86,
+            90,
+            91
+          ],
+          "pixels": 6126,
+          "center": [
+            136.30003264773097,
+            131.24910218739797
+          ]
+        }
+      },
+      "visibleInk": {
+        "threshold": 245,
+        "bounds": [
+          81,
+          76,
+          192,
+          186
+        ],
+        "pixels": 3997
+      },
+      "models": [
+        {
+          "label": "complete-literal-gray128-ink-midpoint",
+          "point": {
+            "x": 136,
+            "y": 131
+          },
+          "runs": {
+            "horizontal": [
+              11,
+              35,
+              20,
+              35,
+              10
+            ],
+            "vertical": [
+              10,
+              36,
+              20,
+              35,
+              10
+            ],
+            "diagonalDown": [
+              9.899494936611665,
+              35.35533905932738,
+              19.79898987322333,
+              35.35533905932738,
+              9.899494936611665
+            ],
+            "diagonalUp": [
+              11.313708498984761,
+              33.941125496954285,
+              21.213203435596427,
+              33.941125496954285,
+              11.313708498984761
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  11,
+                  35,
+                  20,
+                  35,
+                  10
+                ],
+                "complete": true,
+                "scale": 15.857142857142858,
+                "normalizedRMS": 1.1106906111215822
+              },
+              "vertical": {
+                "runs": [
+                  10,
+                  36,
+                  20,
+                  35,
+                  10
+                ],
+                "complete": true,
+                "scale": 15.857142857142858,
+                "normalizedRMS": 1.1284516528689177
+              },
+              "diagonalDown": {
+                "runs": [
+                  9.899494936611665,
+                  35.35533905932738,
+                  19.79898987322333,
+                  35.35533905932738,
+                  9.899494936611665
+                ],
+                "complete": true,
+                "scale": 15.758379695014487,
+                "normalizedRMS": 1.1322189671667302
+              },
+              "diagonalUp": {
+                "runs": [
+                  11.313708498984761,
+                  33.941125496954285,
+                  21.213203435596427,
+                  33.941125496954285,
+                  11.313708498984761
+                ],
+                "complete": true,
+                "scale": 15.960410203924932,
+                "normalizedRMS": 1.048785931818464
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 1.1322189671667302,
+            "centralSpanBalance": 0.7
+          },
+          "literalRuns": {
+            "horizontal": [
+              11,
+              35,
+              20,
+              35,
+              10
+            ],
+            "vertical": [
+              10,
+              36,
+              20,
+              35,
+              10
+            ],
+            "diagonalDown": [
+              9.899494936611665,
+              35.35533905932738,
+              19.79898987322333,
+              35.35533905932738,
+              9.899494936611665
+            ],
+            "diagonalUp": [
+              11.313708498984761,
+              33.941125496954285,
+              21.213203435596427,
+              33.941125496954285,
+              11.313708498984761
+            ]
+          },
+          "literalMetric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  11,
+                  35,
+                  20,
+                  35,
+                  10
+                ],
+                "complete": true,
+                "scale": 15.857142857142858,
+                "normalizedRMS": 1.1106906111215822
+              },
+              "vertical": {
+                "runs": [
+                  10,
+                  36,
+                  20,
+                  35,
+                  10
+                ],
+                "complete": true,
+                "scale": 15.857142857142858,
+                "normalizedRMS": 1.1284516528689177
+              },
+              "diagonalDown": {
+                "runs": [
+                  9.899494936611665,
+                  35.35533905932738,
+                  19.79898987322333,
+                  35.35533905932738,
+                  9.899494936611665
+                ],
+                "complete": true,
+                "scale": 15.758379695014487,
+                "normalizedRMS": 1.1322189671667302
+              },
+              "diagonalUp": {
+                "runs": [
+                  11.313708498984761,
+                  33.941125496954285,
+                  21.213203435596427,
+                  33.941125496954285,
+                  11.313708498984761
+                ],
+                "complete": true,
+                "scale": 15.960410203924932,
+                "normalizedRMS": 1.048785931818464
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 1.1322189671667302,
+            "centralSpanBalance": 0.7
+          },
+          "pitch": 15.857142857142858,
+          "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+        }
+      ],
+      "sourceVerified": true,
+      "diagnosticBundleHash": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+      "streamCustody": "All contour and RGBA stdout/stderr/process status saved, including successful stderr."
+    },
+    {
+      "id": "ornament-ArialUnicodeMS-25c9",
+      "kind": "ornament-resource",
+      "font": "ArialUnicodeMS",
+      "size": 192,
+      "symbol": "◉",
+      "expectedSelection": "◉",
+      "expectedFonts": [
+        "ArialUnicodeMS"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "Source-resource measurement only. Unicode ornament lane is separate from alphabetic O/o and emoji-atlas implementation. Native black/gray prose has no tiles, QR graphics/modules, hidden duplicates or matrix background.",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/source.html.txt",
+      "htmlSha256": "f1d28e5a64031fa52780d63984845712679829671ba74f91d6b9cacf2e74050a",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-25c9/input.png",
+      "pngSha256": "e2070426480a1fe2e3d121a1c45e216210f299dc5920d79eedd2e2349fb57dad",
+      "rgbaSha256": "57532a8046840497633e9a4c7fd37d6f8759e08943c9ed1ab551e3fe97f35a75",
+      "native": {
+        "text": "◉",
+        "selected": "◉",
+        "glyphs": [
+          {
+            "character": "◉",
+            "rect": {
+              "x": 64,
+              "y": 18,
+              "width": 115.21875,
+              "height": 257
+            },
+            "canvasFont": "192px ArialUnicodeMS",
+            "fill": "rgb(0, 0, 0)",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "stroke": "0px",
+            "advance": 115.21875,
+            "left": -16.3125,
+            "right": 98.90625,
+            "ascent": 113.25,
+            "descent": -30.75
+          }
+        ],
+        "tags": [
+          "SPAN"
+        ],
+        "images": 0
+      },
+      "nativeFonts": [
+        {
+          "familyName": "Arial Unicode MS",
+          "postScriptName": "ArialUnicodeMS",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "contours": {
+        "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+        "holes": [
+          {
+            "id": 2,
+            "bounds": [
+              88,
+              117,
+              68,
+              68
+            ],
+            "pixels": 2383,
+            "center": [
+              121.08308854385228,
+              150.23164078892154
+            ]
+          }
+        ],
+        "inkBounds": [
+          80,
+          109,
+          162,
+          191
+        ],
+        "centerSample": [
+          121.08308854385228,
+          150.23164078892154
+        ],
+        "selected": {
+          "id": 2,
+          "bounds": [
+            88,
+            117,
+            68,
+            68
+          ],
+          "pixels": 2383,
+          "center": [
+            121.08308854385228,
+            150.23164078892154
+          ]
+        }
+      },
+      "visibleInk": {
+        "threshold": 245,
+        "bounds": [
+          79,
+          109,
+          163,
+          192
+        ],
+        "pixels": 3437
+      },
+      "models": [
+        {
+          "label": "complete-literal-gray128-ink-midpoint",
+          "point": {
+            "x": 121,
+            "y": 150
+          },
+          "runs": {
+            "horizontal": [
+              8,
+              14,
+              39,
+              14,
+              8
+            ],
+            "vertical": [
+              8,
+              14,
+              39,
+              15,
+              7
+            ],
+            "diagonalDown": [
+              8.485281374238571,
+              14.142135623730951,
+              39.59797974644666,
+              12.727922061357857,
+              8.485281374238571
+            ],
+            "diagonalUp": [
+              8.485281374238571,
+              14.142135623730951,
+              38.18376618407357,
+              14.142135623730951,
+              8.485281374238571
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  8,
+                  14,
+                  39,
+                  14,
+                  8
+                ],
+                "complete": true,
+                "scale": 11.857142857142858,
+                "normalizedRMS": 0.26854229813503677
+              },
+              "vertical": {
+                "runs": [
+                  8,
+                  14,
+                  39,
+                  15,
+                  7
+                ],
+                "complete": true,
+                "scale": 11.857142857142858,
+                "normalizedRMS": 0.3033657424581728
+              },
+              "diagonalDown": {
+                "runs": [
+                  8.485281374238571,
+                  14.142135623730951,
+                  39.59797974644666,
+                  12.727922061357857,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 11.919800025716087,
+                "normalizedRMS": 0.24863892638497959
+              },
+              "diagonalUp": {
+                "runs": [
+                  8.485281374238571,
+                  14.142135623730951,
+                  38.18376618407357,
+                  14.142135623730951,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 11.919800025716087,
+                "normalizedRMS": 0.235343118070641
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.3033657424581728,
+            "centralSpanBalance": 0.6923076923076923
+          },
+          "literalRuns": {
+            "horizontal": [
+              8,
+              14,
+              39,
+              15,
+              7
+            ],
+            "vertical": [
+              8,
+              14,
+              39,
+              15,
+              7
+            ],
+            "diagonalDown": [
+              8.485281374238571,
+              14.142135623730951,
+              39.59797974644666,
+              12.727922061357857,
+              8.485281374238571
+            ],
+            "diagonalUp": [
+              8.485281374238571,
+              14.142135623730951,
+              38.18376618407357,
+              14.142135623730951,
+              8.485281374238571
+            ]
+          },
+          "literalMetric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  8,
+                  14,
+                  39,
+                  15,
+                  7
+                ],
+                "complete": true,
+                "scale": 11.857142857142858,
+                "normalizedRMS": 0.3033657424581728
+              },
+              "vertical": {
+                "runs": [
+                  8,
+                  14,
+                  39,
+                  15,
+                  7
+                ],
+                "complete": true,
+                "scale": 11.857142857142858,
+                "normalizedRMS": 0.3033657424581728
+              },
+              "diagonalDown": {
+                "runs": [
+                  8.485281374238571,
+                  14.142135623730951,
+                  39.59797974644666,
+                  12.727922061357857,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 11.919800025716087,
+                "normalizedRMS": 0.24863892638497959
+              },
+              "diagonalUp": {
+                "runs": [
+                  8.485281374238571,
+                  14.142135623730951,
+                  38.18376618407357,
+                  14.142135623730951,
+                  8.485281374238571
+                ],
+                "complete": true,
+                "scale": 11.919800025716087,
+                "normalizedRMS": 0.235343118070641
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 0.3033657424581728,
+            "centralSpanBalance": 0.6923076923076923
+          },
+          "pitch": 11.857142857142858,
+          "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+        }
+      ],
+      "sourceVerified": true,
+      "diagnosticBundleHash": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+      "streamCustody": "All contour and RGBA stdout/stderr/process status saved, including successful stderr."
+    },
+    {
+      "id": "ornament-ArialUnicodeMS-2299",
+      "kind": "ornament-resource",
+      "font": "ArialUnicodeMS",
+      "size": 192,
+      "symbol": "⊙",
+      "expectedSelection": "⊙",
+      "expectedFonts": [
+        "ArialUnicodeMS"
+      ],
+      "width": 384,
+      "height": 320,
+      "classification": "Source-resource measurement only. Unicode ornament lane is separate from alphabetic O/o and emoji-atlas implementation. Native black/gray prose has no tiles, QR graphics/modules, hidden duplicates or matrix background.",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/source.html.txt",
+      "htmlSha256": "8df841460ef23faf5ea8e045bef64eead052ada7850124c048ea80599633583c",
+      "pngPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-03/ornament-ArialUnicodeMS-2299/input.png",
+      "pngSha256": "13a067c7f9312b804e20b83f1ed601c0ad4c96a18b5cd3ba34433a60bc726a5c",
+      "rgbaSha256": "f0654cb168691a5c1d27d2486ba4b8bfadffc3fc7698373504c18462677eafcb",
+      "native": {
+        "text": "⊙",
+        "selected": "⊙",
+        "glyphs": [
+          {
+            "character": "⊙",
+            "rect": {
+              "x": 64,
+              "y": 18,
+              "width": 153.5625,
+              "height": 257
+            },
+            "canvasFont": "192px ArialUnicodeMS",
+            "fill": "rgb(0, 0, 0)",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "stroke": "0px",
+            "advance": 153.5625,
+            "left": -11.34375,
+            "right": 142.3125,
+            "ascent": 114.65625,
+            "descent": 16.3125
+          }
+        ],
+        "tags": [
+          "SPAN"
+        ],
+        "images": 0
+      },
+      "nativeFonts": [
+        {
+          "familyName": "Arial Unicode MS",
+          "postScriptName": "ArialUnicodeMS",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "contours": {
+        "classification": "Renderer-only gray128 native contour enclosure; not acceptance selection",
+        "holes": [
+          {
+            "id": 2,
+            "bounds": [
+              85,
+              118,
+              112,
+              112
+            ],
+            "pixels": 9197,
+            "center": [
+              140.28096118299445,
+              173.17364357942807
+            ]
+          }
+        ],
+        "inkBounds": [
+          75,
+          108,
+          206,
+          238
+        ],
+        "centerSample": [
+          140.28096118299445,
+          173.17364357942807
+        ],
+        "selected": {
+          "id": 2,
+          "bounds": [
+            85,
+            118,
+            112,
+            112
+          ],
+          "pixels": 9197,
+          "center": [
+            140.28096118299445,
+            173.17364357942807
+          ]
+        }
+      },
+      "visibleInk": {
+        "threshold": 245,
+        "bounds": [
+          75,
+          107,
+          206,
+          239
+        ],
+        "pixels": 4933
+      },
+      "models": [
+        {
+          "label": "complete-literal-gray128-ink-midpoint",
+          "point": {
+            "x": 141,
+            "y": 173
+          },
+          "runs": {
+            "horizontal": [
+              10,
+              42,
+              28,
+              42,
+              9
+            ],
+            "vertical": [
+              10,
+              42,
+              27,
+              43,
+              9
+            ],
+            "diagonalDown": [
+              9.899494936611665,
+              42.42640687119285,
+              26.870057685088806,
+              42.42640687119285,
+              9.899494936611665
+            ],
+            "diagonalUp": [
+              11.313708498984761,
+              41.01219330881976,
+              28.284271247461902,
+              41.01219330881976,
+              11.313708498984761
+            ]
+          },
+          "metric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  10,
+                  42,
+                  28,
+                  42,
+                  9
+                ],
+                "complete": true,
+                "scale": 18.714285714285715,
+                "normalizedRMS": 1.0811273351923278
+              },
+              "vertical": {
+                "runs": [
+                  10,
+                  42,
+                  27,
+                  43,
+                  9
+                ],
+                "complete": true,
+                "scale": 18.714285714285715,
+                "normalizedRMS": 1.108474751753658
+              },
+              "diagonalDown": {
+                "runs": [
+                  9.899494936611665,
+                  42.42640687119285,
+                  26.870057685088806,
+                  42.42640687119285,
+                  9.899494936611665
+                ],
+                "complete": true,
+                "scale": 18.78883732867112,
+                "normalizedRMS": 1.1025150197222466
+              },
+              "diagonalUp": {
+                "runs": [
+                  11.313708498984761,
+                  41.01219330881976,
+                  28.284271247461902,
+                  41.01219330881976,
+                  11.313708498984761
+                ],
+                "complete": true,
+                "scale": 18.99086783758156,
+                "normalizedRMS": 1.0293783257081697
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 1.108474751753658,
+            "centralSpanBalance": 0.6785714285714286
+          },
+          "literalRuns": {
+            "horizontal": [
+              10,
+              42,
+              28,
+              42,
+              10
+            ],
+            "vertical": [
+              10,
+              42,
+              27,
+              43,
+              9
+            ],
+            "diagonalDown": [
+              9.899494936611665,
+              42.42640687119285,
+              26.870057685088806,
+              42.42640687119285,
+              9.899494936611665
+            ],
+            "diagonalUp": [
+              9.899494936611665,
+              41.01219330881976,
+              28.284271247461902,
+              41.01219330881976,
+              11.313708498984761
+            ]
+          },
+          "literalMetric": {
+            "axes": {
+              "horizontal": {
+                "runs": [
+                  10,
+                  42,
+                  28,
+                  42,
+                  10
+                ],
+                "complete": true,
+                "scale": 18.857142857142858,
+                "normalizedRMS": 1.0723163054589666
+              },
+              "vertical": {
+                "runs": [
+                  10,
+                  42,
+                  27,
+                  43,
+                  9
+                ],
+                "complete": true,
+                "scale": 18.714285714285715,
+                "normalizedRMS": 1.108474751753658
+              },
+              "diagonalDown": {
+                "runs": [
+                  9.899494936611665,
+                  42.42640687119285,
+                  26.870057685088806,
+                  42.42640687119285,
+                  9.899494936611665
+                ],
+                "complete": true,
+                "scale": 18.78883732867112,
+                "normalizedRMS": 1.1025150197222466
+              },
+              "diagonalUp": {
+                "runs": [
+                  9.899494936611665,
+                  41.01219330881976,
+                  28.284271247461902,
+                  41.01219330881976,
+                  11.313708498984761
+                ],
+                "complete": true,
+                "scale": 18.78883732867112,
+                "normalizedRMS": 1.0405802520493188
+              }
+            },
+            "completeAxes": 4,
+            "worstRMS": 1.108474751753658,
+            "centralSpanBalance": 0.6785714285714286
+          },
+          "pitch": 18.785714285714285,
+          "classification": "Declared source diagnostic only, never ordinary first-selected gate or payload acceptance."
+        }
+      ],
+      "sourceVerified": true,
+      "diagnosticBundleHash": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+      "streamCustody": "All contour and RGBA stdout/stderr/process status saved, including successful stderr."
+    }
+  ],
+  "captures": 4,
+  "diagnostics": 4,
+  "events": [
+    {
+      "type": "resource-capture-invoked",
+      "id": "ornament-AppleSymbols-25c9",
+      "atUtc": "2026-10-10T21:58:04.192Z",
+      "ordinal": 68
+    },
+    {
+      "type": "resource-capture-invoked",
+      "id": "ornament-AppleSymbols-2299",
+      "atUtc": "2026-10-10T21:58:04.871Z",
+      "ordinal": 69
+    },
+    {
+      "type": "resource-capture-invoked",
+      "id": "ornament-ArialUnicodeMS-25c9",
+      "atUtc": "2026-10-10T21:58:05.239Z",
+      "ordinal": 70
+    },
+    {
+      "type": "resource-capture-invoked",
+      "id": "ornament-ArialUnicodeMS-2299",
+      "atUtc": "2026-10-10T21:58:05.571Z",
+      "ordinal": 71
+    }
+  ],
+  "slots": [
+    {
+      "id": "ornament-AppleSymbols-25c9",
+      "status": "completed",
+      "startedAtUtc": "2026-10-10T21:58:04.125Z",
+      "completedAtUtc": "2026-10-10T21:58:04.825Z"
+    },
+    {
+      "id": "ornament-AppleSymbols-2299",
+      "status": "completed",
+      "startedAtUtc": "2026-10-10T21:58:04.829Z",
+      "completedAtUtc": "2026-10-10T21:58:05.185Z"
+    },
+    {
+      "id": "ornament-ArialUnicodeMS-25c9",
+      "status": "completed",
+      "startedAtUtc": "2026-10-10T21:58:05.188Z",
+      "completedAtUtc": "2026-10-10T21:58:05.524Z"
+    },
+    {
+      "id": "ornament-ArialUnicodeMS-2299",
+      "status": "completed",
+      "startedAtUtc": "2026-10-10T21:58:05.527Z",
+      "completedAtUtc": "2026-10-10T21:58:05.940Z"
+    },
+    {
+      "id": "continuous-gray-153-shadow-0",
+      "status": "failed",
+      "startedAtUtc": "2026-10-10T21:58:05.942Z"
+    },
+    {
+      "id": "continuous-gray-153-shadow-1p5",
+      "status": "unattempted",
+      "reason": "Mandatory batch stop: Native font descriptor mismatch"
+    },
+    {
+      "id": "continuous-gray-180-shadow-0",
+      "status": "unattempted",
+      "reason": "Mandatory batch stop: Native font descriptor mismatch"
+    },
+    {
+      "id": "continuous-gray-180-shadow-1p5",
+      "status": "unattempted",
+      "reason": "Mandatory batch stop: Native font descriptor mismatch"
+    },
+    {
+      "id": "continuous-gray-204-shadow-0",
+      "status": "unattempted",
+      "reason": "Mandatory batch stop: Native font descriptor mismatch"
+    },
+    {
+      "id": "continuous-gray-204-shadow-1p5",
+      "status": "unattempted",
+      "reason": "Mandatory batch stop: Native font descriptor mismatch"
+    }
+  ],
+  "unattempted": [
+    "continuous-gray-153-shadow-1p5",
+    "continuous-gray-180-shadow-0",
+    "continuous-gray-180-shadow-1p5",
+    "continuous-gray-204-shadow-0",
+    "continuous-gray-204-shadow-1p5"
+  ],
+  "ownedBrowserClosed": true,
+  "budget": {
+    "glyphResources": 71,
+    "nativeCaptures": 8,
+    "controlCaptures": 6,
+    "ordinaryCalls": 30,
+    "profiles": 9,
+    "repeats": 14,
+    "payloadTrials": 2
+  },
+  "bytesAtEnd": 15291275,
+  "ordinaryCalls": 0,
+  "passiveProfiles": 0,
+  "repeats": 0
+}

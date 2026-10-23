@@ -1,0 +1,45 @@
+import { chromium } from "playwright";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { createHash } from "node:crypto";
+import { spawnSync } from "node:child_process";
+const root = resolve("docs/research/prose-qr/styled-story-2026-10-11/corner-atlas-01");
+await mkdir(root);
+const specs = [
+  ...[0, 10, 11, 12].map((stroke) => ({ id: `outline-${stroke}`, symbol: "□", stroke })),
+  { id: "filled", symbol: "■", stroke: 0 },
+  { id: "box", symbol: "☐", stroke: 0 },
+].map((s, i) => ({ ...s, index: i, font: "Arial Unicode MS", size: 400,
+  origin: [(i % 2) * 500 + 50, Math.floor(i / 2) * 500 + 50] }));
+const source = await readFile(new URL("corner-atlas.mjs", import.meta.url));
+const sha = (b) => createHash("sha256").update(b).digest("hex");
+const save = (n, b) => writeFile(resolve(root, n), typeof b === "string" || Buffer.isBuffer(b) ? b : JSON.stringify(b, null, 2) + "\n", { flag: "wx" });
+await save("source.mjs.txt", source);
+await save("manifest.json", { at: new Date().toISOString(), specs, sourceSha256: sha(source), captures: 1, repeatSlots: 1, readerCalls: 0,
+  rule: "Measure visible foreground Unicode outline and filled squares independently; compose nonoverlapping characters as explicit ornaments, never hidden modules behind letters" });
+const html = `<!doctype html><html><body style="margin:0"><article id="artifact" style="position:relative;width:1000px;height:1500px;background:white">${specs.map((s) => `<span id="g-${s.index}" style="position:absolute;left:${s.origin[0]}px;top:${s.origin[1]}px;font:400 ${s.size}px/1 '${s.font}';color:black;-webkit-text-stroke:${s.stroke}px currentColor;paint-order:stroke fill">${s.symbol}</span>`).join("")}</article></body></html>`;
+await save("atlas.html.txt", html);
+const browser = await chromium.launch({ headless: true, executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" });
+try {
+  const page = await browser.newPage({ viewport: { width: 1100, height: 1600 }, deviceScaleFactor: 1 });
+  await page.setContent(html);
+  await page.evaluate(() => document.fonts.ready);
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send("DOM.enable"); await cdp.send("CSS.enable");
+  const doc = await cdp.send("DOM.getDocument");
+  const fonts = [];
+  for (const s of specs) {
+    const node = await cdp.send("DOM.querySelector", { nodeId: doc.root.nodeId, selector: `#g-${s.index}` });
+    fonts.push((await cdp.send("CSS.getPlatformFontsForNode", { nodeId: node.nodeId })).fonts);
+  }
+  const png = await page.locator("#artifact").screenshot(); await save("atlas.png", png);
+  const repeat = await page.locator("#artifact").screenshot(); await save("repeat.png", repeat);
+  if (!png.equals(repeat)) throw Error("Resource repeat mismatch");
+  const code = `import cv2,json,sys,numpy as np\na=cv2.imread(sys.argv[1],0);out=[]\nfor i in range(6):\n x0=i%2*500;y0=i//2*500;b=a[y0:y0+500,x0:x0+500];ys,xs=np.where(b<128);x=int(xs.min());y=int(ys.min());w=int(xs.max()-x+1);h=int(ys.max()-y+1);runs=[]\n for v in (b[y+h//2,x:x+w]<128).astype(int).tolist():\n  if not runs or runs[-1][0]!=v:runs.append([v,1])\n  else:runs[-1][1]+=1\n out.append({'inkBounds':[x+x0,y+y0,w,h],'horizontalRuns':runs})\nprint(json.dumps(out))`;
+  const raw = spawnSync("python3", ["-B", "-c", code, resolve(root, "atlas.png")], { encoding: "utf8" });
+  await save("extract.stdout.txt", raw.stdout); await save("extract.stderr.txt", raw.stderr);
+  if (raw.status !== 0) throw Error("Measurement failed");
+  const rows = JSON.parse(raw.stdout).map((m, i) => ({ ...specs[i], ...m, fonts: fonts[i] }));
+  await save("results.json", { rows, pngSha256: sha(png), repeatExact: true, browser: browser.version() });
+  console.log(JSON.stringify(rows));
+} finally { await browser.close(); }

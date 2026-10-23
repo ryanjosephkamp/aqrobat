@@ -1,0 +1,2664 @@
+{
+  "schema": "aqrobat.control-panel-verification.v1",
+  "verifiedAtUtc": "2026-10-10T19:11:37.530136+00:00",
+  "elapsedMinutesFromAuthorizedStart": 6.892168933333334,
+  "counts": {
+    "captures": 4,
+    "immediateRepeatReceipts": 4,
+    "ordinarySlots": 12,
+    "ordinaryCompleted": 12,
+    "ordinaryUnattempted": 0,
+    "exactRecoveries": 9,
+    "emptyReturns": 3,
+    "passiveProfiles": 4,
+    "actualStockBranches": 4,
+    "selectedScoredRecords": 12,
+    "recomputedMetricSets": 24,
+    "recomputedAxisRMSValues": 96,
+    "nativeProseSources": 0,
+    "nativePayloadProposals": 0,
+    "phoneTests": 0
+  },
+  "endpointComparability": true,
+  "stop": null,
+  "allChecksPassed": true,
+  "checks": [
+    {
+      "name": "checkout baseline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "checkout branch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "remote",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tracked tree unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "new paths limited to authorized trees",
+      "passed": true,
+      "detail": [
+        "?? docs/research/prose-qr/control-panel-2026-10-10/",
+        "?? experiments/prose-qr/control-panel-2026-10-10/"
+      ]
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/prepare.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/run.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/reader.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/common.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/passive.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/metrics.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen executed script experiments/prose-qr/control-panel-2026-10-10/ordinary.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance experiments/prose-qr/astra-2026-10-10/calibration.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance experiments/prose-qr/astra-2026-10-10/common.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance experiments/prose-qr/astra-2026-10-10/passive.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance experiments/prose-qr/finder-runs/probe.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance experiments/prose-qr/context-letter-counters/geometry.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance experiments/prose-qr/context-letter-counters/ordinary.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance vendor/qrcodegen.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance NOTICE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance package-lock.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original/reference provenance /Users/noir/Documents/aqrobat/node_modules/jsqr/dist/jsQR.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "additive post-run script frozen experiments/prose-qr/control-panel-2026-10-10/report.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "additive post-run script frozen experiments/prose-qr/control-panel-2026-10-10/verify.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original receipt alias docs/research/prose-qr/control-panel-2026-10-10/preregistration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "formatted receipt retains semantics docs/research/prose-qr/control-panel-2026-10-10/preregistration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original receipt alias docs/research/prose-qr/control-panel-2026-10-10/provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "formatted receipt retains semantics docs/research/prose-qr/control-panel-2026-10-10/provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoder/license snapshots exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stock jsQR source archive exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stock jsQR default is attemptBoth",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "payload hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matrix hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "slot ledger fixed and reconciled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counts within caps and complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no stops/errors/timeouts/wrong payloads",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "endpoint comparison",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary default syntax",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old OpenCV script copied exactly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old strict conjunction copied exactly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source SVG frozen square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source HTML frozen square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "HTML embeds exact SVG square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder module string hash square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder SVG modules identical square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all finder modules omitted; all other matrix modules preserved square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape square/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds square/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture input hash square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved input dimensions and RGBA hash square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immediate PNG/RGBA repeat hashes square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all rendered pixels outside finder regions identical square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping square/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return square/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping square/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return square/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same square/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping square/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return square/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same square/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full raw passive archive square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive complete return equals stock square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive input unchanged square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full first-location summary mapping square/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/1/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/1/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/1/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/1/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/1/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/1/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/1/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/1/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic square/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/2/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/2/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/2/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/2/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/2/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/2/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/2/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/2/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic square/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/3/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/3/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/3/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/3/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/3/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/3/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/3/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/3/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic square/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/4/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/4/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/4/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/4/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/4/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/4/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/4/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/4/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic square/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/5/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/5/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/5/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/5/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/5/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/5/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/5/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/5/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic square/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/6/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/6/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/6/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/6/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/6/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/6/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic square/6/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition square/6/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic square/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every-record strict conjunction square/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report branch verdict and first geometry square",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values square/topLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values square/topRight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values square/bottomLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source SVG frozen circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source HTML frozen circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "HTML embeds exact SVG circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder module string hash circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder SVG modules identical circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all finder modules omitted; all other matrix modules preserved circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape circle/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "circle radius 8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture input hash circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved input dimensions and RGBA hash circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immediate PNG/RGBA repeat hashes circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all rendered pixels outside finder regions identical circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping circle/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return circle/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping circle/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return circle/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same circle/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping circle/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return circle/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same circle/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full raw passive archive circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive complete return equals stock circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive input unchanged circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full first-location summary mapping circle/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/7/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/7/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/7/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/7/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/7/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/7/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/7/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/7/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic circle/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/8/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/8/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/8/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/8/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/8/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/8/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/8/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/8/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic circle/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/9/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/9/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/9/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/9/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/9/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/9/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/9/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/9/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic circle/9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/10/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/10/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/10/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/10/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/10/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/10/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/10/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/10/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic circle/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/11/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/11/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/11/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/11/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/11/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/11/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/11/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/11/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic circle/11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/12/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/12/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/12/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/12/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/12/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/12/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic circle/12/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition circle/12/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic circle/12",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every-record strict conjunction circle/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report branch verdict and first geometry circle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values circle/topLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values circle/topRight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values circle/bottomLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source SVG frozen rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source HTML frozen rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "HTML embeds exact SVG rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder module string hash rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder SVG modules identical rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all finder modules omitted; all other matrix modules preserved rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-one-third/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-one-third/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture input hash rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved input dimensions and RGBA hash rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immediate PNG/RGBA repeat hashes rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all rendered pixels outside finder regions identical rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping rounded-one-third/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return rounded-one-third/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping rounded-one-third/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return rounded-one-third/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same rounded-one-third/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping rounded-one-third/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return rounded-one-third/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same rounded-one-third/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full raw passive archive rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive complete return equals stock rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive input unchanged rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full first-location summary mapping rounded-one-third/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/13/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/13/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/13/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/13/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/13/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/13/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/13/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/13/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-one-third/13",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/14/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/14/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/14/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/14/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/14/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/14/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/14/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/14/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-one-third/14",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/15/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/15/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/15/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/15/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/15/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/15/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/15/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/15/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-one-third/15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/16/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/16/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/16/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/16/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/16/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/16/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/16/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/16/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-one-third/16",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/17/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/17/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/17/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/17/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/17/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/17/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/17/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/17/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-one-third/17",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/18/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/18/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/18/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/18/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/18/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/18/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-one-third/18/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-one-third/18/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-one-third/18",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every-record strict conjunction rounded-one-third/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report branch verdict and first geometry rounded-one-third",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values rounded-one-third/topLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values rounded-one-third/topRight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values rounded-one-third/bottomLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source SVG frozen rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source HTML frozen rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "HTML embeds exact SVG rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder module string hash rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non-finder SVG modules identical rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all finder modules omitted; all other matrix modules preserved rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visible nested shape rounded-two-thirds/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rounded radius and bounds rounded-two-thirds/8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture input hash rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved input dimensions and RGBA hash rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immediate PNG/RGBA repeat hashes rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all rendered pixels outside finder regions identical rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping rounded-two-thirds/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return rounded-two-thirds/opencv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping rounded-two-thirds/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return rounded-two-thirds/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same rounded-two-thirds/zxing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw slot mapping rounded-two-thirds/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw ordinary return rounded-two-thirds/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ordinary options omitted and RGBA same rounded-two-thirds/jsqr",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full raw passive archive rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive complete return equals stock rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "passive input unchanged rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full first-location summary mapping rounded-two-thirds/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/19/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/19/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/19/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/19/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/19/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/19/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/19/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/19/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-two-thirds/19",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/20/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/20/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/20/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/20/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/20/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/20/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/20/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/20/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-two-thirds/20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/21/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/21/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/21/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/21/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/21/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/21/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/21/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/21/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-two-thirds/21",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/22/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/22/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/22/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/22/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/22/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/22/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/22/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/22/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-two-thirds/22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/23/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/23/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/23/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/23/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/23/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/23/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/23/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/23/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-two-thirds/23",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/24/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/24/horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/24/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/24/vertical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/24/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/24/diagonalDown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric axis arithmetic rounded-two-thirds/24/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-axis condition rounded-two-thirds/24/diagonalUp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metric worst RMS arithmetic rounded-two-thirds/24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every-record strict conjunction rounded-two-thirds/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report branch verdict and first geometry rounded-two-thirds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values rounded-two-thirds/topLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values rounded-two-thirds/topRight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report point values rounded-two-thirds/bottomLeft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "four passive profiles / four actual first branches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "self-contained report data equals comparison JSON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "four embedded original PNGs only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all sources frozen before first capture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture and immediate repeat denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "event ordinary/passive counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "experimental cutoff and cleanup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full repository format check",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node syntax experiments/prose-qr/control-panel-2026-10-10/passive.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node syntax experiments/prose-qr/control-panel-2026-10-10/run.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node syntax experiments/prose-qr/control-panel-2026-10-10/metrics.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node syntax experiments/prose-qr/control-panel-2026-10-10/common.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node syntax experiments/prose-qr/control-panel-2026-10-10/prepare.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node syntax experiments/prose-qr/control-panel-2026-10-10/reader.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python syntax experiments/prose-qr/control-panel-2026-10-10/ordinary.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python syntax experiments/prose-qr/control-panel-2026-10-10/verify.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "python syntax experiments/prose-qr/control-panel-2026-10-10/report.py",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "inventory": [
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "c090cc9b6b3155d41ce3872f9df4bdc1532988241b7f2bca709fa90e115d8219"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/NOTICE.md.txt",
+      "bytes": 1393,
+      "sha256": "62f9b9ef5424656839c12ea664b696aad5c24eba985d150ce1521a965559219b"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/README.md",
+      "bytes": 4463,
+      "sha256": "e719ee35de651a1467b89b29dd853bf0ba90f0b0cfc0f4c2fe6884bb85cd926e"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/REQUEST.txt",
+      "bytes": 7944,
+      "sha256": "f566a13e5072bf959a960c6df7488e211731435dc17c6ceeed0627e19e7ae988"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/START.json",
+      "bytes": 1092,
+      "sha256": "6a36510c64bff34f20182997b84fc7ff160ad9309b83185bb7c0ab75adc18c0c"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/artifact-format.log.txt",
+      "bytes": 1519,
+      "sha256": "32ff92ef4234fdcd27703685607ef99b53dd3c70d6e3a9bc6970f133f86cbc15"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/capture.json",
+      "bytes": 1247,
+      "sha256": "097921fa8dfaf8de3605e2e4b0d48c2f62b033b5764f8276bb4b3ae2d214b9bc"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/input.png",
+      "bytes": 7973,
+      "sha256": "cb47a76bdc7cd833a736cfe48be1c205b201be2f775cf2c0d5b2aa38dde580d5"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/jsqr.raw.json.txt",
+      "bytes": 1159,
+      "sha256": "ea57fdb5335365178ad96384689f355bc0039c5712791704e7c3fc777f98aa31"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/opencv.raw.json.txt",
+      "bytes": 393,
+      "sha256": "f92a9489faa40132c35df0926552d3a777406fc1e3f10fe113e91558af9b4821"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/passive-full.json.gz",
+      "bytes": 3800,
+      "sha256": "be3547b772391ae254335526ec19084d8d8c7a7335ba626d86544f154fbf1c23"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/passive-summary.json",
+      "bytes": 21007,
+      "sha256": "6f107828e328626a6fd47b1b97555ee408b5a3eed3979cc9a499469e8cd57bbb"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/source.html.txt",
+      "bytes": 9793,
+      "sha256": "e6bad43f459d46933654c71f2e156b768efb34dcd37a2c25baedda117c2d9392"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/source.svg.txt",
+      "bytes": 9648,
+      "sha256": "b9165d627bbc1f8fbaedbb36f13f5944e4bd90879d333b4bf4c52ab66c0f031b"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/circle/zxing.raw.json.txt",
+      "bytes": 7613,
+      "sha256": "c35fb4d1b27b03792e92c6632d4e3874e6b11ca03d598b276aaa65ebbc4a7d76"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/comparison.json",
+      "bytes": 36910,
+      "sha256": "92993b7fd4c36a3f3ed75ec6f978ca2756f5836e6bfab34c55137bc485ea8923"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/events.json",
+      "bytes": 4002,
+      "sha256": "5a3ccfb7c3d1968e05cbbec934ab62aa94e33c8d41821c946fa6f4c11da96a73"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/format-check.json",
+      "bytes": 334,
+      "sha256": "feb4cabd4fe36746e402d85b8b8560c40e2056c19c76007467e8e3c7c146ef34"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/format-check.log.txt",
+      "bytes": 118,
+      "sha256": "69c1e0f5de3416641922cbf4323f58be25fb89b9ddd87cfc124b880254f12559"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/index.html",
+      "bytes": 93484,
+      "sha256": "fbd68ef30948fe93ac4a240c9b8b8a578757b067f231f201ed5bde7cf07da163"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/jsqr-stock-source.js.gz",
+      "bytes": 57401,
+      "sha256": "7dadef0deed9f86393493271ed81c5892faa085cc6726674a1520f7f372b9e3a"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/ledger.json",
+      "bytes": 7579,
+      "sha256": "5271a8e07318526b5d4e92363da7792917f76c27ca9c946ab8aac51013fd0d58"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/preregistration.json",
+      "bytes": 14294,
+      "sha256": "e4bcd9e97e6337cb592be24a3cd1eea2b0ace0adc4b2e429b879a897f53010f3"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/preregistration.json.txt",
+      "bytes": 14528,
+      "sha256": "e59e2631fcfb53be77aba629ea0b2fe46f4ce9c8e0f7384490ad377c3d7d4126"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/provenance.json",
+      "bytes": 3005,
+      "sha256": "a65d111b0a3f378b92a2f5196a8b1e2815d17550f11826859c96e0712b7f38f6"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/provenance.json.txt",
+      "bytes": 3005,
+      "sha256": "a65d111b0a3f378b92a2f5196a8b1e2815d17550f11826859c96e0712b7f38f6"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/qrcodegen.mjs.txt",
+      "bytes": 45866,
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/report-script-source.json",
+      "bytes": 232,
+      "sha256": "573d4c52a41f4029b775fae1d6149468b3a5959b9294a76052b44413cfc23279"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/capture.json",
+      "bytes": 1280,
+      "sha256": "1e1108d4eca831b221827587c76fd99e1b12ca9953b8e42b435aef918330019a"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/input.png",
+      "bytes": 4168,
+      "sha256": "270e822d17a8924cac0b2fe387a3b386aca69fb38582996efb78e899088cfc56"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/jsqr.raw.json.txt",
+      "bytes": 1296,
+      "sha256": "4890532a6f681d9241f8fef5c53d766b136f52af03fd40dfa1fe2088f61fb972"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/opencv.raw.json.txt",
+      "bytes": 416,
+      "sha256": "849dd81cf6663bb4331bfaeb30a85d5d62c3aa7e2ff1fa1ebe3610df86a86461"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/passive-full.json.gz",
+      "bytes": 3425,
+      "sha256": "63c33eb49ef92c5375f8af9acfea3ebc08aa9bbff8849deed599ed072bf165a4"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/passive-summary.json",
+      "bytes": 21310,
+      "sha256": "3c6335e5e884e3788e3574f219824cb5e186616ce895cf798ac8116ac02092c4"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/source.html.txt",
+      "bytes": 10180,
+      "sha256": "2b5d439678fe67508e1e501fa0f0c32f3ebf2c4cadf73b0303e340ac9e9955e1"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/source.svg.txt",
+      "bytes": 10035,
+      "sha256": "f4ea88295e5cd623db33e05666d87730579203e50e91341882d109478c6a3c78"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-one-third/zxing.raw.json.txt",
+      "bytes": 7576,
+      "sha256": "82d0cc7d7196578b5dd4d7a1e83fb938c65628a578b769d5644fdb24d3f9c94d"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/capture.json",
+      "bytes": 1283,
+      "sha256": "fc4af399d4c94144e2d50341307602762eb78d70defefcbf89157392e11bb5b1"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/input.png",
+      "bytes": 6115,
+      "sha256": "d1964d5f27aa2e41791b019e0ae1d4bc01e9d346801abfdb11a0694bb05254a1"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/jsqr.raw.json.txt",
+      "bytes": 1171,
+      "sha256": "a45fc48d848b18f0de766831917e4bfe540617f1310fc1aa8e57e24beaedfd38"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/opencv.raw.json.txt",
+      "bytes": 406,
+      "sha256": "b3cd06dfc16b836198d5e4140b0f3cfd99d9a5c8c52b67b56d909f93b7b2445e"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/passive-full.json.gz",
+      "bytes": 3388,
+      "sha256": "549c5e06e4c43bcf7c57b31e5ac52fed95a04f1148fc4e730ee71df3db6ebfc6"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/passive-summary.json",
+      "bytes": 20903,
+      "sha256": "3ec764d829ad44234095f5e02129e067ff0923661108ddab9b87fa2d3cb2b362"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/source.html.txt",
+      "bytes": 10162,
+      "sha256": "57b3d56727bfc02fbf976e56bf3b53a546ceaa0dd7214ebbc9de7dc51a777393"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/source.svg.txt",
+      "bytes": 10017,
+      "sha256": "c22802965f923b088677d0c7e2aea230ebb222c1ebca70d8427cd5b50e88bdfb"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/rounded-two-thirds/zxing.raw.json.txt",
+      "bytes": 7595,
+      "sha256": "b6275624d46832640f82823c559737d582fe8131c32bd0b90a319c303c56f976"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/run-results.json",
+      "bytes": 14722,
+      "sha256": "01fe2799913126e100d2185a36719dc866b8e458f12d18824ff2704e1a731436"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/runtime.json",
+      "bytes": 740,
+      "sha256": "eda3f4adbad7f996153ab200afa8f6f2d84c1a510915a436c34c4d356a795fb5"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/source-receipt-aliases.json",
+      "bytes": 767,
+      "sha256": "cd3ece1681d7bea79f2e0379f3fb6e31397ccea90eb6a09fe3388348cb2dddba"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/capture.json",
+      "bytes": 1247,
+      "sha256": "e491734b1cc34b6714a48667e4e603a36a276c457b4e36bb697fcf414c506750"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/input.png",
+      "bytes": 1827,
+      "sha256": "b8e9b02b717487d6006293d3bd32b2c18134af5fa43ccf3ccfa48f1256daeed9"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/jsqr.raw.json.txt",
+      "bytes": 1159,
+      "sha256": "67dbf5ecbd878b905ab3814dd32a502c65f90fac466704f0d37d280d58aaae6d"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/opencv.raw.json.txt",
+      "bytes": 412,
+      "sha256": "5869eb2142dcfa33504f9c237ebfc446ab228d39e949632f833587592182d9c7"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/passive-full.json.gz",
+      "bytes": 3279,
+      "sha256": "213343488158230eb50af6fff76c385b6750afa8f019d5ff24891791320ef4d1"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/passive-summary.json",
+      "bytes": 20789,
+      "sha256": "e8a7260c2ceafc1890e609ff43b6a5cb58faaab0a9af04272eee4a782d04e198"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/source.html.txt",
+      "bytes": 9964,
+      "sha256": "2610f58ef9909a36f37b6bc10672fa5286704ad010569556338b46f78db2107b"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/source.svg.txt",
+      "bytes": 9819,
+      "sha256": "21f5b89b8c92be0dd7b011ce762e5b3700d713ff8844eec9b632552feb5abdcd"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/square/zxing.raw.json.txt",
+      "bytes": 7565,
+      "sha256": "dd0312466a7979749954f6100f92cc2dba05d5878381fc943ca4aa033d80444b"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/verification-script-source.json",
+      "bytes": 232,
+      "sha256": "99bc95a197c9887cb2c9562b16104513243c9e67026230f2ef20bbf4d7677994"
+    },
+    {
+      "path": "docs/research/prose-qr/control-panel-2026-10-10/worker-receipt.json",
+      "bytes": 3272,
+      "sha256": "131a513d2b2770c5f7beeb15e61d74194159dffaf766b3d4374e41426846422e"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/common.mjs",
+      "bytes": 620,
+      "sha256": "f967356b584553ef8d05a02c195c64fca04e3e5838cb02db04047f9e8b6a43ea"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/metrics.mjs",
+      "bytes": 2100,
+      "sha256": "1d711362d73623e4551c91c37b82ef2a6d28baba98aed5b3006a643dd881affe"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/ordinary.py",
+      "bytes": 602,
+      "sha256": "a0a11b430ffcdf125642d0b893865d211386001439b7f1265f2fb83d554da07f"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/passive.mjs",
+      "bytes": 7002,
+      "sha256": "53a916acf53184ee87c28d32f3378d314f91b3fee1a5fc72dad4dc45890089be"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/prepare.mjs",
+      "bytes": 8215,
+      "sha256": "ef5ad00e483bd3a4da2edeb6ccc7f5b7674b03f0381ab5b790d98910567c7d07"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/reader.mjs",
+      "bytes": 2388,
+      "sha256": "83b8baccf62043976d166d4d14e9306357814ad2a0cd6e4d11ac49f5ea0e167e"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/report.py",
+      "bytes": 20640,
+      "sha256": "ffaedaaaf77f89e41080a2d9da38f0f1d3bb5899b32867cbe8a930a64470af78"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/run.mjs",
+      "bytes": 12549,
+      "sha256": "2ac54c20b460d57c2fbfcc6aecdc118cb166dab1985b1fe99126c2aace78cda1"
+    },
+    {
+      "path": "experiments/prose-qr/control-panel-2026-10-10/verify.py",
+      "bytes": 15140,
+      "sha256": "2a7a7dc62f41d0108ca8d2db741079f2250931d30d33c66fb5d716445f160036"
+    }
+  ],
+  "inventoryExcludes": [
+    "final-verification.json to avoid a recursive self hash"
+  ],
+  "bytesAcrossBothTreesIncludingThisReceipt": 696777,
+  "byteCap": 4000000,
+  "parentReserveAtSeal": 3303223,
+  "checksSkipped": [
+    "npm test",
+    "npm run build",
+    "npm run test:browser",
+    "npm run test:text-browser",
+    "npm run test:extension",
+    "npm run test:native-text"
+  ],
+  "skipReason": "Additive research-only artifacts; product/download rebuilds and acceptance tests irrelevant to this finite panel. Not claimed unavailable.",
+  "noReaderOrCaptureRerunForVerification": true,
+  "imageReadScope": "cv2.imread/cvtColor used only to recompute retained-PNG RGBA and outside-finder pixel identity; no QR detector/reader/locator invocation."
+}

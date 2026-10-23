@@ -1,0 +1,377 @@
+import { chromium } from "playwright";
+import { readFile, writeFile, readdir, stat } from "node:fs/promises";
+import { resolve } from "node:path";
+import { pathToFileURL, fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
+import { execFileSync, spawnSync } from "node:child_process";
+import { format } from "prettier";
+import assert from "node:assert/strict";
+
+const cwd = process.cwd();
+const root = resolve("docs/research/prose-qr/styled-story-2026-10-11");
+const sourceRoot = resolve("experiments/prose-qr/styled-story-2026-10-11");
+const sha = (b) => createHash("sha256").update(b).digest("hex");
+const save = (n, value) =>
+  writeFile(
+    resolve(root, n),
+    typeof value === "string" || Buffer.isBuffer(value)
+      ? value
+      : JSON.stringify(value, null, 2) + "\n",
+    { flag: "wx" },
+  );
+const json = async (p) => JSON.parse(await readFile(p, "utf8"));
+const snapshotBytes = await readFile(resolve(root, "evidence-sha256.json"));
+const snapshot = JSON.parse(snapshotBytes);
+
+// Only editorial handback files may change after the initial evidence snapshot.
+const editorial = new Set(["README.md", "index.html"]);
+const replacements = [
+  ["ZXing3.1.5", "ZXing 3.1.5"],
+  ["jsQR1.4.0", "jsQR 1.4.0"],
+  ["OpenCV4.13.0", "OpenCV 4.13.0"],
+  ["revision4", "revision 4"],
+  ["Courier20", "Courier 20px"],
+  ["is2233px", "is 2,233px"],
+  ["about1490words", "about 1,490 words"],
+  ["phase14", "phase 14"],
+  ["native20px", "native 20px"],
+  ["capitals,20px", "capitals, 20px"],
+  ["gray180light", "light gray (RGB 180)"],
+  ["and160px", "and 160px"],
+  ["Its5600px", "Its 5,600px"],
+  ["a4000px", "a 4,000px"],
+  ["field,200lines", "field, 200 lines"],
+  ["and17,040words:240", "and 17,040 words: 240"],
+  ["original71word", "original 71-word"],
+  ["has91,162", "has 91,162"],
+  ["short,4960px", "short, 4,960px"],
+  ["URL,5600px", "URL, 5,600px"],
+  ["UEC0.90", "UEC 0.90"],
+  ["and1.00", "and 1.00"],
+  ["the90,959character", "the 90,959-character"],
+  ["at24 antialiased", "at 24 antialiased"],
+  ["difference15", "difference 15"],
+  ["are75", "are 75"],
+  ["candidates:33", "candidates: 33"],
+  ["and42 ornamented", "and 42 ornamented"],
+  ["repeat;12", "repeat; 12"],
+  ["and12 conventional", "and 12 conventional"],
+  ["earlier12-slot", "earlier 12-slot"],
+  ["and11 further", "and 11 further"],
+  ["are291", "are 291"],
+  ["calls:290", "calls: 290"],
+  ["initial64-candidate/128MB", "initial 64-candidate/128MB"],
+  ["to75 candidates/160MB", "to 75 candidates/160MB"],
+  ["progressed8→9→10→11→12", "progressed 8→9→10→11→12"],
+  ["reports207", "reports 207"],
+  ["and313", "and 313"],
+  ["snapshot;106", "snapshot; 106"],
+  ["All11,013", "All 11,013"],
+  ["389,103,197bytes", "389,103,197 bytes"],
+  ["PR#1", "PR #1"],
+  ["11,2026", "11, 2026"],
+  ["at20px", "at 20px"],
+  ["×5,600px", "× 5,600px"],
+  ["Its200lines", "Its 200 lines"],
+  ["paragraph240times", "paragraph 240 times"],
+  ["Exact90,959characters", "Exact 90,959 characters"],
+  ["untouched5,600px", "untouched 5,600px"],
+  ["Native20px", "Native 20px"],
+  [
+    "Courier 20px,2233px, roughly1490words",
+    "Courier 20px, 2,233px, roughly 1,490 words",
+  ],
+  ["Monaco14", "Monaco 14px"],
+  ["Impact20", "Impact 20px"],
+  ["capitals,5600px,240paragraph", "capitals, 5,600px, 240 paragraph"],
+  ["but24left-edge", "but 24 left-edge"],
+  ["·75rows", "· 75 rows"],
+  ["33all-letter", "33 all-letter"],
+  ["and42ornamented", "and 42 ornamented"],
+  ["left11further", "left 11 further"],
+  ["75rows", "75 rows"],
+  ["reported207existing", "reported 207 existing"],
+  ["313at", "313 at"],
+  ["11,013protected", "11,013 protected"],
+  ['n + "rows"', 'n + " rows"'],
+];
+const edits = [];
+for (const name of editorial) {
+  const old = await readFile(resolve(root, name), "utf8");
+  assert.equal(sha(old), snapshot.files.find((f) => f.path === name).sha256);
+  let text = old;
+  for (const [a, b] of replacements) text = text.replaceAll(a, b);
+  if (name === "README.md") {
+    text = text.replace(
+      "A [75-row ledger](index.html#ledger)",
+      `A [75-row ledger](${resolve(root, "index.html")}#ledger)`,
+    );
+    text = text.replace(
+      `[file hashes](${resolve(root, "evidence-sha256.json")})`,
+      `[final file hashes](${resolve(root, "delivery-seal.json")})`,
+    );
+    text +=
+      "\nThe initial evidence inventory remains a historical snapshot. Final handback copy edits, UI checks and current hashes are recorded separately in delivery-seal.json. The native images, HTML, text, frozen protocols, configurations and raw reader receipts were not edited.\n";
+  } else {
+    text = text.replace(
+      "Heavier letters and more text per QR cell produce a stronger\n              overall pattern under ordinary reader settings.",
+      "The size and font comparisons suggest that heavier letters and more text\n              per QR cell preserve the overall pattern under ordinary reader settings.",
+    );
+    text = text.replace(
+      "grid-template-columns: 1.4fr 1fr;",
+      "grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);",
+    );
+    text = text.replace(
+      '<a href="evidence-sha256.json">Evidence file hashes</a>',
+      '<a href="delivery-seal.json">Final file hashes</a>',
+    );
+  }
+  text = await format(text, {
+    parser: name.endsWith("md") ? "markdown" : "html",
+  });
+  await writeFile(resolve(root, name), text);
+  edits.push({
+    path: name,
+    beforeSha256: sha(old),
+    afterSha256: sha(text),
+    reason:
+      "Handback prose spacing, qualified inference, current manifest link and responsive columns only",
+  });
+}
+await save("handback-copy-edits.json", {
+  at: new Date().toISOString(),
+  edits,
+  initialInventorySha256: sha(snapshotBytes),
+});
+await save(
+  "handback-check-source.mjs.txt",
+  await readFile(fileURLToPath(import.meta.url)),
+);
+
+const network = [],
+  errors = [];
+const browser = await chromium.launch({
+  headless: true,
+  executablePath:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+});
+let ui;
+try {
+  const page = await browser.newPage({
+    viewport: { width: 1440, height: 1000 },
+    deviceScaleFactor: 1,
+  });
+  page.on("request", (r) => {
+    if (/^https?:/.test(r.url())) network.push(r.url());
+  });
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto(pathToFileURL(resolve(root, "index.html")).href);
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await Promise.all([...document.images].map((i) => i.decode()));
+  });
+  const images = await page
+    .locator("img")
+    .evaluateAll((images) =>
+      images.map((i) => ({
+        src: i.getAttribute("src"),
+        width: i.naturalWidth,
+        height: i.naturalHeight,
+        complete: i.complete,
+      })),
+    );
+  assert.deepEqual(
+    images.map((i) => [i.width, i.height]),
+    [
+      [5600, 5600],
+      [1040, 220],
+    ],
+  );
+  assert.equal(await page.locator("#cases tbody tr").count(), 75);
+  await page.locator("#ledger summary").click();
+  await page.locator("#kind").selectOption("letters");
+  assert.equal(await page.locator("#cases tbody tr:not([hidden])").count(), 33);
+  assert.equal(await page.locator("#row-count").textContent(), "33 rows");
+  await page.locator("#result").selectOption("true");
+  assert.equal(await page.locator("#cases tbody tr:not([hidden])").count(), 2);
+  await page.locator("#kind").selectOption("all");
+  await page.locator("#result").selectOption("all");
+  await page.locator("#native").click();
+  assert.equal(
+    await page
+      .locator("#preview img")
+      .evaluate((i) => i.getBoundingClientRect().width),
+    5600,
+  );
+  await page.locator("#fit").click();
+  const fitWidth = await page
+    .locator("#preview img")
+    .evaluate((i) => i.getBoundingClientRect().width);
+  assert(fitWidth < 1200);
+  const localLinks = await page
+    .locator("a")
+    .evaluateAll((a) =>
+      [...new Set(a.map((e) => e.href))].filter((h) => h.startsWith("file:")),
+    );
+  for (const link of localLinks) {
+    const url = new URL(link);
+    // The final seal is written after this UI receipt and verified below.
+    if (fileURLToPath(url) !== resolve(root, "delivery-seal.json"))
+      assert((await stat(fileURLToPath(url))).isFile(), link);
+  }
+  const sizes = [];
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 1000 });
+    const dimensions = await page.evaluate(() => ({
+      width: innerWidth,
+      documentWidth: document.documentElement.scrollWidth,
+    }));
+    assert(
+      dimensions.documentWidth <= dimensions.width,
+      JSON.stringify(dimensions),
+    );
+    sizes.push(dimensions);
+  }
+  assert.deepEqual(network, []);
+  assert.deepEqual(errors, []);
+  ui = {
+    at: new Date().toISOString(),
+    browser: browser.version(),
+    images,
+    rows: 75,
+    allLetterRows: 33,
+    allLetterPrimaryRecoveries: 2,
+    localLinks: localLinks.length,
+    sizes,
+    fitWidth,
+    nativeWidth: 5600,
+    network,
+    errors,
+    decoderCalls: 0,
+    nativeCaptures: 0,
+  };
+} finally {
+  await browser.close();
+}
+await save("handback-ui.json", { ...ui, browserClosed: true });
+
+const sourceNames = (await readdir(sourceRoot))
+  .filter((n) => n.endsWith(".mjs"))
+  .sort();
+const formatArgs = [
+  "--check",
+  ...sourceNames.map((n) => resolve(sourceRoot, n)),
+  resolve(root, "README.md"),
+  resolve(root, "index.html"),
+];
+const formatting = spawnSync(
+  resolve("node_modules/.bin/prettier"),
+  formatArgs,
+  { encoding: "utf8", timeout: 60000 },
+);
+await save("final-format.stdout.txt", formatting.stdout || "");
+await save("final-format.stderr.txt", formatting.stderr || "");
+await save("final-format.json", {
+  at: new Date().toISOString(),
+  args: formatArgs,
+  status: formatting.status,
+  error: formatting.error?.message ?? null,
+  note: "Targeted source and editorial files only; frozen evidence excluded. Full repository check results remain in verification/.",
+});
+assert.equal(formatting.status, 0);
+
+const snapshotFailures = [];
+for (const f of snapshot.files) {
+  const b = await readFile(resolve(root, f.path));
+  const edited = edits.find((e) => e.path === f.path);
+  if (
+    sha(b) !== (edited?.afterSha256 ?? f.sha256) ||
+    (!edited && b.length !== f.bytes)
+  )
+    snapshotFailures.push(f.path);
+}
+assert.deepEqual(snapshotFailures, []);
+const baseline = await json(resolve(root, "baseline-preservation.json"));
+for (const f of baseline.files) {
+  const b = await readFile(resolve(cwd, f.path));
+  assert.equal(b.length, f.bytes, f.path);
+  assert.equal(sha(b), f.sha256, f.path);
+}
+const head = execFileSync("git", ["rev-parse", "HEAD"], {
+  encoding: "utf8",
+}).trim();
+const branch = execFileSync("git", ["branch", "--show-current"], {
+  encoding: "utf8",
+}).trim();
+const status = execFileSync("git", ["status", "--porcelain=v1"], {
+  encoding: "utf8",
+});
+assert.equal(head, baseline.anchor);
+assert.equal(branch, "codex/aqrobat-foundation");
+assert.deepEqual(
+  status.trim().split("\n").sort(),
+  [
+    "?? AQROBAT-CONTEXT/",
+    "?? docs/research/prose-qr/styled-story-2026-10-11/",
+    "?? experiments/prose-qr/styled-story-2026-10-11/",
+  ].sort(),
+);
+
+const files = [];
+async function walk(dir) {
+  for (const ent of (await readdir(dir, { withFileTypes: true })).sort((a, b) =>
+    a.name.localeCompare(b.name),
+  )) {
+    const path = resolve(dir, ent.name);
+    if (ent.isDirectory()) await walk(path);
+    else {
+      const b = await readFile(path);
+      files.push({
+        path: path.slice(cwd.length + 1),
+        bytes: b.length,
+        sha256: sha(b),
+      });
+    }
+  }
+}
+await walk(root);
+await walk(sourceRoot);
+const evidenceBytes = files.reduce((n, f) => n + f.bytes, 0);
+assert(evidenceBytes < 160000000);
+assert.equal(files.filter((f) => f.path.endsWith(".png")).length, 201);
+const seal = {
+  at: new Date().toISOString(),
+  head,
+  branch,
+  gitStatus: status,
+  deadline: "2026-10-11T07:53:00Z",
+  scientificResult:
+    "Exact URL in ordinary ZXing and macOS Vision; phone and print untested",
+  initialInventorySha256: sha(snapshotBytes),
+  initialSnapshotFiles: snapshot.files.length,
+  snapshotFailures,
+  editorialChanges: edits,
+  protectedFilesVerified: baseline.files.length,
+  uiReceipt: "handback-ui.json",
+  formatReceipt: "final-format.json",
+  evidenceAndSourceBytesBeforeSeal: evidenceBytes,
+  nativePngFiles: 201,
+  excluded:
+    "This self-referential final seal only. Initial inventory is a historical snapshot; two editorial files have explicit before/after hashes above.",
+  files,
+};
+const sealBytes = Buffer.from(JSON.stringify(seal, null, 2) + "\n");
+assert(evidenceBytes + sealBytes.length < 160000000);
+await save("delivery-seal.json", sealBytes);
+console.log(
+  JSON.stringify({
+    closedAt: seal.at,
+    files: files.length,
+    protectedFiles: baseline.files.length,
+    evidenceAndSourceBytes: evidenceBytes + sealBytes.length,
+    sealSha256: sha(sealBytes),
+    ui: "pass",
+    targetedFormat: "pass",
+    nativePngFiles: 201,
+  }),
+);

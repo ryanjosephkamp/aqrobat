@@ -1,0 +1,3 @@
+# Phase54 — smaller counters gain outlines, not intended recovery
+
+Six full-context native sources and exact repeats complete;24 primary slots and eight passive parity profiles complete. Default OpenCV returns outlines in three cases, but stock jsQR has no intended geometry in either naturally run branch. Source-center bits are the expected white/black polarity in all cases; that does not establish recovery. Four monospaced cases are locally rejected for crowded native row separation despite numeric bounds passes. Their reader results remain retained and excluded from legible progress. The two regular Arial excerpts have identifiable letters. Neither is natural prose or a phone candidate.

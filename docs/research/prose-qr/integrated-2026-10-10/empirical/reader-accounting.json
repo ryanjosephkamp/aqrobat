@@ -1,0 +1,221 @@
+{
+  "primaryOrdinaryApiCalls": 37,
+  "instrumentedPassiveApiCalls": 11,
+  "additionalStockParityApiCalls": 0,
+  "nestedMatrixDecoderInvocationsInsidePassive": 27,
+  "profiles": [
+    {
+      "batch": "layout-01",
+      "id": "control-normal",
+      "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 1,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "layout-01",
+      "id": "control-inverted",
+      "pngSha256": "55be81e463887461e823270728b4956335718c591e39132b2f0129965278b11e",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 2
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 3,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "layout-03",
+      "id": "control-normal",
+      "pngSha256": "9f155dc312720f716e64c7faabf1f7adf99cee3d4a0a6fb56c436d9cf0e92998",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 1,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "layout-03",
+      "id": "reverse-regular",
+      "pngSha256": "939591c6b987e08b990a5e0a8cd1b008fa41b5970ec176317cd711f88a7bb6bc",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 2
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "matrixDecoderInvocations": 2
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 4,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "layout-03",
+      "id": "reverse-bold",
+      "pngSha256": "5cfb42352b6fc90e9b7a00ac7755aa6d44019f43b33631361dd5d16d332ccebc",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 2
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "matrixDecoderInvocations": 2
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 4,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "payload-01",
+      "id": "canonical-control",
+      "pngSha256": "21f608c8127ad743d92069c8604ceda6f6f14f8a8b56b560a1178fc419b50158",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 1,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "payload-01",
+      "id": "native-projection",
+      "pngSha256": "3b36925fd80dfd5b9b36f90a952575469fc976e936c1367f74f481cabeb38e14",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 2
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 3,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "payload-02",
+      "id": "canonical-control",
+      "pngSha256": "36e9c67e3aea95745247be50fde85642e04469108aa12ad7e5a6b6eea981e1a6",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 1,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "payload-02",
+      "id": "native-projection",
+      "pngSha256": "3bcd4063fd460515f8f4d0703660bfdf2837c757c0919b7072ca4a4ba07a85f2",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 2
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "matrixDecoderInvocations": 2
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 4,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "payload-04",
+      "id": "canonical-control",
+      "pngSha256": "35ebf4530d4499e33f59b3741b7be6266bea572b5ee17c60be23baef480e28e7",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 1
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 1,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    },
+    {
+      "batch": "payload-04",
+      "id": "continuous-native",
+      "pngSha256": "49b9230b76508e3a7a9393cdda6876ecc03a44928c0a77760adb9ee54cb29cf5",
+      "instrumentedApiCalls": 1,
+      "additionalStockParityCalls": 0,
+      "branches": [
+        {
+          "branch": "normal-stock-first-scan",
+          "matrixDecoderInvocations": 2
+        },
+        {
+          "branch": "inverted-stock-second-scan",
+          "matrixDecoderInvocations": 2
+        }
+      ],
+      "nestedMatrixDecoderInvocations": 4,
+      "source": "passive.mjs calls patched bundle once; parity compares saved ordinary baseline without a second stock call"
+    }
+  ],
+  "conservativeInclusiveSum": 75,
+  "schema": "aqrobat.integrated.actor-inclusive-reader-accounting.v1",
+  "atUtc": "2026-10-10T22:27:51.782639+00:00",
+  "actor": "integrated_empirical",
+  "actors": {
+    "integrated_empirical": {
+      "primary": 37,
+      "passive": 11,
+      "nestedPassiveDecoderCalls": 27
+    },
+    "integrated_design": {
+      "primary": 0,
+      "passive": 0
+    },
+    "integrated_mechanism": {
+      "primary": 0,
+      "passive": 0
+    }
+  },
+  "stockParityCalls": 0,
+  "sourceDiagnosticBinarizerCalls": 98,
+  "primaryPublicApiBoundary": "Primary public ordinary APIs countedonce each; their uninstrumented internal loops are not separately knowable. Passive nesteddecoderinvocations are explicitlyinstrumented; conservative sum75 countsbothouterandnested.",
+  "sourceDiagnosticBoundary": "Source binarizers/contours contain no ordinary payload decode and remain separate; pure source envelopes/closure arithmetic and finalchecks add0 QRreader calls.",
+  "verificationPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/verification-04.json"
+}

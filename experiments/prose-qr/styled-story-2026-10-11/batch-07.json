@@ -1,0 +1,50 @@
+{
+  "id": "batch-07",
+  "layout": "compositor",
+  "atlasPath": "docs/research/prose-qr/styled-story-2026-10-11/atlas-02/glyphs.json",
+  "resourcePath": "docs/research/prose-qr/styled-story-2026-10-11/corner-atlas-01/results.json",
+  "finder": "outline-0",
+  "cornerParts": [
+    "outline-0",
+    "filled"
+  ],
+  "hypothesis": "Batch06 native passive recentered sampling lies at center-minus-half horizontally and center-minus1.5 vertically, while its pitch72 is exact. Shift native body placement one pixel left/up so the public nominal QR center floor matches the native letter atlas. No PNG alteration or reader tuning. Test both successful ZXing redundancy levels at default readers.",
+  "specs": [
+    {
+      "id": "aligned-1",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "fontSize": 40,
+      "quiet": 5,
+      "ecc": "M",
+      "gray": 120,
+      "radius": 0,
+      "darkMax": 100,
+      "lightMin": 248,
+      "cornerStroke": 11.5,
+      "pitch": 72,
+      "centerX": -1,
+      "centerY": -2,
+      "sampleMin": 20,
+      "sampleMax": 28
+    },
+    {
+      "id": "aligned-2",
+      "payload": "AQROBAT-TEST",
+      "font": "Courier New",
+      "fontSize": 40,
+      "quiet": 5,
+      "ecc": "Q",
+      "gray": 120,
+      "radius": 0,
+      "darkMax": 100,
+      "lightMin": 248,
+      "cornerStroke": 11.5,
+      "pitch": 72,
+      "centerX": -1,
+      "centerY": -2,
+      "sampleMin": 20,
+      "sampleMax": 28
+    }
+  ]
+}

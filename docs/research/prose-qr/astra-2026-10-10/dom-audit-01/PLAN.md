@@ -1,0 +1,5 @@
+# DOM audit 01: source selection and conservative ink bounds
+
+Read-only replay of the eight saved native HTML sources, each in the declared viewport and installed fonts, in one fresh owned browser. No screenshots, native proposal, repeat capture, pixel change, decoder, clipboard access or native-app automation. Save source hashes, selection.toString and textContent/innerText, actual line/glyph rectangles and conservative standalone-glyph canvas ink bounds expanded by native outline width. Report any divergence from saved native.txt and split initial words explicitly; browser selection is not portable paste fidelity.
+
+This fills a missing diagnostic ledger in the first context harness; it does not retroactively turn a failed gate into a pass. Bounds rely on standalone glyph metrics and native DOM ranges and can be conservative under kerning/ligatures/RTL; retain the limitation. Reject no additional source by silently changing the original capture receipt. Record observations in a separate audit and incorporate them in the final legibility status. Eight DOM reopens,0 PNG captures,0 reader calls; cap1MB;30s page timeout,120s whole job. Preserve all originals.

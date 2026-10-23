@@ -1,0 +1,341 @@
+{
+  "schema": "aqrobat.integrated.resources.v2",
+  "frozenAtUtc": "2026-10-10T22:24:24.535Z",
+  "cutoffUtc": "2026-10-10T23:29:22Z",
+  "allocation": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/allocation-02.json",
+    "sha256": "9955bf0b3ed27faaf46b2204867aeaead471644eb8c38a1b05c1a25cfb05c513"
+  },
+  "importedProposal": {
+    "path": "docs/research/prose-qr/integrated-2026-10-10/mechanism/cutoff-resources-01/source-spec.json",
+    "sha256": "23f5649f79a5d8ce3b9b6670b5c8dc37eef55683cf5f42fdac76e0083252fd54",
+    "generatorPath": "experiments/prose-qr/integrated-2026-10-10/mechanism/cutoff-resources.mjs",
+    "generatorSha256": "8940d7f26a8c77e69a51d64fde4471135dc9fc08fd88e44e0a523b4f27d85f56"
+  },
+  "hypothesis": "Final finite resource amendment: actual full-size624px ArialUnicodeMS U+25A3 square at unchanged intended pitch38.53125; native16px Menlo-Bold coherent prose gray228/232 with0.75/1px stroke andsamecolor1.5shadow. Tests native scaling and pinned adaptive low-dynamic-range cutoff at mixed black/gray neighborhoods. No transferred geometric or readability pass. All8 sampling grids retained exactly, including fixed extent boundary that yields only13centers at38.53125. No target, full candidate, ordinary reader, passive profile or exploratory trial.",
+  "classification": "Source-resource measurement only. Unicode ornament lane is separate from alphabetic O/o and emoji-atlas implementation. Native black/gray prose has no tiles, QR graphics/modules, hidden duplicates or matrix background.",
+  "specs": [
+    {
+      "id": "calibrated-ArialUnicodeMS-25a3-624",
+      "kind": "ornament-resource",
+      "font": "ArialUnicodeMS",
+      "size": 624,
+      "symbol": "▣",
+      "expectedSelection": "▣",
+      "expectedFonts": [
+        "ArialUnicodeMS"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "classification": "One actual full-size native U+25A3 square resource at624px, derived from actual192px gray128bbox83x83 to target269.71875px at the unchanged QR pitch38.53125. This is a new native measurement; no scaling transfer pass is assumed. Parent must inspect actual visible glyph; source/fullink/actualfont required. Intended center is separately declared, never ordinary firstselection replacement.",
+      "fontSelector": "#text",
+      "cssOrigin": [
+        128,
+        32
+      ],
+      "intendedCounterCenter": {
+        "x": 313.25,
+        "y": 415.5
+      },
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/calibrated-ArialUnicodeMS-25a3-624/source.html.txt",
+      "htmlSha256": "7a6a76c04cea9cd0e9505b4a7953bf4d70cc443325af912c6cf793a76b8ce747",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/calibrated-ArialUnicodeMS-25a3-624"
+    },
+    {
+      "id": "cutoff-gray-228-stroke-0p75",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 228,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Final conditional dynamic-range resource hypothesis: genuine visible foreground228or232 with native stroke andshadow onwhite255. At232, maximum isolated gray/white contrast23 is below pinned jsQR cutoff24; neighboring black glyphs and adaptive block dependence are not assumed independent. At228, contrast27 is above that cutoff. Faintness is expected; exactSelection and decoder behavior cannot establish readability. Parent visual assessment of retained nativePNG is required before any payload source selection; reject inadequate actual prose readability.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles.",
+        "extent": {
+          "width": 500.90625,
+          "height": 57.796875
+        },
+        "samplePolicy": "floor(origin+offset+(index+.5)*pitch), all fixed rectangular source-grid centers including spaces/unowned gaps; class ownership from captured glyph Range rectangles, no affine mixed-color claim"
+      },
+      "stroke": 0.75,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-0p75/source.html.txt",
+      "htmlSha256": "67b317dc3e3f1f85fa377cb42761cd4bed685df215bb46d7aeaf0a35aaee7c4f",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-0p75"
+    },
+    {
+      "id": "cutoff-gray-228-stroke-1",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 228,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Final conditional dynamic-range resource hypothesis: genuine visible foreground228or232 with native stroke andshadow onwhite255. At232, maximum isolated gray/white contrast23 is below pinned jsQR cutoff24; neighboring black glyphs and adaptive block dependence are not assumed independent. At228, contrast27 is above that cutoff. Faintness is expected; exactSelection and decoder behavior cannot establish readability. Parent visual assessment of retained nativePNG is required before any payload source selection; reject inadequate actual prose readability.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles.",
+        "extent": {
+          "width": 500.90625,
+          "height": 57.796875
+        },
+        "samplePolicy": "floor(origin+offset+(index+.5)*pitch), all fixed rectangular source-grid centers including spaces/unowned gaps; class ownership from captured glyph Range rectangles, no affine mixed-color claim"
+      },
+      "stroke": 1,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-1/source.html.txt",
+      "htmlSha256": "8643b184e03b9595be213590a61a5a81d15fe38d623a682ea73918bc72672a89",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-228-stroke-1"
+    },
+    {
+      "id": "cutoff-gray-232-stroke-0p75",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 232,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Final conditional dynamic-range resource hypothesis: genuine visible foreground228or232 with native stroke andshadow onwhite255. At232, maximum isolated gray/white contrast23 is below pinned jsQR cutoff24; neighboring black glyphs and adaptive block dependence are not assumed independent. At228, contrast27 is above that cutoff. Faintness is expected; exactSelection and decoder behavior cannot establish readability. Parent visual assessment of retained nativePNG is required before any payload source selection; reject inadequate actual prose readability.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles.",
+        "extent": {
+          "width": 500.90625,
+          "height": 57.796875
+        },
+        "samplePolicy": "floor(origin+offset+(index+.5)*pitch), all fixed rectangular source-grid centers including spaces/unowned gaps; class ownership from captured glyph Range rectangles, no affine mixed-color claim"
+      },
+      "stroke": 0.75,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-232-stroke-0p75/source.html.txt",
+      "htmlSha256": "fba91216b8c874c84716cbb7b0f4dda4fb5816edcaa6e5155d09749133ef8982",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-232-stroke-0p75"
+    },
+    {
+      "id": "cutoff-gray-232-stroke-1",
+      "kind": "continuous-resource",
+      "font": "Menlo-Bold",
+      "size": 16,
+      "gray": 232,
+      "shadow": 1.5,
+      "symbol": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedSelection": "Ordinary words stay visible. A camera reads the ink; a person reads the words. Our source preserves every letter, space, and mark.",
+      "expectedFonts": [
+        "Menlo-Bold"
+      ],
+      "width": 640,
+      "height": 128,
+      "classification": "Final conditional dynamic-range resource hypothesis: genuine visible foreground228or232 with native stroke andshadow onwhite255. At232, maximum isolated gray/white contrast23 is below pinned jsQR cutoff24; neighboring black glyphs and adaptive block dependence are not assumed independent. At228, contrast27 is above that cutoff. Faintness is expected; exactSelection and decoder behavior cannot establish readability. Parent visual assessment of retained nativePNG is required before any payload source selection; reject inadequate actual prose readability.",
+      "diagnosticContract": {
+        "perResource": 1,
+        "kind": "Combined literal-gray ink envelope plus deterministic preregistered center support and gray/black separability summary; not ordinary recovery or finder acceptance",
+        "pixelThresholds": [
+          64,
+          96,
+          128,
+          160,
+          192,
+          224
+        ],
+        "gridPitches": [
+          19.265625,
+          38.53125
+        ],
+        "centerOffsets": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2.408203125,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": -9.6328125
+          },
+          {
+            "x": 2.408203125,
+            "y": -9.6328125
+          }
+        ],
+        "noAdaptiveIndependenceClaim": true,
+        "origin": {
+          "x": 32,
+          "y": 24
+        },
+        "phaseInterpretation": "All declared origin/offset/pitch cross products are retained. At pitch38.53125 and offset.y=-9.6328125, effective origin14.3671875 puts first sample y33.6328125, exactly9.6328125 after the first real CSS top24; alternate native rows are sampled at the same phase. Prior pitch38.53125 origin24 hit inter-line gaps. Fractional pixel rounding and glyph-dependent ink still require actual measurement. Ordinary adaptive output remains dependent on neighboring styles.",
+        "extent": {
+          "width": 500.90625,
+          "height": 57.796875
+        },
+        "samplePolicy": "floor(origin+offset+(index+.5)*pitch), all fixed rectangular source-grid centers including spaces/unowned gaps; class ownership from captured glyph Range rectangles, no affine mixed-color claim"
+      },
+      "stroke": 1,
+      "fontSelector": "#text",
+      "htmlPath": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-232-stroke-1/source.html.txt",
+      "htmlSha256": "211d60b8e3aa32f916df622bdbe4a0575e2276035cfc927079ff0234fd156313",
+      "dir": "docs/research/prose-qr/integrated-2026-10-10/empirical/resources-06/cutoff-gray-232-stroke-1"
+    }
+  ],
+  "sourceHashes": {
+    "experiments/prose-qr/integrated-2026-10-10/empirical/prepare-resources06.mjs": "1865996ce1a0d9015d4bd011193920f6fc8317ff4cf4bea612201594b0a936fd",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/run-resources-v5.mjs": "c342086a5324e61d554b9a961a32ec0b178b57a5dd58080ee2305786c1136ea1",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/common.mjs": "f967356b584553ef8d05a02c195c64fca04e3e5838cb02db04047f9e8b6a43ea",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/diagnostic.mjs": "9a3ebac85187edbf6970b2f7f65bd3b629955464383026a841d5c16a0d7b4cf0",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/metrics.mjs": "1d711362d73623e4551c91c37b82ef2a6d28baba98aed5b3006a643dd881affe",
+    "experiments/prose-qr/integrated-2026-10-10/empirical/holes.py": "7d42149282901a68c841c013daefc34c2ba535e247c99a158856412ff535e0f1",
+    "docs/research/prose-qr/integrated-2026-10-10/allocation-02.json": "9955bf0b3ed27faaf46b2204867aeaead471644eb8c38a1b05c1a25cfb05c513"
+  },
+  "denominator": 5,
+  "captureOrder": [
+    "calibrated-ArialUnicodeMS-25a3-624",
+    "cutoff-gray-228-stroke-0p75",
+    "cutoff-gray-228-stroke-1",
+    "cutoff-gray-232-stroke-0p75",
+    "cutoff-gray-232-stroke-1"
+  ],
+  "ordinaryReaderCalls": 0,
+  "passiveProfiles": 0,
+  "repeatPerResource": 0,
+  "diagnosticsPerResource": 1,
+  "diagnostic": "One combined source pipeline per resource: complete gray245 visible-ink envelope and gray128 enclosed contours; actual native ornament complete-ink midpoint literal/adaptive four-axis runs; continuous prose fixed gray thresholds/pitches/offsets and captured Range ownership. No ordinary locator/decode and no first-selected gate substitution.",
+  "stops": [
+    "Unreadable actual native words or faint letterforms",
+    "font/codepoint/Selection/hash mismatch",
+    "clipped/missing full glyph ink",
+    "bad measured native support",
+    "no justified source-specific within-radius matrix prediction"
+  ],
+  "noSelectiveRetries": true,
+  "visualReviewRequired": true,
+  "visualReviewPolicy": "Each continuous body source pauses after its fixed diagnostic and before next resource for worker originalPNG inspection. At most180seconds; exactPNGhash receipt; reject unreadable, inadequately faint or overlapping letters or lostink; parent must inspect actual retainedPNG before any fullsource selection. No source changes/retry."
+}

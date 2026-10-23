@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-10T04:23:30.828575+00:00",
+  "opencv": "4.13.0",
+  "ordinaryPlanned": 3,
+  "nativeInputs": 2,
+  "unattemptedNative": ["run-03: capture budget"],
+  "options": "default QRCodeDetector.detectAndDecode; no setters, transforms or extraction",
+  "diagnosticReplica": {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/modules/objdetect/src/qrcode.cpp",
+    "resize": "512 square, INTER_AREA",
+    "threshold": "ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 83, 2",
+    "acceptanceInput": false
+  },
+  "sources": {
+    "/Users/noir/Documents/aqrobat/experiments/prose-qr/context-stability/independent-v2.py": "bfe8255780c0c9530a7f762bfa069333e23f08befc6984cf27cd4779c4a85bf0",
+    "docs/research/prose-qr/phase-32/PLAN.md": "7a85a631ec595bc7f67184400fcf375077fa5066a8c273a4ae47b3ebf0c38d29",
+    "docs/research/prose-qr/phase-32/REPLICA-PLAN.md": "685ffcf152d06a070a3ea07060922a2a32565eba82fabb1c0a984ad4ff8a540a",
+    "docs/research/prose-qr/phase-32/BUDGET-STOP.md": "10e231183c40a0e5cb7acb07eea909d350b13b8e380338356d7b191125874208",
+    "docs/research/prose-qr/phase-32/opencv-source-01/receipt.json": "63813dc7ce42060335d73893c1837318c077c92bb81524c2a26265c18c25657a"
+  },
+  "inputs": [
+    {
+      "id": "control",
+      "receipt": "docs/research/prose-qr/phase-32/run-01/control-pixels.json",
+      "sha256": "24fe8673fe462ae5f34bbcb818c6ff520350a67136e08c4f7c2a3087b173acaa"
+    },
+    {
+      "id": "run-01",
+      "receipt": "docs/research/prose-qr/phase-32/run-01/native-pixels.json",
+      "sha256": "9894702e5cf0ef02fa7a89f5b21a1ad802f4d46e0eedff698cfa0a1a021d116a"
+    },
+    {
+      "id": "run-02",
+      "receipt": "docs/research/prose-qr/phase-32/run-02/native-pixels.json",
+      "sha256": "a9973ae65f9667f0742940f452dbbace5e1f9193290914a02bfa874a98730851"
+    }
+  ]
+}

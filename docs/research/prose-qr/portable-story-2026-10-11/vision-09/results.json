@@ -1,0 +1,286 @@
+{
+  "at": "2026-10-11T17:40:57Z",
+  "inputTransforms": "none",
+  "invocation": "VNDetectBarcodesRequest(); VNImageRequestHandler(url:options:[:]); all defaults",
+  "os": "Version 26.3.1 (a) (Build 25D771280a)",
+  "rows": [
+    {
+      "defaultSymbologies": [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations": [],
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench-test-03/new-prose-complete.png",
+      "pngSha256": "d5429bb10557a2af1ec2c9d8d3cfea2a5f6f9a6dda8784e4b716b2a42d867d15",
+      "revision": 4,
+      "seconds": 0.24977004528045654,
+      "texts": [],
+      "id": "new-prose-complete",
+      "expected": "https://example.com/",
+      "exact": false
+    },
+    {
+      "defaultSymbologies": [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations": [
+        {
+          "boundingBox": [
+            0.12035251386237866,
+            0.11372205946180555,
+            0.7651496174359562,
+            0.7647664811876085
+          ],
+          "confidence": 1,
+          "payload": "https://example.com/",
+          "symbology": "VNBarcodeSymbologyQR"
+        }
+      ],
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench-test-03/narrow-complete.png",
+      "pngSha256": "deba738412aa46408df0d4b277b43999260e6b371995ad2a1ca4ddcf6acdd4e6",
+      "revision": 4,
+      "seconds": 0.025285959243774414,
+      "texts": [
+        "https://example.com/"
+      ],
+      "id": "narrow-complete",
+      "expected": "https://example.com/",
+      "exact": true
+    },
+    {
+      "defaultSymbologies": [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations": [],
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench-test-03/broad-complete.png",
+      "pngSha256": "9f095995b49c9d82dd1d3a537e36a41cb9029885e7ea1d2f6d6fb42898d1fd3c",
+      "revision": 4,
+      "seconds": 0.04744100570678711,
+      "texts": [],
+      "id": "broad-complete",
+      "expected": "https://example.com/",
+      "exact": false
+    },
+    {
+      "defaultSymbologies": [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations": [
+        {
+          "boundingBox": [
+            0.12089020314842763,
+            0.12191510441327336,
+            0.7586062074911715,
+            0.7577890145658243
+          ],
+          "confidence": 1,
+          "payload": "https://example.com/",
+          "symbology": "VNBarcodeSymbologyQR"
+        }
+      ],
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench-test-03/black-complete.png",
+      "pngSha256": "bea19be3ce3173180056af01003f6cccc9563b298fd38a394e6ed43cf9908d01",
+      "revision": 4,
+      "seconds": 0.020161986351013184,
+      "texts": [
+        "https://example.com/"
+      ],
+      "id": "black-complete",
+      "expected": "https://example.com/",
+      "exact": true
+    },
+    {
+      "defaultSymbologies": [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations": [
+        {
+          "boundingBox": [
+            0.11732093733970565,
+            0.11176492710306186,
+            0.7713410733926176,
+            0.7719640828142262
+          ],
+          "confidence": 1,
+          "payload": "https://example.com/",
+          "symbology": "VNBarcodeSymbologyQR"
+        }
+      ],
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench-test-03/accented-complete.png",
+      "pngSha256": "88ea4bdb1e2f59dd9533b8be151e274e9993d367ec9852cd8f936cd53b0f8db2",
+      "revision": 4,
+      "seconds": 0.022814035415649414,
+      "texts": [
+        "https://example.com/"
+      ],
+      "id": "accented-complete",
+      "expected": "https://example.com/",
+      "exact": true
+    },
+    {
+      "defaultSymbologies": [
+        "VNBarcodeSymbologyAztec",
+        "VNBarcodeSymbologyCodabar",
+        "VNBarcodeSymbologyCode128",
+        "VNBarcodeSymbologyCode39",
+        "VNBarcodeSymbologyCode39Checksum",
+        "VNBarcodeSymbologyCode39FullASCII",
+        "VNBarcodeSymbologyCode39FullASCIIChecksum",
+        "VNBarcodeSymbologyCode93",
+        "VNBarcodeSymbologyCode93i",
+        "VNBarcodeSymbologyDataMatrix",
+        "VNBarcodeSymbologyEAN13",
+        "VNBarcodeSymbologyEAN8",
+        "VNBarcodeSymbologyGS1DataBar",
+        "VNBarcodeSymbologyGS1DataBarExpanded",
+        "VNBarcodeSymbologyGS1DataBarLimited",
+        "VNBarcodeSymbologyI2of5",
+        "VNBarcodeSymbologyI2of5Checksum",
+        "VNBarcodeSymbologyITF14",
+        "VNBarcodeSymbologyMSIPlessey",
+        "VNBarcodeSymbologyMicroPDF417",
+        "VNBarcodeSymbologyMicroQR",
+        "VNBarcodeSymbologyPDF417",
+        "VNBarcodeSymbologyQR",
+        "VNBarcodeSymbologyUPCE"
+      ],
+      "observations": [
+        {
+          "boundingBox": [
+            0.09473827249562772,
+            0.10185548511331267,
+            0.8067357674360914,
+            0.8056635409194087
+          ],
+          "confidence": 1,
+          "payload": "https://example.com/aqrobat?size=small",
+          "symbology": "VNBarcodeSymbologyQR"
+        }
+      ],
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench-test-03/longer-url-complete.png",
+      "pngSha256": "1f5516ada3a8e77c19db5ac10aa5d7def028cce236d4d3aa4c60124c34a6ff20",
+      "revision": 4,
+      "seconds": 0.02518606185913086,
+      "texts": [
+        "https://example.com/aqrobat?size=small"
+      ],
+      "id": "longer-url-complete",
+      "expected": "https://example.com/aqrobat?size=small",
+      "exact": true
+    }
+  ]
+}

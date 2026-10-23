@@ -1,0 +1,145 @@
+{
+  "at": "2026-10-11T17:44:14.064Z",
+  "configPath": "experiments/prose-qr/portable-story-2026-10-11/workbench-test-04.json",
+  "configSha256": "b182b90ecd44eb49a60725bf2456db464134dc5e1ed2a6604cd4458cf165c54e",
+  "config": {
+    "id": "workbench-test-04",
+    "hypothesis": "Whole-copy reflow changed Vision success for two Impact word streams. Prospectively allocate four remaining captures to black Avenir with three complete varying word streams and to real Heavy versus Regular with closer gray96 ink. No source rewording, truncation or failed-input retry. Existing ordinary controls remain retained.",
+    "cases": [
+      {
+        "id": "black-new-prose-complete",
+        "spec": {
+          "payload": "https://example.com/",
+          "text": "Morning light crossed the quiet room, and Mara opened the notebook she had carried for years. She wrote about the river, the neighbors, and the small habits that made an ordinary day feel worth remembering. Outside, a bicycle bell rang twice. Someone laughed near the corner shop. She paused, listened, and decided that the next sentence should leave enough space for another person to enter the story with their own memories.",
+          "font": "Avenir Next Condensed",
+          "fontSize": 10,
+          "field": 600,
+          "linesPerModule": 2,
+          "quiet": 4,
+          "ecc": "Q",
+          "dark": 0,
+          "gray": 0,
+          "darkWeight": 900,
+          "lightWeight": 100,
+          "repeat": true
+        }
+      },
+      {
+        "id": "black-narrow-complete",
+        "spec": {
+          "payload": "https://example.com/",
+          "text": "It is still a little late. I sit in a quiet room, listening to rain. A thin line of light slips in. We will write it all, in plain little words, until it is time to leave.",
+          "font": "Avenir Next Condensed",
+          "fontSize": 10,
+          "field": 600,
+          "linesPerModule": 2,
+          "quiet": 4,
+          "ecc": "Q",
+          "dark": 0,
+          "gray": 0,
+          "darkWeight": 900,
+          "lightWeight": 100,
+          "repeat": true
+        }
+      },
+      {
+        "id": "black-broad-complete",
+        "spec": {
+          "payload": "https://example.com/",
+          "text": "Warm summer mornings bring wonderful moments. A wooden window frames a meadow where bees wander among blooms. People share bread, welcome neighbors, and remember why small everyday pleasures matter.",
+          "font": "Avenir Next Condensed",
+          "fontSize": 10,
+          "field": 600,
+          "linesPerModule": 2,
+          "quiet": 4,
+          "ecc": "Q",
+          "dark": 0,
+          "gray": 0,
+          "darkWeight": 900,
+          "lightWeight": 100,
+          "repeat": true
+        }
+      },
+      {
+        "id": "avenir-regular-gray96",
+        "spec": {
+          "payload": "https://example.com/",
+          "text": "Morning light crossed the quiet room, and the open window carried the scent of rain. A little bird rested near the garden while we made warm tea. We watched the clouds move beyond the trees and talked about the walk we would take later. Every small sound seemed clear in the still air. The day had only begun, and there was time to look closely at the ordinary things around us.",
+          "font": "Avenir Next Condensed",
+          "fontSize": 10,
+          "field": 600,
+          "linesPerModule": 2,
+          "quiet": 4,
+          "ecc": "Q",
+          "dark": 0,
+          "gray": 96,
+          "darkWeight": 900,
+          "lightWeight": 400,
+          "repeat": true
+        }
+      }
+    ],
+    "plannedNativeCaptures": 4,
+    "plannedImmediateRepeats": 4,
+    "maximumPrimaryReaderCalls": 12,
+    "plannedUniquePrimaryReaderCalls": 12,
+    "errorChecks": [
+      "source overflow even with repeat",
+      "insufficient source without repeat",
+      "unsupported script",
+      "vertical overlap",
+      "stale download disabled"
+    ],
+    "clipboard": "Stub navigator.clipboard inside a fresh test-owned browser; no OS clipboard writes. Native CUA transfer is separate.",
+    "setupCorrection": "No setup repair; earned typography allocation after complete Test03 results. New full-text button and explicit TextEdit warning are UI-only; generator source unchanged."
+  },
+  "sources": [
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/workbench-test.mjs",
+      "sha256": "ea93777914b0e00d88e5812f255007f585d134c97b32e512a393b52a2d4f3e6b",
+      "archive": "source-1.txt.gz"
+    },
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/generator.mjs",
+      "sha256": "13faee1c8ab996d45bcafca809d34a49665226a211283e4ddfa9267dc2f00b35",
+      "archive": "source-2.txt.gz"
+    },
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/workbench-app.mjs",
+      "sha256": "2602959adc05248eac0603e4750f33c3d6e0cfa4d39c202c7f9eb983858e2a7d",
+      "archive": "source-3.txt.gz"
+    },
+    {
+      "path": "experiments/prose-qr/portable-story-2026-10-11/workbench-template.html",
+      "sha256": "528109ba214f1192fdd5d67e8a83f940267287f3eb4daeae89ef1cb88f6c5654",
+      "archive": "source-4.txt.gz"
+    },
+    {
+      "path": "docs/research/prose-qr/portable-story-2026-10-11/workbench.html",
+      "sha256": "92227e8ddd836cea5edafd0116cdae3cd199606d01a982a524d9c663653ce17e",
+      "archive": "source-5.txt.gz"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/reader.mjs",
+      "sha256": "78386feff33f64026121f37bed3a5f18125ef508c51d385bac6ebbf9389cb050",
+      "archive": "source-6.txt.gz"
+    },
+    {
+      "path": "experiments/prose-qr/styled-story-2026-10-11/opencv.py",
+      "sha256": "0f5d1272e2e8b4b404fe2c565b6789f094ac130e09053df1710b52495ff42053",
+      "archive": "source-7.txt.gz"
+    },
+    {
+      "path": "src/core.mjs",
+      "sha256": "ceee45105910d847298311b61090871ea0df4d0b648b53f4ffb6b4c2b668ba5f",
+      "archive": "source-8.txt.gz"
+    },
+    {
+      "path": "vendor/qrcodegen.mjs",
+      "sha256": "606ab7d5730d03af24c0c5358a7babc5328a50e47fdbf4719efafa679c5f4aa5",
+      "archive": "source-9.txt.gz"
+    }
+  ],
+  "inputTransforms": "none",
+  "cutoff": "2026-10-11T19:25:49Z"
+}
