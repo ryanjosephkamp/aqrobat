@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-23T14:04:27.124352+00:00",
+  "result": "stopped before screenshot",
+  "error": "page.waitForEvent: Timeout 30000ms exceeded while waiting for event download",
+  "checksReached": [
+    "Local page loaded",
+    "Visible prompt text matched tracked package for the first lane"
+  ],
+  "candidateCaptures": 0,
+  "resourceCaptures": 0,
+  "readerCalls": 0,
+  "cleanup": "Browser closed in finally",
+  "correction": "Use plain links labeled Open start prompt rather than claiming a forced file-origin download; prompts remain visible and tracked as .txt. Next check verifies actual navigation and content."
+}

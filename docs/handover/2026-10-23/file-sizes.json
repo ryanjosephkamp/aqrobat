@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-23T14:01:18.991009+00:00",
+  "payload": "https://example.com/",
+  "method": "Read original existing bytes only; no generation, image transformation or decoder call.",
+  "limitations": "Different image dimensions and content amount; not an equal-resolution benchmark. Plain TXT drops the QR styling.",
+  "files": [
+    {
+      "format": "Conventional QR PNG",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/corpus-01/control-1.png",
+      "bytes": 3344,
+      "sha256": "d57e4d2b01dddf41694d91cfb0a8202ad8d9dbcd8b21bc183b2476ca61a1e4ef"
+    },
+    {
+      "format": "Plain wrapped prose TXT",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-09/expected.txt",
+      "bytes": 6688,
+      "sha256": "a7aa498e7f76da9882d44168d14ee910ee7ec05a335b6c2c8e8adaf99b754a90"
+    },
+    {
+      "format": "Accepted styled Word",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-09/word-09.docx",
+      "bytes": 34420,
+      "sha256": "870198420c9b059da79e5600408be33485501f4ce22202bbecec5d0aaae7c989"
+    },
+    {
+      "format": "Selectable native Word PDF",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-09/word-09.pdf",
+      "bytes": 64708,
+      "sha256": "a2e2ea93b88a160b09f7b714d2b50c9a822fe7b4d8d3b80f1d0efc94669454ea"
+    },
+    {
+      "format": "Accepted prose page PNG",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-09/pdf-96/native.png",
+      "bytes": 283532,
+      "sha256": "6cb13605b297fb50cf6193e7a18991a9203cc717b2abeef70e3e7e5fcc98903e"
+    },
+    {
+      "format": "Current generated Word source",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/word-08/input.docx",
+      "bytes": 314831,
+      "sha256": "61070d77d13bd7f39545e1ccf987c25f32db6817287862762758871c1cd581e8"
+    },
+    {
+      "format": "Current selectable HTML",
+      "path": "docs/research/prose-qr/paste-prose-2026-10-11/studio-check-06/download-selectable.html",
+      "bytes": 691343,
+      "sha256": "ee3e9962f440b056b60d7d7f9fad8667ae4c0d4b35cb4b0bc1dd327d0575968a"
+    }
+  ]
+}
