@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Aqrobat · insertion practice</title
+  ><style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      padding: 40px 24px 64px;
+      background: #f8fafc;
+      color: #0f172a;
+      font:
+        15px/1.6 -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+    }
+    main {
+      max-width: 880px;
+      margin: auto;
+    }
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+    }
+    p {
+      color: #475569;
+    }
+    button,
+    input {
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #0f172a;
+      font: inherit;
+    }
+    input[type="file"] {
+      padding: 6px;
+    }
+    button {
+      border-color: #2563eb;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    :focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .controls label {
+      margin: 0;
+      font-weight: 500;
+      color: #475569;
+    }
+    .controls input {
+      margin-left: 6px;
+    }
+    textarea,
+    [contenteditable] {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: none;
+      margin-top: 6px;
+      padding: 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      background: #ffffff;
+      color: #000000;
+      overflow: auto;
+    }
+    textarea {
+      height: 700px;
+      font:
+        12px/18px Menlo,
+        monospace;
+      white-space: pre-wrap;
+    }
+    [contenteditable] {
+      min-height: 500px;
+      font:
+        16px/1.5 Arial,
+        sans-serif;
+    }
+    code {
+      font-family: Menlo, monospace;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
+      margin: 20px 0;
+    }
+    #status {
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 16px 48px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+  <main>
+    <h1>Practice inserting a code</h1>
+    <p>
+      Aqrobat builds the code directly in these editors, measuring their own
+      fonts, without the clipboard. Real apps can still change the saved or sent
+      result, so scan the final destination.
+    </p>
+    <div class="controls">
+      <button id="start">Choose a code and a field</button
+      ><label
+        >Load Recipe JSON
+        <input id="import" type="file" accept=".json,application/json"
+      /></label>
+      <label
+        >Plain editor font size
+        <input
+          id="practice-font-size"
+          type="number"
+          value="12"
+          min="6"
+          max="32"
+          step="1"
+          style="width: 90px"
+        />
+        px</label
+      >
+    </div>
+    <p id="status" role="status">
+      Sample codes: hash, rocket, black circle, and mixed symbols. In the
+      extension, your saved codes are listed too.
+    </p>
+    <label for="plain">Plain text field · Menlo</label
+    ><textarea id="plain" aria-label="Plain practice editor" spellcheck="false">
+Your draft starts here.&#10;</textarea
+    ><label for="rich">Rich text editor · like an email or document</label>
+    <div id="rich" contenteditable="true" aria-label="Rich practice editor">
+      <p>
+        Your email draft starts here. Place your cursor below this paragraph.
+      </p>
+      <p><br /></p>
+    </div>
+    <p>
+      Try Undo after inserting; the rest of the draft stays. Single-line fields,
+      fields that are too narrow, selected text, read-only fields, and character
+      limits are refused before anything is inserted.
+    </p>
+    <p>
+      This page sends nothing and submits no form. These are local practice
+      editors, so passing here does not prove a code works in Gmail, Outlook, or
+      any other app.
+    </p>
+  </main>
+  <script type="module" src="practice.mjs"></script>
+</html>

@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Make working QR codes from real text characters and emoji, then paste them into an email, document, or chat. Free and local, with reproducible recipes."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0b0b0c"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>Aqrobat · QR codes, in character</title>
+    <link rel="icon" href="web/brand/rocket-32.png" sizes="32x32" />
+    <link rel="icon" href="web/brand/rocket-48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="web/brand/apple-touch-icon.png" />
+    <link rel="stylesheet" href="web/style.css" />
+    <script type="module" src="web/app.mjs"></script>
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 4v11m-4.5-4.5L12 15l4.5-4.5M5 19h14" />
+      </symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24">
+        <path d="M12 15V4M7.5 8.5 12 4l4.5 4.5M5 19h14" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m7 10 5 5 5-5" />
+      </symbol>
+      <symbol id="i-external" viewBox="0 0 24 24">
+        <path
+          d="M14 5h5v5m0-5-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4"
+        />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3.5" />
+        <path
+          d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"
+        />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5Z" />
+      </symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24">
+        <rect x="3.5" y="4.5" width="17" height="11.5" rx="1.5" />
+        <path d="M9 20h6m-3-4v4" />
+      </symbol>
+      <symbol id="i-puzzle" viewBox="0 0 24 24">
+        <path
+          d="M9 4.5a2 2 0 1 1 4 0V6h4a1 1 0 0 1 1 1v3.5h-1.5a2 2 0 1 0 0 4H18V18a1 1 0 0 1-1 1h-3.5v-1.5a2 2 0 1 0-4 0V19H6a1 1 0 0 1-1-1v-4h1.5a2 2 0 1 0 0-4H5V7a1 1 0 0 1 1-1h3Z"
+        />
+      </symbol>
+      <symbol id="i-bookmark" viewBox="0 0 24 24">
+        <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1Z" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7.5" />
+      </symbol>
+      <symbol id="i-more" viewBox="0 0 24 24">
+        <circle cx="6" cy="12" r="1" />
+        <circle cx="12" cy="12" r="1" />
+        <circle cx="18" cy="12" r="1" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="6" />
+        <path d="m20 20-4.5-4.5" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="M6.5 6.5l11 11m0-11-11 11" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M12 7.5V12l3 2" />
+      </symbol>
+      <symbol id="i-smile" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M8.8 14.2c1.7 2 4.7 2 6.4 0M9.5 9.8v.4m5-.4v.4" />
+      </symbol>
+      <symbol id="i-bear" viewBox="0 0 24 24">
+        <circle cx="12" cy="13.5" r="6" />
+        <path
+          d="M7.6 9.4A2.3 2.3 0 1 1 9.4 6.9M16.4 9.4A2.3 2.3 0 1 0 14.6 6.9M10 16c1.2.9 2.8.9 4 0M10 12.5v.3m4-.3v.3"
+        />
+      </symbol>
+      <symbol id="i-apple" viewBox="0 0 24 24">
+        <path
+          d="M12 8.2c-1.6-1.3-6-1.5-6 3.6 0 3.7 2.6 7.8 4.6 7.6.6 0 .9-.4 1.4-.4s.8.4 1.4.4c2 .2 4.6-3.9 4.6-7.6 0-5.1-4.4-4.9-6-3.6Z"
+        />
+        <path d="M12 8c0-2 1-3.4 2.6-4" />
+      </symbol>
+      <symbol id="i-ball" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <path
+          d="M4.3 10c3.6-.3 6.6 2.3 7.7 9.9M19.7 10c-3.6-.3-6.6 2.3-7.7 9.9M8 5.1c2.4 2 5.6 2 8 0"
+        />
+      </symbol>
+      <symbol id="i-car" viewBox="0 0 24 24">
+        <path d="M5 15.5v-3.2L7.2 8h9.6l2.2 4.3v3.2Z" />
+        <path d="M5 12.5h14M7 15.5V18m10-2.5V18" />
+      </symbol>
+      <symbol id="i-bulb" viewBox="0 0 24 24">
+        <path
+          d="M9.2 15.5c-.2-1.4-3.2-2.9-3.2-6a6 6 0 0 1 12 0c0 3.1-3 4.6-3.2 6Z"
+        />
+        <path d="M9.5 18.5h5M10.5 21h3" />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M12 19.5s-7.5-4.4-7.5-9.7A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5c0 5.3-7.5 9.7-7.5 9.7Z"
+        />
+      </symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24">
+        <path d="M6.5 21V4.5m0 0h11l-2.5 4 2.5 4h-11" />
+      </symbol>
+      <!-- A small code, for showing which part a row changes. -->
+      <symbol id="p-code" viewBox="-1 -1 23 23">
+        <rect
+          x="-1"
+          y="-1"
+          width="23"
+          height="23"
+          rx="2.5"
+          fill="var(--p-light)"
+        />
+        <path
+          fill="var(--p-ring)"
+          fill-rule="evenodd"
+          d="M0 0h7v7H0zM1 1v5h5V1zM14 0h7v7h-7zM15 1v5h5V1zM0 14h7v7H0zM1 15v5h5v-5z"
+        />
+        <path fill="var(--p-center)" d="M2 2h3v3H2zM16 2h3v3h-3zM2 16h3v3H2z" />
+        <path
+          fill="var(--p-data)"
+          d="M9 0h1v1h-1zM11 0h2v1h-2zM9 1h3v1h-3zM8 2h2v1h-2zM11 2h2v1h-2zM9 3h1v1h-1zM11 3h1v1h-1zM10 4h1v1h-1zM12 4h1v1h-1zM12 5h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM8 7h2v1h-2zM11 7h2v1h-2zM0 8h3v1h-3zM4 8h8v1h-8zM13 8h2v1h-2zM18 8h1v1h-1zM1 9h1v1h-1zM3 9h2v1h-2zM7 9h1v1h-1zM10 9h1v1h-1zM14 9h2v1h-2zM17 9h1v1h-1zM20 9h1v1h-1zM2 10h1v1h-1zM5 10h3v1h-3zM12 10h1v1h-1zM16 10h5v1h-5zM0 11h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM7 11h3v1h-3zM14 11h2v1h-2zM0 12h1v1h-1zM2 12h2v1h-2zM5 12h5v1h-5zM12 12h1v1h-1zM14 12h4v1h-4zM20 12h1v1h-1zM8 13h4v1h-4zM13 13h1v1h-1zM16 13h2v1h-2zM19 13h2v1h-2zM8 14h1v1h-1zM11 14h1v1h-1zM13 14h4v1h-4zM19 14h2v1h-2zM8 15h6v1h-6zM20 15h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM13 16h2v1h-2zM16 16h1v1h-1zM19 16h2v1h-2zM9 17h1v1h-1zM14 17h3v1h-3zM18 17h2v1h-2zM8 18h3v1h-3zM12 18h1v1h-1zM15 18h3v1h-3zM20 18h1v1h-1zM8 19h1v1h-1zM10 19h1v1h-1zM14 19h3v1h-3zM19 19h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM14 20h1v1h-1zM16 20h1v1h-1zM19 20h2v1h-2z"
+        />
+      </symbol>
+    </svg>
+    <a class="skip" href="#make">Skip to the generator</a>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#" aria-label="Aqrobat home">
+          <img
+            class="brand-mark"
+            src="web/brand/rocket-128.png"
+            width="32"
+            height="32"
+            alt=""
+          />
+          <span>aqrobat</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="#make">Make</a>
+          <a href="#paste">Paste guide</a>
+          <a href="#extension">Extension</a>
+          <a href="#how">How it works</a>
+        </nav>
+        <div class="topbar-end">
+          <details class="menu appearance">
+            <summary class="icon-button" aria-label="Appearance">
+              <svg class="icon theme-icon" data-for="system">
+                <use href="#i-monitor" />
+              </svg>
+              <svg class="icon theme-icon" data-for="light">
+                <use href="#i-sun" />
+              </svg>
+              <svg class="icon theme-icon" data-for="dark">
+                <use href="#i-moon" />
+              </svg>
+            </summary>
+            <div class="menu-panel">
+              <label for="theme">Theme</label>
+              <select id="theme"></select>
+            </div>
+          </details>
+          <a
+            class="button ghost"
+            href="https://github.com/ryanjosephkamp/aqrobat"
+            ><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                stroke="none"
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              /></svg
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <h1>QR codes, in character.</h1>
+        <p class="lede">
+          Turn a link or short text into a working QR code drawn with real
+          characters, then paste it into an email, a document, or a chat.
+        </p>
+        <p class="fine">
+          Free · No account · Runs in your browser ·
+          <a href="downloads/aqrobat-offline.html" download>Offline page</a>
+        </p>
+      </section>
+
+      <section class="workspace container" id="make" aria-label="QR generator">
+        <form id="controls" class="card settings" novalidate>
+          <div class="field">
+            <label for="payload">Link or text</label>
+            <textarea id="payload" rows="3" spellcheck="false" maxlength="1024">
+https://example.com</textarea
+            >
+            <p class="fine counter" id="bytes">
+              19 / 1024 bytes · never shortened
+            </p>
+            <p class="field-error" id="payload-error"></p>
+          </div>
+
+          <fieldset class="field">
+            <legend>Characters</legend>
+            <span class="sublabel label" id="squares-label"
+              >Emoji squares · tested for pasting</span
+            >
+            <div
+              class="chips glyph-chips"
+              id="squares"
+              role="group"
+              aria-labelledby="squares-label"
+            ></div>
+            <span class="sublabel label" id="presets-label"
+              >More characters · experimental when pasted</span
+            >
+            <div
+              class="chips glyph-chips"
+              id="presets"
+              role="group"
+              aria-labelledby="presets-label"
+            ></div>
+            <label class="sublabel" for="glyph">Or type your own</label>
+            <div class="glyph-field">
+              <input
+                id="glyph"
+                value="⬛"
+                maxlength="4096"
+                spellcheck="false"
+                autocomplete="off"
+                aria-describedby="palette-info glyph-error"
+              />
+              <button
+                type="button"
+                class="button emoji-open"
+                id="glyph-emoji"
+                aria-haspopup="dialog"
+              >
+                <svg class="icon"><use href="#i-smile" /></svg> Emoji
+              </button>
+            </div>
+            <p class="field-error" id="glyph-error"></p>
+            <p class="fine" id="palette-info">
+              1 unique symbol. Several symbols take turns in the order typed.
+            </p>
+            <div class="parts" role="group" aria-labelledby="parts-label">
+              <div class="parts-head">
+                <span class="sublabel label" id="parts-label">Parts</span>
+                <button
+                  type="button"
+                  class="link-button"
+                  id="parts-reset"
+                  hidden
+                >
+                  Reset parts
+                </button>
+              </div>
+              <ul class="part-list" id="part-list">
+                <li class="part" data-part="corners">
+                  <svg class="part-icon" aria-hidden="true">
+                    <use href="#p-code" />
+                  </svg>
+                  <span class="part-name" id="part-corners-name"
+                    >Corner frames</span
+                  >
+                  <button
+                    type="button"
+                    class="part-value"
+                    id="part-corners"
+                    aria-haspopup="dialog"
+                  ></button>
+                </li>
+                <li class="part" data-part="centers">
+                  <svg class="part-icon" aria-hidden="true">
+                    <use href="#p-code" />
+                  </svg>
+                  <span class="part-name" id="part-centers-name"
+                    >Corner centers</span
+                  >
+                  <button
+                    type="button"
+                    class="part-value"
+                    id="part-centers"
+                    aria-haspopup="dialog"
+                  ></button>
+                </li>
+                <li class="part" data-part="light">
+                  <svg class="part-icon" aria-hidden="true">
+                    <use href="#p-code" />
+                  </svg>
+                  <span class="part-name" id="part-light-name"
+                    >Light squares</span
+                  >
+                  <button
+                    type="button"
+                    class="part-value"
+                    id="part-light"
+                    aria-haspopup="dialog"
+                  ></button>
+                </li>
+              </ul>
+              <p class="fine" id="parts-note"></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Where will it go?</legend>
+            <div
+              class="chips"
+              id="destinations"
+              role="radiogroup"
+              aria-label="Destination"
+            ></div>
+            <p class="fine" id="destination-note"></p>
+          </fieldset>
+
+          <details class="field more" id="more-settings">
+            <summary>
+              More settings
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <div class="grid-2">
+              <div>
+                <label for="density">Characters per square</label>
+                <select id="density">
+                  <option value="4x2">4 across × 2 rows</option>
+                  <option value="2x1">2 across × 1 row</option>
+                  <option value="1x1" selected>1 across × 1 row</option>
+                </select>
+              </div>
+              <div>
+                <label for="font">Font</label>
+                <select id="font">
+                  <option>Menlo</option>
+                  <option>Courier New</option>
+                  <option value="monospace">System monospace</option>
+                </select>
+              </div>
+              <div>
+                <label for="ecc">Error correction</label>
+                <select id="ecc">
+                  <option value="M">M · medium</option>
+                  <option value="Q">Q · quartile</option>
+                  <option value="H">H · high</option>
+                  <option value="L">L · low</option>
+                </select>
+              </div>
+              <div>
+                <label for="width"
+                  >Image size <span class="fine">px</span></label
+                >
+                <div class="size-control">
+                  <input
+                    id="size"
+                    type="range"
+                    min="200"
+                    max="1536"
+                    step="1"
+                    value="656"
+                    aria-label="Image size slider"
+                  />
+                  <input
+                    id="width"
+                    type="number"
+                    min="200"
+                    max="1536"
+                    step="1"
+                    value="656"
+                  />
+                </div>
+              </div>
+            </div>
+            <label class="check"
+              ><input type="checkbox" id="thick" checked /> Thicken the
+              ink</label
+            >
+            <label class="check"
+              ><input type="checkbox" id="boost" checked /> Raise error
+              correction when it fits</label
+            >
+            <div class="grid-2">
+              <div>
+                <label for="filename">File name</label>
+                <input
+                  id="filename"
+                  value="aqrobat"
+                  maxlength="80"
+                  autocomplete="off"
+                />
+              </div>
+              <div>
+                <span class="label">Recipe</span>
+                <label class="button file-button">
+                  <svg class="icon"><use href="#i-upload" /></svg> Load recipe
+                  <input
+                    type="file"
+                    id="import-recipe"
+                    accept=".json,application/json"
+                  />
+                </label>
+              </div>
+            </div>
+          </details>
+          <button class="visually-hidden" type="submit">Update preview</button>
+        </form>
+
+        <section class="card preview-card" aria-labelledby="preview-title">
+          <div class="preview-head">
+            <div>
+              <h2 id="preview-title">Preview</h2>
+              <p class="fine" id="metadata"></p>
+            </div>
+            <span class="chip-status" id="scan-status"
+              ><span class="dot" aria-hidden="true"></span>Untested</span
+            >
+          </div>
+          <div class="tabs" role="tablist" aria-label="Preview view">
+            <button
+              id="tab-pasted"
+              role="tab"
+              type="button"
+              aria-selected="true"
+              aria-controls="pasted-panel"
+            >
+              As pasted
+            </button>
+            <button
+              id="tab-image"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="image-panel"
+            >
+              Image
+            </button>
+          </div>
+          <div class="stage">
+            <div
+              id="pasted-panel"
+              class="stage-panel"
+              role="tabpanel"
+              aria-labelledby="tab-pasted"
+            >
+              <div class="text-scroll"><div id="paste-preview"></div></div>
+            </div>
+            <div
+              id="image-panel"
+              class="stage-panel"
+              role="tabpanel"
+              aria-labelledby="tab-image"
+              hidden
+            >
+              <canvas
+                id="preview"
+                aria-label="QR code drawn from characters"
+              ></canvas>
+            </div>
+            <p id="error" role="alert"></p>
+          </div>
+          <p class="fine" id="paste-info"></p>
+          <p class="paste-check" id="paste-check" role="status" hidden></p>
+          <div class="actions">
+            <button id="copy-destination" class="button primary" type="button">
+              <svg class="icon"><use href="#i-copy" /></svg>
+              <span id="copy-label">Copy for Gmail</span>
+            </button>
+            <button id="png" class="button" type="button">
+              <svg class="icon"><use href="#i-download" /></svg> Download PNG
+            </button>
+            <a id="insert-link" class="button" href="#extension">
+              <svg class="icon"><use href="#i-puzzle" /></svg> Insert with
+              extension
+            </a>
+            <details class="menu exports-menu">
+              <summary class="button">
+                More <svg class="icon"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="menu-panel menu-list" aria-label="More exports">
+                <p class="menu-heading">Copy</p>
+                <button id="copy-formatted" type="button">
+                  Formatted text
+                </button>
+                <button id="copy-plain" type="button">Plain text</button>
+                <button id="copy-markdown" type="button">
+                  Markdown code block
+                </button>
+                <button id="copy" type="button">Monospace text</button>
+                <button id="snippet" type="button">Website HTML</button>
+                <p class="menu-heading">Download</p>
+                <button id="svg" type="button">SVG image</button>
+                <button id="html" type="button">Print sheet (HTML)</button>
+                <button id="text-html" type="button">Text HTML</button>
+                <button id="rtf" type="button">RTF document</button>
+                <button id="txt" type="button">Plain text (TXT)</button>
+                <button id="recipe" type="button">Recipe (JSON)</button>
+              </div>
+            </details>
+          </div>
+          <p class="status" id="status" role="status" aria-live="polite">
+            Made in this browser. Nothing is sent anywhere.
+          </p>
+          <p class="fine warn" id="unsaved" role="status"></p>
+          <div id="extension-save" class="save-row" hidden>
+            <label for="recipe-name">Save for insertion as</label>
+            <div class="inline">
+              <input
+                id="recipe-name"
+                maxlength="80"
+                value="My text QR"
+                autocomplete="off"
+              />
+              <button id="save-local" class="button" type="button">
+                <svg class="icon"><use href="#i-bookmark" /></svg> Save
+              </button>
+            </div>
+            <p class="fine">
+              Then open the page you are writing in, click Aqrobat in the
+              toolbar, and choose where to insert.
+            </p>
+          </div>
+          <details class="raw-details">
+            <summary>
+              Select the text yourself
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <p class="fine" id="text-info"></p>
+            <textarea
+              id="raw"
+              readonly
+              wrap="off"
+              spellcheck="false"
+              aria-label="QR as plain monospace text"
+            ></textarea>
+          </details>
+        </section>
+      </section>
+
+      <div class="dock" id="dock" role="region" aria-label="Quick copy" inert>
+        <button class="dock-peek" id="dock-peek" type="button">
+          <canvas
+            id="dock-thumb"
+            width="96"
+            height="96"
+            aria-hidden="true"
+          ></canvas>
+          <span class="dock-text">
+            <strong id="dock-title">Gmail</strong>
+            <span id="dock-format">Formatted text</span>
+          </span>
+        </button>
+        <button id="dock-copy" class="button primary" type="button">
+          <svg class="icon"><use href="#i-copy" /></svg>
+          <span id="dock-copy-label">Copy</span>
+        </button>
+      </div>
+
+      <section id="recipe-library" class="container section" hidden>
+        <div class="section-head">
+          <h2>Saved in this extension</h2>
+          <p>
+            Saved codes stay in this browser until you remove them. Keep a
+            recipe file if you plan to reinstall.
+          </p>
+        </div>
+        <div class="card library">
+          <label for="saved-recipes">Saved codes</label>
+          <div class="inline">
+            <select id="saved-recipes"></select>
+            <button id="load-saved" class="button" type="button">Load</button>
+            <button id="delete-saved" class="button danger" type="button">
+              Remove
+            </button>
+          </div>
+          <p id="library-status" class="fine" role="status"></p>
+          <p class="fine">
+            <a href="practice.html" target="_blank">Practice inserting</a> on a
+            page with sample editors.
+          </p>
+        </div>
+      </section>
+
+      <section id="paste" class="container section">
+        <div class="section-head">
+          <h2>Paste guide</h2>
+          <p>
+            Apps treat pasted text differently. Pick the destination above and
+            the copy is shaped for it, always with the characters you chose.
+            Emoji squares, and full blocks in code blocks, are the tested
+            choices; anything else is experimental, so scan the pasted result
+            before you send it.
+          </p>
+        </div>
+        <div class="table-wrap card">
+          <table class="guide">
+            <thead>
+              <tr>
+                <th scope="col">Destination</th>
+                <th scope="col">Pastes as</th>
+                <th scope="col">How</th>
+              </tr>
+            </thead>
+            <tbody id="guide-rows"></tbody>
+          </table>
+        </div>
+        <p class="fine">
+          Each format was chosen by pasting it into common editor engines in
+          each app's typical font and spacing and reading the result with
+          software. The real apps can still differ, and so can phones and light,
+          so every new code starts untested: scan the pasted result.
+        </p>
+      </section>
+
+      <section id="extension" class="container section split">
+        <div class="section-head">
+          <h2>Chrome extension</h2>
+          <p>
+            Insert a code straight into the page you are writing in. The
+            extension measures that field's own font, so the code keeps its
+            shape without going through the clipboard.
+          </p>
+          <ul class="ticks">
+            <li>
+              <svg class="icon"><use href="#i-check" /></svg> Right-click a
+              selection, a link, or the page to make a code from it.
+            </li>
+            <li>
+              <svg class="icon"><use href="#i-check" /></svg> Keep up to 20
+              codes, then insert one with a preview and normal Undo.
+            </li>
+            <li>
+              <svg class="icon"><use href="#i-check" /></svg> No account, no
+              server, and access only to the tab you choose.
+            </li>
+          </ul>
+        </div>
+        <ol class="steps card">
+          <li>
+            <strong>Download</strong> the
+            <a href="downloads/aqrobat-extension.zip" download>extension ZIP</a>
+            and unzip it.
+          </li>
+          <li>
+            Open <code>chrome://extensions</code> and turn on
+            <strong>Developer mode</strong>.
+          </li>
+          <li>
+            Choose <strong>Load unpacked</strong> and pick the unzipped folder.
+          </li>
+          <li>
+            Try it on the
+            <a href="downloads/aqrobat-insertion-practice.html" target="_blank"
+              >practice page</a
+            >, which needs no install.
+          </li>
+        </ol>
+      </section>
+
+      <section class="container section lab" id="test">
+        <div class="section-head with-action">
+          <div>
+            <h2>Scan lab</h2>
+            <p>
+              Build versions of this code: its paste formats in typical app
+              fonts and spacing, and 12 images at two densities, two fonts, and
+              three sizes. Scan each with your phone and record what happened.
+              Results stay in this page until you export them.
+            </p>
+          </div>
+          <button id="compare" class="button" type="button">
+            Build versions
+          </button>
+        </div>
+        <div class="card lab-controls">
+          <div class="grid-2">
+            <div>
+              <label for="scanner">Phone and scanner app</label>
+              <input
+                id="scanner"
+                placeholder="For example, Samsung Camera on a Galaxy S25 Ultra"
+                maxlength="160"
+              />
+            </div>
+            <div>
+              <label for="conditions">Conditions</label>
+              <input
+                id="conditions"
+                placeholder="Screen or paper, brightness, distance"
+                maxlength="500"
+              />
+            </div>
+          </div>
+          <div class="inline wrap">
+            <label class="check"
+              ><input id="compare-paste" type="checkbox" checked /> Paste
+              formats in app fonts</label
+            ><label class="check"
+              ><input id="compare-text" type="checkbox" /> Plain-text
+              versions</label
+            >
+            <span class="spacer"></span>
+            <button id="export-results" class="button" type="button">
+              <svg class="icon"><use href="#i-download" /></svg> Export results
+            </button>
+            <label class="button file-button">
+              <svg class="icon"><use href="#i-upload" /></svg> Import results
+              <input
+                id="import-results"
+                type="file"
+                accept=".json,application/json"
+              />
+            </label>
+            <button id="print-grid" class="button" type="button">Print</button>
+          </div>
+          <p class="fine">
+            A pass means the exact payload came back. Printed codes are 65 mm
+            square.
+          </p>
+        </div>
+        <div id="paste-grid" class="grid"></div>
+        <div id="grid" class="grid"></div>
+        <div id="text-grid" class="grid"></div>
+      </section>
+
+      <section class="container section" id="how">
+        <div class="section-head">
+          <h2>How it works</h2>
+        </div>
+        <ol class="how">
+          <li>
+            <h3>A standard QR matrix</h3>
+            <p>
+              Project Nayuki's MIT-licensed encoder turns your exact input into
+              a normal QR code: the same squares, corner markers, and error
+              correction any phone expects.
+            </p>
+          </li>
+          <li>
+            <h3>Characters instead of squares</h3>
+            <p>
+              Each dark square becomes a character you chose and each light
+              square becomes a blank. There is no solid code hidden behind the
+              text, so what you see is what a camera reads.
+            </p>
+          </li>
+          <li>
+            <h3>Shaped for where it goes</h3>
+            <p>
+              Fonts and line spacing change from app to app. Aqrobat picks a
+              layout that keeps the squares square where you paste it, and the
+              extension measures the field itself.
+            </p>
+          </li>
+        </ol>
+        <div class="faq">
+          <details>
+            <summary>
+              Will it scan?
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <p>
+              Often, but check. Emoji squares, and full blocks in a code block,
+              are the tested choices for pasting; other characters are
+              experimental. Dark emoji such as 🍇 or 🖤, with emoji-square
+              corners, have scanned after pasting into Gmail on a phone; light
+              ones such as 🙂 do not, even as the light squares. Gmail on a
+              phone also closes up the spaces that letter codes need. Small
+              sizes and loose line spacing make codes harder to read. Every new
+              code is marked untested until you scan the actual result.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Sizes, emoji, and limits
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <p>
+              Input is limited to 1024 bytes and is never shortened. A QR code
+              grows in steps of four squares as the payload needs more room;
+              making the image smaller does not shrink that grid. Custom
+              characters can mix letters, punctuation, and whole emoji,
+              including flags and families. Emoji artwork comes from your system
+              and can look different on other devices. A text QR code is
+              decoration, not encryption: any reader can decode it.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Command line and API
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <p>
+              The page, the extension, and a Node command-line tool share one
+              core. Scripts can call it directly; nothing has to draw the
+              pattern by hand.
+            </p>
+            <pre class="command">
+node bin/aqrobat.mjs 'https://example.com' --format tiles</pre
+            >
+            <p>
+              <a
+                href="https://github.com/ryanjosephkamp/aqrobat/blob/main/docs/command-line.md"
+                >Command-line guide</a
+              >
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can prose be a QR code?
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <p>
+              A side project tested whether readable, copyable prose can also
+              scan as a QR code. It can when each letter is set in one of two
+              tones, but not invisibly: nothing that looked like ordinary prose
+              scanned.
+              <a href="research/">Read the research notes</a>.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Prior art
+              <svg class="icon"><use href="#i-chevron" /></svg>
+            </summary>
+            <p>
+              Text and emoji QR codes are not new.
+              <a href="https://github.com/gtanner/qrcode-terminal"
+                >qrcode-terminal</a
+              >
+              prints codes in a terminal, and
+              <a href="https://oshiqr.com/en">OshiQR</a> makes emoji codes.
+              Aqrobat's focus is getting real-text codes into the place you
+              write, with formats shaped for each destination and recipes you
+              can reproduce.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="credit">
+          <p class="made">
+            Made by <a href="https://ryanjosephkamp.github.io/">Ryan Kamp</a>
+          </p>
+          <ul class="social" aria-label="Ryan Kamp online">
+            <li>
+              <a
+                href="https://ryanjosephkamp.github.io/"
+                aria-label="Ryan Kamp on Website"
+                title="Website"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9.2" />
+                    <path
+                      d="M2.8 12h18.4M12 2.8c2.6 2.6 3.9 5.7 3.9 9.2s-1.3 6.6-3.9 9.2c-2.6-2.6-3.9-5.7-3.9-9.2S9.4 5.4 12 2.8Z"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/ryanjosephkamp/"
+                aria-label="Ryan Kamp on GitHub"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  /></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/rjk1999"
+                aria-label="Ryan Kamp on LinkedIn"
+                title="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  /></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/ryanjosephkamp"
+                aria-label="Ryan Kamp on X"
+                title="X"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  /></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://m.youtube.com/@RyanJosephKamp"
+                aria-label="Ryan Kamp on YouTube"
+                title="YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  /></svg
+              ></a>
+            </li>
+          </ul>
+          <a
+            class="sponsor"
+            href="https://github.com/sponsors/ryanjosephkamp"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg viewBox="0 0 20 20" aria-hidden="true">
+              <path
+                d="M10 16.8S3 12.6 3 7.6A3.6 3.6 0 0 1 10 6a3.6 3.6 0 0 1 7 1.6c0 5-7 9.2-7 9.2Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              /></svg
+            >Sponsor on GitHub</a
+          >
+        </div>
+        <p class="fine">
+          Aqrobat <span id="version">1.0.0</span> ·
+          <a href="https://github.com/ryanjosephkamp/aqrobat">MIT license</a> ·
+          Free to use; sponsorship is optional.
+        </p>
+      </div>
+    </footer>
+    <dialog class="picker" id="picker" aria-labelledby="picker-title">
+      <div class="picker-inner">
+        <div class="picker-head">
+          <h2 id="picker-title">Emoji</h2>
+          <button
+            type="button"
+            class="icon-button"
+            id="picker-close"
+            aria-label="Close"
+          >
+            <svg class="icon"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="picker-search">
+          <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
+          <input
+            type="search"
+            id="picker-search"
+            placeholder="Search, or type any character"
+            aria-label="Search emoji, or type any character"
+            autocomplete="off"
+            spellcheck="false"
+            enterkeyhint="done"
+          />
+        </div>
+        <div class="picker-choices" id="picker-choices"></div>
+        <label class="check picker-dark"
+          ><input type="checkbox" id="picker-dark" /> Only emoji dark enough to
+          scan</label
+        >
+        <div class="picker-body" id="picker-body"></div>
+        <p class="picker-status" id="picker-status" aria-live="polite"></p>
+        <nav
+          class="picker-tabs"
+          id="picker-tabs"
+          aria-label="Emoji categories"
+        ></nav>
+      </div>
+    </dialog>
+    <noscript
+      ><p class="noscript">
+        The generator needs JavaScript. It runs entirely in your browser.
+      </p></noscript
+    >
+  </body>
+</html>

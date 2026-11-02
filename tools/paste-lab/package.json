@@ -1,0 +1,45 @@
+{
+  "name": "aqrobat-paste-lab",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Dev-only harness that pastes Aqrobat text outputs into web editor engines and decodes the result.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node run.mjs"
+  },
+  "dependencies": {
+    "@lexical/clipboard": "0.52.0",
+    "@lexical/html": "0.52.0",
+    "@lexical/plain-text": "0.52.0",
+    "@lexical/rich-text": "0.52.0",
+    "@lexical/selection": "0.52.0",
+    "@lexical/utils": "0.52.0",
+    "@tiptap/core": "3.31.4",
+    "@tiptap/pm": "3.31.4",
+    "@tiptap/starter-kit": "3.31.4",
+    "ckeditor5": "49.0.0",
+    "esbuild": "0.28.2",
+    "lexical": "0.52.0",
+    "pngjs": "7.0.0",
+    "prosemirror-example-setup": "1.2.3",
+    "prosemirror-model": "1.25.12",
+    "prosemirror-schema-basic": "1.2.5",
+    "prosemirror-schema-list": "1.5.1",
+    "prosemirror-state": "1.4.4",
+    "prosemirror-view": "1.42.6",
+    "quill": "2.0.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "slate": "0.133.1",
+    "slate-dom": "0.133.1",
+    "slate-history": "0.128.1",
+    "slate-react": "0.133.2"
+  },
+  "overrides": {
+    "prosemirror-view": "1.42.6",
+    "prosemirror-model": "1.25.12",
+    "prosemirror-state": "1.4.4"
+  }
+}

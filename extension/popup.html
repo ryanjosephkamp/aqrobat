@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <meta charset="utf-8" />
+  <title>Aqrobat</title>
+  <link rel="stylesheet" href="popup.css" />
+  <body>
+    <header>
+      <img
+        id="mark"
+        src="web/brand/rocket-128.png"
+        width="24"
+        height="24"
+        alt=""
+      />
+      <strong>aqrobat</strong>
+      <button id="open" class="link" type="button">Open workbench</button>
+    </header>
+    <main>
+      <section aria-labelledby="make-title">
+        <h1 id="make-title">Make a code</h1>
+        <label for="payload">Link or text</label>
+        <textarea id="payload" rows="2" spellcheck="false"></textarea>
+        <p class="fine" id="bytes"></p>
+        <div class="pair">
+          <div>
+            <label for="glyph">Characters</label>
+            <select id="glyph"></select>
+          </div>
+          <div>
+            <label for="destination">Where will it go?</label>
+            <select id="destination"></select>
+          </div>
+        </div>
+        <p class="fine" id="note"></p>
+        <div class="row">
+          <button id="copy" class="primary" type="button">Copy</button>
+          <button id="insert-new" type="button">Insert on this page</button>
+        </div>
+      </section>
+      <section aria-labelledby="saved-title">
+        <h2 id="saved-title">Saved codes</h2>
+        <div class="row">
+          <select id="recipe" aria-label="Saved code"></select>
+          <button id="insert" type="button" disabled>Insert</button>
+        </div>
+        <p class="fine" id="saved-payload"></p>
+      </section>
+      <p id="status" role="status">
+        Insert asks you to click the field, then shows a preview. Nothing is
+        sent.
+      </p>
+      <p class="fine">
+        <a href="practice.html" target="_blank">Practice page</a>
+      </p>
+    </main>
+    <script type="module" src="popup.mjs"></script>
+  </body>
+</html>

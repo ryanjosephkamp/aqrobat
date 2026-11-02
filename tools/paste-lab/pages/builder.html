@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>paste-lab builder</title>
+  <body>
+    <script type="module">
+      // Builds the rich HTML clipboard payload with Aqrobat's own code. The
+      // text metrics need a canvas, so this runs in Chrome.
+      import { generate } from "/src/core.mjs";
+      import { formattedText, textMetrics, plainText } from "/src/text.mjs";
+      window.buildRich = async (payload, options) => {
+        await document.fonts.load('700 100px "Menlo"');
+        const qr = generate(payload, options);
+        const metrics = textMetrics(qr);
+        const plain = plainText(qr);
+        return {
+          html: formattedText(qr, metrics),
+          text: plain.text,
+          rows: plain.rows,
+          across: plain.across,
+          down: plain.down,
+          metrics,
+        };
+      };
+      document.documentElement.dataset.ready = "1";
+    </script>
+  </body>
+</html>
