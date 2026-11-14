@@ -347,7 +347,7 @@ try {
   assert.equal(await page.locator("footer .social a").count(), 5);
   assert.equal(
     await page.locator('footer a[title="LinkedIn"]').getAttribute("href"),
-    "https://www.linkedin.com/in/rjk1999",
+    "https://www.linkedin.com/in/ryanjosephkamp/",
   );
   assert.equal(
     await page.locator('footer a[title="X"]').getAttribute("href"),
