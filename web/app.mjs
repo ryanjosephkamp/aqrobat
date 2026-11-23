@@ -602,6 +602,9 @@ function describeSelectable() {
     : `${plain}${selectable.rows.length} rows${fence}, two characters per square${selectable.light ? "" : " with spaces between"}. They keep their shape only in a monospace font.`;
 }
 function update() {
+  // The count is the text as typed, so it stays right when the text is too long.
+  $("bytes").textContent =
+    `${new TextEncoder().encode($("payload").value).length} / 1024 bytes · never shortened`;
   try {
     current = generate($("payload").value, options());
     render($("preview"), current);
@@ -624,8 +627,6 @@ function update() {
       $(id).removeAttribute("aria-invalid");
       $(`${id}-error`).textContent = "";
     }
-    $("bytes").textContent =
-      `${current.utf8Bytes} / 1024 bytes · never shortened`;
     displaySize();
     renderPastePreview();
     fitText();
